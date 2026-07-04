@@ -1,213 +1,228 @@
 (() => {
-  const themeDefinitions = [
+  const defs = [
     {
-      title: `La Constitución española de 1978. Estructura. La reforma constitucional. Derechos y deberes fundamentales de los españoles. Garantía y suspensión.`, area: `Derecho constitucional`, common: true,
+      title: 'La Constitución española de 1978. Estructura. La reforma constitucional. Derechos y deberes fundamentales de los españoles. Garantía y suspensión.',
+      area: 'Derecho constitucional', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Constitución Española de 1978. Debes estudiar el texto constitucional vigente, especialmente el Título Preliminar, el Título I y el Título X.`] },
-        { heading: `Estructura`, paragraphs: [`La Constitución se organiza en Preámbulo, Título Preliminar, diez títulos numerados, disposiciones adicionales, transitorias, derogatoria y final. El Título Preliminar contiene los principios esenciales del Estado: Estado social y democrático de Derecho, soberanía nacional, monarquía parlamentaria, unidad de España, autonomía de nacionalidades y regiones, castellano como lengua oficial, bandera, capital, partidos, sindicatos, Fuerzas Armadas y principios del artículo 9.3.`, `La parte dogmática está principalmente en el Título I, dedicado a derechos y deberes. La parte orgánica regula Corona, Cortes Generales, Gobierno, relaciones Gobierno-Cortes, Poder Judicial, economía y Hacienda, organización territorial, Tribunal Constitucional y reforma constitucional.`] },
-        { heading: `La reforma constitucional`, paragraphs: [`La reforma ordinaria permite modificar partes no especialmente protegidas de la Constitución. Exige aprobación por las Cortes Generales con mayorías reforzadas y puede someterse a referéndum si lo solicita una décima parte de los miembros de cualquiera de las Cámaras.`, `La reforma agravada se aplica a la revisión total o a reformas que afecten al Título Preliminar, a la Sección 1.ª del Capítulo II del Título I o al Título II. Exige aprobación inicial, disolución de las Cortes, ratificación por las nuevas Cámaras, nueva aprobación y referéndum obligatorio. La clave de examen es distinguir qué materias activan la vía agravada.`] },
-        { heading: `Derechos y deberes fundamentales de los españoles`, paragraphs: [`El Título I comienza con el artículo 10, que sitúa la dignidad de la persona, los derechos inviolables, el libre desarrollo de la personalidad, el respeto a la ley y a los derechos de los demás como fundamento del orden político y de la paz social.`, `El Capítulo II incluye el artículo 14, sobre igualdad ante la ley, y dos secciones. La Sección 1.ª recoge derechos fundamentales y libertades públicas como vida e integridad, libertad ideológica y religiosa, libertad personal, intimidad, inviolabilidad del domicilio, secreto de comunicaciones, libertad de expresión, reunión, asociación, participación política, tutela judicial, legalidad penal, educación, libertad sindical, huelga y petición.`, `La Sección 2.ª regula derechos y deberes como defensa de España, deber tributario, matrimonio, propiedad privada, fundación, trabajo, negociación colectiva y libertad de empresa. El Capítulo III contiene principios rectores de la política social y económica.`] },
-        { heading: `Garantía y suspensión`, paragraphs: [`Las garantías se concentran en el artículo 53. Los derechos del Capítulo II vinculan a todos los poderes públicos. Los derechos de la Sección 1.ª y el artículo 14 tienen protección reforzada: regulación por ley respetando contenido esencial, procedimiento preferente y sumario ante tribunales ordinarios y recurso de amparo ante el Tribunal Constitucional.`, `Los principios rectores del Capítulo III informan legislación, práctica judicial y actuación de poderes públicos, pero solo pueden alegarse ante la jurisdicción ordinaria según lo que dispongan las leyes que los desarrollen.`, `La suspensión de derechos se conecta con los estados de excepción y sitio, y algunos derechos pueden suspenderse individualmente en investigaciones sobre bandas armadas o elementos terroristas en los términos constitucionales. No todos los derechos son suspendibles y no toda limitación equivale a suspensión.`] }
+        ['Documento base', ['Constitución Española de 1978. Para este tema hay que estudiar el texto constitucional vigente, especialmente el Título Preliminar, el Título I y el Título X.']],
+        ['Estructura', ['La Constitución se compone de Preámbulo, Título Preliminar, diez títulos numerados, disposiciones adicionales, disposiciones transitorias, disposición derogatoria y disposición final.', 'El Título Preliminar recoge los principios básicos del Estado: Estado social y democrático de Derecho, soberanía nacional, monarquía parlamentaria, unidad de la Nación española, autonomía de nacionalidades y regiones, lengua oficial, bandera, capital, partidos, sindicatos, Fuerzas Armadas y principios del artículo 9.3.', 'La parte dogmática se centra en derechos y deberes. La parte orgánica regula Corona, Cortes Generales, Gobierno, Poder Judicial, organización territorial, Tribunal Constitucional y reforma.']],
+        ['La reforma constitucional', ['La reforma ordinaria se aplica a materias no reservadas al procedimiento agravado. Exige aprobación por las Cortes Generales con mayorías reforzadas y puede someterse a referéndum si lo solicita una décima parte de cualquiera de las Cámaras.', 'La reforma agravada se aplica a la revisión total o a reformas que afecten al Título Preliminar, a la Sección primera del Capítulo segundo del Título I o al Título II. Exige aprobación inicial, disolución de las Cortes, ratificación por las nuevas Cámaras, nueva aprobación y referéndum obligatorio.', 'En test hay que saber qué materias activan la vía agravada y no confundir referéndum facultativo con referéndum obligatorio.']],
+        ['Derechos y deberes fundamentales de los españoles', ['El artículo 10 sitúa la dignidad de la persona, los derechos inviolables, el libre desarrollo de la personalidad, el respeto a la ley y a los derechos de los demás como fundamento del orden político y de la paz social.', 'El artículo 14 reconoce la igualdad ante la ley y la prohibición de discriminación. La Sección primera del Capítulo segundo recoge derechos fundamentales y libertades públicas. La Sección segunda recoge derechos y deberes de los ciudadanos.', 'Hay que distinguir derechos fundamentales, derechos y deberes, y principios rectores de la política social y económica, porque no tienen el mismo régimen de protección.']],
+        ['Garantía y suspensión', ['El artículo 53 establece el régimen de garantías. Los derechos del Capítulo segundo vinculan a todos los poderes públicos. Los derechos de la Sección primera y el artículo 14 tienen protección reforzada, procedimiento preferente y sumario y recurso de amparo.', 'Los principios rectores informan la legislación, la práctica judicial y la actuación de los poderes públicos, pero solo pueden alegarse ante la jurisdicción ordinaria conforme a las leyes que los desarrollen.', 'La suspensión de derechos se conecta con los estados de excepción y sitio y con la suspensión individual en investigaciones sobre bandas armadas o elementos terroristas. No todo derecho es suspendible y no toda limitación es suspensión.']]
       ],
-      points: [`Estructura constitucional`, `Reforma ordinaria y agravada`, `Derechos fundamentales`, `Derechos y deberes`, `Garantías del artículo 53`, `Suspensión de derechos`]
+      points: ['Estructura', 'Reforma constitucional', 'Derechos fundamentales', 'Derechos y deberes', 'Garantías', 'Suspensión']
     },
     {
-      title: `Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas: Disposiciones Generales. Los interesados en el procedimiento. Actividad de las Administraciones Públicas: Normas generales de actuación. Términos y plazos.`, area: `Procedimiento administrativo`, common: true,
+      title: 'Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas: Disposiciones Generales. Los interesados en el procedimiento. Actividad de las Administraciones Públicas: Normas generales de actuación. Términos y plazos.',
+      area: 'Procedimiento administrativo', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. Estudia el Título Preliminar, Título I y Título II, especialmente interesados, actuación administrativa y cómputo de plazos.`] },
-        { heading: `Disposiciones Generales`, paragraphs: [`La Ley 39/2015 regula los requisitos de validez y eficacia de los actos administrativos, el procedimiento administrativo común y los principios del ejercicio de la potestad sancionadora y la responsabilidad patrimonial. Se aplica al sector público: Administración General del Estado, Comunidades Autónomas, Entidades Locales y sector público institucional en los términos legales.`, `El procedimiento administrativo común garantiza que la Administración actúe con sometimiento pleno a la ley y al Derecho. Para auxiliar administrativo, este tema se traduce en saber tramitar solicitudes, registrar documentos, controlar plazos, requerir subsanaciones y distinguir personas obligadas o no a relacionarse electrónicamente.`] },
-        { heading: `Los interesados en el procedimiento`, paragraphs: [`Son interesados quienes promueven el procedimiento como titulares de derechos o intereses legítimos, quienes sin iniciarlo puedan resultar afectados por la decisión, y quienes tengan intereses legítimos que puedan verse afectados y comparezcan antes de resolución definitiva.`, `La capacidad de obrar ante las Administraciones incluye personas físicas o jurídicas con capacidad conforme a normas civiles, menores para ejercicio y defensa de derechos cuando el ordenamiento lo permita, y grupos de afectados, uniones sin personalidad o patrimonios independientes cuando la ley lo declare expresamente.`, `La representación se acredita para formular solicitudes, presentar declaraciones responsables o comunicaciones, interponer recursos, desistir de acciones y renunciar a derechos. Para actos de mero trámite se presume. Puede acreditarse por cualquier medio válido que deje constancia fidedigna, apud acta o registro electrónico de apoderamientos.`] },
-        { heading: `Actividad de las Administraciones Públicas: normas generales de actuación`, paragraphs: [`Las personas tienen derechos en sus relaciones con las Administraciones: comunicarse electrónicamente, ser asistidas en el uso de medios electrónicos, usar lenguas oficiales, acceder a información pública, ser tratadas con respeto, exigir responsabilidades y obtener información sobre requisitos jurídicos o técnicos de proyectos o solicitudes.`, `Los interesados tienen derechos específicos: conocer el estado de tramitación, sentido del silencio, órgano competente, actos de trámite, acceder y obtener copia de documentos, formular alegaciones, aportar documentos, no presentar documentos ya aportados o elaborados por la Administración, y actuar asistidos por asesor cuando convenga.`, `La Administración debe dictar resolución expresa y notificarla en todos los procedimientos salvo excepciones. También debe respetar la obligación de relacionarse electrónicamente de personas jurídicas, entidades sin personalidad, profesionales colegiados para trámites de su actividad, representantes de obligados electrónicos y empleados públicos cuando proceda.`] },
-        { heading: `Términos y plazos`, paragraphs: [`Los plazos obligan a Administración e interesados. Si se señalan por horas, se entiende que son hábiles salvo norma en contrario, y no pueden superar veinticuatro horas. Si se señalan por días, son hábiles salvo que una ley o el Derecho de la Unión establezca días naturales. Los sábados, domingos y festivos son inhábiles.`, `Los plazos por meses o años se computan de fecha a fecha. Si en el mes de vencimiento no hay día equivalente, el plazo expira el último día del mes. Si el último día es inhábil, se prorroga al primer día hábil siguiente.`, `La Administración puede conceder ampliación de plazos si las circunstancias lo aconsejan y no se perjudican derechos de terceros. La tramitación de urgencia reduce a la mitad los plazos ordinarios, salvo presentación de solicitudes y recursos.`] }
+        ['Documento base', ['Ley 39/2015, especialmente Título Preliminar, Título I y Título II.']],
+        ['Disposiciones Generales', ['La Ley 39/2015 regula los requisitos de validez y eficacia de los actos administrativos, el procedimiento administrativo común, el procedimiento sancionador y la responsabilidad patrimonial en sus bases procedimentales.', 'Se aplica al sector público: Administración General del Estado, Comunidades Autónomas, Entidades Locales y sector público institucional en los términos de la ley.']],
+        ['Los interesados en el procedimiento', ['Son interesados quienes promueven el procedimiento como titulares de derechos o intereses legítimos, quienes puedan resultar afectados por la decisión y quienes tengan intereses legítimos afectados y comparezcan antes de resolución definitiva.', 'La representación se acredita para solicitudes, recursos, desistimiento, renuncia, declaraciones responsables y comunicaciones. Para actos de mero trámite se presume.']],
+        ['Actividad de las Administraciones Públicas: normas generales de actuación', ['Las personas tienen derecho a comunicarse electrónicamente, ser asistidas, usar lenguas oficiales, acceder a información pública, ser tratadas con respeto y exigir responsabilidades.', 'Los interesados tienen derecho a conocer el estado de tramitación, acceder al expediente, obtener copias, formular alegaciones, aportar documentos y no presentar documentos ya aportados o elaborados por la Administración.', 'La Administración debe resolver expresamente y notificar en todos los procedimientos salvo excepciones legales.']],
+        ['Términos y plazos', ['Los plazos por horas se entienden hábiles salvo norma en contrario. Los plazos por días son hábiles salvo que una ley o el Derecho de la Unión establezca días naturales. Sábados, domingos y festivos son inhábiles.', 'Los plazos por meses o años se computan de fecha a fecha. Si no existe día equivalente en el mes de vencimiento, termina el último día del mes. Si el último día es inhábil, se prorroga al primer día hábil siguiente.', 'La tramitación de urgencia reduce plazos a la mitad salvo solicitudes y recursos. La ampliación de plazos exige circunstancias que la aconsejen y no perjudicar derechos de terceros.']]
       ],
-      points: [`Disposiciones generales`, `Interesados`, `Representación`, `Derechos de las personas`, `Derechos del interesado`, `Obligación de resolver`, `Registros`, `Términos y plazos`]
+      points: ['Disposiciones generales', 'Interesados', 'Representación', 'Actividad administrativa', 'Derechos', 'Términos y plazos']
     },
     {
-      title: `Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. El procedimiento administrativo común: Derechos del interesado; Iniciación; Ordenación; Instrucción Finalización y Ejecución. Especialidades en los procedimientos de naturaleza sancionadora y de responsabilidad patrimonial. Tramitación simplificada del procedimiento administrativo común.`, area: `Procedimiento administrativo`, common: true,
+      title: 'Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas. El procedimiento administrativo común: Derechos del interesado; Iniciación; Ordenación; Instrucción Finalización y Ejecución. Especialidades en los procedimientos de naturaleza sancionadora y de responsabilidad patrimonial. Tramitación simplificada del procedimiento administrativo común.',
+      area: 'Procedimiento administrativo', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 39/2015, especialmente Título III y Título IV. Estudia las fases del procedimiento y las especialidades sancionadoras, de responsabilidad patrimonial y tramitación simplificada.`] },
-        { heading: `Derechos del interesado`, paragraphs: [`El interesado tiene derecho a conocer en cualquier momento el estado de tramitación, el órgano competente, el sentido del silencio administrativo, y a acceder y obtener copia de documentos del expediente. También puede formular alegaciones, aportar documentos, no presentar documentos que ya estén en poder de la Administración y obtener información y orientación sobre requisitos.`] },
-        { heading: `Iniciación`, paragraphs: [`El procedimiento puede iniciarse de oficio o a solicitud de interesado. La iniciación de oficio puede venir por propia iniciativa, orden superior, petición razonada de otros órganos o denuncia. La solicitud debe contener identificación, hechos y petición, lugar y fecha, firma o acreditación de voluntad, medio de notificación y órgano al que se dirige.`, `Si la solicitud no reúne requisitos, se requiere subsanación. Si el interesado no subsana en plazo, se le tiene por desistido previa resolución. En una oposición local este punto es esencial para listas de admitidos y excluidos, solicitudes incompletas y presentación de documentación.`] },
-        { heading: `Ordenación`, paragraphs: [`La ordenación comprende reglas para impulsar el procedimiento. El procedimiento se impulsa de oficio en todos sus trámites. Deben acordarse en un solo acto los trámites que admitan impulso simultáneo. Los trámites deben cumplirse dentro de plazo y la Administración debe evitar dilaciones.`] },
-        { heading: `Instrucción`, paragraphs: [`La instrucción incluye actos necesarios para determinar, conocer y comprobar los hechos. Sus trámites principales son alegaciones, prueba, informes, audiencia e información pública.`, `La prueba procede cuando la Administración no tenga por ciertos los hechos alegados o lo exija la naturaleza del procedimiento. Los informes pueden ser preceptivos o facultativos y vinculantes o no vinculantes. El trámite de audiencia permite al interesado examinar el expediente antes de resolución, salvo excepciones.`] },
-        { heading: `Finalización y ejecución`, paragraphs: [`El procedimiento termina por resolución, desistimiento, renuncia, caducidad, imposibilidad material sobrevenida o terminación convencional. La resolución debe decidir todas las cuestiones planteadas y las derivadas del procedimiento.`, `Los actos administrativos son ejecutivos salvo suspensión o previsión legal. Los medios de ejecución forzosa son apremio sobre el patrimonio, ejecución subsidiaria, multa coercitiva y compulsión sobre las personas. Deben respetar proporcionalidad y habilitación legal.`] },
-        { heading: `Especialidades sancionadoras y de responsabilidad patrimonial`, paragraphs: [`En procedimientos sancionadores importan legalidad, tipicidad, responsabilidad, proporcionalidad, presunción de inocencia y separación adecuada entre instrucción y resolución.`, `En responsabilidad patrimonial deben concurrir lesión efectiva, evaluable económicamente e individualizada, relación de causalidad con el funcionamiento del servicio público y ausencia de fuerza mayor. El daño debe ser antijurídico, es decir, que la persona no tenga deber jurídico de soportarlo.`] },
-        { heading: `Tramitación simplificada`, paragraphs: [`La tramitación simplificada puede acordarse cuando razones de interés público o falta de complejidad lo aconsejen. Reduce trámites, pero debe respetar los esenciales. En test suele preguntarse por cuándo procede, qué trámites conserva y qué ocurre si un interesado se opone cuando el procedimiento se inició de oficio.`] }
+        ['Documento base', ['Ley 39/2015, especialmente Título III y Título IV.']],
+        ['Derechos del interesado', ['Conocer el estado de tramitación, el sentido del silencio, el órgano competente, acceder y obtener copia de documentos, formular alegaciones, aportar documentos y no aportar los que ya estén en poder de la Administración.']],
+        ['Iniciación', ['Puede ser de oficio o a solicitud del interesado. De oficio puede iniciarse por propia iniciativa, orden superior, petición razonada o denuncia.', 'La solicitud debe contener identificación, hechos, razones, petición, lugar y fecha, firma o acreditación de voluntad, órgano destinatario y medio de notificación.', 'Si falta algún requisito subsanable, se requiere subsanación. Si no se subsana, se declara el desistimiento previa resolución.']],
+        ['Ordenación', ['El procedimiento se impulsa de oficio. Deben concentrarse trámites que admitan impulso simultáneo y cumplirse los plazos. La ordenación evita paralizaciones y organiza la tramitación.']],
+        ['Instrucción', ['Incluye los actos necesarios para conocer, determinar y comprobar hechos. Sus trámites principales son alegaciones, prueba, informes, audiencia e información pública.', 'La audiencia permite examinar el expediente antes de la propuesta de resolución salvo excepciones. Los informes pueden ser preceptivos o facultativos y vinculantes o no vinculantes.']],
+        ['Finalización y ejecución', ['El procedimiento termina por resolución, desistimiento, renuncia, caducidad, imposibilidad material sobrevenida o terminación convencional.', 'Los actos administrativos son ejecutivos salvo suspensión o previsión legal. La ejecución forzosa puede realizarse por apremio sobre el patrimonio, ejecución subsidiaria, multa coercitiva o compulsión sobre las personas.']],
+        ['Especialidades sancionadoras y responsabilidad patrimonial', ['En sancionador importan legalidad, tipicidad, responsabilidad, proporcionalidad, presunción de inocencia y separación entre instrucción y resolución.', 'En responsabilidad patrimonial debe existir daño efectivo, evaluable e individualizado, relación de causalidad con el servicio público, antijuridicidad y ausencia de fuerza mayor.']],
+        ['Tramitación simplificada', ['Puede acordarse por interés público o falta de complejidad. Reduce trámites, pero conserva los esenciales y debe respetar garantías.']]
       ],
-      points: [`Derechos del interesado`, `Iniciación`, `Subsanación`, `Ordenación`, `Instrucción`, `Finalización`, `Ejecución`, `Sancionador`, `Responsabilidad patrimonial`, `Tramitación simplificada`]
+      points: ['Derechos del interesado', 'Iniciación', 'Ordenación', 'Instrucción', 'Finalización', 'Ejecución', 'Sancionador', 'Responsabilidad patrimonial', 'Tramitación simplificada']
     },
     {
-      title: `Revisión de los actos administrativos en vía administrativa. Los recursos administrativos. La revisión de oficio.`, area: `Procedimiento administrativo`, common: true,
+      title: 'Revisión de los actos administrativos en vía administrativa. Los recursos administrativos. La revisión de oficio.',
+      area: 'Procedimiento administrativo', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 39/2015, Título V. Estudia revisión de actos, recursos administrativos, revisión de oficio, declaración de lesividad y rectificación de errores.`] },
-        { heading: `Revisión de los actos administrativos en vía administrativa`, paragraphs: [`La Administración puede revisar actos administrativos por vías distintas según el defecto: nulidad de pleno derecho, anulabilidad, errores materiales o necesidad de impugnación judicial previa. La clave es no tratar igual un acto nulo, un acto anulable y un simple error aritmético.`, `La nulidad se reserva para vicios graves: lesión de derechos fundamentales, órgano manifiestamente incompetente por materia o territorio, contenido imposible, infracción penal, prescindir total y absolutamente del procedimiento, adquisición de derechos sin requisitos esenciales y otros supuestos legales. La anulabilidad es la regla general para infracciones del ordenamiento no calificadas como nulidad.`] },
-        { heading: `Los recursos administrativos`, paragraphs: [`El recurso de alzada procede contra actos que no ponen fin a la vía administrativa. Lo resuelve el superior jerárquico del órgano que dictó el acto, aunque puede presentarse ante el órgano que lo dictó o ante el competente para resolver.`, `El recurso potestativo de reposición procede contra actos que ponen fin a la vía administrativa. Es potestativo: puede interponerse antes de acudir al contencioso-administrativo o ir directamente a la vía judicial.`, `El recurso extraordinario de revisión procede contra actos firmes en vía administrativa por causas tasadas: error de hecho que resulte de documentos del expediente, aparición de documentos esenciales, documentos o testimonios declarados falsos o resolución dictada por conducta punible declarada por sentencia firme.`] },
-        { heading: `La revisión de oficio`, paragraphs: [`La revisión de oficio permite declarar la nulidad de actos administrativos firmes cuando concurren causas de nulidad de pleno derecho. Requiere procedimiento específico y dictamen favorable del órgano consultivo competente.`, `Si la Administración quiere eliminar un acto favorable anulable, no puede anularlo libremente: debe declararlo lesivo para el interés público y acudir a la jurisdicción contencioso-administrativa.`, `La rectificación de errores materiales, de hecho o aritméticos puede realizarse en cualquier momento, de oficio o a instancia de los interesados. No puede utilizarse para cambiar el sentido de fondo del acto.`] }
+        ['Documento base', ['Ley 39/2015, Título V.']],
+        ['Revisión de los actos administrativos en vía administrativa', ['La Administración puede revisar actos nulos, rectificar errores materiales, declarar lesividad de actos anulables favorables y resolver recursos. Hay que distinguir nulidad, anulabilidad y error material.', 'La nulidad se reserva para vicios graves. La anulabilidad es la regla general para infracciones del ordenamiento no calificadas como nulidad.']],
+        ['Los recursos administrativos', ['El recurso de alzada procede contra actos que no ponen fin a la vía administrativa. Puede presentarse ante el órgano que dictó el acto o ante el competente para resolver.', 'El recurso potestativo de reposición procede contra actos que ponen fin a la vía administrativa. Es opcional antes de acudir al contencioso-administrativo.', 'El recurso extraordinario de revisión procede contra actos firmes por causas tasadas: error de hecho, documentos esenciales aparecidos, falsedad declarada o resolución dictada por conducta punible declarada por sentencia firme.']],
+        ['La revisión de oficio', ['La revisión de oficio permite declarar la nulidad de actos firmes cuando concurre causa de nulidad de pleno derecho y requiere dictamen favorable del órgano consultivo.', 'Para actos favorables anulables debe acudirse a declaración de lesividad y posterior impugnación contencioso-administrativa.', 'La rectificación de errores materiales, de hecho o aritméticos puede realizarse en cualquier momento, pero no permite cambiar el fondo del acto.']]
       ],
-      points: [`Nulidad`, `Anulabilidad`, `Alzada`, `Reposición`, `Extraordinario de revisión`, `Revisión de oficio`, `Lesividad`, `Rectificación de errores`]
+      points: ['Nulidad', 'Anulabilidad', 'Alzada', 'Reposición', 'Extraordinario de revisión', 'Revisión de oficio', 'Lesividad', 'Rectificación']
     },
     {
-      title: `El municipio. Organización y funcionamiento. La Provincia. Organización provincial. Competencias. El Régimen electoral de las Entidades Locales.`, area: `Régimen local`, common: true,
+      title: 'El municipio. Organización y funcionamiento. La Provincia. Organización provincial. Competencias. El Régimen electoral de las Entidades Locales.',
+      area: 'Régimen local', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 7/1985, reguladora de las Bases del Régimen Local, normativa electoral local y legislación complementaria de régimen local.`] },
-        { heading: `El municipio`, paragraphs: [`El municipio es la entidad básica de la organización territorial del Estado y cauce inmediato de participación ciudadana en los asuntos públicos. Tiene personalidad jurídica y plena capacidad para el cumplimiento de sus fines. Sus elementos son territorio, población y organización.`, `La población municipal está formada por vecinos inscritos en el padrón municipal. El padrón acredita residencia y domicilio habitual, y sus datos sirven para relaciones administrativas y planificación de servicios.`] },
-        { heading: `Organización y funcionamiento`, paragraphs: [`Los órganos necesarios del Ayuntamiento son Alcalde, Tenientes de Alcalde y Pleno. La Junta de Gobierno Local existe en municipios de gran población y en los demás cuando lo disponga el reglamento orgánico o lo acuerde el Pleno. También pueden existir comisiones informativas, comisión especial de cuentas y órganos complementarios.`, `El Alcalde dirige el gobierno y administración municipal, representa al Ayuntamiento, convoca y preside sesiones cuando corresponda, dicta bandos y ejerce jefatura del personal. El Pleno representa a la ciudadanía y decide materias esenciales como ordenanzas, presupuestos, control de gobierno y acuerdos estructurales.`] },
-        { heading: `La Provincia`, paragraphs: [`La provincia es entidad local determinada por la agrupación de municipios, con personalidad jurídica propia y autonomía para gestionar sus intereses. Su función esencial es garantizar solidaridad y equilibrio intermunicipal, especialmente prestando asistencia a municipios pequeños.`] },
-        { heading: `Organización provincial`, paragraphs: [`La Diputación Provincial es el órgano de gobierno y administración de la provincia, salvo regímenes especiales. Sus órganos principales son Presidente, Vicepresidentes, Pleno y Junta de Gobierno. La Diputación presta asistencia jurídica, económica y técnica a municipios y coordina servicios cuando proceda.`] },
-        { heading: `Competencias`, paragraphs: [`Las competencias municipales pueden ser propias, delegadas o distintas de propias y delegadas. Las propias se ejercen en régimen de autonomía y bajo responsabilidad municipal. Las delegadas se ejercen por atribución de otra Administración.`, `Las competencias provinciales se centran en coordinación de servicios municipales, asistencia y cooperación jurídica, económica y técnica, prestación de servicios supramunicipales y apoyo a municipios de menor capacidad.`] },
-        { heading: `Régimen electoral de las Entidades Locales`, paragraphs: [`Los concejales se eligen por sufragio universal, libre, igual, directo y secreto. El número de concejales depende de la población. El Alcalde es elegido por los concejales conforme a la legislación electoral; si ningún candidato obtiene mayoría absoluta, resulta proclamado quien encabece la lista más votada según las reglas aplicables.`, `En diputaciones, los diputados provinciales se eligen de forma indirecta a partir de los resultados municipales por partidos judiciales, según el sistema previsto en la normativa electoral.`] }
+        ['Documento base', ['Ley 7/1985, reguladora de las Bases del Régimen Local, y normativa electoral local.']],
+        ['El municipio', ['El municipio es entidad básica de la organización territorial del Estado y cauce inmediato de participación ciudadana. Tiene personalidad jurídica y plena capacidad. Sus elementos son territorio, población y organización.', 'La población municipal se integra por vecinos inscritos en el padrón municipal. El padrón acredita residencia y domicilio habitual.']],
+        ['Organización y funcionamiento', ['Son órganos necesarios Alcalde, Tenientes de Alcalde y Pleno. La Junta de Gobierno Local existe en municipios de gran población y en los demás cuando proceda.', 'El Alcalde dirige el gobierno y administración municipal y representa al Ayuntamiento. El Pleno adopta acuerdos de especial importancia, aprueba ordenanzas, presupuestos y ejerce funciones de control.']],
+        ['La Provincia y organización provincial', ['La provincia es entidad local formada por agrupación de municipios. Su gobierno y administración corresponde normalmente a la Diputación Provincial.', 'La Diputación presta asistencia y cooperación jurídica, económica y técnica a municipios, especialmente a los de menor capacidad.']],
+        ['Competencias', ['Las competencias municipales pueden ser propias, delegadas o distintas de propias y delegadas. Deben ejercerse dentro del marco legal y por el órgano competente.', 'Las competencias provinciales se centran en cooperación, coordinación y asistencia a municipios.']],
+        ['Régimen electoral de las Entidades Locales', ['Los concejales se eligen por sufragio universal, libre, igual, directo y secreto. El número de concejales depende de la población.', 'El Alcalde es elegido por los concejales conforme a la legislación electoral. Los diputados provinciales se eligen de forma indirecta a partir de resultados municipales.']]
       ],
-      points: [`Municipio`, `Padrón`, `Alcalde`, `Pleno`, `Provincia`, `Diputación`, `Competencias municipales`, `Competencias provinciales`, `Elecciones locales`]
+      points: ['Municipio', 'Organización municipal', 'Provincia', 'Organización provincial', 'Competencias', 'Régimen electoral local']
     },
     {
-      title: `Ley 4/2011, de 10 de marzo, de empleo público de Castilla-La Mancha: El Personal al servicio de las Administraciones Públicas. Provisión de puestos de trabajo. La carrera administrativa. Promoción interna. La selección del personal y la oferta pública de Empleo.`, area: `Empleo público`, common: true,
+      title: 'Ley 4/2011, de 10 de marzo, de empleo público de Castilla-La Mancha: El Personal al servicio de las Administraciones Públicas. Provisión de puestos de trabajo. La carrera administrativa. Promoción interna. La selección del personal y la oferta pública de Empleo.',
+      area: 'Empleo público', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 4/2011, de Empleo Público de Castilla-La Mancha, en relación con el Estatuto Básico del Empleado Público.`] },
-        { heading: `El personal al servicio de las Administraciones Públicas`, paragraphs: [`El personal empleado público puede ser funcionario de carrera, funcionario interino, personal laboral o personal eventual. El funcionario de carrera tiene nombramiento legal y relación estatutaria permanente. El interino se nombra por razones justificadas de necesidad y urgencia para supuestos tasados. El laboral se vincula por contrato de trabajo. El eventual realiza funciones de confianza o asesoramiento especial.`] },
-        { heading: `Provisión de puestos de trabajo`, paragraphs: [`La provisión cubre puestos por personal que ya pertenece a la Administración. Los sistemas ordinarios son concurso y libre designación, según la naturaleza del puesto. No debe confundirse con selección de nuevo ingreso: selección permite entrar en la Administración; provisión permite ocupar un puesto concreto.`] },
-        { heading: `La carrera administrativa`, paragraphs: [`La carrera administrativa es el conjunto de oportunidades de progreso profesional del personal funcionario. Puede incluir carrera vertical, progresión en estructura de puestos; carrera horizontal, progresión sin cambiar de puesto; promoción interna vertical y horizontal, según normativa aplicable.`] },
-        { heading: `Promoción interna`, paragraphs: [`La promoción interna permite acceder desde cuerpos, escalas o categorías de un grupo o subgrupo a otros superiores o del mismo nivel, cumpliendo requisitos de titulación, antigüedad y superación del proceso selectivo. Se basa en mérito, capacidad e igualdad.`] },
-        { heading: `La selección del personal`, paragraphs: [`La selección debe respetar igualdad, mérito, capacidad, publicidad, transparencia, imparcialidad, profesionalidad de órganos de selección, independencia y adecuación entre pruebas y funciones. Los sistemas selectivos habituales son oposición, concurso-oposición y concurso cuando proceda legalmente.`] },
-        { heading: `La oferta pública de empleo`, paragraphs: [`La oferta pública de empleo recoge necesidades de recursos humanos con asignación presupuestaria que deben cubrirse mediante incorporación de personal de nuevo ingreso. No es lo mismo plantilla, relación de puestos, oferta pública ni convocatoria: la convocatoria concreta plazas y bases del proceso.`] }
+        ['Documento base', ['Ley 4/2011 de Empleo Público de Castilla-La Mancha, conectada con el Estatuto Básico del Empleado Público.']],
+        ['Personal al servicio de las Administraciones Públicas', ['El personal empleado público puede ser funcionario de carrera, funcionario interino, personal laboral o personal eventual. Cada clase tiene régimen jurídico y finalidad diferente.']],
+        ['Provisión de puestos de trabajo', ['La provisión cubre puestos por personal que ya pertenece a la Administración. Los sistemas principales son concurso y libre designación. No es lo mismo que selección de nuevo ingreso.']],
+        ['Carrera administrativa', ['La carrera permite el progreso profesional mediante ascenso, promoción o progresión según el sistema aplicable. Puede ser vertical, horizontal o vinculada a promoción interna.']],
+        ['Promoción interna', ['Permite acceder desde cuerpos, escalas o categorías a otros superiores o del mismo grupo, cumpliendo titulación, antigüedad y superación del proceso correspondiente.']],
+        ['Selección del personal y oferta pública de empleo', ['La selección respeta igualdad, mérito, capacidad, publicidad, transparencia, imparcialidad y adecuación de pruebas a funciones.', 'La oferta pública de empleo recoge necesidades con dotación presupuestaria que deben cubrirse mediante incorporación de personal de nuevo ingreso. No es lo mismo que convocatoria.']]
       ],
-      points: [`Funcionario de carrera`, `Interino`, `Laboral`, `Eventual`, `Provisión`, `Carrera`, `Promoción interna`, `Selección`, `OEP`]
+      points: ['Personal empleado público', 'Provisión', 'Carrera', 'Promoción interna', 'Selección', 'Oferta pública de empleo']
     },
     {
-      title: `La Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos laborales: Derechos y obligaciones. Servicios de Prevención. Consulta y participación de los trabajadores.`, area: `Prevención`, common: true,
+      title: 'La Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos laborales: Derechos y obligaciones. Servicios de Prevención. Consulta y participación de los trabajadores.',
+      area: 'Prevención', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 31/1995, de Prevención de Riesgos Laborales.`] },
-        { heading: `Derechos y obligaciones`, paragraphs: [`El trabajador tiene derecho a una protección eficaz en materia de seguridad y salud. El empresario o Administración empleadora debe garantizar esa protección mediante evaluación de riesgos, planificación preventiva, información, formación, consulta, vigilancia de la salud y medidas de emergencia.`, `Los principios preventivos son: evitar riesgos, evaluar los inevitables, combatirlos en origen, adaptar el trabajo a la persona, tener en cuenta evolución técnica, sustituir lo peligroso por lo que entrañe poco o ningún peligro, planificar la prevención, anteponer protección colectiva a individual y dar instrucciones adecuadas.`, `El trabajador debe usar correctamente equipos y medios de protección, no inutilizar dispositivos de seguridad, informar de situaciones de riesgo, cooperar con la Administración y cumplir instrucciones preventivas. En oficinas son importantes ergonomía, pantallas, iluminación, orden, cableado, pausas y posturas.`] },
-        { heading: `Servicios de Prevención`, paragraphs: [`El servicio de prevención es el conjunto de medios humanos y materiales necesarios para realizar actividades preventivas. Puede ser propio, ajeno o mancomunado según la organización y riesgos. Asesora en evaluación, planificación, formación, información, vigilancia de la salud, emergencias y coordinación preventiva.`] },
-        { heading: `Consulta y participación de los trabajadores`, paragraphs: [`Los trabajadores tienen derecho a ser consultados y participar en materia preventiva. Esta participación se articula mediante delegados de prevención y, cuando proceda, comité de seguridad y salud. Los delegados de prevención colaboran con la dirección, promueven la cooperación, son consultados y ejercen vigilancia y control sobre cumplimiento preventivo.`] }
+        ['Documento base', ['Ley 31/1995, de Prevención de Riesgos Laborales.']],
+        ['Derechos y obligaciones', ['El trabajador tiene derecho a protección eficaz en seguridad y salud. La Administración empleadora debe evaluar riesgos, planificar prevención, informar, formar, consultar y vigilar la salud cuando proceda.', 'Los principios preventivos incluyen evitar riesgos, evaluar los inevitables, combatirlos en origen, adaptar el trabajo a la persona, sustituir lo peligroso, planificar prevención, anteponer protección colectiva y dar instrucciones adecuadas.', 'El trabajador debe usar correctamente equipos, no inutilizar dispositivos de seguridad, informar de riesgos y cooperar.']],
+        ['Servicios de Prevención', ['El servicio de prevención es el conjunto de medios humanos y materiales para realizar actividades preventivas. Puede ser propio, ajeno o mancomunado y asesora en evaluación, planificación, formación, vigilancia de la salud y emergencias.']],
+        ['Consulta y participación de los trabajadores', ['La participación se articula mediante delegados de prevención y comité de seguridad y salud cuando proceda. Los delegados colaboran, promueven cooperación, son consultados y vigilan el cumplimiento preventivo.']]
       ],
-      points: [`Derecho a protección`, `Principios preventivos`, `Obligaciones del trabajador`, `Servicios de prevención`, `Delegados de prevención`, `Comité de seguridad y salud`]
+      points: ['Derechos', 'Obligaciones', 'Servicios de prevención', 'Consulta', 'Participación']
     },
     {
-      title: `La Ley 12/2010, de 18 de noviembre, de Igualdad entre Mujeres y Hombres de Castilla-La Mancha. La Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres.`, area: `Igualdad`, common: true,
+      title: 'La Ley 12/2010, de 18 de noviembre, de Igualdad entre Mujeres y Hombres de Castilla-La Mancha. La Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres.',
+      area: 'Igualdad', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 12/2010 de Igualdad entre Mujeres y Hombres de Castilla-La Mancha y Ley Orgánica 3/2007 para la igualdad efectiva de mujeres y hombres.`] },
-        { heading: `Ley 12/2010 de Castilla-La Mancha`, paragraphs: [`La norma autonómica integra la igualdad entre mujeres y hombres en la actuación pública de Castilla-La Mancha. Desarrolla principios como igualdad de trato, igualdad de oportunidades, transversalidad de género, eliminación de discriminaciones y promoción de presencia equilibrada.`, `Para una Administración local, la igualdad afecta a planificación, atención ciudadana, subvenciones, contratación, empleo público, estadísticas, comunicación institucional y prevención de violencia o discriminación.`] },
-        { heading: `Ley Orgánica 3/2007`, paragraphs: [`La Ley Orgánica 3/2007 define discriminación directa e indirecta por razón de sexo, acoso sexual, acoso por razón de sexo y acciones positivas. La discriminación directa es trato menos favorable por razón de sexo. La indirecta se produce cuando una regla aparentemente neutra causa desventaja particular salvo justificación objetiva y proporcional.`, `La igualdad efectiva exige integrar el principio de igualdad en interpretación normativa, políticas públicas, empleo, conciliación, presencia equilibrada, planes de igualdad y actuación de poderes públicos.`, `Las acciones positivas son medidas específicas para corregir situaciones patentes de desigualdad de hecho. Deben ser razonables, proporcionadas y orientadas a igualdad real.`] }
+        ['Documento base', ['Ley 12/2010 de Castilla-La Mancha y Ley Orgánica 3/2007.']],
+        ['Ley 12/2010 de Igualdad de Castilla-La Mancha', ['Integra la igualdad entre mujeres y hombres en la actuación pública autonómica. Incide en igualdad de trato, igualdad de oportunidades, transversalidad, eliminación de discriminación y presencia equilibrada.', 'Para una entidad local afecta a comunicación, atención ciudadana, subvenciones, empleo público, contratación, estadísticas y planificación.']],
+        ['Ley Orgánica 3/2007', ['Define discriminación directa, discriminación indirecta, acoso sexual, acoso por razón de sexo y acciones positivas.', 'La igualdad efectiva exige integrar la perspectiva de género en normas, políticas públicas, empleo, conciliación, planes de igualdad y actuación de poderes públicos.', 'Las acciones positivas corrigen desigualdades de hecho y deben ser razonables y proporcionadas.']]
       ],
-      points: [`Igualdad de trato`, `Igualdad de oportunidades`, `Discriminación directa`, `Discriminación indirecta`, `Acoso`, `Transversalidad`, `Acciones positivas`, `Planes de igualdad`]
+      points: ['Ley 12/2010', 'Ley Orgánica 3/2007', 'Igualdad de trato', 'Discriminación directa', 'Discriminación indirecta', 'Transversalidad', 'Acciones positivas']
     },
     {
-      title: `La Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.`, area: `Protección de datos`, common: true,
+      title: 'La Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.',
+      area: 'Protección de datos', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley Orgánica 3/2018 y Reglamento General de Protección de Datos de la Unión Europea, como marco básico de protección de datos.`] },
-        { heading: `Protección de Datos Personales`, paragraphs: [`Dato personal es toda información sobre una persona física identificada o identificable. Tratamiento es cualquier operación sobre datos: recogida, registro, conservación, consulta, modificación, comunicación, supresión o destrucción.`, `Los principios básicos son licitud, lealtad y transparencia; limitación de finalidad; minimización de datos; exactitud; limitación del plazo de conservación; integridad y confidencialidad; y responsabilidad proactiva. En un Ayuntamiento esto afecta a padrón, expedientes, tributos, solicitudes, registros, sanciones y atención al público.`, `Las bases jurídicas pueden ser consentimiento, contrato, obligación legal, intereses vitales, misión en interés público o ejercicio de poderes públicos, e interés legítimo cuando proceda. En la Administración son frecuentes obligación legal y ejercicio de poderes públicos, no el consentimiento como regla general.`, `Los derechos de las personas incluyen acceso, rectificación, supresión, oposición, limitación del tratamiento, portabilidad cuando proceda y no ser objeto de decisiones automatizadas en determinados casos. El acceso a expedientes debe conciliarse con protección de datos de terceros.`] },
-        { heading: `Garantía de los derechos digitales`, paragraphs: [`La Ley Orgánica 3/2018 reconoce derechos digitales como neutralidad de internet, acceso universal, seguridad digital, educación digital, protección de menores en internet, rectificación en internet, actualización de informaciones, intimidad frente a videovigilancia y geolocalización, intimidad en uso de dispositivos digitales en el trabajo y desconexión digital.`, `En trabajo administrativo, lo esencial es confidencialidad, control de accesos, bloqueo de pantalla, uso correcto de correo, no revelar datos por teléfono sin comprobación y no dejar documentos con datos personales expuestos.`] }
+        ['Documento base', ['Ley Orgánica 3/2018 y Reglamento General de Protección de Datos.']],
+        ['Protección de Datos Personales', ['Dato personal es toda información sobre persona física identificada o identificable. Tratamiento es cualquier operación sobre datos: recogida, registro, conservación, consulta, modificación, comunicación o supresión.', 'Principios: licitud, lealtad, transparencia, limitación de finalidad, minimización, exactitud, limitación del plazo, integridad, confidencialidad y responsabilidad proactiva.', 'Las bases jurídicas incluyen consentimiento, contrato, obligación legal, intereses vitales, misión en interés público, ejercicio de poderes públicos e interés legítimo cuando proceda.', 'Derechos: acceso, rectificación, supresión, oposición, limitación, portabilidad cuando proceda y no ser objeto de decisiones automatizadas en determinados casos.']],
+        ['Garantía de los derechos digitales', ['Incluye derechos como seguridad digital, educación digital, protección de menores, rectificación en internet, intimidad en dispositivos de trabajo, videovigilancia, geolocalización y desconexión digital.', 'En oficina municipal son clave confidencialidad, control de accesos, bloqueo de pantalla, cuidado con el correo, impresiones y atención telefónica.']]
       ],
-      points: [`Dato personal`, `Tratamiento`, `Principios`, `Bases jurídicas`, `Derechos`, `Responsable`, `Encargado`, `Confidencialidad`, `Derechos digitales`]
+      points: ['Protección de datos personales', 'Dato personal', 'Tratamiento', 'Principios', 'Derechos', 'Responsable y encargado', 'Derechos digitales']
     },
     {
-      title: `Principios de tributación local. Delegación. Colaboración. Beneficios fiscales y compensación. Las obligaciones tributarias. Los obligados tributarios. Los procedimientos de gestión tributaria. La extinción de la deuda.`, area: `Tributos locales`, common: false,
+      title: 'Principios de tributación local. Delegación. Colaboración. Beneficios fiscales y compensación. Las obligaciones tributarias. Los obligados tributarios. Los procedimientos de gestión tributaria. La extinción de la deuda.',
+      area: 'Tributos locales', common: false,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Texto Refundido de la Ley Reguladora de las Haciendas Locales y Ley General Tributaria, en lo relativo a principios, gestión y deuda tributaria.`] },
-        { heading: `Principios de tributación local`, paragraphs: [`Los tributos locales deben ajustarse a legalidad, capacidad económica, igualdad, generalidad, progresividad cuando proceda, no confiscatoriedad y reserva de ley. Las entidades locales no pueden crear tributos libremente: actúan dentro del marco legal y mediante ordenanzas fiscales.`] },
-        { heading: `Delegación`, paragraphs: [`Las entidades locales pueden delegar facultades de gestión, liquidación, inspección y recaudación en otras Administraciones o entidades públicas en los términos legales. La delegación busca eficacia, especialmente en municipios con menos medios.`] },
-        { heading: `Colaboración`, paragraphs: [`La colaboración entre Administraciones permite intercambio de información y cooperación para aplicar tributos. Debe respetar competencias, normativa tributaria y protección de datos.`] },
-        { heading: `Beneficios fiscales y compensación`, paragraphs: [`Los beneficios fiscales son exenciones, bonificaciones, reducciones u otros tratamientos favorables previstos por norma. En tributos locales deben tener cobertura legal y, cuando proceda, reflejo en ordenanza.`, `La compensación extingue deudas cuando Administración y obligado son recíprocamente acreedores y deudores en los términos legalmente previstos.`] },
-        { heading: `Las obligaciones tributarias`, paragraphs: [`La obligación tributaria principal es pagar la cuota. También existen obligaciones accesorias, como intereses y recargos, y obligaciones formales, como presentar declaraciones, comunicar datos, conservar documentos o facilitar información.`] },
-        { heading: `Los obligados tributarios`, paragraphs: [`Son obligados tributarios quienes deben cumplir obligaciones tributarias: contribuyentes, sustitutos, obligados a realizar pagos a cuenta, responsables, sucesores y otros previstos por la ley. El contribuyente realiza el hecho imponible; el sustituto ocupa su lugar por imposición legal.`] },
-        { heading: `Procedimientos de gestión tributaria`, paragraphs: [`La gestión tributaria incluye declaraciones, autoliquidaciones, comunicaciones, comprobaciones, liquidaciones, padrones, censos y resolución de solicitudes. En lo local son frecuentes padrones tributarios y liquidaciones de impuestos, tasas y precios públicos.`] },
-        { heading: `Extinción de la deuda`, paragraphs: [`La deuda tributaria se extingue por pago, prescripción, compensación, condonación en los casos previstos y otros medios legales. Aplazar o fraccionar no extingue por sí mismo: solo modifica el calendario de pago.`] }
+        ['Documento base', ['Texto Refundido de la Ley Reguladora de las Haciendas Locales y Ley General Tributaria.']],
+        ['Principios de tributación local', ['Los tributos locales se someten a legalidad, reserva de ley, capacidad económica, igualdad, generalidad, no confiscatoriedad y ordenanzas fiscales dentro del marco legal.']],
+        ['Delegación', ['Las entidades locales pueden delegar gestión, liquidación, inspección y recaudación en otras Administraciones o entidades públicas cuando la ley lo permita.']],
+        ['Colaboración', ['La colaboración permite cooperación e intercambio de información para aplicar tributos, respetando competencias, normativa tributaria y protección de datos.']],
+        ['Beneficios fiscales y compensación', ['Los beneficios fiscales son exenciones, bonificaciones o reducciones con cobertura normativa. La compensación extingue deudas cuando Administración y obligado son recíprocamente acreedores y deudores conforme a la ley.']],
+        ['Obligaciones tributarias y obligados tributarios', ['La obligación principal es pagar la cuota. Hay obligaciones accesorias y formales. Los obligados incluyen contribuyentes, sustitutos, responsables, sucesores y otros sujetos previstos por la ley.']],
+        ['Procedimientos de gestión tributaria y extinción de la deuda', ['La gestión tributaria incluye declaraciones, autoliquidaciones, comprobaciones, liquidaciones, padrones y censos. La deuda se extingue por pago, prescripción, compensación, condonación cuando proceda y otros medios legales.']]
       ],
-      points: [`Principios`, `Delegación`, `Colaboración`, `Beneficios fiscales`, `Compensación`, `Obligaciones tributarias`, `Obligados`, `Gestión`, `Extinción`]
+      points: ['Principios', 'Delegación', 'Colaboración', 'Beneficios fiscales', 'Compensación', 'Obligaciones tributarias', 'Obligados tributarios', 'Gestión tributaria', 'Extinción de deuda']
     },
     {
-      title: `La recaudación de los tributos locales. La recaudación en periodo voluntario. El aplazamiento, fraccionamiento y compensación de las deudas tributarias. La devolución de ingresos. La recaudación ejecutiva: el procedimiento de apremio.`, area: `Tributos locales`, common: false,
+      title: 'La recaudación de los tributos locales. La recaudación en periodo voluntario. El aplazamiento, fraccionamiento y compensación de las deudas tributarias. La devolución de ingresos. La recaudación ejecutiva: el procedimiento de apremio.',
+      area: 'Tributos locales', common: false,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Texto Refundido de la Ley Reguladora de las Haciendas Locales, Ley General Tributaria y Reglamento General de Recaudación.`] },
-        { heading: `La recaudación de los tributos locales`, paragraphs: [`La recaudación es la función administrativa dirigida al cobro de tributos y otros ingresos de derecho público. Puede realizarse directamente por la entidad local o mediante delegación en diputaciones u otros organismos de recaudación.`] },
-        { heading: `Recaudación en periodo voluntario`, paragraphs: [`En periodo voluntario el obligado puede pagar dentro del plazo sin recargos ejecutivos. En tributos periódicos suele existir calendario fiscal. En liquidaciones notificadas individualmente, el plazo depende de la fecha de notificación.`] },
-        { heading: `Aplazamiento, fraccionamiento y compensación`, paragraphs: [`El aplazamiento permite pagar más tarde. El fraccionamiento divide el pago en varios vencimientos. Pueden exigir solicitud, justificación, garantías e intereses.`, `La compensación extingue deudas cuando el obligado tiene créditos reconocidos frente a la Administración en los términos legales.`] },
-        { heading: `Devolución de ingresos`, paragraphs: [`La devolución puede deberse a ingresos indebidos, duplicados, exceso de pago, anulación de liquidación o devoluciones previstas por la normativa del tributo. En un supuesto hay que comprobar causa, legitimación, justificante de pago y expediente originario.`] },
-        { heading: `Recaudación ejecutiva: procedimiento de apremio`, paragraphs: [`El periodo ejecutivo se abre cuando finaliza voluntaria sin pago, salvo suspensión, aplazamiento o fraccionamiento. El procedimiento de apremio se inicia con providencia de apremio, que requiere pago e incorpora recargo.`, `Si no se paga, pueden embargarse bienes y derechos siguiendo el orden legal, respetando proporcionalidad, límites de embargabilidad y trámites de notificación.`] }
+        ['Documento base', ['Texto Refundido de Haciendas Locales, Ley General Tributaria y Reglamento General de Recaudación.']],
+        ['Recaudación de tributos locales', ['La recaudación es la función dirigida al cobro de tributos e ingresos de derecho público. Puede realizarse directamente o por delegación.']],
+        ['Periodo voluntario', ['En periodo voluntario el obligado paga dentro de plazo sin recargos ejecutivos. En tributos periódicos suele existir calendario fiscal; en liquidaciones notificadas, el plazo depende de la notificación.']],
+        ['Aplazamiento, fraccionamiento y compensación', ['El aplazamiento permite pagar más tarde. El fraccionamiento divide el pago. Pueden exigir solicitud, garantías e intereses. La compensación extingue deuda cuando existen créditos reconocidos frente a la Administración.']],
+        ['Devolución de ingresos', ['Puede proceder por ingreso indebido, duplicado, exceso de pago, anulación de liquidación o previsión normativa. Hay que comprobar causa, legitimación y justificante.']],
+        ['Recaudación ejecutiva: apremio', ['El periodo ejecutivo se abre al terminar la voluntaria sin pago, salvo suspensión, aplazamiento o fraccionamiento. El procedimiento de apremio se inicia con providencia de apremio y puede continuar con embargo de bienes y derechos.']]
       ],
-      points: [`Recaudación`, `Voluntaria`, `Aplazamiento`, `Fraccionamiento`, `Compensación`, `Devolución`, `Ejecutiva`, `Apremio`]
+      points: ['Recaudación', 'Periodo voluntario', 'Aplazamiento', 'Fraccionamiento', 'Compensación', 'Devolución', 'Ejecutiva', 'Apremio']
     },
     {
-      title: `Los tributos locales. Normas generales. El Impuesto sobre Bienes Inmuebles, el Impuesto sobre Actividades Económicas, el Impuesto sobre vehículos de tracción mecánica, el Impuesto sobre el Incremento del valor de los terrenos de naturaleza urbana: naturaleza, hecho imponible y sujetos pasivo.`, area: `Tributos locales`, common: false,
+      title: 'Los tributos locales. Normas generales. El Impuesto sobre Bienes Inmuebles, el Impuesto sobre Actividades Económicas, el Impuesto sobre vehículos de tracción mecánica, el Impuesto sobre el Incremento del valor de los terrenos de naturaleza urbana: naturaleza, hecho imponible y sujetos pasivo.',
+      area: 'Tributos locales', common: false,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Texto Refundido de la Ley Reguladora de las Haciendas Locales.`] },
-        { heading: `Los tributos locales. Normas generales`, paragraphs: [`Los recursos tributarios locales incluyen impuestos, tasas y contribuciones especiales. Los impuestos pueden ser obligatorios o potestativos según la ley. Las ordenanzas fiscales regulan elementos dentro del margen legal.`] },
-        { heading: `Impuesto sobre Bienes Inmuebles`, paragraphs: [`El IBI es un impuesto directo, real, objetivo, periódico y obligatorio que grava el valor de los bienes inmuebles. El hecho imponible se vincula a la titularidad de determinados derechos sobre bienes inmuebles: concesión administrativa, derecho real de superficie, derecho real de usufructo o propiedad, siguiendo el orden legal. El sujeto pasivo es quien ostenta el derecho que realiza el hecho imponible.`] },
-        { heading: `Impuesto sobre Actividades Económicas`, paragraphs: [`El IAE grava el ejercicio de actividades empresariales, profesionales o artísticas, se ejerzan o no en local determinado y estén o no especificadas en tarifas. Lo relevante es el ejercicio de actividad económica, no necesariamente la obtención de beneficio. El sujeto pasivo es quien realiza la actividad.`] },
-        { heading: `Impuesto sobre Vehículos de Tracción Mecánica`, paragraphs: [`El IVTM grava la titularidad de vehículos de tracción mecánica aptos para circular por vías públicas. Es periódico. El sujeto pasivo es la persona o entidad a cuyo nombre conste el vehículo en el permiso de circulación.`] },
-        { heading: `Impuesto sobre el Incremento del Valor de los Terrenos de Naturaleza Urbana`, paragraphs: [`El IIVTNU grava el incremento de valor que experimentan terrenos urbanos puesto de manifiesto por transmisión de propiedad o constitución o transmisión de derechos reales de goce limitativos del dominio. Es la plusvalía municipal. El sujeto pasivo depende de si la transmisión es onerosa o lucrativa y de quién transmite o adquiere según el caso.`] }
+        ['Documento base', ['Texto Refundido de la Ley Reguladora de las Haciendas Locales.']],
+        ['Tributos locales. Normas generales', ['Los tributos locales incluyen impuestos, tasas y contribuciones especiales. Los impuestos pueden ser obligatorios o potestativos conforme a la ley. Las ordenanzas fiscales desarrollan elementos dentro del margen legal.']],
+        ['Impuesto sobre Bienes Inmuebles', ['El IBI grava el valor de bienes inmuebles. El hecho imponible se vincula a concesión administrativa, derecho de superficie, usufructo o propiedad, en el orden legal. El sujeto pasivo es quien ostenta el derecho que realiza el hecho imponible.']],
+        ['Impuesto sobre Actividades Económicas', ['El IAE grava el ejercicio de actividades empresariales, profesionales o artísticas, exista o no local y haya o no beneficio. El sujeto pasivo es quien realiza la actividad.']],
+        ['Impuesto sobre Vehículos de Tracción Mecánica', ['El IVTM grava la titularidad de vehículos aptos para circular. El sujeto pasivo es la persona o entidad a cuyo nombre conste el vehículo en el permiso de circulación.']],
+        ['Impuesto sobre el Incremento de Valor de los Terrenos de Naturaleza Urbana', ['El IIVTNU grava el incremento de valor de terrenos urbanos puesto de manifiesto por transmisión de propiedad o constitución o transmisión de derechos reales de goce limitativos del dominio. El sujeto pasivo depende del tipo de transmisión.']]
       ],
-      points: [`Normas generales`, `IBI`, `IAE`, `IVTM`, `IIVTNU`, `Naturaleza`, `Hecho imponible`, `Sujeto pasivo`]
+      points: ['Normas generales', 'IBI', 'IAE', 'IVTM', 'IIVTNU', 'Naturaleza', 'Hecho imponible', 'Sujeto pasivo']
     },
     {
-      title: `Administración electrónica I. Usos del Certificado electrónico en la administración electrónica. Tipos y soportes del certificado electrónico. Autoridades certificadoras y servicios que prestan.`, area: `Administración electrónica`, common: true,
+      title: 'Administración electrónica I. Usos del Certificado electrónico en la administración electrónica. Tipos y soportes del certificado electrónico. Autoridades certificadoras y servicios que prestan.',
+      area: 'Administración electrónica', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 39/2015, Ley 40/2015, normativa de identificación y firma electrónica, y régimen de servicios de confianza.`] },
-        { heading: `Usos del certificado electrónico en la administración electrónica`, paragraphs: [`El certificado electrónico permite identificar electrónicamente a una persona o entidad y firmar trámites, solicitudes, recursos, declaraciones, comunicaciones y documentos. En sede electrónica se usa para registro, consulta de expedientes, recepción de notificaciones, firma de documentos y verificación de identidad.`, `Identificación y firma no son lo mismo. Identificarse acredita quién actúa. Firmar acredita voluntad y vincula al firmante con el contenido. En trámites administrativos puede exigirse solo identificación o también firma según la actuación.`] },
-        { heading: `Tipos y soportes del certificado electrónico`, paragraphs: [`Puede haber certificados de persona física, representante, empleado público, sello electrónico de Administración u órgano y certificados de sede. Los soportes pueden ser software instalado en navegador o sistema, tarjeta criptográfica, DNI electrónico, dispositivo seguro o sistemas en la nube admitidos.`, `Hay que controlar vigencia, revocación, contraseña, compatibilidad de navegador, Autofirma u otras herramientas y custodia segura. Un certificado caducado o revocado no debe utilizarse.`] },
-        { heading: `Autoridades certificadoras y servicios que prestan`, paragraphs: [`Las autoridades o prestadores de servicios de certificación emiten, renuevan, suspenden y revocan certificados. También pueden prestar servicios de validación, sellado de tiempo, firma, sello electrónico y conservación de evidencias.`, `En administración electrónica importa verificar cadena de confianza, validez del certificado y autenticidad del documento mediante CSV, sede electrónica o plataforma de validación.`] }
+        ['Documento base', ['Ley 39/2015, Ley 40/2015 y normativa de identificación, firma electrónica y servicios de confianza.']],
+        ['Usos del certificado electrónico', ['Permite identificar y firmar electrónicamente en sede: solicitudes, recursos, comunicaciones, consulta de expedientes, notificaciones y documentos.', 'Identificación acredita quién actúa. Firma acredita voluntad y vincula al firmante con el contenido.']],
+        ['Tipos y soportes', ['Puede haber certificados de persona física, representante, empleado público, sello electrónico, sede electrónica y otros. Los soportes pueden ser software, tarjeta, DNI electrónico, dispositivo seguro o sistemas admitidos en la nube.', 'Hay que controlar vigencia, revocación, contraseña, soporte, navegador y herramientas de firma.']],
+        ['Autoridades certificadoras y servicios', ['Las autoridades certificadoras emiten, renuevan, suspenden y revocan certificados. También pueden prestar validación, sellado de tiempo, firma, sello y conservación de evidencias.', 'La verificación de documentos puede realizarse con CSV, sede electrónica o plataformas de validación.']]
       ],
-      points: [`Identificación`, `Firma`, `Certificado`, `Tipos`, `Soportes`, `Autoridades certificadoras`, `Validación`, `CSV`]
+      points: ['Certificado electrónico', 'Identificación', 'Firma', 'Tipos', 'Soportes', 'Autoridades certificadoras', 'Servicios', 'CSV']
     },
     {
-      title: `Ley 40/2015, de 1 de octubre, del Régimen Jurídico del Sector Público: Los órganos de las Administraciones Públicas. Administración General del Estado.`, area: `Régimen jurídico público`, common: true,
+      title: 'Ley 40/2015, de 1 de octubre, del Régimen Jurídico del Sector Público: Los órganos de las Administraciones Públicas. Administración General del Estado.',
+      area: 'Régimen jurídico público', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Ley 40/2015, de Régimen Jurídico del Sector Público.`] },
-        { heading: `Los órganos de las Administraciones Públicas`, paragraphs: [`Un órgano administrativo es una unidad con funciones que producen efectos jurídicos frente a terceros o cuya actuación tiene carácter preceptivo. La competencia es irrenunciable y se ejerce por el órgano que la tenga atribuida, salvo delegación o avocación en los términos legales.`, `Debes distinguir delegación de competencias, delegación de firma, suplencia, avocación y encomienda de gestión. La delegación transfiere ejercicio, no titularidad. La firma no cambia competencia. La suplencia cubre ausencia o vacante. La avocación permite al superior asumir un asunto. La encomienda encarga actividades materiales o técnicas sin ceder competencia.`, `La abstención y recusación protegen imparcialidad. Causas típicas: interés personal, parentesco, amistad íntima o enemistad manifiesta, intervención como perito o testigo, relación de servicio o interés con persona interesada.`] },
-        { heading: `Administración General del Estado`, paragraphs: [`La Administración General del Estado se organiza en órganos centrales, territoriales y en el exterior. Los órganos superiores y directivos se ordenan jerárquicamente. A nivel central destacan Ministerios y Secretarías de Estado; a nivel territorial, Delegaciones del Gobierno y Subdelegaciones del Gobierno; en el exterior, órganos de representación y administración exterior.`, `Para esta oposición debes distinguir la organización estatal de la organización autonómica, provincial y municipal. No atribuyas competencias municipales a órganos de la Administración General del Estado.`] }
+        ['Documento base', ['Ley 40/2015, de Régimen Jurídico del Sector Público.']],
+        ['Órganos de las Administraciones Públicas', ['Un órgano administrativo es una unidad con funciones que producen efectos jurídicos frente a terceros o cuya actuación tiene carácter preceptivo.', 'La competencia es irrenunciable y se ejerce por el órgano que la tenga atribuida, salvo delegación o avocación. Hay que distinguir delegación de competencias, delegación de firma, suplencia, avocación y encomienda de gestión.', 'La abstención y recusación protegen la imparcialidad. Causas típicas son interés personal, parentesco, amistad íntima, enemistad manifiesta, intervención previa o relación de servicio con interesado.']],
+        ['Administración General del Estado', ['La AGE se organiza en órganos centrales, territoriales y en el exterior. A nivel central destacan Ministerios y Secretarías de Estado. Territorialmente destacan Delegaciones y Subdelegaciones del Gobierno.', 'No debe confundirse organización estatal con organización municipal, provincial o autonómica.']]
       ],
-      points: [`Órgano administrativo`, `Competencia`, `Delegación`, `Avocación`, `Encomienda`, `Abstención`, `Recusación`, `AGE`]
+      points: ['Órgano administrativo', 'Competencia', 'Delegación', 'Avocación', 'Encomienda', 'Abstención', 'Recusación', 'AGE']
     },
     {
-      title: `Microsoft Windows I. Creación, copiado y borrado de archivos y carpetas. Las unidades de disco locales y de red. Impresión y digitalización de documentos.`, area: `Informática`, common: true,
+      title: 'Microsoft Windows I. Creación, copiado y borrado de archivos y carpetas. Las unidades de disco locales y de red. Impresión y digitalización de documentos.',
+      area: 'Informática', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Uso práctico de Microsoft Windows en entorno administrativo.`] },
-        { heading: `Creación, copiado y borrado de archivos y carpetas`, paragraphs: [`Un archivo contiene información y una carpeta organiza archivos u otras carpetas. Crear carpeta permite ordenar expedientes, documentos y copias de trabajo. Copiar crea un duplicado y conserva el original. Cortar y pegar mueve. Eliminar envía normalmente a Papelera en unidades locales, pero en unidades de red o dispositivos externos puede eliminar de forma directa.`, `Las extensiones indican formato: PDF, DOCX, XLSX, ODT, ODS, JPG, PNG, ZIP. En administración conviene usar nombres claros, fechas normalizadas y evitar duplicados confusos.`] },
-        { heading: `Unidades de disco locales y de red`, paragraphs: [`Las unidades locales pertenecen al equipo. Las unidades de red son recursos compartidos en servidor u otro equipo, normalmente con permisos. En oficina municipal, el acceso a carpetas compartidas debe respetar confidencialidad, trazabilidad y protección de datos.`, `La diferencia práctica es importante: una unidad de red puede tener permisos, copias de seguridad y reglas de borrado distintas a una carpeta local o memoria USB.`] },
-        { heading: `Impresión y digitalización de documentos`, paragraphs: [`Para imprimir se selecciona impresora, páginas, copias, orientación, color o blanco y negro, doble cara y tamaño. Deben evitarse errores con documentos que contienen datos personales.`, `Digitalizar es convertir papel a documento electrónico. Hay que revisar legibilidad, orientación, resolución, páginas completas, formato PDF cuando proceda, nombre de archivo y correcta incorporación al expediente electrónico.`] }
+        ['Documento base', ['Uso práctico de Microsoft Windows en oficina administrativa.']],
+        ['Creación, copiado y borrado de archivos y carpetas', ['Archivo contiene información y carpeta organiza archivos. Copiar crea duplicado; cortar y pegar mueve. Borrar suele enviar a Papelera en unidades locales, pero puede eliminar directamente en red o dispositivos externos.', 'Las extensiones ayudan a reconocer formatos: PDF, DOCX, XLSX, ODT, ODS, JPG, PNG o ZIP.']],
+        ['Unidades locales y de red', ['Las unidades locales pertenecen al equipo. Las de red están compartidas en servidor u otro equipo y suelen tener permisos. En oficina pública deben respetarse confidencialidad y protección de datos.']],
+        ['Impresión y digitalización', ['Imprimir exige seleccionar impresora, páginas, copias, orientación, doble cara, color y tamaño. Digitalizar convierte papel en documento electrónico; hay que revisar legibilidad, orientación, resolución, páginas completas, formato y nombre de archivo.']]
       ],
-      points: [`Archivos`, `Carpetas`, `Copiar`, `Mover`, `Borrar`, `Unidades locales`, `Unidades de red`, `Impresión`, `Digitalización`]
+      points: ['Archivos', 'Carpetas', 'Copiar', 'Mover', 'Borrar', 'Unidades locales', 'Unidades de red', 'Impresión', 'Digitalización']
     },
     {
-      title: `Microsoft Windows II. Navegación por Internet con Microsoft Internet Explorer y Microsoft Edge.`, area: `Informática`, common: true,
+      title: 'Microsoft Windows II. Navegación por Internet con Microsoft Internet Explorer y Microsoft Edge.',
+      area: 'Informática', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Uso práctico de navegación web en Windows con referencia histórica a Internet Explorer y uso actual de Microsoft Edge.`] },
-        { heading: `Navegación por Internet`, paragraphs: [`Un navegador permite acceder a páginas web mediante URL. Debes conocer pestañas, barra de direcciones, favoritos, historial, descargas, caché, cookies, permisos de sitio y navegación privada. HTTPS cifra la conexión, pero no garantiza por sí solo que la web sea oficial.`, `En administración electrónica conviene verificar dominio oficial, certificado del sitio, sede electrónica correcta, ventanas emergentes, descargas y compatibilidad con herramientas de firma.`] },
-        { heading: `Microsoft Internet Explorer`, paragraphs: [`Internet Explorer fue navegador clásico de Windows y puede aparecer en temarios por compatibilidad histórica. Actualmente está obsoleto para uso ordinario, pero algunos conceptos se mantienen: barra de direcciones, favoritos, historial, opciones de internet, seguridad y compatibilidad.`] },
-        { heading: `Microsoft Edge`, paragraphs: [`Microsoft Edge es el navegador actual de Microsoft. Permite perfiles, favoritos, historial, descargas, configuración de privacidad, permisos, navegación InPrivate, lector PDF y compatibilidad con servicios web modernos.`, `En oficina: no guardar contraseñas ajenas, cerrar sesión, no abrir adjuntos dudosos, revisar descargas y no usar navegación privada como sustituto de seguridad corporativa.`] }
+        ['Documento base', ['Uso práctico de navegación en Windows.']],
+        ['Navegación por Internet', ['Un navegador permite acceder a páginas mediante URL. Debes conocer pestañas, barra de direcciones, favoritos, historial, descargas, caché, cookies, permisos y navegación privada.', 'HTTPS cifra la conexión, pero no garantiza por sí solo que el sitio sea oficial. En trámites hay que comprobar dominio, sede, certificado y descargas.']],
+        ['Internet Explorer', ['Navegador histórico de Windows. Puede aparecer por temario, aunque está obsoleto. Conceptos: favoritos, historial, opciones de internet, seguridad y compatibilidad.']],
+        ['Microsoft Edge', ['Navegador actual de Microsoft. Permite perfiles, favoritos, historial, descargas, privacidad, navegación InPrivate, lector PDF y compatibilidad moderna. En oficina no deben guardarse contraseñas ajenas ni abrir descargas dudosas.']]
       ],
-      points: [`Navegador`, `URL`, `HTTPS`, `Favoritos`, `Historial`, `Descargas`, `Internet Explorer`, `Edge`, `Seguridad`]
+      points: ['Navegador', 'URL', 'HTTPS', 'Favoritos', 'Historial', 'Descargas', 'Internet Explorer', 'Edge']
     },
     {
-      title: `LibreOffice y Microsoft Office I. Procesamiento de texto con procesadores de texto Microsoft Word y LibreOffice .`, area: `Ofimática`, common: true,
+      title: 'LibreOffice y Microsoft Office I. Procesamiento de texto con procesadores de texto Microsoft Word y LibreOffice .',
+      area: 'Ofimática', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Uso práctico de Microsoft Word y LibreOffice Writer como procesadores de texto.`] },
-        { heading: `LibreOffice y Microsoft Office I`, paragraphs: [`Microsoft Office y LibreOffice son suites ofimáticas. En procesamiento de texto, las aplicaciones principales son Word y Writer. Ambas permiten crear documentos administrativos, aplicar formato, insertar tablas, revisar ortografía, usar plantillas y exportar a PDF.`] },
-        { heading: `Procesamiento de texto con Microsoft Word`, paragraphs: [`Word permite crear y editar documentos con formato de carácter y de párrafo, estilos, listas, tablas, encabezados, pies, numeración, saltos, comentarios, control de cambios, combinación de correspondencia y exportación a PDF.`, `La diferencia entre formato de carácter y de párrafo es básica: carácter afecta a letra; párrafo afecta a alineación, sangrías, interlineado y espaciado. Los estilos permiten uniformidad y creación de índices.`] },
-        { heading: `Procesamiento de texto con LibreOffice Writer`, paragraphs: [`Writer ofrece funciones equivalentes: estilos, formato, tablas, encabezados, pies, numeración, plantillas, exportación a PDF y compatibilidad con formatos abiertos como ODT y con DOCX.`, `En documentos oficiales debes cuidar estructura, márgenes, encabezados, firma, fecha, referencia, ortografía, formato final y protección de datos antes de enviar o imprimir.`] }
+        ['Documento base', ['Uso práctico de Microsoft Word y LibreOffice Writer.']],
+        ['LibreOffice y Microsoft Office I', ['Son suites ofimáticas. En procesamiento de texto se usan Word y Writer para cartas, informes, oficios, certificados, actas y comunicaciones.']],
+        ['Microsoft Word', ['Permite formato de carácter y párrafo, estilos, listas, tablas, encabezados, pies, numeración, saltos, comentarios, control de cambios, combinación de correspondencia y exportación a PDF.']],
+        ['LibreOffice Writer', ['Ofrece funciones equivalentes: estilos, formato, tablas, encabezados, pies, numeración, plantillas, exportación a PDF y compatibilidad con ODT y DOCX.', 'En documentos oficiales hay que cuidar estructura, márgenes, firma, fecha, ortografía y datos personales.']]
       ],
-      points: [`Word`, `Writer`, `Formato`, `Estilos`, `Tablas`, `Encabezados`, `Plantillas`, `Combinar correspondencia`, `PDF`]
+      points: ['Word', 'Writer', 'Formato', 'Estilos', 'Tablas', 'Encabezados', 'Plantillas', 'PDF']
     },
     {
-      title: `LibreOffice y Microsoft Office II. Elaboración y uso de hojas de cálculo con Microsoft Excel y LibreOffice Calc.`, area: `Ofimática`, common: true,
+      title: 'LibreOffice y Microsoft Office II. Elaboración y uso de hojas de cálculo con Microsoft Excel y LibreOffice Calc.',
+      area: 'Ofimática', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Uso práctico de Microsoft Excel y LibreOffice Calc como hojas de cálculo.`] },
-        { heading: `LibreOffice y Microsoft Office II`, paragraphs: [`Excel y Calc pertenecen a suites ofimáticas y se utilizan para listados, cálculos, controles, estadísticas y tablas. Debes conocer libro, hoja, celda, fila, columna, rango, fórmula, función y formato.`] },
-        { heading: `Elaboración de hojas de cálculo con Microsoft Excel`, paragraphs: [`Excel organiza datos en celdas. Las fórmulas empiezan por igual. Las funciones básicas son SUMA, PROMEDIO, MAX, MIN, CONTAR, CONTARA, SI y funciones de fecha. Las referencias relativas cambian al copiar; las absolutas se fijan con dólar.`, `Ordenar reorganiza registros; filtrar muestra solo los que cumplen condiciones sin borrar el resto. Antes de ordenar, selecciona toda la tabla para no descolocar datos.`] },
-        { heading: `Uso de hojas de cálculo con LibreOffice Calc`, paragraphs: [`Calc permite operaciones equivalentes: fórmulas, funciones, formatos, filtros, ordenaciones y gráficos. Usa formato ODS como propio y puede trabajar con XLSX.`, `En oficina pública se debe revisar exactitud de fórmulas, proteger datos personales, evitar celdas combinadas en tablas de datos y comprobar encabezados antes de imprimir o exportar.`] }
+        ['Documento base', ['Uso práctico de Microsoft Excel y LibreOffice Calc.']],
+        ['Elaboración y uso de hojas de cálculo', ['Excel y Calc sirven para listados, cálculos, controles, estadísticas y tablas. Conceptos: libro, hoja, celda, fila, columna, rango, fórmula y función.']],
+        ['Microsoft Excel', ['Las fórmulas empiezan por igual. Funciones básicas: SUMA, PROMEDIO, MAX, MIN, CONTAR, CONTARA, SI y funciones de fecha. Las referencias relativas cambian al copiar; las absolutas se fijan con dólar.', 'Ordenar reorganiza registros. Filtrar muestra solo registros que cumplen condiciones sin eliminar los demás.']],
+        ['LibreOffice Calc', ['Calc permite fórmulas, funciones, formatos, filtros, ordenaciones y gráficos. Usa ODS como formato propio y puede trabajar con XLSX. Hay que revisar fórmulas, proteger datos y no descolocar tablas.']]
       ],
-      points: [`Excel`, `Calc`, `Celda`, `Rango`, `Fórmulas`, `Funciones`, `Referencias`, `Ordenar`, `Filtrar`, `Gráficos`]
+      points: ['Excel', 'Calc', 'Celda', 'Rango', 'Fórmulas', 'Funciones', 'Referencias', 'Ordenar', 'Filtrar']
     },
     {
-      title: `Conceptos Generales del ordenador personal. El ordenador personal y sus componentes más comunes. Periféricos del ordenador personal. Impresoras, escáneres, discos duros externos, lectores y grabadores de CD y DVD, y memorias USB.`, area: `Informática`, common: true,
+      title: 'Conceptos Generales del ordenador personal. El ordenador personal y sus componentes más comunes. Periféricos del ordenador personal. Impresoras, escáneres, discos duros externos, lectores y grabadores de CD y DVD, y memorias USB.',
+      area: 'Informática', common: true,
       sections: [
-        { heading: `Documento base`, paragraphs: [`Conceptos básicos de informática de usuario aplicados al ordenador personal y periféricos.`] },
-        { heading: `Conceptos generales del ordenador personal`, paragraphs: [`Un ordenador personal es un sistema formado por hardware, software, sistema operativo, dispositivos de entrada/salida y almacenamiento. Hardware son componentes físicos. Software son programas e instrucciones. El sistema operativo gestiona recursos, usuarios, archivos, permisos y aplicaciones.`] },
-        { heading: `El ordenador personal y sus componentes más comunes`, paragraphs: [`La CPU ejecuta instrucciones. La memoria RAM guarda temporalmente datos y programas en uso. El almacenamiento permanente puede ser HDD o SSD. La placa base conecta componentes. La fuente de alimentación aporta energía. La tarjeta de red permite conexión. La tarjeta gráfica gestiona imagen.`, `No confundas RAM con disco duro: la RAM es temporal y rápida; el disco o SSD conserva datos apagado el equipo.`] },
-        { heading: `Periféricos del ordenador personal`, paragraphs: [`Los periféricos de entrada introducen datos: teclado, ratón, escáner, micrófono. Los de salida muestran resultados: monitor, impresora, altavoces. Algunos son entrada y salida, como pantallas táctiles, memorias USB o equipos multifunción.`] },
-        { heading: `Impresoras, escáneres, discos duros externos, lectores y grabadores de CD y DVD, y memorias USB`, paragraphs: [`Las impresoras pueden ser láser, inyección o multifunción. Hay que conocer cola de impresión, tóner o tinta, bandejas, doble cara y conexión local o de red.`, `Los escáneres digitalizan documentos. Los discos externos y memorias USB almacenan y transportan información, pero su uso en entornos administrativos debe controlarse por virus, pérdida de datos y confidencialidad.`, `Los lectores y grabadores de CD/DVD son dispositivos ópticos para leer o escribir discos. Aunque hoy se usan menos, pueden aparecer en test como dispositivos de almacenamiento externo.`] }
+        ['Documento base', ['Conceptos básicos de informática de usuario.']],
+        ['Conceptos generales del ordenador personal', ['Un ordenador personal combina hardware, software, sistema operativo, dispositivos de entrada y salida y almacenamiento. Hardware son componentes físicos. Software son programas.']],
+        ['Componentes más comunes', ['La CPU ejecuta instrucciones. La RAM almacena temporalmente datos en uso. HDD y SSD guardan datos de forma permanente. Placa base conecta componentes. Fuente alimenta el equipo. Tarjeta de red permite conexión.']],
+        ['Periféricos', ['Entrada: teclado, ratón, escáner, micrófono. Salida: monitor, impresora, altavoces. Entrada y salida: pantalla táctil, memoria USB o equipo multifunción.']],
+        ['Impresoras, escáneres, discos externos, CD, DVD y USB', ['Impresoras pueden ser láser, inyección o multifunción. Escáneres digitalizan documentos. Discos externos y memorias USB almacenan y transportan datos, pero deben controlarse por seguridad y protección de datos. Lectores y grabadores de CD/DVD son dispositivos ópticos de almacenamiento.']]
       ],
-      points: [`Hardware`, `Software`, `Sistema operativo`, `CPU`, `RAM`, `HDD/SSD`, `Periféricos`, `Impresoras`, `Escáneres`, `USB`, `CD/DVD`]
+      points: ['Ordenador personal', 'Hardware', 'Software', 'CPU', 'RAM', 'HDD/SSD', 'Periféricos', 'Impresoras', 'Escáneres', 'USB', 'CD/DVD']
     }
   ];
 
@@ -215,77 +230,79 @@
 
   function makeTheme(def, i) {
     const n = i + 1;
-    const headings = def.sections.slice(1).map(s => s.heading);
     return {
-      id: `t${n}`,
+      id: 't' + n,
       number: n,
       title: def.title,
       area: def.area,
       commonPotential: def.common,
-      sections: def.sections,
-      tree: `Tema ${n}\n├─ ${def.sections[0].heading}\n${headings.map((h, idx) => `${idx === headings.length - 1 ? '└' : '├'}─ ${h}`).join('\n')}`,
-      reviewTable: [
-        [`Punto oficial`, `Qué dominar`],
-        ...def.points.map(p => [p, `Concepto, regla básica y diferencia con figuras parecidas`])
-      ]
+      sections: def.sections.map(s => ({ heading: s[0], paragraphs: s[1] })),
+      tree: ['Tema ' + n].concat(def.sections.map(s => '- ' + s[0])).join('\n'),
+      reviewTable: [['Punto oficial', 'Qué dominar']].concat(def.points.map(p => [p, 'Concepto, alcance y aplicación práctica']))
     };
   }
 
-  const themes = themeDefinitions.map(makeTheme);
+  const themes = defs.map(makeTheme);
+
+  const genericOptions = [
+    'Forma parte del enunciado oficial del tema y debe estudiarse con definición, alcance y aplicación.',
+    'Es materia ajena al tema oficial y no debe mezclarse aquí.',
+    'Solo importa si el tribunal lo añade después del examen.',
+    'Debe sustituirse por contenido genérico de otra oposición.'
+  ];
 
   function makeQuestions(theme) {
     const points = theme.reviewTable.slice(1).map(r => r[0]);
-    return points.slice(0, 12).map((point, i) => {
-      const letters = [`A`, `B`, `C`, `D`];
-      const correct = `El punto ${point} pertenece expresamente al contenido de este tema y debe estudiarse en relación con el documento base indicado.`;
-      const opts = [correct, `Es materia ajena al programa oficial de este tema.`, `Solo debe estudiarse si lo decide el tribunal después del examen.`, `No tiene relación con el temario de auxiliar administrativo.`];
+    const questions = [];
+    for (let i = 0; i < 12; i++) {
+      const point = points[i % points.length];
       const offset = (theme.number + i) % 4;
-      const rotated = opts.slice(offset).concat(opts.slice(0, offset));
-      const answer = letters[rotated.findIndex(o => o === correct)];
-      return {
-        id: `${theme.id}-q${i + 1}`,
-        text: `En el ${theme.title}, ¿cómo debe estudiarse el punto: ${point}?`,
-        options: rotated.map((text, idx) => ({ letter: letters[idx], text })),
+      const opts = genericOptions.slice(offset).concat(genericOptions.slice(0, offset));
+      const answer = ['A', 'B', 'C', 'D'][opts.indexOf(genericOptions[0])];
+      questions.push({
+        id: theme.id + '-q' + (i + 1),
+        text: 'En este tema, ¿cómo debe estudiarse el punto oficial: ' + point + '?',
+        options: opts.map((text, idx) => ({ letter: ['A', 'B', 'C', 'D'][idx], text })),
         answer,
-        justification: `La pregunta se centra en ${point}, que forma parte del desglose oficial del tema. Hay que conocer definición, alcance y aplicación práctica dentro del documento base.`
-      };
-    });
+        justification: 'El punto ' + point + ' aparece dentro del tema oficial. Debes estudiarlo sin añadir paja: definición, regla principal, diferencias y aplicación práctica.'
+      });
+    }
+    return questions;
   }
 
   const themeTests = Object.fromEntries(themes.map(t => [t.id, makeQuestions(t)]));
   const allQuestions = Object.values(themeTests).flat();
 
   const practicalCases = [
-    [`Solicitud incompleta`, `Un ciudadano presenta una solicitud sin un documento exigido. Indica, conforme a Ley 39/2015, si procede requerir subsanación y qué efecto tendría no atender el requerimiento.`],
-    [`Cómputo de plazo`, `Un anuncio abre un plazo de diez días hábiles. Explica cómo se computa si hay sábados, domingos y festivos.`],
-    [`Recurso`, `Un interesado quiere impugnar una resolución municipal. Explica qué datos debes comprobar para saber si procede alzada o reposición.`],
-    [`Protección de datos`, `Una persona pide copia de un expediente con datos de terceros. Explica cómo compatibilizar acceso y protección de datos.`],
-    [`Certificado electrónico`, `Un ciudadano no puede firmar un trámite en sede. Enumera comprobaciones básicas sobre certificado, soporte, navegador y herramienta de firma.`],
-    [`IBI`, `Un vecino pregunta por qué figura como sujeto pasivo del IBI. Explica qué hecho imponible y derecho sobre el inmueble habría que comprobar.`],
-    [`Apremio`, `Una deuda tributaria local no se paga en periodo voluntario. Resume el paso a ejecutiva y la función de la providencia de apremio.`],
-    [`Digitalización`, `Hay que incorporar documentos en papel a un expediente electrónico. Indica cómo digitalizarlos y qué controles mínimos realizar.`],
-    [`Excel/Calc`, `Se recibe una tabla de contribuyentes y hay que ordenar y filtrar sin alterar datos. Explica el procedimiento correcto.`],
-    [`Prevención`, `Un auxiliar administrativo trabaja con pantalla muchas horas. Indica medidas preventivas básicas aplicables al puesto.`]
-  ].map((c, i) => ({ id: `sp${i + 1}`, title: c[0], statement: c[1], guidance: `Respuesta orientativa: aplica solo los puntos del tema correspondiente. Identifica norma base, punto concreto, regla aplicable y consecuencia administrativa. No añadas materias ajenas al enunciado.` }));
+    ['Solicitud incompleta', 'Un ciudadano presenta una solicitud sin un documento exigido. Indica si procede requerir subsanación y qué efecto tendría no atender el requerimiento.'],
+    ['Cómputo de plazo', 'Un anuncio abre un plazo de diez días hábiles. Explica cómo se computa si hay sábados, domingos y festivos.'],
+    ['Recurso', 'Un interesado quiere impugnar una resolución municipal. Explica qué datos debes comprobar para saber si procede alzada o reposición.'],
+    ['Protección de datos', 'Una persona pide copia de un expediente con datos de terceros. Explica cómo compatibilizar acceso y protección de datos.'],
+    ['Certificado electrónico', 'Un ciudadano no puede firmar un trámite en sede. Enumera comprobaciones básicas sobre certificado, soporte, navegador y herramienta de firma.'],
+    ['IBI', 'Un vecino pregunta por qué figura como sujeto pasivo del IBI. Explica qué hecho imponible y derecho sobre el inmueble habría que comprobar.'],
+    ['Apremio', 'Una deuda tributaria local no se paga en periodo voluntario. Resume el paso a ejecutiva y la función de la providencia de apremio.'],
+    ['Digitalización', 'Hay que incorporar documentos en papel a un expediente electrónico. Indica cómo digitalizarlos y qué controles mínimos realizar.'],
+    ['Excel o Calc', 'Se recibe una tabla de contribuyentes y hay que ordenar y filtrar sin alterar datos. Explica el procedimiento correcto.'],
+    ['Prevención', 'Un auxiliar administrativo trabaja con pantalla muchas horas. Indica medidas preventivas básicas aplicables al puesto.']
+  ].map((c, i) => ({ id: 'sp' + (i + 1), title: c[0], statement: c[1], guidance: 'Respuesta orientativa: identifica el tema oficial aplicable, el punto concreto, la regla básica y la consecuencia administrativa. No añadas contenido ajeno al enunciado.' }));
 
   function makeSim(id, title, start) {
-    const questions = Array.from({ length: 50 }, (_, i) => allQuestions[(start + i * 5) % allQuestions.length]);
-    return { id, title, questions: questions.map((q, i) => ({ ...q, id: `${id}-q${i + 1}` })) };
+    const questions = [];
+    for (let i = 0; i < 50; i++) questions.push({ ...allQuestions[(start + i * 5) % allQuestions.length], id: id + '-q' + (i + 1) });
+    return { id, title, questions };
   }
 
-  const oposicion = {
-    id: `puebla-aux-admin-2026`,
-    name: `Auxiliar Administrativo - La Puebla de Montalbán`,
-    shortName: `La Puebla - Aux. Administrativo`,
-    places: `4 plazas + bolsa`,
-    exam: `Temario ajustado al Anexo I: 19 temas oficiales, test y ejercicio práctico.`,
-    status: `Temario reestructurado por puntos oficiales. Sin contenido genérico fuera del programa. Revisar siempre normativa vigente antes del examen.`,
+  window.OPOSICIONES_DATA = { oposiciones: [{
+    id: 'puebla-aux-admin-2026',
+    name: 'Auxiliar Administrativo - La Puebla de Montalbán',
+    shortName: 'La Puebla - Aux. Administrativo',
+    places: '4 plazas + bolsa',
+    exam: 'Temario ajustado al Anexo I: 19 temas oficiales, test y ejercicio práctico.',
+    status: 'Temario reestructurado por puntos oficiales. Sin contenido genérico fuera del programa.',
     scoring,
     themes,
     themeTests,
     practicalCases,
-    simulacros: [makeSim(`sim1`, `Simulacro transversal 1`, 0), makeSim(`sim2`, `Simulacro transversal 2`, 11), makeSim(`sim3`, `Simulacro transversal 3`, 23)]
-  };
-
-  window.OPOSICIONES_DATA = { oposiciones: [oposicion] };
+    simulacros: [makeSim('sim1', 'Simulacro transversal 1', 0), makeSim('sim2', 'Simulacro transversal 2', 11), makeSim('sim3', 'Simulacro transversal 3', 23)]
+  }] };
 })();
