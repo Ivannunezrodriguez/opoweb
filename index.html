@@ -15,16 +15,11 @@
       <div class="brand">
         <button class="icon-btn close" id="closeSidebar" aria-label="Cerrar menú">×</button>
         <div class="logo">OP</div>
-        <div>
-          <strong>Opoweb</strong>
-          <span>Temario + test</span>
-        </div>
+        <div><strong>Opoweb</strong><span>Temario + test</span></div>
       </div>
-
       <label class="field-label" for="oposicionSelect">Oposición activa</label>
       <select id="oposicionSelect" class="select"></select>
       <div class="oposicion-card" id="oposicionCard"></div>
-
       <nav class="menu" aria-label="Navegación principal">
         <button data-view="proceso">Proceso y enlaces</button>
         <button data-view="temario" class="active">Temario</button>
@@ -33,20 +28,12 @@
         <button data-view="simulacros">Simulacros</button>
         <button data-view="progreso">Progreso</button>
       </nav>
-
-      <div class="sidebar-note">
-        <strong>Temas comunes</strong>
-        <p>Los temas marcados como comunes se podrán reutilizar en otras OPE.</p>
-      </div>
+      <div class="sidebar-note"><strong>Temas comunes</strong><p>Los temas marcados como comunes se podrán reutilizar en otras OPE.</p></div>
     </aside>
-
     <main class="main">
       <header class="topbar">
         <button class="icon-btn" id="openSidebar" aria-label="Abrir menú">☰</button>
-        <div class="titlebox">
-          <h1 id="viewTitle">Temario</h1>
-          <p id="viewSubtitle">Estudia, haz test y guarda tu progreso.</p>
-        </div>
+        <div class="titlebox"><h1 id="viewTitle">Temario</h1><p id="viewSubtitle">Estudia, haz test y guarda tu progreso.</p></div>
         <div class="top-actions">
           <input id="searchInput" class="search" type="search" placeholder="Buscar tema, ley o concepto…" />
           <button class="btn ghost" id="exportProgress">Exportar</button>
@@ -56,17 +43,13 @@
       <section id="content" class="content"></section>
     </main>
   </div>
-
   <script src="data/oposiciones.js"></script>
   <script src="data/proceso.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/estudio-avanzado.js"></script>
   <script src="assets/js/temario-profundo.js"></script>
   <script src="assets/js/temario-editorial.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').catch(() => {});
-    }
-  </script>
+  <script src="assets/js/ofimatica-detalle.js"></script>
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js').catch(() => {}); }</script>
 </body>
 </html>
