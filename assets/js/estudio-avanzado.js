@@ -2,204 +2,148 @@
   const data = window.OPOSICIONES_DATA;
   if (!data?.oposiciones?.length) return;
 
-  const profiles = [
-    {
-      keys: ['constitución','constitucional','corona','cortes','tribunal constitucional','defensor','poder judicial','cgpj','modelo económico'],
-      refs: ['Constitución Española: arts. 1-9, 10-55, 56-65, 66-96, 117-127, 159-165 y 166-169, según epígrafe concreto.'],
-      concepts: ['norma suprema','parte dogmática','parte orgánica','derecho fundamental','garantía institucional','reserva de ley','contenido esencial','amparo','reforma ordinaria','reforma agravada'],
-      practical: 'Identifica si el caso afecta a principio constitucional, derecho fundamental, órgano constitucional o reforma; cita el bloque de artículos y termina con garantía, competencia o efecto jurídico.'
-    },
-    {
-      keys: ['39/2015','procedimiento','interesados','actos administrativos','plazos','silencio','iniciación','ordenación','instrucción','finalización','ejución','revisión','recursos','registro','notificaciones','expediente','archivo'],
-      refs: ['Ley 39/2015: arts. 3-8, 13, 16, 21-33, 35-52, 53-105 y 106-126, según materia.'],
-      concepts: ['interesado','representación','registro electrónico','subsanación','acto administrativo','motivación','eficacia','notificación','silencio administrativo','caducidad','alzada','reposición','revisión de oficio'],
-      practical: 'Estructura la respuesta como hecho relevante → interesado/órgano → trámite procedente → plazo → forma de notificación o registro → efecto jurídico.'
-    },
-    {
-      keys: ['40/2015','régimen jurídico','órganos','delegación','avocación','encomienda','abstención','recusación','convenios','relaciones interadministrativas','sancionador','responsabilidad patrimonial'],
-      refs: ['Ley 40/2015: arts. 3-14, 15-18, 23-24, 25-31, 32-37, 40-46, 47-53 y 140-158, según epígrafe.'],
-      concepts: ['competencia','órgano administrativo','delegación de competencias','delegación de firma','avocación','encomienda de gestión','suplencia','abstención','recusación','convenio','potestad sancionadora','responsabilidad patrimonial'],
-      practical: 'Comprueba competencia, técnica de alteración del ejercicio de la competencia, imparcialidad, procedimiento y consecuencia de invalidez o responsabilidad.'
-    },
-    {
-      keys: ['municipio','padrón','competencias','administración local','autonomía local','provincia','mancomunidades','comarcas','servicios mínimos','órganos colegiados','actas','certificados','ordenanzas','bandos','alcalde','pleno'],
-      refs: ['Ley 7/1985: arts. 1-4, 11-18, 20-27, 31-37, 46-54, 55-62, 84 y 106; ROF cuando proceda.'],
-      concepts: ['entidad local territorial','personalidad jurídica','padrón municipal','vecino','competencia propia','competencia delegada','Alcalde','Pleno','Junta de Gobierno Local','acta','certificación','ordenanza','bando'],
-      practical: 'Determina entidad u órgano competente, convocatoria/quórum si procede, acuerdo, acta/certificado, publicación o notificación y efecto municipal.'
-    },
-    {
-      keys: ['trebep','empleo público','función pública','funcionarios','fhn','oep','rpt','situaciones administrativas','incompatibilidades','disciplina','retribuciones','personal al servicio'],
-      refs: ['TREBEP: arts. 8-14, 52-54, 55-62, 69-76, 78-84, 85-92 y 93-98; Ley 4/2011 CLM; RD 128/2018 para FHN.'],
-      concepts: ['funcionario de carrera','funcionario interino','personal laboral','personal eventual','OEP','convocatoria','provisión','RPT','carrera administrativa','situación administrativa','incompatibilidad','régimen disciplinario'],
-      practical: 'Separa acceso, provisión, derechos/deberes, situación administrativa, incompatibilidad y disciplina; no confundas bolsa con nombramiento efectivo.'
-    },
-    {
-      keys: ['hacienda','tributos','tasas','contribuciones','precios públicos','impuestos','ibi','iae','ivtm','iivtnu','presupuesto','gasto','ingresos','modificaciones presupuestarias','cuenta general','estructura presupuestaria','liquidación','remanente','estabilidad','regla de gasto','recaudación','apremio'],
-      refs: ['TRLRHL: recursos locales, arts. 2, 20-27, 59 y ss., 162-193; LGT arts. 17-49, 60-73 y 160-173; RD 500/1990; Orden EHA/3565/2008; LO 2/2012.'],
-      concepts: ['hecho imponible','sujeto pasivo','devengo','liquidación','ordenanza fiscal','periodo voluntario','periodo ejecutivo','providencia de apremio','crédito presupuestario','aplicación presupuestaria','modificación de crédito','remanente de tesorería'],
-      practical: 'Identifica ingreso o gasto, tributo o crédito, sujeto/órgano, expediente, plazo, fiscalización o recaudación y efecto contable o recaudatorio.'
-    },
-    {
-      keys: ['contratos','contratista','pliego','garantías','contratación','lcsp'],
-      refs: ['Ley 9/2017 de Contratos del Sector Público: expediente, necesidad, objeto, presupuesto base, pliegos, adjudicación, formalización, ejecución y extinción.'],
-      concepts: ['expediente de contratación','necesidad','objeto','presupuesto base de licitación','valor estimado','pliego','adjudicación','formalización','garantía','contrato menor'],
-      practical: 'Ordena la respuesta por necesidad, objeto, crédito, pliegos, procedimiento, adjudicación, formalización, ejecución y extinción.'
-    },
-    {
-      keys: ['bienes','dominio público','patrimoniales'],
-      refs: ['Ley 7/1985, TRRL y Reglamento de Bienes de las Entidades Locales: dominio público, comunales, patrimoniales, inventario, afectación y desafectación.'],
-      concepts: ['bien de dominio público','bien comunal','bien patrimonial','afectación','desafectación','inventario','inalienabilidad','inembargabilidad','imprescriptibilidad'],
-      practical: 'Clasifica el bien, comprueba titularidad e inventario, régimen jurídico, uso permitido y procedimiento de defensa, afectación o desafectación.'
-    },
-    {
-      keys: ['igualdad'],
-      refs: ['LO 3/2007: arts. 3-15 y 51 y ss.; Ley 12/2010 CLM cuando el tema la incluya.'],
-      concepts: ['igualdad de trato','discriminación directa','discriminación indirecta','acoso sexual','acoso por razón de sexo','transversalidad','acción positiva','presencia equilibrada'],
-      practical: 'Compara situaciones, detecta trato desigual, justificación objetiva/proporcional, posible discriminación y medida correctora compatible con igualdad.'
-    },
-    {
-      keys: ['prevención','riesgos laborales'],
-      refs: ['Ley 31/1995: arts. 14-16, 18-22, 29 y 33-40.'],
-      concepts: ['protección eficaz','evaluación de riesgos','planificación preventiva','información','formación','vigilancia de la salud','delegado de prevención','comité de seguridad y salud'],
-      practical: 'Aplica evaluación de riesgos, medidas preventivas, información/formación, participación y vigilancia de la salud al puesto administrativo concreto.'
-    },
-    {
-      keys: ['protección de datos','datos personales','rgpd','lopdgdd'],
-      refs: ['RGPD arts. 4, 5, 6, 12-22, 24-25, 30, 32 y 33; LO 3/2018.'],
-      concepts: ['dato personal','tratamiento','responsable','encargado','base jurídica','minimización','limitación de finalidad','confidencialidad','derechos RGPD','brecha de seguridad'],
-      practical: 'Pondera acceso y protección de datos: legitimación, finalidad, minimización, anonimización de terceros, seguridad y trazabilidad.'
-    },
-    {
-      keys: ['electrónica','telemáticos','firma','certificado','sede','csv','facturas','morosidad','identificación'],
-      refs: ['Ley 39/2015 arts. 9-12, 14-16 y 41-46; Ley 40/2015 arts. 38-46; Ley 25/2013 factura electrónica; normativa de morosidad.'],
-      concepts: ['sede electrónica','identificación electrónica','firma electrónica','sello electrónico','CSV','registro electrónico','notificación electrónica','interoperabilidad','factura electrónica'],
-      practical: 'Comprueba identidad/firma, sede, registro, CSV, expediente electrónico, notificación electrónica, conservación e integridad del documento.'
-    },
-    {
-      keys: ['fomento','policía','licencias','servicio público','concesión','acción administrativa'],
-      refs: ['Ley 7/1985 art. 84; Ley 39/2015; Ley 40/2015; normativa sectorial aplicable a licencias, autorizaciones y servicios públicos.'],
-      concepts: ['actividad de fomento','actividad de policía','licencia','autorización','declaración responsable','comunicación previa','servicio público','concesión'],
-      practical: 'Clasifica la forma de actividad administrativa y determina título habilitante, control municipal, informes, resolución, silencio y consecuencias.'
-    },
-    {
-      keys: ['windows','word','writer','excel','calc','libreoffice','office','ordenador','periféricos','impresión','digitalización','internet explorer','edge'],
-      refs: ['Temario de informática de usuario: Windows, navegador, Word/Writer, Excel/Calc, hardware, periféricos, impresión, escaneo y seguridad básica.'],
-      concepts: ['archivo','carpeta','ruta','extensión','unidad de red','permisos','impresora predeterminada','digitalización','OCR','URL','HTTPS','estilo','plantilla','celda','rango','fórmula','referencia absoluta'],
-      practical: 'Describe pasos operativos verificables: seleccionar, comprobar permisos, guardar, nombrar, escanear, ordenar/filtrar, revisar resultado y proteger datos personales.'
-    }
+  function low(v){ return String(v || '').toLowerCase(); }
+  function sec(heading, paragraphs){ return { heading, paragraphs }; }
+
+  const ley39Interesados = [
+    sec('Disposiciones generales', [
+      'Artículo 1. Objeto. Regula la validez y eficacia de los actos administrativos, el procedimiento administrativo común de todas las Administraciones Públicas y los principios de la iniciativa legislativa y la potestad reglamentaria. Para examen: acto administrativo, procedimiento común y potestad normativa.',
+      'Artículo 2. Ámbito subjetivo. Se aplica a la Administración General del Estado, Comunidades Autónomas, Entidades Locales y sector público institucional. Un Ayuntamiento entra plenamente dentro de este ámbito.'
+    ]),
+    sec('Los interesados en el procedimiento', [
+      'Artículo 3. Capacidad de obrar. Pueden actuar ante la Administración las personas físicas o jurídicas con capacidad conforme al Derecho civil. También pueden actuar otros sujetos cuando una ley lo permita expresamente, como grupos de afectados, entidades sin personalidad o patrimonios autónomos. En un supuesto debes comprobar primero si quien actúa puede hacerlo válidamente.',
+      'Artículo 4. Concepto de interesado. Son interesados quienes inician el procedimiento como titulares de derechos o intereses legítimos, quienes puedan ver afectados sus derechos aunque no lo hayan iniciado, y quienes tengan intereses legítimos afectados y comparezcan antes de resolución definitiva. Las asociaciones representativas pueden tener intereses legítimos colectivos cuando la ley lo reconozca. Si la posición jurídica se transmite, el sucesor ocupa la condición de interesado.',
+      'Artículo 5. Representación. El interesado puede actuar mediante representante. La representación debe acreditarse para solicitudes, declaraciones responsables, comunicaciones, recursos, desistimiento y renuncia de derechos; en actos de mero trámite se presume. Puede acreditarse por cualquier medio válido, por apoderamiento apud acta presencial o electrónico, o por registro electrónico de apoderamientos. Si falta acreditación, se concede subsanación de diez días y el acto puede conservarse si se acredita después.',
+      'Artículo 6. Registro electrónico de apoderamientos. AGE, Comunidades Autónomas y Entidades Locales deben disponer de registro electrónico general de apoderamientos. Deben inscribirse poderes generales, con datos del poderdante, apoderado, fecha, duración y tipo de poder. Tipos: poder general ante cualquier Administración, poder ante una Administración concreta o poder para trámites determinados. El poder apud acta se otorga en sede electrónica o en oficina de asistencia. Validez máxima: cinco años, con posibilidad de revocación o prórroga.',
+      'Artículo 7. Pluralidad de interesados. Si hay varios interesados en una misma solicitud, se actúa con el representante o interesado designado; si no se designa, con quien figure en primer lugar.',
+      'Artículo 8. Nuevos interesados. Si durante la instrucción aparece una persona con derechos o intereses legítimos y directos que puede resultar afectada, y su identificación resulta del expediente, debe comunicársele la tramitación.'
+    ]),
+    sec('Actividad de las Administraciones Públicas', [
+      'Artículo 13. Derechos de las personas. Derecho a comunicarse por Punto de Acceso General electrónico, asistencia en medios electrónicos, uso de lenguas oficiales, acceso a información pública, trato respetuoso, exigencia de responsabilidades e información sobre requisitos jurídicos o técnicos.',
+      'Artículo 14. Relación electrónica. Las personas físicas pueden elegir canal salvo obligación legal. Están obligadas, entre otras, personas jurídicas, entidades sin personalidad, profesionales colegiados en su actividad, representantes de obligados electrónicos y empleados públicos por razón de su condición.',
+      'Artículo 15. Lengua. En la AGE la lengua general es el castellano, sin perjuicio de lenguas cooficiales. En Comunidades Autónomas y Entidades Locales se aplica la normativa autonómica y el derecho de los interesados.',
+      'Artículo 16. Registros. Cada Administración tiene Registro Electrónico General. El asiento debe recoger número, fecha y hora, identificación, órgano destinatario y contenido. Debe emitirse recibo. Se puede presentar en registro electrónico, Correos, oficinas consulares, oficinas de asistencia y lugares previstos legalmente.',
+      'Artículo 17. Archivo electrónico. Cada Administración debe mantener archivo electrónico de procedimientos finalizados, garantizando autenticidad, integridad, conservación, protección de datos y recuperación.',
+      'Artículo 18. Colaboración. Las personas deben colaborar con la Administración en los términos legales cuando sea necesario para el ejercicio de competencias.',
+      'Artículo 19. Comparecencia. Solo es obligatoria cuando una norma con rango de ley lo prevea. La citación debe indicar lugar, fecha, hora, medio, objeto y efectos de no comparecer.',
+      'Artículo 20. Responsabilidad de tramitación. Las unidades administrativas y su personal son responsables de tramitar los asuntos y remover obstáculos para evitar retrasos.',
+      'Artículo 21. Obligación de resolver. La Administración debe dictar resolución expresa y notificarla en todos los procedimientos, salvo excepciones. Si la norma no fija plazo, el plazo máximo es de tres meses.',
+      'Artículo 22. Suspensión del plazo. El plazo máximo para resolver puede suspenderse en supuestos tasados, como subsanación, informes preceptivos, pruebas técnicas o actuaciones indispensables.',
+      'Artículo 23. Ampliación del plazo máximo. Puede acordarse motivadamente cuando se hayan agotado medios y exista acumulación relevante de asuntos; no puede superar el plazo establecido para tramitar.',
+      'Artículo 24. Silencio en procedimientos iniciados a solicitud. Regla general: silencio positivo. Excepciones: silencio negativo cuando lo establezca ley o Derecho de la Unión y en materias como derecho de petición, dominio público, servicio público, medio ambiente o responsabilidad patrimonial.',
+      'Artículo 25. Procedimientos iniciados de oficio. Si podían reconocer derechos favorables, el silencio es desestimatorio. Si son procedimientos desfavorables o de gravamen, el vencimiento del plazo produce caducidad.',
+      'Artículo 26. Documentos administrativos. Deben emitirse normalmente por medios electrónicos, con identificación, referencia temporal, metadatos y firma cuando proceda.',
+      'Artículo 27. Copias. Las copias auténticas tienen la misma validez que el original. La digitalización debe garantizar fidelidad, integridad y comprobación.',
+      'Artículo 28. Documentos aportados. El interesado no debe aportar documentos ya presentados o elaborados por una Administración, salvo supuestos de oposición o imposibilidad de consulta.'
+    ]),
+    sec('Términos y plazos', [
+      'Artículo 29. Obligatoriedad. Los términos y plazos obligan a autoridades, empleados públicos e interesados.',
+      'Artículo 30. Cómputo. Horas hábiles salvo regla contraria. Días hábiles salvo que ley o Derecho de la Unión indique naturales. Sábados, domingos y festivos son inhábiles. Meses y años se computan de fecha a fecha; si el último día es inhábil, pasa al primer hábil.',
+      'Artículo 31. Registros electrónicos. Funcionan todos los días y horas. La presentación en día inhábil se entiende hecha en la primera hora del primer día hábil siguiente, salvo norma especial.',
+      'Artículo 32. Ampliación de plazos. Puede concederse si las circunstancias lo aconsejan, antes del vencimiento, sin perjudicar a terceros y sin superar la mitad del plazo inicial.',
+      'Artículo 33. Tramitación de urgencia. Por interés público se reducen a la mitad los plazos ordinarios, salvo presentación de solicitudes y recursos.'
+    ])
   ];
 
-  function normText(t) { return String(t || '').toLowerCase(); }
-  function pickProfile(theme) {
-    const text = normText(`${theme.title} ${theme.area}`);
-    return profiles.find(p => p.keys.some(k => text.includes(k))) || {
-      refs: ['Programa oficial de la convocatoria + norma sectorial vigente: identifica definición, competencia, procedimiento, plazo y efecto.'],
-      concepts: ['concepto','naturaleza jurídica','órgano competente','requisito','trámite','plazo','efecto','excepción'],
-      practical: 'Responde con norma aplicable, concepto técnico, requisito, trámite, plazo, órgano competente, consecuencia y conclusión aplicada al caso.'
-    };
+  const ley39Procedimiento = [
+    sec('Derechos del interesado y comienzo del procedimiento', [
+      'Artículo 53. Derechos del interesado. Derecho a conocer estado del expediente, sentido del silencio, órgano competente, instructor, acceso y copia de documentos, formular alegaciones, aportar documentos y no aportar los ya presentados o elaborados por la Administración.',
+      'Artículo 54. Iniciación. El procedimiento se inicia de oficio o a solicitud del interesado.',
+      'Artículo 55. Actuaciones previas. Permiten conocer circunstancias antes de decidir si procede iniciar procedimiento.',
+      'Artículo 56. Medidas provisionales. Pueden adoptarse para asegurar la eficacia de la resolución, de forma motivada y proporcionada.',
+      'Artículo 57. Acumulación. Pueden acumularse procedimientos con identidad sustancial o conexión íntima.',
+      'Artículos 58 a 62. Iniciación de oficio. Puede producirse por propia iniciativa, orden superior, petición razonada o comunicación de hechos por una persona.',
+      'Artículos 66 a 69. Solicitud, subsanación, declaración responsable y comunicación. La solicitud debe identificar interesado, hechos, petición, firma, órgano y medio de notificación. Si falta un requisito, se requiere subsanación de diez días.'
+    ]),
+    sec('Ordenación, instrucción, terminación y ejecución', [
+      'Artículos 70 a 74. Expediente, impulso, concentración de trámites, cumplimiento de trámites y cuestiones incidentales. El expediente electrónico reúne documentos y actuaciones; el procedimiento se impulsa de oficio.',
+      'Artículos 75 a 83. Instrucción. Incluye alegaciones, prueba, informes, audiencia e información pública. La audiencia se sitúa antes de la propuesta de resolución cuando proceda.',
+      'Artículos 84 a 96. Terminación. El procedimiento termina por resolución, desistimiento, renuncia, caducidad, imposibilidad material o terminación convencional. La resolución debe decidir todas las cuestiones y expresar recursos.',
+      'Artículos 97 a 105. Ejecución. Los actos administrativos son ejecutivos salvo suspensión o excepción legal. Medios de ejecución forzosa: apremio sobre patrimonio, ejecución subsidiaria, multa coercitiva y compulsión sobre las personas.'
+    ])
+  ];
+
+  const ley39Revision = [
+    sec('Revisión de oficio', [
+      'Artículo 106. Revisión de actos y disposiciones nulas. Permite declarar nulidad de pleno derecho con garantías y dictamen consultivo cuando proceda.',
+      'Artículo 107. Lesividad. Para atacar actos favorables anulables, la Administración debe declararlos lesivos e impugnarlos ante la jurisdicción contencioso-administrativa.',
+      'Artículo 108. Suspensión. Puede suspenderse la ejecución durante la revisión si hay perjuicios de difícil reparación.',
+      'Artículo 109. Revocación y rectificación. Los actos desfavorables pueden revocarse con límites; los errores materiales, de hecho o aritméticos pueden rectificarse en cualquier momento.',
+      'Artículos 110 y 111. Límites y competencia. La revisión se limita por equidad, buena fe, derechos de particulares y leyes; la competencia depende de la Administración autora del acto.'
+    ]),
+    sec('Recursos administrativos', [
+      'Artículos 112 a 120. Reglas generales. Son recurribles resoluciones y actos de trámite cualificados. El recurso debe identificar recurrente, acto, motivo, lugar, fecha, firma y órgano. Puede inadmitirse por falta de competencia, legitimación, acto no recurrible, plazo vencido o carencia manifiesta de fundamento.',
+      'Artículos 121 y 122. Alzada. Procede contra actos que no ponen fin a la vía administrativa. Plazo: un mes si el acto es expreso. Resolución: tres meses.',
+      'Artículos 123 y 124. Reposición. Procede contra actos que ponen fin a la vía administrativa. Es potestativo. Plazo: un mes si el acto es expreso. Resolución: un mes.',
+      'Artículos 125 y 126. Recurso extraordinario de revisión. Procede contra actos firmes por causas tasadas: error de hecho, aparición de documentos esenciales, falsedad declarada o conducta declarada por resolución judicial. Resolución: tres meses.'
+    ])
+  ];
+
+  function genericSections(theme){
+    const t = low(`${theme.title} ${theme.area}`);
+    if (t.includes('constitución') || t.includes('corona') || t.includes('cortes')) return [sec('Desarrollo constitucional', ['Artículo 1 CE: Estado social y democrático de Derecho, valores superiores, soberanía nacional y monarquía parlamentaria.', 'Artículo 9 CE: sujeción a Constitución y ordenamiento, y principios de legalidad, jerarquía normativa, publicidad, seguridad jurídica, responsabilidad e interdicción de arbitrariedad.', 'Artículos 10 a 55 CE: derechos y deberes. Diferencia entre derechos fundamentales, derechos y deberes de ciudadanos y principios rectores.', 'Artículos 166 a 169 CE: reforma constitucional ordinaria y agravada. En supuesto identifica materia afectada, mayoría exigida y referéndum si procede.'])];
+    if (t.includes('municipio') || t.includes('provincia') || t.includes('régimen local') || t.includes('órganos colegiados')) return [sec('Desarrollo de régimen local', ['Ley 7/1985, art. 1: el municipio es entidad básica y cauce de participación ciudadana.', 'Ley 7/1985, art. 11: elementos del municipio: territorio, población y organización.', 'Ley 7/1985, arts. 15 a 18: padrón, vecino, residencia habitual y certificaciones.', 'Ley 7/1985, arts. 20 a 23: Alcalde, Pleno, Tenientes de Alcalde y Junta de Gobierno Local cuando proceda.', 'Ley 7/1985, arts. 25 a 27: competencias propias y delegadas. En supuesto comprueba competencia y órgano.'])];
+    if (t.includes('hacienda') || t.includes('presupuesto') || t.includes('tribut') || t.includes('recaudación')) return [sec('Desarrollo de hacienda local', ['TRLRHL art. 2: recursos de las Haciendas Locales.', 'Tasas: uso privativo o aprovechamiento especial del dominio público, o prestación de servicios/actividades administrativas.', 'Impuestos locales: IBI, IAE, IVTM, ICIO e IIVTNU. Estudia hecho imponible, sujeto pasivo, devengo y gestión.', 'Presupuesto: créditos, aplicaciones presupuestarias, modificaciones, ejecución del gasto, liquidación y cuenta general.', 'Recaudación: periodo voluntario, periodo ejecutivo, providencia de apremio, recargos y embargo.'])];
+    if (t.includes('contrat')) return [sec('Desarrollo de contratación pública', ['Expediente de contratación: necesidad, objeto, órgano de contratación, crédito, pliegos, procedimiento, adjudicación, formalización, ejecución y extinción.', 'Contrato menor: necesidad, objeto, importe, crédito, no fraccionamiento, aprobación del gasto y factura.'])];
+    if (t.includes('empleo público') || t.includes('función pública') || t.includes('trebep') || t.includes('personal al servicio')) return [sec('Desarrollo de empleo público', ['TREBEP art. 8: funcionarios de carrera, funcionarios interinos, personal laboral y personal eventual.', 'TREBEP arts. 52 a 54: código de conducta, principios éticos y principios de conducta.', 'TREBEP arts. 55 a 62: acceso conforme a igualdad, mérito, capacidad y publicidad.', 'TREBEP arts. 78 a 84: provisión de puestos; no confundir con selección de nuevo ingreso.', 'TREBEP arts. 85 a 98: situaciones administrativas y régimen disciplinario.'])];
+    if (t.includes('prevención')) return [sec('Desarrollo de prevención de riesgos laborales', ['Ley 31/1995 art. 14: derecho a protección eficaz.', 'Arts. 15 y 16: principios preventivos y evaluación de riesgos.', 'Arts. 18 y 19: información y formación.', 'Art. 29: obligaciones del trabajador.', 'Arts. 33 a 40: consulta y participación.'])];
+    if (t.includes('igualdad')) return [sec('Desarrollo de igualdad', ['LO 3/2007 art. 3: igualdad de trato.', 'Arts. 6 y 7: discriminación directa, indirecta y acoso por razón de sexo.', 'Art. 11: acciones positivas.', 'Art. 15: transversalidad de igualdad en la actuación pública.'])];
+    if (t.includes('electrónica') || t.includes('firma') || t.includes('certificado') || t.includes('sede')) return [sec('Desarrollo de administración electrónica', ['Ley 39/2015 art. 9: identificación electrónica.', 'Art. 10: firma electrónica.', 'Art. 12: asistencia en medios electrónicos.', 'Arts. 14 y 16: obligados electrónicos y registro electrónico.', 'Ley 40/2015 arts. 38 a 46: sede electrónica, portal, actuación automatizada, firma y CSV.'])];
+    if (t.includes('datos')) return [sec('Desarrollo de protección de datos', ['RGPD art. 4: dato personal y tratamiento.', 'RGPD art. 5: licitud, lealtad, transparencia, minimización, exactitud, limitación, integridad y confidencialidad.', 'RGPD art. 6: bases jurídicas.', 'RGPD arts. 12 a 22: derechos de información, acceso, rectificación, supresión, limitación y oposición.'])];
+    if (t.includes('windows') || t.includes('word') || t.includes('excel') || t.includes('libreoffice') || t.includes('ordenador') || t.includes('internet')) return [sec('Desarrollo de informática y ofimática', ['Windows: archivo, carpeta, ruta, extensión, copiar, mover, borrar, papelera, unidad local y unidad de red.', 'Digitalización: orientación, legibilidad, páginas completas, resolución, PDF y nombre normalizado.', 'Word/Writer: estilos, párrafos, tablas, encabezados, pies, plantillas y exportación a PDF.', 'Excel/Calc: celda, rango, fórmula, función, referencias, ordenar, filtrar y proteger datos.', 'Navegador: URL, HTTPS, certificados, descargas, caché, cookies y sede electrónica oficial.'])];
+    return [sec('Desarrollo del tema', ['Desarrolla el punto oficial con definición, norma aplicable, órgano competente, requisitos, procedimiento, plazo, documento y consecuencia administrativa.'])];
   }
 
-  function enhanceTheme(theme) {
-    const p = pickProfile(theme);
-    const refs = p.refs;
-    const concepts = [...new Set(p.concepts)].join(', ');
-    theme.sections = [
-      { heading: 'Qué entra realmente', paragraphs: [`No basta con una descripción general. En este tema debes dominar norma, artículo o bloque legal, concepto técnico, órgano competente, trámite, plazo y efecto jurídico.`, `En test te preguntarán diferencias finas; en supuesto te pedirán aplicar la regla al caso municipal.`] },
-      { heading: 'Artículos y normas que debes citar', paragraphs: refs },
-      { heading: 'Argot técnico y conceptos clave', paragraphs: [concepts] },
-      { heading: 'Cómo llevarlo al supuesto práctico', paragraphs: [p.practical, 'Plantilla: hecho relevante → norma aplicable → competencia/órgano → trámite/requisito/plazo → consecuencia → conclusión.'] },
-      { heading: 'Trampas habituales de examen', paragraphs: ['Confundir figuras parecidas del mismo bloque.', 'No citar el órgano competente o el plazo.', 'Responder con teoría general sin aplicar al hecho del caso.', 'Usar normas de otra convocatoria sin comprobar que están en el temario oficial.'] }
-    ];
-    theme.tree = [`Tema ${theme.number} · ${theme.area}`, `├─ Norma: ${refs.join(' | ')}`, `├─ Conceptos: ${concepts}`, '├─ Test: definición + requisito + excepción', `└─ Supuesto: ${p.practical}`].join('\n');
-    theme.reviewTable = [
-      ['Bloque útil', 'Norma/artículos', 'Qué dominar', 'Aplicación al supuesto'],
-      ['Norma base', refs.join(' | '), 'Localizar artículo/bloque legal y no estudiar solo de memoria.', 'Citar base legal al comenzar.'],
-      ['Conceptos técnicos', concepts, 'Definir con precisión y distinguir figuras parecidas.', 'Usar vocabulario técnico en la respuesta.'],
-      ['Procedimiento / órgano / plazo', refs.join(' | '), 'Órgano competente, trámite, plazo, requisito y efecto.', p.practical],
-      ['Trampas', 'Comparar con figuras próximas', 'No confundir plazos, recursos, órgano, competencia o efectos.', 'Explicar por qué no procede la alternativa incorrecta.']
-    ];
+  function sectionsFor(theme){
+    const t = low(`${theme.title} ${theme.area}`);
+    if (t.includes('39/2015') && (t.includes('interesados') || t.includes('actividad') || t.includes('plazos'))) return ley39Interesados;
+    if (t.includes('39/2015') && (t.includes('iniciación') || t.includes('ordenación') || t.includes('instrucción') || t.includes('finalización') || t.includes('ejecución') || t.includes('simplificada'))) return ley39Procedimiento;
+    if (t.includes('revisión') || t.includes('recursos administrativos')) return ley39Revision;
+    return genericSections(theme);
+  }
+
+  function enhanceTheme(theme){
+    theme.sections = sectionsFor(theme);
+    theme.tree = '';
+    theme.reviewTable = [['Para examen','Qué debes escribir'], ['Base legal','Cita ley y artículo concreto cuando proceda.'], ['Definición','Define la figura con precisión.'], ['Procedimiento','Indica órgano, trámite, plazo y documento resultante.'], ['Consecuencia','Explica subsanación, inadmisión, silencio, caducidad, recurso, archivo o efecto que corresponda.']];
     return theme;
   }
 
-  function makeQuestions(theme) {
+  function makeQuestions(theme){
     const rows = theme.reviewTable.slice(1);
-    const out = [];
-    for (let i = 0; i < 12; i++) {
-      const row = rows[i % rows.length];
-      const correct = `Citar ${row[1]} y explicar ${row[2]} aplicado al caso.`;
-      const options = [correct, 'Responder con una definición breve sin artículos, órgano, trámite ni consecuencia.', 'Usar una regla de otra oposición porque el título del tema se parece.', 'Limitarse a decir que lo resuelve el Ayuntamiento sin concretar competencia ni procedimiento.'];
-      const offset = (theme.number + i) % 4;
-      const shuffled = options.slice(offset).concat(options.slice(0, offset));
-      out.push({
-        id: `${theme.id}-q${i + 1}`,
-        text: `Tema ${theme.number}. Para el bloque “${row[0]}”, ¿qué respuesta sería más sólida en test/supuesto?`,
-        options: shuffled.map((text, j) => ({ letter: 'ABCD'[j], text })),
-        answer: 'ABCD'[shuffled.indexOf(correct)],
-        justification: 'La opción correcta une base normativa, concepto técnico y aplicación al caso. Eso es lo que diferencia una respuesta útil de una descripción ligera.'
-      });
-    }
-    return out;
+    return Array.from({length:12}, (_,i)=>{
+      const r = rows[i % rows.length];
+      const correct = `${r[0]}: ${r[1]}`;
+      const opts = [correct, 'Responder solo con una descripción general.', 'Copiar el título del tema sin explicar nada.', 'Contestar sin norma ni consecuencia administrativa.'];
+      const off = (theme.number + i) % 4;
+      const sh = opts.slice(off).concat(opts.slice(0,off));
+      return { id:`${theme.id}-q${i+1}`, text:`Tema ${theme.number}. ¿Qué enfoque es correcto?`, options: sh.map((text,j)=>({letter:'ABCD'[j], text})), answer:'ABCD'[sh.indexOf(correct)], justification:'La respuesta fuerte cita base legal, define, concreta procedimiento y termina con consecuencia administrativa.' };
+    });
   }
 
-  function makeCases(prefix) {
-    const base = [
-      ['Solicitud incompleta', 'Ley 39/2015 art. 68: requerimiento de subsanación, plazo general, advertencia de desistimiento y resolución.'],
-      ['Registro electrónico', 'Ley 39/2015 art. 16: asiento registral, fecha/hora oficial, recibo, documentos adjuntos y cómputo del plazo.'],
-      ['Notificación', 'Ley 39/2015 arts. 40 a 46: contenido, medio, intento, rechazo, comparecencia electrónica y efectos.'],
-      ['Recurso administrativo', 'Ley 39/2015 arts. 112 a 124: acto recurrible, fin de vía, alzada/reposición, plazo, órgano y silencio.'],
-      ['Expediente con datos personales', 'Ley 39/2015 art. 53 + RGPD/LOPDGDD: acceso, legitimación, minimización y anonimización de terceros.'],
-      ['Órgano colegiado', 'Ley 40/2015 arts. 15 a 18 y régimen local: convocatoria, orden del día, quórum, votación, acta y certificado.'],
-      ['Padrón municipal', 'Ley 7/1985 arts. 15 a 18: residencia habitual, vecino, certificación y efectos administrativos.'],
-      ['Licencia municipal', 'Ley 7/1985 art. 84 y normativa sectorial: actividad de policía, control previo, informe, resolución y silencio si procede.'],
-      ['Contrato menor', 'LCSP: necesidad, objeto, importe, crédito, informe, no fraccionamiento, adjudicación y factura.'],
-      ['Presupuesto y crédito', 'TRLRHL/RD 500/1990: crédito adecuado y suficiente, aplicación presupuestaria, gasto y modificación si no hay crédito.'],
-      ['Tributo local', 'TRLRHL/LGT: hecho imponible, sujeto pasivo, devengo, liquidación, padrón, bonificación/exención y recurso.'],
-      ['Apremio', 'LGT arts. 160 a 173: voluntaria, ejecutiva, providencia de apremio, recargos y embargo.'],
-      ['Bien municipal', 'RBEL: dominio público/patrimonial, inventario, afectación, desafectación, uso y defensa.'],
-      ['Igualdad', 'LO 3/2007: igualdad de trato, discriminación directa/indirecta, acción positiva y empleo público.'],
-      ['Prevención', 'Ley 31/1995: evaluación de riesgos, información, formación, vigilancia de la salud y medidas preventivas.'],
-      ['Certificado electrónico', 'Ley 39/2015 arts. 9 a 12 y Ley 40/2015: identificación, firma, sede, CSV y validación.'],
-      ['Archivo', 'Expediente administrativo: ordenación, integridad, conservación, acceso, protección de datos y trazabilidad.'],
-      ['Silencio administrativo', 'Ley 39/2015 arts. 21 a 25: obligación de resolver, plazo máximo, silencio positivo/negativo y certificado.'],
-      ['Responsabilidad patrimonial', 'Ley 40/2015 arts. 32 a 37: daño efectivo, evaluable, individualizado, causalidad, antijuridicidad y ausencia de fuerza mayor.'],
-      ['Bolsa de trabajo', 'Bases de convocatoria + TREBEP: lista, orden de prelación, llamamiento, renuncia, disponibilidad y expectativa de derecho.']
-    ];
-    return base.map((c, i) => ({
-      id: `${prefix}-sp${i + 1}`,
-      title: c[0],
-      statement: `Caso práctico sobre ${c[0].toLowerCase()}. Redacta una respuesta con norma, artículo o bloque legal, trámite, plazo, órgano competente y consecuencia administrativa.`,
-      guidance: `Respuesta orientativa: ${c[1]} Cierra con conclusión aplicada al caso y evita respuestas genéricas.`
-    }));
+  function makeCases(prefix){
+    const base = [['Solicitud incompleta','Ley 39/2015 art. 68: requerimiento de subsanación de diez días y posible desistimiento.'], ['Registro electrónico','Ley 39/2015 arts. 16 y 31: asiento, recibo, fecha/hora y cómputo.'], ['Notificación','Ley 39/2015 arts. 40 a 46: contenido, medio, intentos y efectos.'], ['Recurso administrativo','Ley 39/2015 arts. 112 a 124: acto, vía, plazo, órgano y silencio.'], ['Silencio administrativo','Ley 39/2015 arts. 21 a 25: obligación de resolver, plazo y efecto del silencio.'], ['Contrato menor','LCSP: necesidad, objeto, crédito, no fraccionamiento, aprobación y factura.'], ['Tributo local','TRLRHL: hecho imponible, sujeto pasivo, devengo, liquidación y recurso.'], ['Padrón municipal','Ley 7/1985 arts. 15 a 18: residencia, vecino, inscripción y certificación.'], ['Certificado electrónico','Ley 39/2015 arts. 9 a 12: identificación, firma y asistencia.'], ['Archivo','Expediente electrónico: ordenación, integridad, conservación y acceso.']];
+    return base.map((c,i)=>({id:`${prefix}-sp${i+1}`, title:c[0], statement:`Caso práctico sobre ${c[0].toLowerCase()}. Indica norma, artículo, órgano, trámite, plazo, documento y consecuencia.`, guidance:`Respuesta orientativa: ${c[1]} Aplica la regla al caso y termina con una conclusión.`}));
   }
 
-  function makeSimulacros(prefix, themeTests) {
-    const all = Object.values(themeTests).flat();
-    return [0, 17, 43].map((start, s) => ({
-      id: `${prefix}-sim${s + 1}`,
-      title: `Simulacro transversal ${s + 1}`,
-      questions: Array.from({ length: 50 }, (_, i) => ({ ...all[(start + i * 7) % all.length], id: `${prefix}-sim${s + 1}-q${i + 1}` }))
-    }));
+  function makeSimulacros(prefix, map){
+    const all = Object.values(map).flat();
+    return [0,17,43].map((start,s)=>({id:`${prefix}-sim${s+1}`, title:`Simulacro transversal ${s+1}`, questions:Array.from({length:50},(_,i)=>({...all[(start+i*7)%all.length], id:`${prefix}-sim${s+1}-q${i+1}`}))}));
   }
 
-  function enhanceOposicion(ope) {
+  data.oposiciones.forEach(ope=>{
     ope.themes = ope.themes.map(enhanceTheme);
-    ope.themeTests = Object.fromEntries(ope.themes.map(t => [t.id, makeQuestions(t)]));
+    ope.themeTests = Object.fromEntries(ope.themes.map(t=>[t.id, makeQuestions(t)]));
     ope.practicalCases = makeCases(ope.id);
     ope.simulacros = makeSimulacros(ope.id, ope.themeTests);
-    ope.status = `${ope.status} Temario ampliado con artículos, argot técnico y enfoque de supuesto práctico.`;
-    return ope;
-  }
-
-  data.oposiciones.forEach(enhanceOposicion);
+    if (!ope.status.includes('desarrollo artículo')) ope.status = `${ope.status} Temario ampliado con desarrollo artículo a artículo cuando procede.`;
+  });
 
   if (typeof themeDetail === 'function') {
     themeDetail = function(t) {
-      const sections = t.sections.map(s=>`<section class="section"><h3>${escapeHtml(s.heading)}</h3>${s.paragraphs.map(p=>s.heading.includes('Trampas')?`<p>☐ ${escapeHtml(p)}</p>`:`<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('');
-      const mapBlock = t.tree ? `<h3>Mapa de estudio útil</h3><pre class="tree">${escapeHtml(t.tree)}</pre>` : '';
-      const tableBlock = t.reviewTable && t.reviewTable.length > 1 ? `<h3>Cuadro para test y supuesto práctico</h3>${renderTable(t.reviewTable)}` : '';
-      return `<button class="btn ghost" id="backThemes">← Volver al listado</button>
-      <article class="card"><div class="pill-row"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}</div><h2>Tema ${t.number}. ${escapeHtml(t.title)}</h2>
-      ${sections}${mapBlock}${tableBlock}</article>`;
+      const sections = t.sections.map(s=>`<section class="section"><h3>${escapeHtml(s.heading)}</h3>${s.paragraphs.map(p=>`<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('');
+      const table = t.reviewTable && t.reviewTable.length > 1 ? `<h3>Cuadro para test y supuesto práctico</h3>${renderTable(t.reviewTable)}` : '';
+      return `<button class="btn ghost" id="backThemes">← Volver al listado</button><article class="card"><div class="pill-row"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}</div><h2>Tema ${t.number}. ${escapeHtml(t.title)}</h2>${sections}${table}</article>`;
     };
   }
 
