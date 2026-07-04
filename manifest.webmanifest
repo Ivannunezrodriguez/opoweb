@@ -1,0 +1,15 @@
+{
+  "name": "Opoweb - Oposiciones",
+  "short_name": "Opoweb",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f8fb",
+  "theme_color": "#006dbe",
+  "icons": [
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
