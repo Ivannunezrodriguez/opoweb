@@ -1,10 +1,11 @@
-const CACHE = 'opoweb-v4';
+const CACHE = 'opoweb-v5';
 const ASSETS = [
   './',
   './index.html',
   './assets/css/styles.css',
   './assets/js/app.js',
   './data/oposiciones.js',
+  './data/proceso.js',
   './manifest.webmanifest',
   './assets/icons/icon.svg'
 ];
