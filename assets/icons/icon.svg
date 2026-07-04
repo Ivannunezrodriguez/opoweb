@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Opoweb">
+  <rect width="512" height="512" rx="96" fill="#006dbe"/>
+  <circle cx="384" cy="128" r="46" fill="#e8f4ff" opacity="0.9"/>
+  <path d="M104 156h184v48H104zm0 78h304v42H104zm0 70h304v42H104zm0 70h220v42H104z" fill="#ffffff"/>
+  <path d="M336 152l28 28 56-66 32 28-86 100-62-62z" fill="#b2ddff"/>
+</svg>
