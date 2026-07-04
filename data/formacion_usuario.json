@@ -1,0 +1,31 @@
+{
+  "aviso": "No rellenar este archivo con DNI, dirección, teléfono, vida laboral completa ni certificados personales si el repositorio es público.",
+  "perfilBase": {
+    "titulacionPrincipal": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
+    "experienciaAdministrativaPublicaConfirmada": false
+  },
+  "criterioConservador": [
+    "No sumar formación si no consta aportada dentro del plazo de solicitud.",
+    "No sumar experiencia pública si no hay certificado oficial de servicios prestados.",
+    "No sumar cursos sin horas, fecha, entidad y materia claramente relacionada."
+  ],
+  "cursos": [
+    {
+      "nombre": "Ejemplo: curso de administración electrónica",
+      "horas": 0,
+      "fechaFin": "AAAA-MM-DD",
+      "entidad": "Organismo/entidad",
+      "materia": "procedimiento/ofimática/protección de datos/etc.",
+      "aportadoEnSolicitud": {
+        "laPuebla": false,
+        "carranque": false,
+        "lasVentas": false
+      },
+      "valoracion": {
+        "laPuebla": "Pendiente/no previsto salvo encaje expreso",
+        "carranque": "Pendiente",
+        "lasVentas": "Pendiente"
+      }
+    }
+  ]
+}
