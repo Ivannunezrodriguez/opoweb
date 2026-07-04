@@ -20,6 +20,7 @@ function saveProgress(){ localStorage.setItem('opowebProgress', JSON.stringify(s
 function active(){ return state.data.oposiciones.find(o => o.id === state.activeOpe) || state.data.oposiciones[0]; }
 function progressKey(...parts){ return [state.activeOpe, ...parts].join(':'); }
 function escapeHtml(text){ return String(text ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m])); }
+function escapeAttr(text){ return escapeHtml(text).replace(/`/g, '&#096;'); }
 function setTitle(title, subtitle='') { $('viewTitle').textContent = title; $('viewSubtitle').textContent = subtitle || 'Estudia, haz test y guarda tu progreso.'; }
 
 function init(){
@@ -53,9 +54,11 @@ function renderAll(){
 }
 function renderSidebar(){
   const o=active();
-  $('oposicionCard').innerHTML = `<h2>${escapeHtml(o.shortName)}</h2><p><strong>${escapeHtml(o.places)}</strong></p><p>${escapeHtml(o.exam)}</p><p>${escapeHtml(o.status)}</p>`;
+  const links = (o.officialLinks || []).slice(0,2).map(l => `<p><a href="${escapeAttr(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a></p>`).join('');
+  $('oposicionCard').innerHTML = `<h2>${escapeHtml(o.shortName)}</h2><p><strong>${escapeHtml(o.places)}</strong></p><p>${escapeHtml(o.exam)}</p><p>${escapeHtml(o.status)}</p>${links}`;
 }
 function renderView(){
+  if(state.view==='proceso') return renderProceso();
   if(state.view==='temario') return renderTemario();
   if(state.view==='tests') return renderTests();
   if(state.view==='supuestos') return renderSupuestos();
@@ -67,9 +70,20 @@ function filterThemes(themes){
   return themes.filter(t => (t.title+' '+t.area+' '+t.sections.flatMap(s=>s.paragraphs).join(' ')).toLowerCase().includes(state.search));
 }
 
+function renderProceso(){
+  const o=active();
+  setTitle('Proceso y enlaces', 'Enlaces oficiales, calendario del proceso y próximos hitos pendientes.');
+  const links = (o.officialLinks || []).map(l => `<a class="btn ghost" href="${escapeAttr(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`).join('');
+  const rows = (o.processCalendar || []).map(item => `<tr><td>${escapeHtml(item.date)}</td><td><strong>${escapeHtml(item.title)}</strong><br><span class="muted">${escapeHtml(item.note)}</span></td><td><span class="badge ${item.status === 'pendiente' ? '' : 'common'}">${escapeHtml(item.status)}</span></td></tr>`).join('');
+  content.innerHTML = `
+    <div class="card"><h2>${escapeHtml(o.name)}</h2><p>${escapeHtml(o.status)}</p><div class="toolbar">${links}</div></div>
+    <div class="card"><h2>Calendario del proceso</h2><div class="table-wrap"><table><thead><tr><th>Fecha</th><th>Hito</th><th>Estado</th></tr></thead><tbody>${rows}</tbody></table></div><p class="muted">Las fechas pendientes se completarán cuando se publiquen oficialmente en sede, web municipal, BOP o BOE.</p></div>
+    <div class="card"><h2>Seguimiento</h2><p>Comprueba especialmente la sede y la página municipal de empleo. Los anuncios relevantes suelen ser listas de admitidos/excluidos, plazo de subsanación, tribunal, fecha de examen, plantilla, notas y bolsa.</p></div>`;
+}
+
 function renderTemario(){
   const o=active();
-  setTitle('Temario', `${o.themes.length} temas. Los comunes quedan marcados para reutilizarlos en otras OPE.`);
+  setTitle('Temario', `${o.themes.length} temas oficiales. Contenido ajustado al enunciado de la convocatoria.`);
   const themes=filterThemes(o.themes);
   if(state.selectedTheme){
     const t=o.themes.find(x=>x.id===state.selectedTheme);
@@ -82,7 +96,7 @@ function renderTemario(){
     <div class="card">
       <h2>Vista rápida</h2>
       <div class="grid three">
-        <div><span class="score">${o.themes.length}</span><p class="muted">temas</p></div>
+        <div><span class="score">${o.themes.length}</span><p class="muted">temas oficiales</p></div>
         <div><span class="score">${Object.values(o.themeTests).reduce((a,b)=>a+b.length,0)}</span><p class="muted">preguntas por tema</p></div>
         <div><span class="score">${o.practicalCases.length}</span><p class="muted">supuestos prácticos</p></div>
       </div>
@@ -97,7 +111,7 @@ function themeDetail(t){
   return `<button class="btn ghost" id="backThemes">← Volver al listado</button>
   <article class="card"><div class="pill-row"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}</div><h2>Tema ${t.number}. ${escapeHtml(t.title)}</h2>
   ${t.sections.map(s=>`<section class="section"><h3>${escapeHtml(s.heading)}</h3>${s.paragraphs.map(p=>s.heading.includes('Trampas')?`<p>☐ ${escapeHtml(p)}</p>`:`<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('')}
-  <h3>Esquema tipo árbol</h3><pre class="tree">${escapeHtml(t.tree || 'Sin esquema.')}</pre>
+  <h3>Esquema oficial</h3><pre class="tree">${escapeHtml(t.tree || 'Sin esquema.')}</pre>
   <h3>Tabla de repaso</h3>${renderTable(t.reviewTable)}
   </article>`;
 }
