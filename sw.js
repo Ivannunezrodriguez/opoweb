@@ -1,4 +1,4 @@
-const CACHE = 'opoweb-v10';
+const CACHE = 'opoweb-v11';
 const ASSETS = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const ASSETS = [
   './assets/js/estudio-avanzado.js',
   './assets/js/temario-profundo.js',
   './assets/js/temario-editorial.js',
+  './assets/js/ofimatica-detalle.js',
   './data/oposiciones.js',
   './data/proceso.js',
   './data/formacion_usuario.json',
