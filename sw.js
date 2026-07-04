@@ -1,10 +1,11 @@
-const CACHE = 'opoweb-v8';
+const CACHE = 'opoweb-v9';
 const ASSETS = [
   './',
   './index.html',
   './assets/css/styles.css',
   './assets/js/app.js',
   './assets/js/estudio-avanzado.js',
+  './assets/js/temario-profundo.js',
   './data/oposiciones.js',
   './data/proceso.js',
   './data/formacion_usuario.json',
