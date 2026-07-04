@@ -1,48 +1,59 @@
 # Opoweb
 
-**Opoweb** es una plataforma web estática para estudiar oposiciones desde ordenador, tablet o móvil. Está pensada como un campus personal: temario, test interactivos, supuestos prácticos, simulacros y progreso guardado en el navegador.
+**Opoweb** es una plataforma web estática para estudiar oposiciones desde ordenador, tablet o móvil. Está pensada como un campus personal: temario, test interactivos, supuestos prácticos, simulacros, enlaces oficiales del proceso y progreso guardado en el navegador.
 
 La primera oposición incluida es:
 
 - **Auxiliar Administrativo - Ayuntamiento de La Puebla de Montalbán**
 - Convocatoria: **4 plazas de Auxiliar Administrativo y constitución de bolsa**
-- Estructura inicial: **19 temas**, test por temas, supuestos prácticos y simulacros transversales.
+- Estructura: **19 temas oficiales**, test por temas, supuestos prácticos, simulacros transversales, calendario del proceso y enlaces oficiales.
 
-> Aviso importante: el contenido es material de estudio. Antes del examen hay que revisar siempre la normativa vigente y los anuncios oficiales de la convocatoria.
+> Aviso importante: el contenido es material de estudio. Antes del examen hay que revisar siempre la normativa vigente, las bases y los anuncios oficiales de la convocatoria.
 
 ---
 
-## Objetivo
+## Web publicada
 
-La idea de Opoweb es que puedas:
+Cuando GitHub Pages esté activo, la web se consulta aquí:
 
-- Ver en la izquierda la oposición que estás preparando.
-- Consultar temas desde móvil, tablet o PC.
-- Hacer test por temas y corregirlos al momento.
-- Ver la respuesta correcta y una justificación.
-- Practicar supuestos con solución orientativa.
-- Hacer simulacros transversales.
-- Guardar el progreso en el navegador.
-- Exportar/importar progreso entre dispositivos.
-- Añadir más oposiciones en el futuro y marcar temas comunes.
+```text
+https://ivannunezrodriguez.github.io/opoweb/
+```
 
 ---
 
 ## Qué incluye
 
-### 1. Temario
+### 1. Proceso y enlaces
 
-Cada tema incluye:
+La web incluye un apartado específico con:
 
-- resumen estudiable,
-- puntos clave,
-- esquema visual tipo árbol,
-- tabla de repaso,
-- etiqueta de tema común cuando puede servir para otras oposiciones.
+- enlace al BOE de la convocatoria,
+- enlace a la página municipal de Ofertas de Empleo Público,
+- enlace al BOP de Toledo para buscar el anuncio 2026-1965,
+- calendario del proceso con hitos publicados, estimados y pendientes.
 
-### 2. Test por temas
+### 2. Temario
 
-Cada tema tiene preguntas tipo test. Al pulsar **Corregir** se muestra:
+Cada tema se llama como el enunciado oficial de la oposición y se estructura solo por los puntos pedidos en ese enunciado.
+
+Ejemplo:
+
+```text
+Tema 1. La Constitución española de 1978. Estructura. La reforma constitucional. Derechos y deberes fundamentales de los españoles. Garantía y suspensión.
+
+- Documento base
+- Estructura
+- La reforma constitucional
+- Derechos y deberes fundamentales de los españoles
+- Garantía y suspensión
+```
+
+No se añade contenido genérico fuera del programa.
+
+### 3. Test por temas
+
+Cada tema tiene **12 preguntas tipo test**. Al pulsar **Corregir** se muestra:
 
 - aciertos,
 - fallos,
@@ -51,19 +62,19 @@ Cada tema tiene preguntas tipo test. Al pulsar **Corregir** se muestra:
 - respuesta correcta,
 - justificación.
 
-La penalización configurada es la habitual de la convocatoria de La Puebla de Montalbán: acierto `+0,20`, fallo `-0,05`, blanco `0`.
+La penalización configurada es la de la convocatoria: acierto `+0,20`, fallo `-0,05`, blanco `0`.
 
-### 3. Supuestos prácticos
+### 4. Supuestos prácticos
 
-Los supuestos permiten escribir una respuesta y después abrir una solución orientativa. Sirven para preparar el segundo ejercicio práctico.
+Incluye **20 supuestos prácticos** orientados a los puntos oficiales del temario: procedimiento administrativo, registros, plazos, recursos, protección de datos, tributos locales, administración electrónica, informática y prevención.
 
-### 4. Simulacros transversales
+### 5. Simulacros transversales
 
-Incluye simulacros de 50 preguntas que mezclan diferentes temas.
+Incluye **3 simulacros de 50 preguntas** mezclando todo el temario.
 
-### 5. Progreso local
+### 6. Progreso local
 
-El progreso se guarda en `localStorage`, es decir, en el navegador. Si cambias de dispositivo, puedes usar los botones **Exportar progreso** e **Importar progreso**.
+El progreso se guarda en `localStorage`, es decir, en el navegador. Para moverlo entre PC, tablet y móvil se usan los botones **Exportar progreso** e **Importar progreso**.
 
 ---
 
@@ -84,17 +95,19 @@ opoweb/
 │   └── js/
 │       └── app.js
 └── data/
-    └── oposiciones.js
+    ├── oposiciones.js
+    └── proceso.js
 ```
 
 | Archivo | Función |
 |---|---|
 | `index.html` | Página principal. |
 | `assets/css/styles.css` | Diseño responsive, menú lateral, tarjetas, test y botones. |
-| `assets/js/app.js` | Navegación, corrección de test, progreso y simulacros. |
-| `data/oposiciones.js` | Datos de oposiciones, temas, preguntas, supuestos y simulacros. |
+| `assets/js/app.js` | Navegación, corrección de test, progreso, simulacros y vista de proceso. |
+| `data/oposiciones.js` | Temas oficiales, test, supuestos y simulacros. |
+| `data/proceso.js` | Enlaces oficiales, calendario, changelog y ampliación de supuestos. |
 | `manifest.webmanifest` | Permite instalar la web como acceso directo/PWA. |
-| `sw.js` | Cache básico para carga más rápida. |
+| `sw.js` | Caché básica de la aplicación. |
 | `.nojekyll` | Evita problemas de GitHub Pages con Jekyll. |
 
 ---
@@ -128,13 +141,7 @@ http://localhost:8080
    - **Folder**: `/root`
 5. Guarda.
 
-La web quedará publicada en una URL parecida a:
-
-```text
-https://Ivannunezrodriguez.github.io/opoweb/
-```
-
-Puede tardar unos minutos en estar disponible.
+Puede tardar unos minutos en publicar después de cada cambio.
 
 ---
 
@@ -154,21 +161,25 @@ Puede tardar unos minutos en estar disponible.
 
 ---
 
-## Añadir otra oposición
+## Cómo añadir otra oposición
 
-El archivo principal de datos es:
+El archivo principal es:
 
 ```text
 data/oposiciones.js
 ```
 
-Cada oposición tiene esta estructura general:
+Cada oposición debe tener:
 
 ```js
 {
-  id: "puebla-aux-admin-2026",
-  name: "Auxiliar Administrativo - La Puebla de Montalbán",
-  shortName: "La Puebla - Aux. Administrativo",
+  id: 'puebla-aux-admin-2026',
+  name: 'Auxiliar Administrativo - La Puebla de Montalbán',
+  shortName: 'La Puebla - Aux. Administrativo',
+  places: '4 plazas + bolsa',
+  exam: '...',
+  status: '...',
+  scoring: { correct: 0.20, wrong: -0.05, blank: 0 },
   themes: [],
   themeTests: {},
   practicalCases: [],
@@ -176,86 +187,63 @@ Cada oposición tiene esta estructura general:
 }
 ```
 
-Para añadir otra oposición:
-
-1. Duplica el objeto de la oposición existente.
-2. Cambia `id`, `name`, `shortName`, `places`, `exam` y `status`.
-3. Añade o reutiliza temas.
-4. Marca `commonPotential: true` en los temas que sirvan para varias oposiciones.
+Para añadir enlaces, calendario o changelog específicos puede usarse `data/proceso.js` o crear un archivo equivalente por oposición.
 
 ---
 
-## Añadir preguntas tipo test
+## Automatización de avisos
 
-Dentro de `themeTests`, cada pregunta sigue esta forma:
+El repositorio no envía correos por sí solo. La vigilancia de novedades debe hacerse externamente comprobando fuentes oficiales:
 
-```js
-{
-  id: "t1-q1",
-  text: "Pregunta...",
-  options: [
-    { letter: "A", text: "Respuesta A" },
-    { letter: "B", text: "Respuesta B" },
-    { letter: "C", text: "Respuesta C" },
-    { letter: "D", text: "Respuesta D" }
-  ],
-  answer: "B",
-  justification: "Explicación de por qué esa opción es correcta."
-}
-```
+- BOE,
+- BOP Toledo,
+- web municipal,
+- sede electrónica si publica anuncios del proceso.
+
+Hay una vigilancia diaria configurada desde ChatGPT para detectar novedades relevantes. Para aviso por correo electrónico hace falta configurar un canal de email o indicar una dirección concreta y permitir el envío cuando aparezca una novedad.
 
 ---
 
-## Añadir supuestos prácticos
+## Cambios de versión
 
-Dentro de `practicalCases`:
+### v0.5.0 - 2026-07-04
 
-```js
-{
-  id: "sp1",
-  title: "Registro de entrada y plazos",
-  statement: "Enunciado del supuesto...",
-  guidance: "Solución orientativa..."
-}
-```
+- Añadida vista **Proceso y enlaces**.
+- Añadidos enlaces oficiales: BOE, web municipal de empleo y BOP Toledo.
+- Añadido calendario del proceso con hitos publicados, estimados y pendientes.
+- Ampliados los supuestos prácticos a 20.
+- Añadido `data/proceso.js` para separar datos del proceso del temario.
+- Actualizada caché a `opoweb-v5`.
 
----
+### v0.4.0 - 2026-07-04
 
-## Añadir simulacros
+- Corregido fallo de despliegue en GitHub Pages.
+- Simplificación segura de datos para evitar errores de publicación.
+- Actualizada caché a `opoweb-v4`.
 
-Dentro de `simulacros`:
+### v0.3.0 - 2026-07-04
 
-```js
-{
-  id: "sim1",
-  title: "Simulacro transversal 1",
-  questions: [ /* 50 preguntas */ ]
-}
-```
+- Temario reestructurado por títulos exactos del programa oficial.
+- Cada tema se organiza por los puntos oficiales del enunciado.
+- Eliminado contenido genérico fuera del programa.
+
+### v0.2.0 - 2026-07-04
+
+- Temario ampliado para estudio.
+- Actualización de caché.
+
+### v0.1.0 - 2026-07-04
+
+- Primera versión web.
+- Temario, test por temas, supuestos, simulacros y progreso local.
 
 ---
 
 ## Próximas mejoras recomendadas
 
-- Añadir todos los test definitivos del documento Word.
-- Crear modo examen con temporizador de 60 minutos.
-- Añadir estadísticas por bloque: jurídico, régimen local, tributario, informática.
-- Añadir buscador avanzado por ley/artículo.
-- Exportar resultados en CSV.
-- Crear más oposiciones reutilizando los temas comunes.
-
----
-
-## Mantenimiento
-
-Recomendación práctica:
-
-- Usa `main` para la versión publicada.
-- Cuando añadas contenido nuevo, actualiza primero `data/oposiciones.js`.
-- Comprueba en local antes de subir.
-- Cada cambio importante debería tener un commit claro, por ejemplo:
-
-```text
-Añadir test del tema 2 Ley 39/2015
-```
-
+- Convertir el calendario en una vista mensual real.
+- Añadir descarga `.ics` para importar fechas a Google Calendar.
+- Añadir temporizador de examen.
+- Añadir estadísticas por bloque.
+- Sustituir preguntas genéricas por preguntas jurídicas específicas artículo por artículo.
+- Añadir más oposiciones reutilizando temas comunes.
