@@ -205,4 +205,8 @@
       });
     }
   });
+
+  if (typeof renderAll === 'function') {
+    try { renderAll(); } catch (_) {}
+  }
 })();
