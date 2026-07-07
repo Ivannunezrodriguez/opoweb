@@ -16,10 +16,22 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 - Estudiar temario por convocatoria con desarrollo amplio por bloques legales y artículos cuando procede.
 - Tener en una misma hoja la explicación de cada punto del tema, sin depender de mirar aparte rangos de artículos.
 - Mantener el **Cuadro para test y supuesto práctico** como guía de respuesta.
+- Ver cada tema con estructura **Opo-Test**: resumen orientado al aprobado, rigor normativo, síntesis de repaso, tabla comparativa, puntos calientes y preguntas de recuerdo activo.
 - Hacer test por temas con corrección, penalización y justificación.
 - Practicar supuestos prácticos con soluciones orientativas jurídicas y operativas.
 - Hacer simulacros transversales.
 - Exportar/importar progreso del navegador.
+
+## Método de resumen aplicado al temario
+
+Cada tema queda reforzado con esta estructura:
+
+1. **Resumen orientado al aprobado**: enunciado oficial, área de estudio y qué debe dominarse.
+2. **Rigor normativo**: leyes, artículos, órganos y plazos se mantienen sin convertir días hábiles/naturales ni meses en aproximaciones.
+3. **Síntesis de repaso rápido**: puntos clave extraídos del desarrollo del tema.
+4. **Opo-Test: puntos calientes**: 5-10 detalles con alta probabilidad de pregunta tipo test.
+5. **Retención activa**: 3 preguntas de autoevaluación sin respuesta visible.
+6. **Estrategia de examen**: uso de active recall, repaso espaciado, criterio de riesgo en test y plantilla para supuestos prácticos.
 
 ## Baremos personales cargados de forma conservadora
 
@@ -44,7 +56,8 @@ opoweb/
 │       ├── estudio-avanzado.js
 │       ├── temario-profundo.js
 │       ├── temario-editorial.js
-│       └── ofimatica-detalle.js
+│       ├── ofimatica-detalle.js
+│       └── metodo-opotest.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
@@ -58,6 +71,14 @@ opoweb/
 ```
 
 ## Cambios de versión
+
+### v0.13.0 - 2026-07-07
+
+- Añadido `assets/js/metodo-opotest.js`.
+- Aplicada estructura de resumen orientada al aprobado a todos los temas de todas las oposiciones.
+- Añadidos puntos calientes **Opo-Test** y 3 preguntas de recuerdo activo por tema.
+- Añadidas tablas comparativas adaptadas a recursos, plazos, régimen local, hacienda/tributos e informática.
+- Actualizada caché PWA a `opoweb-v13`.
 
 ### v0.12.0 - 2026-07-07
 
