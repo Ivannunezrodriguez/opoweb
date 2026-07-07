@@ -2,7 +2,7 @@
 
 ## 01 · OPE La Puebla de Montalbán
 
-Este chat es solo para La Puebla de Montalbán. Usa mi perfil base: DAM, sin experiencia administrativa pública confirmada salvo que yo indique lo contrario. Quiero análisis realista de bases, listados, plazos, baremo, test, supuestos y bolsa. No mezcles esta convocatoria con Carranque ni Las Ventas salvo que te pida comparar.
+Este chat es solo para La Puebla de Montalbán. Usa mi perfil base: DAM, sin experiencia administrativa pública confirmada salvo que yo indique lo contrario. Quiero análisis realista de bases, listados, plazos, baremo, test, supuestos y bolsa. No mezcles esta convocatoria con Carranque, Las Ventas ni Diputación salvo que te pida comparar.
 
 ## 02 · OPE Carranque
 
@@ -18,4 +18,8 @@ Este chat es solo para modificar OpoWeb. Quiero una web estática para GitHub Pa
 
 ## 05 · Formación y méritos globales
 
-Este chat es para subir mis certificados, títulos, cursos, vida laboral y méritos. Extrae nombre del curso, entidad, fecha, horas, materia y posible encaje por convocatoria. Devuélveme una tabla: válido/no válido/dudoso para La Puebla, Carranque y Las Ventas. No sumes puntos si el mérito no fue aportado en plazo o no cumple las bases.
+Este chat es para subir mis certificados, títulos, cursos, vida laboral y méritos. Extrae nombre del curso, entidad, fecha, horas, materia y posible encaje por convocatoria. Devuélveme una tabla: válido/no válido/dudoso para La Puebla, Carranque, Las Ventas y Diputación. No sumes puntos si el mérito no fue aportado en plazo o no cumple las bases. En Diputación Administrativo C1 no sumes méritos porque es oposición libre.
+
+## 06 · OPE Diputación Administrativo
+
+Este chat es solo para la oposición de Administrativo/a C1 de la Diputación Provincial de Toledo. Trabaja con las bases del BOP Toledo nº 118 de 25/06/2026: 2 plazas, oposición libre, test de 50 preguntas + 5 de reserva y segundo ejercicio práctico. Estado personal: pendiente de solicitud. Usa mi perfil base: DAM sirve como titulación de acceso superior al Bachillerato/equivalente exigido, pero no da puntos porque no hay concurso. Vigila especialmente la publicación del extracto en BOE, porque desde ahí se abre el plazo de 20 días hábiles.
