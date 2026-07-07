@@ -1,12 +1,13 @@
 # OpoWeb · Auxiliar Administrativo Toledo
 
-Web estática para estudiar oposiciones de Auxiliar Administrativo en pueblos de Toledo desde ordenador, tablet o móvil.
+Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrativo en Toledo desde ordenador, tablet o móvil.
 
 ## Convocatorias cargadas
 
 - **La Puebla de Montalbán**: 4 plazas + bolsa. Estado personal: inscrito.
 - **Carranque**: 1 plaza + bolsa. Estado personal: inscrito.
 - **Las Ventas con Peña Aguilera**: 1 plaza. Estado personal: pendiente de solicitud/seguimiento.
+- **Diputación Provincial de Toledo · Administrativo C1**: 2 plazas. Estado personal: pendiente de solicitud.
 
 ## Qué permite ahora
 
@@ -25,6 +26,7 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo en pueblos de
 - **La Puebla**: DAM probablemente no suma porque las bases solo citan Grado en Derecho o Arquitectura como mérito de titulación. Sin experiencia pública C2 confirmada: 0 puntos.
 - **Carranque**: DAM como FP de Grado Superior puede sumar 0,75 puntos si fue aportado/acreditado en plazo. Sin experiencia administrativa pública confirmada: 0 puntos.
 - **Las Ventas**: Técnico Superior/DAM puede sumar 2 puntos si se acredita con la solicitud. Formación y ejercicios aprobados solo deben sumarse si cumplen literalmente las bases.
+- **Diputación Administrativo C1**: no hay baremo porque es oposición libre. DAM sirve como titulación superior al requisito de Bachillerato/equivalente, pero no da puntos.
 
 ## Estructura principal
 
@@ -40,7 +42,9 @@ opoweb/
 │   └── js/
 │       ├── app.js
 │       ├── estudio-avanzado.js
-│       └── temario-profundo.js
+│       ├── temario-profundo.js
+│       ├── temario-editorial.js
+│       └── ofimatica-detalle.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
@@ -49,10 +53,19 @@ opoweb/
     ├── PROMPTS_CHATS.md
     ├── LA_PUEBLA.md
     ├── CARRANQUE.md
-    └── LAS_VENTAS.md
+    ├── LAS_VENTAS.md
+    └── DIPUTACION_ADMINISTRATIVO.md
 ```
 
 ## Cambios de versión
+
+### v0.12.0 - 2026-07-07
+
+- Añadida **Diputación Provincial de Toledo · Administrativo C1** al selector de oposiciones.
+- Cargado el temario oficial de 40 temas del Anexo VII.
+- Añadidos tests por tema, supuestos prácticos, simulacros transversales, calendario y enlaces oficiales.
+- Marcada como **pendiente de solicitud** y sin baremo al ser oposición libre.
+- Actualizada caché PWA a `opoweb-v12`.
 
 ### v0.9.0 - 2026-07-04
 
