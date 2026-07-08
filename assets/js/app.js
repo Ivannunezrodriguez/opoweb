@@ -1,4 +1,4 @@
-const APP_VERSION = 'v0.14.0';
+const APP_VERSION = 'v0.15.0';
 
 const state = {
   data: window.OPOSICIONES_DATA,
