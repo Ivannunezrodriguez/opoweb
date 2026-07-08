@@ -1,3 +1,5 @@
+const APP_VERSION = 'v0.14.0';
+
 const state = {
   data: window.OPOSICIONES_DATA,
   activeOpe: null,
@@ -55,7 +57,7 @@ function renderAll(){
 function renderSidebar(){
   const o=active();
   const links = (o.officialLinks || []).slice(0,2).map(l => `<p><a href="${escapeAttr(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a></p>`).join('');
-  $('oposicionCard').innerHTML = `<h2>${escapeHtml(o.shortName)}</h2><p><strong>${escapeHtml(o.places)}</strong></p><p>${escapeHtml(o.exam)}</p><p>${escapeHtml(o.status)}</p>${links}`;
+  $('oposicionCard').innerHTML = `<h2>${escapeHtml(o.shortName)}</h2><p><strong>${escapeHtml(o.places)}</strong></p><p>${escapeHtml(o.exam)}</p><p>${escapeHtml(o.status)}</p>${links}<p class="muted"><strong>Versión OpoWeb ${APP_VERSION}</strong><br>Si no ves esta versión, recarga o borra caché de la PWA.</p>`;
 }
 function renderView(){
   if(state.view==='proceso') return renderProceso();
@@ -105,11 +107,12 @@ function renderTemario(){
   document.querySelectorAll('[data-theme]').forEach(el => el.addEventListener('click', () => { state.selectedTheme=el.dataset.theme; renderTemario(); }));
 }
 function themeItem(t){
-  return `<article class="theme-item" data-theme="${t.id}"><h3>Tema ${t.number}. ${escapeHtml(t.title)}</h3><div class="theme-meta"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}</div></article>`;
+  const academia = t.academiaVersion ? '<span class="badge common">academia</span>' : '';
+  return `<article class="theme-item" data-theme="${t.id}"><h3>Tema ${t.number}. ${escapeHtml(t.title)}</h3><div class="theme-meta"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}${academia}</div></article>`;
 }
 function themeDetail(t){
   return `<button class="btn ghost" id="backThemes">← Volver al listado</button>
-  <article class="card"><div class="pill-row"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}</div><h2>Tema ${t.number}. ${escapeHtml(t.title)}</h2>
+  <article class="card"><div class="pill-row"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}${t.academiaVersion?'<span class="badge common">resumen academia</span>':''}</div><h2>Tema ${t.number}. ${escapeHtml(t.title)}</h2>
   ${t.sections.map(s=>`<section class="section"><h3>${escapeHtml(s.heading)}</h3>${s.paragraphs.map(p=>s.heading.includes('Trampas')?`<p>☐ ${escapeHtml(p)}</p>`:`<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('')}
   <h3>Esquema oficial</h3><pre class="tree">${escapeHtml(t.tree || 'Sin esquema.')}</pre>
   <h3>Tabla de repaso</h3>${renderTable(t.reviewTable)}
@@ -203,7 +206,7 @@ function renderProgreso(){
   const done=keys.filter(k=>state.progress[k]?.corrected).length;
   const total=o.themes.length + o.simulacros.length;
   const pct=Math.min(100, Math.round(done/Math.max(total,1)*100));
-  content.innerHTML = `<div class="card"><h2>Resumen</h2><div class="progress-bar"><span style="width:${pct}%"></span></div><p><strong>${pct}%</strong> de bloques corregidos al menos una vez.</p></div><div class="card"><h2>Resultados</h2>${keys.length?keys.map(k=>`<p><strong>${escapeHtml(k.replace(state.activeOpe+':',''))}</strong>: ${state.progress[k].score?formatScore(state.progress[k].score):'sin corregir'}</p>`).join(''):'<p class="muted">Todavía no hay progreso guardado.</p>'}</div>`;
+  content.innerHTML = `<div class="card"><h2>Resumen</h2><div class="progress-bar"><span style="width:${pct}%"></span></div><p><strong>${pct}%</strong> de bloques corregidos al menos una vez.</p><p class="muted">Versión OpoWeb ${APP_VERSION}</p></div><div class="card"><h2>Resultados</h2>${keys.length?keys.map(k=>`<p><strong>${escapeHtml(k.replace(state.activeOpe+':',''))}</strong>: ${state.progress[k].score?formatScore(state.progress[k].score):'sin corregir'}</p>`).join(''):'<p class="muted">Todavía no hay progreso guardado.</p>'}</div>`;
 }
 function exportProgress(){
   const blob = new Blob([JSON.stringify(state.progress,null,2)], {type:'application/json'});
