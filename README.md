@@ -9,6 +9,10 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 - **Las Ventas con Peña Aguilera**: 1 plaza. Estado personal: pendiente de solicitud/seguimiento.
 - **Diputación Provincial de Toledo · Administrativo C1**: 2 plazas. Estado personal: pendiente de solicitud.
 
+## Versión visible
+
+La web muestra ahora la **Versión OpoWeb v0.14.0** en la tarjeta lateral de la oposición activa y también en la vista de progreso. Si en móvil/tablet no aparece esa versión, hay que recargar o borrar caché de la PWA.
+
 ## Qué permite ahora
 
 - Seleccionar la oposición activa desde el menú lateral.
@@ -17,6 +21,7 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 - Tener en una misma hoja la explicación de cada punto del tema, sin depender de mirar aparte rangos de artículos.
 - Mantener el **Cuadro para test y supuesto práctico** como guía de respuesta.
 - Ver cada tema con estructura **Opo-Test**: resumen orientado al aprobado, rigor normativo, síntesis de repaso, tabla comparativa, puntos calientes y preguntas de recuerdo activo.
+- Ver módulos manuales **tipo academia** para bloques reutilizables: Constitución, Ley 39/2015, Ley 40/2015, Régimen Local, Contratación, Hacienda/Tributos/Presupuesto y Ofimática.
 - Hacer test por temas con corrección, penalización y justificación.
 - Practicar supuestos prácticos con soluciones orientativas jurídicas y operativas.
 - Hacer simulacros transversales.
@@ -26,12 +31,13 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 Cada tema queda reforzado con esta estructura:
 
-1. **Resumen orientado al aprobado**: enunciado oficial, área de estudio y qué debe dominarse.
-2. **Rigor normativo**: leyes, artículos, órganos y plazos se mantienen sin convertir días hábiles/naturales ni meses en aproximaciones.
-3. **Síntesis de repaso rápido**: puntos clave extraídos del desarrollo del tema.
-4. **Opo-Test: puntos calientes**: 5-10 detalles con alta probabilidad de pregunta tipo test.
+1. **Documento reutilizable**: identifica el módulo común que puede servir para varias convocatorias.
+2. **Resumen fino tipo academia**: desarrolla el bloque con lógica de examen.
+3. **Rigor normativo**: leyes, artículos, órganos y plazos se mantienen sin convertir días hábiles/naturales ni meses en aproximaciones.
+4. **Síntesis y Opo-Test**: puntos calientes con alta probabilidad de pregunta tipo test.
 5. **Retención activa**: 3 preguntas de autoevaluación sin respuesta visible.
-6. **Estrategia de examen**: uso de active recall, repaso espaciado, criterio de riesgo en test y plantilla para supuestos prácticos.
+6. **Tabla comparativa**: conceptos que suelen confundirse.
+7. **Plan de estudio**: vueltas de lectura, recuerdo activo, test y revisión de fallos.
 
 ## Baremos personales cargados de forma conservadora
 
@@ -57,7 +63,8 @@ opoweb/
 │       ├── temario-profundo.js
 │       ├── temario-editorial.js
 │       ├── ofimatica-detalle.js
-│       └── metodo-opotest.js
+│       ├── metodo-opotest.js
+│       └── temario-academia.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
@@ -71,6 +78,14 @@ opoweb/
 ```
 
 ## Cambios de versión
+
+### v0.14.0 - 2026-07-07
+
+- Añadido `assets/js/temario-academia.js`.
+- Añadidos módulos manuales tipo academia para bloques reutilizables.
+- Añadida etiqueta visible **Versión OpoWeb v0.14.0** en la web.
+- Añadida marca visual `academia` en los temas que tienen desarrollo fino reutilizable.
+- Actualizada caché PWA a `opoweb-v14`.
 
 ### v0.13.0 - 2026-07-07
 
