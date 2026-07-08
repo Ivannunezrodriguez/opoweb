@@ -11,7 +11,7 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra ahora la **Versión OpoWeb v0.14.0** en la tarjeta lateral de la oposición activa y también en la vista de progreso. Si en móvil/tablet no aparece esa versión, hay que recargar o borrar caché de la PWA.
+La web muestra ahora la **Versión OpoWeb v0.15.0** en la tarjeta lateral de la oposición activa y también en la vista de progreso. Si en móvil/tablet no aparece esa versión, hay que recargar o borrar caché de la PWA.
 
 ## Qué permite ahora
 
@@ -20,7 +20,7 @@ La web muestra ahora la **Versión OpoWeb v0.14.0** en la tarjeta lateral de la 
 - Estudiar temario por convocatoria con desarrollo amplio por bloques legales y artículos cuando procede.
 - Tener en una misma hoja la explicación de cada punto del tema, sin depender de mirar aparte rangos de artículos.
 - Mantener el **Cuadro para test y supuesto práctico** como guía de respuesta.
-- Ver cada tema con estructura **Opo-Test**: resumen orientado al aprobado, rigor normativo, síntesis de repaso, tabla comparativa, puntos calientes y preguntas de recuerdo activo.
+- Ver cada tema con estructura estable: **Resumen orientado al aprobado**, **Rigor normativo**, **Opo-Test**, **Retención activa** y **Plan de estudio**.
 - Ver módulos manuales **tipo academia** para bloques reutilizables: Constitución, Ley 39/2015, Ley 40/2015, Régimen Local, Contratación, Hacienda/Tributos/Presupuesto y Ofimática.
 - Hacer test por temas con corrección, penalización y justificación.
 - Practicar supuestos prácticos con soluciones orientativas jurídicas y operativas.
@@ -31,13 +31,14 @@ La web muestra ahora la **Versión OpoWeb v0.14.0** en la tarjeta lateral de la 
 
 Cada tema queda reforzado con esta estructura:
 
-1. **Documento reutilizable**: identifica el módulo común que puede servir para varias convocatorias.
-2. **Resumen fino tipo academia**: desarrolla el bloque con lógica de examen.
-3. **Rigor normativo**: leyes, artículos, órganos y plazos se mantienen sin convertir días hábiles/naturales ni meses en aproximaciones.
-4. **Síntesis y Opo-Test**: puntos calientes con alta probabilidad de pregunta tipo test.
-5. **Retención activa**: 3 preguntas de autoevaluación sin respuesta visible.
-6. **Tabla comparativa**: conceptos que suelen confundirse.
-7. **Plan de estudio**: vueltas de lectura, recuerdo activo, test y revisión de fallos.
+1. **Resumen orientado al aprobado**: identifica el enunciado oficial, la finalidad del tema y qué hay que dominar para aprobar.
+2. **Rigor normativo**: leyes, artículos, órganos y plazos se mantienen sin convertir días hábiles/naturales ni meses en aproximaciones.
+3. **Documento madre reutilizable**: identifica el bloque común que puede servir para varias convocatorias.
+4. **Desarrollo tipo academia**: desarrolla el bloque con lógica jurídica y administrativa.
+5. **Opo-Test: puntos calientes**: detalles con alta probabilidad de pregunta tipo test.
+6. **Retención activa**: 3 preguntas de autoevaluación sin respuesta visible.
+7. **Tabla comparativa**: conceptos que suelen confundirse.
+8. **Plan de estudio**: vueltas de lectura, recuerdo activo, test y revisión de fallos.
 
 ## Baremos personales cargados de forma conservadora
 
@@ -64,7 +65,8 @@ opoweb/
 │       ├── temario-editorial.js
 │       ├── ofimatica-detalle.js
 │       ├── metodo-opotest.js
-│       └── temario-academia.js
+│       ├── temario-academia.js
+│       └── ajustes-v15.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
@@ -78,6 +80,14 @@ opoweb/
 ```
 
 ## Cambios de versión
+
+### v0.15.0 - 2026-07-08
+
+- Añadido `assets/js/ajustes-v15.js`.
+- Reforzada la estructura común de todos los temas: **Resumen orientado al aprobado**, **Rigor normativo**, **Opo-Test**, **Retención activa** y **Plan de estudio**.
+- Confirmada **Diputación Provincial de Toledo · Administrativo C1** en el selector de oposiciones.
+- Actualizada etiqueta visible a **Versión OpoWeb v0.15.0**.
+- Actualizada caché PWA a `opoweb-v15`.
 
 ### v0.14.0 - 2026-07-07
 
