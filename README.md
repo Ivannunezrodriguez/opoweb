@@ -1,6 +1,6 @@
 # OpoWeb · Auxiliar Administrativo Toledo
 
-Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrativo en Toledo desde ordenador, tablet o móvil.
+Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrativo desde ordenador, tablet o móvil. El foco principal sigue siendo Toledo, pero se añade UC3M como convocatoria complementaria por volumen de plazas.
 
 ## Convocatorias cargadas
 
@@ -8,10 +8,11 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 - **Carranque**: 1 plaza + bolsa. Estado personal: inscrito.
 - **Las Ventas con Peña Aguilera**: 1 plaza. Estado personal: pendiente de solicitud/seguimiento.
 - **Diputación Provincial de Toledo · Administrativo C1**: 2 plazas. Estado personal: pendiente de solicitud.
+- **Universidad Carlos III de Madrid · Auxiliar Administrativo C2**: 34 plazas, 2 reservadas a discapacidad. Estado personal: pendiente de solicitud/seguimiento.
 
 ## Versión visible
 
-La web muestra ahora la **Versión OpoWeb v0.15.0** en la tarjeta lateral de la oposición activa y también en la vista de progreso. Si en móvil/tablet no aparece esa versión, hay que recargar o borrar caché de la PWA.
+La web muestra ahora la **Versión OpoWeb v0.16.0** en la tarjeta lateral de la oposición activa y también en la vista de progreso. Si en móvil/tablet no aparece esa versión, hay que recargar o borrar caché de la PWA.
 
 ## Qué permite ahora
 
@@ -46,6 +47,7 @@ Cada tema queda reforzado con esta estructura:
 - **Carranque**: DAM como FP de Grado Superior puede sumar 0,75 puntos si fue aportado/acreditado en plazo. Sin experiencia administrativa pública confirmada: 0 puntos.
 - **Las Ventas**: Técnico Superior/DAM puede sumar 2 puntos si se acredita con la solicitud. Formación y ejercicios aprobados solo deben sumarse si cumplen literalmente las bases.
 - **Diputación Administrativo C1**: no hay baremo porque es oposición libre. DAM sirve como titulación superior al requisito de Bachillerato/equivalente, pero no da puntos.
+- **UC3M Auxiliar Administrativo C2**: inglés 0 salvo B2/C1 oficial vigente; experiencia pública como funcionario en escala equivalente no confirmada = 0; formación probable 2-5/30 si el tribunal acepta cursos válidos por entidad, fechas, horas y relación con funciones.
 
 ## Estructura principal
 
@@ -66,20 +68,33 @@ opoweb/
 │       ├── ofimatica-detalle.js
 │       ├── metodo-opotest.js
 │       ├── temario-academia.js
-│       └── ajustes-v15.js
+│       ├── ajustes-v15.js
+│       └── ajustes-v16.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
+│   ├── uc3m.js
 │   └── formacion_usuario.json
 └── docs/
     ├── PROMPTS_CHATS.md
     ├── LA_PUEBLA.md
     ├── CARRANQUE.md
     ├── LAS_VENTAS.md
-    └── DIPUTACION_ADMINISTRATIVO.md
+    ├── DIPUTACION_ADMINISTRATIVO.md
+    └── UC3M_AUX_ADMIN.md
 ```
 
 ## Cambios de versión
+
+### v0.16.0 - 2026-07-09
+
+- Añadida **Universidad Carlos III de Madrid · Auxiliar Administrativo C2** al selector.
+- Cargado el temario oficial de 20 temas del Anexo I.
+- Añadidos tests por tema, supuestos prácticos, simulacros, calendario y enlaces oficiales.
+- Marcada como **pendiente de solicitud/seguimiento** y prioridad secundaria frente a Toledo por destino Madrid.
+- Añadida estimación prudente de baremo personal UC3M: 2-5 puntos probables sobre 30, salvo inglés oficial o experiencia pública no confirmada.
+- Añadido `data/uc3m.js`, `assets/js/ajustes-v16.js` y `docs/UC3M_AUX_ADMIN.md`.
+- Actualizada caché PWA a `opoweb-v16`.
 
 ### v0.15.0 - 2026-07-08
 
