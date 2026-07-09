@@ -57,7 +57,22 @@
   function apply(theme) {
     const ley39 = normas.ley39;
     const ley40 = normas.ley40;
+    const local = normas.regimenLocal;
     const t = low(`${theme.title} ${theme.area}`);
+
+    if (t.includes('municipio') || t.includes('padrón') || t.includes('padron') || t.includes('provincia') || t.includes('diputación') || t.includes('diputacion') || t.includes('régimen local') || t.includes('regimen local') || t.includes('entidades locales') || t.includes('administración local') || t.includes('administracion local') || t.includes('órganos municipales') || t.includes('organos municipales') || t.includes('ordenanzas') || t.includes('reglamentos locales') || t.includes('bienes') || t.includes('licencias') || t.includes('servicios públicos') || t.includes('servicios publicos') || t.includes('función pública local') || t.includes('funcion publica local') || t.includes('haciendas locales')) {
+      if (t.includes('padrón') || t.includes('padron') || t.includes('población') || t.includes('poblacion')) return setLegal(theme, local?.temas?.municipioPadron, 'regimenLocal');
+      if (t.includes('alcalde') || t.includes('pleno') || t.includes('junta de gobierno') || t.includes('órganos municipales') || t.includes('organos municipales') || t.includes('organización municipal') || t.includes('organizacion municipal')) return setLegal(theme, local?.temas?.organizacionMunicipal, 'regimenLocal');
+      if (t.includes('competencias') || t.includes('servicios mínimos') || t.includes('servicios minimos')) return setLegal(theme, local?.temas?.competenciasServicios, 'regimenLocal');
+      if (t.includes('provincia') || t.includes('diputación') || t.includes('diputacion')) return setLegal(theme, local?.temas?.provinciaDiputacion, 'regimenLocal');
+      if (t.includes('órganos colegiados') || t.includes('organos colegiados') || t.includes('actas') || t.includes('certificados') || t.includes('sesiones') || t.includes('mayorías') || t.includes('mayorias') || t.includes('ordenanzas') || t.includes('reglamentos locales')) return setLegal(theme, local?.temas?.funcionamiento, 'regimenLocal');
+      if (t.includes('relaciones') || t.includes('control') || t.includes('impugnación') || t.includes('impugnacion')) return setLegal(theme, local?.temas?.relacionesControl, 'regimenLocal');
+      if (t.includes('participación') || t.includes('participacion') || t.includes('consulta') || t.includes('vecinal')) return setLegal(theme, local?.temas?.participacion, 'regimenLocal');
+      if (t.includes('bienes') || t.includes('licencias') || t.includes('policía') || t.includes('policia') || t.includes('fomento') || t.includes('servicio público') || t.includes('servicio publico') || t.includes('actividad administrativa')) return setLegal(theme, local?.temas?.bienesActividad, 'regimenLocal');
+      if (t.includes('personal') || t.includes('función pública local') || t.includes('funcion publica local') || t.includes('fhn') || t.includes('habilitación nacional') || t.includes('habilitacion nacional') || t.includes('rpt') || t.includes('plantilla')) return setLegal(theme, local?.temas?.personalLocal, 'regimenLocal');
+      if (t.includes('hacienda') || t.includes('tributaria') || t.includes('presupuesto')) return setLegal(theme, local?.temas?.haciendaLocalBase, 'regimenLocal');
+      return setLegal(theme, local?.temas?.bases, 'regimenLocal');
+    }
 
     if (t.includes('40/2015') || t.includes('régimen jurídico del sector público') || t.includes('regimen juridico del sector publico')) {
       if (t.includes('principios') || t.includes('órganos') || t.includes('organos') || t.includes('competencia') || t.includes('delegación') || t.includes('delegacion') || t.includes('avocación') || t.includes('avocacion') || t.includes('encomienda') || t.includes('suplencia')) return setLegal(theme, ley40?.temas?.principiosOrganosCompetencia, 'ley40');
@@ -104,12 +119,12 @@
     ope.themes = ope.themes.map(theme => {
       const updated = apply(theme);
       const t = low(`${updated.title} ${updated.area}`);
-      if (t.includes('39/2015') || t.includes('40/2015') || t.includes('régimen jurídico') || t.includes('regimen juridico') || t.includes('revisión') || t.includes('recursos administrativos') || t.includes('windows') || t.includes('word') || t.includes('writer') || t.includes('excel') || t.includes('calc') || t.includes('ordenador') || t.includes('internet explorer') || t.includes('edge')) {
+      if (t.includes('39/2015') || t.includes('40/2015') || t.includes('régimen jurídico') || t.includes('regimen juridico') || t.includes('régimen local') || t.includes('regimen local') || t.includes('municipio') || t.includes('provincia') || t.includes('padrón') || t.includes('padron') || t.includes('ordenanzas') || t.includes('bienes') || t.includes('licencias') || t.includes('revisión') || t.includes('recursos administrativos') || t.includes('windows') || t.includes('word') || t.includes('writer') || t.includes('excel') || t.includes('calc') || t.includes('ordenador') || t.includes('internet explorer') || t.includes('edge')) {
         ope.themeTests[updated.id] = questionSet(updated);
       }
       return updated;
     });
-    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Temario modular: Ley 39/2015 completa, Ley 40/2015 base e informática salen desde data/normas.`;
+    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Temario modular: Ley 39/2015, Ley 40/2015, Régimen Local e informática salen desde data/normas.`;
   });
 
   if (typeof renderAll === 'function') renderAll();
