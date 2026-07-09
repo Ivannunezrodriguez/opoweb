@@ -1,4 +1,4 @@
-const CACHE = 'opoweb-v22';
+const CACHE = 'opoweb-v23';
 const ASSETS = [
   './',
   './index.html',
@@ -13,6 +13,7 @@ const ASSETS = [
   './assets/js/ajustes-v15.js',
   './assets/js/ajustes-v16.js',
   './assets/js/temario-modular.js',
+  './assets/js/contratos-modular.js',
   './data/oposiciones.js',
   './data/proceso.js',
   './data/uc3m.js',
@@ -22,6 +23,7 @@ const ASSETS = [
   './data/normas/ley-40-2015.js',
   './data/normas/regimen-local.js',
   './data/normas/hacienda-local.js',
+  './data/normas/contratos-publicos.js',
   './data/normas/informatica.js',
   './data/formacion_usuario.json',
   './manifest.webmanifest',
