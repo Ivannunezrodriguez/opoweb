@@ -5,6 +5,8 @@
 
   const low = v => String(v || '').toLowerCase();
   const has = (text, words) => words.some(w => text.includes(w));
+  const unique = arr => [...new Set((arr || []).filter(Boolean))];
+  const merge = (...lists) => unique(lists.flat());
   const sec = (heading, paragraphs) => ({ heading, paragraphs });
 
   const tables = {
@@ -54,13 +56,13 @@
   function sections(norma, keys) {
     const pack = normas[norma];
     if (!pack || !keys) return [];
-    return keys.map(k => pack.articulos?.[k]).filter(Boolean).map(a => sec(a.titulo, [a.texto, `Para examen/supuesto: ${a.estudio}`]));
+    return unique(keys).map(k => pack.articulos?.[k]).filter(Boolean).map(a => sec(a.titulo, [a.texto, `Para examen/supuesto: ${a.estudio}`]));
   }
 
   function infoSections(keys) {
     const pack = normas.informatica;
     if (!pack || !keys) return [];
-    return keys.flatMap(k => {
+    return unique(keys).flatMap(k => {
       const block = pack.bloques?.[k];
       return block ? [sec(block.titulo, block.apartados.map(a => `${a.h}. ${a.p}`))] : [];
     });
@@ -71,6 +73,7 @@
     theme.reviewTable = tables[table] || tables.legal;
     theme.tree = '';
     theme.modularSource = norma;
+    theme.motorCoverage = theme.sections.length ? 'completo' : 'sin-fichas';
     return theme;
   }
 
@@ -79,6 +82,7 @@
     theme.reviewTable = tables.info;
     theme.tree = '';
     theme.modularSource = 'informatica';
+    theme.motorCoverage = theme.sections.length ? 'completo' : 'sin-fichas';
     return theme;
   }
 
@@ -103,9 +107,10 @@
   function chooseConstitucion(t, theme) {
     const ce = normas.constitucion;
     if (!ce) return theme;
-    if (has(t, ['título preliminar','titulo preliminar','estructura','principios generales'])) return set(theme, 'constitucion', ce.temas.tituloPreliminar);
-    if (has(t, ['derechos','deberes','libertades'])) return set(theme, 'constitucion', [...ce.temas.derechos, ...ce.temas.principiosGarantias]);
-    if (has(t, ['garantías','garantias','defensor del pueblo','suspensión','suspension'])) return set(theme, 'constitucion', ce.temas.principiosGarantias);
+    const broad = has(t, ['estructura','reforma constitucional','derechos y deberes','garantía','garantia','suspensión','suspension']);
+    if (broad) return set(theme, 'constitucion', merge(ce.temas.tituloPreliminar, ce.temas.derechos, ce.temas.principiosGarantias, ce.temas.reforma));
+    if (has(t, ['título preliminar','titulo preliminar','principios generales'])) return set(theme, 'constitucion', ce.temas.tituloPreliminar);
+    if (has(t, ['derechos','deberes','libertades'])) return set(theme, 'constitucion', merge(ce.temas.derechos, ce.temas.principiosGarantias));
     if (has(t, ['corona','rey'])) return set(theme, 'constitucion', ce.temas.corona);
     if (has(t, ['cortes','congreso','senado','ley orgánica','ley organica','decreto-ley','leyes'])) return set(theme, 'constitucion', ce.temas.cortes);
     if (has(t, ['gobierno','administración pública','administracion publica'])) return set(theme, 'constitucion', ce.temas.gobiernoAdministracion);
@@ -113,28 +118,28 @@
     if (has(t, ['organización territorial','organizacion territorial','comunidades autónomas','comunidades autonomas'])) return set(theme, 'constitucion', ce.temas.organizacionTerritorial);
     if (t.includes('tribunal constitucional')) return set(theme, 'constitucion', ce.temas.tribunalConstitucional);
     if (t.includes('reforma')) return set(theme, 'constitucion', ce.temas.reforma);
-    return set(theme, 'constitucion', [...ce.temas.tituloPreliminar, ...ce.temas.derechos, ...ce.temas.principiosGarantias]);
+    return set(theme, 'constitucion', merge(ce.temas.tituloPreliminar, ce.temas.derechos, ce.temas.principiosGarantias));
   }
 
   function chooseLey39(t, theme) {
     const l = normas.ley39;
     if (!l) return theme;
-    if (has(t, ['interesados','actividad','plazos','términos','terminos'])) return set(theme, 'ley39', l.temas.interesadosActividadPlazos);
+    if (has(t, ['interesados','actividad','plazos','términos','terminos','disposiciones generales'])) return set(theme, 'ley39', l.temas.interesadosActividadPlazos);
     if (has(t, ['actos administrativos','notificación','notificacion','publicación','publicacion','nulidad','anulabilidad'])) return set(theme, 'ley39', l.temas.actosNotificacionValidez);
-    if (has(t, ['procedimiento','iniciación','iniciacion','ordenación','ordenacion','instrucción','instruccion','finalización','finalizacion','ejecución','ejecucion','simplificada'])) return set(theme, 'ley39', l.temas.procedimientoCompleto);
+    if (has(t, ['procedimiento','iniciación','iniciacion','ordenación','ordenacion','instrucción','instruccion','finalización','finalizacion','ejecución','ejecucion','simplificada','sancionadora','responsabilidad patrimonial'])) return set(theme, 'ley39', l.temas.procedimientoCompleto);
     if (has(t, ['revisión','revision','recursos administrativos','recurso de alzada','reposición','reposicion'])) return set(theme, 'ley39', l.temas.revisionRecursos);
     if (has(t, ['identificación','identificacion','firma','registro electrónico','registro electronico'])) return set(theme, 'ley39', l.temas.identificacionFirma);
-    return set(theme, 'ley39', [...l.temas.interesadosActividadPlazos, ...l.temas.procedimientoCompleto]);
+    return set(theme, 'ley39', merge(l.temas.interesadosActividadPlazos, l.temas.procedimientoCompleto));
   }
 
   function chooseLey40(t, theme) {
     const l = normas.ley40;
     if (!l) return theme;
+    if (has(t, ['certificado electrónico','certificado electronico','certificados electrónicos','certificados electronicos','autoridades certificadoras','firma electrónica','firma electronica','sello electrónico','sello electronico','csv','sede','administración electrónica','administracion electronica','electrónica','electronica','automatizada','archivo electrónico','archivo electronico'])) return set(theme, 'ley40', l.temas.electronica);
     if (has(t, ['colegiado','colegiados','actas','secretario'])) return set(theme, 'ley40', l.temas.organosColegiados);
     if (has(t, ['abstención','abstencion','recusación','recusacion'])) return set(theme, 'ley40', l.temas.abstencionRecusacion);
     if (has(t, ['sancionador','sancionadora','sanciones'])) return set(theme, 'ley40', l.temas.sancionador);
     if (t.includes('responsabilidad patrimonial')) return set(theme, 'ley40', l.temas.responsabilidad);
-    if (has(t, ['sede','electrónica','electronica','automatizada','csv','archivo electrónico','archivo electronico'])) return set(theme, 'ley40', l.temas.electronica);
     if (has(t, ['convenio','convenios'])) return set(theme, 'ley40', l.temas.convenios);
     if (has(t, ['relaciones interadministrativas','colaboración','colaboracion','cooperación','cooperacion','coordinación','coordinacion'])) return set(theme, 'ley40', l.temas.relaciones);
     return set(theme, 'ley40', l.temas.principiosOrganosCompetencia);
@@ -143,6 +148,7 @@
   function chooseLocal(t, theme) {
     const l = normas.regimenLocal;
     if (!l) return theme;
+    if (has(t, ['régimen electoral','regimen electoral']) || (t.includes('municipio') && t.includes('provincia'))) return set(theme, 'regimenLocal', merge(l.temas.municipioPadron, l.temas.organizacionMunicipal, l.temas.competenciasServicios, l.temas.provinciaDiputacion, l.temas.funcionamiento));
     if (has(t, ['padrón','padron','población','poblacion'])) return set(theme, 'regimenLocal', l.temas.municipioPadron);
     if (has(t, ['alcalde','pleno','junta de gobierno','órganos municipales','organos municipales','organización municipal','organizacion municipal'])) return set(theme, 'regimenLocal', l.temas.organizacionMunicipal);
     if (has(t, ['competencias','servicios mínimos','servicios minimos'])) return set(theme, 'regimenLocal', l.temas.competenciasServicios);
@@ -158,6 +164,8 @@
   function chooseHacienda(t, theme) {
     const h = normas.haciendaLocal;
     if (!h) return theme;
+    if (has(t, ['los tributos locales','normas generales']) && has(t, ['ibi','iae','ivtm','iivtnu','incremento de valor'])) return set(theme, 'haciendaLocal', merge(h.temas.impuestosGeneral, h.temas.ibi, h.temas.iae, h.temas.ivtm, h.temas.iivtnu));
+    if (has(t, ['obligaciones tributarias','obligados tributarios','procedimientos de gestión','procedimientos de gestion','extinción de la deuda','extincion de la deuda','delegación','delegacion','colaboración','colaboracion','beneficios fiscales','compensación','compensacion'])) return set(theme, 'haciendaLocal', merge(h.temas.recursosOrdenanzas, h.temas.tasasContribuciones, h.temas.impuestosGeneral, h.temas.recaudacion));
     if (has(t, ['ordenanza','ordenanzas fiscales','recursos','ingresos'])) return set(theme, 'haciendaLocal', h.temas.recursosOrdenanzas);
     if (has(t, ['tasa','tasas','contribuciones especiales'])) return set(theme, 'haciendaLocal', h.temas.tasasContribuciones);
     if (t.includes('ibi')) return set(theme, 'haciendaLocal', h.temas.ibi);
@@ -165,12 +173,12 @@
     if (t.includes('ivtm')) return set(theme, 'haciendaLocal', h.temas.ivtm);
     if (t.includes('icio')) return set(theme, 'haciendaLocal', h.temas.icio);
     if (has(t, ['iivtnu','plusvalía','plusvalia'])) return set(theme, 'haciendaLocal', h.temas.iivtnu);
-    if (has(t, ['recaudación','recaudacion','apremio','embargo','aplazamiento','fraccionamiento'])) return set(theme, 'haciendaLocal', h.temas.recaudacion);
+    if (has(t, ['recaudación','recaudacion','apremio','embargo','aplazamiento','fraccionamiento','devolución','devolucion'])) return set(theme, 'haciendaLocal', h.temas.recaudacion);
     if (has(t, ['modificaciones presupuestarias','créditos extraordinarios','creditos extraordinarios','suplementos','transferencias'])) return set(theme, 'haciendaLocal', h.temas.modificaciones);
     if (has(t, ['ejecución del gasto','ejecucion del gasto','factura','facturas'])) return set(theme, 'haciendaLocal', h.temas.ejecucionGasto);
     if (has(t, ['liquidación','liquidacion','remanente','resultado presupuestario','cuenta general','estabilidad','regla de gasto','morosidad'])) return set(theme, 'haciendaLocal', h.temas.liquidacionControl);
-    if (has(t, ['presupuesto','presupuestaria'])) return set(theme, 'haciendaLocal', [...h.temas.presupuesto, ...h.temas.modificaciones, ...h.temas.ejecucionGasto, ...h.temas.liquidacionControl]);
-    return set(theme, 'haciendaLocal', [...h.temas.recursosOrdenanzas, ...h.temas.tasasContribuciones, ...h.temas.impuestosGeneral]);
+    if (has(t, ['presupuesto','presupuestaria'])) return set(theme, 'haciendaLocal', merge(h.temas.presupuesto, h.temas.modificaciones, h.temas.ejecucionGasto, h.temas.liquidacionControl));
+    return set(theme, 'haciendaLocal', merge(h.temas.recursosOrdenanzas, h.temas.tasasContribuciones, h.temas.impuestosGeneral));
   }
 
   function chooseContratos(t, theme) {
@@ -184,33 +192,33 @@
     if (has(t, ['procedimiento','abierto','simplificado','negociado','adjudicación','adjudicacion','licitación','licitacion'])) return set(theme, 'contratosPublicos', c.temas.procedimientos, 'contratos');
     if (has(t, ['recurso','perfil','corrupción','corrupcion','conflicto'])) return set(theme, 'contratosPublicos', c.temas.recursoEspecial, 'contratos');
     if (has(t, ['ejecución','ejecucion','factura','pago','penalidad','modificación','modificacion','resolución','resolucion'])) return set(theme, 'contratosPublicos', c.temas.ejecucion, 'contratos');
-    return set(theme, 'contratosPublicos', [...c.temas.principiosAmbito, ...c.temas.tiposContratos, ...c.temas.expedientePliegos, ...c.temas.contratoMenor], 'contratos');
+    return set(theme, 'contratosPublicos', merge(c.temas.principiosAmbito, c.temas.tiposContratos, c.temas.expedientePliegos, c.temas.contratoMenor), 'contratos');
   }
 
   function chooseEmpleo(t, theme) {
     const e = normas.empleoPublico;
     if (!e) return theme;
-    if (has(t, ['clases','concepto','funcionario','interino','laboral','eventual'])) return set(theme, 'empleoPublico', e.temas.clases, 'empleo');
-    if (has(t, ['derechos','retribuciones','permisos','vacaciones','jornada','carrera'])) return set(theme, 'empleoPublico', e.temas.derechos, 'empleo');
+    if (has(t, ['ley 4/2011','castilla-la mancha','clm'])) return set(theme, 'empleoPublico', merge(e.temas.clm, e.temas.funcionPublicaLocal, e.temas.provision, e.temas.accesoSeleccion, e.temas.planificacionOrdenacion), 'empleo');
+    if (has(t, ['provisión','provision','libre designación','libre designacion','movilidad'])) return set(theme, 'empleoPublico', e.temas.provision, 'empleo');
+    if (has(t, ['acceso','selección','seleccion','oposición','oposicion','concurso','tribunal','mérito','merito','capacidad','oferta pública','oferta publica'])) return set(theme, 'empleoPublico', e.temas.accesoSeleccion, 'empleo');
+    if (has(t, ['clases','concepto','funcionario','interino','laboral','eventual','personal al servicio'])) return set(theme, 'empleoPublico', e.temas.clases, 'empleo');
+    if (has(t, ['derechos','retribuciones','permisos','vacaciones','jornada','carrera','promoción interna','promocion interna'])) return set(theme, 'empleoPublico', e.temas.derechos, 'empleo');
     if (has(t, ['deberes','código','codigo','conducta','ético','etico'])) return set(theme, 'empleoPublico', e.temas.deberesCodigo, 'empleo');
-    if (has(t, ['acceso','selección','seleccion','oposición','oposicion','concurso','tribunal','mérito','merito','capacidad'])) return set(theme, 'empleoPublico', e.temas.accesoSeleccion, 'empleo');
     if (has(t, ['pérdida','perdida','jubilación','jubilacion','renuncia','inhabilitación','inhabilitacion'])) return set(theme, 'empleoPublico', e.temas.perdida, 'empleo');
     if (has(t, ['planificación','planificacion','ordenación','ordenacion','rpt','plantilla','grupos','clasificación','clasificacion'])) return set(theme, 'empleoPublico', e.temas.planificacionOrdenacion, 'empleo');
-    if (has(t, ['provisión','provision','libre designación','libre designacion','movilidad'])) return set(theme, 'empleoPublico', e.temas.provision, 'empleo');
     if (has(t, ['situaciones administrativas','servicio activo','servicios especiales','excedencia','suspensión','suspension','reingreso'])) return set(theme, 'empleoPublico', e.temas.situaciones, 'empleo');
     if (has(t, ['disciplinario','disciplina','faltas','sanciones','separación del servicio','separacion del servicio'])) return set(theme, 'empleoPublico', e.temas.disciplinario, 'empleo');
-    if (has(t, ['ley 4/2011','castilla-la mancha','clm'])) return set(theme, 'empleoPublico', e.temas.clm, 'empleo');
     if (t.includes('bolsa')) return set(theme, 'empleoPublico', e.temas.bolsas, 'empleo');
-    return set(theme, 'empleoPublico', [...e.temas.clases, ...e.temas.accesoSeleccion, ...e.temas.deberesCodigo], 'empleo');
+    return set(theme, 'empleoPublico', merge(e.temas.clases, e.temas.accesoSeleccion, e.temas.deberesCodigo), 'empleo');
   }
 
   function chooseTrans(t, theme) {
     const tr = normas.transversales;
     if (!tr) return theme;
     if (has(t, ['igualdad','discriminación','discriminacion','género','genero','mujeres y hombres','violencia de género','violencia de genero','acoso sexual'])) return set(theme, 'transversales', tr.temas.igualdad, 'transversal');
-    if (has(t, ['protección de datos','proteccion de datos','rgpd','lopdgdd','datos personales','privacidad','delegado de protección','delegado de proteccion'])) return set(theme, 'transversales', tr.temas.proteccionDatos, 'transversal');
+    if (has(t, ['protección de datos','proteccion de datos','rgpd','lopdgdd','datos personales','privacidad','delegado de protección','delegado de proteccion','derechos digitales'])) return set(theme, 'transversales', tr.temas.proteccionDatos, 'transversal');
     if (has(t, ['transparencia','información pública','informacion publica','publicidad activa','buen gobierno','derecho de acceso','portal de transparencia'])) return set(theme, 'transversales', tr.temas.transparencia, 'transversal');
-    if (has(t, ['prevención de riesgos','prevencion de riesgos','riesgos laborales','prl','seguridad y salud','pantallas de visualización','pantallas de visualizacion','ergonomía','ergonomia'])) return set(theme, 'transversales', tr.temas.prl, 'transversal');
+    if (has(t, ['prevención de riesgos','prevencion de riesgos','riesgos laborales','prl','seguridad y salud','pantallas de visualización','pantallas de visualizacion','ergonomía','ergonomia','servicios de prevención','servicios de prevencion','consulta y participación','consulta y participacion'])) return set(theme, 'transversales', tr.temas.prl, 'transversal');
     return theme;
   }
 
@@ -228,12 +236,12 @@
     let updated = theme;
 
     if (has(t, ['contrat','lcsp','licit','adjudic','pliego','menor'])) updated = chooseContratos(t, updated);
-    else if (has(t, ['empleo público','empleo publico','función pública','funcion publica','trebep','personal al servicio','funcionarios','interinos','provisión','provision','situaciones administrativas','disciplina','disciplinario','oep','bolsa','ley 4/2011'])) updated = chooseEmpleo(t, updated);
-    else if (has(t, ['igualdad','discriminación','discriminacion','género','genero','protección de datos','proteccion de datos','rgpd','lopdgdd','transparencia','información pública','informacion publica','prevención de riesgos','prevencion de riesgos','riesgos laborales','prl'])) updated = chooseTrans(t, updated);
-    else if (has(t, ['hacienda','tribut','tasa','ibi','iae','ivtm','icio','iivtnu','plusvalía','plusvalia','recaudación','recaudacion','apremio','presupuesto','presupuestaria','liquidación','liquidacion','remanente','estabilidad','regla de gasto','morosidad','facturas electrónicas','facturas electronicas'])) updated = chooseHacienda(t, updated);
-    else if (has(t, ['constitución','constitucion','corona','cortes generales','gobierno y la administración','gobierno y administracion','poder judicial','tribunal constitucional','reforma constitucional','organización territorial','organizacion territorial','comunidades autónomas','comunidades autonomas','defensor del pueblo'])) updated = chooseConstitucion(t, updated);
-    else if (has(t, ['municipio','padrón','padron','provincia','diputación','diputacion','régimen local','regimen local','entidades locales','administración local','administracion local','órganos municipales','organos municipales','ordenanzas','reglamentos locales','bienes','licencias','servicios públicos','servicios publicos','función pública local','funcion publica local'])) updated = chooseLocal(t, updated);
-    else if (has(t, ['40/2015','régimen jurídico del sector público','regimen juridico del sector publico'])) updated = chooseLey40(t, updated);
+    else if (has(t, ['empleo público','empleo publico','función pública','funcion publica','trebep','personal al servicio','funcionarios','interinos','provisión','provision','situaciones administrativas','disciplina','disciplinario','oep','bolsa','ley 4/2011','oferta pública','oferta publica'])) updated = chooseEmpleo(t, updated);
+    else if (has(t, ['igualdad','discriminación','discriminacion','género','genero','protección de datos','proteccion de datos','rgpd','lopdgdd','transparencia','información pública','informacion publica','prevención de riesgos','prevencion de riesgos','riesgos laborales','prl','servicios de prevención','servicios de prevencion'])) updated = chooseTrans(t, updated);
+    else if (has(t, ['hacienda','tribut','tasa','ibi','iae','ivtm','icio','iivtnu','plusvalía','plusvalia','recaudación','recaudacion','apremio','presupuesto','presupuestaria','liquidación','liquidacion','remanente','estabilidad','regla de gasto','morosidad','facturas electrónicas','facturas electronicas','obligados tributarios','obligaciones tributarias','extinción de la deuda','extincion de la deuda'])) updated = chooseHacienda(t, updated);
+    else if (has(t, ['constitución','constitucion','corona','cortes generales','gobierno y la administración','gobierno y administracion','poder judicial','tribunal constitucional','reforma constitucional','organización territorial','organizacion territorial','comunidades autónomas','comunidades autonomas','defensor del pueblo','derechos y deberes'])) updated = chooseConstitucion(t, updated);
+    else if (has(t, ['municipio','padrón','padron','provincia','diputación','diputacion','régimen local','regimen local','entidades locales','administración local','administracion local','órganos municipales','organos municipales','ordenanzas','reglamentos locales','bienes','licencias','servicios públicos','servicios publicos','función pública local','funcion publica local','régimen electoral','regimen electoral'])) updated = chooseLocal(t, updated);
+    else if (has(t, ['administración electrónica','administracion electronica','certificado electrónico','certificado electronico','certificados electrónicos','certificados electronicos','autoridades certificadoras','40/2015','régimen jurídico del sector público','regimen juridico del sector publico'])) updated = chooseLey40(t, updated);
     else if (t.includes('39/2015') || has(t, ['procedimiento administrativo común','procedimiento administrativo comun','actos administrativos','recursos administrativos'])) updated = chooseLey39(t, updated);
     else updated = chooseInfo(t, updated);
 
@@ -247,9 +255,16 @@
       if (updated.modularSource) ope.themeTests[updated.id] = qset(updated);
       return updated;
     });
-    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Motor único activo: normas modulares aplicadas tema por tema.`;
+    const enriched = ope.themes.filter(t => t.modularSource && (t.sections || []).length).length;
+    const pending = ope.themes.filter(t => !t.modularSource || !(t.sections || []).length).map(t => t.number);
+    ope.coverage = { enriched, total: ope.themes.length, pending };
+    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Motor único activo: ${enriched}/${ope.themes.length} temas con fuente modular.`;
   });
 
-  window.OPOWEB_MOTOR_TEMARIO = { version: 'v26', normas: Object.keys(normas) };
+  window.OPOWEB_MOTOR_TEMARIO = {
+    version: 'v30',
+    normas: Object.keys(normas),
+    coverage: data.oposiciones.map(o => ({ id: o.id, ...o.coverage }))
+  };
   if (typeof renderAll === 'function') renderAll();
 })();
