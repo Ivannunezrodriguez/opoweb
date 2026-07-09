@@ -31,9 +31,9 @@
       ['Elemento', 'Qué debes contestar'],
       ['Artículo', 'Cita artículo exacto y su regla.'],
       ['Hecho', 'Relaciona el artículo con el hecho del supuesto.'],
-      ['Trámite', 'Indica qué debe hacer el Ayuntamiento.'],
+      ['Trámite', 'Indica qué debe hacer la Administración o el Ayuntamiento.'],
       ['Plazo', 'Incluye plazo si existe.'],
-      ['Consecuencia', 'Cierra con efecto jurídico: subsanar, admitir, inadmitir, resolver, notificar, caducar, estimar, desestimar, ejecutar o recurrir.']
+      ['Consecuencia', 'Cierra con efecto jurídico: garantía, competencia, subsanación, admisión, recurso, nulidad, publicación o ejecución.']
     ];
   }
 
@@ -58,7 +58,22 @@
     const ley39 = normas.ley39;
     const ley40 = normas.ley40;
     const local = normas.regimenLocal;
+    const ce = normas.constitucion;
     const t = low(`${theme.title} ${theme.area}`);
+
+    if (t.includes('constitución') || t.includes('constitucion') || t.includes('corona') || t.includes('cortes generales') || t.includes('gobierno y la administración') || t.includes('gobierno y administracion') || t.includes('poder judicial') || t.includes('tribunal constitucional') || t.includes('reforma constitucional') || t.includes('organización territorial') || t.includes('organizacion territorial') || t.includes('comunidades autónomas') || t.includes('comunidades autonomas') || t.includes('defensor del pueblo')) {
+      if (t.includes('título preliminar') || t.includes('titulo preliminar') || t.includes('estructura') || t.includes('principios generales')) return setLegal(theme, ce?.temas?.tituloPreliminar, 'constitucion');
+      if (t.includes('derechos') || t.includes('deberes') || t.includes('libertades')) return setLegal(theme, ce?.temas?.derechos.concat(ce?.temas?.principiosGarantias || []), 'constitucion');
+      if (t.includes('garantías') || t.includes('garantias') || t.includes('defensor del pueblo') || t.includes('suspensión') || t.includes('suspension')) return setLegal(theme, ce?.temas?.principiosGarantias, 'constitucion');
+      if (t.includes('corona') || t.includes('rey')) return setLegal(theme, ce?.temas?.corona, 'constitucion');
+      if (t.includes('cortes') || t.includes('congreso') || t.includes('senado') || t.includes('leyes') || t.includes('ley orgánica') || t.includes('ley organica') || t.includes('decreto-ley') || t.includes('decretos-leyes')) return setLegal(theme, ce?.temas?.cortes, 'constitucion');
+      if (t.includes('gobierno') || t.includes('administración pública') || t.includes('administracion publica')) return setLegal(theme, ce?.temas?.gobiernoAdministracion, 'constitucion');
+      if (t.includes('poder judicial') || t.includes('tribunal supremo') || t.includes('ministerio fiscal')) return setLegal(theme, ce?.temas?.poderJudicial, 'constitucion');
+      if (t.includes('organización territorial') || t.includes('organizacion territorial') || t.includes('comunidades autónomas') || t.includes('comunidades autonomas') || t.includes('municipio') || t.includes('provincia')) return setLegal(theme, ce?.temas?.organizacionTerritorial, 'constitucion');
+      if (t.includes('tribunal constitucional')) return setLegal(theme, ce?.temas?.tribunalConstitucional, 'constitucion');
+      if (t.includes('reforma')) return setLegal(theme, ce?.temas?.reforma, 'constitucion');
+      return setLegal(theme, ce?.temas?.tituloPreliminar.concat(ce?.temas?.derechos || []).concat(ce?.temas?.principiosGarantias || []), 'constitucion');
+    }
 
     if (t.includes('municipio') || t.includes('padrón') || t.includes('padron') || t.includes('provincia') || t.includes('diputación') || t.includes('diputacion') || t.includes('régimen local') || t.includes('regimen local') || t.includes('entidades locales') || t.includes('administración local') || t.includes('administracion local') || t.includes('órganos municipales') || t.includes('organos municipales') || t.includes('ordenanzas') || t.includes('reglamentos locales') || t.includes('bienes') || t.includes('licencias') || t.includes('servicios públicos') || t.includes('servicios publicos') || t.includes('función pública local') || t.includes('funcion publica local') || t.includes('haciendas locales')) {
       if (t.includes('padrón') || t.includes('padron') || t.includes('población') || t.includes('poblacion')) return setLegal(theme, local?.temas?.municipioPadron, 'regimenLocal');
@@ -119,12 +134,12 @@
     ope.themes = ope.themes.map(theme => {
       const updated = apply(theme);
       const t = low(`${updated.title} ${updated.area}`);
-      if (t.includes('39/2015') || t.includes('40/2015') || t.includes('régimen jurídico') || t.includes('regimen juridico') || t.includes('régimen local') || t.includes('regimen local') || t.includes('municipio') || t.includes('provincia') || t.includes('padrón') || t.includes('padron') || t.includes('ordenanzas') || t.includes('bienes') || t.includes('licencias') || t.includes('revisión') || t.includes('recursos administrativos') || t.includes('windows') || t.includes('word') || t.includes('writer') || t.includes('excel') || t.includes('calc') || t.includes('ordenador') || t.includes('internet explorer') || t.includes('edge')) {
+      if (t.includes('constitución') || t.includes('constitucion') || t.includes('corona') || t.includes('cortes') || t.includes('gobierno') || t.includes('poder judicial') || t.includes('tribunal constitucional') || t.includes('reforma') || t.includes('39/2015') || t.includes('40/2015') || t.includes('régimen jurídico') || t.includes('regimen juridico') || t.includes('régimen local') || t.includes('regimen local') || t.includes('municipio') || t.includes('provincia') || t.includes('padrón') || t.includes('padron') || t.includes('ordenanzas') || t.includes('bienes') || t.includes('licencias') || t.includes('revisión') || t.includes('recursos administrativos') || t.includes('windows') || t.includes('word') || t.includes('writer') || t.includes('excel') || t.includes('calc') || t.includes('ordenador') || t.includes('internet explorer') || t.includes('edge')) {
         ope.themeTests[updated.id] = questionSet(updated);
       }
       return updated;
     });
-    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Temario modular: Ley 39/2015, Ley 40/2015, Régimen Local e informática salen desde data/normas.`;
+    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Temario modular: Constitución, Ley 39/2015, Ley 40/2015, Régimen Local e informática salen desde data/normas.`;
   });
 
   if (typeof renderAll === 'function') renderAll();
