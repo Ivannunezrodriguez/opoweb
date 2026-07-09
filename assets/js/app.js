@@ -1,4 +1,16 @@
-const APP_VERSION = 'v0.15.0';
+const APP_VERSION = 'v0.27.0';
+
+const SOURCE_LABELS = {
+  constitucion: 'Constitución Española de 1978',
+  ley39: 'Ley 39/2015 · Procedimiento Administrativo Común',
+  ley40: 'Ley 40/2015 · Régimen Jurídico del Sector Público',
+  regimenLocal: 'Ley 7/1985 · Régimen Local',
+  haciendaLocal: 'TRLRHL · Hacienda Local',
+  contratosPublicos: 'Ley 9/2017 · Contratos del Sector Público',
+  empleoPublico: 'TREBEP · Empleo Público',
+  transversales: 'Igualdad · Datos · Transparencia · PRL',
+  informatica: 'Informática y ofimática'
+};
 
 const state = {
   data: window.OPOSICIONES_DATA,
@@ -24,6 +36,9 @@ function progressKey(...parts){ return [state.activeOpe, ...parts].join(':'); }
 function escapeHtml(text){ return String(text ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m])); }
 function escapeAttr(text){ return escapeHtml(text).replace(/`/g, '&#096;'); }
 function setTitle(title, subtitle='') { $('viewTitle').textContent = title; $('viewSubtitle').textContent = subtitle || 'Estudia, haz test y guarda tu progreso.'; }
+function sourceLabel(id){ return SOURCE_LABELS[id] || id || 'Temario base'; }
+function themeMode(t){ return t.modularSource ? 'Examen + supuesto práctico' : 'Temario base'; }
+function themeSourceBadge(t){ return t.modularSource ? `<span class="badge common">${escapeHtml(sourceLabel(t.modularSource))}</span>` : ''; }
 
 function init(){
   if(!state.data || !state.data.oposiciones?.length){
@@ -69,7 +84,7 @@ function renderView(){
 }
 function filterThemes(themes){
   if(!state.search) return themes;
-  return themes.filter(t => (t.title+' '+t.area+' '+t.sections.flatMap(s=>s.paragraphs).join(' ')).toLowerCase().includes(state.search));
+  return themes.filter(t => (t.title+' '+t.area+' '+(t.modularSource || '')+' '+(t.sections || []).flatMap(s=>s.paragraphs || []).join(' ')).toLowerCase().includes(state.search));
 }
 
 function renderProceso(){
@@ -108,12 +123,18 @@ function renderTemario(){
 }
 function themeItem(t){
   const academia = t.academiaVersion ? '<span class="badge common">academia</span>' : '';
-  return `<article class="theme-item" data-theme="${t.id}"><h3>Tema ${t.number}. ${escapeHtml(t.title)}</h3><div class="theme-meta"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}${academia}</div></article>`;
+  const source = themeSourceBadge(t);
+  return `<article class="theme-item" data-theme="${t.id}"><h3>Tema ${t.number}. ${escapeHtml(t.title)}</h3><div class="theme-meta"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}${source}${academia}</div></article>`;
+}
+function sourcePanel(t){
+  if(!t.modularSource) return '<div class="card compact"><strong>Fuente</strong><p class="muted">Temario base de la convocatoria. Este tema aún no está enlazado a una norma modular específica.</p></div>';
+  return `<div class="card compact"><h3>Fuente modular</h3><div class="grid three"><div><span class="badge common">${escapeHtml(sourceLabel(t.modularSource))}</span><p class="muted">Norma/bloque principal</p></div><div><span class="badge area">${escapeHtml(themeMode(t))}</span><p class="muted">Enfoque de estudio</p></div><div><span class="badge">${escapeHtml(t.testHint || 'Motor temario')}</span><p class="muted">Generación de test</p></div></div></div>`;
 }
 function themeDetail(t){
   return `<button class="btn ghost" id="backThemes">← Volver al listado</button>
-  <article class="card"><div class="pill-row"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}${t.academiaVersion?'<span class="badge common">resumen academia</span>':''}</div><h2>Tema ${t.number}. ${escapeHtml(t.title)}</h2>
-  ${t.sections.map(s=>`<section class="section"><h3>${escapeHtml(s.heading)}</h3>${s.paragraphs.map(p=>s.heading.includes('Trampas')?`<p>☐ ${escapeHtml(p)}</p>`:`<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('')}
+  ${sourcePanel(t)}
+  <article class="card"><div class="pill-row"><span class="badge area">${escapeHtml(t.area)}</span>${t.commonPotential?'<span class="badge common">común/reutilizable</span>':''}${themeSourceBadge(t)}${t.academiaVersion?'<span class="badge common">resumen academia</span>':''}</div><h2>Tema ${t.number}. ${escapeHtml(t.title)}</h2>
+  ${(t.sections || []).map(s=>`<section class="section"><h3>${escapeHtml(s.heading)}</h3>${(s.paragraphs || []).map(p=>s.heading.includes('Trampas')?`<p>☐ ${escapeHtml(p)}</p>`:`<p>${escapeHtml(p)}</p>`).join('')}</section>`).join('')}
   <h3>Esquema oficial</h3><pre class="tree">${escapeHtml(t.tree || 'Sin esquema.')}</pre>
   <h3>Tabla de repaso</h3>${renderTable(t.reviewTable)}
   </article>`;
@@ -138,6 +159,7 @@ function renderTests(){
 function renderQuestionSet(kind, setId, qs, scoring){
   const key=progressKey(kind,setId);
   const saved=state.progress[key] || {answers:{}, corrected:false};
+  if(!qs.length) return '<div class="card"><p class="muted">Este bloque todavía no tiene preguntas generadas.</p></div>';
   return `<div class="card"><div class="toolbar"><button class="btn" id="correctSet">Corregir</button><button class="btn ghost" id="resetSet">Reiniciar</button><span id="scoreBox" class="score"></span></div><div>${qs.map((q,idx)=>renderQuestion(q,idx,saved)).join('')}</div></div>`;
 }
 function renderQuestion(q,idx,saved){
@@ -156,6 +178,7 @@ function resultHtml(q, chosen){
   return `<div class="result-box bad"><strong>Incorrecta.</strong> Correcta: ${q.answer}. ${escapeHtml(q.justification)}</div>`;
 }
 function attachQuestionEvents(kind,setId,qs,scoring){
+  if(!qs.length) return;
   const key=progressKey(kind,setId);
   state.progress[key] ||= {answers:{}, corrected:false, score:null};
   document.querySelectorAll('input[type=radio]').forEach(r => r.addEventListener('change', e=>{
