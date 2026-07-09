@@ -1,4 +1,4 @@
-const APP_VERSION = 'v0.27.0';
+const APP_VERSION = 'v0.28.0';
 
 const SOURCE_LABELS = {
   constitucion: 'Constitución Española de 1978',
@@ -11,6 +11,7 @@ const SOURCE_LABELS = {
   transversales: 'Igualdad · Datos · Transparencia · PRL',
   informatica: 'Informática y ofimática'
 };
+const SOURCE_ORDER = ['constitucion','ley39','ley40','regimenLocal','haciendaLocal','contratosPublicos','empleoPublico','transversales','informatica'];
 
 const state = {
   data: window.OPOSICIONES_DATA,
@@ -18,6 +19,7 @@ const state = {
   view: 'temario',
   search: '',
   selectedTheme: null,
+  selectedNorma: null,
   selectedTestTheme: null,
   selectedSim: null,
   progress: loadProgress()
@@ -39,6 +41,7 @@ function setTitle(title, subtitle='') { $('viewTitle').textContent = title; $('v
 function sourceLabel(id){ return SOURCE_LABELS[id] || id || 'Temario base'; }
 function themeMode(t){ return t.modularSource ? 'Examen + supuesto práctico' : 'Temario base'; }
 function themeSourceBadge(t){ return t.modularSource ? `<span class="badge common">${escapeHtml(sourceLabel(t.modularSource))}</span>` : ''; }
+function topicLabel(key){ return String(key || '').replace(/([a-záéíóúñ])([A-Z])/g, '$1 $2').replace(/[-_]/g, ' ').replace(/^./, c => c.toUpperCase()); }
 
 function init(){
   if(!state.data || !state.data.oposiciones?.length){
@@ -48,11 +51,12 @@ function init(){
   state.activeOpe = state.data.oposiciones[0].id;
   const sel = $('oposicionSelect');
   sel.innerHTML = state.data.oposiciones.map(o => `<option value="${o.id}">${escapeHtml(o.name)}</option>`).join('');
-  sel.addEventListener('change', () => { state.activeOpe = sel.value; state.selectedTheme=null; state.selectedTestTheme=null; state.selectedSim=null; renderAll(); });
+  sel.addEventListener('change', () => { state.activeOpe = sel.value; state.selectedTheme=null; state.selectedNorma=null; state.selectedTestTheme=null; state.selectedSim=null; renderAll(); });
 
   document.querySelectorAll('.menu button').forEach(btn => btn.addEventListener('click', () => {
     state.view = btn.dataset.view;
     state.selectedTheme = null;
+    state.selectedNorma = null;
     renderAll();
   }));
 
@@ -77,6 +81,7 @@ function renderSidebar(){
 function renderView(){
   if(state.view==='proceso') return renderProceso();
   if(state.view==='temario') return renderTemario();
+  if(state.view==='normas') return renderNormas();
   if(state.view==='tests') return renderTests();
   if(state.view==='supuestos') return renderSupuestos();
   if(state.view==='simulacros') return renderSimulacros();
@@ -143,6 +148,47 @@ function renderTable(rows){
   if(!rows || !rows.length) return '<p class="muted">Sin tabla.</p>';
   const [head,...body]=rows;
   return `<div class="table-wrap"><table><thead><tr>${head.map(c=>`<th>${escapeHtml(c)}</th>`).join('')}</tr></thead><tbody>${body.map(r=>`<tr>${r.map(c=>`<td>${escapeHtml(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+
+function normaKeys(){
+  const packs = window.OPOWEB_NORMAS || {};
+  return SOURCE_ORDER.filter(k => packs[k]).concat(Object.keys(packs).filter(k => !SOURCE_ORDER.includes(k)));
+}
+function normaSearchText(key){
+  const pack = (window.OPOWEB_NORMAS || {})[key] || {};
+  return [sourceLabel(key), pack.titulo, pack.fuente, ...Object.values(pack.articulos || {}).flatMap(a => [a.titulo, a.texto, a.estudio])].join(' ').toLowerCase();
+}
+function renderNormas(){
+  const packs = window.OPOWEB_NORMAS || {};
+  setTitle('Normas', 'Estudia directamente por ley o bloque, sin depender del temario de una convocatoria concreta.');
+  if(state.selectedNorma){
+    const pack = packs[state.selectedNorma];
+    if(!pack){ state.selectedNorma = null; return renderNormas(); }
+    content.innerHTML = normaDetail(state.selectedNorma, pack);
+    $('backNormas').addEventListener('click', () => { state.selectedNorma = null; renderNormas(); });
+    return;
+  }
+  const keys = normaKeys().filter(k => !state.search || normaSearchText(k).includes(state.search));
+  content.innerHTML = `
+    <div class="card"><h2>Biblioteca normativa</h2><p>Usa esta vista para repasar una ley completa. La vista Temario sigue ordenada por convocatoria; esta vista ordena por norma.</p><div class="grid three"><div><span class="score">${normaKeys().length}</span><p class="muted">normas cargadas</p></div><div><span class="score">${normaKeys().reduce((n,k)=>n+Object.keys(packs[k]?.articulos || {}).length,0)}</span><p class="muted">artículos/fichas</p></div><div><span class="score">${normaKeys().reduce((n,k)=>n+Object.keys(packs[k]?.temas || {}).length,0)}</span><p class="muted">bloques de estudio</p></div></div></div>
+    <div class="theme-list">${keys.map(k => normaItem(k, packs[k])).join('') || '<div class="empty">No hay normas con esa búsqueda.</div>'}</div>`;
+  document.querySelectorAll('[data-norma]').forEach(el => el.addEventListener('click', () => { state.selectedNorma = el.dataset.norma; renderNormas(); }));
+}
+function normaItem(key, pack){
+  const arts = Object.keys(pack?.articulos || {}).length;
+  const temas = Object.keys(pack?.temas || {}).length;
+  return `<article class="theme-item" data-norma="${escapeAttr(key)}"><h3>${escapeHtml(sourceLabel(key))}</h3><p class="muted">${escapeHtml(pack?.titulo || '')}</p><div class="theme-meta"><span class="badge common">${arts} artículos/fichas</span><span class="badge area">${temas} bloques</span></div></article>`;
+}
+function normaDetail(key, pack){
+  const entries = Object.entries(pack.temas || {});
+  const arts = pack.articulos || {};
+  return `<button class="btn ghost" id="backNormas">← Volver a normas</button>
+    <article class="card"><div class="pill-row"><span class="badge common">${escapeHtml(sourceLabel(key))}</span></div><h2>${escapeHtml(pack.titulo || sourceLabel(key))}</h2><p class="muted">${escapeHtml(pack.fuente || 'Fuente pendiente de completar.')}</p><div class="grid three"><div><span class="score">${Object.keys(arts).length}</span><p class="muted">artículos/fichas</p></div><div><span class="score">${entries.length}</span><p class="muted">bloques</p></div><div><span class="score">${key === 'informatica' ? 'INFO' : 'NORMA'}</span><p class="muted">tipo</p></div></div></article>
+    <article class="card"><h2>Bloques de estudio</h2>${entries.map(([name, list], idx) => normaTopic(name, list, arts, idx)).join('') || '<p class="muted">Esta norma no tiene bloques definidos.</p>'}</article>`;
+}
+function normaTopic(name, list, arts, idx){
+  const items = (list || []).map(k => arts[k]).filter(Boolean);
+  return `<details class="section" ${idx === 0 ? 'open' : ''}><summary><strong>${escapeHtml(topicLabel(name))}</strong> <span class="muted">${items.length} fichas</span></summary>${items.map(a => `<div class="card compact"><h3>${escapeHtml(a.titulo)}</h3><p>${escapeHtml(a.texto)}</p><p class="muted"><strong>Para examen/supuesto:</strong> ${escapeHtml(a.estudio)}</p></div>`).join('') || '<p class="muted">Sin fichas en este bloque.</p>'}</details>`;
 }
 
 function renderTests(){
