@@ -8,7 +8,7 @@
 
   function articleSections(keys) {
     const ley = normas.ley39;
-    if (!ley) return [];
+    if (!ley || !keys) return [];
     return keys.map(key => {
       const art = ley.articulos[key];
       if (!art) return null;
@@ -33,7 +33,7 @@
       ['Hecho', 'Relaciona el artículo con el hecho del supuesto.'],
       ['Trámite', 'Indica qué debe hacer el Ayuntamiento.'],
       ['Plazo', 'Incluye plazo si existe.'],
-      ['Consecuencia', 'Cierra con efecto jurídico: subsanar, admitir, inadmitir, resolver, notificar, caducar, estimar, desestimar o recurrir.']
+      ['Consecuencia', 'Cierra con efecto jurídico: subsanar, admitir, inadmitir, resolver, notificar, caducar, estimar, desestimar, ejecutar o recurrir.']
     ];
   }
 
@@ -48,43 +48,29 @@
     ];
   }
 
+  function setLegal(theme, keys) {
+    theme.sections = articleSections(keys);
+    theme.reviewTable = tableLegal();
+    return theme;
+  }
+
   function apply(theme) {
+    const ley39 = normas.ley39;
     const t = low(`${theme.title} ${theme.area}`);
-    if (t.includes('39/2015') && (t.includes('interesados') || t.includes('actividad') || t.includes('plazos') || t.includes('términos'))) {
-      theme.sections = articleSections(normas.ley39.temas.interesadosActividadPlazos);
-      theme.reviewTable = tableLegal();
-      return theme;
-    }
+    if (t.includes('39/2015') && (t.includes('interesados') || t.includes('actividad') || t.includes('plazos') || t.includes('términos'))) return setLegal(theme, ley39?.temas?.interesadosActividadPlazos);
+    if (t.includes('39/2015') && (t.includes('actos administrativos') || t.includes('notificación') || t.includes('publicación') || t.includes('nulidad') || t.includes('anulabilidad'))) return setLegal(theme, ley39?.temas?.actosNotificacionValidez);
+    if (t.includes('39/2015') && (t.includes('procedimiento') || t.includes('iniciación') || t.includes('ordenación') || t.includes('instrucción') || t.includes('finalización') || t.includes('ejecución') || t.includes('simplificada'))) return setLegal(theme, ley39?.temas?.procedimientoCompleto);
+    if (t.includes('revisión') || t.includes('recursos administrativos') || t.includes('recurso de alzada') || t.includes('reposición')) return setLegal(theme, ley39?.temas?.revisionRecursos);
     if (t.includes('identificación') || t.includes('firma') || t.includes('sede electrónica') || t.includes('registro electrónico')) {
-      theme.sections = articleSections(normas.ley39.temas.identificacionFirma).concat(infoSections(['internet']));
+      theme.sections = articleSections(ley39?.temas?.identificacionFirma).concat(infoSections(['internet']));
       theme.reviewTable = tableLegal();
       return theme;
     }
-    if (t.includes('windows i') || t.includes('creación, copiado') || t.includes('impresión y digitalización')) {
-      theme.sections = infoSections(['windows']);
-      theme.reviewTable = tableInfo();
-      return theme;
-    }
-    if (t.includes('windows ii') || t.includes('internet explorer') || t.includes('edge') || t.includes('navegación por internet')) {
-      theme.sections = infoSections(['internet']);
-      theme.reviewTable = tableInfo();
-      return theme;
-    }
-    if (t.includes('word') || t.includes('writer') || t.includes('procesamiento de texto')) {
-      theme.sections = infoSections(['word']);
-      theme.reviewTable = tableInfo();
-      return theme;
-    }
-    if (t.includes('excel') || t.includes('calc') || t.includes('hojas de cálculo')) {
-      theme.sections = infoSections(['excel']);
-      theme.reviewTable = tableInfo();
-      return theme;
-    }
-    if (t.includes('ordenador personal') || t.includes('componentes') || t.includes('periféricos')) {
-      theme.sections = infoSections(['hardware']);
-      theme.reviewTable = tableInfo();
-      return theme;
-    }
+    if (t.includes('windows i') || t.includes('creación, copiado') || t.includes('impresión y digitalización')) { theme.sections = infoSections(['windows']); theme.reviewTable = tableInfo(); return theme; }
+    if (t.includes('windows ii') || t.includes('internet explorer') || t.includes('edge') || t.includes('navegación por internet')) { theme.sections = infoSections(['internet']); theme.reviewTable = tableInfo(); return theme; }
+    if (t.includes('word') || t.includes('writer') || t.includes('procesamiento de texto')) { theme.sections = infoSections(['word']); theme.reviewTable = tableInfo(); return theme; }
+    if (t.includes('excel') || t.includes('calc') || t.includes('hojas de cálculo')) { theme.sections = infoSections(['excel']); theme.reviewTable = tableInfo(); return theme; }
+    if (t.includes('ordenador personal') || t.includes('componentes') || t.includes('periféricos')) { theme.sections = infoSections(['hardware']); theme.reviewTable = tableInfo(); return theme; }
     return theme;
   }
 
@@ -96,13 +82,7 @@
       const opts = [ok, 'Responder de forma general sin concretar.', 'Copiar el título del tema y no aplicar nada.', 'No indicar artículo, paso ni consecuencia.'];
       const off = (theme.number + i) % 4;
       const sh = opts.slice(off).concat(opts.slice(0, off));
-      return {
-        id: `${theme.id}-mod-q${i + 1}`,
-        text: `Tema ${theme.number}. ¿Qué hace que la respuesta sea completa?`,
-        options: sh.map((text, j) => ({ letter: 'ABCD'[j], text })),
-        answer: 'ABCD'[sh.indexOf(ok)],
-        justification: 'La respuesta útil para oposición debe ser autocontenida: artículo o concepto, aplicación práctica, trámite/paso y consecuencia.'
-      };
+      return { id: `${theme.id}-mod-q${i + 1}`, text: `Tema ${theme.number}. ¿Qué hace que la respuesta sea completa?`, options: sh.map((text, j) => ({ letter: 'ABCD'[j], text })), answer: 'ABCD'[sh.indexOf(ok)], justification: 'La respuesta útil para oposición debe ser autocontenida: artículo o concepto, aplicación práctica, trámite/paso y consecuencia.' };
     });
   }
 
@@ -110,12 +90,12 @@
     ope.themes = ope.themes.map(theme => {
       const updated = apply(theme);
       const t = low(`${updated.title} ${updated.area}`);
-      if (t.includes('39/2015') || t.includes('windows') || t.includes('word') || t.includes('writer') || t.includes('excel') || t.includes('calc') || t.includes('ordenador') || t.includes('internet explorer') || t.includes('edge')) {
+      if (t.includes('39/2015') || t.includes('revisión') || t.includes('recursos administrativos') || t.includes('windows') || t.includes('word') || t.includes('writer') || t.includes('excel') || t.includes('calc') || t.includes('ordenador') || t.includes('internet explorer') || t.includes('edge')) {
         ope.themeTests[updated.id] = questionSet(updated);
       }
       return updated;
     });
-    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Temario modular iniciado: Ley 39/2015 e informática ya salen desde data/normas.`;
+    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Temario modular: Ley 39/2015 completa 1-126 e informática salen desde data/normas.`;
   });
 
   if (typeof renderAll === 'function') renderAll();
