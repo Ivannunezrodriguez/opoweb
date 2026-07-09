@@ -18,8 +18,12 @@ Este chat es solo para modificar OpoWeb. Quiero una web estática para GitHub Pa
 
 ## 05 · Formación y méritos globales
 
-Este chat es para subir mis certificados, títulos, cursos, vida laboral y méritos. Extrae nombre del curso, entidad, fecha, horas, materia y posible encaje por convocatoria. Devuélveme una tabla: válido/no válido/dudoso para La Puebla, Carranque, Las Ventas y Diputación. No sumes puntos si el mérito no fue aportado en plazo o no cumple las bases. En Diputación Administrativo C1 no sumes méritos porque es oposición libre.
+Este chat es para subir mis certificados, títulos, cursos, vida laboral y méritos. Extrae nombre del curso, entidad, fecha, horas, materia y posible encaje por convocatoria. Devuélveme una tabla: válido/no válido/dudoso para La Puebla, Carranque, Las Ventas, Diputación y UC3M. No sumes puntos si el mérito no fue aportado en plazo o no cumple las bases. En Diputación Administrativo C1 no sumes méritos porque es oposición libre. En UC3M solo valores inglés oficial B2/C1 vigente, experiencia como funcionario en escala equivalente y cursos válidos según bases.
 
 ## 06 · OPE Diputación Administrativo
 
 Este chat es solo para la oposición de Administrativo/a C1 de la Diputación Provincial de Toledo. Trabaja con las bases del BOP Toledo nº 118 de 25/06/2026: 2 plazas, oposición libre, test de 50 preguntas + 5 de reserva y segundo ejercicio práctico. Estado personal: pendiente de solicitud. Usa mi perfil base: DAM sirve como titulación de acceso superior al Bachillerato/equivalente exigido, pero no da puntos porque no hay concurso. Vigila especialmente la publicación del extracto en BOE, porque desde ahí se abre el plazo de 20 días hábiles.
+
+## 07 · OPE UC3M Auxiliar Administrativo
+
+Este chat es solo para la Universidad Carlos III de Madrid, Escala Auxiliar Administrativa C2. Trabaja con la convocatoria BOE-A-2026-14624: 34 plazas, concurso-oposición, test único de 70 preguntas + 5 reserva, 60 minutos, error -1/3, concurso máximo 30 puntos. Estado personal: pendiente de solicitud/seguimiento. Usa mi perfil base: DAM no da puntos directos en esta convocatoria, experiencia pública administrativa como funcionario no confirmada = 0, inglés solo si hay B2/C1 oficial vigente y formación solo si encaja literalmente en bases. Prioridad secundaria frente a convocatorias de Toledo salvo que se decida apostar por Madrid por volumen de plazas y bolsa.
