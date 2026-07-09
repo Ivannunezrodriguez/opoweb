@@ -1,4 +1,4 @@
-const CACHE = 'opoweb-v21';
+const CACHE = 'opoweb-v22';
 const ASSETS = [
   './',
   './index.html',
@@ -21,6 +21,7 @@ const ASSETS = [
   './data/normas/ley-39-2015-procedimiento.js',
   './data/normas/ley-40-2015.js',
   './data/normas/regimen-local.js',
+  './data/normas/hacienda-local.js',
   './data/normas/informatica.js',
   './data/formacion_usuario.json',
   './manifest.webmanifest',
