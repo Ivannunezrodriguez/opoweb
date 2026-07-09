@@ -1,17 +1,10 @@
-const CACHE = 'opoweb-v26';
+const CACHE = 'opoweb-v27';
 const ASSETS = [
   './',
   './index.html',
   './assets/css/styles.css',
   './assets/js/app.js',
-  './assets/js/estudio-avanzado.js',
-  './assets/js/temario-profundo.js',
-  './assets/js/temario-editorial.js',
-  './assets/js/ofimatica-detalle.js',
   './assets/js/metodo-opotest.js',
-  './assets/js/temario-academia.js',
-  './assets/js/ajustes-v15.js',
-  './assets/js/ajustes-v16.js',
   './assets/js/motor-temario.js',
   './data/oposiciones.js',
   './data/proceso.js',
