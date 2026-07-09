@@ -6,8 +6,8 @@
   const low = v => String(v || '').toLowerCase();
   const section = (heading, paragraphs) => ({ heading, paragraphs });
 
-  function articleSections(keys) {
-    const ley = normas.ley39;
+  function articleSections(keys, norma = 'ley39') {
+    const ley = normas[norma];
     if (!ley || !keys) return [];
     return keys.map(key => {
       const art = ley.articulos[key];
@@ -48,21 +48,35 @@
     ];
   }
 
-  function setLegal(theme, keys) {
-    theme.sections = articleSections(keys);
+  function setLegal(theme, keys, norma = 'ley39') {
+    theme.sections = articleSections(keys, norma);
     theme.reviewTable = tableLegal();
     return theme;
   }
 
   function apply(theme) {
     const ley39 = normas.ley39;
+    const ley40 = normas.ley40;
     const t = low(`${theme.title} ${theme.area}`);
-    if (t.includes('39/2015') && (t.includes('interesados') || t.includes('actividad') || t.includes('plazos') || t.includes('términos'))) return setLegal(theme, ley39?.temas?.interesadosActividadPlazos);
-    if (t.includes('39/2015') && (t.includes('actos administrativos') || t.includes('notificación') || t.includes('publicación') || t.includes('nulidad') || t.includes('anulabilidad'))) return setLegal(theme, ley39?.temas?.actosNotificacionValidez);
-    if (t.includes('39/2015') && (t.includes('procedimiento') || t.includes('iniciación') || t.includes('ordenación') || t.includes('instrucción') || t.includes('finalización') || t.includes('ejecución') || t.includes('simplificada'))) return setLegal(theme, ley39?.temas?.procedimientoCompleto);
-    if (t.includes('revisión') || t.includes('recursos administrativos') || t.includes('recurso de alzada') || t.includes('reposición')) return setLegal(theme, ley39?.temas?.revisionRecursos);
+
+    if (t.includes('40/2015') || t.includes('régimen jurídico del sector público') || t.includes('regimen juridico del sector publico')) {
+      if (t.includes('principios') || t.includes('órganos') || t.includes('organos') || t.includes('competencia') || t.includes('delegación') || t.includes('delegacion') || t.includes('avocación') || t.includes('avocacion') || t.includes('encomienda') || t.includes('suplencia')) return setLegal(theme, ley40?.temas?.principiosOrganosCompetencia, 'ley40');
+      if (t.includes('colegiado') || t.includes('colegiados') || t.includes('actas') || t.includes('secretario')) return setLegal(theme, ley40?.temas?.organosColegiados, 'ley40');
+      if (t.includes('abstención') || t.includes('abstencion') || t.includes('recusación') || t.includes('recusacion')) return setLegal(theme, ley40?.temas?.abstencionRecusacion, 'ley40');
+      if (t.includes('sancionador') || t.includes('sancionadora') || t.includes('sanciones')) return setLegal(theme, ley40?.temas?.sancionador, 'ley40');
+      if (t.includes('responsabilidad patrimonial')) return setLegal(theme, ley40?.temas?.responsabilidad, 'ley40');
+      if (t.includes('sede') || t.includes('electrónica') || t.includes('electronica') || t.includes('automatizada') || t.includes('csv') || t.includes('archivo electrónico') || t.includes('archivo electronico')) return setLegal(theme, ley40?.temas?.electronica, 'ley40');
+      if (t.includes('convenio') || t.includes('convenios')) return setLegal(theme, ley40?.temas?.convenios, 'ley40');
+      if (t.includes('relaciones interadministrativas') || t.includes('colaboración') || t.includes('colaboracion') || t.includes('cooperación') || t.includes('cooperacion') || t.includes('coordinación') || t.includes('coordinacion')) return setLegal(theme, ley40?.temas?.relaciones, 'ley40');
+      return setLegal(theme, ley40?.temas?.principiosOrganosCompetencia, 'ley40');
+    }
+
+    if (t.includes('39/2015') && (t.includes('interesados') || t.includes('actividad') || t.includes('plazos') || t.includes('términos'))) return setLegal(theme, ley39?.temas?.interesadosActividadPlazos, 'ley39');
+    if (t.includes('39/2015') && (t.includes('actos administrativos') || t.includes('notificación') || t.includes('publicación') || t.includes('nulidad') || t.includes('anulabilidad'))) return setLegal(theme, ley39?.temas?.actosNotificacionValidez, 'ley39');
+    if (t.includes('39/2015') && (t.includes('procedimiento') || t.includes('iniciación') || t.includes('ordenación') || t.includes('instrucción') || t.includes('finalización') || t.includes('ejecución') || t.includes('simplificada'))) return setLegal(theme, ley39?.temas?.procedimientoCompleto, 'ley39');
+    if (t.includes('revisión') || t.includes('recursos administrativos') || t.includes('recurso de alzada') || t.includes('reposición')) return setLegal(theme, ley39?.temas?.revisionRecursos, 'ley39');
     if (t.includes('identificación') || t.includes('firma') || t.includes('sede electrónica') || t.includes('registro electrónico')) {
-      theme.sections = articleSections(ley39?.temas?.identificacionFirma).concat(infoSections(['internet']));
+      theme.sections = articleSections(ley39?.temas?.identificacionFirma, 'ley39').concat(infoSections(['internet']));
       theme.reviewTable = tableLegal();
       return theme;
     }
@@ -90,12 +104,12 @@
     ope.themes = ope.themes.map(theme => {
       const updated = apply(theme);
       const t = low(`${updated.title} ${updated.area}`);
-      if (t.includes('39/2015') || t.includes('revisión') || t.includes('recursos administrativos') || t.includes('windows') || t.includes('word') || t.includes('writer') || t.includes('excel') || t.includes('calc') || t.includes('ordenador') || t.includes('internet explorer') || t.includes('edge')) {
+      if (t.includes('39/2015') || t.includes('40/2015') || t.includes('régimen jurídico') || t.includes('regimen juridico') || t.includes('revisión') || t.includes('recursos administrativos') || t.includes('windows') || t.includes('word') || t.includes('writer') || t.includes('excel') || t.includes('calc') || t.includes('ordenador') || t.includes('internet explorer') || t.includes('edge')) {
         ope.themeTests[updated.id] = questionSet(updated);
       }
       return updated;
     });
-    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Temario modular: Ley 39/2015 completa 1-126 e informática salen desde data/normas.`;
+    ope.status = `${(ope.status || '').replace(/ Temario.*/, '')} Temario modular: Ley 39/2015 completa, Ley 40/2015 base e informática salen desde data/normas.`;
   });
 
   if (typeof renderAll === 'function') renderAll();
