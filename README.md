@@ -15,7 +15,7 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 La web muestra la **Versión OpoWeb v0.40.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v44`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v46`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos principales
 
@@ -87,6 +87,15 @@ El refuerzo incluye supuestos sobre registro electrónico, copias, representaci�
 
 Los once temas restantes mantienen un banco sólido de 20 preguntas o más. El objetivo final continúa siendo **30–40 preguntas manuales por tema**.
 
+## Interfaz v0.40
+
+La última capa elimina de la vista las tarjetas y distintivos heredados de auditorías anteriores. La pantalla de test muestra solo:
+
+- el resumen actual de los nueve temas con 30+;
+- el recuento vigente por tema;
+- la dificultad baja, media y alta;
+- el banco de preguntas seleccionado.
+
 ## Simulacros UC3M equilibrados
 
 Los tres simulacros mantienen **70 preguntas** y se regeneran después de cada refuerzo:
@@ -115,6 +124,7 @@ assets/js/
 ├── refuerzo-test-v38.js
 ├── refuerzo-test-v39.js
 ├── refuerzo-test-v40.js
+├── correcciones-test-v40.js
 ├── ui-v37.js
 ├── ui-v38.js
 ├── ui-v39.js
@@ -127,9 +137,11 @@ assets/js/
 
 - Añadidas **90 preguntas manuales y de supuesto breve**.
 - Temas 2, 3, 7, 8, 9, 10, 15, 18 y 19 elevados a 30 preguntas o más.
+- Corregida la literalidad del registro electrónico en día inhábil conforme al artículo 31.2.b de la Ley 39/2015.
 - Reauditado el banco por validez, duplicados, respuesta correcta y dificultad.
 - Regenerados tres simulacros equilibrados de 70 preguntas.
-- Actualizada la caché PWA a `opoweb-v44`.
+- Limpiadas las tarjetas y etiquetas antiguas de la interfaz.
+- Actualizada la caché PWA a `opoweb-v46`.
 
 ### v0.39.0 · 2026-07-10
 
