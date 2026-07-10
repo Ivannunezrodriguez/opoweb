@@ -11,92 +11,99 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.65.0**
-- Caché PWA: `opoweb-v72`
+- **OpoWeb v0.66.0**
+- Caché PWA: `opoweb-v73`
 - Última revisión estructural: 10 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 88 % |
+| Funcionamiento e interfaz | 89 % |
 | Diputación C1 | 98 % |
-| UC3M C2 | 52 % |
+| UC3M C2 | 78 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 55 % |
-| **OpoWeb global** | **68 %** |
+| Arquitectura y pruebas | 58 % |
+| **OpoWeb global** | **74 %** |
 
 Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica. No representan probabilidad de aprobar.
 
-## Estado real de Diputación
+## Diputación de Toledo
 
-- los 40 temas alcanzan al menos 30 preguntas específicas;
-- 684 preguntas añadidas durante la segunda vuelta;
-- **1.269 preguntas manuales acumuladas**;
-- tres simulacros tipo test de 50 + 5 con cobertura de los 40 temas;
-- 20 supuestos completos y 40 variantes;
-- tres simulacros prácticos internos.
+- Los 40 temas alcanzan al menos 30 preguntas específicas.
+- 1.269 preguntas manuales acumuladas.
+- Tres simulacros de 50 + 5.
+- Cobertura cuantitativa: 100 %.
+- Estimación global: 98 % por la brecha documental de los Estatutos del OAPGT y el cierre técnico pendiente.
 
-La cobertura cuantitativa del programa alcanza **40 de 40 temas: 100 %**. La convocatoria completa queda en **98 %** porque la literalidad organizativa y competencial de los Estatutos vigentes del OAPGT sigue pendiente de una publicación oficial accesible y falta la auditoría técnica final.
+## UC3M · v0.66
 
-## Tema 22 · v0.65
+Los veinte temas alcanzan ahora al menos 30 preguntas válidas.
 
-Se han incorporado **32 preguntas verificadas** sobre:
+### Resultado
 
-- ámbito, vigencia y prórroga del Acuerdo Regulador;
-- derechos individuales y colectivos;
-- Comisión de Seguimiento;
-- clases de personal y titulación C1;
-- copia básica contractual y jornada;
-- modificaciones económicas publicadas en 2026;
-- titularidad, sede y registro electrónico del OAPGT;
-- gestión por la Secretaría, disponibilidad, rechazo de documentos y recibo electrónico.
+- 110 preguntas nuevas en once temas.
+- 600 preguntas válidas acumuladas.
+- 20 de 20 temas con 30 o más preguntas.
+- Tres simulacros de 70 preguntas + 5 reservas.
+- Cuatro alternativas distintas, respuesta correcta válida y justificación normativa.
 
-La brecha documental sobre los Estatutos del OAPGT queda registrada expresamente en los datos y en las pruebas. No se atribuyen competencias internas no verificadas.
+### Temas reforzados
 
-## Bloque pendiente de Diputación
+- Constitución española.
+- Organización y funcionamiento de las Administraciones públicas.
+- Administración electrónica e interoperabilidad.
+- Protección de datos y derechos digitales.
+- Personal, provisión, situaciones, incompatibilidades y disciplina.
+- Prevención de riesgos laborales.
+- Sistema universitario, comunidad universitaria y PTGAS.
+- Ordenación de enseñanzas oficiales.
+- Acceso y admisión universitaria.
+- Contratación pública.
 
-1. Localizar la publicación oficial vigente de los Estatutos del OAPGT.
-2. Auditar transversalmente vigencia, duplicados, cobertura y dificultad.
-3. Incorporar pruebas de navegador y validación visual.
-4. Consolidar las capas históricas sin perder progreso guardado.
+La cobertura cuantitativa de UC3M queda al 100 %, pero su estimación global se mantiene en 78 % porque falta verificar y cerrar normativa interna, presupuesto, matrícula, permanencia, evaluación, admisión propia y contratación institucional.
 
-## Resto de convocatorias
+## Pendientes principales
 
 ### UC3M
 
-Pendiente cerrar normativa interna y elevar once temas a 30–40 preguntas.
+1. Estatutos y organización interna vigentes.
+2. Presupuesto y bases de ejecución.
+3. Normas de matrícula, permanencia y evaluación.
+4. Admisión propia y contratación interna.
+5. Auditoría transversal de literalidad y vigencia.
 
 ### La Puebla
 
-Pendiente completar 19 temas, sustituir plantillas y ampliar supuestos.
+Completar 19 temas, sustituir plantillas y ampliar supuestos.
 
 ### Carranque
 
-Pendiente desarrollar 20 temas, sustituir preguntas de método y rehacer los supuestos sobre temas 3–20.
+Desarrollar 20 temas, sustituir preguntas de método y rehacer los supuestos sobre temas 3–20.
+
+### Arquitectura
+
+Consolidar módulos históricos, ampliar pruebas de navegador y validar la interfaz móvil.
 
 ## Pruebas automáticas
 
-GitHub Actions ejecuta las pruebas `smoke-v56` a `smoke-v65`. Se comprueban los 40 temas, la brecha documental, recuentos, simulacros 50 + 5 y ausencia de duplicados internos.
+GitHub Actions ejecuta las pruebas de Diputación `smoke-v56` a `smoke-v65` y `smoke-uc3m-v66`. Se comprueban recuentos, reservas, cobertura temática y ausencia de duplicados internos.
 
 ## Historial reciente
 
+### v0.66.0 · 2026-07-10
+
+- Añadidas 110 preguntas a once temas de UC3M.
+- Los veinte temas alcanzan 30 o más preguntas.
+- Simulacros regenerados a 70 + 5 reservas.
+- Caché actualizada a `opoweb-v73`.
+
 ### v0.65.0 · 2026-07-10
 
-- Añadidas 32 preguntas verificadas al tema 22.
-- Alcanzadas 1.269 preguntas manuales acumuladas.
+- Añadidas 32 preguntas verificadas al tema 22 de Diputación.
 - Los 40 temas alcanzan el objetivo cuantitativo mínimo de 30 preguntas.
-- Tema 22 incorporado sin ocultar la brecha de los Estatutos del OAPGT.
-- Simulacros regenerados con cobertura de los 40 temas.
-- Caché actualizada a `opoweb-v72`.
 
 ### v0.64.0 · 2026-07-10
 
-- Añadidas 135 preguntas a los temas 32–40.
-- Alcanzadas 1.237 preguntas manuales acumuladas.
-
-### v0.63.0 · 2026-07-10
-
-- Añadidas 75 preguntas a los temas 27–31.
-- Alcanzadas 1.102 preguntas manuales acumuladas.
+- Añadidas 135 preguntas a los temas 32–40 de Diputación.
