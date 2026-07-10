@@ -97,9 +97,7 @@ Se valoran cursos de los ocho años anteriores impartidos por universidades púb
 
 No debe darse por consolidado ningún punto de formación hasta comprobar certificado, entidad organizadora, financiación pública, fechas, horas y relación con las funciones.
 
-## Temario oficial y auditoría OpoWeb v0.31
-
-La versión v0.31 elimina la asignación de contenido por número entre convocatorias y también retira de la vista **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso**.
+## Temario oficial y auditoría OpoWeb v0.32
 
 Cada tema conserva:
 
@@ -110,7 +108,7 @@ Cada tema conserva:
 - Retención activa.
 - Cuadro para test y supuesto práctico.
 
-| Tema | Estado en OpoWeb v0.31 |
+| Tema | Estado en OpoWeb v0.32 |
 |---|---|
 | 1. Constitución | Base común revisada |
 | 2. Ley 39/2015 I | Completo: disposiciones, interesados, actividad, plazos y actos |
@@ -118,8 +116,8 @@ Cada tema conserva:
 | 4. Ley 40/2015 I | Completo: órganos, competencia y técnicas de alteración |
 | 5. Ley 40/2015 II | Completo: sede, actuación automatizada, firma, interoperabilidad y archivo |
 | 6. Protección de datos | Base común revisada; queda ajuste fino a la literalidad exacta del epígrafe |
-| 7. Transparencia Madrid/UC3M | Pendiente de literalidad completa de Ley 10/2019 y procedimiento UC3M |
-| 8. Igualdad UC3M | Pendiente de III Plan y protocolos UC3M |
+| 7. Transparencia Madrid/UC3M | Ampliado: publicidad activa, acceso, límites, procedimiento y aplicación UC3M; pendiente ley consolidada artículo por artículo |
+| 8. Igualdad UC3M | Completado con LO 3/2007, III Plan 2025-2029 y protocolo UC3M |
 | 9. Ofimática | Completo: Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo |
 | 10. TREBEP | Completo: clases, derechos, deberes, adquisición, pérdida y situaciones |
 | 11. RD 364/1995 | Completo como base: ingreso, provisión, carrera, promoción e incompatibilidades |
@@ -133,15 +131,27 @@ Cada tema conserva:
 | 19. Presupuesto UC3M II | Pendiente de procedimientos y documentos internos |
 | 20. Contratos | LCSP ampliada; pendiente órgano/delegaciones y reglas internas UC3M |
 
+## Tema 8 · contenido oficial incorporado
+
+- III Plan de Igualdad UC3M: **2025-2029**.
+- Entrada en vigor: **1 de febrero de 2025**.
+- Seis ejes estratégicos y **138 medidas**.
+- Comisión de Seguimiento: 8 personas por la Universidad y 8 por las personas trabajadoras.
+- Composición equilibrada entre mujeres y hombres.
+- Indicadores de seguimiento, proceso, resultado e impacto.
+- Reportes semestrales en octubre y febrero hasta febrero de 2029.
+- Informe intermedio e informe final.
+- Protocolo aplicable a alumnado, PDI, PTGAS y personas externas que trabajan en la UC3M.
+- Protocolo con doble vertiente: prevención y actuación.
+
 ## Siguiente bloque de trabajo
 
 1. Estatutos UC3M: Defensor Universitario, servicios, régimen económico-financiero y reforma.
 2. Presupuesto UC3M vigente y bases de ejecución: temas 18 y 19.
-3. Ley 10/2019 y procedimiento del portal de transparencia UC3M.
-4. III Plan de Igualdad y protocolos UC3M.
-5. Normas internas de matrícula, permanencia, evaluación y admisión.
-6. Delegaciones y procedimiento interno de contratación UC3M.
-7. Batería manual de 30 a 40 preguntas reales por tema.
+3. Texto consolidado de la Ley 10/2019 y plazos exactos del tema 7.
+4. Normas internas de matrícula, permanencia, evaluación y admisión.
+5. Delegaciones y procedimiento interno de contratación UC3M.
+6. Batería manual de 30 a 40 preguntas reales por tema.
 
 ## Estrategia
 
@@ -150,4 +160,4 @@ Cada tema conserva:
 3. Preparar aparte los temas específicos 13 a 19.
 4. Practicar simulacros completos de 70 preguntas con penalización real.
 5. Presentar la solicitud con margen y comprobar inmediatamente el justificante de registro y el pago o exención.
-6. No considerar cerrados los temas 7, 8, 15, 18 y 19 hasta incorporar sus documentos oficiales UC3M.
+6. No considerar cerrados los temas 7, 15, 18 y 19 hasta incorporar sus documentos oficiales completos.
