@@ -12,121 +12,20 @@
 <body>
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
-      <div class="brand">
-        <button class="icon-btn close" id="closeSidebar" aria-label="Cerrar menú">×</button>
-        <div class="logo">OP</div>
-        <div><strong>Opoweb</strong><span>Temario + test</span></div>
-      </div>
-      <label class="field-label" for="oposicionSelect">Oposición activa</label>
-      <select id="oposicionSelect" class="select"></select>
-      <div class="oposicion-card" id="oposicionCard"></div>
-      <nav class="menu" aria-label="Navegación principal">
-        <button data-view="proceso">Proceso y enlaces</button>
-        <button data-view="temario" class="active">Temario</button>
-        <button data-view="normas">Normas</button>
-        <button data-view="tests">Test por temas</button>
-        <button data-view="supuestos">Supuestos prácticos</button>
-        <button data-view="simulacros">Simulacros</button>
-        <button data-view="progreso">Progreso</button>
-      </nav>
+      <div class="brand"><button class="icon-btn close" id="closeSidebar" aria-label="Cerrar menú">×</button><div class="logo">OP</div><div><strong>Opoweb</strong><span>Temario + test</span></div></div>
+      <label class="field-label" for="oposicionSelect">Oposición activa</label><select id="oposicionSelect" class="select"></select><div class="oposicion-card" id="oposicionCard"></div>
+      <nav class="menu" aria-label="Navegación principal"><button data-view="proceso">Proceso y enlaces</button><button data-view="temario" class="active">Temario</button><button data-view="normas">Normas</button><button data-view="tests">Test por temas</button><button data-view="supuestos">Supuestos prácticos</button><button data-view="simulacros">Simulacros</button><button data-view="progreso">Progreso</button></nav>
       <div class="sidebar-note"><strong>Temas comunes</strong><p>Los temas marcados como comunes se podrán reutilizar en otras OPE.</p></div>
     </aside>
-    <main class="main">
-      <header class="topbar">
-        <button class="icon-btn" id="openSidebar" aria-label="Abrir menú">☰</button>
-        <div class="titlebox"><h1 id="viewTitle">Temario</h1><p id="viewSubtitle">Estudia, haz test y guarda tu progreso.</p></div>
-        <div class="top-actions">
-          <input id="searchInput" class="search" type="search" placeholder="Buscar tema, ley o concepto…" />
-          <button class="btn ghost" id="exportProgress">Exportar</button>
-          <label class="btn ghost file-label">Importar<input type="file" id="importProgress" accept="application/json" hidden></label>
-        </div>
-      </header>
-      <section id="content" class="content"></section>
-    </main>
+    <main class="main"><header class="topbar"><button class="icon-btn" id="openSidebar" aria-label="Abrir menú">☰</button><div class="titlebox"><h1 id="viewTitle">Temario</h1><p id="viewSubtitle">Estudia, haz test y guarda tu progreso.</p></div><div class="top-actions"><input id="searchInput" class="search" type="search" placeholder="Buscar tema, ley o concepto…" /><button class="btn ghost" id="exportProgress">Exportar</button><label class="btn ghost file-label">Importar<input type="file" id="importProgress" accept="application/json" hidden></label></div></header><section id="content" class="content"></section></main>
   </div>
-  <script src="data/oposiciones.js"></script>
-  <script src="data/proceso.js"></script>
-  <script src="data/uc3m.js"></script>
-  <script src="assets/js/estado-v56.js"></script>
-  <script src="data/ope-audit-v41.js"></script>
-  <script src="data/normas/constitucion.js"></script>
-  <script src="data/normas/ley-39-2015.js"></script>
-  <script src="data/normas/ley-39-2015-procedimiento.js"></script>
-  <script src="data/normas/ley-40-2015.js"></script>
-  <script src="data/normas/regimen-local.js"></script>
-  <script src="data/normas/hacienda-local.js"></script>
-  <script src="data/normas/contratos-publicos.js"></script>
-  <script src="data/normas/empleo-publico.js"></script>
-  <script src="data/normas/transversales.js"></script>
-  <script src="data/normas/informatica.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/metodo-opotest.js"></script>
-  <script src="assets/js/motor-temario.js"></script>
-  <script src="assets/js/auditoria-temas.js"></script>
-  <script src="assets/js/uc3m-temario-v30.js"></script>
-  <script src="assets/js/ui-v29.js"></script>
-  <script src="assets/js/uc3m-temario-v31.js"></script>
-  <script src="assets/js/ui-v31.js"></script>
-  <script src="assets/js/uc3m-temario-v32.js"></script>
-  <script src="assets/js/ui-v32.js"></script>
-  <script src="assets/js/uc3m-temario-v33.js"></script>
-  <script src="assets/js/ui-v33.js"></script>
-  <script src="assets/js/uc3m-temario-v34.js"></script>
-  <script src="assets/js/ui-v34.js"></script>
-  <script src="assets/js/uc3m-temario-v35.js"></script>
-  <script src="assets/js/ui-v35.js"></script>
-  <script src="assets/js/uc3m-temario-v36.js"></script>
-  <script src="assets/js/ui-v36.js"></script>
-  <script src="assets/js/auditoria-test-v37.js"></script>
-  <script src="assets/js/ui-v37.js"></script>
-  <script src="assets/js/refuerzo-test-v38.js"></script>
-  <script src="assets/js/ui-v38.js"></script>
-  <script src="assets/js/refuerzo-test-v39.js"></script>
-  <script src="assets/js/ui-v39.js"></script>
-  <script src="assets/js/refuerzo-test-v40.js"></script>
-  <script src="assets/js/correcciones-test-v40.js"></script>
-  <script src="assets/js/ui-v40.js"></script>
-  <script src="assets/js/ui-v41.js"></script>
-  <script src="assets/js/perfeccion-v42.js"></script>
-  <script src="assets/js/diputacion-v43.js"></script>
-  <script src="assets/js/diputacion-v44.js"></script>
-  <script src="assets/js/diputacion-v45.js"></script>
-  <script src="assets/js/diputacion-v46.js"></script>
-  <script src="assets/js/diputacion-v47.js"></script>
-  <script src="assets/js/diputacion-v48.js"></script>
-  <script src="assets/js/diputacion-v49.js"></script>
-  <script src="assets/js/diputacion-v50.js"></script>
-  <script src="assets/js/diputacion-v51.js"></script>
-  <script src="assets/js/diputacion-v52.js"></script>
-  <script src="assets/js/diputacion-v53.js"></script>
-  <script src="assets/js/diputacion-v54.js"></script>
-  <script src="assets/js/diputacion-v55.js"></script>
-  <script src="assets/js/diputacion-v56.js"></script>
-  <script src="assets/js/diputacion-v57.js"></script>
-  <script src="assets/js/diputacion-v58.js"></script>
-  <script src="assets/js/diputacion-v59.js"></script>
-  <script src="assets/js/diputacion-v60.js"></script>
-  <script src="assets/js/diputacion-v61.js"></script>
-  <script src="assets/js/ui-v42.js"></script>
-  <script src="assets/js/ui-v43.js"></script>
-  <script src="assets/js/ui-v44.js"></script>
-  <script src="assets/js/ui-v45.js"></script>
-  <script src="assets/js/ui-v46.js"></script>
-  <script src="assets/js/ui-v47.js"></script>
-  <script src="assets/js/ui-v48.js"></script>
-  <script src="assets/js/ui-v49.js"></script>
-  <script src="assets/js/ui-v50.js"></script>
-  <script src="assets/js/ui-v51.js"></script>
-  <script src="assets/js/ui-v52.js"></script>
-  <script src="assets/js/ui-v53.js"></script>
-  <script src="assets/js/ui-v54.js"></script>
-  <script src="assets/js/ui-v55.js"></script>
-  <script src="assets/js/ui-v56.js"></script>
-  <script src="assets/js/ui-v57.js"></script>
-  <script src="assets/js/ui-v58.js"></script>
-  <script src="assets/js/ui-v59.js"></script>
-  <script src="assets/js/ui-v60.js"></script>
-  <script src="assets/js/ui-v61.js"></script>
+  <script src="data/oposiciones.js"></script><script src="data/proceso.js"></script><script src="data/uc3m.js"></script><script src="assets/js/estado-v56.js"></script><script src="data/ope-audit-v41.js"></script>
+  <script src="data/normas/constitucion.js"></script><script src="data/normas/ley-39-2015.js"></script><script src="data/normas/ley-39-2015-procedimiento.js"></script><script src="data/normas/ley-40-2015.js"></script><script src="data/normas/regimen-local.js"></script><script src="data/normas/hacienda-local.js"></script><script src="data/normas/contratos-publicos.js"></script><script src="data/normas/empleo-publico.js"></script><script src="data/normas/transversales.js"></script><script src="data/normas/informatica.js"></script>
+  <script src="assets/js/app.js"></script><script src="assets/js/metodo-opotest.js"></script><script src="assets/js/motor-temario.js"></script><script src="assets/js/auditoria-temas.js"></script>
+  <script src="assets/js/uc3m-temario-v30.js"></script><script src="assets/js/ui-v29.js"></script><script src="assets/js/uc3m-temario-v31.js"></script><script src="assets/js/ui-v31.js"></script><script src="assets/js/uc3m-temario-v32.js"></script><script src="assets/js/ui-v32.js"></script><script src="assets/js/uc3m-temario-v33.js"></script><script src="assets/js/ui-v33.js"></script><script src="assets/js/uc3m-temario-v34.js"></script><script src="assets/js/ui-v34.js"></script><script src="assets/js/uc3m-temario-v35.js"></script><script src="assets/js/ui-v35.js"></script><script src="assets/js/uc3m-temario-v36.js"></script><script src="assets/js/ui-v36.js"></script>
+  <script src="assets/js/auditoria-test-v37.js"></script><script src="assets/js/ui-v37.js"></script><script src="assets/js/refuerzo-test-v38.js"></script><script src="assets/js/ui-v38.js"></script><script src="assets/js/refuerzo-test-v39.js"></script><script src="assets/js/ui-v39.js"></script><script src="assets/js/refuerzo-test-v40.js"></script><script src="assets/js/correcciones-test-v40.js"></script><script src="assets/js/ui-v40.js"></script><script src="assets/js/ui-v41.js"></script><script src="assets/js/perfeccion-v42.js"></script>
+  <script src="assets/js/diputacion-v43.js"></script><script src="assets/js/diputacion-v44.js"></script><script src="assets/js/diputacion-v45.js"></script><script src="assets/js/diputacion-v46.js"></script><script src="assets/js/diputacion-v47.js"></script><script src="assets/js/diputacion-v48.js"></script><script src="assets/js/diputacion-v49.js"></script><script src="assets/js/diputacion-v50.js"></script><script src="assets/js/diputacion-v51.js"></script><script src="assets/js/diputacion-v52.js"></script><script src="assets/js/diputacion-v53.js"></script><script src="assets/js/diputacion-v54.js"></script><script src="assets/js/diputacion-v55.js"></script><script src="assets/js/diputacion-v56.js"></script><script src="assets/js/diputacion-v57.js"></script><script src="assets/js/diputacion-v58.js"></script><script src="assets/js/diputacion-v59.js"></script><script src="assets/js/diputacion-v60.js"></script><script src="assets/js/diputacion-v61.js"></script><script src="assets/js/diputacion-v62.js"></script>
+  <script src="assets/js/ui-v42.js"></script><script src="assets/js/ui-v43.js"></script><script src="assets/js/ui-v44.js"></script><script src="assets/js/ui-v45.js"></script><script src="assets/js/ui-v46.js"></script><script src="assets/js/ui-v47.js"></script><script src="assets/js/ui-v48.js"></script><script src="assets/js/ui-v49.js"></script><script src="assets/js/ui-v50.js"></script><script src="assets/js/ui-v51.js"></script><script src="assets/js/ui-v52.js"></script><script src="assets/js/ui-v53.js"></script><script src="assets/js/ui-v54.js"></script><script src="assets/js/ui-v55.js"></script><script src="assets/js/ui-v56.js"></script><script src="assets/js/ui-v57.js"></script><script src="assets/js/ui-v58.js"></script><script src="assets/js/ui-v59.js"></script><script src="assets/js/ui-v60.js"></script><script src="assets/js/ui-v61.js"></script><script src="assets/js/ui-v62.js"></script>
   <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js').catch(() => {}); }</script>
 </body>
 </html>

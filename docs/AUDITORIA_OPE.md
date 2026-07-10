@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.61
+# Auditoría global de OpoWeb · v0.62
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -15,23 +15,20 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 84 % |
-| Diputación C1 | 84 % |
+| Funcionamiento e interfaz | 85 % |
+| Diputación C1 | 87 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 47 % |
-| **OpoWeb global** | **59 %** |
-
-La estimación pondera temario, banco real, supuestos, simulacros, auditoría normativa y deuda técnica.
+| Arquitectura y pruebas | 49 % |
+| **OpoWeb global** | **61 %** |
 
 ## Diputación de Toledo C1
 
-### Proceso verificado
+### Estado verificado
 
-- 2 plazas C1.
-- Oposición libre.
-- 50 + 5 preguntas en 60 minutos.
+- 2 plazas C1 por oposición libre.
+- Primer ejercicio de 50 + 5 preguntas en 60 minutos.
 - Segundo ejercicio práctico.
 - 40 temas.
 - Solicitudes del 6 al 31 de julio de 2026.
@@ -39,66 +36,41 @@ La estimación pondera temario, banco real, supuestos, simulacros, auditoría no
 
 ### Primera vuelta
 
-- 39 de 40 temas desarrollados en profundidad.
+- 39 de 40 temas desarrollados.
 - Tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT.
-- 585 preguntas manuales de primera vuelta.
-- 20 supuestos completos.
-- 40 variantes.
-- Tres simulacros prácticos internos.
+- 585 preguntas manuales.
+- 20 supuestos, 40 variantes y tres simulacros prácticos internos.
 
-### Segunda vuelta v0.61
+### Segunda vuelta v0.62
 
-Temas 1–21 y 23 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–21 y 23–26 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
-- 60 preguntas nuevas en v0.53;
-- 75 preguntas nuevas en v0.54;
-- 105 preguntas nuevas en v0.55;
-- 15 preguntas nuevas en v0.56;
-- 19 preguntas nuevas en v0.57;
-- 18 preguntas nuevas en v0.58;
-- 30 preguntas nuevas en v0.59;
-- 36 preguntas nuevas en v0.60;
-- 22 preguntas nuevas en v0.61;
-- 380 preguntas nuevas de segunda vuelta;
-- 965 preguntas manuales acumuladas;
-- veintidós temas a 30+ preguntas reales;
-- segunda vuelta: 22 de 39 temas auditables, aproximadamente 56 %;
-- cuatro alternativas distintas;
-- dificultad graduada;
-- control de duplicados;
-- simulacros regenerados.
+- 62 preguntas nuevas en v0.62;
+- 442 preguntas nuevas de segunda vuelta;
+- 1.027 preguntas manuales acumuladas;
+- 25 temas a 30+ preguntas reales;
+- segunda vuelta: 25 de 39 temas auditables, aproximadamente 64 %;
+- opciones distintas, respuesta rotada y dificultad graduada;
+- control de duplicados y simulacros regenerados.
 
-Ámbitos reforzados en v0.61:
+Ámbitos reforzados en v0.62:
 
-- protección eficaz y deber preventivo;
-- principios de la acción preventiva;
-- evaluación y planificación;
-- información y formación;
-- emergencias y riesgo grave e inminente;
-- vigilancia de la salud;
-- obligaciones de los trabajadores;
-- organización preventiva;
-- Delegados de Prevención y Comité de Seguridad y Salud.
+- igualdad de trato, discriminación, acoso, acciones positivas y planes de igualdad;
+- transversalidad, impacto de género, estadísticas y lenguaje no sexista en Castilla-La Mancha;
+- obligación tributaria, hecho imponible, devengo, sujetos, recargos y prescripción;
+- gestión y revisión tributaria;
+- periodo voluntario y ejecutivo, aplazamiento, compensación y devolución;
+- providencia de apremio, embargo y vías de impugnación.
 
-### Criterio de perfección pendiente
+### Criterio de cierre pendiente
 
-Para considerar cerrada Diputación deben cumplirse simultáneamente:
-
-1. 40 títulos exactos y vigentes;
-2. desarrollo autosuficiente y auditado;
-3. 30–40 preguntas reales por tema como referencia mínima de densidad;
-4. ninguna pregunta de plantilla;
-5. justificaciones normativas verificadas;
-6. simulacros sin duplicados y con cobertura equilibrada;
-7. supuestos revisados con criterios consistentes;
-8. tema 22 sustentado en textos internos oficiales;
-9. consolidación técnica y pruebas de regresión.
-
-### Próximo bloque
-
-Tema 24, igualdad entre mujeres y hombres, manteniendo el tema 22 bloqueado hasta disponer de sus fuentes oficiales internas.
+1. completar temas 27–40 a 30–40 preguntas reales;
+2. cerrar tema 22 con fuentes internas oficiales;
+3. auditar transversalmente vigencia, duplicados y cobertura;
+4. consolidar la arquitectura histórica;
+5. ampliar pruebas de regresión y validación visual.
 
 ## La Puebla
 
@@ -110,19 +82,12 @@ Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema y crear supu
 
 ## UC3M
 
-- 20 temas con banco real;
-- todos con al menos 20 preguntas;
-- nueve con 30 o más;
-- tres simulacros de 70 + 5.
-
-Pendiente normativa interna, presupuesto, contratación y elevar once temas a 30–40 preguntas.
+20 temas con banco real, todos con al menos 20 preguntas y nueve con 30 o más. Pendiente normativa interna y elevar once temas a 30–40 preguntas.
 
 ## Arquitectura pendiente
 
 1. Consolidar una única fuente de datos.
 2. Separar proceso, temario, preguntas, supuestos y simulacros.
-3. Eliminar capas históricas.
-4. Conservar progreso guardado.
-5. Ampliar pruebas de regresión y cobertura CI.
-6. Impedir reutilización fuera del programa oficial.
-7. Auditar vigencia de títulos, fechas y referencias.
+3. Eliminar capas históricas sin perder progreso.
+4. Ampliar CI y pruebas de navegador.
+5. Impedir reutilización fuera del programa oficial.
