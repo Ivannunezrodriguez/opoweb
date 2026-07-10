@@ -13,9 +13,9 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.39.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.40.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v43`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v44`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos principales
 
@@ -52,7 +52,7 @@ Cada tema conserva:
 - Tema 19: fases de gasto, documentos contables, pagos y cierre desarrollados; faltan límites, delegaciones y fechas UC3M.
 - Tema 20: LCSP revisada; falta la delegación y circuito interno UC3M.
 
-## Banco de test · v0.39
+## Banco de test · v0.40
 
 La auditoría se ejecuta después de cargar todo el temario y valida:
 
@@ -65,21 +65,27 @@ La auditoría se ejecuta después de cargar todo el temario y valida:
 - recuento por dificultad;
 - cobertura por tema.
 
-### Cobertura alcanzada
+### Cobertura general
 
-Los **20 temas oficiales tienen al menos 20 preguntas válidas**. La versión v0.39 añade **75 preguntas manuales nuevas** a los quince temas que todavía estaban en el mínimo operativo.
+Los **20 temas oficiales mantienen al menos 20 preguntas válidas**.
 
-El banco se refuerza con preguntas de aplicación sobre:
+### Temas prioritarios con 30 preguntas o más
 
-- Constitución, Ley 39/2015 y Ley 40/2015;
-- protección de datos;
-- Word, Excel y Google Workspace;
-- TREBEP, provisión, incompatibilidades y PRL;
-- LOSU;
-- ordenación académica, acceso y admisión;
-- contratación pública.
+La versión v0.40 añade **90 preguntas manuales y de supuesto breve** y eleva estos nueve bloques al objetivo 30+:
 
-El objetivo final sigue siendo **30–40 preguntas manuales por tema**, pero todos los temas han alcanzado ya la categoría **banco sólido**.
+- Tema 2: Ley 39/2015 I.
+- Tema 3: Ley 39/2015 II.
+- Tema 7: transparencia.
+- Tema 8: igualdad UC3M.
+- Tema 9: Word, Excel y Google Workspace.
+- Tema 10: TREBEP.
+- Tema 15: Estatutos UC3M.
+- Tema 18: presupuesto UC3M I.
+- Tema 19: presupuesto UC3M II.
+
+El refuerzo incluye supuestos sobre registro electrónico, copias, representación, silencio, prueba, audiencia, caducidad, acceso parcial, datos personales, discriminación, protocolos, fórmulas de Excel, permisos de Drive, situaciones administrativas, Defensor Universitario, modificaciones presupuestarias y fases RC-A-D-O-P.
+
+Los once temas restantes mantienen un banco sólido de 20 preguntas o más. El objetivo final continúa siendo **30–40 preguntas manuales por tema**.
 
 ## Simulacros UC3M equilibrados
 
@@ -108,21 +114,28 @@ assets/js/
 ├── auditoria-test-v37.js
 ├── refuerzo-test-v38.js
 ├── refuerzo-test-v39.js
+├── refuerzo-test-v40.js
 ├── ui-v37.js
 ├── ui-v38.js
-└── ui-v39.js
+├── ui-v39.js
+└── ui-v40.js
 ```
 
 ## Cambios de versión
 
+### v0.40.0 · 2026-07-10
+
+- Añadidas **90 preguntas manuales y de supuesto breve**.
+- Temas 2, 3, 7, 8, 9, 10, 15, 18 y 19 elevados a 30 preguntas o más.
+- Reauditado el banco por validez, duplicados, respuesta correcta y dificultad.
+- Regenerados tres simulacros equilibrados de 70 preguntas.
+- Actualizada la caché PWA a `opoweb-v44`.
+
 ### v0.39.0 · 2026-07-10
 
-- Añadidas **75 preguntas manuales de aplicación**.
+- Añadidas 75 preguntas manuales de aplicación.
 - Los 20 temas alcanzan al menos 20 preguntas válidas.
 - Añadido recuento por dificultad.
-- Reauditado el banco completo.
-- Regenerados tres simulacros equilibrados de 70 preguntas.
-- Actualizada la caché PWA a `opoweb-v43`.
 
 ### v0.38.0 · 2026-07-10
 
