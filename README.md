@@ -11,21 +11,21 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.60.0**
-- Caché PWA: `opoweb-v67`
+- **OpoWeb v0.61.0**
+- Caché PWA: `opoweb-v68`
 - Última revisión estructural: 10 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 83 % |
-| Diputación C1 | 83 % |
+| Funcionamiento e interfaz | 84 % |
+| Diputación C1 | 84 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 45 % |
-| **OpoWeb global** | **58 %** |
+| Arquitectura y pruebas | 47 % |
+| **OpoWeb global** | **59 %** |
 
 Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica.
 
@@ -34,48 +34,48 @@ Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, s
 - 39 de 40 temas con primera vuelta profunda;
 - tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT;
 - 585 preguntas manuales de primera vuelta;
-- 358 preguntas añadidas durante la segunda vuelta;
-- **943 preguntas manuales acumuladas**;
-- temas 1–21 elevados al objetivo mínimo de 30 preguntas reales;
+- 380 preguntas añadidas durante la segunda vuelta;
+- **965 preguntas manuales acumuladas**;
+- temas 1–21 y 23 elevados al objetivo mínimo de 30 preguntas reales;
 - tres simulacros tipo test de 50 + 5;
 - 20 supuestos completos y 40 variantes;
 - tres simulacros prácticos internos.
 
-La segunda vuelta alcanza **21 de los 39 temas actualmente auditables: aproximadamente un 54 %**. Para cerrar Diputación faltan los temas 23–40, el tema 22, la auditoría transversal y la consolidación técnica.
+La segunda vuelta alcanza **22 de los 39 temas actualmente auditables: aproximadamente un 56 %**. Para cerrar Diputación faltan los temas 24–40, el tema 22, la auditoría transversal y la consolidación técnica.
 
-## Segunda vuelta v0.60
+## Segunda vuelta v0.61
 
-Se ha reforzado el tema 21: **modalidades contractuales y Seguridad Social**.
+Se ha reforzado el tema 23: **Ley 31/1995 de Prevención de Riesgos Laborales**.
 
 ### Resultado
 
-- 36 preguntas nuevas y específicas;
-- 358 preguntas acumuladas en la segunda vuelta;
-- veintiún primeros temas con al menos 30 preguntas reales;
+- 22 preguntas nuevas y específicas;
+- 380 preguntas acumuladas en la segunda vuelta;
+- veintidós temas con al menos 30 preguntas reales;
 - cuatro alternativas distintas;
 - respuesta correcta rotada;
 - dificultad baja, media y alta;
-- justificación mediante el Estatuto de los Trabajadores y la Ley General de la Seguridad Social;
+- justificación mediante artículos concretos de la Ley 31/1995;
 - regeneración de los tres simulacros.
 
 ### Contenido reforzado
 
-- formación en alternancia y práctica profesional;
-- contratos por circunstancias de la producción y sustitución;
-- encadenamiento contractual y adquisición de fijeza;
-- contrato fijo-discontinuo y llamamiento;
-- estructura y principios de la Seguridad Social;
-- afiliación, altas, bajas y cotización;
-- acción protectora;
-- accidente de trabajo y accidente in itinere.
+- derecho a protección eficaz y deber correlativo;
+- principios de la acción preventiva;
+- plan, evaluación y planificación;
+- información, formación, emergencias y riesgo grave e inminente;
+- vigilancia de la salud y confidencialidad;
+- obligaciones de los trabajadores;
+- modalidades de organización preventiva;
+- Delegados de Prevención y Comité de Seguridad y Salud.
 
 ## Próximas prioridades
 
 ### Diputación
 
-1. Continuar con los temas 23–31.
-2. Completar el bloque informático y ofimático 32–40.
-3. Auditar referencias, duplicados, opciones y dificultad.
+1. Reforzar el tema 24 de igualdad.
+2. Continuar con los temas tributarios, presupuestarios, transparencia y protección de datos.
+3. Completar el bloque informático y ofimático 32–40.
 4. Cerrar el tema 22 solo con textos oficiales internos.
 5. Consolidar las capas históricas cuando el contenido esté estabilizado.
 
@@ -101,28 +101,28 @@ node tests/smoke-v57.js
 node tests/smoke-v58.js
 node tests/smoke-v59.js
 node tests/smoke-v60.js
+node tests/smoke-v61.js
 ```
 
-Las pruebas comprueban los temas 17–21, cifras acumuladas, simulacros 50 + 5, ausencia de duplicados internos y exclusión del tema 22.
+Las pruebas comprueban los temas 17–21 y 23, cifras acumuladas, simulacros 50 + 5, ausencia de duplicados internos y exclusión del tema 22.
 
 ## Historial reciente
+
+### v0.61.0 · 2026-07-10
+
+- Añadidas 22 preguntas al tema 23.
+- Temas 1–21 y 23 elevados al objetivo mínimo de 30 preguntas reales.
+- Alcanzadas 965 preguntas manuales acumuladas.
+- Desarrollada la prevención de riesgos laborales.
+- Regenerados los simulacros.
+- Actualizada la caché a `opoweb-v68`.
 
 ### v0.60.0 · 2026-07-10
 
 - Añadidas 36 preguntas al tema 21.
-- Temas 1–21 elevados al objetivo mínimo de 30 preguntas reales.
 - Alcanzadas 943 preguntas manuales acumuladas.
-- Desarrolladas modalidades contractuales y Seguridad Social.
-- Regenerados los simulacros.
-- Actualizada la caché a `opoweb-v67`.
 
 ### v0.59.0 · 2026-07-10
 
 - Añadidas 30 preguntas al tema 20.
-- Temas 1–20 elevados al objetivo mínimo de 30 preguntas reales.
 - Alcanzadas 907 preguntas manuales acumuladas.
-
-### v0.58.0 · 2026-07-10
-
-- Añadidas 18 preguntas al tema 19.
-- Temas 1–19 elevados al objetivo mínimo de 30 preguntas reales.
