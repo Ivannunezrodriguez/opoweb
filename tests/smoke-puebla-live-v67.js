@@ -30,6 +30,7 @@ run('assets/js/puebla-v67.js');
 
 const puebla = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'puebla-aux-admin-2026');
 assert.ok(puebla, 'No se cargó La Puebla');
+console.log('Cobertura La Puebla:', JSON.stringify(puebla.testAudit?.themes || []));
 assert.equal(puebla.themes.length, 19);
 assert.equal(puebla.testAudit.targetThemes, 19);
 assert.equal(puebla.testAudit.minimumQuestions, 30);
