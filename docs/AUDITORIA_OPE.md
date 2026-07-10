@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.57
+# Auditoría global de OpoWeb · v0.58
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -10,6 +10,20 @@ Fecha de revisión: 10 de julio de 2026.
 4. Universidad Carlos III de Madrid · Auxiliar Administrativo C2.
 
 Las Ventas con Peña Aguilera está retirada del selector mediante sus dos identificadores históricos. No se añadirán nuevas convocatorias hasta cerrar estas cuatro.
+
+## Avance aproximado
+
+| Área | Avance |
+|---|---:|
+| Funcionamiento e interfaz | 82 % |
+| Diputación C1 | 79 % |
+| UC3M C2 | 52 % |
+| La Puebla C2 | 30 % |
+| Carranque C2 | 23 % |
+| Arquitectura y pruebas | 40 % |
+| **OpoWeb global** | **56 %** |
+
+La estimación pondera temario, banco real, supuestos, simulacros, auditoría normativa y deuda técnica.
 
 ## Formatos oficiales del primer ejercicio
 
@@ -41,11 +55,9 @@ Las Ventas con Peña Aguilera está retirada del selector mediante sus dos ident
 - 40 variantes.
 - Tres simulacros prácticos internos.
 
-La primera vuelta no permite considerar perfecto todo el temario. Es una base profunda, pero faltan densidad de test, revisión transversal y cierre de fuentes internas.
+### Segunda vuelta v0.58
 
-### Segunda vuelta v0.57
-
-Temas 1–18 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–19 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
@@ -54,24 +66,26 @@ Resultado acumulado:
 - 105 preguntas nuevas en v0.55;
 - 15 preguntas nuevas en v0.56;
 - 19 preguntas nuevas en v0.57;
-- 274 preguntas nuevas de segunda vuelta;
-- 859 preguntas manuales acumuladas;
-- dieciocho temas consecutivos a 30+ preguntas reales;
+- 18 preguntas nuevas en v0.58;
+- 292 preguntas nuevas de segunda vuelta;
+- 877 preguntas manuales acumuladas;
+- diecinueve temas consecutivos a 30+ preguntas reales;
+- segunda vuelta: 19 de 39 temas auditables, aproximadamente 49 %;
 - justificación mediante artículo o regla oficial;
 - cuatro alternativas distintas;
 - dificultad graduada;
 - control de duplicados;
 - simulacros regenerados.
 
-Ámbitos reforzados en v0.57:
+Ámbitos reforzados en v0.58:
 
-- derechos individuales e individuales ejercidos colectivamente;
-- vacaciones, deberes y código de conducta;
-- deber de formación;
-- servicio activo y servicios especiales;
-- expectativa de destino y excedencia forzosa;
-- excedencias voluntarias y por violencia de género;
-- suspensión de funciones y reingreso.
+- legalidad, tipicidad e irretroactividad;
+- proporcionalidad, culpabilidad y presunción de inocencia;
+- faltas y sanciones disciplinarias;
+- responsabilidad y extinción;
+- prescripción y cancelación;
+- procedimiento y medidas cautelares;
+- relación con la jurisdicción penal.
 
 ### Criterio de perfección pendiente
 
@@ -89,9 +103,8 @@ Para considerar cerrada Diputación deben cumplirse simultáneamente:
 
 ### Próximo bloque
 
-Temas 19–21:
+Temas 20–21:
 
-- régimen disciplinario;
 - contrato de trabajo;
 - modalidades contractuales y Seguridad Social.
 
@@ -118,6 +131,6 @@ Pendiente normativa interna, presupuesto, contratación y elevar once temas a 30
 2. Separar proceso, temario, preguntas, supuestos y simulacros.
 3. Eliminar capas históricas.
 4. Conservar progreso guardado.
-5. Ampliar pruebas de regresión.
+5. Ampliar pruebas de regresión y cobertura CI.
 6. Impedir reutilización fuera del programa oficial.
 7. Auditar vigencia de títulos, fechas y referencias.
