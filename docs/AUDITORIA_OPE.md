@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.62
+# Auditoría global de OpoWeb · v0.63
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -15,13 +15,13 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 85 % |
-| Diputación C1 | 87 % |
+| Funcionamiento e interfaz | 86 % |
+| Diputación C1 | 92 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 49 % |
-| **OpoWeb global** | **61 %** |
+| Arquitectura y pruebas | 51 % |
+| **OpoWeb global** | **64 %** |
 
 ## Diputación de Toledo C1
 
@@ -32,7 +32,6 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 - Segundo ejercicio práctico.
 - 40 temas.
 - Solicitudes del 6 al 31 de julio de 2026.
-- Tasa general: 26 euros.
 
 ### Primera vuelta
 
@@ -41,36 +40,34 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 - 585 preguntas manuales.
 - 20 supuestos, 40 variantes y tres simulacros prácticos internos.
 
-### Segunda vuelta v0.62
+### Segunda vuelta v0.63
 
-Temas 1–21 y 23–26 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–21 y 23–31 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
-- 62 preguntas nuevas en v0.62;
-- 442 preguntas nuevas de segunda vuelta;
-- 1.027 preguntas manuales acumuladas;
-- 25 temas a 30+ preguntas reales;
-- segunda vuelta: 25 de 39 temas auditables, aproximadamente 64 %;
+- 75 preguntas nuevas en v0.63;
+- 517 preguntas nuevas de segunda vuelta;
+- 1.102 preguntas manuales acumuladas;
+- 30 temas a 30+ preguntas reales;
+- segunda vuelta: 30 de 39 temas auditables, aproximadamente 77 %;
 - opciones distintas, respuesta rotada y dificultad graduada;
 - control de duplicados y simulacros regenerados.
 
-Ámbitos reforzados en v0.62:
+Ámbitos reforzados en v0.63:
 
-- igualdad de trato, discriminación, acoso, acciones positivas y planes de igualdad;
-- transversalidad, impacto de género, estadísticas y lenguaje no sexista en Castilla-La Mancha;
-- obligación tributaria, hecho imponible, devengo, sujetos, recargos y prescripción;
-- gestión y revisión tributaria;
-- periodo voluntario y ejecutivo, aplazamiento, compensación y devolución;
-- providencia de apremio, embargo y vías de impugnación.
+- presupuesto general local, elaboración, aprobación, publicación, prórroga y reclamaciones;
+- protección de datos, derechos, publicidad activa, acceso y buen gobierno;
+- IBI, IAE, IVTM, IIVTNU y tasas;
+- firma, sello, sellado de tiempo, entrega certificada y prestadores de confianza.
 
 ### Criterio de cierre pendiente
 
-1. completar temas 27–40 a 30–40 preguntas reales;
+1. completar temas 32–40 a 30–40 preguntas reales;
 2. cerrar tema 22 con fuentes internas oficiales;
 3. auditar transversalmente vigencia, duplicados y cobertura;
 4. consolidar la arquitectura histórica;
-5. ampliar pruebas de regresión y validación visual.
+5. ampliar pruebas de navegador.
 
 ## La Puebla
 
