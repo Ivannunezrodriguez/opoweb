@@ -11,72 +11,64 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.61.0**
-- Caché PWA: `opoweb-v68`
+- **OpoWeb v0.62.0**
+- Caché PWA: `opoweb-v69`
 - Última revisión estructural: 10 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 84 % |
-| Diputación C1 | 84 % |
+| Funcionamiento e interfaz | 85 % |
+| Diputación C1 | 87 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 47 % |
-| **OpoWeb global** | **59 %** |
+| Arquitectura y pruebas | 49 % |
+| **OpoWeb global** | **61 %** |
 
-Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica.
+Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica. No representan probabilidad de aprobar.
 
 ## Estado real de Diputación
 
 - 39 de 40 temas con primera vuelta profunda;
 - tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT;
 - 585 preguntas manuales de primera vuelta;
-- 380 preguntas añadidas durante la segunda vuelta;
-- **965 preguntas manuales acumuladas**;
-- temas 1–21 y 23 elevados al objetivo mínimo de 30 preguntas reales;
+- 442 preguntas añadidas durante la segunda vuelta;
+- **1.027 preguntas manuales acumuladas**;
+- temas 1–21 y 23–26 elevados al objetivo mínimo de 30 preguntas reales;
 - tres simulacros tipo test de 50 + 5;
 - 20 supuestos completos y 40 variantes;
 - tres simulacros prácticos internos.
 
-La segunda vuelta alcanza **22 de los 39 temas actualmente auditables: aproximadamente un 56 %**. Para cerrar Diputación faltan los temas 24–40, el tema 22, la auditoría transversal y la consolidación técnica.
+La segunda vuelta alcanza **25 de los 39 temas actualmente auditables: aproximadamente un 64 %**. Para cerrar Diputación faltan los temas 27–40, el tema 22, la auditoría transversal y la consolidación técnica.
 
-## Segunda vuelta v0.61
+## Segunda vuelta v0.62
 
-Se ha reforzado el tema 23: **Ley 31/1995 de Prevención de Riesgos Laborales**.
+Se han reforzado:
+
+- **Tema 24:** igualdad entre mujeres y hombres, normativa estatal y de Castilla-La Mancha.
+- **Tema 25:** obligación tributaria, sujetos, gestión, extinción y revisión.
+- **Tema 26:** recaudación voluntaria y ejecutiva, aplazamiento, compensación, devolución y apremio.
 
 ### Resultado
 
-- 22 preguntas nuevas y específicas;
-- 380 preguntas acumuladas en la segunda vuelta;
-- veintidós temas con al menos 30 preguntas reales;
-- cuatro alternativas distintas;
-- respuesta correcta rotada;
+- 62 preguntas nuevas y específicas;
+- 442 preguntas acumuladas en la segunda vuelta;
+- veinticinco temas con al menos 30 preguntas reales;
+- cuatro alternativas distintas y respuesta correcta rotada;
 - dificultad baja, media y alta;
-- justificación mediante artículos concretos de la Ley 31/1995;
+- justificación con artículos de las normas aplicables;
 - regeneración de los tres simulacros.
-
-### Contenido reforzado
-
-- derecho a protección eficaz y deber correlativo;
-- principios de la acción preventiva;
-- plan, evaluación y planificación;
-- información, formación, emergencias y riesgo grave e inminente;
-- vigilancia de la salud y confidencialidad;
-- obligaciones de los trabajadores;
-- modalidades de organización preventiva;
-- Delegados de Prevención y Comité de Seguridad y Salud.
 
 ## Próximas prioridades
 
 ### Diputación
 
-1. Reforzar el tema 24 de igualdad.
-2. Continuar con los temas tributarios, presupuestarios, transparencia y protección de datos.
-3. Completar el bloque informático y ofimático 32–40.
-4. Cerrar el tema 22 solo con textos oficiales internos.
+1. Reforzar los temas 27–31: presupuesto, protección de datos, transparencia, impuestos locales y servicios electrónicos de confianza.
+2. Completar el bloque informático y ofimático 32–40.
+3. Cerrar el tema 22 solo con textos oficiales internos.
+4. Auditar referencias, duplicados, cobertura y dificultad.
 5. Consolidar las capas históricas cuando el contenido esté estabilizado.
 
 ### Carranque
@@ -93,36 +85,24 @@ Cerrar normativa interna pendiente y elevar a 30–40 preguntas los temas incomp
 
 ## Pruebas automáticas
 
-GitHub Actions ejecuta en cada `push` y `pull_request`:
-
-```bash
-node tests/smoke-v56.js
-node tests/smoke-v57.js
-node tests/smoke-v58.js
-node tests/smoke-v59.js
-node tests/smoke-v60.js
-node tests/smoke-v61.js
-```
-
-Las pruebas comprueban los temas 17–21 y 23, cifras acumuladas, simulacros 50 + 5, ausencia de duplicados internos y exclusión del tema 22.
+GitHub Actions ejecuta en cada `push` y `pull_request` las pruebas `smoke-v56` a `smoke-v62`. Se comprueban recuentos, simulacros 50 + 5, ausencia de duplicados internos y exclusión del tema 22.
 
 ## Historial reciente
+
+### v0.62.0 · 2026-07-10
+
+- Añadidas 62 preguntas a los temas 24–26.
+- Alcanzadas 1.027 preguntas manuales acumuladas.
+- Veinticinco temas elevados al objetivo mínimo de 30 preguntas reales.
+- Regenerados los simulacros.
+- Actualizada la caché a `opoweb-v69`.
 
 ### v0.61.0 · 2026-07-10
 
 - Añadidas 22 preguntas al tema 23.
-- Temas 1–21 y 23 elevados al objetivo mínimo de 30 preguntas reales.
 - Alcanzadas 965 preguntas manuales acumuladas.
-- Desarrollada la prevención de riesgos laborales.
-- Regenerados los simulacros.
-- Actualizada la caché a `opoweb-v68`.
 
 ### v0.60.0 · 2026-07-10
 
 - Añadidas 36 preguntas al tema 21.
 - Alcanzadas 943 preguntas manuales acumuladas.
-
-### v0.59.0 · 2026-07-10
-
-- Añadidas 30 preguntas al tema 20.
-- Alcanzadas 907 preguntas manuales acumuladas.
