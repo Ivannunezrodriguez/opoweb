@@ -37,8 +37,6 @@
 | Formación | 5 | 0 hasta validar; potencial 3,3–5 |
 | **Total** | **30** | **0 consolidado** |
 
-No debe darse por válido ningún curso hasta comprobar entidad, financiación pública, fecha, horas, contenido y documentación acreditativa.
-
 ## Método OpoWeb
 
 Cada tema conserva:
@@ -50,111 +48,107 @@ Cada tema conserva:
 5. Retención activa.
 6. Cuadro para test y supuesto práctico.
 
-## Auditoría del temario · OpoWeb v0.34
+## Auditoría del temario · OpoWeb v0.35
 
 | Tema | Estado actual |
 |---|---|
-| 1. Constitución | Revisado en profundidad: estructura, derechos, leyes, territorio y reforma |
-| 2. Ley 39/2015 I | Revisado en profundidad: interesados, actividad, plazos, actos y notificaciones |
-| 3. Ley 39/2015 II | Revisado en profundidad: procedimiento, ejecución, revisión y recursos |
-| 4. Ley 40/2015 I | Revisado en profundidad: órganos, competencia, colegiados, abstención y recusación |
-| 5. Ley 40/2015 II | Revisado en profundidad: sede, portal, actuación automatizada, firma y archivo |
-| 6. Protección de datos | Revisado en profundidad: principios, derechos, responsable, encargado y DPD |
+| 1. Constitución | Revisado en profundidad |
+| 2. Ley 39/2015 I | Revisado en profundidad |
+| 3. Ley 39/2015 II | Revisado en profundidad |
+| 4. Ley 40/2015 I | Revisado en profundidad |
+| 5. Ley 40/2015 II | Revisado en profundidad |
+| 6. Protección de datos | Revisado en profundidad |
 | 7. Transparencia Madrid/UC3M | Ampliado; pendiente texto consolidado y plazos literales |
-| 8. Igualdad UC3M | Completado con III Plan 2025-2029 y protocolo UC3M |
-| 9. Ofimática | Completo como base: Word, Excel, Gmail, Drive, Docs, Sheets y Calendar |
-| 10. TREBEP | Completo como base; siguiente bloque de profundización |
-| 11. RD 364/1995 e incompatibilidades | Completo como base; siguiente bloque de profundización |
-| 12. PRL | Base común revisada; siguiente bloque de profundización |
+| 8. Igualdad UC3M | Completado con III Plan y protocolo UC3M |
+| 9. Ofimática | Revisado en profundidad en v0.35 |
+| 10. TREBEP | Revisado por artículos 8–15, 52–54, 62–68 y 85–92 |
+| 11. RD 364/1995 e incompatibilidades | Revisado en profundidad |
+| 12. PRL | Revisado por artículos 1–4, 14–29 y 30–39 |
 | 13. LOSU I | Completado por títulos y artículos relevantes |
-| 14. LOSU II | Completado: estudiantado, régimen económico, PDI y PTGAS |
-| 15. Estatutos UC3M | Desarrollado por los cuatro bloques oficiales; pendiente literalidad de artículos, mayorías y plazos |
-| 16. RD 822/2021 y normativa UC3M | Marco estatal completado; pendientes reglas internas UC3M |
-| 17. RD 534/2024 y admisión | Marco estatal completado; pendientes cupos, ponderaciones y calendario anual |
-| 18. Presupuesto UC3M I | Desarrollado: características, estructura, créditos, modificaciones e ingresos; pendientes datos internos vigentes |
-| 19. Presupuesto UC3M II | Desarrollado: gasto, documentos contables, pagos, inversiones y cierre; pendientes límites y fechas internas |
-| 20. Contratos | LCSP ampliada; pendientes delegaciones y procedimiento interno UC3M |
+| 14. LOSU II | Completado |
+| 15. Estatutos UC3M | Desarrollado; pendiente literalidad consolidada |
+| 16. RD 822/2021 y normativa UC3M | Marco estatal completado; pendientes reglas internas |
+| 17. RD 534/2024 y admisión | Marco estatal completado; pendientes datos anuales UC3M |
+| 18. Presupuesto UC3M I | Desarrollado; pendientes datos internos vigentes |
+| 19. Presupuesto UC3M II | Desarrollado; pendientes límites y fechas internas |
+| 20. Contratos | LCSP ampliada; pendientes delegaciones y procedimiento interno |
 
-## Revisión profunda de los temas 1 a 6
+## Revisión v0.35 · Tema 9
 
-### Tema 1 · Constitución
+Se ha desarrollado:
 
-Se ha incorporado:
+- Word 2019: fuente, párrafo, estilos, secciones, tablas, encabezado, pie, control de cambios, comentarios, combinación de correspondencia, impresión y PDF.
+- Excel 2019: libro, hoja, celda, rango, fórmulas, funciones, referencias relativas, absolutas y mixtas, ordenación, filtros, tablas, validación, formato condicional y gráficos.
+- Drive: permisos lector, comentarista y editor.
+- Docs y Sheets: colaboración e historial de versiones.
+- Calendar: eventos, invitados, recurrencia y disponibilidad.
+- Gmail: Para, CC, CCO, responder, reenviar, etiquetas, filtros y seguridad.
 
-- estructura completa y ubicación por títulos;
-- artículos 10, 14, 15 a 29, 30 a 38, 39 a 55;
-- leyes orgánicas, decretos legislativos y decretos-leyes;
-- organización territorial de los artículos 137 a 158;
-- reforma ordinaria y agravada de los artículos 166 a 169.
+## Revisión v0.35 · Tema 10
 
-### Temas 2 y 3 · Ley 39/2015
+### Clases de personal
 
-Se han incorporado los plazos de mayor frecuencia de examen:
+- Artículo 8: funcionario de carrera, funcionario interino, personal laboral y personal eventual.
+- Artículos 9 a 13: definición y características de cada clase y personal directivo.
 
-| Trámite/recurso | Plazo |
-|---|---:|
-| Subsanación | 10 días |
-| Audiencia | 10 a 15 días |
-| Información pública | Mínimo 20 días |
-| Procedimiento simplificado | 30 días como regla |
-| Resolución de alzada | 3 meses |
-| Resolución de reposición | 1 mes |
-| Revisión extraordinaria por error de hecho | 4 años |
+### Derechos y deberes
 
-También se diferencian nulidad, anulabilidad, convalidación, revisión de oficio, lesividad, revocación y rectificación de errores.
+- Artículo 14: derechos individuales.
+- Artículo 15: derechos ejercidos colectivamente.
+- Artículos 52 a 54: deberes, principios éticos y principios de conducta.
 
-### Temas 4 y 5 · Ley 40/2015
+### Relación de servicio
 
-Se ha completado la diferencia entre:
+- Artículo 62: proceso selectivo, nombramiento, acatamiento y toma de posesión.
+- Artículos 63 a 68: pérdida, renuncia, nacionalidad, inhabilitación, jubilación y rehabilitación.
+- Artículos 85 a 92: situaciones administrativas.
 
-- delegación de competencia;
-- avocación;
-- encomienda de gestión;
-- delegación de firma;
-- suplencia;
-- abstención y recusación;
-- sede electrónica y portal de internet;
-- sello electrónico y código seguro de verificación.
+## Revisión v0.35 · Tema 11
 
-### Tema 6 · Protección de datos
+- Convocatorias y bases.
+- Concurso como sistema normal de provisión.
+- Libre designación con convocatoria pública.
+- Permanencia mínima general de dos años para concursar desde destino definitivo, con excepciones.
+- Promoción interna por oposición o concurso-oposición.
+- Los méritos no compensan ejercicios de oposición no superados.
+- Regla general de incompatibilidad de un segundo puesto público.
+- Prohibición de actividades privadas relacionadas directamente con el destino.
+- Diferencia entre actividad exceptuada y compatibilidad autorizada.
 
-Se han desarrollado:
+## Revisión v0.35 · Tema 12
 
-- exactitud y confidencialidad;
-- consentimiento y tratamiento de datos de menores;
-- información por capas;
-- acceso, rectificación, supresión, limitación, portabilidad y oposición;
-- bloqueo de datos;
-- responsable y encargado;
-- designación, cualificación e independencia del DPD.
+- Derecho a protección eficaz y deber correlativo.
+- El coste preventivo no recae en el trabajador.
+- Principios del artículo 15.
+- Evaluación y planificación.
+- Información, formación y emergencias.
+- Riesgo grave e inminente.
+- Vigilancia de la salud y confidencialidad.
+- Obligaciones del artículo 29.
+- Trabajadores designados, servicio propio y servicio ajeno.
+- Delegados de Prevención.
+- Comité de Seguridad y Salud: 50 o más trabajadores, paritario, colegiado y reunión trimestral.
 
 ## Test y simulacros
 
-- **85 preguntas jurídicas manuales nuevas** para los temas 1 a 6.
+- 85 preguntas manuales para los temas 1 a 6.
+- **60 preguntas manuales nuevas** para los temas 9 a 12.
 - Tres simulacros de 70 preguntas regenerados.
-- Las preguntas se centran en artículo, plazo, órgano, efecto y diferencia entre figuras.
-
-## Temas 15, 18 y 19
-
-El tema 15 se limita al enunciado oficial: Defensor Universitario, servicios universitarios, régimen económico-financiero y reforma estatutaria.
-
-Los temas 18 y 19 incluyen estructura presupuestaria, modificaciones, reconocimiento de derechos, fases RC-A-D-O-P, documentos AD/ADO, compra de bienes y servicios, transferencias, inversiones, liquidación y cierre.
-
-Los documentos contables no sustituyen el expediente, la competencia ni la acreditación de la prestación.
+- Las preguntas se centran en operaciones, artículos, plazos, órganos, efectos y diferencias entre figuras.
 
 ## Trabajo pendiente para cerrar la literalidad
 
 1. Texto consolidado de los Estatutos UC3M.
-2. Presupuesto y bases de ejecución UC3M exigibles en la fecha de la lista definitiva.
+2. Presupuesto y bases de ejecución UC3M exigibles.
 3. Ley 10/2019 consolidada con plazos exactos.
 4. Normas internas de matrícula, permanencia y evaluación.
 5. Delegaciones y procedimiento interno de contratación.
-6. Profundizar manualmente los temas 9, 10, 11 y 12.
+6. Revisión profunda final de temas 13, 14, 16, 17 y 20.
 7. Aumentar progresivamente la batería hasta 30–40 preguntas manuales por tema.
 
 ## Estrategia
 
-- Priorizar temas 1 a 6 y tema 9 durante la primera vuelta.
+- Priorizar temas 1 a 12 en la primera vuelta.
 - Estudiar aparte temas 13 a 19 por su especificidad universitaria.
 - Entrenar a una velocidad media de unos 51 segundos por pregunta.
 - Practicar simulacros completos de 70 preguntas con penalización real.
