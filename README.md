@@ -11,21 +11,21 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.63.0**
-- Caché PWA: `opoweb-v70`
+- **OpoWeb v0.64.0**
+- Caché PWA: `opoweb-v71`
 - Última revisión estructural: 10 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 86 % |
-| Diputación C1 | 92 % |
+| Funcionamiento e interfaz | 87 % |
+| Diputación C1 | 96 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 51 % |
-| **OpoWeb global** | **64 %** |
+| Arquitectura y pruebas | 53 % |
+| **OpoWeb global** | **67 %** |
 
 Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica. No representan probabilidad de aprobar.
 
@@ -34,74 +34,76 @@ Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, s
 - 39 de 40 temas con primera vuelta profunda;
 - tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT;
 - 585 preguntas manuales de primera vuelta;
-- 517 preguntas añadidas durante la segunda vuelta;
-- **1.102 preguntas manuales acumuladas**;
-- temas 1–21 y 23–31 elevados al objetivo mínimo de 30 preguntas reales;
+- 652 preguntas añadidas durante la segunda vuelta;
+- **1.237 preguntas manuales acumuladas**;
+- los 39 temas auditables alcanzan al menos 30 preguntas reales;
 - tres simulacros tipo test de 50 + 5;
 - 20 supuestos completos y 40 variantes;
 - tres simulacros prácticos internos.
 
-La segunda vuelta alcanza **30 de los 39 temas actualmente auditables: aproximadamente un 77 %**. Para cerrar Diputación faltan los temas 32–40, el tema 22, la auditoría transversal y la consolidación técnica.
+La segunda vuelta alcanza **39 de 39 temas actualmente auditables: 100 %**. Esto no equivale al cierre total de Diputación: faltan el tema 22, la auditoría transversal, las pruebas de navegador y la consolidación técnica.
 
-## Segunda vuelta v0.63
+## Segunda vuelta v0.64
 
-Se han reforzado:
+Se han reforzado los temas 32–40:
 
-- **Tema 27:** presupuesto general de las entidades locales.
-- **Tema 28:** protección de datos, transparencia y buen gobierno.
-- **Tema 29:** IBI e IAE.
-- **Tema 30:** IVTM, IIVTNU y tasas.
-- **Tema 31:** firma electrónica, certificados y servicios electrónicos de confianza.
+- Windows 11: archivos, carpetas y unidades locales y de red;
+- Edge y GroupWise 24;
+- impresión y escaneado;
+- LibreOffice Writer, Calc, Base e Impress;
+- ordenador personal y componentes;
+- periféricos y almacenamiento externo.
 
 ### Resultado
 
-- 75 preguntas nuevas y específicas;
-- 517 preguntas acumuladas en la segunda vuelta;
-- treinta temas con al menos 30 preguntas reales;
+- 135 preguntas nuevas y específicas;
+- 652 preguntas acumuladas en la segunda vuelta;
+- 1.237 preguntas manuales acumuladas;
+- 39 temas auditables con al menos 30 preguntas reales;
 - cuatro alternativas distintas, respuesta correcta rotada y dificultad graduada;
 - regeneración de los tres simulacros.
 
-## Próximas prioridades
+## Bloque pendiente de Diputación
 
-### Diputación
+1. Localizar y verificar el Acuerdo Regulador vigente y los Estatutos oficiales del OAPGT para completar el tema 22.
+2. Auditar transversalmente vigencia, duplicados, cobertura y dificultad.
+3. Incorporar pruebas de navegador y validación visual.
+4. Consolidar las capas históricas sin perder progreso guardado.
 
-1. Reforzar los temas 32–40 de informática y ofimática.
-2. Cerrar el tema 22 solo con textos oficiales internos.
-3. Auditar referencias, duplicados, cobertura y dificultad.
-4. Consolidar las capas históricas.
-
-### Carranque
-
-Completar los 20 temas, sustituir preguntas de método y crear supuestos exclusivos de temas 3–20.
-
-### La Puebla
-
-Completar 19 temas, alcanzar 30–40 preguntas por tema y resolver al menos 20 supuestos.
+## Resto de convocatorias
 
 ### UC3M
 
-Cerrar normativa interna pendiente y elevar a 30–40 preguntas los temas incompletos.
+Pendiente cerrar normativa interna y elevar once temas a 30–40 preguntas.
+
+### La Puebla
+
+Pendiente completar 19 temas, sustituir plantillas y ampliar supuestos.
+
+### Carranque
+
+Pendiente desarrollar 20 temas, sustituir preguntas de método y rehacer los supuestos sobre temas 3–20.
 
 ## Pruebas automáticas
 
-GitHub Actions ejecuta en cada `push` y `pull_request` las pruebas `smoke-v56` a `smoke-v63`. Se comprueban recuentos, simulacros 50 + 5, ausencia de duplicados internos y exclusión del tema 22.
+GitHub Actions ejecuta en cada `push` y `pull_request` las pruebas `smoke-v56` a `smoke-v64`. Se comprueban recuentos, simulacros 50 + 5, ausencia de duplicados internos y exclusión controlada del tema 22.
 
 ## Historial reciente
+
+### v0.64.0 · 2026-07-10
+
+- Añadidas 135 preguntas a los temas 32–40.
+- Alcanzadas 1.237 preguntas manuales acumuladas.
+- Completados los 39 temas auditables a 30+ preguntas.
+- Regenerados los simulacros.
+- Actualizada la caché a `opoweb-v71`.
 
 ### v0.63.0 · 2026-07-10
 
 - Añadidas 75 preguntas a los temas 27–31.
 - Alcanzadas 1.102 preguntas manuales acumuladas.
-- Treinta temas elevados al objetivo mínimo de 30 preguntas reales.
-- Regenerados los simulacros.
-- Actualizada la caché a `opoweb-v70`.
 
 ### v0.62.0 · 2026-07-10
 
 - Añadidas 62 preguntas a los temas 24–26.
 - Alcanzadas 1.027 preguntas manuales acumuladas.
-
-### v0.61.0 · 2026-07-10
-
-- Añadidas 22 preguntas al tema 23.
-- Alcanzadas 965 preguntas manuales acumuladas.

@@ -14,18 +14,18 @@ Cada convocatoria se valora según cinco bloques:
 
 El porcentaje global pondera también arquitectura común, pruebas automáticas y deuda técnica.
 
-## Estado v0.63
+## Estado v0.64
 
 | Área | Estimación |
 |---|---:|
-| Funcionamiento e interfaz | 86 % |
-| Diputación C1 | 92 % |
+| Funcionamiento e interfaz | 87 % |
+| Diputación C1 | 96 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 51 % |
-| OpoWeb global | 64 % |
+| Arquitectura y pruebas | 53 % |
+| OpoWeb global | 67 % |
 
 ## Lectura correcta
 
-Diputación tiene 39 de 40 temas en primera vuelta y 30 de los 39 actualmente auditables han completado la segunda vuelta mínima de 30 preguntas reales. El tema 22, la auditoría transversal y la consolidación técnica impiden considerar cerrada la convocatoria.
+Los 39 temas auditables de Diputación han completado la segunda vuelta mínima de 30 preguntas reales. Ese bloque queda al 100 %, pero la convocatoria completa permanece al 96 % porque el tema 22 carece todavía de fuentes internas oficiales verificadas y faltan auditoría transversal, pruebas de navegador y consolidación técnica.
