@@ -14,18 +14,18 @@ Cada convocatoria se valora según cinco bloques:
 
 El porcentaje global pondera también arquitectura común, pruebas automáticas y deuda técnica.
 
-## Estado v0.65
+## Estado v0.66
 
 | Área | Estimación |
 |---|---:|
-| Funcionamiento e interfaz | 88 % |
+| Funcionamiento e interfaz | 89 % |
 | Diputación C1 | 98 % |
-| UC3M C2 | 52 % |
+| UC3M C2 | 78 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 55 % |
-| OpoWeb global | 68 % |
+| Arquitectura y pruebas | 58 % |
+| OpoWeb global | 74 % |
 
 ## Lectura correcta
 
-Los 40 temas de Diputación alcanzan el objetivo cuantitativo mínimo de 30 preguntas. La cobertura del programa queda al 100 %, pero la convocatoria completa permanece al 98 % porque la literalidad de los Estatutos vigentes del OAPGT no se ha localizado en una publicación oficial accesible y faltan auditoría transversal, pruebas de navegador y consolidación técnica.
+Diputación tiene cobertura cuantitativa completa y permanece al 98 % por una brecha documental y técnica. UC3M alcanza 20 de 20 temas con al menos 30 preguntas y simulacros 70 + 5, pero permanece al 78 % hasta verificar normativa interna, presupuesto, matrícula, permanencia, evaluación, admisión, contratación y literalidad institucional.
