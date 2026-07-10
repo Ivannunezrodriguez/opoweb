@@ -1,107 +1,91 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.61
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.62
 
 ## Estado del proceso
 
 - 2 plazas de Administrativo/a C1.
-- Sistema: oposición libre.
-- Solicitudes: del 6 al 31 de julio de 2026.
+- Oposición libre.
+- Solicitudes del 6 al 31 de julio de 2026.
 - Primer ejercicio: 50 preguntas + 5 reservas, 60 minutos.
 - Segundo ejercicio: práctico obligatorio y eliminatorio.
-- DAM permite participar, pero no añade puntos porque no existe concurso.
+- DAM permite participar, pero no aporta puntos porque no existe concurso.
 
 ## Avance aproximado
 
-- Diputación en conjunto: **84 %**.
+- Diputación en conjunto: **87 %**.
 - Primera vuelta: 39 de 40 temas.
-- Segunda vuelta: 22 de 39 temas auditables, aproximadamente **56 %**.
+- Segunda vuelta: 25 de 39 temas auditables, aproximadamente **64 %**.
 - Tema 22 pendiente de fuentes internas oficiales.
 
-## Estado real del temario
+## Estado real
 
-- Temas 1–21 y 23 con segunda vuelta mínima de banco.
-- 965 preguntas manuales acumuladas.
+- Temas 1–21 y 23–26 con segunda vuelta mínima de banco.
+- 1.027 preguntas manuales acumuladas.
 - Tres simulacros 50 + 5.
 - 20 supuestos y 40 variantes.
-- El conjunto todavía no se considera perfecto ni cerrado.
+- El conjunto todavía no está cerrado ni puede considerarse perfecto.
 
-## Segunda vuelta v0.61
+## Segunda vuelta v0.62
 
-### Tema reforzado
+### Temas reforzados
 
-23. Ley 31/1995 de Prevención de Riesgos Laborales: derechos y obligaciones, servicios de prevención, consulta y participación.
+24. Igualdad entre mujeres y hombres: Ley 12/2010 de Castilla-La Mancha y Ley Orgánica 3/2007.
 
-### Preguntas añadidas
+25. Obligación tributaria, tributos locales, gestión, extinción y revisión.
 
-- 22 preguntas nuevas en v0.61.
-- 380 preguntas acumuladas en la segunda vuelta.
-- 965 preguntas manuales acumuladas.
-- Veintidós temas con al menos 30 preguntas reales.
-- Cuatro opciones distintas.
-- Respuesta correcta rotada.
-- Dificultad baja, media y alta.
-- Justificación mediante artículos concretos de la Ley 31/1995.
+26. Recaudación voluntaria y ejecutiva, aplazamiento, compensación, devolución y apremio.
 
-## Contenido reforzado del tema 23
+### Resultado
 
-### Derechos y obligaciones
+- 62 preguntas nuevas.
+- 442 preguntas acumuladas en la segunda vuelta.
+- 1.027 preguntas manuales acumuladas.
+- Veinticinco temas con al menos 30 preguntas reales.
+- Cuatro opciones, respuesta correcta rotada y dificultad graduada.
+- Justificación mediante artículos concretos de la normativa aplicable.
 
-- derecho a protección eficaz;
-- deber empresarial y deber de las Administraciones respecto de su personal;
-- gratuidad de las medidas preventivas;
-- principios generales de prevención;
-- plan, evaluación y planificación;
-- equipos de trabajo y protección individual;
-- información y formación;
-- emergencias y riesgo grave e inminente;
-- vigilancia de la salud, intimidad y confidencialidad;
-- obligaciones de los trabajadores.
+## Contenido reforzado
 
-### Organización, consulta y participación
+### Igualdad
 
-- trabajadores designados;
-- servicio de prevención propio o ajeno;
-- concepto y funciones del servicio de prevención;
-- consulta previa;
-- Delegados de Prevención;
-- Comité de Seguridad y Salud;
-- composición paritaria;
-- constitución desde cincuenta trabajadores;
-- reuniones trimestrales.
+- discriminación directa e indirecta;
+- acoso sexual y por razón de sexo;
+- embarazo, maternidad e indemnidad frente a represalias;
+- nulidad, reparación y acciones positivas;
+- transversalidad y composición equilibrada;
+- planes de igualdad;
+- ámbito local de la Ley 12/2010;
+- impacto de género, estadísticas y lenguaje no sexista.
 
-## Banco y simulacros
+### Obligación y gestión tributaria
 
-- 965 preguntas manuales acumuladas.
-- Veintidós temas con segunda vuelta mínima completada.
-- Tres simulacros de 50 + 5 regenerados.
-- Tema 22 excluido.
-- Solo se incorporan preguntas reales con cuatro alternativas y justificación.
+- obligación principal, hecho imponible, devengo y exenciones;
+- obligaciones accesorias, interés y recargos;
+- contribuyente, sustituto y otros obligados;
+- extinción y prescripción;
+- procedimientos de gestión y revisión;
+- delegación, colaboración y beneficios fiscales locales.
 
-## Fase práctica
+### Recaudación
 
-- 20 supuestos completos.
-- 40 variantes.
-- Rúbrica sobre 10 por supuesto.
-- Tres simulacros prácticos internos.
-- Respuestas, rúbricas y progreso guardados en el navegador.
+- periodos voluntario y ejecutivo;
+- plazos de ingreso;
+- aplazamiento y fraccionamiento;
+- compensación y devolución de ingresos indebidos;
+- providencia de apremio;
+- embargo y motivos de oposición;
+- reposición y reclamación económico-administrativa.
 
 ## Tema 22
 
-Permanece pendiente de:
+Permanece pendiente del Acuerdo Regulador vigente, los Estatutos oficiales del OAPGT y la comprobación de su organización, funcionamiento y competencias actuales.
 
-- Acuerdo Regulador vigente de Diputación y organismos autónomos;
-- Estatutos oficiales vigentes del OAPGT;
-- organización, funcionamiento y competencias actuales.
+## Fuentes principales de v0.62
 
-No se incorporarán datos internos no verificados.
-
-## Fuentes principales de v0.61
-
-- Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos Laborales, texto consolidado del BOE actualizado el 9 de abril de 2026.
-- Artículos 14 a 22, 29 a 31, 33, 35, 36, 38 y 39.
-- Bases oficiales de la convocatoria de Diputación.
-
-Revisión realizada el 10 de julio de 2026.
+- Ley Orgánica 3/2007, de igualdad efectiva de mujeres y hombres.
+- Ley 12/2010, de igualdad entre mujeres y hombres de Castilla-La Mancha.
+- Ley 58/2003, General Tributaria.
+- Real Decreto Legislativo 2/2004, texto refundido de la Ley Reguladora de las Haciendas Locales.
 
 ## Siguiente bloque
 
-Tema 24: igualdad entre mujeres y hombres en Castilla-La Mancha y normativa estatal.
+Temas 27–31: presupuesto local, protección de datos, transparencia, impuestos locales y servicios electrónicos de confianza.
