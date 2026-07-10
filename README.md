@@ -11,8 +11,8 @@ No se incorporarán nuevas OPE hasta cerrar estas cuatro.
 
 ## Versión actual
 
-- **OpoWeb v0.53.0**
-- Caché PWA: `opoweb-v60`
+- **OpoWeb v0.54.0**
+- Caché PWA: `opoweb-v61`
 - Última revisión estructural: 10 de julio de 2026
 
 ## Estado real de Diputación
@@ -24,42 +24,51 @@ Situación actual:
 - 39 de 40 temas con primera vuelta profunda;
 - tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT;
 - 585 preguntas manuales de primera vuelta;
-- 60 preguntas nuevas en la segunda vuelta para los temas 1–4;
-- temas 1–4 elevados al objetivo mínimo de 30 preguntas reales;
+- 135 preguntas añadidas durante la segunda vuelta;
+- **720 preguntas manuales acumuladas**;
+- temas 1–9 elevados al objetivo mínimo de 30 preguntas reales;
 - tres simulacros tipo test de 50 + 5;
 - 20 supuestos completos;
 - 40 variantes prácticas;
 - rúbrica sobre 10 puntos por caso;
 - tres simulacros prácticos internos.
 
-La primera vuelta significa que existe un desarrollo útil y autosuficiente. No significa que todo el contenido esté ya perfecto. Para considerar cerrada la convocatoria faltan la segunda revisión de cada tema, 30–40 preguntas reales por tema, comprobación global de referencias y el tema 22.
+La primera vuelta significa que existe un desarrollo útil y autosuficiente. No significa que todo el contenido esté ya perfecto. Para considerar cerrada la convocatoria faltan la segunda revisión de los temas 10–40, 30–40 preguntas reales por tema, revisión transversal de referencias y el tema 22.
 
-## Segunda vuelta v0.53
+## Segunda vuelta v0.54
 
-Se han reforzado los temas 1–4:
+Se han reforzado los temas 5–9:
 
-1. Constitución, principios, Tribunal Constitucional y reforma.
-2. Derechos, garantías, ley y reglamento.
-3. Organización institucional y territorial del Estado.
-4. Ley 40/2015: órganos, competencia, abstención y relaciones interadministrativas.
+5. Disposiciones generales, interesados, actividad administrativa, términos y plazos.
+6. Procedimiento administrativo común, iniciación, ordenación, instrucción, finalización y ejecución.
+7. Acto administrativo, eficacia, notificación, nulidad y anulabilidad.
+8. Revisión de oficio y recursos administrativos.
+9. Administración electrónica, sede, registro, expediente y actuación automatizada.
 
 ### Resultado
 
 - 15 preguntas nuevas por tema;
-- 60 preguntas nuevas en total;
+- 75 preguntas nuevas en v0.54;
+- 135 preguntas nuevas acumuladas en segunda vuelta;
+- nueve primeros temas con al menos 30 preguntas reales;
 - cuatro opciones distintas;
 - respuesta correcta rotada;
 - dificultad baja, media y alta;
-- artículo o regla normativa en la justificación;
+- justificación mediante artículo o regla normativa;
 - eliminación de duplicados;
 - regeneración de los tres simulacros.
 
-Las nuevas preguntas cubren, entre otros puntos:
+### Contenido reforzado
 
-- lengua oficial, partidos, sindicatos, Fuerzas Armadas y artículo 9;
-- derechos de libertad, reunión, asociación, tutela y educación;
-- Corona, Cortes, Gobierno, Tribunal Supremo y Ministerio Fiscal;
-- límites de la delegación, avocación, encomienda, firma, suplencia y recusación.
+- capacidad de menores y entidades sin personalidad;
+- representación defectuosa y apoderamiento apud acta;
+- comparecencia, colaboración, silencio y suspensión de plazos;
+- garantías sancionadoras, medidas provisionales y acumulación;
+- prueba, informes, audiencia, información pública y caducidad;
+- notificación en papel, publicación, retroactividad y convalidación;
+- revisión de nulidad, lesividad, revocación y actos de trámite cualificados;
+- alzada, reposición y revisión extraordinaria;
+- identificación y firma, archivo electrónico, sede, CSV y automatización.
 
 ## Fase práctica
 
@@ -86,7 +95,7 @@ Los tres simulacros prácticos internos contienen dos casos obligatorios y una e
 
 ### Diputación
 
-1. Elevar los temas 5–9 a 30–40 preguntas reales.
+1. Elevar los temas 10–16 a 30–40 preguntas reales.
 2. Continuar por bloques hasta completar los 39 temas revisados.
 3. Auditar referencias, duplicados, opciones y dificultad.
 4. Cerrar el tema 22 solo con textos oficiales internos.
@@ -118,23 +127,20 @@ Un tema solo se considera terminado cuando tenga:
 
 ## Historial reciente
 
+### v0.54.0 · 2026-07-10
+
+- Añadidas 75 preguntas a los temas 5–9.
+- Temas 1–9 elevados al objetivo mínimo de 30 preguntas reales.
+- Alcanzadas 720 preguntas manuales acumuladas.
+- Regenerados los simulacros tipo test.
+- Actualizada la caché a `opoweb-v61`.
+
 ### v0.53.0 · 2026-07-10
 
 - Iniciada la segunda vuelta de perfeccionamiento.
 - Añadidas 60 preguntas a los temas 1–4.
-- Temas 1–4 elevados al objetivo mínimo de 30 preguntas reales.
-- Regenerados los simulacros tipo test.
-- Actualizada la caché a `opoweb-v60`.
 
 ### v0.52.0 · 2026-07-10
 
 - Añadidas 40 variantes prácticas.
 - Añadidas rúbricas y tres simulacros prácticos internos.
-
-### v0.51.0 · 2026-07-10
-
-- Sustituidos los supuestos genéricos por 20 casos completos.
-
-### v0.50.0 · 2026-07-10
-
-- Alcanzados 39 temas con primera vuelta profunda.
