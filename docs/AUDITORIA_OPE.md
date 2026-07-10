@@ -1,177 +1,168 @@
-# Auditoría global de OpoWeb · v0.41
+# Auditoría global de OpoWeb · v0.42
 
 Fecha de revisión: 10 de julio de 2026.
 
-## Resultado general
+## Alcance
 
-Convocatorias activas después de la depuración:
+Convocatorias activas:
 
 1. La Puebla de Montalbán · Auxiliar Administrativo C2.
 2. Carranque · Auxiliar Administrativo C2.
 3. Diputación Provincial de Toledo · Administrativo C1.
 4. Universidad Carlos III de Madrid · Auxiliar Administrativo C2.
 
-Las Ventas con Peña Aguilera se elimina del selector. Existía un error de identificador: la capa de retirada filtraba `ventas-aux-admin-2026`, pero la OPE cargada utilizaba `ventas-pena-aguilera-aux-admin-2026`.
+Las Ventas con Peña Aguilera queda eliminada. No se incorporarán nuevas OPE hasta cerrar estas cuatro.
 
-## Resumen de madurez
+## Cambios estructurales ya ejecutados
 
-| OPE | Estado OpoWeb | Temas | Banco actual | Cambio principal |
-|---|---|---:|---:|---|
-| La Puebla | Revisión necesaria | 19 | 228 preguntas | Sustituir test genérico y completar artículos |
-| Carranque | Revisión prioritaria | 20 | 240 preguntas | Desarrollar contenido real y simulacros de 80 |
-| Diputación C1 | Revisión prioritaria | 40 | 480 preguntas | Desarrollar 40 temas y específicos provinciales |
-| UC3M | Avance alto | 20 | Banco auditado v0.40 | Cerrar literalidad interna y elevar 11 temas a 30+ |
+- Formato oficial de simulacro por convocatoria.
+- Cinco preguntas de reserva diferenciadas.
+- Nota calculada solo con preguntas puntuables.
+- Tiempo oficial visible.
+- Auditoría de preguntas reales frente a preguntas de plantilla.
+- Reutilización de bancos únicamente cuando coinciden norma y alcance.
+- Fecha y fuente de verificación del formato.
+- Botón «Volver al listado» siempre visible al desplazarse.
+
+## Formatos oficiales incorporados
+
+| OPE | Test | Reserva | Tiempo | Segundo ejercicio/casos |
+|---|---:|---:|---:|---|
+| La Puebla | 50 | 5 | 60 min | Supuesto o supuestos; formato determinado por el Tribunal |
+| Carranque | 80 | 5 | 90 min | Supuesto o supuestos sobre temas 3 a 20 |
+| Diputación C1 | 50 | 5 | 60 min | Segundo ejercicio práctico eliminatorio |
+| UC3M | 70 | 5 | 60 min | Sin práctico oficial |
 
 ## 1. La Puebla de Montalbán
 
-### Correcto
+### Verificado
 
-- Cuatro plazas y bolsa.
+- Cuatro plazas y constitución de bolsa.
 - Concurso-oposición.
-- Primer ejercicio: 50 preguntas más 5 de reserva, 60 minutos.
-- Corrección: +0,20 acierto, −0,05 error y 0 en blanco.
-- Segundo ejercicio práctico con formato que puede determinar el Tribunal.
-- Programa de 19 temas cargado.
+- Primer ejercicio: 50 preguntas y 5 de reserva, 60 minutos.
+- Acierto +0,20; error −0,05; blanco 0.
+- Segundo ejercicio práctico.
+- Programa de 19 temas.
+- Inscripción registrada el 28 de mayo de 2026.
 
-### Deficiencias
+### Mejoras realizadas en v0.42
 
-- Las 12 preguntas de cada tema preguntan cómo debe estudiarse el tema, no su contenido jurídico o informático.
-- Los desarrollos son útiles como base, pero todavía demasiado breves para estudiar sin consultar la norma.
-- Solo hay 10 supuestos y sus soluciones son pautas genéricas.
-- No existe una auditoría real de cobertura artículo por artículo de los 19 temas.
+- Tres simulacros de 50 + 5.
+- Separación visual de reservas.
+- Sustitución automática de bancos genéricos en temas comunes cuando existe coincidencia normativa segura.
+- Auditoría visible por tema.
 
-### Cambios necesarios
+### Pendiente
 
-1. Sustituir las 228 preguntas genéricas por 30–40 preguntas reales por tema.
-2. Completar definiciones, artículos, plazos, órganos, excepciones y efectos.
-3. Reforzar especialmente tributos locales, recaudación, administración electrónica y ofimática.
-4. Crear al menos 20 supuestos con solución completa.
-5. Mantener seguimiento de listas, tribunal y fecha de examen.
+- Completar 19 temas de forma autosuficiente.
+- Sustituir todas las preguntas de plantilla restantes.
+- Alcanzar 30–40 preguntas reales por tema.
+- Ampliar a 20–25 supuestos con solución completa.
+- Reforzar tributación, recaudación, régimen local, administración electrónica e informática.
 
 ## 2. Carranque
 
-### Correcto
+### Verificado
 
-- Una plaza y bolsa.
+- Una plaza de Auxiliar Administrativo C2.
 - Concurso-oposición.
-- Programa oficial de 20 temas cargado.
-- Primer ejercicio de 80 preguntas más 5 de reserva.
-- Segundo ejercicio práctico sobre los temas 3 a 20.
-- DAM puede aportar 0,75 puntos si fue acreditado dentro de plazo.
+- Primer ejercicio: 80 preguntas y 5 de reserva, 90 minutos.
+- Acierto +0,25; error −0,08; blanco 0.
+- Segundo ejercicio práctico sobre temas 3 a 20.
+- Programa de 20 temas.
+- Estado personal: inscrito.
 
-### Deficiencias
+### Mejoras realizadas en v0.42
 
-- Los 20 temas son fichas de plantilla y no desarrollos normativos completos.
-- Las 240 preguntas son preguntas genéricas de método de estudio.
-- Los simulacros actuales tienen 50 preguntas, pero el examen exige 80 más 5 de reserva.
-- Los supuestos no están restringidos ni trazados expresamente a los temas 3 a 20.
-- Las soluciones no desarrollan norma, artículo, trámite, plazo y consecuencia.
+- Sustituidos los simulacros incorrectos de 50 preguntas por simulacros de 80 + 5.
+- Tiempo oficial de 90 minutos visible.
+- Reutilización de bancos comunes de Constitución, Ley 39/2015, Ley 40/2015, administración electrónica y contratación cuando el alcance coincide.
+- Auditoría de preguntas reales y de plantilla.
 
-### Cambios necesarios
+### Pendiente
 
-1. Reproducir literalmente los 20 títulos oficiales.
-2. Desarrollar cada tema con estructura normativa completa.
-3. Crear 30–40 preguntas reales por tema.
-4. Regenerar simulacros de 80 preguntas y añadir un bloque de 5 reservas.
-5. Rehacer los supuestos exclusivamente sobre los temas 3 a 20.
-6. Verificar cualquier nueva baremación, lista o convocatoria directamente en sede.
+- Desarrollar los 20 temas completos.
+- Alcanzar 30–40 preguntas reales por tema.
+- Rehacer 25 supuestos exclusivamente sobre temas 3 a 20.
+- Añadir soluciones con norma, órgano, trámite, plazo y consecuencia.
+- Verificar la resolución de baremación publicada en sede antes de atribuirla definitivamente a este proceso.
 
 ## 3. Diputación Provincial de Toledo · Administrativo C1
 
-### Corrección urgente realizada
+### Verificado
 
-El estado de la web estaba desactualizado. El plazo ya está abierto:
+- Dos plazas C1, escala de Administración General.
+- Oposición libre, sin concurso.
+- Primer ejercicio: 50 preguntas y 5 de reserva, 60 minutos.
+- Segundo ejercicio práctico eliminatorio.
+- Programa de 40 temas.
+- Solicitudes del 6 al 31 de julio de 2026.
+- Tasa general C1: 26 euros.
+- La falta de justificación del abono determina exclusión no subsanable.
 
-- Publicación indicada por la Diputación en BOE: 4 de julio de 2026.
-- Solicitudes: del 6 al 31 de julio de 2026.
-- Oposición libre, sin fase de concurso.
-- La falta de justificante de tasa determina exclusión no subsanable.
+### Mejoras realizadas en v0.42
 
-### Correcto
+- Tres simulacros de 50 + 5.
+- Auditoría real por tema.
+- Reutilización de preguntas comunes cuando la norma y el alcance coinciden.
+- Estado del proceso y enlaces oficiales actualizados.
 
-- Dos plazas C1.
-- Primer ejercicio: 50 preguntas más 5 reservas, 60 minutos.
-- Segundo ejercicio práctico.
-- Programa oficial de 40 temas cargado.
-- DAM permite participar, pero no añade puntos.
+### Pendiente prioritario
 
-### Deficiencias
-
-- Los 40 temas utilizan una plantilla común con muy poco contenido específico.
-- Las 480 preguntas son genéricas y no sirven como banco real de examen.
-- Los 20 supuestos tienen enunciados útiles, pero las soluciones son fórmulas generales.
-- Faltan desarrollos específicos imprescindibles:
-  - organización y funcionamiento de la Diputación;
-  - Acuerdo Regulador de empleados públicos;
-  - OAPGT y sus Estatutos;
-  - bases de ejecución presupuestaria;
-  - tributación y recaudación local;
+- Presentar solicitud y conservar registro y justificante.
+- Desarrollar 40 temas autosuficientes.
+- Crear módulos específicos de:
+  - Diputación Provincial de Toledo;
+  - Acuerdo Regulador;
+  - OAPGT y Estatutos;
+  - presupuesto y bases de ejecución;
+  - tributación y recaudación;
   - Windows 11 Pro;
   - Microsoft Edge;
   - Micro Focus GroupWise 24;
   - LibreOffice 24 Writer, Calc, Base e Impress.
-
-### Cambios necesarios
-
-1. Prioridad inmediata: presentar solicitud y conservar justificantes.
-2. Desarrollar los 40 temas artículo por artículo.
-3. Crear documentos madre reutilizables para los bloques comunes.
-4. Crear módulos propios para Diputación, OAPGT, Acuerdo Regulador y ofimática específica.
-5. Sustituir el banco genérico por 30–40 preguntas reales por tema.
-6. Redactar soluciones completas para los 20 supuestos.
+- Alcanzar 30–40 preguntas reales por tema.
+- Completar las soluciones de los 20 supuestos.
 
 ## 4. UC3M
 
-### Correcto
+### Verificado
 
-- 34 plazas, 2 reservadas a discapacidad.
+- 34 plazas, dos reservadas a discapacidad.
 - Solicitudes del 9 de julio al 5 de agosto de 2026.
-- Examen previsto el 21 de noviembre de 2026 a las 10:00, pendiente de confirmación definitiva.
-- 70 preguntas más 5 reservas, 60 minutos.
+- Test de 70 preguntas y 5 de reserva, 60 minutos.
 - Penalización de un tercio por error.
-- Los 20 temas están desarrollados como mínimo a nivel de marco estatal.
-- Los 20 temas tienen al menos 20 preguntas.
-- Nueve temas alcanzan 30 preguntas o más.
-- Tres simulacros equilibrados de 70 preguntas.
+- Fecha previsible: 21 de noviembre de 2026 a las 10:00, pendiente de confirmación definitiva.
+- Concurso-oposición.
 
-### Deficiencias pendientes
+### Estado actual
 
-- Tema 7: Ley 10/2019 consolidada y plazos exactos.
-- Tema 15: Estatutos UC3M consolidados, artículos, mayorías y plazos.
-- Tema 16: matrícula, permanencia y evaluación UC3M.
-- Tema 17: ponderaciones, cupos y calendario anual.
-- Temas 18 y 19: presupuesto y bases de ejecución vigentes.
-- Tema 20: delegaciones y circuito interno de contratación.
-- Once temas siguen en 20 preguntas y deben subir a 30–40.
+- Veinte temas con banco real.
+- Todos los temas con al menos 20 preguntas.
+- Nueve temas con 30 o más.
+- Tres simulacros de 70 + 5.
+- Auditoría de validez, duplicados, respuesta y dificultad.
 
-### Cambios necesarios
+### Pendiente
 
-1. Presentar la solicitud y acreditar pago o exención dentro del plazo.
-2. Incorporar los documentos internos oficiales.
-3. Sustituir contenido general por literalidad UC3M cuando exista documento vigente.
-4. Elevar los once temas restantes a 30 preguntas o más.
+- Ley 10/2019 consolidada.
+- Estatutos UC3M consolidados.
+- Matrícula, permanencia y evaluación.
+- Admisión anual.
+- Presupuesto y bases de ejecución.
+- Delegaciones y circuito interno de contratación.
+- Elevar los once temas restantes a 30–40 preguntas.
 
-## Cambios técnicos globales
+## Arquitectura pendiente
 
-### Realizados en v0.41
+El contenido sigue cargándose mediante capas históricas v30–v42. Antes del cierre definitivo se realizará una consolidación para:
 
-- Eliminación efectiva de Las Ventas con Peña Aguilera del selector.
-- Actualización del proceso de Diputación a plazo abierto.
-- Auditoría visible por OPE en `Proceso y enlaces`.
-- Resumen global de madurez en `Progreso`.
-- Botón `Volver al listado` fijado mediante posición sticky para permanecer visible al desplazarse.
-- Nueva caché PWA `opoweb-v47`.
+1. mantener una única fuente canónica;
+2. separar proceso, temario, preguntas, supuestos y simulacros;
+3. eliminar envoltorios antiguos;
+4. conservar compatibilidad con el progreso guardado;
+5. añadir pruebas de regresión;
+6. impedir reutilización fuera de alcance;
+7. auditar títulos literales y fechas de vigencia.
 
-### Pendientes de arquitectura
-
-1. Consolidar las capas `v30` a `v41` en menos archivos para evitar envoltorios acumulados.
-2. Separar datos oficiales, contenido de estudio, preguntas y estado del proceso.
-3. Añadir pruebas automáticas para:
-   - número de temas;
-   - títulos literales;
-   - número y formato de ejercicios;
-   - puntuación y penalización;
-   - ausencia de OPE inactivas;
-   - preguntas duplicadas o inválidas;
-   - simulacros con tamaño oficial.
-4. Añadir fecha de última verificación oficial en cada convocatoria.
+La secuencia completa está documentada en `docs/HOJA_RUTA_PERFECCION.md`.
