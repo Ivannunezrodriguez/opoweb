@@ -11,9 +11,23 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.57.0**
-- Caché PWA: `opoweb-v64`
+- **OpoWeb v0.58.0**
+- Caché PWA: `opoweb-v65`
 - Última revisión estructural: 10 de julio de 2026
+
+## Avance aproximado
+
+| Área | Avance estimado |
+|---|---:|
+| Funcionamiento e interfaz | 82 % |
+| Diputación C1 | 79 % |
+| UC3M C2 | 52 % |
+| La Puebla C2 | 30 % |
+| Carranque C2 | 23 % |
+| Arquitectura y pruebas | 40 % |
+| **OpoWeb global** | **56 %** |
+
+Estos porcentajes son orientativos. Combinan desarrollo del temario, calidad del banco de preguntas, supuestos, simulacros, auditoría normativa y deuda técnica; no equivalen solo al número de temas existentes.
 
 ## Estado real de Diputación
 
@@ -24,52 +38,46 @@ Situación actual:
 - 39 de 40 temas con primera vuelta profunda;
 - tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT;
 - 585 preguntas manuales de primera vuelta;
-- 274 preguntas añadidas durante la segunda vuelta;
-- **859 preguntas manuales acumuladas**;
-- temas 1–18 elevados al objetivo mínimo de 30 preguntas reales;
+- 292 preguntas añadidas durante la segunda vuelta;
+- **877 preguntas manuales acumuladas**;
+- temas 1–19 elevados al objetivo mínimo de 30 preguntas reales;
 - tres simulacros tipo test de 50 + 5;
 - 20 supuestos completos;
 - 40 variantes prácticas;
 - rúbrica sobre 10 puntos por caso;
 - tres simulacros prácticos internos.
 
-La primera vuelta significa que existe un desarrollo útil y autosuficiente. No significa que todo el contenido esté ya perfecto. Para cerrar Diputación faltan la segunda revisión de los temas 19–21 y 23–40, el tema 22, la auditoría transversal y la consolidación técnica.
+La segunda vuelta alcanza **19 de los 39 temas actualmente auditables: aproximadamente un 49 %**. Para cerrar Diputación faltan los temas 20–21 y 23–40, el tema 22, la auditoría transversal y la consolidación técnica.
 
-## Segunda vuelta v0.57
+## Segunda vuelta v0.58
 
-Se ha reforzado el tema 18: **derechos y deberes del personal empleado público y situaciones administrativas**.
+Se ha reforzado el tema 19: **régimen disciplinario de la Ley 4/2011**.
 
 ### Resultado
 
-- 19 preguntas nuevas y específicas;
-- 274 preguntas nuevas acumuladas en la segunda vuelta;
-- dieciocho primeros temas con al menos 30 preguntas reales;
+- 18 preguntas nuevas y específicas;
+- 292 preguntas nuevas acumuladas en la segunda vuelta;
+- diecinueve primeros temas con al menos 30 preguntas reales;
 - cuatro alternativas distintas;
 - respuesta correcta rotada;
 - dificultad baja, media y alta;
-- justificación mediante artículos de la Ley 4/2011;
+- justificación mediante artículos 127 a 145 de la Ley 4/2011;
 - control de preguntas genéricas y duplicados;
 - regeneración de los tres simulacros.
 
 ### Contenido reforzado
 
-- derechos individuales e individuales ejercidos colectivamente;
-- vacaciones, deberes y código de conducta;
-- formación como derecho y deber;
-- servicio activo y servicios especiales;
-- expectativa de destino y excedencia forzosa;
-- excedencias por violencia de género, interés particular y agrupación familiar;
-- suspensión de funciones y reingreso.
+- legalidad, tipicidad e irretroactividad favorable;
+- proporcionalidad, culpabilidad y presunción de inocencia;
+- faltas muy graves, graves y leves;
+- separación, suspensión, traslado, demérito, bolsas y apercibimiento;
+- autoría, inducción, cooperación y encubrimiento;
+- prescripción y cancelación;
+- procedimiento, medidas cautelares y relación con la jurisdicción penal.
 
 ## Fase práctica
 
-Cada uno de los 20 supuestos permite:
-
-- elegir caso base o dos variantes;
-- redactar y guardar la respuesta;
-- consultar solución y base normativa;
-- completar una rúbrica sobre 10;
-- marcar el caso como revisado.
+Cada uno de los 20 supuestos permite elegir caso base o variantes, redactar y guardar la respuesta, consultar solución y base normativa, completar una rúbrica sobre 10 y marcar el caso como revisado.
 
 Los tres simulacros prácticos internos contienen dos casos obligatorios y una extensión opcional. Los 90 minutos son una referencia de entrenamiento, no un formato oficial confirmado.
 
@@ -86,8 +94,8 @@ Los tres simulacros prácticos internos contienen dos casos obligatorios y una e
 
 ### Diputación
 
-1. Elevar el tema 19, régimen disciplinario, a 30–40 preguntas reales.
-2. Completar los temas 20 y 21, contrato de trabajo y Seguridad Social.
+1. Elevar el tema 20, contrato de trabajo, a 30–40 preguntas reales.
+2. Completar el tema 21, modalidades contractuales y Seguridad Social.
 3. Continuar con los temas 23–31 y 32–40.
 4. Auditar referencias, duplicados, opciones y dificultad.
 5. Cerrar el tema 22 solo con textos oficiales internos.
@@ -107,51 +115,40 @@ Cerrar normativa interna pendiente y elevar a 30–40 preguntas los temas incomp
 
 ## Criterio de cierre de un tema
 
-Un tema solo se considera terminado cuando tenga:
+Un tema solo se considera terminado cuando tenga título oficial exacto, desarrollo autosuficiente y actualizado, 30–40 preguntas reales sin plantillas, respuestas justificadas, integración en simulacros y supuestos, y auditoría final de vigencia y duplicados.
 
-1. título oficial exacto;
-2. desarrollo autosuficiente y actualizado;
-3. estructura orientada al aprobado;
-4. 30–40 preguntas reales sin plantillas;
-5. respuestas y justificaciones verificadas;
-6. integración correcta en simulacros y supuestos;
-7. auditoría final de vigencia y duplicados.
+## Pruebas automáticas
 
-## Pruebas de regresión
-
-Desde la raíz del repositorio:
+GitHub Actions ejecuta en cada `push` y `pull_request`:
 
 ```bash
 node tests/smoke-v56.js
 node tests/smoke-v57.js
+node tests/smoke-v58.js
 ```
 
-Las pruebas comprueban el refuerzo de los temas 17 y 18, la composición 50 + 5 de los simulacros, la exclusión del tema 22 y la retirada efectiva de Las Ventas.
+Las pruebas comprueban los temas 17–19, las cifras acumuladas, la composición 50 + 5, la ausencia de duplicados internos y la exclusión del tema 22.
 
 ## Historial reciente
+
+### v0.58.0 · 2026-07-10
+
+- Añadidas 18 preguntas al tema 19.
+- Temas 1–19 elevados al objetivo mínimo de 30 preguntas reales.
+- Alcanzadas 877 preguntas manuales acumuladas.
+- Desarrollado el régimen disciplinario.
+- Regenerados los simulacros tipo test.
+- Incorporada integración continua con GitHub Actions.
+- Actualizada la caché a `opoweb-v65`.
 
 ### v0.57.0 · 2026-07-10
 
 - Añadidas 19 preguntas al tema 18.
 - Temas 1–18 elevados al objetivo mínimo de 30 preguntas reales.
 - Alcanzadas 859 preguntas manuales acumuladas.
-- Desarrollados derechos, deberes y situaciones administrativas.
-- Regenerados los simulacros tipo test.
-- Añadida prueba de regresión v0.57.
-- Actualizada la caché a `opoweb-v64`.
 
 ### v0.56.0 · 2026-07-10
 
 - Añadidas 15 preguntas al tema 17.
 - Temas 1–17 elevados al objetivo mínimo de 30 preguntas reales.
 - Alcanzadas 840 preguntas manuales acumuladas.
-- Corregida la retirada de Las Ventas del selector.
-- Sincronizado el estado de solicitud de Diputación.
-- Añadida prueba de regresión.
-
-### v0.55.0 · 2026-07-10
-
-- Añadidas 105 preguntas a los temas 10–16.
-- Temas 1–16 elevados al objetivo mínimo de 30 preguntas reales.
-- Alcanzadas 825 preguntas manuales acumuladas.
-- Regenerados los simulacros tipo test.

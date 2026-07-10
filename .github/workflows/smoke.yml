@@ -1,0 +1,32 @@
+name: OpoWeb smoke tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check JavaScript syntax
+        run: |
+          node --check assets/js/diputacion-v56.js
+          node --check assets/js/diputacion-v57.js
+          node --check assets/js/diputacion-v58.js
+          node --check assets/js/ui-v58.js
+      - name: Run regression tests
+        run: |
+          node tests/smoke-v56.js
+          node tests/smoke-v57.js
+          node tests/smoke-v58.js
