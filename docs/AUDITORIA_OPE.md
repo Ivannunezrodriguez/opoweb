@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.55
+# Auditoría global de OpoWeb · v0.56
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -9,7 +9,7 @@ Fecha de revisión: 10 de julio de 2026.
 3. Diputación Provincial de Toledo · Administrativo C1.
 4. Universidad Carlos III de Madrid · Auxiliar Administrativo C2.
 
-No se añadirán nuevas convocatorias hasta cerrar estas cuatro.
+Las Ventas con Peña Aguilera está retirada del selector mediante sus dos identificadores históricos. No se añadirán nuevas convocatorias hasta cerrar estas cuatro.
 
 ## Formatos oficiales del primer ejercicio
 
@@ -43,33 +43,40 @@ No se añadirán nuevas convocatorias hasta cerrar estas cuatro.
 
 La primera vuelta no permite considerar perfecto todo el temario. Es una base profunda, pero faltan densidad de test, revisión transversal y cierre de fuentes internas.
 
-### Segunda vuelta v0.55
+### Segunda vuelta v0.56
 
-Temas 1–16 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–17 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
 - 60 preguntas nuevas en v0.53;
 - 75 preguntas nuevas en v0.54;
 - 105 preguntas nuevas en v0.55;
-- 240 preguntas nuevas de segunda vuelta;
-- 825 preguntas manuales acumuladas;
-- dieciséis temas consecutivos a 30+ preguntas reales;
+- 15 preguntas nuevas en v0.56;
+- 255 preguntas nuevas de segunda vuelta;
+- 840 preguntas manuales acumuladas;
+- diecisiete temas consecutivos a 30+ preguntas reales;
 - justificación mediante artículo o regla oficial;
 - cuatro alternativas distintas;
 - dificultad graduada;
 - control de duplicados;
 - simulacros regenerados.
 
-Ámbitos reforzados en v0.55:
+Ámbitos reforzados en v0.56:
 
-- responsabilidad patrimonial y acción de regreso;
-- expediente, registro, copias y notificaciones locales;
-- entidades, potestades, competencias y coordinación local;
-- municipio, padrón, órganos y presupuesto;
-- provincia, Diputación y elección provincial;
-- comarcas, áreas metropolitanas y mancomunidades;
-- contratación, lotes, valor estimado, contratos menores y órganos locales.
+- clases de personal empleado público;
+- funciones reservadas al personal funcionario;
+- principios y requisitos de acceso;
+- oposición, concurso y concurso-oposición;
+- adquisición de la condición de funcionario de carrera;
+- pérdida y renuncia de la condición funcionarial.
+
+### Correcciones estructurales v0.56
+
+- retirada efectiva de Las Ventas con Peña Aguilera del conjunto activo;
+- actualización centralizada del estado de solicitud de Diputación;
+- nueva caché PWA `opoweb-v63`;
+- prueba de regresión ejecutable con Node.
 
 ### Criterio de perfección pendiente
 
@@ -87,9 +94,8 @@ Para considerar cerrada Diputación deben cumplirse simultáneamente:
 
 ### Próximo bloque
 
-Temas 17–21:
+Temas 18–21:
 
-- personal y acceso al empleo público de Castilla-La Mancha;
 - derechos, deberes y situaciones administrativas;
 - régimen disciplinario;
 - contrato de trabajo;
@@ -118,6 +124,6 @@ Pendiente normativa interna, presupuesto, contratación y elevar once temas a 30
 2. Separar proceso, temario, preguntas, supuestos y simulacros.
 3. Eliminar capas históricas.
 4. Conservar progreso guardado.
-5. Añadir pruebas de regresión.
+5. Ampliar pruebas de regresión.
 6. Impedir reutilización fuera del programa oficial.
 7. Auditar vigencia de títulos, fechas y referencias.
