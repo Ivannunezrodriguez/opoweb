@@ -14,18 +14,18 @@ Cada convocatoria se valora según cinco bloques:
 
 El porcentaje global pondera también arquitectura común, pruebas automáticas y deuda técnica.
 
-## Estado v0.64
+## Estado v0.65
 
 | Área | Estimación |
 |---|---:|
-| Funcionamiento e interfaz | 87 % |
-| Diputación C1 | 96 % |
+| Funcionamiento e interfaz | 88 % |
+| Diputación C1 | 98 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 53 % |
-| OpoWeb global | 67 % |
+| Arquitectura y pruebas | 55 % |
+| OpoWeb global | 68 % |
 
 ## Lectura correcta
 
-Los 39 temas auditables de Diputación han completado la segunda vuelta mínima de 30 preguntas reales. Ese bloque queda al 100 %, pero la convocatoria completa permanece al 96 % porque el tema 22 carece todavía de fuentes internas oficiales verificadas y faltan auditoría transversal, pruebas de navegador y consolidación técnica.
+Los 40 temas de Diputación alcanzan el objetivo cuantitativo mínimo de 30 preguntas. La cobertura del programa queda al 100 %, pero la convocatoria completa permanece al 98 % porque la literalidad de los Estatutos vigentes del OAPGT no se ha localizado en una publicación oficial accesible y faltan auditoría transversal, pruebas de navegador y consolidación técnica.
