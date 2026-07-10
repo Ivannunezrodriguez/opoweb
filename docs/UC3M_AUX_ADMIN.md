@@ -48,7 +48,7 @@ Cada tema conserva:
 5. Retención activa.
 6. Cuadro para test y supuesto práctico.
 
-## Auditoría del temario · OpoWeb v0.38
+## Auditoría del temario · OpoWeb v0.39
 
 | Tema | Estado actual |
 |---|---|
@@ -83,55 +83,35 @@ La web comprueba automáticamente:
 - justificación obligatoria;
 - eliminación de duplicados exactos;
 - reparto de respuestas A, B, C y D;
+- dificultad baja, media o alta cuando está definida;
 - cobertura por tema.
 
-Todos los temas mantienen al menos **15 preguntas válidas**. El objetivo final es **30–40 preguntas manuales por tema**.
+## Cobertura v0.39
 
-## Refuerzo v0.38
+Los **20 temas oficiales tienen al menos 20 preguntas válidas**.
 
-Se han añadido **25 preguntas manuales nuevas**, cinco para cada uno de estos temas prioritarios:
+La versión v0.39 añade **75 preguntas manuales de aplicación** a los quince temas que todavía permanecían en 15 preguntas:
 
-### Tema 7 · Transparencia
+- temas 1 a 6;
+- temas 9 a 14;
+- temas 16, 17 y 20.
 
-- publicidad activa;
-- resolución motivada;
-- acceso parcial y anonimización;
-- audiencia a terceros;
-- diferencia entre portal y solicitud individual.
+Las nuevas preguntas trabajan:
 
-### Tema 8 · Igualdad
+- mayorías, procedimientos y garantías constitucionales;
+- representación, relación electrónica, plazos y notificación;
+- audiencia, información pública y recursos;
+- competencia, avocación, encomienda, firma y recusación;
+- sede, portal, actuación automatizada y archivo;
+- responsable, encargado, DPD, bloqueo y portabilidad;
+- operaciones de Word, Excel, Drive y Gmail;
+- empleo público, situaciones, provisión e incompatibilidades;
+- prevención de riesgos;
+- LOSU y PTGAS;
+- ECTS, calidad, acceso y admisión;
+- objeto, lotes, magnitudes, contrato menor y adjudicación.
 
-- discriminación indirecta;
-- seis ejes del III Plan;
-- eje 4;
-- Comisión de Seguimiento 8+8;
-- garantías del protocolo contra el acoso.
-
-### Tema 15 · Estatutos UC3M
-
-- naturaleza del Defensor Universitario;
-- función de los servicios;
-- régimen económico-financiero;
-- elementos de la reforma estatutaria;
-- necesidad de utilizar el texto consolidado.
-
-### Tema 18 · Presupuesto I
-
-- especialidad cualitativa;
-- transferencia de crédito;
-- generación e incorporación;
-- reconocimiento del derecho;
-- datos que dependen de las bases de ejecución vigentes.
-
-### Tema 19 · Presupuesto II
-
-- fase D;
-- fase O;
-- documento ADO;
-- diferencia entre ordenación del gasto y del pago;
-- liquidación presupuestaria.
-
-Estos cinco temas alcanzan un **banco sólido de al menos 20 preguntas válidas**.
+El objetivo siguiente es llegar a **30–40 preguntas manuales por tema**, priorizando literalidad UC3M y preguntas de supuesto práctico.
 
 ## Simulacros equilibrados
 
@@ -142,7 +122,7 @@ Cada simulacro contiene 70 preguntas y representa los 20 temas:
 - sin repetición interna;
 - corrección real: +1, −1/3 y 0 en blanco.
 
-Los tres simulacros se regeneran después del refuerzo v0.38.
+Los tres simulacros se regeneran después del refuerzo v0.39.
 
 ## Trabajo pendiente para cerrar la literalidad
 
@@ -152,7 +132,7 @@ Los tres simulacros se regeneran después del refuerzo v0.38.
 4. Normas internas de matrícula, permanencia y evaluación.
 5. Ponderaciones, cupos y calendario anual de admisión UC3M.
 6. Delegaciones y procedimiento interno de contratación.
-7. Elevar progresivamente los demás temas de 15 a 20 y después a 30–40 preguntas manuales.
+7. Elevar progresivamente todos los temas de 20 a 30–40 preguntas manuales.
 
 ## Estrategia
 
