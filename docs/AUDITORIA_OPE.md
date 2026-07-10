@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.49
+# Auditoría global de OpoWeb · v0.50
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -41,42 +41,46 @@ Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema y crear supu
 - Tasa general: 26 euros.
 - La falta de justificación del pago determina exclusión no subsanable.
 
-### Desarrollo alcanzado
+### Primera vuelta alcanzada
 
-Se han desarrollado en profundidad **33 de 40 temas**:
+Se han desarrollado en profundidad **39 de 40 temas**.
 
-- 5–9: procedimiento administrativo;
-- 12–16: régimen local y contratación;
-- 17–21: empleo público, trabajo y Seguridad Social;
-- 23–27: prevención, igualdad, tributación, recaudación y presupuesto;
-- 28–31: protección de datos, transparencia, tributos locales y firma electrónica;
-- 32–36: Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc;
-- 37–40: Base, Impress, componentes y periféricos.
+Bloques cerrados:
+
+- temas 1–4: Constitución, fuentes, organización del Estado y Ley 40/2015;
+- temas 5–9: procedimiento administrativo;
+- temas 10–11: responsabilidad patrimonial y procedimiento local;
+- temas 12–16: régimen local y contratación;
+- temas 17–21: empleo público, trabajo y Seguridad Social;
+- temas 23–31: prevención, igualdad, tributación, presupuesto, datos, transparencia, tributos y firma;
+- temas 32–40: ofimática e informática.
 
 Resultado acumulado:
 
-- 495 preguntas manuales nuevas;
+- 585 preguntas manuales nuevas;
 - 15 preguntas por tema revisado;
-- eliminación de preguntas de plantilla en 33 temas;
-- bloque de ofimática e informática 32–40 desarrollado en primera vuelta;
+- eliminación de preguntas de plantilla en 39 temas;
 - tres simulacros de 50 + 5 formados solo con contenido real;
+- tema 22 excluido de los simulacros;
 - cobertura temática visible.
 
-### Tema 22
+### Único tema pendiente de primera vuelta
 
-No se considera cerrado. Falta verificar:
+Tema 22:
 
 - Acuerdo Regulador vigente de Diputación y organismos autónomos;
-- Estatutos oficiales vigentes del OAPGT.
+- Estatutos oficiales vigentes del OAPGT;
+- organización, funcionamiento y competencias actuales.
+
+No debe considerarse cerrado hasta verificar los textos oficiales.
 
 ### Pendiente prioritario
 
 - presentar solicitud y conservar registro y pago;
-- temas 1–4: Constitución y organización del Estado;
-- temas 10–11: responsabilidad, sanción y procedimiento local;
-- tema 22 cuando existan fuentes internas;
-- elevar todos los temas a 30–40 preguntas;
-- redactar 20 supuestos con solución completa.
+- elevar los 39 temas a 30–40 preguntas reales;
+- redactar 20 supuestos con solución completa;
+- cerrar el tema 22 cuando existan fuentes internas;
+- consolidar las capas históricas y añadir pruebas de regresión.
 
 ## UC3M
 
