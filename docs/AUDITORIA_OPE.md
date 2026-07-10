@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.50
+# Auditoría global de OpoWeb · v0.51
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -41,7 +41,7 @@ Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema y crear supu
 - Tasa general: 26 euros.
 - La falta de justificación del pago determina exclusión no subsanable.
 
-### Primera vuelta alcanzada
+### Primera vuelta del temario
 
 Se han desarrollado en profundidad **39 de 40 temas**.
 
@@ -64,6 +64,29 @@ Resultado acumulado:
 - tema 22 excluido de los simulacros;
 - cobertura temática visible.
 
+### Fase práctica v0.51
+
+- 20 supuestos completos;
+- 20 enunciados realistas;
+- tareas específicas en cada supuesto;
+- solución estructurada por fases;
+- base normativa o técnica;
+- lista de autocorrección;
+- respuesta guardada en el navegador;
+- navegación anterior, siguiente y selector;
+- estado revisado y porcentaje de progreso.
+
+Cobertura práctica:
+
+- procedimiento, plazos, notificaciones y recursos;
+- responsabilidad patrimonial;
+- protección de datos y transparencia;
+- contratación pública;
+- presupuesto, recaudación, IBI, IAE e IIVTNU;
+- empleo público, disciplina, prevención e igualdad;
+- firma electrónica, digitalización y registro;
+- Writer, Calc, Base, Impress, Windows y hardware.
+
 ### Único tema pendiente de primera vuelta
 
 Tema 22:
@@ -78,7 +101,7 @@ No debe considerarse cerrado hasta verificar los textos oficiales.
 
 - presentar solicitud y conservar registro y pago;
 - elevar los 39 temas a 30–40 preguntas reales;
-- redactar 20 supuestos con solución completa;
+- añadir variantes y criterios de puntuación a los supuestos;
 - cerrar el tema 22 cuando existan fuentes internas;
 - consolidar las capas históricas y añadir pruebas de regresión.
 
