@@ -38,8 +38,11 @@
     return [
       'como debe estudiarse el punto oficial',
       'cual es el enfoque correcto para preparar',
+      'que respuesta esta mejor orientada a examen y supuesto practico',
       'parte del enunciado oficial localiza norma vigente',
       'el examen exige partir del programa oficial',
+      'la respuesta debe ser autocontenida norma o concepto',
+      'responder de forma general sin concretar norma paso ni consecuencia',
       'concepto alcance y aplicacion practica',
       'debes estudiarlo sin anadir paja'
     ].some(fragment => text.includes(fragment));
@@ -117,7 +120,7 @@
       const shared = scopedQuestions(theme.title);
       if (genericRatio >= 0.5 && shared.length >= 8) {
         const target = Math.min(30, shared.length);
-        ope.themeTests[theme.id] = shared.slice(0, target).map((question, index) => cloneQuestion(question, theme, index, `Tema UC3M reutilizado por coincidencia normativa`));
+        ope.themeTests[theme.id] = shared.slice(0, target).map((question, index) => cloneQuestion(question, theme, index, 'Banco común reutilizado por coincidencia normativa'));
         theme.sharedBankV42 = true;
         theme.sharedBankCount = target;
         replacedBanks += 1;
