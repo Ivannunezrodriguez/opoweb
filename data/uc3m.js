@@ -2,8 +2,11 @@
   const data = window.OPOSICIONES_DATA;
   if (!data?.oposiciones) return;
 
-  const VERSION = '0.16.0';
+  const VERSION = '0.29.0';
   const prefix = 'uc3m-aux-admin-2026';
+
+  // Retirada del selector por decisión del usuario: no se prioriza Las Ventas con Peña Aguilera.
+  data.oposiciones = data.oposiciones.filter(o => o.id !== 'ventas-aux-admin-2026');
 
   const rawThemes = [
     ['La Constitución Española de 1978: estructura y contenido. Derechos y deberes fundamentales. Elaboración de las leyes. Organización territorial del Estado. Reforma constitucional.', 'Constitucional'],
@@ -47,8 +50,8 @@
       {
         heading: 'Opo-Test: puntos calientes',
         paragraphs: [
-          'Plazos, órganos, conceptos con nombre técnico, diferencias entre ley estatal/autonómica/universitaria y efectos de cada trámite.',
-          'En el test penaliza 1/3 cada error: conviene contestar solo cuando puedas descartar con seguridad al menos dos opciones.'
+          'Plazos, órganos, conceptos con nombre técnico, diferencias entre ley estatal, autonómica y universitaria y efectos de cada trámite.',
+          'El test penaliza 1/3 por cada error: controla el riesgo y deja en blanco cuando no puedas descartar opciones con fundamento.'
         ]
       },
       {
@@ -62,7 +65,7 @@
       {
         heading: 'Plan de estudio',
         paragraphs: [
-          'Primera vuelta: lectura y subrayado del enunciado oficial. Segunda vuelta: test corto. Tercera vuelta: errores y tarjetas de plazos/órganos.',
+          'Primera vuelta: lectura y subrayado del enunciado oficial. Segunda vuelta: test corto. Tercera vuelta: errores y tarjetas de plazos y órganos.',
           'Para los temas 13 a 19, crea esquemas separados de sistema universitario, Estatutos y presupuesto UC3M porque no son núcleo habitual de ayuntamientos.'
         ]
       }
@@ -76,7 +79,7 @@
     area: r[1],
     commonPotential: i < 12 || i === 19,
     sections: sections(r),
-    tree: [`Tema ${i + 1}`, `- ${r[1]}`, '- Norma/enunciado oficial', '- Conceptos clave', '- Plazos, órganos y efectos', '- Test con penalización 1/3'].join('\n'),
+    tree: [`Tema ${i + 1}`, `- ${r[1]}`, '- Norma y enunciado oficial', '- Conceptos clave', '- Plazos, órganos y efectos', '- Test con penalización 1/3'].join('\n'),
     reviewTable: [
       ['Punto', 'Qué comprobar'],
       ['Norma', 'Ley, real decreto, estatutos o normativa UC3M aplicable'],
@@ -112,8 +115,8 @@
   const allQuestions = Object.values(themeTests).flat();
   const simulacros = [0, 23, 71].map((start, s) => ({
     id: `${prefix}-sim${s + 1}`,
-    title: `Simulacro UC3M ${s + 1}`,
-    questions: Array.from({ length: 50 }, (_, i) => ({ ...allQuestions[(start + i * 5) % allQuestions.length], id: `${prefix}-sim${s + 1}-q${i + 1}` }))
+    title: `Simulacro UC3M ${s + 1} · 70 preguntas`,
+    questions: Array.from({ length: 70 }, (_, i) => ({ ...allQuestions[(start + i * 5) % allQuestions.length], id: `${prefix}-sim${s + 1}-q${i + 1}` }))
   }));
 
   const caseTitles = [
@@ -142,7 +145,7 @@
   const practicalCases = caseTitles.map((title, i) => ({
     id: `${prefix}-sp${i + 1}`,
     title,
-    statement: `Caso práctico UC3M sobre ${title.toLowerCase()}. Indica norma aplicable, órgano/trámite, plazo, documento y consecuencia.`,
+    statement: `Caso de estudio UC3M sobre ${title.toLowerCase()}. Esta convocatoria no tiene ejercicio práctico oficial: estos casos sirven para comprender el temario. Indica norma, órgano o trámite, plazo, documento y consecuencia.`,
     guidance: 'Solución orientativa: identifica si el caso pertenece a procedimiento común, régimen universitario, presupuesto, contratación, protección de datos u ofimática; después aplica regla, excepción y efecto.'
   }));
 
@@ -151,27 +154,43 @@
     name: 'Auxiliar Administrativo - Universidad Carlos III de Madrid',
     shortName: 'UC3M - Aux. Administrativo C2',
     places: '34 plazas, 2 reservadas a discapacidad',
-    exam: 'Concurso-oposición: test único de 70 preguntas + 5 reserva, 60 minutos. Acierto +1, error -1/3, blanco 0. Mínimo 35/70.',
-    status: 'Pendiente de solicitud/seguimiento. Interesante por 34 plazas y bolsa, pero destino Madrid. Baremo personal prudente: inglés 0 si no hay B2/C1 oficial, experiencia pública 0 y formación probable 2-5/30 según aceptación del tribunal.',
+    exam: 'Concurso-oposición: ejercicio único tipo test de 70 preguntas + 5 de reserva, 60 minutos. Acierto +1, error -1/3, blanco 0. La oposición vale el 70% y el concurso el 30%.',
+    status: 'Pendiente de solicitud. Plazo abierto del 09/07/2026 al 05/08/2026, ambos inclusive. Fecha previsible del ejercicio: sábado 21/11/2026 a las 10:00. Tasa general: 13,83 €. Baremo prudente: inglés 0, experiencia pública 0 y formación potencial hasta 5 puntos, pendiente de validación documental.',
     scoring: { correct: 1, wrong: -0.3333, blank: 0 },
     themes,
     themeTests,
     practicalCases,
     simulacros,
+    simulationSize: 70,
     officialLinks: [
+      { label: 'Proceso UC3M 2026', url: 'https://www.uc3m.es/empleo/concurso_oposicion_escala_auxiliar_administrativa_C2_2026' },
+      { label: 'UC3M empleo PTGAS', url: 'https://www.uc3m.es/empleo/pas' },
       { label: 'BOE UC3M', url: 'https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-14624' },
-      { label: 'UC3M empleo PAS', url: 'https://www.uc3m.es/empleo/pas' },
       { label: 'BOCM', url: 'https://www.bocm.es/' }
     ],
     processCalendar: [
-      { date: '06/07/2026', title: 'Publicación BOE', note: 'Resolución de 30/06/2026: 34 plazas de Escala Auxiliar Administrativa C2.', status: 'publicado' },
-      { date: 'Pendiente BOCM', title: 'Inicio real del plazo de solicitud', note: 'El plazo es de 20 días hábiles desde el día siguiente al anuncio en el BOCM, no desde el BOE.', status: 'pendiente' },
-      { date: 'Pendiente', title: 'Solicitud telemática UC3M', note: 'Presentación exclusiva por la web UC3M empleo PAS. Tasa 13,83 €; familia numerosa general: 50% de exención si se acredita.', status: 'pendiente' },
-      { date: 'No antes del 15/09/2026', title: 'Ejercicio de oposición', note: 'Test único de 70 preguntas. La fecha concreta se publicará con listas definitivas o anuncio del tribunal.', status: 'publicado' },
-      { date: 'Tras oposición', title: 'Concurso y lista de espera', note: 'Solo valoran méritos a quienes superen la oposición. Se formará lista de espera para personal funcionario interino.', status: 'pendiente' }
+      { date: '30/06/2026', title: 'Resolución de convocatoria', note: 'Convocadas 34 plazas de Escala Auxiliar Administrativa C2; 2 se reservan a discapacidad.', status: 'publicado' },
+      { date: '06/07/2026', title: 'Publicación en BOE', note: 'Resolución publicada como BOE-A-2026-14624.', status: 'publicado' },
+      { date: '08/07/2026', title: 'Anuncio en BOCM nº 161', note: 'Esta publicación abre el cómputo del plazo de solicitudes.', status: 'publicado' },
+      { date: '09/07/2026 - 05/08/2026', title: 'Solicitud telemática', note: 'Ambos inclusive. Tasa 13,83 €. El pago o la exención deben acreditarse dentro del plazo; la falta de pago no es subsanable.', status: 'abierto' },
+      { date: 'Después del 05/08/2026', title: 'Lista provisional y tribunal', note: 'La Gerencia publicará admitidos, excluidos, causa de exclusión y composición del tribunal.', status: 'pendiente' },
+      { date: '10 días hábiles', title: 'Subsanación', note: 'Plazo único e improrrogable desde el día siguiente a la lista provisional.', status: 'pendiente' },
+      { date: 'Mínimo 10 días hábiles antes', title: 'Lista definitiva y convocatoria', note: 'La resolución definitiva indicará lugar, fecha y hora del ejercicio.', status: 'pendiente' },
+      { date: '21/11/2026 · 10:00', title: 'Fecha previsible del examen', note: 'Anunciada por la página oficial de la UC3M. Debe confirmarse en la resolución definitiva.', status: 'previsto' },
+      { date: 'Tras superar el test', title: 'Presentación de méritos', note: 'Solo quienes superen la oposición dispondrán de 10 días hábiles para acreditar inglés, experiencia y cursos.', status: 'pendiente' },
+      { date: 'Final del proceso', title: 'Lista de espera de personal interino', note: 'La Gerencia fijará la puntuación mínima necesaria para integrar la lista.', status: 'pendiente' }
     ],
     version: VERSION,
-    changelog: [{ version: VERSION, date: '2026-07-09', changes: ['Añadida UC3M Auxiliar Administrativo C2', 'Incluido temario oficial de 20 temas', 'Añadidos tests, supuestos, simulacros, calendario y estimación prudente de baremo'] }]
+    changelog: [{
+      version: VERSION,
+      date: '2026-07-10',
+      changes: [
+        'Retirada Las Ventas con Peña Aguilera del selector de OpoWeb',
+        'Actualizado plazo UC3M: 09/07/2026 a 05/08/2026',
+        'Añadida fecha previsible de examen: 21/11/2026 a las 10:00',
+        'Simulacros UC3M adaptados a 70 preguntas'
+      ]
+    }]
   };
 
   const i = data.oposiciones.findIndex(o => o.id === ope.id);
