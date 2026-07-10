@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.63
+# Auditoría global de OpoWeb · v0.64
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -15,13 +15,13 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 86 % |
-| Diputación C1 | 92 % |
+| Funcionamiento e interfaz | 87 % |
+| Diputación C1 | 96 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 51 % |
-| **OpoWeb global** | **64 %** |
+| Arquitectura y pruebas | 53 % |
+| **OpoWeb global** | **67 %** |
 
 ## Diputación de Toledo C1
 
@@ -33,41 +33,39 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 - 40 temas.
 - Solicitudes del 6 al 31 de julio de 2026.
 
-### Primera vuelta
+### Contenido
 
-- 39 de 40 temas desarrollados.
+- 39 de 40 temas desarrollados y auditables.
 - Tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT.
-- 585 preguntas manuales.
+- 585 preguntas manuales de primera vuelta.
+- 652 preguntas añadidas en la segunda vuelta.
+- 1.237 preguntas manuales acumuladas.
 - 20 supuestos, 40 variantes y tres simulacros prácticos internos.
+- Tres simulacros test de 50 + 5.
 
-### Segunda vuelta v0.63
+### Segunda vuelta v0.64
 
-Temas 1–21 y 23–31 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Los 39 temas actualmente auditables alcanzan al menos 30 preguntas reales. La segunda vuelta auditable queda en **39 de 39: 100 %**.
 
-Resultado acumulado:
+Ámbitos reforzados en v0.64:
 
-- 75 preguntas nuevas en v0.63;
-- 517 preguntas nuevas de segunda vuelta;
-- 1.102 preguntas manuales acumuladas;
-- 30 temas a 30+ preguntas reales;
-- segunda vuelta: 30 de 39 temas auditables, aproximadamente 77 %;
-- opciones distintas, respuesta rotada y dificultad graduada;
-- control de duplicados y simulacros regenerados.
+- Explorador de archivos, unidades locales y de red, permisos y rutas UNC;
+- Microsoft Edge, navegación InPrivate y seguridad web;
+- correo, calendario y contactos en GroupWise;
+- impresión, cola, PDF, escaneado, ADF y OCR;
+- Writer: estilos, revisión, tablas, correspondencia y PDF;
+- Calc: fórmulas, referencias, funciones, filtros y validación;
+- Base: tablas, claves, relaciones, consultas, formularios e informes;
+- Impress: diseños, maestros, transiciones, animaciones y presentación;
+- hardware, software, CPU, RAM, almacenamiento, periféricos y seguridad de soportes.
 
-Ámbitos reforzados en v0.63:
+### Lo que impide declarar Diputación al 100 %
 
-- presupuesto general local, elaboración, aprobación, publicación, prórroga y reclamaciones;
-- protección de datos, derechos, publicidad activa, acceso y buen gobierno;
-- IBI, IAE, IVTM, IIVTNU y tasas;
-- firma, sello, sellado de tiempo, entrega certificada y prestadores de confianza.
-
-### Criterio de cierre pendiente
-
-1. completar temas 32–40 a 30–40 preguntas reales;
-2. cerrar tema 22 con fuentes internas oficiales;
-3. auditar transversalmente vigencia, duplicados y cobertura;
-4. consolidar la arquitectura histórica;
-5. ampliar pruebas de navegador.
+1. Tema 22 sin documentación interna oficial verificada.
+2. Auditoría transversal completa de vigencia y literalidad.
+3. Pruebas de navegador y validación visual.
+4. Consolidación de las capas históricas de JavaScript.
+5. Revisión final de los supuestos prácticos y equilibrio de simulacros.
 
 ## La Puebla
 
@@ -86,5 +84,5 @@ Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema y crear supu
 1. Consolidar una única fuente de datos.
 2. Separar proceso, temario, preguntas, supuestos y simulacros.
 3. Eliminar capas históricas sin perder progreso.
-4. Ampliar CI y pruebas de navegador.
+4. Ampliar CI con pruebas de navegador.
 5. Impedir reutilización fuera del programa oficial.
