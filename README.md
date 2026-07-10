@@ -11,75 +11,95 @@ No se incorporarán nuevas OPE hasta cerrar estas cuatro.
 
 ## Versión actual
 
-- **OpoWeb v0.47.0**
-- Caché PWA: `opoweb-v54`
+- **OpoWeb v0.48.0**
+- Caché PWA: `opoweb-v55`
 - Última revisión estructural: 10 de julio de 2026
-
-## Criterio de cierre
-
-Una convocatoria solo se considera lista cuando tenga títulos oficiales exactos, desarrollo autosuficiente, 30–40 preguntas reales por tema, supuestos resueltos cuando exista práctico, simulacros fieles, proceso actualizado y ninguna pregunta de plantilla pendiente.
 
 ## Diputación de Toledo · avance
 
-Se han desarrollado en profundidad **24 de los 40 temas oficiales**:
+Se han desarrollado en profundidad **29 de los 40 temas oficiales**:
 
 - v0.43: temas 5–9, procedimiento administrativo;
 - v0.44: temas 12–16, régimen local y contratación;
 - v0.45: temas 17–21, empleo público, trabajo y Seguridad Social;
 - v0.46: temas 23–27, prevención, igualdad, tributación, recaudación y presupuesto;
-- v0.47: temas 28–31, protección de datos, transparencia, tributos locales y firma electrónica.
+- v0.47: temas 28–31, protección de datos, transparencia, tributos locales y firma electrónica;
+- v0.48: temas 32–36, Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc.
 
 El tema 22 permanece pendiente de Acuerdo Regulador y Estatutos oficiales vigentes del OAPGT.
 
 ### Resultado acumulado
 
-- **360 preguntas manuales nuevas**;
+- **435 preguntas manuales nuevas**;
 - 15 preguntas por cada tema revisado;
 - dificultad baja, media y alta;
 - respuestas correctas rotadas;
-- justificación mediante artículo o regla jurídica;
-- eliminación de preguntas de plantilla en los 24 temas;
+- justificación normativa o funcional;
+- eliminación de preguntas de plantilla en los 29 temas;
 - simulacros regenerados únicamente con preguntas reales.
 
-## Bloque v0.47
+## Bloque v0.48
 
-### Tema 28
+### Tema 32 · Windows 11 Pro I
 
-- RGPD y Ley Orgánica 3/2018;
-- principios de tratamiento;
-- derechos de las personas;
-- AEPD y sus funciones;
-- publicidad activa;
-- obligación de suministrar información;
-- acceso a información pública;
-- principios de buen gobierno.
+- Explorador de archivos;
+- rutas y vistas;
+- creación de archivos y carpetas;
+- copiar, mover, renombrar y borrar;
+- extensiones;
+- Papelera;
+- unidades locales;
+- rutas UNC y unidades de red;
+- atajos principales.
 
-Se corrige la terminología antigua de “ficheros”: el marco vigente trabaja con tratamientos y registros de actividades de tratamiento.
+### Tema 33 · Windows 11 Pro II
 
-### Tema 29
+- Microsoft Edge;
+- pestañas, favoritos, historial y descargas;
+- navegación InPrivate;
+- seguridad básica en navegación;
+- GroupWise 24;
+- bandejas, carpetas y archivo;
+- Para, CC y CCO;
+- responder, responder a todos y reenviar;
+- libreta de direcciones;
+- calendario, reuniones y tareas.
 
-- IBI: naturaleza, hecho imponible, sujetos, exenciones, bonificaciones, bases, cuota, devengo y período;
-- IAE: naturaleza, hecho imponible, sujetos, exenciones, tarifas, cuota y devengo.
+### Tema 34 · Windows 11 Pro III
 
-### Tema 30
+- impresoras, controladores y colas;
+- pausado, reanudación y cancelación;
+- copias, intercalado, orientación, bandeja y dúplex;
+- impresión a PDF;
+- escáner y multifunción;
+- cristal y alimentador automático;
+- resolución;
+- formatos de salida;
+- OCR y comprobación final.
 
-- IVTM;
-- IIVTNU;
-- tasas locales;
-- sujetos pasivos;
-- bases y cuotas;
-- devengo, períodos y gestión;
-- no sujeción por inexistencia de incremento en IIVTNU.
+### Tema 35 · LibreOffice Writer
 
-### Tema 31
+- ODT y compatibilidad de formatos;
+- guardar, guardar como y exportar;
+- estilos frente a formato directo;
+- páginas, párrafos, listas y saltos;
+- tablas e imágenes;
+- anclaje y ajuste;
+- campos, índices y tabla de contenido;
+- control de cambios;
+- combinación de correspondencia.
 
-- Ley 6/2020 y Reglamento eIDAS;
-- firma avanzada y cualificada;
-- certificados de firma, representación, sello y sitio web;
-- soportes software, tarjeta, DNIe y token;
-- vigencia, revocación y suspensión;
-- prestadores cualificados y no cualificados;
-- supervisión y consulta de certificados.
+### Tema 36 · LibreOffice Calc
+
+- libros, hojas, celdas y rangos;
+- datos, fechas y fórmulas;
+- referencias relativas, absolutas y mixtas;
+- funciones básicas y lógicas;
+- errores de fórmula;
+- ordenación, filtros y validación;
+- formato condicional;
+- gráficos;
+- impresión de hojas extensas.
 
 ## Formatos oficiales de simulacro
 
@@ -90,17 +110,15 @@ Se corrige la terminología antigua de “ficheros”: el marco vigente trabaja 
 | Diputación C1 | 50 | 5 | 60 min |
 | UC3M | 70 | 5 | 60 min |
 
-Las reservas se muestran separadas y no alteran la nota mientras no sustituyan una pregunta anulada.
-
 ## Próximas prioridades
 
 ### Diputación
 
-- temas 32–36: Windows 11, Edge, GroupWise 24, impresión, escaneado, Writer y Calc;
-- temas 37–40: Base, Impress, ordenador personal y periféricos;
+- temas 37–40: LibreOffice Base, LibreOffice Impress, componentes y periféricos;
 - temas 1–4, 10 y 11;
 - tema 22 cuando se localicen fuentes internas;
-- 20 supuestos completos.
+- 20 supuestos completos;
+- elevar todos los temas a 30–40 preguntas reales.
 
 ### Carranque
 
@@ -114,11 +132,11 @@ Completar 19 temas, alcanzar 30–40 preguntas por tema y resolver al menos 20 s
 
 Cerrar normativa interna pendiente y elevar a 30–40 preguntas los temas incompletos.
 
-## Estructura obligatoria de cada tema
+## Estructura obligatoria
 
 1. Resumen orientado al aprobado.
 2. Rigor normativo.
-3. Desarrollo por normas y artículos.
+3. Desarrollo por normas, artículos o funciones.
 4. Opo-Test: puntos calientes.
 5. Retención activa.
 6. Cuadro para test y supuesto práctico.
@@ -127,27 +145,19 @@ El botón **«Volver al listado»** permanece visible mediante `position: sticky
 
 ## Historial reciente
 
+### v0.48.0 · 2026-07-10
+
+- Desarrollados los temas 32–36 de Diputación.
+- Añadidas 75 preguntas manuales.
+- Alcanzados 29 temas profundos y 435 preguntas manuales acumuladas.
+- Actualizada la caché a `opoweb-v55`.
+
 ### v0.47.0 · 2026-07-10
 
-- Desarrollados los temas 28–31 de Diputación.
+- Desarrollados los temas 28–31.
 - Añadidas 60 preguntas manuales.
-- Alcanzados 24 temas profundos y 360 preguntas manuales acumuladas.
-- Actualizada la caché a `opoweb-v54`.
 
 ### v0.46.0 · 2026-07-10
 
 - Desarrollados los temas 23–27.
 - Añadidas 75 preguntas manuales.
-
-### v0.45.0 · 2026-07-10
-
-- Desarrollados los temas 17–21.
-- Marcado el tema 22 como pendiente de fuentes internas.
-
-### v0.44.0 · 2026-07-10
-
-- Desarrollados los temas 12–16.
-
-### v0.43.0 · 2026-07-10
-
-- Desarrollados los temas 5–9.
