@@ -11,8 +11,8 @@ No se incorporarán nuevas OPE hasta cerrar estas cuatro con el máximo nivel po
 
 ## Versión actual
 
-- **OpoWeb v0.43.0**
-- Caché PWA: `opoweb-v50`
+- **OpoWeb v0.44.0**
+- Caché PWA: `opoweb-v51`
 - Última comprobación estructural: 10 de julio de 2026
 
 ## Criterio de perfección
@@ -34,26 +34,36 @@ Una OPE no se considerará cerrada únicamente por tener temas y preguntas. Para
 - proceso selectivo actualizado desde fuentes oficiales;
 - auditoría automática de validez, duplicados, cobertura y formato.
 
-## Avance v0.43 · Diputación de Toledo C1
+## Diputación de Toledo · avance acumulado
 
-Se han desarrollado en profundidad los temas 5 a 9:
+Se han desarrollado en profundidad **10 de los 40 temas oficiales**.
 
-- tema 5: Ley 39/2015, interesados, actividad y plazos;
+### v0.43 · Procedimiento administrativo
+
+- tema 5: interesados, actividad y plazos;
 - tema 6: procedimiento administrativo común;
 - tema 7: acto administrativo;
 - tema 8: revisión y recursos;
 - tema 9: administración electrónica.
 
-La fase añade:
+### v0.44 · Régimen local y contratación
 
-- 75 preguntas manuales nuevas;
-- 15 preguntas por cada tema revisado;
+- tema 12: Régimen Local Español;
+- tema 13: municipio, competencias y presupuesto local;
+- tema 14: provincia, Diputación Provincial de Toledo y régimen electoral;
+- tema 15: comarcas, áreas metropolitanas, mancomunidades y entidades inferiores;
+- tema 16: contratación pública local.
+
+### Resultado del trabajo
+
+- 150 preguntas manuales acumuladas: 75 en v0.43 y 75 en v0.44;
+- 15 preguntas nuevas por cada tema revisado;
 - dificultad baja, media y alta;
 - respuestas correctas rotadas;
-- justificaciones con artículo o regla concreta;
-- eliminación de preguntas de plantilla en esos cinco temas;
-- fusión con bancos reales ya reutilizados, con límite de 40 preguntas por tema;
-- simulacros de Diputación regenerados únicamente con preguntas clasificadas como reales.
+- justificación mediante artículo o regla jurídica;
+- eliminación de preguntas de plantilla en los diez temas;
+- fusión con bancos reales anteriores, con límite de 40 preguntas por tema;
+- simulacros de Diputación regenerados únicamente con preguntas reales disponibles.
 
 El detalle está documentado en [`docs/DIPUTACION_ADMIN_C1.md`](docs/DIPUTACION_ADMIN_C1.md).
 
@@ -100,21 +110,23 @@ La vista **Test por temas** muestra el estado del banco seleccionado. La vista *
 
 ### 1. Diputación de Toledo C1
 
-Bloque siguiente: temas 12 a 16.
+Bloque siguiente: temas 17 a 22.
 
-- régimen local;
-- municipio;
-- provincia y organización de la Diputación;
-- otras entidades locales;
-- contratación pública local.
+- empleo público de Castilla-La Mancha;
+- derechos, deberes y situaciones administrativas;
+- régimen disciplinario;
+- contrato de trabajo;
+- Seguridad Social;
+- Acuerdo Regulador y OAPGT.
 
 Después:
 
-- empleo público de Castilla-La Mancha;
-- laboral y Seguridad Social;
-- Acuerdo Regulador y OAPGT;
 - tributación, recaudación y presupuesto;
-- Windows 11, Edge, GroupWise 24 y LibreOffice 24.
+- protección de datos y transparencia;
+- tributos locales;
+- firma electrónica;
+- Windows 11, Edge, GroupWise 24 y LibreOffice 24;
+- informática básica y periféricos.
 
 ### 2. Carranque
 
@@ -155,12 +167,12 @@ El botón **«Volver al listado»** permanece visible durante el desplazamiento 
 
 ```text
 assets/js/
+├── diputacion-v44.js
+├── ui-v44.js
 ├── diputacion-v43.js
 ├── ui-v43.js
 ├── perfeccion-v42.js
-├── ui-v42.js
-├── correcciones-test-v40.js
-└── auditoria-test-v37.js
+└── ui-v42.js
 
 docs/
 ├── DIPUTACION_ADMIN_C1.md
@@ -171,13 +183,19 @@ docs/
 
 ## Historial reciente
 
+### v0.44.0 · 2026-07-10
+
+- Desarrollados en profundidad los temas 12 a 16 de Diputación.
+- Añadidas 75 preguntas manuales de régimen local y contratación.
+- Alcanzados 10 temas profundos y 150 preguntas manuales acumuladas.
+- Regenerados los simulacros de Diputación con los temas reales disponibles.
+- Actualizada la caché a `opoweb-v51`.
+
 ### v0.43.0 · 2026-07-10
 
 - Desarrollados en profundidad los temas 5 a 9 de Diputación.
-- Añadidas 75 preguntas manuales de contenido.
+- Añadidas 75 preguntas manuales de procedimiento administrativo.
 - Retiradas las preguntas de plantilla de esos cinco temas.
-- Regenerados los simulacros de Diputación con preguntas reales disponibles.
-- Actualizada la caché a `opoweb-v50`.
 
 ### v0.42.0 · 2026-07-10
 
