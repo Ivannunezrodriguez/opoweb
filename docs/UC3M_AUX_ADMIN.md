@@ -28,6 +28,8 @@
 - Tiempo máximo: 60 minutos.
 - Mínimo formal: 35 puntos, sujeto al criterio de corte previsto en las bases.
 
+Desde v0.42 los simulacros muestran separadamente las 70 preguntas puntuables y las 5 reservas. Las reservas se corrigen para entrenamiento, pero no intervienen en la nota mientras no sustituyan una pregunta anulada.
+
 ## Concurso y baremo prudente
 
 | Apartado | Máximo | Estimación prudente personal |
@@ -48,7 +50,7 @@ Cada tema conserva:
 5. Retención activa.
 6. Cuadro para test y supuesto práctico.
 
-## Auditoría del temario · OpoWeb v0.40
+## Auditoría del temario · OpoWeb v0.42
 
 | Tema | Estado actual |
 |---|---|
@@ -73,7 +75,7 @@ Cada tema conserva:
 | 19. Presupuesto UC3M II | Desarrollado; banco 30+; pendientes límites y fechas internas |
 | 20. Contratos | LCSP revisada; pendientes delegaciones y procedimiento interno |
 
-## Auditoría del banco de preguntas
+## Banco de preguntas
 
 La web comprueba automáticamente:
 
@@ -84,80 +86,10 @@ La web comprueba automáticamente:
 - eliminación de duplicados exactos;
 - reparto de respuestas A, B, C y D;
 - dificultad baja, media o alta;
-- cobertura por tema.
+- cobertura por tema;
+- diferencia entre pregunta real y pregunta de plantilla.
 
 Todos los temas mantienen al menos **20 preguntas válidas**.
-
-## Refuerzo v0.40
-
-Se han añadido **90 preguntas manuales y de supuesto breve** para elevar a 30 preguntas o más los nueve bloques más rentables.
-
-### Temas 2 y 3 · Ley 39/2015
-
-- registro electrónico en día inhábil;
-- copias auténticas y documentos ya aportados;
-- representación apud acta;
-- cómputo, ampliación y urgencia;
-- silencio estimatorio y desestimatorio;
-- medidas provisionales;
-- denuncia, prueba e informes;
-- audiencia, desistimiento, renuncia y caducidad;
-- ejecución forzosa y revisión extraordinaria.
-
-### Tema 7 · Transparencia
-
-- información existente;
-- remisión al órgano competente;
-- acceso parcial y disociación;
-- protección de datos;
-- inadmisión frente a denegación;
-- reutilización;
-- actualización de publicidad activa;
-- diferencia entre transparencia y acceso al expediente.
-
-### Tema 8 · Igualdad
-
-- discriminación directa;
-- acción positiva;
-- acoso sexual;
-- represalias;
-- ejes 1 y 5 del III Plan;
-- indicadores de proceso e impacto;
-- confidencialidad y ámbito del protocolo UC3M.
-
-### Tema 9 · Ofimática
-
-- estilos y tablas de contenido;
-- encabezados de tablas;
-- SUMAR.SI y función SI;
-- validación y errores Excel;
-- sugerencias en Docs;
-- permisos de Drive;
-- CCO;
-- eventos recurrentes de Calendar.
-
-### Tema 10 · TREBEP
-
-- interinos y eventuales;
-- inamovilidad;
-- órdenes manifiestamente ilegales;
-- adquisición y pérdida de la condición;
-- servicios especiales;
-- excedencias;
-- suspensión y reingreso.
-
-### Temas 15, 18 y 19 · Específicos UC3M
-
-- Defensor Universitario y recursos;
-- independencia, recomendaciones y servicios;
-- autonomía económica, presupuesto y rendición de cuentas;
-- reforma estatutaria;
-- especialidad presupuestaria;
-- crédito extraordinario, suplemento, transferencias e incorporaciones;
-- ejecución de ingresos;
-- fases RC-A-D-O-P;
-- documentos AD y ADO;
-- cierre y liquidación.
 
 ## Cobertura alcanzada
 
@@ -165,16 +97,16 @@ Se han añadido **90 preguntas manuales y de supuesto breve** para elevar a 30 p
 - **11 temas con 20 preguntas o más**.
 - Objetivo final: 30–40 preguntas manuales por tema.
 
-## Simulacros equilibrados
+## Simulacros oficiales v0.42
 
-Cada simulacro contiene 70 preguntas y representa los 20 temas:
+Cada uno de los tres simulacros contiene:
 
-- 10 temas con 4 preguntas;
-- 10 temas con 3 preguntas;
-- sin repetición interna;
-- corrección real: +1, −1/3 y 0 en blanco.
-
-Los tres simulacros se regeneran después del refuerzo v0.40.
+- 70 preguntas puntuables;
+- 5 preguntas de reserva;
+- representación de los 20 temas;
+- ausencia de repetición interna;
+- corrección real: +1, −1/3 y 0 en blanco;
+- cálculo de nota únicamente sobre las 70 preguntas puntuables.
 
 ## Trabajo pendiente para cerrar la literalidad
 
@@ -184,12 +116,12 @@ Los tres simulacros se regeneran después del refuerzo v0.40.
 4. Normas internas de matrícula, permanencia y evaluación.
 5. Ponderaciones, cupos y calendario anual de admisión UC3M.
 6. Delegaciones y procedimiento interno de contratación.
-7. Elevar los once temas restantes de 20 a 30 preguntas.
+7. Elevar los once temas restantes de 20 a 30–40 preguntas.
 
 ## Estrategia
 
 - Priorizar temas 2, 3, 9 y 10 durante la primera vuelta.
 - Practicar de forma separada los temas 7, 8, 15, 18 y 19.
 - Entrenar a una velocidad media de unos 51 segundos por pregunta.
-- Practicar los tres simulacros equilibrados con penalización real.
+- Practicar los tres simulacros oficiales con sus cinco reservas.
 - No memorizar importes, plazos o competencias internas que no estén contrastados con el documento vigente.
