@@ -13,9 +13,9 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.31.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.32.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v35`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v36`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos actualizados
 
@@ -30,11 +30,9 @@ La caché PWA actual es `opoweb-v35`. Si el móvil muestra una versión anterior
 - Tras superar el test: 10 días hábiles para aportar los méritos.
 - Se formará lista de espera para personal funcionario interino.
 
-## Auditoría del temario UC3M
+## Método de estudio
 
-La versión v0.31.0 elimina la asignación de contenido por número de tema entre convocatorias y retira de la vista los bloques que el usuario no considera útiles: **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso**.
-
-Cada tema muestra ahora:
+Cada tema conserva:
 
 1. **Resumen orientado al aprobado**.
 2. **Rigor normativo**.
@@ -43,27 +41,33 @@ Cada tema muestra ahora:
 5. **Retención activa**.
 6. **Cuadro para test y supuesto práctico**.
 
-### Estado UC3M
+Se han retirado de la vista **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso**.
+
+## Estado del temario UC3M
 
 - Temas 1 a 6: base normativa común revisada.
-- Tema 7: estructura correcta; falta incorporar la literalidad completa de la Ley 10/2019 y el procedimiento interno UC3M.
-- Tema 8: estructura correcta; falta incorporar el III Plan de Igualdad y protocolos UC3M.
-- Tema 9: corregido con Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo electrónico.
+- Tema 7: ampliado con publicidad activa, derecho de acceso y aplicación UC3M. Sigue pendiente cargar la Ley 10/2019 consolidada artículo por artículo y sus plazos literales.
+- Tema 8: completado con LO 3/2007, III Plan de Igualdad UC3M 2025-2029 y protocolo contra el acoso y ciberacoso.
+- Tema 9: Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo electrónico.
 - Temas 10 a 12: TREBEP, RD 364/1995/incompatibilidades y PRL revisados.
-- Temas 13 y 14: LOSU completada por títulos y artículos relevantes.
+- Temas 13 y 14: LOSU desarrollada por títulos y artículos relevantes.
 - Tema 15: pendiente de cargar los artículos literales de los Estatutos UC3M.
 - Tema 16: RD 822/2021 completado; faltan plazos internos UC3M de matrícula, permanencia y evaluación.
 - Tema 17: RD 534/2024 completado; faltan cupos, ponderaciones y calendario anual UC3M.
 - Temas 18 y 19: pendiente de cargar presupuesto y bases de ejecución UC3M vigentes.
 - Tema 20: LCSP desarrollada; falta la capa de delegaciones y reglas internas de contratación UC3M.
 
-Los test de los temas 13, 14, 16, 17 y 20 se han regenerado con preguntas de contenido normativo. Los simulacros mantienen **70 preguntas**.
+## Tema 8 · datos incorporados
 
-## Método de estudio
-
-La vista **Normas** permite estudiar directamente por documento común: Constitución, Ley 39/2015, Ley 40/2015, Régimen Local, Hacienda Local, Contratos, Empleo Público, materias transversales e informática.
-
-El desarrollo de cada tema conserva el título oficial y solo incluye los apartados exigidos por la convocatoria.
+- III Plan de Igualdad UC3M: **2025-2029**.
+- Entrada en vigor: **1 de febrero de 2025**.
+- **6 ejes estratégicos**.
+- **138 medidas**.
+- Comisión de Seguimiento: **8 representantes de la Universidad + 8 de las personas trabajadoras**, con composición equilibrada.
+- Indicadores de seguimiento, proceso, resultado e impacto.
+- Reportes semestrales en octubre y febrero hasta febrero de 2029.
+- Protocolo aplicable a alumnado, PDI, PTGAS y personas externas que trabajan en la UC3M.
+- Doble vertiente: prevención y actuación.
 
 ## Baremo personal conservador
 
@@ -90,24 +94,16 @@ opoweb/
 │       ├── auditoria-temas.js
 │       ├── uc3m-temario-v30.js
 │       ├── uc3m-temario-v31.js
+│       ├── uc3m-temario-v32.js
 │       ├── ui-v29.js
-│       └── ui-v31.js
+│       ├── ui-v31.js
+│       └── ui-v32.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
 │   ├── uc3m.js
 │   ├── formacion_usuario.json
 │   └── normas/
-│       ├── constitucion.js
-│       ├── ley-39-2015.js
-│       ├── ley-39-2015-procedimiento.js
-│       ├── ley-40-2015.js
-│       ├── regimen-local.js
-│       ├── hacienda-local.js
-│       ├── contratos-publicos.js
-│       ├── empleo-publico.js
-│       ├── transversales.js
-│       └── informatica.js
 └── docs/
     ├── PROMPTS_CHATS.md
     ├── LA_PUEBLA.md
@@ -118,30 +114,26 @@ opoweb/
 
 ## Cambios de versión
 
+### v0.32.0 · 2026-07-10
+
+- Completado el tema 8 con el III Plan de Igualdad UC3M 2025-2029.
+- Incorporados los seis ejes, las 138 medidas, la Comisión de Seguimiento, indicadores y reportes.
+- Incorporado el protocolo UC3M frente al acoso y ciberacoso.
+- Ampliado el tema 7 de transparencia sin inventar plazos no verificados.
+- Añadidas 24 preguntas específicas de transparencia e igualdad.
+- Añadidos enlaces oficiales del Plan de Igualdad y del protocolo.
+- Actualizada la caché PWA a `opoweb-v36`.
+
 ### v0.31.0 · 2026-07-10
 
-- Eliminado `mapa-temas.js` de la carga activa para impedir mezclas entre convocatorias.
-- Eliminados **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso** de la vista del tema.
+- Eliminado `mapa-temas.js` de la carga activa.
+- Eliminados **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso**.
 - Añadido **Cuadro para test y supuesto práctico**.
-- Completados los temas 13 y 14 con LOSU por títulos y artículos.
-- Completado el marco estatal del tema 16 con RD 822/2021.
-- Completado el marco estatal del tema 17 con RD 534/2024.
-- Ampliado el tema 20 de contratación pública.
-- Regenerados los test de contenido de los temas revisados.
-- Actualizada la caché PWA a `opoweb-v35`.
+- Completados LOSU, RD 822/2021, RD 534/2024 y contratación común.
 
 ### v0.30.0 · 2026-07-10
 
 - Corregida la mezcla de mapas por número entre convocatorias.
-- Añadido `assets/js/uc3m-temario-v30.js` como auditoría específica.
 - Reestructurados los temas 2 a 12 y 20.
 - Tema 9 corregido con el bloque real de ofimática y Google Workspace.
 - Sustituidos los test metodológicos UC3M por preguntas de contenido.
-
-### v0.29.0 · 2026-07-10
-
-- Retirada **Las Ventas con Peña Aguilera** de OpoWeb.
-- Actualizado el plazo de UC3M: **09/07/2026–05/08/2026**.
-- Añadida la fecha previsible del examen UC3M: **21/11/2026 a las 10:00**.
-- Adaptados los simulacros UC3M a **70 preguntas**.
-- Añadido enlace directo al proceso oficial UC3M.
