@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.48
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.49
 
 ## Estado del proceso
 
@@ -11,117 +11,104 @@
 
 ## Cobertura profunda
 
-Se han revisado **29 de 40 temas**:
+Se han revisado **33 de 40 temas**:
 
 - 5–9: procedimiento administrativo;
 - 12–16: régimen local y contratación;
 - 17–21: empleo público, trabajo y Seguridad Social;
 - 23–27: prevención, igualdad, tributación, recaudación y presupuesto;
 - 28–31: protección de datos, transparencia, tributos locales y firma electrónica;
-- 32–36: Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc.
+- 32–36: Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc;
+- 37–40: Base, Impress, componentes y periféricos.
 
 Cada tema incluye resumen, rigor normativo, desarrollo funcional o normativo, puntos calientes, tres preguntas de retención y cuadro para test y supuesto práctico.
 
-## Bloque v0.48
+## Bloque v0.49
 
-### Tema 32 · Windows 11 Pro I
+### Tema 37 · LibreOffice Base
 
-- Explorador de archivos y apertura con Windows + E;
-- barra de direcciones, panel de navegación, búsqueda y vistas;
-- creación de carpetas con Ctrl + Mayús + N;
-- nombres y caracteres no admitidos;
-- extensiones y formatos;
-- copiar, cortar, pegar, mover y renombrar;
-- Papelera y eliminación directa;
-- unidades locales y de red;
-- rutas UNC y permisos.
+- archivo ODB y conexión a fuentes de datos;
+- datos embebidos o externos;
+- registro de bases en LibreOffice;
+- tablas, filas, campos y tipos;
+- clave primaria;
+- clave ajena;
+- integridad referencial;
+- relaciones uno a uno, uno a muchos y muchos a muchos;
+- tabla intermedia;
+- consultas de selección, parámetros y acción;
+- formularios y subformularios;
+- informes, agrupaciones, totales y paginación.
 
-Puntos clave:
+Puntos de examen:
 
-- copiar conserva el original;
-- mover entre unidades implica transferencia y eliminación posterior del origen;
-- cambiar una extensión no convierte el contenido;
-- Mayús + Supr evita normalmente la Papelera;
-- una unidad de red continúa dependiendo del servidor y la conectividad.
+- el ODB puede guardar objetos y conexión sin contener físicamente todos los datos;
+- una clave primaria identifica de forma única y no admite nulos;
+- una relación muchos a muchos suele resolverse mediante tabla intermedia;
+- una consulta de acción puede modificar registros;
+- formulario e informe cumplen funciones distintas.
 
-### Tema 33 · Edge y GroupWise 24
+### Tema 38 · LibreOffice Impress
 
-#### Microsoft Edge
+- ODP como formato nativo;
+- diapositivas, diseños y marcadores de posición;
+- vistas Normal, Esquema, Notas, Clasificador y Folleto;
+- duplicar, ocultar y reorganizar;
+- diapositiva maestra;
+- objetos, alineación, distribución, agrupación y orden;
+- transiciones entre diapositivas;
+- animaciones de objetos;
+- F5 desde el inicio;
+- Mayús + F5 desde la diapositiva actual;
+- Consola del presentador;
+- impresión y exportación a PDF.
 
-- pestañas y atajos;
-- favoritos;
-- historial;
-- descargas;
-- navegación InPrivate;
-- comprobación de dominios, certificados y origen de archivos.
+### Tema 39 · Ordenador personal
 
-#### GroupWise
+- placa base, chipset y firmware;
+- CPU, núcleos, hilos, frecuencia y caché;
+- RAM y volatilidad;
+- almacenamiento SSD y HDD;
+- interfaces SATA y NVMe/PCIe;
+- GPU integrada y dedicada;
+- red y sonido;
+- fuente de alimentación;
+- disipadores y ventiladores;
+- UEFI y arranque seguro;
+- USB, HDMI, DisplayPort, Ethernet y PCI Express.
 
-- Bandeja de entrada, Enviados, Papelera y carpetas;
-- mover, archivar y eliminar;
-- Para, CC y CCO;
-- responder, responder a todos y reenviar;
-- adjuntos;
-- libreta de direcciones y listas;
-- calendario;
-- citas personales y reuniones;
-- aceptación, rechazo y respuesta provisional;
-- tareas, fechas y estado de finalización.
+Se diferencia expresamente:
 
-### Tema 34 · Impresión y escaneado
+- RAM frente a almacenamiento;
+- frecuencia frente a rendimiento global;
+- conector USB-C frente a protocolo o velocidad;
+- SSD frente a HDD;
+- GPU integrada frente a dedicada.
 
-- impresora, controlador y cola;
-- pausa, reanudación y cancelación;
-- intervalo, copias, intercalado, orientación, papel, bandeja, color y dúplex;
-- impresión a PDF;
-- instalación de impresoras locales y de red;
-- cristal y alimentador automático;
-- resolución en ppp;
-- PDF, JPEG, PNG y TIFF;
-- OCR;
-- revisión de integridad, orientación, legibilidad, nombre y ubicación.
+### Tema 40 · Periféricos
 
-### Tema 35 · LibreOffice Writer
-
-- ODT como formato nativo;
-- Guardar, Guardar como y Exportar a PDF;
-- estilos frente a formato directo;
-- Ctrl + M;
-- estilos de página, párrafo, carácter, lista y tabla;
-- títulos y tabla de contenido;
-- saltos, tabulaciones y listas;
-- tablas;
-- anclaje y ajuste de imágenes;
-- notas, marcadores, campos y referencias;
-- buscar y reemplazar;
-- control de cambios;
-- combinación de correspondencia.
-
-### Tema 36 · LibreOffice Calc
-
-- libros, hojas, celdas y rangos;
-- texto, números, fechas y horas;
-- fórmulas y operadores;
-- referencias relativas, absolutas y mixtas;
-- errores de fórmula;
-- SUMA, PROMEDIO, MIN, MAX, CONTAR, CONTARA y SI;
-- funciones condicionales;
-- ordenación;
-- filtros;
-- validez de datos;
-- formato condicional;
-- gráficos;
-- áreas, escalado y repetición de encabezados en impresión.
+- entrada, salida, entrada/salida, almacenamiento y comunicaciones;
+- teclado, ratón, monitor, pantalla táctil, micrófono y altavoces;
+- impresoras láser y de inyección;
+- escáneres y equipos multifunción;
+- discos duros y SSD externos;
+- memorias USB;
+- extracción segura;
+- lectores y grabadores de CD y DVD;
+- soportes ROM, R y RW;
+- concentradores USB alimentados y no alimentados;
+- compatibilidad de conector, protocolo, controlador y alimentación;
+- cifrado y custodia de dispositivos extraíbles.
 
 ## Banco de preguntas
 
-- **435 preguntas manuales acumuladas**.
-- 75 preguntas nuevas en v0.48.
-- 15 preguntas por tema revisado.
+- **495 preguntas manuales acumuladas**.
+- 60 preguntas nuevas en v0.49.
+- 15 preguntas por cada tema revisado.
 - Cuatro opciones distintas.
 - Respuesta correcta rotada.
 - Dificultad baja, media y alta.
-- Justificación normativa o funcional.
+- Justificación funcional o técnica.
 - Sin preguntas de método en los temas cerrados.
 
 ## Simulacros
@@ -143,21 +130,22 @@ Permanece pendiente de:
 - Estatutos oficiales vigentes del OAPGT;
 - organización y competencias actuales.
 
-## Fuentes principales del bloque v0.48
+## Fuentes principales del bloque v0.49
 
-- documentación oficial de Microsoft Windows 11;
-- documentación oficial de Microsoft Edge;
-- documentación de OpenText/Micro Focus GroupWise 24;
-- ayuda oficial de LibreOffice Writer;
-- ayuda oficial de LibreOffice Calc.
+- ayuda oficial de LibreOffice Base;
+- ayuda oficial de LibreOffice Impress;
+- fundamentos consolidados de arquitectura de ordenadores;
+- fundamentos consolidados de periféricos y almacenamiento externo.
 
 Revisión funcional realizada el 10 de julio de 2026.
 
 ## Próximo bloque
 
-1. Tema 37: LibreOffice Base.
-2. Tema 38: LibreOffice Impress.
-3. Tema 39: ordenador personal y componentes.
-4. Tema 40: periféricos.
-5. Después: temas 1–4, 10 y 11.
-6. Tema 22 cuando existan fuentes internas oficiales.
+1. Tema 1: Constitución, principios y reforma.
+2. Tema 2: derechos y deberes fundamentales.
+3. Tema 3: Corona, Cortes, Gobierno y Poder Judicial.
+4. Tema 4: organización territorial.
+5. Tema 10: responsabilidad patrimonial y potestad sancionadora.
+6. Tema 11: procedimiento administrativo local.
+7. Tema 22 cuando existan fuentes internas oficiales.
+8. Después: 20 supuestos completos y elevación a 30–40 preguntas por tema.
