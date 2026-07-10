@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.63
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.64
 
 ## Estado del proceso
 
@@ -11,95 +11,104 @@
 
 ## Avance aproximado
 
-- Diputación en conjunto: **92 %**.
+- Diputación en conjunto: **96 %**.
 - Primera vuelta: 39 de 40 temas.
-- Segunda vuelta: 30 de 39 temas auditables, aproximadamente **77 %**.
+- Segunda vuelta de temas auditables: **39 de 39, 100 %**.
 - Tema 22 pendiente de fuentes internas oficiales.
 
 ## Estado real
 
-- Temas 1–21 y 23–31 con segunda vuelta mínima de banco.
-- 1.102 preguntas manuales acumuladas.
+- Temas 1–21 y 23–40 con desarrollo y banco mínimo de 30 preguntas reales.
+- 1.237 preguntas manuales acumuladas.
 - Tres simulacros 50 + 5.
 - 20 supuestos y 40 variantes.
-- El conjunto todavía no está cerrado ni puede considerarse perfecto.
+- Tres simulacros prácticos internos.
+- El conjunto todavía no puede declararse cerrado por el tema 22 y la auditoría técnica final.
 
-## Segunda vuelta v0.63
+## Segunda vuelta v0.64
 
 ### Temas reforzados
 
-27. Presupuesto general de las entidades locales: contenido, elaboración, aprobación, publicación, prórroga y reclamaciones.
+32. Windows 11: creación, copia, borrado, carpetas y unidades locales y de red.
 
-28. Protección de datos personales, transparencia y buen gobierno.
+33. Microsoft Edge y correo electrónico con GroupWise 24 y posteriores.
 
-29. Impuesto sobre Bienes Inmuebles e Impuesto sobre Actividades Económicas.
+34. Impresión y escaneado desde Windows 11.
 
-30. Impuesto sobre Vehículos de Tracción Mecánica, IIVTNU y tasas.
+35. LibreOffice Writer.
 
-31. Firma electrónica, certificados y servicios electrónicos de confianza.
+36. LibreOffice Calc.
+
+37. LibreOffice Base.
+
+38. LibreOffice Impress.
+
+39. Ordenador personal y componentes.
+
+40. Periféricos, impresoras, escáneres, almacenamiento externo, CD, DVD y USB.
 
 ### Resultado
 
-- 75 preguntas nuevas en v0.63.
-- 517 preguntas acumuladas en la segunda vuelta.
-- 1.102 preguntas manuales acumuladas.
-- Treinta temas con al menos 30 preguntas reales.
+- 135 preguntas nuevas en v0.64.
+- 652 preguntas acumuladas en la segunda vuelta.
+- 1.237 preguntas manuales acumuladas.
+- Los 39 temas auditables alcanzan al menos 30 preguntas reales.
 - Cuatro opciones distintas, respuesta correcta rotada y dificultad graduada.
-- Justificación mediante artículos concretos de la normativa aplicable.
+- Simulacros regenerados sin tema 22.
 
-## Contenido reforzado
+## Contenido informático reforzado
 
-### Presupuesto local
+### Windows, Edge y GroupWise
 
-- concepto, contenido y estructura;
-- estados de gastos e ingresos;
-- bases de ejecución;
-- formación por la presidencia;
-- aprobación inicial por el Pleno;
-- exposición pública, aprobación definitiva y publicación;
-- prórroga automática;
-- sujetos legitimados y causas de reclamación.
+- Explorador, rutas, extensiones y atajos;
+- copia, movimiento, eliminación y Papelera;
+- rutas UNC, unidades mapeadas y permisos;
+- pestañas, historial, favoritos, descargas e InPrivate;
+- HTTPS y comprobación del dominio;
+- destinatarios, CC, CCO, adjuntos, calendario, citas y seguridad del correo.
 
-### Protección de datos, transparencia y buen gobierno
+### Impresión y digitalización
 
-- consentimiento y deber de confidencialidad;
-- derechos de protección de datos;
-- publicidad activa;
-- derecho de acceso y límites;
-- plazo para resolver y ampliación;
-- principios de buen gobierno;
-- derechos digitales.
+- impresora, rango, copias, orientación, dúplex y cola;
+- impresión a PDF;
+- resolución, color, ADF, cristal plano y OCR;
+- formatos y control de calidad;
+- protección de datos y ubicaciones autorizadas.
 
-### Tributos locales
+### LibreOffice
 
-- IBI: naturaleza, hecho imponible, sujeto pasivo, bases, devengo y periodo;
-- IAE: naturaleza, actividad gravada, exenciones y sujeto pasivo;
-- IVTM: hecho imponible, sujeto, cuota, devengo y periodo;
-- IIVTNU: incremento de valor, no sujeción, sujetos y periodo máximo;
-- tasas: hecho imponible, sujetos, cuantía y devengo.
+- Writer: ODT, estilos, saltos, tablas, cambios, comentarios, correspondencia y PDF;
+- Calc: ODS, celdas, rangos, fórmulas, referencias, funciones, filtros y validación;
+- Base: tablas, campos, registros, claves, relaciones, consultas, formularios e informes;
+- Impress: ODP, diseños, diapositiva maestra, transiciones, animaciones, notas y exportación.
 
-### Servicios electrónicos de confianza
+### Hardware y periféricos
 
-- Reglamento eIDAS y Ley 6/2020;
-- firma electrónica cualificada;
-- sello electrónico y sellado de tiempo;
-- entrega electrónica certificada;
-- autenticación de sitios web;
-- certificados, suspensión y revocación;
-- prestadores cualificados y supervisión.
+- CPU, RAM, placa base, fuente, GPU, red, BIOS y UEFI;
+- HDD, SSD, almacenamiento y copias de seguridad;
+- dispositivos de entrada, salida y mixtos;
+- impresoras láser e inyección;
+- escáneres, USB y unidades ópticas;
+- controladores y seguridad de soportes.
 
 ## Tema 22
 
-Permanece pendiente del Acuerdo Regulador vigente, los Estatutos oficiales del OAPGT y la comprobación de su organización, funcionamiento y competencias actuales.
+Permanece pendiente de:
 
-## Fuentes principales de v0.63
+- Acuerdo Regulador vigente de la Diputación y sus organismos autónomos;
+- Estatutos oficiales vigentes del OAPGT;
+- organización, funcionamiento y competencias actuales;
+- comprobación de modificaciones posteriores.
 
-- Real Decreto Legislativo 2/2004, texto refundido de la Ley Reguladora de las Haciendas Locales.
-- Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales.
-- Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno.
-- Ley 6/2020, reguladora de determinados aspectos de los servicios electrónicos de confianza.
-- Reglamento (UE) 910/2014, eIDAS.
+No se incorporarán datos internos no verificados para forzar un porcentaje artificial del 100 %.
+
+## Fuentes principales de v0.64
+
+- Ayuda oficial de Microsoft para Windows 11 y Microsoft Edge.
+- Documentación del cliente GroupWise 24.
+- Ayuda oficial y manuales de LibreOffice para Writer, Calc, Base e Impress.
+- Documentación técnica general de hardware y periféricos.
 
 ## Siguiente bloque
 
-Temas 32–40: Windows 11, Edge, GroupWise 24, impresión y escaneado, LibreOffice 24 Writer, Calc, Base e Impress, ordenador personal y periféricos.
+Localización y auditoría documental del tema 22, seguida de revisión transversal y consolidación técnica.
