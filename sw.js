@@ -1,4 +1,4 @@
-const CACHE = 'opoweb-v53';
+const CACHE = 'opoweb-v54';
 const ASSETS = [
   './',
   './index.html',
@@ -36,11 +36,13 @@ const ASSETS = [
   './assets/js/diputacion-v44.js',
   './assets/js/diputacion-v45.js',
   './assets/js/diputacion-v46.js',
+  './assets/js/diputacion-v47.js',
   './assets/js/ui-v42.js',
   './assets/js/ui-v43.js',
   './assets/js/ui-v44.js',
   './assets/js/ui-v45.js',
   './assets/js/ui-v46.js',
+  './assets/js/ui-v47.js',
   './data/oposiciones.js',
   './data/proceso.js',
   './data/uc3m.js',
