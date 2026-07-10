@@ -1,6 +1,12 @@
 (() => {
   const VERSION = 'v0.45.0';
 
+  const dipOpe = window.OPOSICIONES_DATA?.oposiciones?.find(item => item.id === 'diputacion-toledo-admin-2026');
+  const theme18 = dipOpe?.themes?.find(item => Number(item.number) === 18);
+  theme18?.sections?.forEach(section => {
+    section.paragraphs = (section.paragraphs || []).map(text => String(text).replace('violencia de género o sexual', 'violencia de género'));
+  });
+
   function patchVersion() {
     const card = document.getElementById('oposicionCard');
     if (card) card.innerHTML = card.innerHTML.replace(/Versión OpoWeb v[0-9.]+/g, `Versión OpoWeb ${VERSION}`);
