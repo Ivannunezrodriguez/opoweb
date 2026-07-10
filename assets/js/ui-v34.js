@@ -1,6 +1,13 @@
 (() => {
   const VERSION = 'v0.34.0';
 
+  const data = window.OPOSICIONES_DATA;
+  const ope = data?.oposiciones?.find(o => o.id === 'uc3m-aux-admin-2026');
+  const entry = ope?.changelog?.find(item => item.version === '0.34.0');
+  if (entry?.changes) {
+    entry.changes = entry.changes.map(text => text.replace('88 preguntas', '85 preguntas'));
+  }
+
   function patchVersion() {
     const card = document.getElementById('oposicionCard');
     if (card) card.innerHTML = card.innerHTML.replace(/Versión OpoWeb v[0-9.]+/g, `Versión OpoWeb ${VERSION}`);
