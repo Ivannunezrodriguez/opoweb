@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.44
+# Auditoría global de OpoWeb · v0.45
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -86,29 +86,40 @@ Las Ventas con Peña Aguilera permanece eliminada. No se incorporarán nuevas co
 - tasa general C1 de 26 euros;
 - la falta de justificación del pago determina exclusión no subsanable.
 
-### Desarrollo alcanzado en v0.44
+### Desarrollo alcanzado en v0.45
 
-Se han cerrado en profundidad **10 de 40 temas**:
+Se han cerrado en profundidad **15 de 40 temas**:
 
 - temas 5 a 9: Ley 39/2015, acto administrativo, recursos y administración electrónica;
-- temas 12 a 16: régimen local, municipio, provincia, Diputación, otras entidades locales y contratación.
+- temas 12 a 16: régimen local, municipio, provincia, Diputación, otras entidades locales y contratación;
+- temas 17 a 21: empleo público de Castilla-La Mancha, derechos y situaciones, disciplina, contrato de trabajo y Seguridad Social.
 
 Resultado acumulado:
 
-- 150 preguntas manuales nuevas;
+- 225 preguntas manuales nuevas;
 - 15 preguntas por tema revisado;
-- eliminación de preguntas de plantilla en esos diez temas;
+- eliminación de preguntas de plantilla en esos quince temas;
 - desarrollo por artículos y reglas;
 - tres simulacros de 50 + 5 formados solo con preguntas clasificadas como reales;
 - cobertura temática parcial mostrada expresamente.
 
+### Control de fuente interna
+
+El tema 22 no se considera cerrado. Queda pendiente de:
+
+- Acuerdo Regulador vigente de Diputación y organismos autónomos;
+- Estatutos oficiales vigentes del OAPGT.
+
+No se incorporarán órganos, condiciones de trabajo o artículos internos sin esos textos.
+
 ### Pendiente prioritario
 
 - presentar solicitud y conservar registro y justificante;
-- temas 17 a 22: empleo público, régimen disciplinario, trabajo, Seguridad Social, Acuerdo Regulador y OAPGT;
-- temas 25 a 31: tributación, recaudación, presupuesto, protección de datos, transparencia e impuestos locales;
-- temas 32 a 40: firma electrónica, Windows 11, Edge, GroupWise, LibreOffice e informática básica;
-- completar los temas constitucionales, organización del Estado, responsabilidad y procedimiento local;
+- tema 22, condicionado a fuente interna;
+- temas 23 a 27: prevención, igualdad, tributación, recaudación y presupuesto;
+- temas 28 a 31: protección de datos, transparencia, impuestos locales y firma electrónica;
+- temas 32 a 40: Windows 11, Edge, GroupWise, LibreOffice e informática básica;
+- completar los temas 1–4, 10 y 11;
 - alcanzar 30–40 preguntas reales en los 40 temas;
 - redactar soluciones completas para 20 supuestos.
 
