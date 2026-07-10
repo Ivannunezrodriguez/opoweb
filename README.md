@@ -13,9 +13,9 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.30.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.31.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v34`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v35`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos actualizados
 
@@ -32,31 +32,38 @@ La caché PWA actual es `opoweb-v34`. Si el móvil muestra una versión anterior
 
 ## Auditoría del temario UC3M
 
-La versión v0.30.0 corrige un fallo estructural: los mapas se aplicaban por número de tema sin distinguir convocatoria. Eso podía mostrar, por ejemplo, protección de datos dentro del tema 9 de ofimática UC3M.
+La versión v0.31.0 elimina la asignación de contenido por número de tema entre convocatorias y retira de la vista los bloques que el usuario no considera útiles: **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso**.
 
-Ahora:
-
-- Cada uno de los **20 temas UC3M** tiene un mapa propio vinculado a su enunciado.
-- Los temas 2, 3, 4, 5, 6, 9, 10, 11, 12 y 20 se han reestructurado por normas y bloques correctos.
-- El tema 9 incluye Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo electrónico.
-- Los test UC3M ya preguntan contenido del tema, no solo metodología de estudio.
-- Los simulacros UC3M mantienen 70 preguntas.
-- Los temas 7, 8 y 13 a 20 muestran su estado de auditoría. Los documentos propios UC3M todavía deben completarse con literalidad oficial antes de considerarlos cerrados.
-
-## Método de estudio
-
-Cada tema mantiene esta estructura:
+Cada tema muestra ahora:
 
 1. **Resumen orientado al aprobado**.
 2. **Rigor normativo**.
-3. **Documento madre reutilizable**.
-4. **Desarrollo tipo academia**.
-5. **Opo-Test: puntos calientes**.
-6. **Retención activa**.
-7. **Tabla comparativa**.
-8. **Plan de estudio y repaso espaciado**.
+3. **Desarrollo por títulos, capítulos y artículos**.
+4. **Opo-Test: puntos calientes**.
+5. **Retención activa**.
+6. **Cuadro para test y supuesto práctico**.
+
+### Estado UC3M
+
+- Temas 1 a 6: base normativa común revisada.
+- Tema 7: estructura correcta; falta incorporar la literalidad completa de la Ley 10/2019 y el procedimiento interno UC3M.
+- Tema 8: estructura correcta; falta incorporar el III Plan de Igualdad y protocolos UC3M.
+- Tema 9: corregido con Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo electrónico.
+- Temas 10 a 12: TREBEP, RD 364/1995/incompatibilidades y PRL revisados.
+- Temas 13 y 14: LOSU completada por títulos y artículos relevantes.
+- Tema 15: pendiente de cargar los artículos literales de los Estatutos UC3M.
+- Tema 16: RD 822/2021 completado; faltan plazos internos UC3M de matrícula, permanencia y evaluación.
+- Tema 17: RD 534/2024 completado; faltan cupos, ponderaciones y calendario anual UC3M.
+- Temas 18 y 19: pendiente de cargar presupuesto y bases de ejecución UC3M vigentes.
+- Tema 20: LCSP desarrollada; falta la capa de delegaciones y reglas internas de contratación UC3M.
+
+Los test de los temas 13, 14, 16, 17 y 20 se han regenerado con preguntas de contenido normativo. Los simulacros mantienen **70 preguntas**.
+
+## Método de estudio
 
 La vista **Normas** permite estudiar directamente por documento común: Constitución, Ley 39/2015, Ley 40/2015, Régimen Local, Hacienda Local, Contratos, Empleo Público, materias transversales e informática.
+
+El desarrollo de cada tema conserva el título oficial y solo incluye los apartados exigidos por la convocatoria.
 
 ## Baremo personal conservador
 
@@ -81,9 +88,10 @@ opoweb/
 │       ├── metodo-opotest.js
 │       ├── motor-temario.js
 │       ├── auditoria-temas.js
-│       ├── mapa-temas.js
 │       ├── uc3m-temario-v30.js
-│       └── ui-v29.js
+│       ├── uc3m-temario-v31.js
+│       ├── ui-v29.js
+│       └── ui-v31.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
@@ -110,16 +118,25 @@ opoweb/
 
 ## Cambios de versión
 
+### v0.31.0 · 2026-07-10
+
+- Eliminado `mapa-temas.js` de la carga activa para impedir mezclas entre convocatorias.
+- Eliminados **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso** de la vista del tema.
+- Añadido **Cuadro para test y supuesto práctico**.
+- Completados los temas 13 y 14 con LOSU por títulos y artículos.
+- Completado el marco estatal del tema 16 con RD 822/2021.
+- Completado el marco estatal del tema 17 con RD 534/2024.
+- Ampliado el tema 20 de contratación pública.
+- Regenerados los test de contenido de los temas revisados.
+- Actualizada la caché PWA a `opoweb-v35`.
+
 ### v0.30.0 · 2026-07-10
 
 - Corregida la mezcla de mapas por número entre convocatorias.
-- Añadido `assets/js/uc3m-temario-v30.js` como auditoría específica final.
-- Asignado un mapa correcto a los 20 temas UC3M.
+- Añadido `assets/js/uc3m-temario-v30.js` como auditoría específica.
 - Reestructurados los temas 2 a 12 y 20.
 - Tema 9 corregido con el bloque real de ofimática y Google Workspace.
 - Sustituidos los test metodológicos UC3M por preguntas de contenido.
-- Identificados de forma visible los temas específicos pendientes de documento oficial.
-- Actualizada la versión visible y la caché PWA a `opoweb-v34`.
 
 ### v0.29.0 · 2026-07-10
 
@@ -128,16 +145,3 @@ opoweb/
 - Añadida la fecha previsible del examen UC3M: **21/11/2026 a las 10:00**.
 - Adaptados los simulacros UC3M a **70 preguntas**.
 - Añadido enlace directo al proceso oficial UC3M.
-
-### v0.28.0
-
-- Añadida biblioteca normativa modular y vista **Normas**.
-- Incorporados motores de temario, auditoría y mapeo de temas comunes.
-
-### v0.16.0
-
-- Añadida la convocatoria UC3M C2 con sus 20 temas oficiales.
-
-### v0.12.0
-
-- Añadida Diputación Provincial de Toledo · Administrativo C1.
