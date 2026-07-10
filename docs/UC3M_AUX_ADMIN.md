@@ -48,7 +48,7 @@ Cada tema conserva:
 5. Retención activa.
 6. Cuadro para test y supuesto práctico.
 
-## Auditoría del temario · OpoWeb v0.37
+## Auditoría del temario · OpoWeb v0.38
 
 | Tema | Estado actual |
 |---|---|
@@ -75,48 +75,74 @@ Cada tema conserva:
 
 ## Auditoría del banco de preguntas
 
-La versión v0.37 comprueba automáticamente todas las preguntas después de cargar el temario.
+La web comprueba automáticamente:
 
-### Requisitos mínimos de validez
+- enunciado presente;
+- cuatro respuestas distintas y no vacías;
+- respuesta correcta incluida;
+- justificación obligatoria;
+- eliminación de duplicados exactos;
+- reparto de respuestas A, B, C y D;
+- cobertura por tema.
 
-- Enunciado presente.
-- Cuatro respuestas distintas y no vacías.
-- Respuesta correcta incluida entre las opciones.
-- Justificación obligatoria.
-- Eliminación de duplicados exactos de enunciado y respuesta.
-- Recuento de posiciones correctas A, B, C y D.
+Todos los temas mantienen al menos **15 preguntas válidas**. El objetivo final es **30–40 preguntas manuales por tema**.
 
-### Cobertura
+## Refuerzo v0.38
 
-- Todos los temas alcanzan al menos **15 preguntas válidas**.
-- El objetivo final es **30–40 preguntas manuales por tema**.
-- La web muestra el número y el estado de cobertura de cada tema.
+Se han añadido **25 preguntas manuales nuevas**, cinco para cada uno de estos temas prioritarios:
 
-### Refuerzo añadido en v0.37
+### Tema 7 · Transparencia
 
-Se han añadido preguntas de aplicación y diferenciación sobre:
+- publicidad activa;
+- resolución motivada;
+- acceso parcial y anonimización;
+- audiencia a terceros;
+- diferencia entre portal y solicitud individual.
 
-- reforma constitucional;
-- notificación electrónica y recursos;
-- encomienda, sede y portal;
-- independencia del DPD;
-- transparencia e igualdad UC3M;
-- LOSU, estudiantado y PTGAS;
-- Estatutos UC3M;
-- reconocimiento de créditos, acceso y admisión;
-- modificaciones presupuestarias y fases del gasto;
-- lotes, magnitudes contractuales y contrato menor.
+### Tema 8 · Igualdad
+
+- discriminación indirecta;
+- seis ejes del III Plan;
+- eje 4;
+- Comisión de Seguimiento 8+8;
+- garantías del protocolo contra el acoso.
+
+### Tema 15 · Estatutos UC3M
+
+- naturaleza del Defensor Universitario;
+- función de los servicios;
+- régimen económico-financiero;
+- elementos de la reforma estatutaria;
+- necesidad de utilizar el texto consolidado.
+
+### Tema 18 · Presupuesto I
+
+- especialidad cualitativa;
+- transferencia de crédito;
+- generación e incorporación;
+- reconocimiento del derecho;
+- datos que dependen de las bases de ejecución vigentes.
+
+### Tema 19 · Presupuesto II
+
+- fase D;
+- fase O;
+- documento ADO;
+- diferencia entre ordenación del gasto y del pago;
+- liquidación presupuestaria.
+
+Estos cinco temas alcanzan un **banco sólido de al menos 20 preguntas válidas**.
 
 ## Simulacros equilibrados
 
 Cada simulacro contiene 70 preguntas y representa los 20 temas:
 
-- 10 temas con 4 preguntas.
-- 10 temas con 3 preguntas.
-- Sin repetición de una misma pregunta dentro del simulacro.
-- Corrección real: +1, −1/3 y 0 en blanco.
+- 10 temas con 4 preguntas;
+- 10 temas con 3 preguntas;
+- sin repetición interna;
+- corrección real: +1, −1/3 y 0 en blanco.
 
-Este reparto evita que un simulacro dependa en exceso de los temas con bancos más grandes.
+Los tres simulacros se regeneran después del refuerzo v0.38.
 
 ## Trabajo pendiente para cerrar la literalidad
 
@@ -126,7 +152,7 @@ Este reparto evita que un simulacro dependa en exceso de los temas con bancos m�
 4. Normas internas de matrícula, permanencia y evaluación.
 5. Ponderaciones, cupos y calendario anual de admisión UC3M.
 6. Delegaciones y procedimiento interno de contratación.
-7. Elevar progresivamente todos los temas de 15 a 30–40 preguntas manuales.
+7. Elevar progresivamente los demás temas de 15 a 20 y después a 30–40 preguntas manuales.
 
 ## Estrategia
 
