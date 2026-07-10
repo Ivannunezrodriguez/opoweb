@@ -11,61 +11,53 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.64.0**
-- Caché PWA: `opoweb-v71`
+- **OpoWeb v0.65.0**
+- Caché PWA: `opoweb-v72`
 - Última revisión estructural: 10 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 87 % |
-| Diputación C1 | 96 % |
+| Funcionamiento e interfaz | 88 % |
+| Diputación C1 | 98 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 53 % |
-| **OpoWeb global** | **67 %** |
+| Arquitectura y pruebas | 55 % |
+| **OpoWeb global** | **68 %** |
 
 Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica. No representan probabilidad de aprobar.
 
 ## Estado real de Diputación
 
-- 39 de 40 temas con primera vuelta profunda;
-- tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT;
-- 585 preguntas manuales de primera vuelta;
-- 652 preguntas añadidas durante la segunda vuelta;
-- **1.237 preguntas manuales acumuladas**;
-- los 39 temas auditables alcanzan al menos 30 preguntas reales;
-- tres simulacros tipo test de 50 + 5;
+- los 40 temas alcanzan al menos 30 preguntas específicas;
+- 684 preguntas añadidas durante la segunda vuelta;
+- **1.269 preguntas manuales acumuladas**;
+- tres simulacros tipo test de 50 + 5 con cobertura de los 40 temas;
 - 20 supuestos completos y 40 variantes;
 - tres simulacros prácticos internos.
 
-La segunda vuelta alcanza **39 de 39 temas actualmente auditables: 100 %**. Esto no equivale al cierre total de Diputación: faltan el tema 22, la auditoría transversal, las pruebas de navegador y la consolidación técnica.
+La cobertura cuantitativa del programa alcanza **40 de 40 temas: 100 %**. La convocatoria completa queda en **98 %** porque la literalidad organizativa y competencial de los Estatutos vigentes del OAPGT sigue pendiente de una publicación oficial accesible y falta la auditoría técnica final.
 
-## Segunda vuelta v0.64
+## Tema 22 · v0.65
 
-Se han reforzado los temas 32–40:
+Se han incorporado **32 preguntas verificadas** sobre:
 
-- Windows 11: archivos, carpetas y unidades locales y de red;
-- Edge y GroupWise 24;
-- impresión y escaneado;
-- LibreOffice Writer, Calc, Base e Impress;
-- ordenador personal y componentes;
-- periféricos y almacenamiento externo.
+- ámbito, vigencia y prórroga del Acuerdo Regulador;
+- derechos individuales y colectivos;
+- Comisión de Seguimiento;
+- clases de personal y titulación C1;
+- copia básica contractual y jornada;
+- modificaciones económicas publicadas en 2026;
+- titularidad, sede y registro electrónico del OAPGT;
+- gestión por la Secretaría, disponibilidad, rechazo de documentos y recibo electrónico.
 
-### Resultado
-
-- 135 preguntas nuevas y específicas;
-- 652 preguntas acumuladas en la segunda vuelta;
-- 1.237 preguntas manuales acumuladas;
-- 39 temas auditables con al menos 30 preguntas reales;
-- cuatro alternativas distintas, respuesta correcta rotada y dificultad graduada;
-- regeneración de los tres simulacros.
+La brecha documental sobre los Estatutos del OAPGT queda registrada expresamente en los datos y en las pruebas. No se atribuyen competencias internas no verificadas.
 
 ## Bloque pendiente de Diputación
 
-1. Localizar y verificar el Acuerdo Regulador vigente y los Estatutos oficiales del OAPGT para completar el tema 22.
+1. Localizar la publicación oficial vigente de los Estatutos del OAPGT.
 2. Auditar transversalmente vigencia, duplicados, cobertura y dificultad.
 3. Incorporar pruebas de navegador y validación visual.
 4. Consolidar las capas históricas sin perder progreso guardado.
@@ -86,24 +78,25 @@ Pendiente desarrollar 20 temas, sustituir preguntas de método y rehacer los sup
 
 ## Pruebas automáticas
 
-GitHub Actions ejecuta en cada `push` y `pull_request` las pruebas `smoke-v56` a `smoke-v64`. Se comprueban recuentos, simulacros 50 + 5, ausencia de duplicados internos y exclusión controlada del tema 22.
+GitHub Actions ejecuta las pruebas `smoke-v56` a `smoke-v65`. Se comprueban los 40 temas, la brecha documental, recuentos, simulacros 50 + 5 y ausencia de duplicados internos.
 
 ## Historial reciente
+
+### v0.65.0 · 2026-07-10
+
+- Añadidas 32 preguntas verificadas al tema 22.
+- Alcanzadas 1.269 preguntas manuales acumuladas.
+- Los 40 temas alcanzan el objetivo cuantitativo mínimo de 30 preguntas.
+- Tema 22 incorporado sin ocultar la brecha de los Estatutos del OAPGT.
+- Simulacros regenerados con cobertura de los 40 temas.
+- Caché actualizada a `opoweb-v72`.
 
 ### v0.64.0 · 2026-07-10
 
 - Añadidas 135 preguntas a los temas 32–40.
 - Alcanzadas 1.237 preguntas manuales acumuladas.
-- Completados los 39 temas auditables a 30+ preguntas.
-- Regenerados los simulacros.
-- Actualizada la caché a `opoweb-v71`.
 
 ### v0.63.0 · 2026-07-10
 
 - Añadidas 75 preguntas a los temas 27–31.
 - Alcanzadas 1.102 preguntas manuales acumuladas.
-
-### v0.62.0 · 2026-07-10
-
-- Añadidas 62 preguntas a los temas 24–26.
-- Alcanzadas 1.027 preguntas manuales acumuladas.
