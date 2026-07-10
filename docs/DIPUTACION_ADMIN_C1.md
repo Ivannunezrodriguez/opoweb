@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.54
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.55
 
 ## Estado del proceso
 
@@ -13,28 +13,30 @@
 
 - 39 de 40 temas con primera vuelta profunda.
 - Tema 22 pendiente de fuentes internas oficiales.
-- Temas 1–9 completan ya la segunda vuelta mínima de banco.
+- Temas 1–16 completan ya la segunda vuelta mínima de banco.
 - El conjunto todavía no se considera perfecto ni cerrado.
 
 Un tema solo se considerará cerrado cuando reúna desarrollo actualizado, 30–40 preguntas reales, justificaciones verificadas, ausencia de duplicados y correcta integración en simulacros y supuestos.
 
-## Segunda vuelta v0.54
+## Segunda vuelta v0.55
 
 ### Temas reforzados
 
-5. Ley 39/2015: disposiciones generales, interesados, actividad, términos y plazos.
-6. Procedimiento administrativo común.
-7. Acto administrativo.
-8. Revisión y recursos.
-9. Administración electrónica.
+10. Responsabilidad patrimonial de la Administración.
+11. Procedimiento administrativo local.
+12. Régimen Local Español.
+13. Municipio y presupuesto local.
+14. Provincia, Diputación y régimen electoral provincial.
+15. Otras entidades locales.
+16. Contratación pública local.
 
 ### Preguntas añadidas
 
 - 15 preguntas nuevas por tema.
-- 75 preguntas nuevas en v0.54.
-- 135 preguntas acumuladas en la segunda vuelta.
-- 720 preguntas manuales acumuladas desde el inicio del desarrollo de Diputación.
-- Temas 1–9 con al menos 30 preguntas reales.
+- 105 preguntas nuevas en v0.55.
+- 240 preguntas acumuladas en la segunda vuelta.
+- 825 preguntas manuales acumuladas desde el inicio del desarrollo de Diputación.
+- Temas 1–16 con al menos 30 preguntas reales.
 - Cuatro opciones distintas.
 - Respuesta correcta rotada.
 - Dificultad baja, media y alta.
@@ -42,81 +44,105 @@ Un tema solo se considerará cerrado cuando reúna desarrollo actualizado, 30–
 
 ## Contenido reforzado por tema
 
-### Tema 5
+### Tema 10
 
-- capacidad de menores y entidades sin personalidad;
-- representación y subsanación de su acreditación;
-- apoderamiento apud acta;
-- actuaciones que exigen firma;
-- asistencia por funcionario habilitado;
-- derechos generales de las personas;
-- colaboración y comparecencia;
-- obligación de resolver;
-- suspensión y ampliación del plazo máximo;
-- certificado de silencio;
-- caducidad en procedimientos sancionadores de oficio.
+- fuerza mayor y deber jurídico de soportar;
+- concurrencia de Administraciones;
+- responsabilidad solidaria;
+- criterios de distribución;
+- fecha de valoración;
+- indemnización en especie o periódica;
+- responsabilidad de entidades de derecho privado del sector público;
+- reclamación directa frente a la Administración;
+- acción de regreso por dolo o culpa o negligencia grave;
+- informe del servicio;
+- dictamen consultivo;
+- resolución y procedimiento simplificado.
 
-### Tema 6
+### Tema 11
 
-- derechos del presunto responsable;
-- medidas provisionales previas;
-- acumulación;
-- declaración responsable y comunicación;
-- orden de incoación;
-- cuestiones incidentales;
-- prueba e informes;
-- audiencia;
-- información pública;
-- desistimiento y continuación por terceros;
-- efectos de la caducidad.
+- capacidad, legitimación y representación ante entidades locales;
+- inicio y formación del expediente;
+- informes administrativos;
+- Registro General de entrada y salida;
+- contenido de asientos;
+- remisión sin dilación;
+- recibo de presentación;
+- originales y copias;
+- cotejo motivado;
+- comunicaciones y notificaciones;
+- silencio y caducidad.
 
-### Tema 7
+### Tema 12
 
-- contenido y forma del acto;
-- actos verbales;
-- inderogabilidad singular;
-- eficacia retroactiva favorable;
-- notificaciones defectuosas;
-- rechazo;
-- segundo intento en papel;
-- publicación mediante BOE;
-- nulidad por incompetencia o adquisición sin requisitos esenciales;
-- defectos de forma y actuación fuera de plazo;
-- conversión y convalidación.
+- entidades locales territoriales y no territoriales;
+- potestad reglamentaria y de autoorganización;
+- recuperación de oficio de bienes;
+- capacidad jurídica;
+- objetividad y sometimiento al Derecho;
+- competencias propias y delegadas;
+- suficiencia financiera;
+- coordinación y autonomía;
+- información y colaboración interadministrativa;
+- Ley 7/1985 y ROF.
 
-### Tema 8
+### Tema 13
 
-- revisión de oficio en cualquier momento;
-- dictamen favorable;
-- inadmisión de solicitudes manifiestamente infundadas;
-- lesividad;
-- suspensión en revisión;
-- revocación y rectificación;
-- límites de la revisión;
-- actos de trámite cualificados;
-- impugnación indirecta de disposiciones;
-- remisión de alzada;
-- reposición;
-- revisión extraordinaria.
+- término municipal y límites provinciales;
+- creación y supresión de municipios;
+- vecino y Padrón;
+- órganos municipales necesarios;
+- Junta de Gobierno Local;
+- Pleno y Alcalde;
+- formación del presupuesto;
+- anexo de personal;
+- exposición pública;
+- entrada en vigor.
 
-### Tema 9
+### Tema 14
 
-- identificación y firma;
-- sistemas de clave concertada;
-- asistencia electrónica;
-- registro abierto 24 horas;
-- fecha y hora oficial;
-- archivo electrónico único;
-- requisitos del documento electrónico;
-- creación y contenido de la sede;
-- incidencias técnicas;
-- actuación automatizada;
-- código seguro de verificación.
+- provincia como agrupación de municipios;
+- solidaridad y equilibrio intermunicipal;
+- prestación integral de servicios;
+- órganos provinciales necesarios;
+- Pleno y Presidente;
+- asistencia a municipios;
+- plan provincial de cooperación;
+- elección del Presidente;
+- partidos judiciales;
+- proclamación de diputados provinciales.
+
+### Tema 15
+
+- creación de comarcas;
+- oposición municipal a la comarca;
+- límites a la pérdida de competencias municipales;
+- áreas metropolitanas;
+- mancomunidades;
+- personalidad y estatutos;
+- aprobación por los plenos;
+- informe de Diputación;
+- entes de ámbito inferior al municipio;
+- diferencia entre comarca y mancomunidad.
+
+### Tema 16
+
+- contratos de obras, suministros, servicios y concesiones;
+- riesgo operacional;
+- necesidad e idoneidad;
+- prohibición de fraccionamiento;
+- división en lotes;
+- presupuesto base y valor estimado;
+- crédito adecuado;
+- contratos menores;
+- competencias del Presidente y del Pleno;
+- Juntas y Mesas de contratación;
+- perfil de contratante.
 
 ## Banco y simulacros
 
-- 720 preguntas manuales acumuladas.
-- Nueve temas con segunda vuelta mínima completada.
+- 825 preguntas manuales acumuladas.
+- Dieciséis temas con segunda vuelta mínima completada.
 - Tres simulacros de 50 + 5 regenerados.
 - Tema 22 excluido.
 - Solo se incorporan preguntas reales con cuatro alternativas y justificación.
@@ -139,24 +165,26 @@ Permanece pendiente de:
 
 No se incorporarán datos internos no verificados.
 
-## Fuentes principales de v0.54
+## Fuentes principales de v0.55
 
-- Ley 39/2015, texto consolidado oficial.
-- Ley 40/2015, funcionamiento electrónico.
-- Real Decreto 203/2021, actuación y funcionamiento por medios electrónicos.
+- Ley 40/2015.
+- Ley 39/2015.
+- Ley 7/1985, Reguladora de las Bases del Régimen Local.
+- Real Decreto 2568/1986, ROF.
+- TRLRHL, aprobado por Real Decreto Legislativo 2/2004.
+- Ley Orgánica 5/1985, del Régimen Electoral General.
+- Ley 9/2017, de Contratos del Sector Público.
 
 Revisión realizada el 10 de julio de 2026.
 
 ## Siguiente bloque
 
-Temas 10–16:
+Temas 17–21:
 
-1. responsabilidad patrimonial;
-2. procedimiento administrativo local;
-3. régimen local;
-4. municipio y presupuesto;
-5. provincia, Diputación y régimen electoral;
-6. otras entidades locales;
-7. contratación pública local.
+1. personal y acceso al empleo público de Castilla-La Mancha;
+2. derechos, deberes y situaciones administrativas;
+3. régimen disciplinario;
+4. contrato de trabajo;
+5. modalidades contractuales y Seguridad Social.
 
 Objetivo: 30–40 preguntas reales por cada tema.
