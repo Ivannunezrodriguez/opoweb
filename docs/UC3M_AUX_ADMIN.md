@@ -48,7 +48,7 @@ Cada tema conserva:
 5. Retención activa.
 6. Cuadro para test y supuesto práctico.
 
-## Auditoría del temario · OpoWeb v0.35
+## Auditoría del temario · OpoWeb v0.36
 
 | Tema | Estado actual |
 |---|---|
@@ -60,81 +60,75 @@ Cada tema conserva:
 | 6. Protección de datos | Revisado en profundidad |
 | 7. Transparencia Madrid/UC3M | Ampliado; pendiente texto consolidado y plazos literales |
 | 8. Igualdad UC3M | Completado con III Plan y protocolo UC3M |
-| 9. Ofimática | Revisado en profundidad en v0.35 |
-| 10. TREBEP | Revisado por artículos 8–15, 52–54, 62–68 y 85–92 |
+| 9. Ofimática | Revisado en profundidad |
+| 10. TREBEP | Revisado en profundidad |
 | 11. RD 364/1995 e incompatibilidades | Revisado en profundidad |
-| 12. PRL | Revisado por artículos 1–4, 14–29 y 30–39 |
-| 13. LOSU I | Completado por títulos y artículos relevantes |
-| 14. LOSU II | Completado |
+| 12. PRL | Revisado en profundidad |
+| 13. LOSU I | Revisado en profundidad en v0.36 |
+| 14. LOSU II | Revisado en profundidad en v0.36 |
 | 15. Estatutos UC3M | Desarrollado; pendiente literalidad consolidada |
-| 16. RD 822/2021 y normativa UC3M | Marco estatal completado; pendientes reglas internas |
-| 17. RD 534/2024 y admisión | Marco estatal completado; pendientes datos anuales UC3M |
+| 16. RD 822/2021 y normativa UC3M | Marco estatal revisado; pendientes reglas internas |
+| 17. RD 534/2024 y admisión | Marco estatal revisado; pendientes datos anuales UC3M |
 | 18. Presupuesto UC3M I | Desarrollado; pendientes datos internos vigentes |
 | 19. Presupuesto UC3M II | Desarrollado; pendientes límites y fechas internas |
-| 20. Contratos | LCSP ampliada; pendientes delegaciones y procedimiento interno |
+| 20. Contratos | LCSP revisada; pendientes delegaciones y procedimiento interno |
 
-## Revisión v0.35 · Tema 9
+## Revisión v0.36 · Tema 13
 
-Se ha desarrollado:
+- Artículo 1: objeto de la LOSU.
+- Artículo 2: docencia, investigación y transferencia.
+- Artículo 3: autonomía universitaria y personalidad jurídica.
+- Creación y reconocimiento mediante ley.
+- Calidad universitaria.
+- Función docente, investigación y transferencia.
+- Cooperación, sociedad e internacionalización.
 
-- Word 2019: fuente, párrafo, estilos, secciones, tablas, encabezado, pie, control de cambios, comentarios, combinación de correspondencia, impresión y PDF.
-- Excel 2019: libro, hoja, celda, rango, fórmulas, funciones, referencias relativas, absolutas y mixtas, ordenación, filtros, tablas, validación, formato condicional y gráficos.
-- Drive: permisos lector, comentarista y editor.
-- Docs y Sheets: colaboración e historial de versiones.
-- Calendar: eventos, invitados, recurrencia y disponibilidad.
-- Gmail: Para, CC, CCO, responder, reenviar, etiquetas, filtros y seguridad.
+## Revisión v0.36 · Tema 14
 
-## Revisión v0.35 · Tema 10
+- Estudiantado: artículos 31 a 37.
+- Derechos académicos y deberes.
+- Régimen económico-financiero: artículos 53 a 63.
+- Presupuesto público, único y equilibrado.
+- PDI: artículos 64 a 88.
+- PTGAS: artículos 89 a 94.
+- Concurso como sistema ordinario de provisión.
 
-### Clases de personal
+## Revisión v0.36 · Tema 16
 
-- Artículo 8: funcionario de carrera, funcionario interino, personal laboral y personal eventual.
-- Artículos 9 a 13: definición y características de cada clase y personal directivo.
+- Grado, Máster y Doctorado.
+- Reconocimiento y transferencia de créditos.
+- Grado: 240 ECTS como regla y 60 por curso.
+- Formación básica: mínimo 60 ECTS en grados de 240.
+- Máster: 60, 90 o 120 ECTS.
+- TFM: 6 a 30 ECTS y defensa pública.
+- Verificación, seguimiento, modificación y renovación de acreditación.
 
-### Derechos y deberes
+## Revisión v0.36 · Tema 17
 
-- Artículo 14: derechos individuales.
-- Artículo 15: derechos ejercidos colectivamente.
-- Artículos 52 a 54: deberes, principios éticos y principios de conducta.
+- Diferencia entre acceso y admisión.
+- Bachiller y prueba de acceso.
+- Técnico Superior sin prueba de acceso.
+- Adaptaciones y accesibilidad.
+- Nota de acceso, nota de admisión, ponderaciones y cupos.
+- Vía específica con al menos 30 ECTS reconocidos.
+- Notas de corte como resultado anual, no requisito fijo.
 
-### Relación de servicio
+## Revisión v0.36 · Tema 20
 
-- Artículo 62: proceso selectivo, nombramiento, acatamiento y toma de posesión.
-- Artículos 63 a 68: pérdida, renuncia, nacionalidad, inhabilitación, jubilación y rehabilitación.
-- Artículos 85 a 92: situaciones administrativas.
-
-## Revisión v0.35 · Tema 11
-
-- Convocatorias y bases.
-- Concurso como sistema normal de provisión.
-- Libre designación con convocatoria pública.
-- Permanencia mínima general de dos años para concursar desde destino definitivo, con excepciones.
-- Promoción interna por oposición o concurso-oposición.
-- Los méritos no compensan ejercicios de oposición no superados.
-- Regla general de incompatibilidad de un segundo puesto público.
-- Prohibición de actividades privadas relacionadas directamente con el destino.
-- Diferencia entre actividad exceptuada y compatibilidad autorizada.
-
-## Revisión v0.35 · Tema 12
-
-- Derecho a protección eficaz y deber correlativo.
-- El coste preventivo no recae en el trabajador.
-- Principios del artículo 15.
-- Evaluación y planificación.
-- Información, formación y emergencias.
-- Riesgo grave e inminente.
-- Vigilancia de la salud y confidencialidad.
-- Obligaciones del artículo 29.
-- Trabajadores designados, servicio propio y servicio ajeno.
-- Delegados de Prevención.
-- Comité de Seguridad y Salud: 50 o más trabajadores, paritario, colegiado y reunión trimestral.
+- Principios y tipos contractuales.
+- Objeto y lotes.
+- Presupuesto base, valor estimado y precio.
+- Necesidad, expediente, solvencia y prohibiciones.
+- Contrato menor: obras < 40.000 €; suministros y servicios < 15.000 €.
+- Abierto simplificado abreviado: obras < 80.000 €; suministros y servicios < 60.000 €.
+- Adjudicación, formalización, ejecución y extinción.
 
 ## Test y simulacros
 
-- 85 preguntas manuales para los temas 1 a 6.
-- **60 preguntas manuales nuevas** para los temas 9 a 12.
+- 85 preguntas manuales para temas 1 a 6.
+- 60 preguntas manuales para temas 9 a 12.
+- **60 preguntas manuales nuevas** para temas 13, 14, 16, 17 y 20.
 - Tres simulacros de 70 preguntas regenerados.
-- Las preguntas se centran en operaciones, artículos, plazos, órganos, efectos y diferencias entre figuras.
 
 ## Trabajo pendiente para cerrar la literalidad
 
@@ -142,14 +136,14 @@ Se ha desarrollado:
 2. Presupuesto y bases de ejecución UC3M exigibles.
 3. Ley 10/2019 consolidada con plazos exactos.
 4. Normas internas de matrícula, permanencia y evaluación.
-5. Delegaciones y procedimiento interno de contratación.
-6. Revisión profunda final de temas 13, 14, 16, 17 y 20.
+5. Ponderaciones, cupos y calendario anual de admisión UC3M.
+6. Delegaciones y procedimiento interno de contratación.
 7. Aumentar progresivamente la batería hasta 30–40 preguntas manuales por tema.
 
 ## Estrategia
 
-- Priorizar temas 1 a 12 en la primera vuelta.
-- Estudiar aparte temas 13 a 19 por su especificidad universitaria.
+- Priorizar temas 1 a 14 y 20 durante la primera vuelta.
+- Estudiar aparte temas 15 a 19 por su especificidad interna.
 - Entrenar a una velocidad media de unos 51 segundos por pregunta.
 - Practicar simulacros completos de 70 preguntas con penalización real.
 - No memorizar importes, plazos o competencias internas que no estén contrastados con el documento vigente.
