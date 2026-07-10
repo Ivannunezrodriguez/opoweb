@@ -18,6 +18,27 @@
     return state.progress[key];
   }
 
+  function removeOldPhaseCards() {
+    [
+      'dipV43Card', 'dipV44Card', 'dipV45Card', 'dipV46Card', 'dipV47Card', 'dipV48Card', 'dipV49Card', 'dipV50Card', 'dipV51Card',
+      'dipNextBlockV44', 'dipNextBlockV45', 'dipNextBlockV46', 'dipNextBlockV47', 'dipNextBlockV48', 'dipNextBlockV49', 'dipNextBlockV50', 'dipNextBlockV51'
+    ].forEach(id => document.getElementById(id)?.remove());
+  }
+
+  function phaseCards() {
+    return `<article class="card" id="dipV51Card">
+      <div class="pill-row"><span class="badge common">Diputación v0.51</span><span class="badge">39 temas</span><span class="badge">20 supuestos completos</span></div>
+      <h2>Primera vuelta jurídica y fase práctica activadas</h2>
+      <p>Los supuestos genéricos se han sustituido por veinte casos completos con cuestiones, solución por fases, base normativa o técnica y lista de autocorrección.</p>
+    </article>
+    <article class="card compact" id="dipNextBlockV51">
+      <h3>Siguiente fase de perfeccionamiento</h3>
+      <p><strong>Banco:</strong> elevar los 39 temas cerrados a 30–40 preguntas reales.</p>
+      <p><strong>Práctico:</strong> añadir variantes, rúbricas y simulacros de segundo ejercicio.</p>
+      <p><strong>Tema 22:</strong> cerrar solo cuando estén verificadas las fuentes internas oficiales.</p>
+    </article>`;
+  }
+
   function solutionHtml(item, saved) {
     const sections = (item.solution || []).map(section => `
       <section class="section">
@@ -91,8 +112,7 @@
       </article>
       ${caseCard(item, index, cases.length)}`;
 
-    const select = document.getElementById('practicalCaseSelect');
-    select?.addEventListener('change', event => {
+    document.getElementById('practicalCaseSelect')?.addEventListener('change', event => {
       state.selectedPracticalCase = event.target.value;
       renderSupuestos();
     });
@@ -110,14 +130,12 @@
     });
 
     const key = caseKey(item);
-    const answer = document.getElementById('caseAnswer');
-    answer?.addEventListener('input', event => {
+    document.getElementById('caseAnswer')?.addEventListener('input', event => {
       state.progress[key].answer = event.target.value;
       saveProgress();
       const note = document.getElementById('caseSaveState');
       if (note) note.textContent = 'Respuesta guardada.';
     });
-
     document.getElementById('toggleCaseSolution')?.addEventListener('click', () => {
       state.progress[key].solutionOpen = !state.progress[key].solutionOpen;
       saveProgress();
@@ -147,14 +165,8 @@
     const original = renderProceso;
     renderProceso = function () {
       original();
-      ['dipV43Card', 'dipV44Card', 'dipV45Card', 'dipV46Card', 'dipV47Card', 'dipV48Card', 'dipV49Card', 'dipV50Card', 'dipV51Card'].forEach(id => document.getElementById(id)?.remove());
-      if (active()?.id === 'diputacion-toledo-admin-2026') {
-        content.insertAdjacentHTML('beforeend', `<article class="card" id="dipV51Card">
-          <div class="pill-row"><span class="badge common">Diputación v0.51</span><span class="badge">20 supuestos completos</span></div>
-          <h2>Fase práctica activada</h2>
-          <p>Los supuestos genéricos se han sustituido por veinte casos completos con cuestiones, solución por fases, base normativa o técnica y lista de autocorrección.</p>
-        </article>`);
-      }
+      removeOldPhaseCards();
+      if (active()?.id === 'diputacion-toledo-admin-2026') content.insertAdjacentHTML('beforeend', phaseCards());
       patchVersion();
     };
   }
@@ -163,11 +175,13 @@
     const original = renderProgreso;
     renderProgreso = function () {
       original();
+      removeOldPhaseCards();
       document.getElementById('caseProgressV51')?.remove();
       const o = active();
       if (o?.id === 'diputacion-toledo-admin-2026') {
         const cases = o.practicalCases || [];
         const reviewed = cases.filter(item => state.progress[caseKey(item)]?.reviewed).length;
+        content.insertAdjacentHTML('beforeend', phaseCards());
         content.insertAdjacentHTML('beforeend', `<article class="card" id="caseProgressV51">
           <h2>Progreso en supuestos</h2>
           <div class="progress-bar"><span style="width:${cases.length ? Math.round(reviewed / cases.length * 100) : 0}%"></span></div>
