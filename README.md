@@ -13,22 +13,19 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.32.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.33.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v36`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v37`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
-## UC3M · datos actualizados
+## UC3M · datos principales
 
 - Plazo de solicitud: **del 9 de julio al 5 de agosto de 2026**, ambos inclusive.
-- Solicitud: exclusivamente telemática desde el proceso oficial de empleo PTGAS de la UC3M.
+- Solicitud: exclusivamente telemática.
 - Tasa general: **13,83 €**.
-- Sistema: concurso-oposición.
-- Oposición: ejercicio único tipo test de **70 preguntas + 5 de reserva**, 60 minutos.
+- Oposición: ejercicio único de **70 preguntas + 5 de reserva**, 60 minutos.
 - Corrección: +1 acierto, −1/3 error, blanco 0.
-- Fecha previsible del ejercicio: **sábado 21 de noviembre de 2026 a las 10:00**.
+- Fecha previsible: **21 de noviembre de 2026 a las 10:00**.
 - Concurso: inglés hasta 3 puntos, experiencia hasta 22 y formación hasta 5.
-- Tras superar el test: 10 días hábiles para aportar los méritos.
-- Se formará lista de espera para personal funcionario interino.
 
 ## Método de estudio
 
@@ -46,35 +43,22 @@ Se han retirado de la vista **Mapa de estudio**, **Esquema oficial** y **Tabla d
 ## Estado del temario UC3M
 
 - Temas 1 a 6: base normativa común revisada.
-- Tema 7: ampliado con publicidad activa, derecho de acceso y aplicación UC3M. Sigue pendiente cargar la Ley 10/2019 consolidada artículo por artículo y sus plazos literales.
-- Tema 8: completado con LO 3/2007, III Plan de Igualdad UC3M 2025-2029 y protocolo contra el acoso y ciberacoso.
-- Tema 9: Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo electrónico.
-- Temas 10 a 12: TREBEP, RD 364/1995/incompatibilidades y PRL revisados.
-- Temas 13 y 14: LOSU desarrollada por títulos y artículos relevantes.
-- Tema 15: pendiente de cargar los artículos literales de los Estatutos UC3M.
-- Tema 16: RD 822/2021 completado; faltan plazos internos UC3M de matrícula, permanencia y evaluación.
-- Tema 17: RD 534/2024 completado; faltan cupos, ponderaciones y calendario anual UC3M.
-- Temas 18 y 19: pendiente de cargar presupuesto y bases de ejecución UC3M vigentes.
-- Tema 20: LCSP desarrollada; falta la capa de delegaciones y reglas internas de contratación UC3M.
-
-## Tema 8 · datos incorporados
-
-- III Plan de Igualdad UC3M: **2025-2029**.
-- Entrada en vigor: **1 de febrero de 2025**.
-- **6 ejes estratégicos**.
-- **138 medidas**.
-- Comisión de Seguimiento: **8 representantes de la Universidad + 8 de las personas trabajadoras**, con composición equilibrada.
-- Indicadores de seguimiento, proceso, resultado e impacto.
-- Reportes semestrales en octubre y febrero hasta febrero de 2029.
-- Protocolo aplicable a alumnado, PDI, PTGAS y personas externas que trabajan en la UC3M.
-- Doble vertiente: prevención y actuación.
+- Tema 7: ampliado; queda pendiente la Ley 10/2019 consolidada con plazos literales.
+- Tema 8: completado con LO 3/2007, III Plan de Igualdad 2025-2029 y protocolo UC3M.
+- Tema 9: Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo.
+- Temas 10 a 14: revisados y desarrollados.
+- Tema 15: desarrollado por los cuatro bloques oficiales; quedan pendientes artículos, mayorías y plazos literales del texto consolidado.
+- Temas 16 y 17: marco estatal completado; faltan reglas internas y calendario anual UC3M.
+- Tema 18: desarrollado con características, estructura, créditos, modificaciones y ejecución de ingresos; faltan cifras y bases internas vigentes.
+- Tema 19: desarrollado con fases de gasto, documentos contables, pagos, transferencias, inversiones, liquidación y cierre; faltan límites, delegaciones y fechas UC3M.
+- Tema 20: LCSP desarrollada; falta la capa de delegaciones y reglas internas UC3M.
 
 ## Baremo personal conservador
 
 - **La Puebla**: DAM no parece sumar; sin experiencia pública C2 confirmada, 0 puntos de concurso.
-- **Carranque**: DAM puede sumar 0,75 puntos si quedó acreditado; experiencia administrativa pública no confirmada, 0.
-- **Diputación C1**: oposición libre, sin baremo; DAM permite el acceso pero no da puntos.
-- **UC3M C2**: inglés 0 salvo certificado oficial B2/C1; experiencia pública equivalente no confirmada, 0; formación potencial hasta 5 puntos, pendiente de revisar certificados, entidad, horas, fecha y relación con las funciones.
+- **Carranque**: DAM puede sumar 0,75 puntos si quedó acreditado; experiencia pública no confirmada, 0.
+- **Diputación C1**: oposición libre; DAM permite acceso pero no da puntos.
+- **UC3M C2**: inglés 0 salvo certificado oficial; experiencia equivalente 0; formación potencial hasta 5 puntos, pendiente de validación.
 
 ## Estructura principal
 
@@ -95,9 +79,11 @@ opoweb/
 │       ├── uc3m-temario-v30.js
 │       ├── uc3m-temario-v31.js
 │       ├── uc3m-temario-v32.js
+│       ├── uc3m-temario-v33.js
 │       ├── ui-v29.js
 │       ├── ui-v31.js
-│       └── ui-v32.js
+│       ├── ui-v32.js
+│       └── ui-v33.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
@@ -114,15 +100,20 @@ opoweb/
 
 ## Cambios de versión
 
+### v0.33.0 · 2026-07-10
+
+- Desarrollado el tema 15: Defensor, servicios, régimen económico y reforma estatutaria.
+- Desarrollado el tema 18: estructura presupuestaria, créditos, modificaciones e ingresos.
+- Desarrollado el tema 19: fases de gasto, documentos contables, pagos, inversiones y cierre.
+- Añadidas **36 preguntas específicas**.
+- No se han inventado artículos, mayorías, importes, límites ni fechas internas no verificadas.
+- Actualizada la caché PWA a `opoweb-v37`.
+
 ### v0.32.0 · 2026-07-10
 
-- Completado el tema 8 con el III Plan de Igualdad UC3M 2025-2029.
-- Incorporados los seis ejes, las 138 medidas, la Comisión de Seguimiento, indicadores y reportes.
-- Incorporado el protocolo UC3M frente al acoso y ciberacoso.
-- Ampliado el tema 7 de transparencia sin inventar plazos no verificados.
-- Añadidas 24 preguntas específicas de transparencia e igualdad.
-- Añadidos enlaces oficiales del Plan de Igualdad y del protocolo.
-- Actualizada la caché PWA a `opoweb-v36`.
+- Completado el tema 8 con el III Plan de Igualdad UC3M.
+- Ampliado el tema 7 de transparencia.
+- Añadidas 24 preguntas específicas.
 
 ### v0.31.0 · 2026-07-10
 
@@ -130,10 +121,3 @@ opoweb/
 - Eliminados **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso**.
 - Añadido **Cuadro para test y supuesto práctico**.
 - Completados LOSU, RD 822/2021, RD 534/2024 y contratación común.
-
-### v0.30.0 · 2026-07-10
-
-- Corregida la mezcla de mapas por número entre convocatorias.
-- Reestructurados los temas 2 a 12 y 20.
-- Tema 9 corregido con el bloque real de ofimática y Google Workspace.
-- Sustituidos los test metodológicos UC3M por preguntas de contenido.
