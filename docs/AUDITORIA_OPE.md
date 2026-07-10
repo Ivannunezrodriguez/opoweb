@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.58
+# Auditoría global de OpoWeb · v0.59
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -9,19 +9,19 @@ Fecha de revisión: 10 de julio de 2026.
 3. Diputación Provincial de Toledo · Administrativo C1.
 4. Universidad Carlos III de Madrid · Auxiliar Administrativo C2.
 
-Las Ventas con Peña Aguilera está retirada del selector mediante sus dos identificadores históricos. No se añadirán nuevas convocatorias hasta cerrar estas cuatro.
+Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuevas convocatorias hasta cerrar estas cuatro.
 
 ## Avance aproximado
 
 | Área | Avance |
 |---|---:|
 | Funcionamiento e interfaz | 82 % |
-| Diputación C1 | 79 % |
+| Diputación C1 | 81 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 40 % |
-| **OpoWeb global** | **56 %** |
+| Arquitectura y pruebas | 43 % |
+| **OpoWeb global** | **57 %** |
 
 La estimación pondera temario, banco real, supuestos, simulacros, auditoría normativa y deuda técnica.
 
@@ -55,9 +55,9 @@ La estimación pondera temario, banco real, supuestos, simulacros, auditoría no
 - 40 variantes.
 - Tres simulacros prácticos internos.
 
-### Segunda vuelta v0.58
+### Segunda vuelta v0.59
 
-Temas 1–19 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–20 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
@@ -67,25 +67,25 @@ Resultado acumulado:
 - 15 preguntas nuevas en v0.56;
 - 19 preguntas nuevas en v0.57;
 - 18 preguntas nuevas en v0.58;
-- 292 preguntas nuevas de segunda vuelta;
-- 877 preguntas manuales acumuladas;
-- diecinueve temas consecutivos a 30+ preguntas reales;
-- segunda vuelta: 19 de 39 temas auditables, aproximadamente 49 %;
-- justificación mediante artículo o regla oficial;
+- 30 preguntas nuevas en v0.59;
+- 322 preguntas nuevas de segunda vuelta;
+- 907 preguntas manuales acumuladas;
+- veinte temas consecutivos a 30+ preguntas reales;
+- segunda vuelta: 20 de 39 temas auditables, aproximadamente 51 %;
 - cuatro alternativas distintas;
 - dificultad graduada;
 - control de duplicados;
 - simulacros regenerados.
 
-Ámbitos reforzados en v0.58:
+Ámbitos reforzados en v0.59:
 
-- legalidad, tipicidad e irretroactividad;
-- proporcionalidad, culpabilidad y presunción de inocencia;
-- faltas y sanciones disciplinarias;
-- responsabilidad y extinción;
-- prescripción y cancelación;
-- procedimiento y medidas cautelares;
-- relación con la jurisdicción penal.
+- concepto y elementos de la relación laboral;
+- fuentes de la relación laboral;
+- derechos y deberes básicos;
+- trabajo de menores y capacidad;
+- forma, comunicación y copia básica;
+- validez y nulidad;
+- periodo de prueba.
 
 ### Criterio de perfección pendiente
 
@@ -103,10 +103,10 @@ Para considerar cerrada Diputación deben cumplirse simultáneamente:
 
 ### Próximo bloque
 
-Temas 20–21:
+Tema 21:
 
-- contrato de trabajo;
-- modalidades contractuales y Seguridad Social.
+- modalidades contractuales;
+- Seguridad Social.
 
 ## La Puebla
 
