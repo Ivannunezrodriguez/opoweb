@@ -40,7 +40,7 @@
 | **Fecha previsible del examen** | **21/11/2026 a las 10:00** |
 | Presentación de méritos | 10 días hábiles para quienes superen la oposición |
 
-La fecha del 21 de noviembre es previsible y aparece en la página oficial de la UC3M. Debe confirmarse cuando se publique la resolución definitiva de admitidos y la convocatoria formal del ejercicio.
+La fecha del 21 de noviembre es previsible y debe confirmarse cuando se publique la resolución definitiva de admitidos y la convocatoria formal del ejercicio.
 
 ## Examen
 
@@ -97,30 +97,32 @@ Se valoran cursos de los ocho años anteriores impartidos por universidades púb
 
 No debe darse por consolidado ningún punto de formación hasta comprobar certificado, entidad organizadora, financiación pública, fechas, horas y relación con las funciones.
 
-## Temario oficial
+## Temario oficial y auditoría OpoWeb v0.30
 
-20 temas:
+Los 20 temas ya tienen un mapa propio UC3M. Se ha eliminado la asignación incorrecta por número de tema que mezclaba contenidos de otras convocatorias.
 
-1. Constitución Española.
-2. Ley 39/2015 I.
-3. Ley 39/2015 II.
-4. Ley 40/2015 I.
-5. Ley 40/2015 II.
-6. Protección de datos.
-7. Transparencia de la Comunidad de Madrid y UC3M.
-8. Igualdad y normativa UC3M.
-9. Word 2019, Excel 2019, herramientas Google y correo electrónico.
-10. TREBEP.
-11. RD 364/1995 e incompatibilidades.
-12. Prevención de Riesgos Laborales.
-13. Ley Orgánica del Sistema Universitario I.
-14. Ley Orgánica del Sistema Universitario II.
-15. Estatutos UC3M.
-16. RD 822/2021 y normativa académica UC3M.
-17. RD 534/2024 y acceso/admisión universitaria.
-18. Presupuesto UC3M I.
-19. Presupuesto UC3M II.
-20. Contratos del Sector Público con referencia UC3M.
+| Tema | Estado en OpoWeb |
+|---|---|
+| 1. Constitución | Base común revisada |
+| 2. Ley 39/2015 I | Corregido: incluye disposiciones, interesados, actividad y actos |
+| 3. Ley 39/2015 II | Corregido: incluye procedimiento y revisión/recursos |
+| 4. Ley 40/2015 I | Corregido: órganos, competencia y técnicas de alteración |
+| 5. Ley 40/2015 II | Corregido: sede, actuación automatizada, firma e interoperabilidad |
+| 6. Protección de datos | Base común revisada; falta ajuste literal completo a LO 3/2018 |
+| 7. Transparencia Madrid/UC3M | Estructura correcta; pendiente literalidad autonómica y portal UC3M |
+| 8. Igualdad UC3M | Estructura correcta; pendiente III Plan y protocolos UC3M |
+| 9. Ofimática | Corregido: Word, Excel, Drive, Docs, Sheets, Calendar y correo |
+| 10. TREBEP | Corregido: clases, derechos, deberes, pérdida y situaciones |
+| 11. RD 364/1995 | Corregido: ingreso, provisión, carrera, promoción e incompatibilidades |
+| 12. PRL | Base común revisada |
+| 13. LOSU I | Estructura oficial ordenada; pendiente desarrollo artículo por artículo |
+| 14. LOSU II | Estructura oficial ordenada; pendiente desarrollo artículo por artículo |
+| 15. Estatutos UC3M | Estructura correcta; pendiente literalidad estatutaria |
+| 16. RD 822/2021 y normativa UC3M | Estructura correcta; pendientes plazos y reglas UC3M |
+| 17. RD 534/2024 y admisión | Estructura correcta; pendientes cupos, ponderaciones y plazos UC3M |
+| 18. Presupuesto UC3M I | Estructura correcta; pendientes cifras y bases vigentes |
+| 19. Presupuesto UC3M II | Estructura correcta; pendientes documentos y procedimientos internos |
+| 20. Contratos | Base LCSP revisada; pendiente capa de órganos/delegaciones UC3M |
 
 ## Estrategia
 
@@ -129,3 +131,4 @@ No debe darse por consolidado ningún punto de formación hasta comprobar certif
 3. Preparar aparte los temas 13 a 19, que son específicos del ámbito universitario.
 4. Practicar simulacros completos de 70 preguntas con penalización real.
 5. Presentar la solicitud con margen y comprobar inmediatamente el justificante de registro y el pago o exención.
+6. No considerar cerrados los temas específicos hasta incorporar los documentos oficiales UC3M indicados en la auditoría.
