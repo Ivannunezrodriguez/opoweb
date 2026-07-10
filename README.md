@@ -11,21 +11,21 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.62.0**
-- Caché PWA: `opoweb-v69`
+- **OpoWeb v0.63.0**
+- Caché PWA: `opoweb-v70`
 - Última revisión estructural: 10 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 85 % |
-| Diputación C1 | 87 % |
+| Funcionamiento e interfaz | 86 % |
+| Diputación C1 | 92 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 49 % |
-| **OpoWeb global** | **61 %** |
+| Arquitectura y pruebas | 51 % |
+| **OpoWeb global** | **64 %** |
 
 Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica. No representan probabilidad de aprobar.
 
@@ -34,42 +34,41 @@ Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, s
 - 39 de 40 temas con primera vuelta profunda;
 - tema 22 pendiente de Acuerdo Regulador y Estatutos oficiales del OAPGT;
 - 585 preguntas manuales de primera vuelta;
-- 442 preguntas añadidas durante la segunda vuelta;
-- **1.027 preguntas manuales acumuladas**;
-- temas 1–21 y 23–26 elevados al objetivo mínimo de 30 preguntas reales;
+- 517 preguntas añadidas durante la segunda vuelta;
+- **1.102 preguntas manuales acumuladas**;
+- temas 1–21 y 23–31 elevados al objetivo mínimo de 30 preguntas reales;
 - tres simulacros tipo test de 50 + 5;
 - 20 supuestos completos y 40 variantes;
 - tres simulacros prácticos internos.
 
-La segunda vuelta alcanza **25 de los 39 temas actualmente auditables: aproximadamente un 64 %**. Para cerrar Diputación faltan los temas 27–40, el tema 22, la auditoría transversal y la consolidación técnica.
+La segunda vuelta alcanza **30 de los 39 temas actualmente auditables: aproximadamente un 77 %**. Para cerrar Diputación faltan los temas 32–40, el tema 22, la auditoría transversal y la consolidación técnica.
 
-## Segunda vuelta v0.62
+## Segunda vuelta v0.63
 
 Se han reforzado:
 
-- **Tema 24:** igualdad entre mujeres y hombres, normativa estatal y de Castilla-La Mancha.
-- **Tema 25:** obligación tributaria, sujetos, gestión, extinción y revisión.
-- **Tema 26:** recaudación voluntaria y ejecutiva, aplazamiento, compensación, devolución y apremio.
+- **Tema 27:** presupuesto general de las entidades locales.
+- **Tema 28:** protección de datos, transparencia y buen gobierno.
+- **Tema 29:** IBI e IAE.
+- **Tema 30:** IVTM, IIVTNU y tasas.
+- **Tema 31:** firma electrónica, certificados y servicios electrónicos de confianza.
 
 ### Resultado
 
-- 62 preguntas nuevas y específicas;
-- 442 preguntas acumuladas en la segunda vuelta;
-- veinticinco temas con al menos 30 preguntas reales;
-- cuatro alternativas distintas y respuesta correcta rotada;
-- dificultad baja, media y alta;
-- justificación con artículos de las normas aplicables;
+- 75 preguntas nuevas y específicas;
+- 517 preguntas acumuladas en la segunda vuelta;
+- treinta temas con al menos 30 preguntas reales;
+- cuatro alternativas distintas, respuesta correcta rotada y dificultad graduada;
 - regeneración de los tres simulacros.
 
 ## Próximas prioridades
 
 ### Diputación
 
-1. Reforzar los temas 27–31: presupuesto, protección de datos, transparencia, impuestos locales y servicios electrónicos de confianza.
-2. Completar el bloque informático y ofimático 32–40.
-3. Cerrar el tema 22 solo con textos oficiales internos.
-4. Auditar referencias, duplicados, cobertura y dificultad.
-5. Consolidar las capas históricas cuando el contenido esté estabilizado.
+1. Reforzar los temas 32–40 de informática y ofimática.
+2. Cerrar el tema 22 solo con textos oficiales internos.
+3. Auditar referencias, duplicados, cobertura y dificultad.
+4. Consolidar las capas históricas.
 
 ### Carranque
 
@@ -85,24 +84,24 @@ Cerrar normativa interna pendiente y elevar a 30–40 preguntas los temas incomp
 
 ## Pruebas automáticas
 
-GitHub Actions ejecuta en cada `push` y `pull_request` las pruebas `smoke-v56` a `smoke-v62`. Se comprueban recuentos, simulacros 50 + 5, ausencia de duplicados internos y exclusión del tema 22.
+GitHub Actions ejecuta en cada `push` y `pull_request` las pruebas `smoke-v56` a `smoke-v63`. Se comprueban recuentos, simulacros 50 + 5, ausencia de duplicados internos y exclusión del tema 22.
 
 ## Historial reciente
+
+### v0.63.0 · 2026-07-10
+
+- Añadidas 75 preguntas a los temas 27–31.
+- Alcanzadas 1.102 preguntas manuales acumuladas.
+- Treinta temas elevados al objetivo mínimo de 30 preguntas reales.
+- Regenerados los simulacros.
+- Actualizada la caché a `opoweb-v70`.
 
 ### v0.62.0 · 2026-07-10
 
 - Añadidas 62 preguntas a los temas 24–26.
 - Alcanzadas 1.027 preguntas manuales acumuladas.
-- Veinticinco temas elevados al objetivo mínimo de 30 preguntas reales.
-- Regenerados los simulacros.
-- Actualizada la caché a `opoweb-v69`.
 
 ### v0.61.0 · 2026-07-10
 
 - Añadidas 22 preguntas al tema 23.
 - Alcanzadas 965 preguntas manuales acumuladas.
-
-### v0.60.0 · 2026-07-10
-
-- Añadidas 36 preguntas al tema 21.
-- Alcanzadas 943 preguntas manuales acumuladas.
