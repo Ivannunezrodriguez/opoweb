@@ -1,53 +1,56 @@
 # OpoWeb · Auxiliar Administrativo Toledo
 
-Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrativo desde ordenador, tablet o móvil. El foco principal sigue siendo Toledo, pero se añade UC3M como convocatoria complementaria por volumen de plazas.
+Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrativo desde ordenador, tablet o móvil. El foco principal es Toledo, con la UC3M como convocatoria complementaria por su volumen de plazas.
 
-## Convocatorias cargadas
+## Convocatorias activas
 
 - **La Puebla de Montalbán**: 4 plazas + bolsa. Estado personal: inscrito.
 - **Carranque**: 1 plaza + bolsa. Estado personal: inscrito.
-- **Las Ventas con Peña Aguilera**: 1 plaza. Estado personal: pendiente de solicitud/seguimiento.
 - **Diputación Provincial de Toledo · Administrativo C1**: 2 plazas. Estado personal: pendiente de solicitud.
-- **Universidad Carlos III de Madrid · Auxiliar Administrativo C2**: 34 plazas, 2 reservadas a discapacidad. Estado personal: pendiente de solicitud/seguimiento.
+- **Universidad Carlos III de Madrid · Auxiliar Administrativo C2**: 34 plazas, 2 reservadas a discapacidad. Estado personal: pendiente de solicitud.
+
+**Las Ventas con Peña Aguilera se ha retirado del selector y de la planificación activa.**
 
 ## Versión visible
 
-La web muestra ahora la **Versión OpoWeb v0.16.0** en la tarjeta lateral de la oposición activa y también en la vista de progreso. Si en móvil/tablet no aparece esa versión, hay que recargar o borrar caché de la PWA.
+La web muestra la **Versión OpoWeb v0.29.0** en la tarjeta lateral y en la vista de progreso.
 
-## Qué permite ahora
+La caché PWA actual es `opoweb-v33`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
-- Seleccionar la oposición activa desde el menú lateral.
-- Ver proceso, enlaces oficiales y calendario de cada convocatoria.
-- Estudiar temario por convocatoria con desarrollo amplio por bloques legales y artículos cuando procede.
-- Tener en una misma hoja la explicación de cada punto del tema, sin depender de mirar aparte rangos de artículos.
-- Mantener el **Cuadro para test y supuesto práctico** como guía de respuesta.
-- Ver cada tema con estructura estable: **Resumen orientado al aprobado**, **Rigor normativo**, **Opo-Test**, **Retención activa** y **Plan de estudio**.
-- Ver módulos manuales **tipo academia** para bloques reutilizables: Constitución, Ley 39/2015, Ley 40/2015, Régimen Local, Contratación, Hacienda/Tributos/Presupuesto y Ofimática.
-- Hacer test por temas con corrección, penalización y justificación.
-- Practicar supuestos prácticos con soluciones orientativas jurídicas y operativas.
-- Hacer simulacros transversales.
-- Exportar/importar progreso del navegador.
+## UC3M · datos actualizados
 
-## Método de resumen aplicado al temario
+- Plazo de solicitud: **del 9 de julio al 5 de agosto de 2026**, ambos inclusive.
+- Solicitud: exclusivamente telemática desde el proceso oficial de empleo PTGAS de la UC3M.
+- Tasa general: **13,83 €**.
+- Sistema: concurso-oposición.
+- Oposición: ejercicio único tipo test de **70 preguntas + 5 de reserva**, 60 minutos.
+- Corrección: +1 acierto, −1/3 error, blanco 0.
+- Fecha previsible del ejercicio: **sábado 21 de noviembre de 2026 a las 10:00**.
+- Concurso: inglés hasta 3 puntos, experiencia hasta 22 y formación hasta 5.
+- Tras superar el test: 10 días hábiles para aportar los méritos.
+- Se formará lista de espera para personal funcionario interino.
 
-Cada tema queda reforzado con esta estructura:
+## Método de estudio
 
-1. **Resumen orientado al aprobado**: identifica el enunciado oficial, la finalidad del tema y qué hay que dominar para aprobar.
-2. **Rigor normativo**: leyes, artículos, órganos y plazos se mantienen sin convertir días hábiles/naturales ni meses en aproximaciones.
-3. **Documento madre reutilizable**: identifica el bloque común que puede servir para varias convocatorias.
-4. **Desarrollo tipo academia**: desarrolla el bloque con lógica jurídica y administrativa.
-5. **Opo-Test: puntos calientes**: detalles con alta probabilidad de pregunta tipo test.
-6. **Retención activa**: 3 preguntas de autoevaluación sin respuesta visible.
-7. **Tabla comparativa**: conceptos que suelen confundirse.
-8. **Plan de estudio**: vueltas de lectura, recuerdo activo, test y revisión de fallos.
+Cada tema mantiene esta estructura:
 
-## Baremos personales cargados de forma conservadora
+1. **Resumen orientado al aprobado**.
+2. **Rigor normativo**.
+3. **Documento madre reutilizable**.
+4. **Desarrollo tipo academia**.
+5. **Opo-Test: puntos calientes**.
+6. **Retención activa**.
+7. **Tabla comparativa**.
+8. **Plan de estudio y repaso espaciado**.
 
-- **La Puebla**: DAM probablemente no suma porque las bases solo citan Grado en Derecho o Arquitectura como mérito de titulación. Sin experiencia pública C2 confirmada: 0 puntos.
-- **Carranque**: DAM como FP de Grado Superior puede sumar 0,75 puntos si fue aportado/acreditado en plazo. Sin experiencia administrativa pública confirmada: 0 puntos.
-- **Las Ventas**: Técnico Superior/DAM puede sumar 2 puntos si se acredita con la solicitud. Formación y ejercicios aprobados solo deben sumarse si cumplen literalmente las bases.
-- **Diputación Administrativo C1**: no hay baremo porque es oposición libre. DAM sirve como titulación superior al requisito de Bachillerato/equivalente, pero no da puntos.
-- **UC3M Auxiliar Administrativo C2**: inglés 0 salvo B2/C1 oficial vigente; experiencia pública como funcionario en escala equivalente no confirmada = 0; formación probable 2-5/30 si el tribunal acepta cursos válidos por entidad, fechas, horas y relación con funciones.
+La vista **Normas** permite estudiar directamente por documento común: Constitución, Ley 39/2015, Ley 40/2015, Régimen Local, Hacienda Local, Contratos, Empleo Público, materias transversales e informática.
+
+## Baremo personal conservador
+
+- **La Puebla**: DAM no parece sumar; sin experiencia pública C2 confirmada, 0 puntos de concurso.
+- **Carranque**: DAM puede sumar 0,75 puntos si quedó acreditado; experiencia administrativa pública no confirmada, 0.
+- **Diputación C1**: oposición libre, sin baremo; DAM permite el acceso pero no da puntos.
+- **UC3M C2**: inglés 0 salvo certificado oficial B2/C1; experiencia pública equivalente no confirmada, 0; formación potencial hasta 5 puntos, pendiente de revisar certificados, entidad, horas, fecha y relación con las funciones.
 
 ## Estructura principal
 
@@ -62,106 +65,55 @@ opoweb/
 │   ├── icons/icon.svg
 │   └── js/
 │       ├── app.js
-│       ├── estudio-avanzado.js
-│       ├── temario-profundo.js
-│       ├── temario-editorial.js
-│       ├── ofimatica-detalle.js
 │       ├── metodo-opotest.js
-│       ├── temario-academia.js
-│       ├── ajustes-v15.js
-│       └── ajustes-v16.js
+│       ├── motor-temario.js
+│       ├── auditoria-temas.js
+│       ├── mapa-temas.js
+│       └── ui-v29.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
 │   ├── uc3m.js
-│   └── formacion_usuario.json
+│   ├── formacion_usuario.json
+│   └── normas/
+│       ├── constitucion.js
+│       ├── ley-39-2015.js
+│       ├── ley-39-2015-procedimiento.js
+│       ├── ley-40-2015.js
+│       ├── regimen-local.js
+│       ├── hacienda-local.js
+│       ├── contratos-publicos.js
+│       ├── empleo-publico.js
+│       ├── transversales.js
+│       └── informatica.js
 └── docs/
     ├── PROMPTS_CHATS.md
     ├── LA_PUEBLA.md
     ├── CARRANQUE.md
-    ├── LAS_VENTAS.md
     ├── DIPUTACION_ADMINISTRATIVO.md
     └── UC3M_AUX_ADMIN.md
 ```
 
 ## Cambios de versión
 
-### v0.16.0 - 2026-07-09
+### v0.29.0 · 2026-07-10
 
-- Añadida **Universidad Carlos III de Madrid · Auxiliar Administrativo C2** al selector.
-- Cargado el temario oficial de 20 temas del Anexo I.
-- Añadidos tests por tema, supuestos prácticos, simulacros, calendario y enlaces oficiales.
-- Marcada como **pendiente de solicitud/seguimiento** y prioridad secundaria frente a Toledo por destino Madrid.
-- Añadida estimación prudente de baremo personal UC3M: 2-5 puntos probables sobre 30, salvo inglés oficial o experiencia pública no confirmada.
-- Añadido `data/uc3m.js`, `assets/js/ajustes-v16.js` y `docs/UC3M_AUX_ADMIN.md`.
-- Actualizada caché PWA a `opoweb-v16`.
+- Retirada **Las Ventas con Peña Aguilera** de OpoWeb.
+- Actualizado el plazo de UC3M: **09/07/2026–05/08/2026**.
+- Añadida la fecha previsible del examen UC3M: **21/11/2026 a las 10:00**.
+- Adaptados los simulacros UC3M a **70 preguntas**.
+- Añadido enlace directo al proceso oficial UC3M.
+- Actualizada la versión visible y la caché PWA a `opoweb-v33`.
 
-### v0.15.0 - 2026-07-08
+### v0.28.0
 
-- Añadido `assets/js/ajustes-v15.js`.
-- Reforzada la estructura común de todos los temas: **Resumen orientado al aprobado**, **Rigor normativo**, **Opo-Test**, **Retención activa** y **Plan de estudio**.
-- Confirmada **Diputación Provincial de Toledo · Administrativo C1** en el selector de oposiciones.
-- Actualizada etiqueta visible a **Versión OpoWeb v0.15.0**.
-- Actualizada caché PWA a `opoweb-v15`.
+- Añadida biblioteca normativa modular y vista **Normas**.
+- Incorporados motores de temario, auditoría y mapeo de temas comunes.
 
-### v0.14.0 - 2026-07-07
+### v0.16.0
 
-- Añadido `assets/js/temario-academia.js`.
-- Añadidos módulos manuales tipo academia para bloques reutilizables.
-- Añadida etiqueta visible **Versión OpoWeb v0.14.0** en la web.
-- Añadida marca visual `academia` en los temas que tienen desarrollo fino reutilizable.
-- Actualizada caché PWA a `opoweb-v14`.
+- Añadida la convocatoria UC3M C2 con sus 20 temas oficiales.
 
-### v0.13.0 - 2026-07-07
+### v0.12.0
 
-- Añadido `assets/js/metodo-opotest.js`.
-- Aplicada estructura de resumen orientada al aprobado a todos los temas de todas las oposiciones.
-- Añadidos puntos calientes **Opo-Test** y 3 preguntas de recuerdo activo por tema.
-- Añadidas tablas comparativas adaptadas a recursos, plazos, régimen local, hacienda/tributos e informática.
-- Actualizada caché PWA a `opoweb-v13`.
-
-### v0.12.0 - 2026-07-07
-
-- Añadida **Diputación Provincial de Toledo · Administrativo C1** al selector de oposiciones.
-- Cargado el temario oficial de 40 temas del Anexo VII.
-- Añadidos tests por tema, supuestos prácticos, simulacros transversales, calendario y enlaces oficiales.
-- Marcada como **pendiente de solicitud** y sin baremo al ser oposición libre.
-- Actualizada caché PWA a `opoweb-v12`.
-
-### v0.9.0 - 2026-07-04
-
-- Añadido `assets/js/temario-profundo.js`.
-- Ampliado el temario de todas las oposiciones por bloques completos: Constitución, Ley 39/2015, Ley 40/2015, régimen local, empleo público, hacienda local, contratos, bienes, igualdad, prevención, protección de datos, administración electrónica e informática.
-- Quitados los bloques que no aportaban: argot técnico, trampas habituales y mapa de estudio.
-- Mantenido el **Cuadro para test y supuesto práctico**.
-- Actualizada caché PWA a `opoweb-v9`.
-
-### v0.8.0 - 2026-07-04
-
-- Reestructurado el temario para desarrollar artículos dentro de la misma hoja cuando procede.
-- Eliminados bloques auxiliares poco útiles.
-
-### v0.7.0 - 2026-07-04
-
-- Sustituidos bloques genéricos por contenido más orientado a estudio.
-- Mejoradas soluciones orientativas de supuestos.
-- Actualizada caché PWA a `opoweb-v7`.
-
-### v0.6.0 - 2026-07-04
-
-- Añadidas **Carranque** y **Las Ventas con Peña Aguilera** al selector de oposiciones.
-- Carranque queda marcada como **inscrito**.
-- Añadidos temarios iniciales, tests, supuestos y simulacros para Carranque y Las Ventas.
-- Añadidos calendarios y enlaces oficiales por convocatoria.
-- Añadida estructura de chats y plantilla de formación.
-- Actualizada caché PWA a `opoweb-v6`.
-
-### v0.5.0 - 2026-07-04
-
-- Añadida vista **Proceso y enlaces**.
-- Añadidos enlaces oficiales y calendario del proceso.
-- Ampliados los supuestos prácticos.
-
-### v0.1.0 - 2026-07-04
-
-- Primera versión web con temario, test, supuestos, simulacros y progreso local.
+- Añadida Diputación Provincial de Toledo · Administrativo C1.
