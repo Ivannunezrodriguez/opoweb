@@ -48,4 +48,13 @@ jobs:
           node tests/smoke-v65.js
           node tests/smoke-uc3m-v66.js
           node tests/smoke-puebla-v67.js
-          node tests/smoke-puebla-live-v67.js
+
+  puebla-live:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          show-progress: false
+      - name: Run integrated Puebla test
+        run: node tests/smoke-puebla-live-v67.js
