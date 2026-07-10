@@ -13,9 +13,9 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.34.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.35.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v38`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v39`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos principales
 
@@ -42,49 +42,72 @@ Se han retirado de la vista **Mapa de estudio**, **Esquema oficial** y **Tabla d
 
 ## Estado del temario UC3M
 
-- Temas 1 a 6: revisados manualmente y desarrollados por artículos en la versión v0.34.
-- Tema 7: ampliado; queda pendiente la Ley 10/2019 consolidada con plazos literales.
+- Temas 1 a 6: revisados manualmente por artículos en v0.34.
+- Tema 7: ampliado; pendiente la Ley 10/2019 consolidada con plazos literales.
 - Tema 8: completado con LO 3/2007, III Plan de Igualdad 2025-2029 y protocolo UC3M.
-- Tema 9: Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo.
-- Temas 10 a 14: revisados y desarrollados.
-- Tema 15: desarrollado por los cuatro bloques oficiales; quedan pendientes artículos, mayorías y plazos literales del texto consolidado.
+- Temas 9 a 12: revisados en profundidad en v0.35.
+- Temas 13 y 14: LOSU desarrollada por títulos y artículos relevantes.
+- Tema 15: desarrollado por los cuatro bloques oficiales; pendientes artículos, mayorías y plazos literales del texto consolidado.
 - Temas 16 y 17: marco estatal completado; faltan reglas internas y calendario anual UC3M.
-- Tema 18: desarrollado con características, estructura, créditos, modificaciones y ejecución de ingresos; faltan cifras y bases internas vigentes.
-- Tema 19: desarrollado con fases de gasto, documentos contables, pagos, transferencias, inversiones, liquidación y cierre; faltan límites, delegaciones y fechas UC3M.
+- Tema 18: estructura presupuestaria, modificaciones e ingresos desarrollados; faltan cifras y bases internas vigentes.
+- Tema 19: fases de gasto, documentos contables, pagos y cierre desarrollados; faltan límites, delegaciones y fechas UC3M.
 - Tema 20: LCSP desarrollada; falta la capa de delegaciones y reglas internas UC3M.
 
-## Revisión profunda v0.34
+## Revisión profunda v0.35
 
-### Tema 1 · Constitución
+### Tema 9 · Ofimática
 
-Incluye estructura completa, derechos y garantías, elaboración de las leyes, organización territorial y procedimientos de reforma de los artículos 166 a 169.
+Incluye:
 
-### Temas 2 y 3 · Ley 39/2015
+- Word 2019: formato, estilos, secciones, tablas, control de cambios, combinación de correspondencia, impresión y PDF.
+- Excel 2019: libros, hojas, celdas, referencias relativas/absolutas/mixtas, fórmulas, funciones, filtros, tablas, validación, formato condicional y gráficos.
+- Google Drive, Docs y Sheets: permisos, colaboración e historial de versiones.
+- Google Calendar: eventos, invitados, recurrencia y disponibilidad.
+- Gmail/correo: Para, CC, CCO, responder, reenviar, etiquetas, filtros y seguridad.
 
-Incluyen interesados, representación, relación electrónica, obligación de resolver, silencio, cómputo de plazos, actos, notificaciones, nulidad, procedimiento, ejecución, revisión de oficio y recursos.
+### Tema 10 · TREBEP
 
-Plazos incorporados expresamente:
+Se han desarrollado:
 
-- Subsanación: 10 días.
-- Audiencia: entre 10 y 15 días.
-- Información pública: mínimo 20 días.
-- Tramitación simplificada: 30 días como regla.
-- Alzada: 1 mes para interponer contra acto expreso y 3 meses para resolver.
-- Reposición: 1 mes para interponer contra acto expreso y 1 mes para resolver.
+- artículos 8 a 13: clases de personal;
+- artículos 14 y 15: derechos;
+- artículos 52 a 54: código de conducta;
+- artículos 62 a 68: adquisición, pérdida y rehabilitación;
+- artículos 85 a 92: situaciones administrativas.
 
-### Temas 4 y 5 · Ley 40/2015
+### Tema 11 · RD 364/1995 e incompatibilidades
 
-Diferencia competencia, delegación, avocación, encomienda, delegación de firma, suplencia, órganos colegiados, abstención, recusación, sede, portal, actuación automatizada, sello, CSV y archivo electrónico.
+Incluye:
 
-### Tema 6 · Protección de datos
+- ingreso y convocatorias;
+- concurso como sistema normal de provisión;
+- libre designación con convocatoria pública;
+- promoción interna;
+- regla general de incompatibilidad;
+- actividades privadas relacionadas con el puesto;
+- diferencia entre actividad exceptuada y compatibilidad autorizada.
 
-Incluye principios, consentimiento de menores, derechos, bloqueo, responsable, encargado y Delegado de Protección de Datos.
+### Tema 12 · Prevención de riesgos laborales
+
+Incluye:
+
+- conceptos del artículo 4;
+- protección eficaz del artículo 14;
+- principios del artículo 15;
+- evaluación y planificación;
+- información, formación, emergencia y riesgo grave;
+- vigilancia de la salud;
+- obligaciones del trabajador;
+- organización preventiva;
+- Delegados de Prevención y Comité de Seguridad y Salud.
+
+El Comité se constituye con **50 o más trabajadores**, es paritario y colegiado y se reúne ordinariamente **cada trimestre**.
 
 ## Test UC3M
 
-La versión v0.34 añade **85 preguntas jurídicas manuales** para los temas 1 a 6 y regenera tres simulacros de 70 preguntas.
-
-Las preguntas ya no se limitan a indicar cómo estudiar: preguntan artículos, plazos, órganos, efectos y diferencias entre figuras.
+- v0.34: 85 preguntas manuales para los temas 1 a 6.
+- v0.35: **60 preguntas nuevas** para los temas 9 a 12.
+- Tres simulacros regenerados de 70 preguntas con penalización real.
 
 ## Baremo personal conservador
 
@@ -114,11 +137,13 @@ opoweb/
 │       ├── uc3m-temario-v32.js
 │       ├── uc3m-temario-v33.js
 │       ├── uc3m-temario-v34.js
+│       ├── uc3m-temario-v35.js
 │       ├── ui-v29.js
 │       ├── ui-v31.js
 │       ├── ui-v32.js
 │       ├── ui-v33.js
-│       └── ui-v34.js
+│       ├── ui-v34.js
+│       └── ui-v35.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
@@ -135,16 +160,22 @@ opoweb/
 
 ## Cambios de versión
 
+### v0.35.0 · 2026-07-10
+
+- Profundizados los temas 9 a 12.
+- Añadidas **60 preguntas manuales**.
+- Ampliado Word 2019, Excel 2019 y Google Workspace.
+- Completado TREBEP por artículos relevantes.
+- Completados ingreso, provisión, promoción interna e incompatibilidades.
+- Completada la Ley 31/1995 en los apartados del programa.
+- Regenerados simulacros de 70 preguntas.
+- Actualizada la caché PWA a `opoweb-v39`.
+
 ### v0.34.0 · 2026-07-10
 
 - Profundizados manualmente los temas 1 a 6.
-- Añadidas referencias por títulos, capítulos y artículos.
-- Incorporados los plazos de mayor frecuencia de examen de la Ley 39/2015.
-- Diferenciadas las técnicas de competencia y funcionamiento electrónico de la Ley 40/2015.
-- Ampliado el tema de protección de datos con responsable, encargado y DPD.
 - Añadidas **85 preguntas jurídicas manuales**.
-- Regenerados tres simulacros de 70 preguntas.
-- Actualizada la caché PWA a `opoweb-v38`.
+- Incorporados artículos, plazos, órganos, efectos y diferencias entre figuras.
 
 ### v0.33.0 · 2026-07-10
 
@@ -155,11 +186,3 @@ opoweb/
 
 - Completado el tema 8 con el III Plan de Igualdad UC3M.
 - Ampliado el tema 7 de transparencia.
-- Añadidas 24 preguntas específicas.
-
-### v0.31.0 · 2026-07-10
-
-- Eliminado `mapa-temas.js` de la carga activa.
-- Eliminados **Mapa de estudio**, **Esquema oficial** y **Tabla de repaso**.
-- Añadido **Cuadro para test y supuesto práctico**.
-- Completados LOSU, RD 822/2021, RD 534/2024 y contratación común.
