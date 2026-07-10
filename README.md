@@ -1,154 +1,166 @@
 # OpoWeb · Auxiliar Administrativo Toledo
 
-Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrativo desde ordenador, tablet o móvil. El foco principal es Toledo, con la UC3M como convocatoria complementaria por su volumen de plazas.
+Web estática para preparar desde ordenador, tablet o móvil las cuatro convocatorias activas del proyecto:
 
-## Convocatorias activas
+1. **La Puebla de Montalbán · Auxiliar Administrativo C2** — 4 plazas + bolsa. Inscrito.
+2. **Carranque · Auxiliar Administrativo C2** — 1 plaza + bolsa. Inscrito.
+3. **Diputación Provincial de Toledo · Administrativo C1** — 2 plazas. Solicitudes del 6 al 31 de julio de 2026.
+4. **Universidad Carlos III de Madrid · Auxiliar Administrativo C2** — 34 plazas, 2 reservadas a discapacidad. Solicitudes del 9 de julio al 5 de agosto de 2026.
 
-- **La Puebla de Montalbán**: 4 plazas + bolsa. Estado personal: inscrito.
-- **Carranque**: 1 plaza + bolsa. Estado personal: inscrito.
-- **Diputación Provincial de Toledo · Administrativo C1**: 2 plazas. Solicitudes abiertas del 6 al 31 de julio de 2026; estado personal pendiente.
-- **Universidad Carlos III de Madrid · Auxiliar Administrativo C2**: 34 plazas, 2 reservadas a discapacidad. Solicitudes abiertas del 9 de julio al 5 de agosto de 2026.
+No se incorporarán nuevas OPE hasta cerrar estas cuatro con el máximo nivel posible. Las Ventas con Peña Aguilera permanece eliminada del selector y de la planificación.
 
-**Las Ventas con Peña Aguilera está retirada del selector y de la planificación activa.** En v0.41 se corrigió el identificador que impedía retirarla completamente.
+## Versión actual
 
-## Versión visible
+- **OpoWeb v0.42.0**
+- Caché PWA: `opoweb-v49`
+- Última comprobación estructural: 10 de julio de 2026
 
-La web muestra la **Versión OpoWeb v0.41.0**. La caché PWA actual es `opoweb-v48`.
+## Criterio de perfección
 
-## Auditoría global v0.41
+Una OPE no se considerará cerrada únicamente por tener temas y preguntas. Para alcanzar el nivel objetivo debe cumplir simultáneamente:
 
-| OPE | Estado de desarrollo | Temas | Situación principal |
-|---|---|---:|---|
-| La Puebla | Revisión necesaria | 19 | Programa y formato cargados; test y supuestos todavía genéricos |
-| Carranque | Revisión prioritaria | 20 | Falta contenido normativo real y simulacros de 80 + 5 |
-| Diputación C1 | Revisión prioritaria | 40 | Plazo abierto; falta desarrollar los 40 temas y los específicos provinciales |
-| UC3M | Avance alto | 20 | Banco auditado; falta cerrar literalidad interna UC3M |
+- títulos idénticos al programa oficial;
+- desarrollo autosuficiente por títulos, capítulos y artículos;
+- norma y versión vigentes identificadas;
+- resumen orientado al aprobado;
+- rigor normativo;
+- puntos calientes de test;
+- tres preguntas de retención activa;
+- cuadro para test y supuesto práctico;
+- 30–40 preguntas reales por tema, sin preguntas de plantilla;
+- distractores plausibles y justificación suficiente;
+- supuestos prácticos con solución razonada cuando la convocatoria tenga práctico;
+- simulacros con número de preguntas, reservas, tiempo y penalización oficiales;
+- proceso selectivo actualizado desde fuentes oficiales;
+- auditoría automática de validez, duplicados, cobertura y formato.
 
-La auditoría de cada convocatoria aparece en **Proceso y enlaces**. El resumen comparado aparece en **Progreso**. El informe completo está en [`docs/AUDITORIA_OPE.md`](docs/AUDITORIA_OPE.md).
+## Mejoras de v0.42
 
-## Cambios necesarios por convocatoria
+### Formatos oficiales de simulacro
 
-### La Puebla
+| OPE | Preguntas | Reserva | Tiempo | Segundo ejercicio/casos |
+|---|---:|---:|---:|---|
+| La Puebla | 50 | 5 | 60 min | Uno o varios supuestos; formato fijado por el Tribunal |
+| Carranque | 80 | 5 | 90 min | Supuestos sobre temas 3 a 20 |
+| Diputación C1 | 50 | 5 | 60 min | Segundo ejercicio práctico eliminatorio |
+| UC3M | 70 | 5 | 60 min | No existe práctico oficial |
 
-1. Sustituir las 228 preguntas genéricas por preguntas jurídicas e informáticas reales.
-2. Elevar el banco a 30–40 preguntas por tema.
-3. Completar artículos, plazos, órganos, excepciones y aplicación municipal.
-4. Ampliar de 10 a al menos 20 supuestos con solución completa.
-5. Seguir listas de admitidos, tribunal y fecha de examen.
+Los tres simulacros de cada OPE se regeneran ahora con su tamaño oficial. Las cinco preguntas de reserva se muestran separadas y se corrigen para entrenar, pero no alteran la nota mientras no sustituyan una pregunta anulada.
 
-### Carranque
+### Reutilización normativa segura
 
-1. Desarrollar íntegramente los 20 temas oficiales.
-2. Sustituir las 240 preguntas de método de estudio por preguntas reales.
-3. Cambiar los simulacros de 50 a **80 preguntas + 5 reservas**.
-4. Limitar y trazar los supuestos prácticos a los temas 3 a 20.
-5. Redactar soluciones con norma, artículo, trámite, plazo y consecuencia.
+La web sustituye automáticamente bancos de plantilla cuando existe coincidencia clara de norma y alcance con un banco real ya auditado. Ejemplos:
 
-### Diputación de Toledo C1
+- Constitución;
+- Ley 39/2015;
+- Ley 40/2015;
+- administración electrónica;
+- protección de datos;
+- igualdad;
+- prevención de riesgos laborales;
+- TREBEP;
+- contratación pública.
 
-1. Prioridad inmediata: presentar la solicitud antes del **31 de julio de 2026** y conservar solicitud registrada y justificante de tasa.
-2. Desarrollar los 40 temas artículo por artículo.
-3. Crear módulos específicos de Diputación, OAPGT, Acuerdo Regulador y bases de ejecución.
-4. Desarrollar Windows 11, Edge, GroupWise 24 y LibreOffice 24 Writer, Calc, Base e Impress.
-5. Sustituir las 480 preguntas genéricas por bancos reales.
-6. Completar las soluciones de los 20 supuestos.
+No se reutiliza contenido universitario específico en convocatorias locales. Las preguntas se clonan con identificadores propios y mantienen la justificación normativa.
 
-### UC3M
+### Auditoría real frente a plantilla
 
-1. Presentar la solicitud antes del **5 de agosto de 2026** y acreditar pago o exención dentro de plazo.
-2. Cerrar Ley 10/2019, Estatutos, presupuesto y bases de ejecución.
-3. Incorporar matrícula, permanencia, evaluación, admisión y contratación interna UC3M.
-4. Elevar los once temas que continúan en 20 preguntas hasta 30–40.
-5. Sustituir preguntas generales de temas internos por literalidad oficial vigente.
+Cada tema distingue ahora:
 
-## Botón «Volver al listado»
+- preguntas reales de contenido;
+- preguntas de plantilla pendientes de sustitución;
+- temas con base real;
+- temas con banco sólido de 20+;
+- temas que han alcanzado 30+.
 
-El botón de detalle de tema usa ahora `position: sticky` y permanece visible al desplazarse, tanto en escritorio como en móvil. Se sitúa debajo de la cabecera fija y conserva foco visible para navegación por teclado.
+La vista **Test por temas** muestra el estado del banco seleccionado. La vista **Progreso** muestra la comparación global de las cuatro OPE.
 
-## Método de estudio
+## Prioridades activas
 
-Cada tema debe conservar:
+### 1. Diputación de Toledo C1
+
+- Presentar solicitud antes del 31 de julio de 2026 y conservar registro y justificante.
+- Desarrollar los 40 temas completos.
+- Priorizar organización de Diputación, Acuerdo Regulador, OAPGT, presupuesto, tributación y recaudación.
+- Crear contenido específico de Windows 11, Edge, GroupWise 24 y LibreOffice 24.
+- Reemplazar las preguntas de plantilla y completar las soluciones de los 20 supuestos.
+
+### 2. Carranque
+
+- Completar los 20 temas con contenido normativo real.
+- Sustituir las preguntas de método por preguntas de examen.
+- Mantener simulacros de 80 + 5 en 90 minutos.
+- Rehacer los supuestos exclusivamente sobre temas 3 a 20.
+
+### 3. La Puebla de Montalbán
+
+- Completar los 19 temas artículo por artículo.
+- Llevar cada tema a 30–40 preguntas reales.
+- Ampliar y resolver al menos 20 supuestos.
+- Reforzar régimen local, tributación, recaudación, administración electrónica e informática.
+
+### 4. UC3M
+
+- Cerrar Ley 10/2019, Estatutos, normativa académica, admisión, presupuesto y contratación interna.
+- Elevar los once temas que permanecen por debajo de 30 preguntas.
+- Mantener los tres simulacros oficiales de 70 + 5.
+
+## Estructura obligatoria de cada tema
 
 1. **Resumen orientado al aprobado**.
 2. **Rigor normativo**.
 3. **Desarrollo por títulos, capítulos y artículos**.
 4. **Opo-Test: puntos calientes**.
-5. **Retención activa**.
+5. **Retención activa**: tres preguntas.
 6. **Cuadro para test y supuesto práctico**.
 
-## UC3M · estado específico
+No se usan como apartados visibles “Mapa de estudio”, “Esquema oficial”, “Tabla de repaso”, “argot técnico” ni “trampas habituales”.
 
-- Los 20 temas tienen al menos 20 preguntas válidas.
-- Nueve temas alcanzan 30 preguntas o más: 2, 3, 7, 8, 9, 10, 15, 18 y 19.
-- Tres simulacros equilibrados de 70 preguntas representan los 20 temas.
-- La auditoría valida cuatro opciones distintas, respuesta correcta existente, justificación, duplicados y dificultad.
+## Navegación
 
-Pendientes de literalidad:
+El botón **«Volver al listado»** permanece visible durante el desplazamiento mediante `position: sticky`, tanto en escritorio como en móvil.
 
-- tema 7: Ley 10/2019 y plazos;
-- tema 15: Estatutos consolidados;
-- tema 16: normativa académica interna;
-- tema 17: admisión anual;
-- temas 18 y 19: presupuesto y bases de ejecución;
-- tema 20: delegaciones y circuito interno de contratación.
-
-## Baremo personal conservador
-
-- **La Puebla**: DAM no parece sumar; experiencia pública C2 confirmada = 0.
-- **Carranque**: DAM puede sumar 0,75 si se acreditó en plazo; experiencia pública confirmada = 0.
-- **Diputación C1**: oposición libre; DAM permite acceso, pero no da puntos.
-- **UC3M C2**: inglés 0 salvo certificado admitido; experiencia equivalente 0; formación potencial hasta 5, pendiente de validación.
-
-## Archivos principales recientes
+## Archivos recientes
 
 ```text
-opoweb/
-├── data/
-│   ├── oposiciones.js
-│   ├── proceso.js
-│   ├── uc3m.js
-│   └── ope-audit-v41.js
-├── assets/
-│   ├── css/styles.css
-│   └── js/
-│       ├── auditoria-test-v37.js
-│       ├── refuerzo-test-v38.js
-│       ├── refuerzo-test-v39.js
-│       ├── refuerzo-test-v40.js
-│       ├── correcciones-test-v40.js
-│       ├── ui-v40.js
-│       └── ui-v41.js
-└── docs/
-    └── AUDITORIA_OPE.md
+assets/js/
+├── perfeccion-v42.js
+├── ui-v42.js
+├── ui-v41.js
+├── refuerzo-test-v40.js
+├── correcciones-test-v40.js
+└── auditoria-test-v37.js
+
+data/
+├── ope-audit-v41.js
+├── oposiciones.js
+├── proceso.js
+└── uc3m.js
+
+docs/
+├── AUDITORIA_OPE.md
+└── HOJA_RUTA_PERFECCION.md
 ```
 
-## Cambios de versión
+## Historial reciente
+
+### v0.42.0 · 2026-07-10
+
+- Normalizados los formatos oficiales de las cuatro OPE.
+- Añadidas cinco preguntas de reserva separadas en todos los simulacros.
+- La nota se calcula únicamente con las preguntas puntuables.
+- Reutilizados bancos reales cuando coincide exactamente la norma y el alcance.
+- Añadida auditoría global de preguntas reales frente a plantilla.
+- Actualizada la caché a `opoweb-v49`.
 
 ### v0.41.0 · 2026-07-10
 
-- Auditadas las cuatro OPE activas.
-- Corregida la retirada de Las Ventas con Peña Aguilera.
-- Actualizado el plazo de Diputación C1 a 06/07/2026–31/07/2026.
-- Añadida auditoría visible por convocatoria y resumen global.
-- Fijado el botón «Volver al listado» durante el desplazamiento.
-- Añadido informe `docs/AUDITORIA_OPE.md`.
-- Actualizada la caché PWA a `opoweb-v48`.
+- Auditadas las cuatro OPE.
+- Corregida la retirada de Las Ventas.
+- Actualizado el plazo de Diputación.
+- Fijado el botón «Volver al listado».
 
 ### v0.40.0 · 2026-07-10
 
-- Añadidas 90 preguntas manuales y de supuesto breve.
+- Añadidas 90 preguntas UC3M de aplicación y supuesto breve.
 - Nueve temas UC3M elevados a 30 preguntas o más.
-- Reauditado el banco por validez, duplicados, respuesta y dificultad.
-
-### v0.39.0 · 2026-07-10
-
-- Añadidas 75 preguntas manuales.
-- Los 20 temas UC3M alcanzaron al menos 20 preguntas válidas.
-
-### v0.38.0 · 2026-07-10
-
-- Añadidas 25 preguntas de segundo nivel a temas internos UC3M.
-
-### v0.37.0 · 2026-07-10
-
-- Auditado estructuralmente el banco UC3M y eliminados duplicados exactos.
