@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.56
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.57
 
 ## Estado del proceso
 
@@ -13,74 +13,72 @@
 
 - 39 de 40 temas con primera vuelta profunda.
 - Tema 22 pendiente de fuentes internas oficiales.
-- Temas 1–17 completan ya la segunda vuelta mínima de banco.
+- Temas 1–18 completan ya la segunda vuelta mínima de banco.
 - El conjunto todavía no se considera perfecto ni cerrado.
 
 Un tema solo se considerará cerrado cuando reúna desarrollo actualizado, 30–40 preguntas reales, justificaciones verificadas, ausencia de duplicados y correcta integración en simulacros y supuestos.
 
-## Segunda vuelta v0.56
+## Segunda vuelta v0.57
 
 ### Tema reforzado
 
-17. Ley 4/2011 de Empleo Público de Castilla-La Mancha: personal al servicio de las Administraciones Públicas, acceso al empleo público y pérdida de la relación de servicio.
+18. Ley 4/2011 de Empleo Público de Castilla-La Mancha: derechos y deberes; situaciones administrativas.
 
 ### Preguntas añadidas
 
-- 15 preguntas nuevas en v0.56.
-- 255 preguntas acumuladas en la segunda vuelta.
-- 840 preguntas manuales acumuladas desde el inicio del desarrollo de Diputación.
-- Temas 1–17 con al menos 30 preguntas reales.
+- 19 preguntas nuevas en v0.57.
+- 274 preguntas acumuladas en la segunda vuelta.
+- 859 preguntas manuales acumuladas desde el inicio del desarrollo de Diputación.
+- Temas 1–18 con al menos 30 preguntas reales.
 - Cuatro opciones distintas.
 - Respuesta correcta rotada.
 - Dificultad baja, media y alta.
-- Justificación mediante artículo de la Ley 4/2011.
+- Justificación mediante artículos de la Ley 4/2011.
 
-## Contenido reforzado del tema 17
+## Contenido reforzado del tema 18
 
-### Personal empleado público
+### Derechos
 
-- funcionario de carrera;
-- funcionario interino;
-- personal laboral;
-- personal eventual;
-- relación estatutaria;
-- funciones reservadas al personal funcionario.
+- inamovilidad del personal funcionario de carrera;
+- desempeño efectivo;
+- carrera y promoción;
+- retribuciones e indemnizaciones;
+- formación continua;
+- dignidad, igualdad y no discriminación;
+- conciliación y seguridad y salud;
+- libertad sindical, negociación colectiva, huelga, conflicto y reunión.
 
-### Acceso al empleo público
+### Vacaciones, deberes y formación
 
-- igualdad, mérito y capacidad;
-- publicidad y transparencia;
-- imparcialidad y profesionalidad;
-- independencia técnica;
-- adecuación de las pruebas;
-- edad, titulación y mantenimiento de requisitos.
+- mínimo de veintidós días laborables;
+- proporcionalidad por tiempo de servicio;
+- compensación económica solo al finalizar la relación sin disfrute;
+- remisión al código de conducta del TREBEP;
+- asistencia a formación obligatoria vinculada al puesto.
 
-### Sistemas selectivos
+### Situaciones administrativas
 
-- oposición;
-- concurso;
-- concurso-oposición;
-- libre concurrencia;
-- imposibilidad de compensar la falta de superación de la oposición con méritos;
-- sistemas generales de selección para personal funcionario de carrera y laboral fijo.
+- servicio activo;
+- servicios especiales;
+- servicio en otras Administraciones;
+- expectativa de destino;
+- excedencia forzosa;
+- excedencias por cuidado, violencia de género, interés particular, agrupación familiar y prestación de servicios en el sector público;
+- suspensión de funciones.
 
-### Adquisición y pérdida
+### Efectos y reingreso
 
-- superación del proceso;
-- nombramiento;
-- acatamiento del ordenamiento;
-- toma de posesión;
-- renuncia;
-- pérdida de nacionalidad;
-- jubilación;
-- separación del servicio;
-- inhabilitación;
-- fallecimiento.
+- expectativa de destino: máximo de un año;
+- excedencia por violencia de género sin servicios previos ni permanencia mínima;
+- excedencia por interés particular: tres años de servicios efectivos como regla general;
+- excedencias voluntarias sin reserva de plaza ni retribuciones;
+- suspensión firme superior a seis meses con pérdida del puesto;
+- reingreso mediante concurso, libre designación o adscripción provisional cuando proceda.
 
 ## Banco y simulacros
 
-- 840 preguntas manuales acumuladas.
-- Diecisiete temas con segunda vuelta mínima completada.
+- 859 preguntas manuales acumuladas.
+- Dieciocho temas con segunda vuelta mínima completada.
 - Tres simulacros de 50 + 5 regenerados.
 - Tema 22 excluido.
 - Solo se incorporan preguntas reales con cuatro alternativas y justificación.
@@ -103,7 +101,7 @@ Permanece pendiente de:
 
 No se incorporarán datos internos no verificados.
 
-## Fuentes principales de v0.56
+## Fuentes principales de v0.57
 
 - Ley 4/2011, de 10 de marzo, del Empleo Público de Castilla-La Mancha.
 - Texto Refundido del Estatuto Básico del Empleado Público.
@@ -113,11 +111,10 @@ Revisión realizada el 10 de julio de 2026.
 
 ## Siguiente bloque
 
-Temas 18–21:
+Temas 19–21:
 
-1. derechos, deberes y situaciones administrativas;
-2. régimen disciplinario;
-3. contrato de trabajo;
-4. modalidades contractuales y Seguridad Social.
+1. régimen disciplinario;
+2. contrato de trabajo;
+3. modalidades contractuales y Seguridad Social.
 
 Objetivo: 30–40 preguntas reales por cada tema.
