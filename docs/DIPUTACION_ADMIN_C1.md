@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.59
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.60
 
 ## Estado del proceso
 
@@ -11,84 +11,66 @@
 
 ## Avance aproximado
 
-- Diputación en conjunto: **81 %**.
+- Diputación en conjunto: **83 %**.
 - Primera vuelta: 39 de 40 temas.
-- Segunda vuelta: 20 de 39 temas auditables, aproximadamente **51 %**.
+- Segunda vuelta: 21 de 39 temas auditables, aproximadamente **54 %**.
 - Tema 22 pendiente de fuentes internas oficiales.
 
 ## Estado real del temario
 
-- Temas 1–20 con segunda vuelta mínima de banco.
-- 907 preguntas manuales acumuladas.
+- Temas 1–21 con segunda vuelta mínima de banco.
+- 943 preguntas manuales acumuladas.
 - Tres simulacros 50 + 5.
 - 20 supuestos y 40 variantes.
 - El conjunto todavía no se considera perfecto ni cerrado.
 
-## Segunda vuelta v0.59
+## Segunda vuelta v0.60
 
 ### Tema reforzado
 
-20. Contrato de trabajo: concepto, fuentes, derechos y deberes, capacidad, forma, validez y periodo de prueba.
+21. Modalidades contractuales y Seguridad Social.
 
 ### Preguntas añadidas
 
-- 30 preguntas nuevas en v0.59.
-- 322 preguntas acumuladas en la segunda vuelta.
-- 907 preguntas manuales acumuladas.
-- Temas 1–20 con al menos 30 preguntas reales.
+- 36 preguntas nuevas en v0.60.
+- 358 preguntas acumuladas en la segunda vuelta.
+- 943 preguntas manuales acumuladas.
+- Temas 1–21 con al menos 30 preguntas reales.
 - Cuatro opciones distintas.
 - Respuesta correcta rotada.
 - Dificultad baja, media y alta.
-- Justificación mediante artículos 1, 3 a 9 y 14 del Estatuto de los Trabajadores.
+- Justificación mediante el Estatuto de los Trabajadores y la Ley General de la Seguridad Social.
 
-## Contenido reforzado del tema 20
+## Contenido reforzado del tema 21
 
-### Concepto y fuentes
+### Modalidades contractuales
 
-- prestación voluntaria;
-- retribución;
-- ajenidad;
-- dependencia;
-- empresario;
-- fuentes legales, reglamentarias, convencionales, contractuales y consuetudinarias;
-- principio de norma más favorable y mínimos de derecho necesario.
+- formación en alternancia;
+- práctica profesional;
+- duración, edad y tutoría;
+- presunción de contratación indefinida;
+- circunstancias de la producción;
+- sustitución;
+- encadenamiento y adquisición de fijeza;
+- fijo-discontinuo, forma y llamamiento.
 
-### Derechos, deberes y capacidad
+### Seguridad Social
 
-- ocupación efectiva;
-- formación y promoción;
-- igualdad y no discriminación;
-- integridad, intimidad y dignidad;
-- percepción puntual del salario;
-- buena fe, diligencia, prevención y órdenes regulares;
-- edad mínima de dieciséis años;
-- límites al trabajo de menores;
-- capacidad de mayores de dieciséis y menores de dieciocho.
-
-### Forma y validez
-
-- contrato escrito o verbal como regla general;
-- forma escrita obligatoria en los supuestos legales;
-- presunción de contrato indefinido y a jornada completa si se omite la forma exigida, salvo prueba en contrario;
-- comunicación a la oficina de empleo en diez días;
-- copia básica en plazo no superior a diez días;
-- nulidad parcial y conservación del resto;
-- remuneración del trabajo prestado en caso de nulidad total.
-
-### Periodo de prueba
-
-- pacto escrito;
-- límites del convenio colectivo;
-- seis meses para técnicos titulados y dos meses para los demás en defecto de convenio;
-- tres meses para no titulados en empresas de menos de veinticinco trabajadores;
-- un mes en contratos temporales de hasta seis meses, salvo convenio;
-- nulidad si ya se realizaron las mismas funciones;
-- cómputo del tiempo a efectos de antigüedad.
+- universalidad, unidad, solidaridad e igualdad;
+- Régimen General y regímenes especiales;
+- irrenunciabilidad de derechos;
+- afiliación única y obligatoria;
+- altas, bajas y variaciones;
+- obligación de cotizar;
+- aportaciones de empresario y trabajador;
+- cotización por contingencias profesionales;
+- acción protectora;
+- accidente de trabajo e in itinere.
 
 ## Banco y simulacros
 
-- 907 preguntas manuales acumuladas.
-- Veinte temas con segunda vuelta mínima completada.
+- 943 preguntas manuales acumuladas.
+- Veintiún temas con segunda vuelta mínima completada.
 - Tres simulacros de 50 + 5 regenerados.
 - Tema 22 excluido.
 - Solo se incorporan preguntas reales con cuatro alternativas y justificación.
@@ -111,19 +93,14 @@ Permanece pendiente de:
 
 No se incorporarán datos internos no verificados.
 
-## Fuentes principales de v0.59
+## Fuentes principales de v0.60
 
-- Real Decreto Legislativo 2/2015, texto refundido de la Ley del Estatuto de los Trabajadores.
-- Artículos 1, 3 a 9 y 14.
+- Real Decreto Legislativo 2/2015, Estatuto de los Trabajadores, artículos 11, 15 y 16.
+- Real Decreto Legislativo 8/2015, Ley General de la Seguridad Social, artículos 2, 3, 9, 15, 16, 18, 42, 136, 141, 142, 144 y 156.
 - Bases oficiales de la convocatoria de Diputación.
 
 Revisión realizada el 10 de julio de 2026.
 
 ## Siguiente bloque
 
-Tema 21:
-
-1. modalidades contractuales;
-2. Seguridad Social.
-
-Objetivo: 30–40 preguntas reales.
+Temas 23–31, manteniendo el tema 22 bloqueado hasta verificar las fuentes internas oficiales.
