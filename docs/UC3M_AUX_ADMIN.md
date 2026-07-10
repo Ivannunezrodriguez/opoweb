@@ -48,7 +48,7 @@ Cada tema conserva:
 5. Retención activa.
 6. Cuadro para test y supuesto práctico.
 
-## Auditoría del temario · OpoWeb v0.36
+## Auditoría del temario · OpoWeb v0.37
 
 | Tema | Estado actual |
 |---|---|
@@ -64,8 +64,8 @@ Cada tema conserva:
 | 10. TREBEP | Revisado en profundidad |
 | 11. RD 364/1995 e incompatibilidades | Revisado en profundidad |
 | 12. PRL | Revisado en profundidad |
-| 13. LOSU I | Revisado en profundidad en v0.36 |
-| 14. LOSU II | Revisado en profundidad en v0.36 |
+| 13. LOSU I | Revisado en profundidad |
+| 14. LOSU II | Revisado en profundidad |
 | 15. Estatutos UC3M | Desarrollado; pendiente literalidad consolidada |
 | 16. RD 822/2021 y normativa UC3M | Marco estatal revisado; pendientes reglas internas |
 | 17. RD 534/2024 y admisión | Marco estatal revisado; pendientes datos anuales UC3M |
@@ -73,62 +73,50 @@ Cada tema conserva:
 | 19. Presupuesto UC3M II | Desarrollado; pendientes límites y fechas internas |
 | 20. Contratos | LCSP revisada; pendientes delegaciones y procedimiento interno |
 
-## Revisión v0.36 · Tema 13
+## Auditoría del banco de preguntas
 
-- Artículo 1: objeto de la LOSU.
-- Artículo 2: docencia, investigación y transferencia.
-- Artículo 3: autonomía universitaria y personalidad jurídica.
-- Creación y reconocimiento mediante ley.
-- Calidad universitaria.
-- Función docente, investigación y transferencia.
-- Cooperación, sociedad e internacionalización.
+La versión v0.37 comprueba automáticamente todas las preguntas después de cargar el temario.
 
-## Revisión v0.36 · Tema 14
+### Requisitos mínimos de validez
 
-- Estudiantado: artículos 31 a 37.
-- Derechos académicos y deberes.
-- Régimen económico-financiero: artículos 53 a 63.
-- Presupuesto público, único y equilibrado.
-- PDI: artículos 64 a 88.
-- PTGAS: artículos 89 a 94.
-- Concurso como sistema ordinario de provisión.
+- Enunciado presente.
+- Cuatro respuestas distintas y no vacías.
+- Respuesta correcta incluida entre las opciones.
+- Justificación obligatoria.
+- Eliminación de duplicados exactos de enunciado y respuesta.
+- Recuento de posiciones correctas A, B, C y D.
 
-## Revisión v0.36 · Tema 16
+### Cobertura
 
-- Grado, Máster y Doctorado.
-- Reconocimiento y transferencia de créditos.
-- Grado: 240 ECTS como regla y 60 por curso.
-- Formación básica: mínimo 60 ECTS en grados de 240.
-- Máster: 60, 90 o 120 ECTS.
-- TFM: 6 a 30 ECTS y defensa pública.
-- Verificación, seguimiento, modificación y renovación de acreditación.
+- Todos los temas alcanzan al menos **15 preguntas válidas**.
+- El objetivo final es **30–40 preguntas manuales por tema**.
+- La web muestra el número y el estado de cobertura de cada tema.
 
-## Revisión v0.36 · Tema 17
+### Refuerzo añadido en v0.37
 
-- Diferencia entre acceso y admisión.
-- Bachiller y prueba de acceso.
-- Técnico Superior sin prueba de acceso.
-- Adaptaciones y accesibilidad.
-- Nota de acceso, nota de admisión, ponderaciones y cupos.
-- Vía específica con al menos 30 ECTS reconocidos.
-- Notas de corte como resultado anual, no requisito fijo.
+Se han añadido preguntas de aplicación y diferenciación sobre:
 
-## Revisión v0.36 · Tema 20
+- reforma constitucional;
+- notificación electrónica y recursos;
+- encomienda, sede y portal;
+- independencia del DPD;
+- transparencia e igualdad UC3M;
+- LOSU, estudiantado y PTGAS;
+- Estatutos UC3M;
+- reconocimiento de créditos, acceso y admisión;
+- modificaciones presupuestarias y fases del gasto;
+- lotes, magnitudes contractuales y contrato menor.
 
-- Principios y tipos contractuales.
-- Objeto y lotes.
-- Presupuesto base, valor estimado y precio.
-- Necesidad, expediente, solvencia y prohibiciones.
-- Contrato menor: obras < 40.000 €; suministros y servicios < 15.000 €.
-- Abierto simplificado abreviado: obras < 80.000 €; suministros y servicios < 60.000 €.
-- Adjudicación, formalización, ejecución y extinción.
+## Simulacros equilibrados
 
-## Test y simulacros
+Cada simulacro contiene 70 preguntas y representa los 20 temas:
 
-- 85 preguntas manuales para temas 1 a 6.
-- 60 preguntas manuales para temas 9 a 12.
-- **60 preguntas manuales nuevas** para temas 13, 14, 16, 17 y 20.
-- Tres simulacros de 70 preguntas regenerados.
+- 10 temas con 4 preguntas.
+- 10 temas con 3 preguntas.
+- Sin repetición de una misma pregunta dentro del simulacro.
+- Corrección real: +1, −1/3 y 0 en blanco.
+
+Este reparto evita que un simulacro dependa en exceso de los temas con bancos más grandes.
 
 ## Trabajo pendiente para cerrar la literalidad
 
@@ -138,12 +126,12 @@ Cada tema conserva:
 4. Normas internas de matrícula, permanencia y evaluación.
 5. Ponderaciones, cupos y calendario anual de admisión UC3M.
 6. Delegaciones y procedimiento interno de contratación.
-7. Aumentar progresivamente la batería hasta 30–40 preguntas manuales por tema.
+7. Elevar progresivamente todos los temas de 15 a 30–40 preguntas manuales.
 
 ## Estrategia
 
 - Priorizar temas 1 a 14 y 20 durante la primera vuelta.
 - Estudiar aparte temas 15 a 19 por su especificidad interna.
 - Entrenar a una velocidad media de unos 51 segundos por pregunta.
-- Practicar simulacros completos de 70 preguntas con penalización real.
+- Practicar los tres simulacros equilibrados con penalización real.
 - No memorizar importes, plazos o competencias internas que no estén contrastados con el documento vigente.
