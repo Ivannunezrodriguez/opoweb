@@ -11,8 +11,8 @@ No se incorporarán nuevas OPE hasta cerrar estas cuatro con el máximo nivel po
 
 ## Versión actual
 
-- **OpoWeb v0.44.0**
-- Caché PWA: `opoweb-v51`
+- **OpoWeb v0.45.0**
+- Caché PWA: `opoweb-v52`
 - Última comprobación estructural: 10 de julio de 2026
 
 ## Criterio de perfección
@@ -36,7 +36,7 @@ Una OPE no se considerará cerrada únicamente por tener temas y preguntas. Para
 
 ## Diputación de Toledo · avance acumulado
 
-Se han desarrollado en profundidad **10 de los 40 temas oficiales**.
+Se han desarrollado en profundidad **15 de los 40 temas oficiales**.
 
 ### v0.43 · Procedimiento administrativo
 
@@ -54,14 +54,24 @@ Se han desarrollado en profundidad **10 de los 40 temas oficiales**.
 - tema 15: comarcas, áreas metropolitanas, mancomunidades y entidades inferiores;
 - tema 16: contratación pública local.
 
+### v0.45 · Empleo público, trabajo y Seguridad Social
+
+- tema 17: personal al servicio de las Administraciones de Castilla-La Mancha, acceso y pérdida de la relación;
+- tema 18: derechos, deberes y situaciones administrativas;
+- tema 19: régimen disciplinario;
+- tema 20: contrato de trabajo, modificación, suspensión y extinción;
+- tema 21: modalidades contractuales, Régimen General, afiliación, altas, bajas, cotización y recaudación.
+
+El **tema 22** permanece expresamente pendiente hasta obtener el Acuerdo Regulador vigente y los Estatutos oficiales vigentes del OAPGT. No se completará con contenido supuesto o desactualizado.
+
 ### Resultado del trabajo
 
-- 150 preguntas manuales acumuladas: 75 en v0.43 y 75 en v0.44;
+- 225 preguntas manuales acumuladas: 75 en cada una de las versiones v0.43, v0.44 y v0.45;
 - 15 preguntas nuevas por cada tema revisado;
 - dificultad baja, media y alta;
 - respuestas correctas rotadas;
 - justificación mediante artículo o regla jurídica;
-- eliminación de preguntas de plantilla en los diez temas;
+- eliminación de preguntas de plantilla en los quince temas;
 - fusión con bancos reales anteriores, con límite de 40 preguntas por tema;
 - simulacros de Diputación regenerados únicamente con preguntas reales disponibles.
 
@@ -89,10 +99,12 @@ La web sustituye bancos de plantilla cuando existe coincidencia clara de norma y
 - protección de datos;
 - igualdad;
 - prevención de riesgos laborales;
-- TREBEP;
-- contratación pública.
+- TREBEP y Ley 4/2011;
+- contratación pública;
+- Estatuto de los Trabajadores;
+- Ley General de la Seguridad Social.
 
-No se reutiliza contenido universitario específico en convocatorias locales.
+No se reutiliza contenido universitario específico en convocatorias locales ni normativa interna sin fuente oficial.
 
 ## Auditoría real frente a plantilla
 
@@ -110,23 +122,16 @@ La vista **Test por temas** muestra el estado del banco seleccionado. La vista *
 
 ### 1. Diputación de Toledo C1
 
-Bloque siguiente: temas 17 a 22.
+Bloque siguiente:
 
-- empleo público de Castilla-La Mancha;
-- derechos, deberes y situaciones administrativas;
-- régimen disciplinario;
-- contrato de trabajo;
-- Seguridad Social;
-- Acuerdo Regulador y OAPGT.
+- tema 22, únicamente cuando se obtengan las fuentes internas oficiales;
+- temas 23 y 24: prevención de riesgos e igualdad;
+- temas 25 y 26: obligación tributaria y recaudación;
+- tema 27: presupuesto general local;
+- temas 28 a 31: protección de datos, transparencia, tributos y firma electrónica;
+- temas 32 a 40: Windows 11, Edge, GroupWise 24, LibreOffice 24 e informática básica.
 
-Después:
-
-- tributación, recaudación y presupuesto;
-- protección de datos y transparencia;
-- tributos locales;
-- firma electrónica;
-- Windows 11, Edge, GroupWise 24 y LibreOffice 24;
-- informática básica y periféricos.
+También quedan por desarrollar en profundidad los temas 1–4, 10 y 11.
 
 ### 2. Carranque
 
@@ -167,6 +172,8 @@ El botón **«Volver al listado»** permanece visible durante el desplazamiento 
 
 ```text
 assets/js/
+├── diputacion-v45.js
+├── ui-v45.js
 ├── diputacion-v44.js
 ├── ui-v44.js
 ├── diputacion-v43.js
@@ -183,12 +190,20 @@ docs/
 
 ## Historial reciente
 
+### v0.45.0 · 2026-07-10
+
+- Desarrollados en profundidad los temas 17 a 21 de Diputación.
+- Añadidas 75 preguntas manuales de empleo público, disciplina, contrato de trabajo y Seguridad Social.
+- Alcanzados 15 temas profundos y 225 preguntas manuales acumuladas.
+- Marcado el tema 22 como pendiente de fuentes internas oficiales.
+- Regenerados los simulacros de Diputación exclusivamente con preguntas reales.
+- Actualizada la caché a `opoweb-v52`.
+
 ### v0.44.0 · 2026-07-10
 
 - Desarrollados en profundidad los temas 12 a 16 de Diputación.
 - Añadidas 75 preguntas manuales de régimen local y contratación.
 - Alcanzados 10 temas profundos y 150 preguntas manuales acumuladas.
-- Regenerados los simulacros de Diputación con los temas reales disponibles.
 - Actualizada la caché a `opoweb-v51`.
 
 ### v0.43.0 · 2026-07-10
@@ -203,10 +218,3 @@ docs/
 - Añadidas cinco preguntas de reserva separadas.
 - Reutilizados bancos reales cuando coincide norma y alcance.
 - Añadida auditoría global de preguntas reales frente a plantilla.
-
-### v0.41.0 · 2026-07-10
-
-- Auditadas las cuatro OPE.
-- Corregida la retirada de Las Ventas.
-- Actualizado el plazo de Diputación.
-- Fijado el botón «Volver al listado».
