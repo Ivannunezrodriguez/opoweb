@@ -1,4 +1,4 @@
-const CACHE = 'opoweb-v44';
+const CACHE = 'opoweb-v45';
 const ASSETS = [
   './',
   './index.html',
@@ -28,6 +28,7 @@ const ASSETS = [
   './assets/js/refuerzo-test-v39.js',
   './assets/js/ui-v39.js',
   './assets/js/refuerzo-test-v40.js',
+  './assets/js/correcciones-test-v40.js',
   './assets/js/ui-v40.js',
   './data/oposiciones.js',
   './data/proceso.js',
