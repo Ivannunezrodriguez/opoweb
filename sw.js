@@ -1,4 +1,4 @@
-const CACHE = 'opoweb-v34';
+const CACHE = 'opoweb-v35';
 const ASSETS = [
   './',
   './index.html',
@@ -7,9 +7,10 @@ const ASSETS = [
   './assets/js/metodo-opotest.js',
   './assets/js/motor-temario.js',
   './assets/js/auditoria-temas.js',
-  './assets/js/mapa-temas.js',
   './assets/js/uc3m-temario-v30.js',
   './assets/js/ui-v29.js',
+  './assets/js/uc3m-temario-v31.js',
+  './assets/js/ui-v31.js',
   './data/oposiciones.js',
   './data/proceso.js',
   './data/uc3m.js',
