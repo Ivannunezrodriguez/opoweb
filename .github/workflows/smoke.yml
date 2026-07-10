@@ -32,7 +32,8 @@ jobs:
           node --check assets/js/diputacion-v64.js
           node --check assets/js/diputacion-v65.js
           node --check assets/js/uc3m-v66.js
-          node --check assets/js/ui-v66.js
+          node --check assets/js/puebla-v67.js
+          node --check assets/js/ui-v67.js
       - name: Run regression tests
         run: |
           node tests/smoke-v56.js
@@ -46,3 +47,4 @@ jobs:
           node tests/smoke-v64.js
           node tests/smoke-v65.js
           node tests/smoke-uc3m-v66.js
+          node tests/smoke-puebla-v67.js
