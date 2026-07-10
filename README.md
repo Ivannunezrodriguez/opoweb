@@ -13,9 +13,9 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.37.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.38.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v41`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v42`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos principales
 
@@ -52,47 +52,37 @@ Cada tema conserva:
 - Tema 19: fases de gasto, documentos contables, pagos y cierre desarrollados; faltan límites, delegaciones y fechas UC3M.
 - Tema 20: LCSP revisada; falta la delegación y circuito interno UC3M.
 
-## Auditoría del banco de test · v0.37
+## Auditoría del banco de test
 
-La auditoría se ejecuta después de cargar todo el temario y valida cada pregunta antes de mostrarla.
+La auditoría se ejecuta después de cargar todo el temario y valida:
 
-### Controles aplicados
+- enunciado no vacío;
+- cuatro opciones no vacías y diferentes;
+- respuesta correcta existente;
+- justificación obligatoria;
+- eliminación de duplicados exactos;
+- reparto visible de respuestas A, B, C y D;
+- cobertura visible por tema.
 
-- Enunciado no vacío.
-- Cuatro opciones no vacías y diferentes.
-- Respuesta correcta existente entre las cuatro opciones.
-- Justificación obligatoria.
-- Eliminación de duplicados exactos de enunciado y respuesta.
-- Reparto visible de respuestas correctas A, B, C y D.
-- Cobertura visible por tema.
+Todos los temas mantienen un **mínimo operativo de 15 preguntas válidas**. El objetivo final continúa siendo **30–40 preguntas manuales por tema**.
 
-### Cobertura mínima
+## Refuerzo prioritario v0.38
 
-Todos los temas UC3M alcanzan un **mínimo operativo de 15 preguntas válidas**.
+Se han añadido **25 preguntas manuales nuevas**, cinco para cada uno de estos temas:
 
-El objetivo final no cambia: **30–40 preguntas manuales por tema**. La nueva vista de auditoría permite identificar los temas que todavía necesitan ampliación.
+- Tema 7: transparencia, publicidad activa, límites, acceso parcial y audiencia.
+- Tema 8: igualdad, discriminación indirecta, ejes del Plan y protocolo.
+- Tema 15: Defensor, servicios, régimen económico y reforma estatutaria.
+- Tema 18: principios, modificaciones y ejecución de ingresos.
+- Tema 19: fases del gasto, documentos mixtos, pago y liquidación.
 
-### Refuerzo manual añadido
-
-Se han añadido preguntas nuevas de segundo nivel sobre:
-
-- reforma constitucional;
-- notificación electrónica;
-- recursos administrativos;
-- competencia y funcionamiento electrónico;
-- protección de datos y DPD;
-- transparencia e igualdad UC3M;
-- LOSU y PTGAS;
-- Estatutos UC3M;
-- créditos ECTS, acceso y admisión;
-- modificaciones y fases presupuestarias;
-- contratación pública.
+Estos cinco temas pasan del mínimo operativo a un **banco sólido de al menos 20 preguntas válidas**.
 
 ## Simulacros UC3M equilibrados
 
-Los tres simulacros mantienen **70 preguntas**, pero ahora se construyen de forma controlada:
+Los tres simulacros mantienen **70 preguntas** y se regeneran después del refuerzo:
 
-- aparecen los **20 temas oficiales**;
+- aparecen los 20 temas oficiales;
 - 10 temas aportan 4 preguntas;
 - 10 temas aportan 3 preguntas;
 - no se repite una pregunta dentro del mismo simulacro;
@@ -113,13 +103,23 @@ assets/js/
 ├── uc3m-temario-v35.js
 ├── uc3m-temario-v36.js
 ├── auditoria-test-v37.js
+├── refuerzo-test-v38.js
 ├── ui-v34.js
 ├── ui-v35.js
 ├── ui-v36.js
-└── ui-v37.js
+├── ui-v37.js
+└── ui-v38.js
 ```
 
 ## Cambios de versión
+
+### v0.38.0 · 2026-07-10
+
+- Añadidas **25 preguntas manuales de segundo nivel**.
+- Temas 7, 8, 15, 18 y 19 elevados a 20 preguntas o más.
+- Reauditado el banco completo después del refuerzo.
+- Regenerados los simulacros equilibrados.
+- Actualizada la caché PWA a `opoweb-v42`.
 
 ### v0.37.0 · 2026-07-10
 
@@ -128,13 +128,11 @@ assets/js/
 - Refuerzo manual hasta un mínimo operativo de 15 preguntas por tema.
 - Añadida vista de cobertura y reparto de respuestas.
 - Regenerados tres simulacros equilibrados de 70 preguntas.
-- Actualizada la caché PWA a `opoweb-v41`.
 
 ### v0.36.0 · 2026-07-10
 
 - Profundizados los temas 13, 14, 16, 17 y 20.
 - Añadidas 60 preguntas manuales.
-- Incorporados artículos y cifras verificadas de LOSU, RD 822/2021, RD 534/2024 y LCSP.
 
 ### v0.35.0 · 2026-07-10
 
