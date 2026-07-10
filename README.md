@@ -11,8 +11,8 @@ No se incorporarán nuevas OPE hasta cerrar estas cuatro con el máximo nivel po
 
 ## Versión actual
 
-- **OpoWeb v0.42.0**
-- Caché PWA: `opoweb-v49`
+- **OpoWeb v0.43.0**
+- Caché PWA: `opoweb-v50`
 - Última comprobación estructural: 10 de julio de 2026
 
 ## Criterio de perfección
@@ -34,9 +34,30 @@ Una OPE no se considerará cerrada únicamente por tener temas y preguntas. Para
 - proceso selectivo actualizado desde fuentes oficiales;
 - auditoría automática de validez, duplicados, cobertura y formato.
 
-## Mejoras de v0.42
+## Avance v0.43 · Diputación de Toledo C1
 
-### Formatos oficiales de simulacro
+Se han desarrollado en profundidad los temas 5 a 9:
+
+- tema 5: Ley 39/2015, interesados, actividad y plazos;
+- tema 6: procedimiento administrativo común;
+- tema 7: acto administrativo;
+- tema 8: revisión y recursos;
+- tema 9: administración electrónica.
+
+La fase añade:
+
+- 75 preguntas manuales nuevas;
+- 15 preguntas por cada tema revisado;
+- dificultad baja, media y alta;
+- respuestas correctas rotadas;
+- justificaciones con artículo o regla concreta;
+- eliminación de preguntas de plantilla en esos cinco temas;
+- fusión con bancos reales ya reutilizados, con límite de 40 preguntas por tema;
+- simulacros de Diputación regenerados únicamente con preguntas clasificadas como reales.
+
+El detalle está documentado en [`docs/DIPUTACION_ADMIN_C1.md`](docs/DIPUTACION_ADMIN_C1.md).
+
+## Formatos oficiales de simulacro
 
 | OPE | Preguntas | Reserva | Tiempo | Segundo ejercicio/casos |
 |---|---:|---:|---:|---|
@@ -45,11 +66,11 @@ Una OPE no se considerará cerrada únicamente por tener temas y preguntas. Para
 | Diputación C1 | 50 | 5 | 60 min | Segundo ejercicio práctico eliminatorio |
 | UC3M | 70 | 5 | 60 min | No existe práctico oficial |
 
-Los tres simulacros de cada OPE se regeneran ahora con su tamaño oficial. Las cinco preguntas de reserva se muestran separadas y se corrigen para entrenar, pero no alteran la nota mientras no sustituyan una pregunta anulada.
+Las cinco preguntas de reserva se muestran separadas y se corrigen para entrenar, pero no alteran la nota mientras no sustituyan una pregunta anulada.
 
-### Reutilización normativa segura
+## Reutilización normativa segura
 
-La web sustituye automáticamente bancos de plantilla cuando existe coincidencia clara de norma y alcance con un banco real ya auditado. Ejemplos:
+La web sustituye bancos de plantilla cuando existe coincidencia clara de norma y alcance con un banco real ya auditado. Se reutilizan, cuando procede:
 
 - Constitución;
 - Ley 39/2015;
@@ -61,11 +82,11 @@ La web sustituye automáticamente bancos de plantilla cuando existe coincidencia
 - TREBEP;
 - contratación pública.
 
-No se reutiliza contenido universitario específico en convocatorias locales. Las preguntas se clonan con identificadores propios y mantienen la justificación normativa.
+No se reutiliza contenido universitario específico en convocatorias locales.
 
-### Auditoría real frente a plantilla
+## Auditoría real frente a plantilla
 
-Cada tema distingue ahora:
+Cada tema distingue:
 
 - preguntas reales de contenido;
 - preguntas de plantilla pendientes de sustitución;
@@ -79,31 +100,41 @@ La vista **Test por temas** muestra el estado del banco seleccionado. La vista *
 
 ### 1. Diputación de Toledo C1
 
-- Presentar solicitud antes del 31 de julio de 2026 y conservar registro y justificante.
-- Desarrollar los 40 temas completos.
-- Priorizar organización de Diputación, Acuerdo Regulador, OAPGT, presupuesto, tributación y recaudación.
-- Crear contenido específico de Windows 11, Edge, GroupWise 24 y LibreOffice 24.
-- Reemplazar las preguntas de plantilla y completar las soluciones de los 20 supuestos.
+Bloque siguiente: temas 12 a 16.
+
+- régimen local;
+- municipio;
+- provincia y organización de la Diputación;
+- otras entidades locales;
+- contratación pública local.
+
+Después:
+
+- empleo público de Castilla-La Mancha;
+- laboral y Seguridad Social;
+- Acuerdo Regulador y OAPGT;
+- tributación, recaudación y presupuesto;
+- Windows 11, Edge, GroupWise 24 y LibreOffice 24.
 
 ### 2. Carranque
 
-- Completar los 20 temas con contenido normativo real.
-- Sustituir las preguntas de método por preguntas de examen.
-- Mantener simulacros de 80 + 5 en 90 minutos.
-- Rehacer los supuestos exclusivamente sobre temas 3 a 20.
+- completar los 20 temas;
+- sustituir preguntas de método;
+- mantener simulacros de 80 + 5 en 90 minutos;
+- rehacer supuestos exclusivamente sobre temas 3 a 20.
 
 ### 3. La Puebla de Montalbán
 
-- Completar los 19 temas artículo por artículo.
-- Llevar cada tema a 30–40 preguntas reales.
-- Ampliar y resolver al menos 20 supuestos.
-- Reforzar régimen local, tributación, recaudación, administración electrónica e informática.
+- completar 19 temas artículo por artículo;
+- alcanzar 30–40 preguntas reales por tema;
+- ampliar y resolver al menos 20 supuestos;
+- reforzar régimen local, tributación, recaudación, administración electrónica e informática.
 
 ### 4. UC3M
 
-- Cerrar Ley 10/2019, Estatutos, normativa académica, admisión, presupuesto y contratación interna.
-- Elevar los once temas que permanecen por debajo de 30 preguntas.
-- Mantener los tres simulacros oficiales de 70 + 5.
+- cerrar Ley 10/2019, Estatutos, normativa académica, admisión, presupuesto y contratación interna;
+- elevar los once temas que permanecen por debajo de 30 preguntas;
+- mantener tres simulacros de 70 + 5.
 
 ## Estructura obligatoria de cada tema
 
@@ -124,34 +155,36 @@ El botón **«Volver al listado»** permanece visible durante el desplazamiento 
 
 ```text
 assets/js/
+├── diputacion-v43.js
+├── ui-v43.js
 ├── perfeccion-v42.js
 ├── ui-v42.js
-├── ui-v41.js
-├── refuerzo-test-v40.js
 ├── correcciones-test-v40.js
 └── auditoria-test-v37.js
 
-data/
-├── ope-audit-v41.js
-├── oposiciones.js
-├── proceso.js
-└── uc3m.js
-
 docs/
+├── DIPUTACION_ADMIN_C1.md
 ├── AUDITORIA_OPE.md
-└── HOJA_RUTA_PERFECCION.md
+├── HOJA_RUTA_PERFECCION.md
+└── UC3M_AUX_ADMIN.md
 ```
 
 ## Historial reciente
 
+### v0.43.0 · 2026-07-10
+
+- Desarrollados en profundidad los temas 5 a 9 de Diputación.
+- Añadidas 75 preguntas manuales de contenido.
+- Retiradas las preguntas de plantilla de esos cinco temas.
+- Regenerados los simulacros de Diputación con preguntas reales disponibles.
+- Actualizada la caché a `opoweb-v50`.
+
 ### v0.42.0 · 2026-07-10
 
 - Normalizados los formatos oficiales de las cuatro OPE.
-- Añadidas cinco preguntas de reserva separadas en todos los simulacros.
-- La nota se calcula únicamente con las preguntas puntuables.
-- Reutilizados bancos reales cuando coincide exactamente la norma y el alcance.
+- Añadidas cinco preguntas de reserva separadas.
+- Reutilizados bancos reales cuando coincide norma y alcance.
 - Añadida auditoría global de preguntas reales frente a plantilla.
-- Actualizada la caché a `opoweb-v49`.
 
 ### v0.41.0 · 2026-07-10
 
@@ -159,8 +192,3 @@ docs/
 - Corregida la retirada de Las Ventas.
 - Actualizado el plazo de Diputación.
 - Fijado el botón «Volver al listado».
-
-### v0.40.0 · 2026-07-10
-
-- Añadidas 90 preguntas UC3M de aplicación y supuesto breve.
-- Nueve temas UC3M elevados a 30 preguntas o más.
