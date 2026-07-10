@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.56
+# Auditoría global de OpoWeb · v0.57
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -43,9 +43,9 @@ Las Ventas con Peña Aguilera está retirada del selector mediante sus dos ident
 
 La primera vuelta no permite considerar perfecto todo el temario. Es una base profunda, pero faltan densidad de test, revisión transversal y cierre de fuentes internas.
 
-### Segunda vuelta v0.56
+### Segunda vuelta v0.57
 
-Temas 1–17 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–18 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
@@ -53,30 +53,25 @@ Resultado acumulado:
 - 75 preguntas nuevas en v0.54;
 - 105 preguntas nuevas en v0.55;
 - 15 preguntas nuevas en v0.56;
-- 255 preguntas nuevas de segunda vuelta;
-- 840 preguntas manuales acumuladas;
-- diecisiete temas consecutivos a 30+ preguntas reales;
+- 19 preguntas nuevas en v0.57;
+- 274 preguntas nuevas de segunda vuelta;
+- 859 preguntas manuales acumuladas;
+- dieciocho temas consecutivos a 30+ preguntas reales;
 - justificación mediante artículo o regla oficial;
 - cuatro alternativas distintas;
 - dificultad graduada;
 - control de duplicados;
 - simulacros regenerados.
 
-Ámbitos reforzados en v0.56:
+Ámbitos reforzados en v0.57:
 
-- clases de personal empleado público;
-- funciones reservadas al personal funcionario;
-- principios y requisitos de acceso;
-- oposición, concurso y concurso-oposición;
-- adquisición de la condición de funcionario de carrera;
-- pérdida y renuncia de la condición funcionarial.
-
-### Correcciones estructurales v0.56
-
-- retirada efectiva de Las Ventas con Peña Aguilera del conjunto activo;
-- actualización centralizada del estado de solicitud de Diputación;
-- nueva caché PWA `opoweb-v63`;
-- prueba de regresión ejecutable con Node.
+- derechos individuales e individuales ejercidos colectivamente;
+- vacaciones, deberes y código de conducta;
+- deber de formación;
+- servicio activo y servicios especiales;
+- expectativa de destino y excedencia forzosa;
+- excedencias voluntarias y por violencia de género;
+- suspensión de funciones y reingreso.
 
 ### Criterio de perfección pendiente
 
@@ -94,9 +89,8 @@ Para considerar cerrada Diputación deben cumplirse simultáneamente:
 
 ### Próximo bloque
 
-Temas 18–21:
+Temas 19–21:
 
-- derechos, deberes y situaciones administrativas;
 - régimen disciplinario;
 - contrato de trabajo;
 - modalidades contractuales y Seguridad Social.
