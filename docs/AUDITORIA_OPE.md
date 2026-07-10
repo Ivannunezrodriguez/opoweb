@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.51
+# Auditoría global de OpoWeb · v0.52
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -64,17 +64,19 @@ Resultado acumulado:
 - tema 22 excluido de los simulacros;
 - cobertura temática visible.
 
-### Fase práctica v0.51
+### Fase práctica v0.52
 
 - 20 supuestos completos;
-- 20 enunciados realistas;
-- tareas específicas en cada supuesto;
-- solución estructurada por fases;
-- base normativa o técnica;
-- lista de autocorrección;
-- respuesta guardada en el navegador;
-- navegación anterior, siguiente y selector;
-- estado revisado y porcentaje de progreso.
+- 40 variantes;
+- 20 rúbricas sobre 10 puntos;
+- 3 simulacros prácticos internos;
+- 2 casos obligatorios por simulacro;
+- 1 extensión opcional por simulacro;
+- autoevaluación total sobre 20;
+- guardado automático de respuestas, variantes y criterios;
+- diferenciación expresa entre entrenamiento y formato oficial.
+
+La duración de 90 minutos es una recomendación interna para los simulacros prácticos. No se considera duración oficial del segundo ejercicio.
 
 Cobertura práctica:
 
@@ -101,7 +103,7 @@ No debe considerarse cerrado hasta verificar los textos oficiales.
 
 - presentar solicitud y conservar registro y pago;
 - elevar los 39 temas a 30–40 preguntas reales;
-- añadir variantes y criterios de puntuación a los supuestos;
+- generar nuevas variantes a partir de los resultados prácticos;
 - cerrar el tema 22 cuando existan fuentes internas;
 - consolidar las capas históricas y añadir pruebas de regresión.
 
