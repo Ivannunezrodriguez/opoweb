@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.64
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.65
 
 ## Estado del proceso
 
@@ -11,104 +11,71 @@
 
 ## Avance aproximado
 
-- Diputación en conjunto: **96 %**.
-- Primera vuelta: 39 de 40 temas.
-- Segunda vuelta de temas auditables: **39 de 39, 100 %**.
-- Tema 22 pendiente de fuentes internas oficiales.
+- Diputación en conjunto: **98 %**.
+- Cobertura cuantitativa: **40 de 40 temas, 100 %**.
+- Auditoría documental: una brecha pendiente en los Estatutos del OAPGT.
 
 ## Estado real
 
-- Temas 1–21 y 23–40 con desarrollo y banco mínimo de 30 preguntas reales.
-- 1.237 preguntas manuales acumuladas.
-- Tres simulacros 50 + 5.
+- Los 40 temas tienen al menos 30 preguntas específicas.
+- 1.269 preguntas manuales acumuladas.
+- Tres simulacros de 50 + 5 con cobertura de los 40 temas.
 - 20 supuestos y 40 variantes.
 - Tres simulacros prácticos internos.
-- El conjunto todavía no puede declararse cerrado por el tema 22 y la auditoría técnica final.
+- El conjunto todavía no se declara cerrado por la brecha estatutaria y la auditoría técnica final.
 
-## Segunda vuelta v0.64
+## Tema 22 · v0.65
 
-### Temas reforzados
+### Acuerdo Regulador
 
-32. Windows 11: creación, copia, borrado, carpetas y unidades locales y de red.
+- aprobación plenaria de 21 de diciembre de 2023;
+- publicación en el BOP Toledo de 28 de diciembre de 2023;
+- ámbito funcional y territorial;
+- vigencia de 1 de enero de 2024 a 31 de diciembre de 2027;
+- prórroga automática hasta un nuevo acuerdo;
+- derechos individuales y colectivos;
+- Comisión de Seguimiento;
+- clases de personal y titulación C1;
+- copia básica contractual;
+- jornada y franja fija;
+- modificaciones publicadas en enero y febrero de 2026.
 
-33. Microsoft Edge y correo electrónico con GroupWise 24 y posteriores.
+### OAPGT verificado
 
-34. Impresión y escaneado desde Windows 11.
+- titularidad de la sede electrónica;
+- NIF P9500003J;
+- domicilio en calle Real, 4, Toledo;
+- registro electrónico único;
+- gestión por la Secretaría del organismo;
+- presentación durante las veinticuatro horas de todos los días del año;
+- causas de rechazo de documentos;
+- recibo automático con fecha, hora y número de entrada.
 
-35. LibreOffice Writer.
+### Brecha documental
 
-36. LibreOffice Calc.
+No se han localizado en una publicación oficial accesible los Estatutos vigentes del OAPGT con su literalidad completa sobre organización, órganos y competencias. La carencia queda registrada en el propio tema, en la auditoría global y en las pruebas automáticas.
 
-37. LibreOffice Base.
+## Resultado v0.65
 
-38. LibreOffice Impress.
+- 32 preguntas nuevas para el tema 22.
+- 684 preguntas acumuladas en la segunda vuelta.
+- 1.269 preguntas manuales acumuladas.
+- Los 40 temas superan el mínimo de 30 preguntas.
+- Simulacros regenerados con presencia del tema 22.
+- La brecha documental no se oculta ni se sustituye por inferencias.
 
-39. Ordenador personal y componentes.
+## Fuentes principales
 
-40. Periféricos, impresoras, escáneres, almacenamiento externo, CD, DVD y USB.
+- Acuerdo Regulador publicado en el BOP Toledo n.º 246, de 28 de diciembre de 2023.
+- Modificaciones publicadas en el BOP Toledo n.º 10, de 16 de enero de 2026, y n.º 34, de 20 de febrero de 2026.
+- Acuerdo del Consejo Rector del OAPGT de 22 de noviembre de 2017 sobre la sede electrónica.
+- Resolución 182/2017 del Director del OAPGT sobre el registro electrónico.
+- Sede electrónica oficial del OAPGT.
 
-### Resultado
+## Cierre pendiente
 
-- 135 preguntas nuevas en v0.64.
-- 652 preguntas acumuladas en la segunda vuelta.
-- 1.237 preguntas manuales acumuladas.
-- Los 39 temas auditables alcanzan al menos 30 preguntas reales.
-- Cuatro opciones distintas, respuesta correcta rotada y dificultad graduada.
-- Simulacros regenerados sin tema 22.
-
-## Contenido informático reforzado
-
-### Windows, Edge y GroupWise
-
-- Explorador, rutas, extensiones y atajos;
-- copia, movimiento, eliminación y Papelera;
-- rutas UNC, unidades mapeadas y permisos;
-- pestañas, historial, favoritos, descargas e InPrivate;
-- HTTPS y comprobación del dominio;
-- destinatarios, CC, CCO, adjuntos, calendario, citas y seguridad del correo.
-
-### Impresión y digitalización
-
-- impresora, rango, copias, orientación, dúplex y cola;
-- impresión a PDF;
-- resolución, color, ADF, cristal plano y OCR;
-- formatos y control de calidad;
-- protección de datos y ubicaciones autorizadas.
-
-### LibreOffice
-
-- Writer: ODT, estilos, saltos, tablas, cambios, comentarios, correspondencia y PDF;
-- Calc: ODS, celdas, rangos, fórmulas, referencias, funciones, filtros y validación;
-- Base: tablas, campos, registros, claves, relaciones, consultas, formularios e informes;
-- Impress: ODP, diseños, diapositiva maestra, transiciones, animaciones, notas y exportación.
-
-### Hardware y periféricos
-
-- CPU, RAM, placa base, fuente, GPU, red, BIOS y UEFI;
-- HDD, SSD, almacenamiento y copias de seguridad;
-- dispositivos de entrada, salida y mixtos;
-- impresoras láser e inyección;
-- escáneres, USB y unidades ópticas;
-- controladores y seguridad de soportes.
-
-## Tema 22
-
-Permanece pendiente de:
-
-- Acuerdo Regulador vigente de la Diputación y sus organismos autónomos;
-- Estatutos oficiales vigentes del OAPGT;
-- organización, funcionamiento y competencias actuales;
-- comprobación de modificaciones posteriores.
-
-No se incorporarán datos internos no verificados para forzar un porcentaje artificial del 100 %.
-
-## Fuentes principales de v0.64
-
-- Ayuda oficial de Microsoft para Windows 11 y Microsoft Edge.
-- Documentación del cliente GroupWise 24.
-- Ayuda oficial y manuales de LibreOffice para Writer, Calc, Base e Impress.
-- Documentación técnica general de hardware y periféricos.
-
-## Siguiente bloque
-
-Localización y auditoría documental del tema 22, seguida de revisión transversal y consolidación técnica.
+1. Estatutos oficiales vigentes del OAPGT.
+2. Auditoría transversal de vigencia, literalidad, duplicados y dificultad.
+3. Pruebas de navegador y validación visual.
+4. Consolidación técnica de módulos históricos.
+5. Revisión final de supuestos y equilibrio de simulacros.
