@@ -48,3 +48,4 @@ jobs:
           node tests/smoke-v65.js
           node tests/smoke-uc3m-v66.js
           node tests/smoke-puebla-v67.js
+          node tests/smoke-puebla-live-v67.js
