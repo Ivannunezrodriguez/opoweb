@@ -11,13 +11,13 @@ No se incorporarán nuevas OPE hasta cerrar estas cuatro.
 
 ## Versión actual
 
-- **OpoWeb v0.49.0**
-- Caché PWA: `opoweb-v56`
+- **OpoWeb v0.50.0**
+- Caché PWA: `opoweb-v57`
 - Última revisión estructural: 10 de julio de 2026
 
-## Diputación de Toledo · avance
+## Diputación de Toledo · primera vuelta
 
-Se han desarrollado en profundidad **33 de los 40 temas oficiales**:
+Se han desarrollado en profundidad **39 de los 40 temas oficiales**:
 
 - v0.43: temas 5–9, procedimiento administrativo;
 - v0.44: temas 12–16, régimen local y contratación;
@@ -25,72 +25,86 @@ Se han desarrollado en profundidad **33 de los 40 temas oficiales**:
 - v0.46: temas 23–27, prevención, igualdad, tributación, recaudación y presupuesto;
 - v0.47: temas 28–31, protección de datos, transparencia, tributos locales y firma electrónica;
 - v0.48: temas 32–36, Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc;
-- v0.49: temas 37–40, Base, Impress, componentes y periféricos.
+- v0.49: temas 37–40, Base, Impress, componentes y periféricos;
+- v0.50: temas 1–4 y 10–11, Constitución, organización del Estado, Ley 40/2015, responsabilidad y procedimiento local.
 
-El tema 22 permanece pendiente de Acuerdo Regulador y Estatutos oficiales vigentes del OAPGT.
+El **único tema sin primera vuelta cerrada es el tema 22**, pendiente del Acuerdo Regulador vigente y de los Estatutos oficiales vigentes del OAPGT.
 
 ### Resultado acumulado
 
-- **495 preguntas manuales nuevas**;
+- **585 preguntas manuales nuevas**;
 - 15 preguntas por cada tema revisado;
 - dificultad baja, media y alta;
 - respuestas correctas rotadas;
 - justificación normativa, funcional o técnica;
-- eliminación de preguntas de plantilla en los 33 temas;
-- simulacros regenerados únicamente con preguntas reales.
+- eliminación de preguntas de plantilla en los 39 temas;
+- simulacros regenerados únicamente con preguntas reales;
+- exclusión expresa del tema 22 en simulacros hasta verificar sus fuentes.
 
-## Bloque v0.49
+## Bloque v0.50
 
-### Tema 37 · LibreOffice Base
+### Tema 1
 
-- documento ODB;
-- bases embebidas y conexiones externas;
-- tablas, registros y campos;
-- tipos de datos;
-- claves primarias y ajenas;
-- relaciones uno a uno, uno a muchos y muchos a muchos;
-- integridad referencial;
-- consultas de selección, parámetros y acción;
-- formularios y subformularios;
-- informes, agrupaciones y totales.
+- significado, estructura y valor normativo de la Constitución;
+- principios de los artículos 1 a 9;
+- Tribunal Constitucional;
+- composición, designación y mandato;
+- reforma ordinaria del artículo 167;
+- reforma agravada del artículo 168.
 
-### Tema 38 · LibreOffice Impress
+### Tema 2
 
-- formato ODP;
-- diapositivas y diseños;
-- vistas Normal, Esquema, Notas, Clasificador y Folleto;
-- diapositiva maestra;
-- marcadores de posición;
-- objetos, alineación, agrupación y orden;
-- transiciones y animaciones;
-- inicio de presentación con F5 y Mayús + F5;
-- Consola del presentador;
-- impresión y exportación.
+- derechos y deberes fundamentales;
+- garantías y suspensión;
+- ley orgánica y ordinaria;
+- decreto-ley;
+- decreto legislativo;
+- reglamento, jerarquía y reserva de ley;
+- principios de buena regulación.
 
-### Tema 39 · Ordenador personal y componentes
+### Tema 3
 
-- placa base;
-- CPU, núcleos, hilos, frecuencia y caché;
-- RAM;
-- SSD, HDD, SATA y NVMe;
-- GPU integrada y dedicada;
-- adaptadores de red y sonido;
-- fuente de alimentación;
-- refrigeración;
-- UEFI;
-- USB, HDMI, DisplayPort, Ethernet y PCI Express.
+- organización institucional y territorial;
+- Corona;
+- Cortes Generales;
+- Gobierno y Poder Judicial;
+- Defensor del Pueblo;
+- Tribunal de Cuentas;
+- municipios, provincias y Comunidades Autónomas.
 
-### Tema 40 · Periféricos
+### Tema 4
 
-- periféricos de entrada, salida, entrada/salida, almacenamiento y comunicaciones;
-- impresoras láser y de inyección;
-- escáneres y multifunción;
-- discos externos HDD y SSD;
-- memorias USB;
-- extracción segura;
-- CD-ROM, CD-R, CD-RW y equivalentes DVD;
-- concentradores USB;
-- compatibilidad, controladores, alimentación, cifrado y custodia.
+- principios de actuación administrativa;
+- órganos administrativos;
+- competencia;
+- delegación;
+- avocación;
+- encomienda de gestión;
+- delegación de firma y suplencia;
+- abstención y recusación;
+- relaciones interadministrativas.
+
+### Tema 10
+
+- responsabilidad patrimonial;
+- daño efectivo, evaluable e individualizado;
+- causalidad y antijuridicidad;
+- plazo de un año;
+- instrucción, resolución y silencio;
+- responsabilidad de autoridades y empleados;
+- acción de regreso por dolo o culpa o negligencia grave.
+
+### Tema 11
+
+- especialidades del procedimiento local;
+- expediente;
+- Registro Electrónico General y Registro General local;
+- asientos de entrada y salida;
+- presentación de documentos;
+- recibos y copias;
+- subsanación;
+- obligados electrónicos;
+- comunicaciones y notificaciones.
 
 ## Formatos oficiales de simulacro
 
@@ -105,11 +119,10 @@ El tema 22 permanece pendiente de Acuerdo Regulador y Estatutos oficiales vigent
 
 ### Diputación
 
-- temas 1–4: Constitución, Corona, Cortes, Gobierno, Poder Judicial y organización territorial;
-- temas 10–11: responsabilidad patrimonial, potestad sancionadora y procedimiento local;
-- tema 22 cuando se localicen fuentes internas;
-- elevar todos los temas a 30–40 preguntas reales;
-- desarrollar 20 supuestos completos.
+- elevar progresivamente los 39 temas cerrados a 30–40 preguntas reales;
+- redactar y resolver 20 supuestos completos;
+- cerrar el tema 22 únicamente cuando se localicen sus textos internos oficiales;
+- consolidar las capas históricas en una fuente única cuando el contenido esté estabilizado.
 
 ### Carranque
 
@@ -136,20 +149,20 @@ El botón **«Volver al listado»** permanece visible mediante `position: sticky
 
 ## Historial reciente
 
+### v0.50.0 · 2026-07-10
+
+- Desarrollados los temas 1–4 y 10–11 de Diputación.
+- Añadidas 90 preguntas manuales.
+- Alcanzados 39 temas profundos y 585 preguntas manuales acumuladas.
+- El tema 22 queda como único pendiente de primera vuelta.
+- Actualizada la caché a `opoweb-v57`.
+
 ### v0.49.0 · 2026-07-10
 
-- Desarrollados los temas 37–40 de Diputación.
+- Desarrollados los temas 37–40.
 - Añadidas 60 preguntas manuales.
-- Alcanzados 33 temas profundos y 495 preguntas manuales acumuladas.
-- Completado el primer desarrollo del bloque 32–40.
-- Actualizada la caché a `opoweb-v56`.
 
 ### v0.48.0 · 2026-07-10
 
 - Desarrollados los temas 32–36.
 - Añadidas 75 preguntas manuales.
-
-### v0.47.0 · 2026-07-10
-
-- Desarrollados los temas 28–31.
-- Añadidas 60 preguntas manuales.
