@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.48
+# Auditoría global de OpoWeb · v0.49
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -43,20 +43,22 @@ Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema y crear supu
 
 ### Desarrollo alcanzado
 
-Se han desarrollado en profundidad **29 de 40 temas**:
+Se han desarrollado en profundidad **33 de 40 temas**:
 
 - 5–9: procedimiento administrativo;
 - 12–16: régimen local y contratación;
 - 17–21: empleo público, trabajo y Seguridad Social;
 - 23–27: prevención, igualdad, tributación, recaudación y presupuesto;
 - 28–31: protección de datos, transparencia, tributos locales y firma electrónica;
-- 32–36: Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc.
+- 32–36: Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc;
+- 37–40: Base, Impress, componentes y periféricos.
 
 Resultado acumulado:
 
-- 435 preguntas manuales nuevas;
+- 495 preguntas manuales nuevas;
 - 15 preguntas por tema revisado;
-- eliminación de preguntas de plantilla en 29 temas;
+- eliminación de preguntas de plantilla en 33 temas;
+- bloque de ofimática e informática 32–40 desarrollado en primera vuelta;
 - tres simulacros de 50 + 5 formados solo con contenido real;
 - cobertura temática visible.
 
@@ -70,8 +72,8 @@ No se considera cerrado. Falta verificar:
 ### Pendiente prioritario
 
 - presentar solicitud y conservar registro y pago;
-- temas 37–40 de LibreOffice Base, Impress y hardware;
-- temas 1–4, 10 y 11;
+- temas 1–4: Constitución y organización del Estado;
+- temas 10–11: responsabilidad, sanción y procedimiento local;
 - tema 22 cuando existan fuentes internas;
 - elevar todos los temas a 30–40 preguntas;
 - redactar 20 supuestos con solución completa.
