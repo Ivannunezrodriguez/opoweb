@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.65
+# Auditoría global de OpoWeb · v0.66
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -15,52 +15,53 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 88 % |
+| Funcionamiento e interfaz | 89 % |
 | Diputación C1 | 98 % |
-| UC3M C2 | 52 % |
+| UC3M C2 | 78 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 55 % |
-| **OpoWeb global** | **68 %** |
+| Arquitectura y pruebas | 58 % |
+| **OpoWeb global** | **74 %** |
 
 ## Diputación de Toledo C1
 
-### Estado verificado
-
-- 2 plazas C1 por oposición libre.
-- Primer ejercicio de 50 + 5 preguntas en 60 minutos.
-- Segundo ejercicio práctico.
-- 40 temas.
-- Solicitudes del 6 al 31 de julio de 2026.
-
-### Contenido v0.65
-
 - 40 de 40 temas con al menos 30 preguntas específicas.
-- 684 preguntas añadidas en la segunda vuelta.
 - 1.269 preguntas manuales acumuladas.
+- Tres simulacros test de 50 + 5.
 - 20 supuestos, 40 variantes y tres simulacros prácticos internos.
-- Tres simulacros test de 50 + 5 con cobertura de los 40 temas.
+- Estimación 98 % por la brecha estatutaria del OAPGT y el cierre técnico pendiente.
 
-El tema 22 incorpora el Acuerdo Regulador aprobado en 2023, sus modificaciones de 2026 y el funcionamiento electrónico oficial del OAPGT. La literalidad de los Estatutos vigentes del OAPGT sigue registrada como brecha documental.
+## UC3M C2 · v0.66
 
-### Cobertura del tema 22
+### Resultado cuantitativo
 
-- ámbito funcional, territorial y temporal del Acuerdo;
-- derechos individuales y colectivos;
-- Comisión de Seguimiento;
-- clasificación y titulación C1;
-- contratación y jornada;
-- modificaciones económicas de enero y febrero de 2026;
-- titularidad y sede del OAPGT;
-- registro electrónico único, Secretaría, disponibilidad, rechazo y recibo.
+- 20 de 20 temas con al menos 30 preguntas válidas.
+- 600 preguntas acumuladas.
+- 110 preguntas nuevas en once temas.
+- Tres simulacros de 70 preguntas + 5 reservas.
+- Cobertura equilibrada de los veinte temas y ausencia de duplicados dentro de cada simulacro.
 
-### Lo que impide declarar Diputación al 100 %
+### Materias reforzadas
 
-1. Estatutos oficiales vigentes del OAPGT no localizados en una publicación oficial accesible.
-2. Auditoría transversal completa de vigencia y literalidad.
-3. Pruebas de navegador y validación visual.
-4. Consolidación de las capas históricas de JavaScript.
-5. Revisión final de supuestos y equilibrio de simulacros.
+- Constitución española;
+- órganos, competencia y organización de la Administración;
+- administración electrónica, seguridad e interoperabilidad;
+- protección de datos y derechos digitales;
+- provisión, situaciones, incompatibilidades y disciplina;
+- prevención de riesgos laborales;
+- sistema universitario, comunidad y PTGAS;
+- organización de enseñanzas oficiales;
+- acceso y admisión a Grado;
+- contratación del sector público.
+
+### Lo que impide declarar UC3M al 100 %
+
+1. Verificación completa de Estatutos y organización interna vigente.
+2. Presupuesto y bases de ejecución de la convocatoria.
+3. Normas propias de matrícula, permanencia y evaluación.
+4. Procedimientos internos de admisión y contratación.
+5. Auditoría transversal de literalidad, vigencia y dificultad.
+6. Supuestos institucionales y pruebas de navegador.
 
 ## La Puebla
 
@@ -69,10 +70,6 @@ Pendiente completar 19 temas, sustituir plantillas, alcanzar 30–40 preguntas p
 ## Carranque
 
 Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema y crear supuestos exclusivamente sobre temas 3–20.
-
-## UC3M
-
-20 temas con banco real, todos con al menos 20 preguntas y nueve con 30 o más. Pendiente normativa interna y elevar once temas a 30–40 preguntas.
 
 ## Arquitectura pendiente
 
