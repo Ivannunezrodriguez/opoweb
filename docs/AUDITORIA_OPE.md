@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.60
+# Auditoría global de OpoWeb · v0.61
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -15,13 +15,13 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 83 % |
-| Diputación C1 | 83 % |
+| Funcionamiento e interfaz | 84 % |
+| Diputación C1 | 84 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 45 % |
-| **OpoWeb global** | **58 %** |
+| Arquitectura y pruebas | 47 % |
+| **OpoWeb global** | **59 %** |
 
 La estimación pondera temario, banco real, supuestos, simulacros, auditoría normativa y deuda técnica.
 
@@ -46,9 +46,9 @@ La estimación pondera temario, banco real, supuestos, simulacros, auditoría no
 - 40 variantes.
 - Tres simulacros prácticos internos.
 
-### Segunda vuelta v0.60
+### Segunda vuelta v0.61
 
-Temas 1–21 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–21 y 23 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
@@ -60,25 +60,27 @@ Resultado acumulado:
 - 18 preguntas nuevas en v0.58;
 - 30 preguntas nuevas en v0.59;
 - 36 preguntas nuevas en v0.60;
-- 358 preguntas nuevas de segunda vuelta;
-- 943 preguntas manuales acumuladas;
-- veintiún temas consecutivos a 30+ preguntas reales;
-- segunda vuelta: 21 de 39 temas auditables, aproximadamente 54 %;
+- 22 preguntas nuevas en v0.61;
+- 380 preguntas nuevas de segunda vuelta;
+- 965 preguntas manuales acumuladas;
+- veintidós temas a 30+ preguntas reales;
+- segunda vuelta: 22 de 39 temas auditables, aproximadamente 56 %;
 - cuatro alternativas distintas;
 - dificultad graduada;
 - control de duplicados;
 - simulacros regenerados.
 
-Ámbitos reforzados en v0.60:
+Ámbitos reforzados en v0.61:
 
-- contratos formativos;
-- duración determinada;
-- sustitución y encadenamiento;
-- contrato fijo-discontinuo;
-- principios y estructura de la Seguridad Social;
-- afiliación, altas, bajas y cotización;
-- acción protectora;
-- accidente de trabajo.
+- protección eficaz y deber preventivo;
+- principios de la acción preventiva;
+- evaluación y planificación;
+- información y formación;
+- emergencias y riesgo grave e inminente;
+- vigilancia de la salud;
+- obligaciones de los trabajadores;
+- organización preventiva;
+- Delegados de Prevención y Comité de Seguridad y Salud.
 
 ### Criterio de perfección pendiente
 
@@ -96,7 +98,7 @@ Para considerar cerrada Diputación deben cumplirse simultáneamente:
 
 ### Próximo bloque
 
-Temas 23–31, manteniendo el tema 22 bloqueado hasta disponer de sus fuentes oficiales internas.
+Tema 24, igualdad entre mujeres y hombres, manteniendo el tema 22 bloqueado hasta disponer de sus fuentes oficiales internas.
 
 ## La Puebla
 
