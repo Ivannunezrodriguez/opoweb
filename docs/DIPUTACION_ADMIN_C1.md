@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.58
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.59
 
 ## Estado del proceso
 
@@ -11,84 +11,84 @@
 
 ## Avance aproximado
 
-- Diputación en conjunto: **79 %**.
+- Diputación en conjunto: **81 %**.
 - Primera vuelta: 39 de 40 temas.
-- Segunda vuelta: 19 de 39 temas auditables, aproximadamente **49 %**.
+- Segunda vuelta: 20 de 39 temas auditables, aproximadamente **51 %**.
 - Tema 22 pendiente de fuentes internas oficiales.
 
 ## Estado real del temario
 
-- Temas 1–19 con segunda vuelta mínima de banco.
-- 877 preguntas manuales acumuladas.
+- Temas 1–20 con segunda vuelta mínima de banco.
+- 907 preguntas manuales acumuladas.
 - Tres simulacros 50 + 5.
 - 20 supuestos y 40 variantes.
 - El conjunto todavía no se considera perfecto ni cerrado.
 
-Un tema solo se considerará cerrado cuando reúna desarrollo actualizado, 30–40 preguntas reales, justificaciones verificadas, ausencia de duplicados y correcta integración en simulacros y supuestos.
-
-## Segunda vuelta v0.58
+## Segunda vuelta v0.59
 
 ### Tema reforzado
 
-19. Ley 4/2011 de Empleo Público de Castilla-La Mancha: régimen disciplinario.
+20. Contrato de trabajo: concepto, fuentes, derechos y deberes, capacidad, forma, validez y periodo de prueba.
 
 ### Preguntas añadidas
 
-- 18 preguntas nuevas en v0.58.
-- 292 preguntas acumuladas en la segunda vuelta.
-- 877 preguntas manuales acumuladas desde el inicio del desarrollo de Diputación.
-- Temas 1–19 con al menos 30 preguntas reales.
+- 30 preguntas nuevas en v0.59.
+- 322 preguntas acumuladas en la segunda vuelta.
+- 907 preguntas manuales acumuladas.
+- Temas 1–20 con al menos 30 preguntas reales.
 - Cuatro opciones distintas.
 - Respuesta correcta rotada.
 - Dificultad baja, media y alta.
-- Justificación mediante artículos 127 a 145 de la Ley 4/2011.
+- Justificación mediante artículos 1, 3 a 9 y 14 del Estatuto de los Trabajadores.
 
-## Contenido reforzado del tema 19
+## Contenido reforzado del tema 20
 
-### Principios
+### Concepto y fuentes
 
-- legalidad y tipicidad;
-- prohibición de analogía;
-- irretroactividad y aplicación retroactiva favorable;
-- proporcionalidad;
-- culpabilidad;
-- presunción de inocencia;
-- prohibición de doble sanción con identidad de sujeto, hecho y fundamento.
+- prestación voluntaria;
+- retribución;
+- ajenidad;
+- dependencia;
+- empresario;
+- fuentes legales, reglamentarias, convencionales, contractuales y consuetudinarias;
+- principio de norma más favorable y mínimos de derecho necesario.
 
-### Faltas y sanciones
+### Derechos, deberes y capacidad
 
-- faltas muy graves, graves y leves;
-- separación del servicio;
-- suspensión firme;
-- traslado forzoso;
-- demérito;
-- suspensión de disponibilidad en bolsas;
-- apercibimiento por escrito;
-- límites temporales según gravedad.
+- ocupación efectiva;
+- formación y promoción;
+- igualdad y no discriminación;
+- integridad, intimidad y dignidad;
+- percepción puntual del salario;
+- buena fe, diligencia, prevención y órdenes regulares;
+- edad mínima de dieciséis años;
+- límites al trabajo de menores;
+- capacidad de mayores de dieciséis y menores de dieciocho.
 
-### Responsabilidad y plazos
+### Forma y validez
 
-- autoría, inducción, cooperación y encubrimiento;
-- extinción por cumplimiento, fallecimiento o prescripción;
-- faltas: tres años, dos años y seis meses;
-- sanciones: tres años, dos años y un año;
-- cancelación ordinaria: uno, dos o tres años;
-- separación del servicio no cancelable.
+- contrato escrito o verbal como regla general;
+- forma escrita obligatoria en los supuestos legales;
+- presunción de contrato indefinido y a jornada completa si se omite la forma exigida, salvo prueba en contrario;
+- comunicación a la oficina de empleo en diez días;
+- copia básica en plazo no superior a diez días;
+- nulidad parcial y conservación del resto;
+- remuneración del trabajo prestado en caso de nulidad total.
 
-### Procedimiento
+### Periodo de prueba
 
-- prohibición de sancionar sin procedimiento;
-- procedimiento sumario para faltas leves con audiencia;
-- separación entre instrucción y sanción;
-- ejecutividad al alcanzar firmeza administrativa;
-- duración máxima de doce meses para faltas muy graves o graves;
-- suspensión provisional de hasta seis meses como regla;
-- suspensión y comunicación cuando existan indicios penales.
+- pacto escrito;
+- límites del convenio colectivo;
+- seis meses para técnicos titulados y dos meses para los demás en defecto de convenio;
+- tres meses para no titulados en empresas de menos de veinticinco trabajadores;
+- un mes en contratos temporales de hasta seis meses, salvo convenio;
+- nulidad si ya se realizaron las mismas funciones;
+- cómputo del tiempo a efectos de antigüedad.
 
 ## Banco y simulacros
 
-- 877 preguntas manuales acumuladas.
-- Diecinueve temas con segunda vuelta mínima completada.
+- 907 preguntas manuales acumuladas.
+- Veinte temas con segunda vuelta mínima completada.
 - Tres simulacros de 50 + 5 regenerados.
 - Tema 22 excluido.
 - Solo se incorporan preguntas reales con cuatro alternativas y justificación.
@@ -111,19 +111,19 @@ Permanece pendiente de:
 
 No se incorporarán datos internos no verificados.
 
-## Fuentes principales de v0.58
+## Fuentes principales de v0.59
 
-- Ley 4/2011, de 10 de marzo, del Empleo Público de Castilla-La Mancha, artículos 127 a 145.
-- Texto Refundido del Estatuto Básico del Empleado Público.
+- Real Decreto Legislativo 2/2015, texto refundido de la Ley del Estatuto de los Trabajadores.
+- Artículos 1, 3 a 9 y 14.
 - Bases oficiales de la convocatoria de Diputación.
 
 Revisión realizada el 10 de julio de 2026.
 
 ## Siguiente bloque
 
-Temas 20–21:
+Tema 21:
 
-1. contrato de trabajo;
-2. modalidades contractuales y Seguridad Social.
+1. modalidades contractuales;
+2. Seguridad Social.
 
-Objetivo: 30–40 preguntas reales por cada tema.
+Objetivo: 30–40 preguntas reales.
