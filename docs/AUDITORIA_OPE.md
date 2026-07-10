@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.54
+# Auditoría global de OpoWeb · v0.55
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -43,32 +43,33 @@ No se añadirán nuevas convocatorias hasta cerrar estas cuatro.
 
 La primera vuelta no permite considerar perfecto todo el temario. Es una base profunda, pero faltan densidad de test, revisión transversal y cierre de fuentes internas.
 
-### Segunda vuelta v0.54
+### Segunda vuelta v0.55
 
-Temas 1–9 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–16 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
 - 60 preguntas nuevas en v0.53;
 - 75 preguntas nuevas en v0.54;
-- 135 preguntas nuevas de segunda vuelta;
-- 720 preguntas manuales acumuladas;
-- nueve temas consecutivos a 30+ preguntas reales;
+- 105 preguntas nuevas en v0.55;
+- 240 preguntas nuevas de segunda vuelta;
+- 825 preguntas manuales acumuladas;
+- dieciséis temas consecutivos a 30+ preguntas reales;
 - justificación mediante artículo o regla oficial;
 - cuatro alternativas distintas;
 - dificultad graduada;
 - control de duplicados;
 - simulacros regenerados.
 
-Ámbitos reforzados en v0.54:
+Ámbitos reforzados en v0.55:
 
-- interesados, representación, firma y asistencia;
-- colaboración, comparecencia, resolución, silencio y plazos;
-- garantías sancionadoras y medidas provisionales;
-- prueba, informes, audiencia, información pública y caducidad;
-- producción, eficacia, notificación e invalidez del acto;
-- revisión de oficio, lesividad, revocación y recursos;
-- sede, registro, archivo, documento electrónico y CSV.
+- responsabilidad patrimonial y acción de regreso;
+- expediente, registro, copias y notificaciones locales;
+- entidades, potestades, competencias y coordinación local;
+- municipio, padrón, órganos y presupuesto;
+- provincia, Diputación y elección provincial;
+- comarcas, áreas metropolitanas y mancomunidades;
+- contratación, lotes, valor estimado, contratos menores y órganos locales.
 
 ### Criterio de perfección pendiente
 
@@ -86,15 +87,13 @@ Para considerar cerrada Diputación deben cumplirse simultáneamente:
 
 ### Próximo bloque
 
-Temas 10–16:
+Temas 17–21:
 
-- responsabilidad patrimonial;
-- procedimiento administrativo local;
-- régimen local;
-- municipio y presupuesto;
-- provincia, Diputación y régimen electoral;
-- otras entidades locales;
-- contratación pública local.
+- personal y acceso al empleo público de Castilla-La Mancha;
+- derechos, deberes y situaciones administrativas;
+- régimen disciplinario;
+- contrato de trabajo;
+- modalidades contractuales y Seguridad Social.
 
 ## La Puebla
 
