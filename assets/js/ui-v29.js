@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = 'v0.29.0';
+  const VERSION = 'v0.30.0';
 
   function patchVisibleVersion() {
     const card = document.getElementById('oposicionCard');
