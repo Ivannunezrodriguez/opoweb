@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.44
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.45
 
 ## Estado del proceso
 
@@ -11,7 +11,7 @@
 
 ## Cobertura profunda alcanzada
 
-Se han revisado en profundidad **10 de los 40 temas oficiales**:
+Se han revisado en profundidad **15 de los 40 temas oficiales**.
 
 ### Bloque de procedimiento administrativo · v0.43
 
@@ -29,139 +29,96 @@ Se han revisado en profundidad **10 de los 40 temas oficiales**:
 15. Otras entidades locales.
 16. Contratos administrativos en la esfera local.
 
-Cada tema incluye:
+### Bloque de empleo público, trabajo y Seguridad Social · v0.45
 
-1. resumen orientado al aprobado;
-2. rigor normativo;
-3. desarrollo por artículos y bloques legales;
-4. puntos calientes de test;
-5. tres preguntas de retención activa;
-6. cuadro para test y supuesto práctico.
+17. Personal al servicio de las Administraciones Públicas de Castilla-La Mancha. Acceso y pérdida de la relación de servicio.
+18. Derechos, deberes y situaciones administrativas.
+19. Régimen disciplinario.
+20. Contrato de trabajo: contenido, régimen jurídico, modificación, suspensión y extinción.
+21. Modalidades contractuales y Régimen General de la Seguridad Social.
 
-## Temas 5 a 9
+Cada tema contiene resumen orientado al aprobado, rigor normativo, desarrollo legal, puntos calientes, tres preguntas de retención y cuadro para test y supuesto práctico.
 
-### Tema 5
+## Temas 17 a 21
 
-- capacidad de obrar;
-- concepto de interesado;
-- representación y apoderamientos;
-- identificación y firma;
-- asistencia electrónica;
-- obligados electrónicos;
-- registros y documentos;
-- obligación de resolver;
-- silencio;
-- cómputo, ampliación y urgencia.
+### Tema 17 · Personal, acceso y pérdida de la relación
 
-### Tema 6
+- funcionario de carrera, interino, laboral y eventual;
+- funciones reservadas al personal funcionario;
+- clasificación y subgrupo C1;
+- igualdad, mérito, capacidad, publicidad y transparencia;
+- requisitos generales de acceso;
+- oposición, concurso-oposición y concurso excepcional;
+- adquisición sucesiva de la condición de funcionario de carrera;
+- renuncia, nacionalidad, jubilación, separación e inhabilitación.
 
-- derechos del interesado;
-- iniciación de oficio y a solicitud;
-- medidas provisionales;
-- denuncia;
-- solicitud y subsanación;
-- declaración responsable;
-- ordenación e instrucción;
-- prueba, audiencia e información pública;
-- terminación y caducidad;
-- tramitación simplificada;
-- ejecución forzosa.
+### Tema 18 · Derechos, deberes y situaciones
 
-### Tema 7
+- derechos individuales y colectivos;
+- alcance real de la inamovilidad;
+- código de conducta, objetividad, imparcialidad y confidencialidad;
+- vacaciones mínimas de veintidós días laborables;
+- residencia y formación;
+- servicio activo, servicios especiales y servicio en otras Administraciones;
+- excedencias y suspensión;
+- reingreso con y sin reserva de puesto.
 
-- producción, contenido y motivación;
-- forma;
-- ejecutividad, validez y eficacia;
-- notificación y publicación;
-- nulidad y anulabilidad;
-- conversión, conservación y convalidación.
+### Tema 19 · Régimen disciplinario
 
-### Tema 8
+- legalidad, tipicidad y prohibición de analogía;
+- irretroactividad desfavorable y retroactividad favorable;
+- culpabilidad, proporcionalidad, presunción de inocencia y non bis in idem;
+- faltas muy graves, graves y leves;
+- autoría, inducción, cooperación y encubrimiento;
+- prescripción de faltas: tres años, dos años y seis meses;
+- prescripción de sanciones: tres años, dos años y un año;
+- procedimiento, defensa y plazo máximo de doce meses para graves y muy graves.
 
-- revisión de oficio;
-- lesividad;
-- revocación y rectificación;
-- reglas comunes de los recursos;
-- suspensión;
-- alzada;
-- reposición;
-- extraordinario de revisión.
+### Tema 20 · Contrato de trabajo
 
-### Tema 9
+- dependencia, ajenidad, voluntariedad y remuneración;
+- fuentes y contenido esencial;
+- forma escrita y presunciones por incumplimiento;
+- período de prueba;
+- derechos y deberes de las partes;
+- movilidad funcional y geográfica;
+- modificación sustancial;
+- suspensión y conservación del vínculo;
+- causas generales de extinción.
 
-- identificación y firma electrónica;
-- registro y expediente electrónico;
-- notificaciones electrónicas;
-- sede y portal;
-- sello electrónico;
-- actuación automatizada;
-- firma del personal;
-- interoperabilidad y archivo electrónico.
+### Tema 21 · Modalidades y Seguridad Social
 
-## Temas 12 a 16
+- presunción de contratación indefinida;
+- temporalidad por producción o sustitución;
+- contratos formativos;
+- tiempo parcial;
+- fijo-discontinuo como contrato indefinido;
+- afiliación obligatoria, única y vitalicia;
+- altas, bajas y variaciones;
+- obligación empresarial y actuación del trabajador o de oficio;
+- nacimiento, mantenimiento y extinción efectiva de la cotización;
+- autoliquidación, liquidación directa y recaudación ejecutiva.
 
-### Tema 12 · Régimen local
+Las cuantías, bases y tipos de cotización variables no se fijan como contenido permanente: deberán actualizarse con la normativa vigente cuando se conozca la fecha del examen.
 
-- autonomía local y principios constitucionales;
-- entidades territoriales y otras entidades locales;
-- personalidad y capacidad;
-- potestades locales;
-- competencias propias, delegadas y distintas;
-- información, colaboración, coordinación y control.
+## Tema 22 · Estado controlado
 
-### Tema 13 · Municipio y presupuesto
+El tema 22 no se marca como completo. Requiere:
 
-- concepto, personalidad y elementos;
-- término municipal;
-- población y padrón;
-- Alcalde, Tenientes de Alcalde, Pleno y Junta de Gobierno;
-- competencias municipales y servicios mínimos por tramos de población;
-- concepto y contenido del presupuesto local;
-- elaboración, exposición pública, aprobación y entrada en vigor.
+- Acuerdo Regulador vigente de las condiciones de trabajo de la Diputación de Toledo y organismos autónomos;
+- Estatutos oficiales vigentes del OAPGT;
+- organización, funcionamiento y competencias actuales del organismo.
 
-### Tema 14 · Provincia y Diputación
-
-- concepto y fines de la provincia;
-- Presidente, Vicepresidentes, Junta de Gobierno y Pleno;
-- distribución funcional entre órganos;
-- asistencia y cooperación con municipios;
-- plan provincial de cooperación;
-- estructura básica de la Diputación Provincial de Toledo;
-- elección indirecta de Diputados provinciales;
-- elección del Presidente provincial.
-
-La composición personal y las delegaciones concretas no se memorizan como contenido permanente porque pueden cambiar durante el mandato. Deben verificarse en la normativa interna y web institucional vigentes.
-
-### Tema 15 · Otras entidades locales
-
-- comarcas;
-- áreas metropolitanas;
-- mancomunidades;
-- estatutos y órganos representativos;
-- entes de ámbito territorial inferior al municipio;
-- diferencias de creación, finalidad y personalidad jurídica.
-
-### Tema 16 · Contratación local
-
-- clases de contratos;
-- necesidad, objeto y lotes;
-- presupuesto base, valor estimado y precio;
-- capacidad, solvencia y procedimientos;
-- contrato menor;
-- garantías provisional y definitiva;
-- órgano de contratación local;
-- ejecución, modificación y suspensión;
-- invalidez, cumplimiento y resolución.
+Hasta disponer de esos documentos no se incorporarán artículos, órganos internos, permisos, jornadas o condiciones específicas supuestas.
 
 ## Banco de preguntas
 
-- **150 preguntas manuales nuevas acumuladas**: 75 en v0.43 y 75 en v0.44.
+- **225 preguntas manuales nuevas acumuladas**: 75 en v0.43, 75 en v0.44 y 75 en v0.45.
 - 15 preguntas manuales por cada tema revisado.
-- Cuatro opciones diferentes.
-- Respuesta correcta rotada entre A, B, C y D.
+- Cuatro opciones diferentes y respuesta correcta rotada.
 - Dificultad baja, media y alta.
 - Justificación con artículo o regla normativa.
-- Eliminación de preguntas de método de estudio en los diez temas.
+- Eliminación de preguntas de método en los quince temas.
 - Fusión con preguntas reales reutilizadas, con límite de 40 por tema.
 
 ## Simulacros
@@ -172,10 +129,10 @@ Los tres simulacros de Diputación se regeneran con:
 - 5 reservas;
 - 60 minutos;
 - solo preguntas clasificadas como reales;
-- ausencia de duplicados dentro del simulacro;
+- ausencia de duplicados internos;
 - indicación del número de temas representados.
 
-Los simulacros ya se alimentan de los diez temas desarrollados. Mientras no estén cerrados los 40 temas, la representación seguirá siendo parcial; no se completa artificialmente con preguntas de plantilla.
+Se nutren de los quince temas desarrollados. La cobertura seguirá siendo parcial mientras no se cierren los 40 temas y no se completará artificialmente con preguntas de plantilla.
 
 ## Fuentes normativas revisadas
 
@@ -186,17 +143,17 @@ Los simulacros ya se alimentan de los diez temas desarrollados. Mientras no est�
 - Ley 39/2015, del Procedimiento Administrativo Común.
 - Ley 40/2015, de Régimen Jurídico del Sector Público.
 - Ley 9/2017, de Contratos del Sector Público.
-- Textos consolidados oficiales revisados el 10 de julio de 2026.
+- Ley 4/2011, de Empleo Público de Castilla-La Mancha.
+- Texto refundido del Estatuto Básico del Empleado Público.
+- Texto refundido de la Ley del Estatuto de los Trabajadores.
+- Texto refundido de la Ley General de la Seguridad Social.
+- Textos oficiales consolidados consultados el 10 de julio de 2026.
 
 ## Próximo bloque
 
-Temas 17 a 22:
-
-- personal al servicio de Castilla-La Mancha y acceso al empleo público;
-- derechos, deberes y situaciones administrativas;
-- régimen disciplinario;
-- contrato de trabajo;
-- Seguridad Social;
-- Acuerdo Regulador de la Diputación y OAPGT.
-
-Los temas 17 a 21 se desarrollarán con normativa estatal y autonómica vigente. El tema 22 solo podrá cerrarse completamente con el Acuerdo Regulador y los Estatutos vigentes del OAPGT.
+1. Tema 22, solo si se obtienen las dos fuentes internas oficiales.
+2. Tema 23: prevención de riesgos laborales.
+3. Tema 24: igualdad estatal y autonómica.
+4. Tema 25: obligación tributaria y gestión.
+5. Tema 26: recaudación local.
+6. Tema 27: presupuesto general de las entidades locales.
