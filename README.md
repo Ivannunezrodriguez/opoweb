@@ -11,95 +11,86 @@ No se incorporarán nuevas OPE hasta cerrar estas cuatro.
 
 ## Versión actual
 
-- **OpoWeb v0.48.0**
-- Caché PWA: `opoweb-v55`
+- **OpoWeb v0.49.0**
+- Caché PWA: `opoweb-v56`
 - Última revisión estructural: 10 de julio de 2026
 
 ## Diputación de Toledo · avance
 
-Se han desarrollado en profundidad **29 de los 40 temas oficiales**:
+Se han desarrollado en profundidad **33 de los 40 temas oficiales**:
 
 - v0.43: temas 5–9, procedimiento administrativo;
 - v0.44: temas 12–16, régimen local y contratación;
 - v0.45: temas 17–21, empleo público, trabajo y Seguridad Social;
 - v0.46: temas 23–27, prevención, igualdad, tributación, recaudación y presupuesto;
 - v0.47: temas 28–31, protección de datos, transparencia, tributos locales y firma electrónica;
-- v0.48: temas 32–36, Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc.
+- v0.48: temas 32–36, Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc;
+- v0.49: temas 37–40, Base, Impress, componentes y periféricos.
 
 El tema 22 permanece pendiente de Acuerdo Regulador y Estatutos oficiales vigentes del OAPGT.
 
 ### Resultado acumulado
 
-- **435 preguntas manuales nuevas**;
+- **495 preguntas manuales nuevas**;
 - 15 preguntas por cada tema revisado;
 - dificultad baja, media y alta;
 - respuestas correctas rotadas;
-- justificación normativa o funcional;
-- eliminación de preguntas de plantilla en los 29 temas;
+- justificación normativa, funcional o técnica;
+- eliminación de preguntas de plantilla en los 33 temas;
 - simulacros regenerados únicamente con preguntas reales.
 
-## Bloque v0.48
+## Bloque v0.49
 
-### Tema 32 · Windows 11 Pro I
+### Tema 37 · LibreOffice Base
 
-- Explorador de archivos;
-- rutas y vistas;
-- creación de archivos y carpetas;
-- copiar, mover, renombrar y borrar;
-- extensiones;
-- Papelera;
-- unidades locales;
-- rutas UNC y unidades de red;
-- atajos principales.
+- documento ODB;
+- bases embebidas y conexiones externas;
+- tablas, registros y campos;
+- tipos de datos;
+- claves primarias y ajenas;
+- relaciones uno a uno, uno a muchos y muchos a muchos;
+- integridad referencial;
+- consultas de selección, parámetros y acción;
+- formularios y subformularios;
+- informes, agrupaciones y totales.
 
-### Tema 33 · Windows 11 Pro II
+### Tema 38 · LibreOffice Impress
 
-- Microsoft Edge;
-- pestañas, favoritos, historial y descargas;
-- navegación InPrivate;
-- seguridad básica en navegación;
-- GroupWise 24;
-- bandejas, carpetas y archivo;
-- Para, CC y CCO;
-- responder, responder a todos y reenviar;
-- libreta de direcciones;
-- calendario, reuniones y tareas.
+- formato ODP;
+- diapositivas y diseños;
+- vistas Normal, Esquema, Notas, Clasificador y Folleto;
+- diapositiva maestra;
+- marcadores de posición;
+- objetos, alineación, agrupación y orden;
+- transiciones y animaciones;
+- inicio de presentación con F5 y Mayús + F5;
+- Consola del presentador;
+- impresión y exportación.
 
-### Tema 34 · Windows 11 Pro III
+### Tema 39 · Ordenador personal y componentes
 
-- impresoras, controladores y colas;
-- pausado, reanudación y cancelación;
-- copias, intercalado, orientación, bandeja y dúplex;
-- impresión a PDF;
-- escáner y multifunción;
-- cristal y alimentador automático;
-- resolución;
-- formatos de salida;
-- OCR y comprobación final.
+- placa base;
+- CPU, núcleos, hilos, frecuencia y caché;
+- RAM;
+- SSD, HDD, SATA y NVMe;
+- GPU integrada y dedicada;
+- adaptadores de red y sonido;
+- fuente de alimentación;
+- refrigeración;
+- UEFI;
+- USB, HDMI, DisplayPort, Ethernet y PCI Express.
 
-### Tema 35 · LibreOffice Writer
+### Tema 40 · Periféricos
 
-- ODT y compatibilidad de formatos;
-- guardar, guardar como y exportar;
-- estilos frente a formato directo;
-- páginas, párrafos, listas y saltos;
-- tablas e imágenes;
-- anclaje y ajuste;
-- campos, índices y tabla de contenido;
-- control de cambios;
-- combinación de correspondencia.
-
-### Tema 36 · LibreOffice Calc
-
-- libros, hojas, celdas y rangos;
-- datos, fechas y fórmulas;
-- referencias relativas, absolutas y mixtas;
-- funciones básicas y lógicas;
-- errores de fórmula;
-- ordenación, filtros y validación;
-- formato condicional;
-- gráficos;
-- impresión de hojas extensas.
+- periféricos de entrada, salida, entrada/salida, almacenamiento y comunicaciones;
+- impresoras láser y de inyección;
+- escáneres y multifunción;
+- discos externos HDD y SSD;
+- memorias USB;
+- extracción segura;
+- CD-ROM, CD-R, CD-RW y equivalentes DVD;
+- concentradores USB;
+- compatibilidad, controladores, alimentación, cifrado y custodia.
 
 ## Formatos oficiales de simulacro
 
@@ -114,11 +105,11 @@ El tema 22 permanece pendiente de Acuerdo Regulador y Estatutos oficiales vigent
 
 ### Diputación
 
-- temas 37–40: LibreOffice Base, LibreOffice Impress, componentes y periféricos;
-- temas 1–4, 10 y 11;
+- temas 1–4: Constitución, Corona, Cortes, Gobierno, Poder Judicial y organización territorial;
+- temas 10–11: responsabilidad patrimonial, potestad sancionadora y procedimiento local;
 - tema 22 cuando se localicen fuentes internas;
-- 20 supuestos completos;
-- elevar todos los temas a 30–40 preguntas reales.
+- elevar todos los temas a 30–40 preguntas reales;
+- desarrollar 20 supuestos completos.
 
 ### Carranque
 
@@ -145,19 +136,20 @@ El botón **«Volver al listado»** permanece visible mediante `position: sticky
 
 ## Historial reciente
 
+### v0.49.0 · 2026-07-10
+
+- Desarrollados los temas 37–40 de Diputación.
+- Añadidas 60 preguntas manuales.
+- Alcanzados 33 temas profundos y 495 preguntas manuales acumuladas.
+- Completado el primer desarrollo del bloque 32–40.
+- Actualizada la caché a `opoweb-v56`.
+
 ### v0.48.0 · 2026-07-10
 
-- Desarrollados los temas 32–36 de Diputación.
+- Desarrollados los temas 32–36.
 - Añadidas 75 preguntas manuales.
-- Alcanzados 29 temas profundos y 435 preguntas manuales acumuladas.
-- Actualizada la caché a `opoweb-v55`.
 
 ### v0.47.0 · 2026-07-10
 
 - Desarrollados los temas 28–31.
 - Añadidas 60 preguntas manuales.
-
-### v0.46.0 · 2026-07-10
-
-- Desarrollados los temas 23–27.
-- Añadidas 75 preguntas manuales.
