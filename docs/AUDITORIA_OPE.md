@@ -1,8 +1,8 @@
-# Auditoría global de OpoWeb · v0.42
+# Auditoría global de OpoWeb · v0.44
 
 Fecha de revisión: 10 de julio de 2026.
 
-## Alcance
+## Alcance cerrado
 
 Convocatorias activas:
 
@@ -11,18 +11,18 @@ Convocatorias activas:
 3. Diputación Provincial de Toledo · Administrativo C1.
 4. Universidad Carlos III de Madrid · Auxiliar Administrativo C2.
 
-Las Ventas con Peña Aguilera queda eliminada. No se incorporarán nuevas OPE hasta cerrar estas cuatro.
+Las Ventas con Peña Aguilera permanece eliminada. No se incorporarán nuevas convocatorias hasta cerrar estas cuatro.
 
-## Cambios estructurales ya ejecutados
+## Mejoras estructurales ya aplicadas
 
-- Formato oficial de simulacro por convocatoria.
-- Cinco preguntas de reserva diferenciadas.
-- Nota calculada solo con preguntas puntuables.
-- Tiempo oficial visible.
-- Auditoría de preguntas reales frente a preguntas de plantilla.
-- Reutilización de bancos únicamente cuando coinciden norma y alcance.
-- Fecha y fuente de verificación del formato.
-- Botón «Volver al listado» siempre visible al desplazarse.
+- formato oficial de simulacro por convocatoria;
+- preguntas de reserva separadas;
+- nota calculada solo sobre preguntas puntuables;
+- tiempo y penalización oficiales;
+- auditoría de preguntas reales frente a preguntas de plantilla;
+- reutilización únicamente cuando coinciden norma y alcance;
+- fuente y fecha de verificación del formato;
+- botón «Volver al listado» visible durante el desplazamiento.
 
 ## Formatos oficiales incorporados
 
@@ -37,132 +37,120 @@ Las Ventas con Peña Aguilera queda eliminada. No se incorporarán nuevas OPE ha
 
 ### Verificado
 
-- Cuatro plazas y constitución de bolsa.
-- Concurso-oposición.
-- Primer ejercicio: 50 preguntas y 5 de reserva, 60 minutos.
-- Acierto +0,20; error −0,05; blanco 0.
-- Segundo ejercicio práctico.
-- Programa de 19 temas.
-- Inscripción registrada el 28 de mayo de 2026.
-
-### Mejoras realizadas en v0.42
-
-- Tres simulacros de 50 + 5.
-- Separación visual de reservas.
-- Sustitución automática de bancos genéricos en temas comunes cuando existe coincidencia normativa segura.
-- Auditoría visible por tema.
+- cuatro plazas y bolsa;
+- concurso-oposición;
+- test de 50 preguntas y 5 reservas en 60 minutos;
+- corrección +0,20, −0,05 y 0 en blanco;
+- segundo ejercicio práctico;
+- 19 temas;
+- inscripción registrada el 28 de mayo de 2026.
 
 ### Pendiente
 
-- Completar 19 temas de forma autosuficiente.
-- Sustituir todas las preguntas de plantilla restantes.
-- Alcanzar 30–40 preguntas reales por tema.
-- Ampliar a 20–25 supuestos con solución completa.
-- Reforzar tributación, recaudación, régimen local, administración electrónica e informática.
+- completar 19 temas autosuficientes;
+- sustituir todas las preguntas de plantilla;
+- alcanzar 30–40 preguntas reales por tema;
+- ampliar a 20–25 supuestos con solución completa;
+- reforzar tributación, recaudación, régimen local, administración electrónica e informática.
 
 ## 2. Carranque
 
 ### Verificado
 
-- Una plaza de Auxiliar Administrativo C2.
-- Concurso-oposición.
-- Primer ejercicio: 80 preguntas y 5 de reserva, 90 minutos.
-- Acierto +0,25; error −0,08; blanco 0.
-- Segundo ejercicio práctico sobre temas 3 a 20.
-- Programa de 20 temas.
-- Estado personal: inscrito.
-
-### Mejoras realizadas en v0.42
-
-- Sustituidos los simulacros incorrectos de 50 preguntas por simulacros de 80 + 5.
-- Tiempo oficial de 90 minutos visible.
-- Reutilización de bancos comunes de Constitución, Ley 39/2015, Ley 40/2015, administración electrónica y contratación cuando el alcance coincide.
-- Auditoría de preguntas reales y de plantilla.
+- una plaza y bolsa;
+- concurso-oposición;
+- 80 preguntas y 5 reservas en 90 minutos;
+- corrección +0,25, −0,08 y 0 en blanco;
+- práctico sobre temas 3 a 20;
+- 20 temas;
+- usuario inscrito.
 
 ### Pendiente
 
-- Desarrollar los 20 temas completos.
-- Alcanzar 30–40 preguntas reales por tema.
-- Rehacer 25 supuestos exclusivamente sobre temas 3 a 20.
-- Añadir soluciones con norma, órgano, trámite, plazo y consecuencia.
-- Verificar la resolución de baremación publicada en sede antes de atribuirla definitivamente a este proceso.
+- desarrollar íntegramente los 20 temas;
+- alcanzar 30–40 preguntas reales por tema;
+- crear 25 supuestos exclusivamente sobre temas 3 a 20;
+- añadir soluciones con norma, órgano, trámite, plazo y consecuencia;
+- verificar cualquier nueva resolución del proceso directamente en la sede.
 
 ## 3. Diputación Provincial de Toledo · Administrativo C1
 
 ### Verificado
 
-- Dos plazas C1, escala de Administración General.
-- Oposición libre, sin concurso.
-- Primer ejercicio: 50 preguntas y 5 de reserva, 60 minutos.
-- Segundo ejercicio práctico eliminatorio.
-- Programa de 40 temas.
-- Solicitudes del 6 al 31 de julio de 2026.
-- Tasa general C1: 26 euros.
-- La falta de justificación del abono determina exclusión no subsanable.
+- dos plazas C1;
+- oposición libre sin fase de concurso;
+- 50 preguntas y 5 reservas en 60 minutos;
+- segundo ejercicio práctico eliminatorio;
+- programa de 40 temas;
+- solicitudes del 6 al 31 de julio de 2026;
+- tasa general C1 de 26 euros;
+- la falta de justificación del pago determina exclusión no subsanable.
 
-### Mejoras realizadas en v0.42
+### Desarrollo alcanzado en v0.44
 
-- Tres simulacros de 50 + 5.
-- Auditoría real por tema.
-- Reutilización de preguntas comunes cuando la norma y el alcance coinciden.
-- Estado del proceso y enlaces oficiales actualizados.
+Se han cerrado en profundidad **10 de 40 temas**:
+
+- temas 5 a 9: Ley 39/2015, acto administrativo, recursos y administración electrónica;
+- temas 12 a 16: régimen local, municipio, provincia, Diputación, otras entidades locales y contratación.
+
+Resultado acumulado:
+
+- 150 preguntas manuales nuevas;
+- 15 preguntas por tema revisado;
+- eliminación de preguntas de plantilla en esos diez temas;
+- desarrollo por artículos y reglas;
+- tres simulacros de 50 + 5 formados solo con preguntas clasificadas como reales;
+- cobertura temática parcial mostrada expresamente.
 
 ### Pendiente prioritario
 
-- Presentar solicitud y conservar registro y justificante.
-- Desarrollar 40 temas autosuficientes.
-- Crear módulos específicos de:
-  - Diputación Provincial de Toledo;
-  - Acuerdo Regulador;
-  - OAPGT y Estatutos;
-  - presupuesto y bases de ejecución;
-  - tributación y recaudación;
-  - Windows 11 Pro;
-  - Microsoft Edge;
-  - Micro Focus GroupWise 24;
-  - LibreOffice 24 Writer, Calc, Base e Impress.
-- Alcanzar 30–40 preguntas reales por tema.
-- Completar las soluciones de los 20 supuestos.
+- presentar solicitud y conservar registro y justificante;
+- temas 17 a 22: empleo público, régimen disciplinario, trabajo, Seguridad Social, Acuerdo Regulador y OAPGT;
+- temas 25 a 31: tributación, recaudación, presupuesto, protección de datos, transparencia e impuestos locales;
+- temas 32 a 40: firma electrónica, Windows 11, Edge, GroupWise, LibreOffice e informática básica;
+- completar los temas constitucionales, organización del Estado, responsabilidad y procedimiento local;
+- alcanzar 30–40 preguntas reales en los 40 temas;
+- redactar soluciones completas para 20 supuestos.
 
 ## 4. UC3M
 
 ### Verificado
 
-- 34 plazas, dos reservadas a discapacidad.
-- Solicitudes del 9 de julio al 5 de agosto de 2026.
-- Test de 70 preguntas y 5 de reserva, 60 minutos.
-- Penalización de un tercio por error.
-- Fecha previsible: 21 de noviembre de 2026 a las 10:00, pendiente de confirmación definitiva.
-- Concurso-oposición.
+- 34 plazas, dos reservadas a discapacidad;
+- solicitudes del 9 de julio al 5 de agosto de 2026;
+- 70 preguntas y 5 reservas en 60 minutos;
+- penalización de un tercio por error;
+- fecha previsible 21 de noviembre de 2026 a las 10:00, pendiente de confirmación;
+- concurso-oposición.
 
 ### Estado actual
 
-- Veinte temas con banco real.
-- Todos los temas con al menos 20 preguntas.
-- Nueve temas con 30 o más.
-- Tres simulacros de 70 + 5.
-- Auditoría de validez, duplicados, respuesta y dificultad.
+- 20 temas con banco real;
+- todos con al menos 20 preguntas;
+- nueve con 30 o más;
+- tres simulacros de 70 + 5;
+- auditoría de validez, duplicados, respuesta y dificultad.
 
 ### Pendiente
 
-- Ley 10/2019 consolidada.
-- Estatutos UC3M consolidados.
-- Matrícula, permanencia y evaluación.
-- Admisión anual.
-- Presupuesto y bases de ejecución.
-- Delegaciones y circuito interno de contratación.
-- Elevar los once temas restantes a 30–40 preguntas.
+- Ley 10/2019 consolidada;
+- Estatutos UC3M;
+- matrícula, permanencia y evaluación;
+- admisión anual;
+- presupuesto y bases de ejecución;
+- delegaciones y contratación interna;
+- elevar los once temas restantes a 30–40 preguntas.
 
 ## Arquitectura pendiente
 
-El contenido sigue cargándose mediante capas históricas v30–v42. Antes del cierre definitivo se realizará una consolidación para:
+El contenido continúa cargándose por capas históricas. Antes del cierre definitivo se realizará una consolidación para:
 
 1. mantener una única fuente canónica;
 2. separar proceso, temario, preguntas, supuestos y simulacros;
 3. eliminar envoltorios antiguos;
 4. conservar compatibilidad con el progreso guardado;
 5. añadir pruebas de regresión;
-6. impedir reutilización fuera de alcance;
+6. impedir reutilización fuera del alcance oficial;
 7. auditar títulos literales y fechas de vigencia.
 
-La secuencia completa está documentada en `docs/HOJA_RUTA_PERFECCION.md`.
+La planificación completa figura en `docs/HOJA_RUTA_PERFECCION.md`.
