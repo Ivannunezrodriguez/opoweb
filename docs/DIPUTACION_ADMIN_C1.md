@@ -1,4 +1,4 @@
-# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.49
+# Diputación Provincial de Toledo · Administrativo C1 · OpoWeb v0.50
 
 ## Estado del proceso
 
@@ -11,104 +11,125 @@
 
 ## Cobertura profunda
 
-Se han revisado **33 de 40 temas**:
+Se han revisado **39 de 40 temas**.
 
-- 5–9: procedimiento administrativo;
-- 12–16: régimen local y contratación;
-- 17–21: empleo público, trabajo y Seguridad Social;
-- 23–27: prevención, igualdad, tributación, recaudación y presupuesto;
-- 28–31: protección de datos, transparencia, tributos locales y firma electrónica;
-- 32–36: Windows 11, Edge, GroupWise, impresión, escaneado, Writer y Calc;
-- 37–40: Base, Impress, componentes y periféricos.
+El único tema sin primera vuelta cerrada es el **tema 22**, condicionado a fuentes internas oficiales.
 
-Cada tema incluye resumen, rigor normativo, desarrollo funcional o normativo, puntos calientes, tres preguntas de retención y cuadro para test y supuesto práctico.
+Cada tema desarrollado incluye:
 
-## Bloque v0.49
+1. resumen orientado al aprobado;
+2. rigor normativo;
+3. desarrollo por normas, artículos o funciones;
+4. puntos calientes de test;
+5. tres preguntas de retención activa;
+6. cuadro para test y supuesto práctico.
 
-### Tema 37 · LibreOffice Base
+## Bloque v0.50
 
-- archivo ODB y conexión a fuentes de datos;
-- datos embebidos o externos;
-- registro de bases en LibreOffice;
-- tablas, filas, campos y tipos;
-- clave primaria;
-- clave ajena;
-- integridad referencial;
-- relaciones uno a uno, uno a muchos y muchos a muchos;
-- tabla intermedia;
-- consultas de selección, parámetros y acción;
-- formularios y subformularios;
-- informes, agrupaciones, totales y paginación.
+### Tema 1 · Constitución, Tribunal Constitucional y reforma
 
-Puntos de examen:
+- norma suprema y valor normativo;
+- preámbulo, título preliminar, diez títulos y 169 artículos;
+- valores superiores;
+- soberanía y Monarquía parlamentaria;
+- unidad, autonomía y solidaridad;
+- principios del artículo 9.3;
+- Tribunal Constitucional: 12 miembros, designación, mandato y renovación;
+- recurso y cuestión de inconstitucionalidad, amparo y conflictos;
+- reforma ordinaria por tres quintos;
+- solicitud de referéndum por una décima parte en quince días;
+- reforma agravada por dos tercios, disolución y referéndum obligatorio.
 
-- el ODB puede guardar objetos y conexión sin contener físicamente todos los datos;
-- una clave primaria identifica de forma única y no admite nulos;
-- una relación muchos a muchos suele resolverse mediante tabla intermedia;
-- una consulta de acción puede modificar registros;
-- formulario e informe cumplen funciones distintas.
+### Tema 2 · Derechos, garantías y fuentes
 
-### Tema 38 · LibreOffice Impress
+- estructura del título I;
+- artículo 14 y artículos 15–29;
+- contenido esencial y reserva de ley;
+- procedimiento preferente y sumario;
+- recurso de amparo;
+- suspensión general e individual;
+- ley orgánica y mayoría absoluta final;
+- ley ordinaria;
+- decreto-ley y plazo de treinta días;
+- decreto legislativo y delegación;
+- potestad reglamentaria;
+- jerarquía, reserva de ley y buena regulación.
 
-- ODP como formato nativo;
-- diapositivas, diseños y marcadores de posición;
-- vistas Normal, Esquema, Notas, Clasificador y Folleto;
-- duplicar, ocultar y reorganizar;
-- diapositiva maestra;
-- objetos, alineación, distribución, agrupación y orden;
-- transiciones entre diapositivas;
-- animaciones de objetos;
-- F5 desde el inicio;
-- Mayús + F5 desde la diapositiva actual;
-- Consola del presentador;
-- impresión y exportación a PDF.
+### Tema 3 · Organización del Estado
 
-### Tema 39 · Ordenador personal
+- Corona;
+- inviolabilidad y refrendo;
+- funciones del Rey;
+- Congreso y Senado;
+- potestad legislativa, presupuestaria y control del Gobierno;
+- Defensor del Pueblo;
+- Tribunal de Cuentas;
+- Gobierno y Poder Judicial;
+- municipios, provincias y Comunidades Autónomas;
+- autonomía dentro de la unidad constitucional.
 
-- placa base, chipset y firmware;
-- CPU, núcleos, hilos, frecuencia y caché;
-- RAM y volatilidad;
-- almacenamiento SSD y HDD;
-- interfaces SATA y NVMe/PCIe;
-- GPU integrada y dedicada;
-- red y sonido;
-- fuente de alimentación;
-- disipadores y ventiladores;
-- UEFI y arranque seguro;
-- USB, HDMI, DisplayPort, Ethernet y PCI Express.
+### Tema 4 · Ley 40/2015
 
-Se diferencia expresamente:
+- principios de actuación;
+- concepto y creación de órganos;
+- competencia irrenunciable;
+- delegación;
+- avocación;
+- encomienda de gestión;
+- delegación de firma;
+- suplencia;
+- abstención y recusación;
+- órganos colegiados;
+- lealtad institucional, colaboración, cooperación y coordinación;
+- Conferencias Sectoriales y otros instrumentos.
 
-- RAM frente a almacenamiento;
-- frecuencia frente a rendimiento global;
-- conector USB-C frente a protocolo o velocidad;
-- SSD frente a HDD;
-- GPU integrada frente a dedicada.
+### Tema 10 · Responsabilidad patrimonial
 
-### Tema 40 · Periféricos
+- funcionamiento normal o anormal;
+- fuerza mayor;
+- daño efectivo, evaluable e individualizado;
+- antijuridicidad;
+- causalidad;
+- concurrencia de Administraciones;
+- valoración y formas de indemnización;
+- inicio de oficio y reclamación;
+- plazo de un año;
+- daños físicos o psíquicos;
+- informe del servicio causante;
+- resolución y silencio desestimatorio a seis meses;
+- reclamación directa contra la Administración;
+- acción de regreso por dolo o culpa o negligencia grave;
+- relación con responsabilidad penal.
 
-- entrada, salida, entrada/salida, almacenamiento y comunicaciones;
-- teclado, ratón, monitor, pantalla táctil, micrófono y altavoces;
-- impresoras láser y de inyección;
-- escáneres y equipos multifunción;
-- discos duros y SSD externos;
-- memorias USB;
-- extracción segura;
-- lectores y grabadores de CD y DVD;
-- soportes ROM, R y RW;
-- concentradores USB alimentados y no alimentados;
-- compatibilidad de conector, protocolo, controlador y alimentación;
-- cifrado y custodia de dispositivos extraíbles.
+### Tema 11 · Procedimiento administrativo local
 
-## Banco de preguntas
+- aplicación conjunta de Ley 39/2015, legislación local y ROF;
+- obligación de resolver;
+- expediente e informes;
+- Registro Electrónico General;
+- Registro General local;
+- asientos de entrada y salida;
+- orden temporal y remisión sin dilación;
+- recibo o copia acreditativa;
+- lugares de presentación;
+- requisitos de solicitud;
+- subsanación en diez días;
+- presentación electrónica de obligados;
+- comunicaciones locales;
+- contenido y plazo de notificación;
+- aviso electrónico;
+- rechazo y continuación del procedimiento;
+- rechazo electrónico tras diez días naturales sin acceso.
 
-- **495 preguntas manuales acumuladas**.
-- 60 preguntas nuevas en v0.49.
-- 15 preguntas por cada tema revisado.
+## Resultado acumulado
+
+- **585 preguntas manuales acumuladas**.
+- 90 preguntas nuevas en v0.50.
+- 15 preguntas por cada uno de los 39 temas revisados.
 - Cuatro opciones distintas.
 - Respuesta correcta rotada.
 - Dificultad baja, media y alta.
-- Justificación funcional o técnica.
+- Justificación normativa, técnica o funcional.
 - Sin preguntas de método en los temas cerrados.
 
 ## Simulacros
@@ -120,6 +141,7 @@ Los tres simulacros mantienen:
 - 60 minutos;
 - solo contenido real;
 - ausencia de duplicados internos;
+- tema 22 excluido hasta su verificación;
 - indicación de temas representados.
 
 ## Tema 22
@@ -128,24 +150,24 @@ Permanece pendiente de:
 
 - Acuerdo Regulador vigente de Diputación y organismos autónomos;
 - Estatutos oficiales vigentes del OAPGT;
-- organización y competencias actuales.
+- organización, funcionamiento y competencias actuales.
 
-## Fuentes principales del bloque v0.49
+No se incorporarán artículos, permisos, jornadas u órganos internos no comprobados.
 
-- ayuda oficial de LibreOffice Base;
-- ayuda oficial de LibreOffice Impress;
-- fundamentos consolidados de arquitectura de ordenadores;
-- fundamentos consolidados de periféricos y almacenamiento externo.
+## Fuentes principales del bloque v0.50
 
-Revisión funcional realizada el 10 de julio de 2026.
+- Constitución Española, texto consolidado.
+- Ley Orgánica del Tribunal Constitucional.
+- Ley 40/2015.
+- Ley 39/2015.
+- Ley 7/1985.
+- Real Decreto 2568/1986, ROF.
 
-## Próximo bloque
+Textos oficiales consolidados revisados el 10 de julio de 2026.
 
-1. Tema 1: Constitución, principios y reforma.
-2. Tema 2: derechos y deberes fundamentales.
-3. Tema 3: Corona, Cortes, Gobierno y Poder Judicial.
-4. Tema 4: organización territorial.
-5. Tema 10: responsabilidad patrimonial y potestad sancionadora.
-6. Tema 11: procedimiento administrativo local.
-7. Tema 22 cuando existan fuentes internas oficiales.
-8. Después: 20 supuestos completos y elevación a 30–40 preguntas por tema.
+## Siguiente fase
+
+1. Elevar cada tema a 30–40 preguntas reales.
+2. Redactar 20 supuestos completos con norma, órgano, trámite, plazo y consecuencia.
+3. Cerrar el tema 22 cuando estén disponibles sus fuentes oficiales.
+4. Consolidar las capas históricas de datos y añadir pruebas de regresión.
