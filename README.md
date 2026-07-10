@@ -13,9 +13,9 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.36.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.37.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v40`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v41`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos principales
 
@@ -46,73 +46,57 @@ Cada tema conserva:
 - Temas 9 a 12: revisados en profundidad en v0.35.
 - Temas 13 y 14: LOSU revisada en profundidad en v0.36.
 - Tema 15: desarrollado por los cuatro bloques oficiales; pendientes artículos, mayorías y plazos literales del texto consolidado.
-- Tema 16: RD 822/2021 revisado en profundidad; pendientes matrícula, permanencia y evaluación internas UC3M.
-- Tema 17: RD 534/2024 revisado en profundidad; pendientes ponderaciones, cupos y calendario anual UC3M.
+- Tema 16: RD 822/2021 revisado; pendientes matrícula, permanencia y evaluación internas UC3M.
+- Tema 17: RD 534/2024 revisado; pendientes ponderaciones, cupos y calendario anual UC3M.
 - Tema 18: estructura presupuestaria, modificaciones e ingresos desarrollados; faltan cifras y bases internas vigentes.
 - Tema 19: fases de gasto, documentos contables, pagos y cierre desarrollados; faltan límites, delegaciones y fechas UC3M.
-- Tema 20: LCSP revisada en profundidad; falta la delegación y circuito interno UC3M.
+- Tema 20: LCSP revisada; falta la delegación y circuito interno UC3M.
 
-## Revisión profunda v0.36
+## Auditoría del banco de test · v0.37
 
-### Tema 13 · LOSU I
+La auditoría se ejecuta después de cargar todo el temario y valida cada pregunta antes de mostrarla.
 
-Incluye:
+### Controles aplicados
 
-- artículos 1 a 3: sistema, funciones y autonomía;
-- creación, reconocimiento y calidad;
-- función docente;
-- investigación y transferencia;
-- cooperación, sociedad e internacionalización.
+- Enunciado no vacío.
+- Cuatro opciones no vacías y diferentes.
+- Respuesta correcta existente entre las cuatro opciones.
+- Justificación obligatoria.
+- Eliminación de duplicados exactos de enunciado y respuesta.
+- Reparto visible de respuestas correctas A, B, C y D.
+- Cobertura visible por tema.
 
-### Tema 14 · LOSU II
+### Cobertura mínima
 
-Incluye:
+Todos los temas UC3M alcanzan un **mínimo operativo de 15 preguntas válidas**.
 
-- estudiantado, derechos y deberes;
-- régimen económico-financiero;
-- presupuesto público, único y equilibrado;
-- PDI;
-- PTGAS, acceso, carrera y provisión.
+El objetivo final no cambia: **30–40 preguntas manuales por tema**. La nueva vista de auditoría permite identificar los temas que todavía necesitan ampliación.
 
-### Tema 16 · RD 822/2021
+### Refuerzo manual añadido
 
-Incluye:
+Se han añadido preguntas nuevas de segundo nivel sobre:
 
-- Grado, Máster y Doctorado;
-- reconocimiento y transferencia;
-- Grado de 240 ECTS como regla;
-- Máster de 60, 90 o 120 ECTS;
-- TFM de 6 a 30 ECTS y defensa pública;
-- verificación, seguimiento, modificación y renovación de acreditación.
+- reforma constitucional;
+- notificación electrónica;
+- recursos administrativos;
+- competencia y funcionamiento electrónico;
+- protección de datos y DPD;
+- transparencia e igualdad UC3M;
+- LOSU y PTGAS;
+- Estatutos UC3M;
+- créditos ECTS, acceso y admisión;
+- modificaciones y fases presupuestarias;
+- contratación pública.
 
-### Tema 17 · RD 534/2024
+## Simulacros UC3M equilibrados
 
-Incluye:
+Los tres simulacros mantienen **70 preguntas**, pero ahora se construyen de forma controlada:
 
-- diferencia entre acceso y admisión;
-- Bachiller y prueba de acceso;
-- Técnico Superior sin prueba de acceso;
-- adaptaciones;
-- nota de acceso, nota de admisión, ponderaciones y cupos;
-- vía específica con al menos 30 ECTS reconocidos.
-
-### Tema 20 · Contratación
-
-Incluye:
-
-- principios y tipos contractuales;
-- objeto, lotes, presupuesto base, valor estimado y precio;
-- necesidad, expediente, solvencia y prohibiciones;
-- contrato menor: obras < 40.000 € y suministros/servicios < 15.000 €;
-- abierto simplificado abreviado: obras < 80.000 € y suministros/servicios < 60.000 €;
-- adjudicación, formalización, ejecución y extinción.
-
-## Test UC3M
-
-- v0.34: 85 preguntas manuales para los temas 1 a 6.
-- v0.35: 60 preguntas manuales para los temas 9 a 12.
-- v0.36: **60 preguntas manuales nuevas** para los temas 13, 14, 16, 17 y 20.
-- Tres simulacros regenerados de 70 preguntas con penalización real.
+- aparecen los **20 temas oficiales**;
+- 10 temas aportan 4 preguntas;
+- 10 temas aportan 3 preguntas;
+- no se repite una pregunta dentro del mismo simulacro;
+- se conserva la penalización oficial de −1/3 por error.
 
 ## Baremo personal conservador
 
@@ -121,15 +105,36 @@ Incluye:
 - **Diputación C1**: oposición libre; DAM permite acceso pero no da puntos.
 - **UC3M C2**: inglés 0 salvo certificado oficial; experiencia equivalente 0; formación potencial hasta 5 puntos, pendiente de validación.
 
+## Archivos principales de la versión
+
+```text
+assets/js/
+├── uc3m-temario-v34.js
+├── uc3m-temario-v35.js
+├── uc3m-temario-v36.js
+├── auditoria-test-v37.js
+├── ui-v34.js
+├── ui-v35.js
+├── ui-v36.js
+└── ui-v37.js
+```
+
 ## Cambios de versión
+
+### v0.37.0 · 2026-07-10
+
+- Auditado estructuralmente todo el banco UC3M.
+- Eliminación automática de preguntas inválidas y duplicados exactos.
+- Refuerzo manual hasta un mínimo operativo de 15 preguntas por tema.
+- Añadida vista de cobertura y reparto de respuestas.
+- Regenerados tres simulacros equilibrados de 70 preguntas.
+- Actualizada la caché PWA a `opoweb-v41`.
 
 ### v0.36.0 · 2026-07-10
 
 - Profundizados los temas 13, 14, 16, 17 y 20.
-- Añadidas **60 preguntas manuales**.
+- Añadidas 60 preguntas manuales.
 - Incorporados artículos y cifras verificadas de LOSU, RD 822/2021, RD 534/2024 y LCSP.
-- Regenerados simulacros de 70 preguntas.
-- Actualizada la caché PWA a `opoweb-v40`.
 
 ### v0.35.0 · 2026-07-10
 
