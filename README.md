@@ -13,9 +13,9 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.33.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.34.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v37`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v38`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos principales
 
@@ -42,7 +42,7 @@ Se han retirado de la vista **Mapa de estudio**, **Esquema oficial** y **Tabla d
 
 ## Estado del temario UC3M
 
-- Temas 1 a 6: base normativa común revisada.
+- Temas 1 a 6: revisados manualmente y desarrollados por artículos en la versión v0.34.
 - Tema 7: ampliado; queda pendiente la Ley 10/2019 consolidada con plazos literales.
 - Tema 8: completado con LO 3/2007, III Plan de Igualdad 2025-2029 y protocolo UC3M.
 - Tema 9: Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo.
@@ -52,6 +52,39 @@ Se han retirado de la vista **Mapa de estudio**, **Esquema oficial** y **Tabla d
 - Tema 18: desarrollado con características, estructura, créditos, modificaciones y ejecución de ingresos; faltan cifras y bases internas vigentes.
 - Tema 19: desarrollado con fases de gasto, documentos contables, pagos, transferencias, inversiones, liquidación y cierre; faltan límites, delegaciones y fechas UC3M.
 - Tema 20: LCSP desarrollada; falta la capa de delegaciones y reglas internas UC3M.
+
+## Revisión profunda v0.34
+
+### Tema 1 · Constitución
+
+Incluye estructura completa, derechos y garantías, elaboración de las leyes, organización territorial y procedimientos de reforma de los artículos 166 a 169.
+
+### Temas 2 y 3 · Ley 39/2015
+
+Incluyen interesados, representación, relación electrónica, obligación de resolver, silencio, cómputo de plazos, actos, notificaciones, nulidad, procedimiento, ejecución, revisión de oficio y recursos.
+
+Plazos incorporados expresamente:
+
+- Subsanación: 10 días.
+- Audiencia: entre 10 y 15 días.
+- Información pública: mínimo 20 días.
+- Tramitación simplificada: 30 días como regla.
+- Alzada: 1 mes para interponer contra acto expreso y 3 meses para resolver.
+- Reposición: 1 mes para interponer contra acto expreso y 1 mes para resolver.
+
+### Temas 4 y 5 · Ley 40/2015
+
+Diferencia competencia, delegación, avocación, encomienda, delegación de firma, suplencia, órganos colegiados, abstención, recusación, sede, portal, actuación automatizada, sello, CSV y archivo electrónico.
+
+### Tema 6 · Protección de datos
+
+Incluye principios, consentimiento de menores, derechos, bloqueo, responsable, encargado y Delegado de Protección de Datos.
+
+## Test UC3M
+
+La versión v0.34 añade **85 preguntas jurídicas manuales** para los temas 1 a 6 y regenera tres simulacros de 70 preguntas.
+
+Las preguntas ya no se limitan a indicar cómo estudiar: preguntan artículos, plazos, órganos, efectos y diferencias entre figuras.
 
 ## Baremo personal conservador
 
@@ -80,10 +113,12 @@ opoweb/
 │       ├── uc3m-temario-v31.js
 │       ├── uc3m-temario-v32.js
 │       ├── uc3m-temario-v33.js
+│       ├── uc3m-temario-v34.js
 │       ├── ui-v29.js
 │       ├── ui-v31.js
 │       ├── ui-v32.js
-│       └── ui-v33.js
+│       ├── ui-v33.js
+│       └── ui-v34.js
 ├── data/
 │   ├── oposiciones.js
 │   ├── proceso.js
@@ -100,14 +135,21 @@ opoweb/
 
 ## Cambios de versión
 
+### v0.34.0 · 2026-07-10
+
+- Profundizados manualmente los temas 1 a 6.
+- Añadidas referencias por títulos, capítulos y artículos.
+- Incorporados los plazos de mayor frecuencia de examen de la Ley 39/2015.
+- Diferenciadas las técnicas de competencia y funcionamiento electrónico de la Ley 40/2015.
+- Ampliado el tema de protección de datos con responsable, encargado y DPD.
+- Añadidas **85 preguntas jurídicas manuales**.
+- Regenerados tres simulacros de 70 preguntas.
+- Actualizada la caché PWA a `opoweb-v38`.
+
 ### v0.33.0 · 2026-07-10
 
-- Desarrollado el tema 15: Defensor, servicios, régimen económico y reforma estatutaria.
-- Desarrollado el tema 18: estructura presupuestaria, créditos, modificaciones e ingresos.
-- Desarrollado el tema 19: fases de gasto, documentos contables, pagos, inversiones y cierre.
-- Añadidas **36 preguntas específicas**.
-- No se han inventado artículos, mayorías, importes, límites ni fechas internas no verificadas.
-- Actualizada la caché PWA a `opoweb-v37`.
+- Desarrollados los temas 15, 18 y 19.
+- Añadidas 36 preguntas específicas de Estatutos y presupuesto.
 
 ### v0.32.0 · 2026-07-10
 
