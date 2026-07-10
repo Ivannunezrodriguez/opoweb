@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.66
+# Auditoría global de OpoWeb · v0.67
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -15,13 +15,13 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 89 % |
+| Funcionamiento e interfaz | 90 % |
 | Diputación C1 | 98 % |
 | UC3M C2 | 78 % |
-| La Puebla C2 | 30 % |
+| La Puebla C2 | 74 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 58 % |
-| **OpoWeb global** | **74 %** |
+| Arquitectura y pruebas | 61 % |
+| **OpoWeb global** | **80 %** |
 
 ## Diputación de Toledo C1
 
@@ -31,45 +31,51 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 - 20 supuestos, 40 variantes y tres simulacros prácticos internos.
 - Estimación 98 % por la brecha estatutaria del OAPGT y el cierre técnico pendiente.
 
-## UC3M C2 · v0.66
-
-### Resultado cuantitativo
+## UC3M C2
 
 - 20 de 20 temas con al menos 30 preguntas válidas.
 - 600 preguntas acumuladas.
-- 110 preguntas nuevas en once temas.
-- Tres simulacros de 70 preguntas + 5 reservas.
-- Cobertura equilibrada de los veinte temas y ausencia de duplicados dentro de cada simulacro.
+- Tres simulacros de 70 + 5.
+- Estimación 78 % por normativa interna, presupuesto, matrícula, permanencia, evaluación, admisión y contratación pendientes.
 
-### Materias reforzadas
+## La Puebla C2 · v0.67
 
-- Constitución española;
-- órganos, competencia y organización de la Administración;
-- administración electrónica, seguridad e interoperabilidad;
-- protección de datos y derechos digitales;
-- provisión, situaciones, incompatibilidades y disciplina;
-- prevención de riesgos laborales;
-- sistema universitario, comunidad y PTGAS;
-- organización de enseñanzas oficiales;
-- acceso y admisión a Grado;
-- contratación del sector público.
+### Resultado cuantitativo
 
-### Lo que impide declarar UC3M al 100 %
+- 19 de 19 temas con 30 preguntas específicas.
+- 570 preguntas acumuladas.
+- Sustitución total de las preguntas genéricas de método.
+- 20 supuestos prácticos vinculados al programa oficial.
+- Tres simulacros de 50 preguntas + 5 reservas y 60 minutos.
+- Cobertura de los diecinueve temas y ausencia de duplicados dentro de cada simulacro.
 
-1. Verificación completa de Estatutos y organización interna vigente.
-2. Presupuesto y bases de ejecución de la convocatoria.
-3. Normas propias de matrícula, permanencia y evaluación.
-4. Procedimientos internos de admisión y contratación.
-5. Auditoría transversal de literalidad, vigencia y dificultad.
-6. Supuestos institucionales y pruebas de navegador.
+### Reutilización controlada
 
-## La Puebla
+El banco procede de materias comunes ya auditadas en Diputación y se filtra para excluir contenido específico de la Diputación de Toledo, OAPGT, GroupWise, Base e Impress cuando no forma parte del programa de La Puebla.
 
-Pendiente completar 19 temas, sustituir plantillas, alcanzar 30–40 preguntas por tema y resolver al menos 20 supuestos.
+Materias reutilizadas:
+
+- Constitución;
+- Leyes 39/2015 y 40/2015;
+- régimen local;
+- empleo público de Castilla-La Mancha;
+- prevención, igualdad y protección de datos;
+- obligaciones, gestión y recaudación tributaria;
+- tributos locales;
+- firma y certificados electrónicos;
+- Windows, impresión, navegación, Writer, Calc, hardware y periféricos.
+
+### Lo que impide declarar La Puebla al 100 %
+
+1. Revisión literal artículo por artículo de los diecinueve temas.
+2. Desarrollo completo de las soluciones de los veinte supuestos.
+3. Auditoría final de dificultad, distractores y equilibrio temático.
+4. Pruebas de navegador y validación visual.
+5. Seguimiento de listas, tribunal y fecha de examen.
 
 ## Carranque
 
-Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema y crear supuestos exclusivamente sobre temas 3–20.
+Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema, generar simulacros 80 + 5 y crear supuestos exclusivamente sobre temas 3–20.
 
 ## Arquitectura pendiente
 
