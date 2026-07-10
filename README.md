@@ -13,9 +13,9 @@ Web estática para estudiar oposiciones de Auxiliar Administrativo y Administrat
 
 ## Versión visible
 
-La web muestra la **Versión OpoWeb v0.29.0** en la tarjeta lateral y en la vista de progreso.
+La web muestra la **Versión OpoWeb v0.30.0** en la tarjeta lateral y en la vista de progreso.
 
-La caché PWA actual es `opoweb-v33`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
+La caché PWA actual es `opoweb-v34`. Si el móvil muestra una versión anterior, recarga la página o elimina la caché/datos de la web instalada.
 
 ## UC3M · datos actualizados
 
@@ -29,6 +29,19 @@ La caché PWA actual es `opoweb-v33`. Si el móvil muestra una versión anterior
 - Concurso: inglés hasta 3 puntos, experiencia hasta 22 y formación hasta 5.
 - Tras superar el test: 10 días hábiles para aportar los méritos.
 - Se formará lista de espera para personal funcionario interino.
+
+## Auditoría del temario UC3M
+
+La versión v0.30.0 corrige un fallo estructural: los mapas se aplicaban por número de tema sin distinguir convocatoria. Eso podía mostrar, por ejemplo, protección de datos dentro del tema 9 de ofimática UC3M.
+
+Ahora:
+
+- Cada uno de los **20 temas UC3M** tiene un mapa propio vinculado a su enunciado.
+- Los temas 2, 3, 4, 5, 6, 9, 10, 11, 12 y 20 se han reestructurado por normas y bloques correctos.
+- El tema 9 incluye Word 2019, Excel 2019, Drive, Docs, Sheets, Calendar y correo electrónico.
+- Los test UC3M ya preguntan contenido del tema, no solo metodología de estudio.
+- Los simulacros UC3M mantienen 70 preguntas.
+- Los temas 7, 8 y 13 a 20 muestran su estado de auditoría. Los documentos propios UC3M todavía deben completarse con literalidad oficial antes de considerarlos cerrados.
 
 ## Método de estudio
 
@@ -69,6 +82,7 @@ opoweb/
 │       ├── motor-temario.js
 │       ├── auditoria-temas.js
 │       ├── mapa-temas.js
+│       ├── uc3m-temario-v30.js
 │       └── ui-v29.js
 ├── data/
 │   ├── oposiciones.js
@@ -96,6 +110,17 @@ opoweb/
 
 ## Cambios de versión
 
+### v0.30.0 · 2026-07-10
+
+- Corregida la mezcla de mapas por número entre convocatorias.
+- Añadido `assets/js/uc3m-temario-v30.js` como auditoría específica final.
+- Asignado un mapa correcto a los 20 temas UC3M.
+- Reestructurados los temas 2 a 12 y 20.
+- Tema 9 corregido con el bloque real de ofimática y Google Workspace.
+- Sustituidos los test metodológicos UC3M por preguntas de contenido.
+- Identificados de forma visible los temas específicos pendientes de documento oficial.
+- Actualizada la versión visible y la caché PWA a `opoweb-v34`.
+
 ### v0.29.0 · 2026-07-10
 
 - Retirada **Las Ventas con Peña Aguilera** de OpoWeb.
@@ -103,7 +128,6 @@ opoweb/
 - Añadida la fecha previsible del examen UC3M: **21/11/2026 a las 10:00**.
 - Adaptados los simulacros UC3M a **70 preguntas**.
 - Añadido enlace directo al proceso oficial UC3M.
-- Actualizada la versión visible y la caché PWA a `opoweb-v33`.
 
 ### v0.28.0
 
