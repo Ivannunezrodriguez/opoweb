@@ -14,6 +14,9 @@
       const cls = item.count >= audit.floorPerTheme ? 'common' : '';
       return `<tr><td>Tema ${item.number}</td><td>${escapeHtml(item.title)}</td><td><strong>${item.count}</strong></td><td><span class="badge ${cls}">${escapeHtml(item.state)}</span></td><td>A ${item.answerPositions.A} · B ${item.answerPositions.B} · C ${item.answerPositions.C} · D ${item.answerPositions.D}</td></tr>`;
     }).join('');
+    const floorMessage = audit.minimumQuestions >= audit.floorPerTheme
+      ? `Todos los temas han alcanzado el mínimo operativo de <strong>${audit.floorPerTheme} preguntas</strong>.`
+      : `Todavía existen temas por debajo del mínimo operativo de <strong>${audit.floorPerTheme} preguntas</strong>.`;
 
     return `<article class="card">
       <h2>Auditoría del banco de preguntas</h2>
@@ -22,7 +25,7 @@
         <div><span class="score">${audit.minimumQuestions}</span><p class="muted">mínimo por tema</p></div>
         <div><span class="score">${audit.targetPerTheme}</span><p class="muted">objetivo por tema</p></div>
       </div>
-      <p>Todos los temas han alcanzado el mínimo operativo de <strong>${audit.floorPerTheme} preguntas</strong>. El objetivo final continúa siendo 30–40 preguntas manuales por tema.</p>
+      <p>${floorMessage} El objetivo final continúa siendo 30–40 preguntas manuales por tema.</p>
       <p class="muted">Duplicados exactos eliminados: ${audit.duplicatesRemoved}. Preguntas estructuralmente inválidas eliminadas: ${audit.invalidRemoved}. Cada pregunta conserva cuatro opciones distintas, respuesta válida y justificación.</p>
       <details class="section"><summary><strong>Ver cobertura y reparto de respuestas por tema</strong></summary><div class="table-wrap"><table><thead><tr><th>Tema</th><th>Contenido</th><th>Preguntas</th><th>Estado</th><th>Respuesta correcta</th></tr></thead><tbody>${rows}</tbody></table></div></details>
     </article>`;
