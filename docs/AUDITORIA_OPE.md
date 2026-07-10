@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.59
+# Auditoría global de OpoWeb · v0.60
 
 Fecha de revisión: 10 de julio de 2026.
 
@@ -15,24 +15,15 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 82 % |
-| Diputación C1 | 81 % |
+| Funcionamiento e interfaz | 83 % |
+| Diputación C1 | 83 % |
 | UC3M C2 | 52 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 43 % |
-| **OpoWeb global** | **57 %** |
+| Arquitectura y pruebas | 45 % |
+| **OpoWeb global** | **58 %** |
 
 La estimación pondera temario, banco real, supuestos, simulacros, auditoría normativa y deuda técnica.
-
-## Formatos oficiales del primer ejercicio
-
-| OPE | Test | Reserva | Tiempo | Segundo ejercicio/casos |
-|---|---:|---:|---:|---|
-| La Puebla | 50 | 5 | 60 min | Supuesto o supuestos |
-| Carranque | 80 | 5 | 90 min | Supuestos sobre temas 3–20 |
-| Diputación C1 | 50 | 5 | 60 min | Práctico eliminatorio |
-| UC3M | 70 | 5 | 60 min | Sin práctico oficial |
 
 ## Diputación de Toledo C1
 
@@ -55,9 +46,9 @@ La estimación pondera temario, banco real, supuestos, simulacros, auditoría no
 - 40 variantes.
 - Tres simulacros prácticos internos.
 
-### Segunda vuelta v0.59
+### Segunda vuelta v0.60
 
-Temas 1–20 reforzados hasta el objetivo mínimo de 30 preguntas reales.
+Temas 1–21 reforzados hasta el objetivo mínimo de 30 preguntas reales.
 
 Resultado acumulado:
 
@@ -68,24 +59,26 @@ Resultado acumulado:
 - 19 preguntas nuevas en v0.57;
 - 18 preguntas nuevas en v0.58;
 - 30 preguntas nuevas en v0.59;
-- 322 preguntas nuevas de segunda vuelta;
-- 907 preguntas manuales acumuladas;
-- veinte temas consecutivos a 30+ preguntas reales;
-- segunda vuelta: 20 de 39 temas auditables, aproximadamente 51 %;
+- 36 preguntas nuevas en v0.60;
+- 358 preguntas nuevas de segunda vuelta;
+- 943 preguntas manuales acumuladas;
+- veintiún temas consecutivos a 30+ preguntas reales;
+- segunda vuelta: 21 de 39 temas auditables, aproximadamente 54 %;
 - cuatro alternativas distintas;
 - dificultad graduada;
 - control de duplicados;
 - simulacros regenerados.
 
-Ámbitos reforzados en v0.59:
+Ámbitos reforzados en v0.60:
 
-- concepto y elementos de la relación laboral;
-- fuentes de la relación laboral;
-- derechos y deberes básicos;
-- trabajo de menores y capacidad;
-- forma, comunicación y copia básica;
-- validez y nulidad;
-- periodo de prueba.
+- contratos formativos;
+- duración determinada;
+- sustitución y encadenamiento;
+- contrato fijo-discontinuo;
+- principios y estructura de la Seguridad Social;
+- afiliación, altas, bajas y cotización;
+- acción protectora;
+- accidente de trabajo.
 
 ### Criterio de perfección pendiente
 
@@ -93,7 +86,7 @@ Para considerar cerrada Diputación deben cumplirse simultáneamente:
 
 1. 40 títulos exactos y vigentes;
 2. desarrollo autosuficiente y auditado;
-3. 30–40 preguntas reales por tema;
+3. 30–40 preguntas reales por tema como referencia mínima de densidad;
 4. ninguna pregunta de plantilla;
 5. justificaciones normativas verificadas;
 6. simulacros sin duplicados y con cobertura equilibrada;
@@ -103,10 +96,7 @@ Para considerar cerrada Diputación deben cumplirse simultáneamente:
 
 ### Próximo bloque
 
-Tema 21:
-
-- modalidades contractuales;
-- Seguridad Social.
+Temas 23–31, manteniendo el tema 22 bloqueado hasta disponer de sus fuentes oficiales internas.
 
 ## La Puebla
 
