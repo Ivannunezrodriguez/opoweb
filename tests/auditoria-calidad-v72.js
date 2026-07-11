@@ -23,6 +23,21 @@ run('assets/js/auditoria-calidad-v72.js');
 
 const report = window.OPOWEB_AUDITORIA_V72;
 assert.ok(report, 'No se generó la auditoría');
+console.log('RESUMEN', JSON.stringify(report.summary));
+console.log('POR OPE', JSON.stringify(report.oposiciones.map(item => ({
+  id: item.id,
+  questions: item.questions,
+  invalidAnswers: item.invalidAnswers,
+  invalidOptions: item.invalidOptions,
+  duplicateIds: item.duplicateIds,
+  missingJustifications: item.missingJustifications,
+  genericQuestions: item.genericQuestions,
+  themeDuplicates: item.themeDuplicates,
+  shortJustifications: item.shortJustifications,
+  answerBalance: item.answerBalance
+}))));
+console.log('INCIDENCIAS', JSON.stringify(report.issues.slice(0, 30)));
+
 assert.equal(report.oposiciones.length, 4);
 assert.ok(report.totalQuestions >= 3000, `Total inesperado: ${report.totalQuestions}`);
 assert.equal(report.invalidAnswers, 0, JSON.stringify(report.issues.filter(item => item.code === 'invalid-answer').slice(0, 20), null, 2));
@@ -33,5 +48,4 @@ assert.equal(report.genericQuestions, 0, JSON.stringify(report.issues.filter(ite
 assert.equal(report.themeDuplicates, 0, JSON.stringify(report.issues.filter(item => item.code === 'duplicate-in-theme').slice(0, 20), null, 2));
 assert.equal(report.hardFailures, 0);
 assert.ok(report.oposiciones.every(item => item.answerBalance.maxShare <= 0.55), JSON.stringify(report.oposiciones.map(item => ({ id: item.id, balance: item.answerBalance })), null, 2));
-console.log(JSON.stringify(report.summary, null, 2));
 console.log('Auditoría de calidad v0.72 OK');
