@@ -67,8 +67,30 @@ jobs:
           node tests/smoke-carranque-v70.js
           node tests/smoke-carranque-live-v70.js
           node tests/practicos-v71.js
+
+  quality-audit:
+    name: Auditoría transversal v0.72
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - name: Audit question quality
         run: node tests/auditoria-calidad-v72.js
+
+  site-integrity:
+    name: Integridad web y PWA v0.72
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       - name: Validate web and PWA integrity
         run: node tests/site-integrity-v72.js
 
