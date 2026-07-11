@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.69
+# Auditoría global de OpoWeb · v0.70
 
 Fecha de revisión: 11 de julio de 2026.
 
@@ -15,13 +15,13 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 91 % |
+| Funcionamiento e interfaz | 92 % |
 | Diputación C1 | 98 % |
 | UC3M C2 | 84 % |
 | La Puebla C2 | 74 % |
-| Carranque C2 | 52 % |
-| Arquitectura y pruebas | 64 % |
-| **OpoWeb global** | **84 %** |
+| Carranque C2 | 79 % |
+| Arquitectura y pruebas | 68 % |
+| **OpoWeb global** | **87 %** |
 
 ## Diputación de Toledo C1
 
@@ -52,54 +52,53 @@ Pendiente: presupuesto y bases de ejecución, matrícula, permanencia, evaluaci�
 
 Pendiente: revisión literal, soluciones desarrolladas, auditoría de dificultad y pruebas visuales.
 
-## Carranque C2 · v0.69
+## Carranque C2 · v0.70
 
 ### Resultado cuantitativo
 
-- Temas 1–10 con 30 preguntas específicas.
-- Eliminación de plantillas genéricas en la primera mitad del programa.
-- Ocho supuestos prácticos, uno por cada tema práctico del 3 al 10.
-- Pruebas unitaria e integrada real.
-- Estimación global: 52 %.
+- 20 de 20 temas con al menos 30 preguntas específicas.
+- 600 preguntas válidas.
+- Eliminación de las plantillas genéricas en todo el programa.
+- 18 supuestos prácticos, uno por cada tema práctico del 3 al 20.
+- Tres simulacros de 80 preguntas + 5 reservas y 90 minutos.
+- Estimación global: 79 %.
 
 ### Reutilización controlada
 
-Se reutiliza contenido común ya auditado para:
+Se reutiliza contenido común auditado para Constitución, procedimiento, empleo público, contratación, registro, órganos locales, hacienda y presupuesto. Los temas con contenido más específico se han desarrollado con bancos propios.
 
-- Constitución y fuentes;
-- Ley 39/2015;
-- Ley 40/2015;
-- revisión y recursos;
-- responsabilidad patrimonial;
-- municipio, padrón y competencias.
-
-El filtro excluye referencias específicas a Diputación, OAPGT, Acuerdo Regulador, GroupWise, Base e Impress.
+El filtro excluye referencias a Diputación, OAPGT, Acuerdo Regulador, GroupWise, Base, Impress y normativa universitaria.
 
 ### Desarrollo específico
 
-**Tema 8:** intervención administrativa local, policía, declaraciones responsables, licencias, subvenciones, gestión de servicios y actividad económica local.
-
-**Tema 10:** potestad normativa, aprobación inicial, información pública, reclamaciones, publicación íntegra, entrada en vigor, control jurisdiccional y ordenanzas fiscales.
+- **Tema 8:** intervención administrativa, licencias, fomento y servicios públicos.
+- **Tema 10:** ordenanzas y reglamentos locales.
+- **Tema 12:** bienes demaniales, patrimoniales y comunales; inventario, protección y uso.
+- **Tema 18:** estructura económica y por programas del presupuesto local.
+- **Tema 19:** liquidación, resultado presupuestario, remanente, estabilidad y regla de gasto.
+- **Tema 20:** administración electrónica, factura electrónica, registro contable y morosidad.
 
 ### Controles automáticos
 
 Las pruebas comprueban:
 
-- 30 preguntas en cada tema del 1 al 10;
+- 600 preguntas totales;
+- 20 temas con 30 preguntas;
 - cuatro opciones y respuesta válida;
 - justificación o fuente;
-- ausencia de plantillas genéricas;
-- ausencia de duplicados dentro de cada tema;
-- ocho supuestos limitados a los temas 3–10;
-- desarrollo temático específico de los temas 8 y 10.
+- ausencia de plantillas genéricas y duplicados internos;
+- 18 supuestos numerados del tema 3 al 20;
+- tres simulacros 80 + 5;
+- presencia de los veinte temas en cada simulacro;
+- matriz de integración independiente para cada tema.
 
 ### Lo que impide declarar Carranque al 100 %
 
-1. Desarrollar los temas 11–20.
-2. Crear los supuestos de los temas 11–20.
-3. Generar simulacros oficiales de 80 + 5.
-4. Auditar literalidad, dificultad y distractores.
-5. Probar navegador, móvil, tablet y PWA.
+1. Desarrollar las soluciones completas de los 18 supuestos.
+2. Revisar literalmente artículos, plazos y órganos.
+3. Auditar dificultad y calidad de distractores.
+4. Probar navegador, móvil, tablet y PWA sin conexión.
+5. Seguir listas, tribunal y fecha de examen.
 
 ## Arquitectura pendiente
 
