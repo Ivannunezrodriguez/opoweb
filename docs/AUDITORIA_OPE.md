@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.67
+# Auditoría global de OpoWeb · v0.68
 
 Fecha de revisión: 11 de julio de 2026.
 
@@ -15,13 +15,13 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 89 % |
+| Funcionamiento e interfaz | 90 % |
 | Diputación C1 | 98 % |
 | UC3M C2 | 84 % |
-| La Puebla C2 | 30 % |
+| La Puebla C2 | 74 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 58 % |
-| **OpoWeb global** | **75 %** |
+| Arquitectura y pruebas | 61 % |
+| **OpoWeb global** | **81 %** |
 
 ## Diputación de Toledo C1
 
@@ -31,94 +31,82 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 - 20 supuestos, 40 variantes y tres simulacros prácticos internos.
 - Estimación 98 % por la brecha estatutaria del OAPGT y el cierre técnico pendiente.
 
-## UC3M C2 · v0.67
-
-### Resultado cuantitativo
+## UC3M C2
 
 - 20 de 20 temas con al menos 30 preguntas válidas.
 - 615 preguntas acumuladas.
-- Tres simulacros de 70 preguntas + 5 reservas.
-- Cobertura de los veinte temas y ausencia de duplicados dentro de cada simulacro.
+- Tres simulacros de 70 + 5.
+- Tema 15 cerrado con el texto refundido de los Estatutos.
+- Capa estatutaria del tema 20 y normativa institucional electrónica incorporadas.
+- Estimación 84 %.
 
-### Documentación institucional incorporada
+Pendiente: presupuesto y bases de ejecución, matrícula, permanencia, evaluación, reglas anuales de admisión, extracción literal de delegaciones y auditoría final.
 
-La página oficial `Normativa` de la UC3M se ha utilizado como índice de fuentes. Se han integrado:
+## La Puebla C2 · v0.68
 
-1. Decreto 1/2003 de Estatutos.
-2. Decreto 95/2009 de modificación.
-3. Texto refundido de los Estatutos.
-4. Página oficial de órganos universitarios.
-5. Delegaciones de competencia y delegaciones de firma publicadas.
-6. Política de Gestión de Documentos Electrónicos de 2024.
-7. Política de Seguridad de Sistemas de Información de 2025.
-8. Reglamento de Administración Electrónica modificado en 2025.
-9. Normativa TIC de 2023.
-10. Acuerdo de creación del Boletín Oficial Electrónico.
+### Resultado cuantitativo
 
-### Tema 15
+- 19 de 19 temas con 30 preguntas específicas.
+- 570 preguntas acumuladas.
+- Eliminación de las preguntas genéricas de método.
+- 20 supuestos prácticos vinculados al programa.
+- Tres simulacros de 50 preguntas + 5 reservas y 60 minutos.
+- Cobertura de los diecinueve temas y ausencia de duplicados internos.
 
-Estado: **capa estatutaria cerrada**.
+### Reutilización controlada
 
-Contenido verificado:
+El banco procede de materias comunes auditadas en Diputación. La correspondencia se define tema por tema y excluye contenido ajeno a La Puebla.
 
-- Defensor Universitario, artículos 127 a 132;
-- servicios universitarios, artículos 157 a 160;
-- patrimonio y régimen presupuestario, artículos 166 a 174;
-- contratación estatutaria, artículos 175 a 177;
-- reforma de Estatutos, artículos 178 a 180.
+Materias reutilizadas:
 
-Puntos incorporados:
+- Constitución y fuentes;
+- Leyes 39/2015 y 40/2015;
+- régimen local;
+- empleo público de Castilla-La Mancha;
+- prevención, igualdad y protección de datos;
+- obligaciones, gestión y recaudación tributaria;
+- tributos locales;
+- firma y certificados electrónicos;
+- Windows, navegación, impresión, Writer, Calc, hardware y periféricos.
 
-- elección del Defensor por mitad más uno del Claustro;
-- mandato de tres años y una sola reelección;
-- creación y supresión de servicios por el Consejo de Gobierno a propuesta del Rector;
-- presupuesto anual, único, público y equilibrado;
-- anteproyecto del Gerente, presentación del Rector, aprobación del Consejo de Gobierno y remisión al Consejo Social;
-- Rector como órgano de contratación;
-- reforma por mayoría absoluta del Claustro.
+### Exclusiones
 
-### Tema 20
+- OAPGT y Acuerdo Regulador de Diputación;
+- referencias específicas a la Diputación Provincial de Toledo;
+- GroupWise;
+- LibreOffice Base;
+- LibreOffice Impress.
 
-Estado: **capa estatutaria UC3M incorporada; delegación interna parcial**.
+### Controles automáticos
 
-Se ha añadido:
+Las pruebas comprueban:
 
-- Rector como órgano de contratación;
-- mesa nombrada por el órgano de contratación;
-- presencia mínima de un representante de departamentos, centros o servicios afectados;
-- audiencia a representantes de trabajadores en determinados servicios con sucesión de empresa;
-- acuerdo preceptivo del Consejo Social para inversiones de duración superior a un año que comprometan fondos futuros;
-- referencia a la resolución de 31 de mayo de 2022 sobre delegaciones en contratación y gasto.
+- 570 preguntas totales;
+- 19 temas con exactamente 30 preguntas;
+- cuatro opciones y respuesta válida;
+- justificación o fuente;
+- ausencia de plantillas de método;
+- 20 supuestos con rúbrica;
+- tres simulacros 50 + 5;
+- 19 temas representados en cada simulacro;
+- ausencia de preguntas duplicadas dentro de cada simulacro.
 
-No se han inventado importes, destinatarios o límites de la delegación: quedan pendientes de extracción literal del documento original.
+### Lo que impide declarar La Puebla al 100 %
 
-### Administración electrónica
-
-La capa general de la Ley 40/2015 estaba desarrollada. En v0.67 se añade el inventario oficial de normas UC3M para relacionar sede, documento electrónico, seguridad, gestión documental, TIC y Boletín Oficial Electrónico con su normativa institucional.
-
-### Pendientes que impiden declarar UC3M al 100 %
-
-1. Presupuesto vigente y bases de ejecución.
-2. Normativa propia de matrícula, permanencia y evaluación.
-3. Reglas anuales de admisión UC3M.
-4. Extracción literal completa de las delegaciones de contratación y gasto.
-5. Auditoría transversal final de literalidad y vigencia.
-6. Pruebas de navegador, móvil y regresión.
-
-La sección general de gestión económico-financiera localizada en el portal solo muestra el Plan Antifraude. No acredita por sí sola el presupuesto vigente ni sus bases.
-
-## La Puebla
-
-Pendiente completar 19 temas, sustituir plantillas, alcanzar 30–40 preguntas por tema y resolver al menos 20 supuestos.
+1. Revisión literal artículo por artículo.
+2. Desarrollo completo de las soluciones de los supuestos.
+3. Auditoría final de dificultad y distractores.
+4. Pruebas visuales de navegador, móvil y tablet.
+5. Seguimiento de listas, tribunal y fecha de examen.
 
 ## Carranque
 
-Pendiente desarrollar 20 temas, alcanzar 30–40 preguntas por tema y crear supuestos exclusivamente sobre temas 3–20.
+Permanece pendiente desarrollar e integrar los 20 temas, alcanzar 30 preguntas por tema, crear supuestos exclusivamente sobre temas 3–20 y generar simulacros 80 + 5.
 
 ## Arquitectura pendiente
 
-1. Consolidar una única fuente de datos.
-2. Separar proceso, temario, preguntas, supuestos y simulacros.
-3. Eliminar capas históricas sin perder progreso.
-4. Ampliar CI con pruebas de navegador y una prueba específica de UC3M v0.67.
-5. Impedir reutilización fuera del programa oficial.
+1. Consolidar módulos históricos.
+2. Separar definitivamente proceso, temario, preguntas, supuestos y simulacros.
+3. Añadir pruebas de navegador y PWA sin conexión.
+4. Verificar conservación del progreso guardado.
+5. Automatizar las métricas de avance.
