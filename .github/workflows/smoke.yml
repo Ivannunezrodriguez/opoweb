@@ -34,10 +34,13 @@ jobs:
           node --check assets/js/uc3m-v66.js
           node --check assets/js/uc3m-v67.js
           node --check assets/js/puebla-v68.js
+          node --check assets/js/carranque-v69.js
+          node --check assets/js/carranque-v69-fix.js
           node --check assets/js/ui-v66.js
           node --check assets/js/ui-v67.js
           node --check assets/js/ui-puebla-v68.js
-      - name: Run regression tests
+          node --check assets/js/ui-carranque-v69.js
+      - name: Run existing regression tests
         run: |
           node tests/smoke-v56.js
           node tests/smoke-v57.js
@@ -53,3 +56,26 @@ jobs:
           node tests/smoke-uc3m-v67.js
           node tests/smoke-puebla-v68.js
           node tests/smoke-puebla-live-v68.js
+      - name: Run Carranque unit test
+        run: node tests/smoke-carranque-v69.js
+      - name: Run Carranque summary test
+        run: node tests/smoke-carranque-live-v69.js
+
+  carranque-live:
+    name: Carranque real · tema ${{ matrix.theme }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        theme: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate theme
+        env:
+          CARRANQUE_THEME: ${{ matrix.theme }}
+        run: node tests/smoke-carranque-live-v69.js
