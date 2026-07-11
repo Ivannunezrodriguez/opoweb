@@ -5,6 +5,9 @@
   const norm = value => String(value || '')
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const normOption = value => String(value || '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase().replace(/\s+/g, ' ').trim();
 
   const genericPatterns = [
     'cual es el enfoque correcto para preparar',
@@ -59,7 +62,7 @@
         const textKey = norm(question.text);
         const options = Array.isArray(question.options) ? question.options : [];
         const letters = options.map(option => option.letter);
-        const optionTexts = options.map(option => norm(option.text));
+        const optionTexts = options.map(option => normOption(option.text));
         const justification = String(question.justification || question.source || '').trim();
 
         if (!question.id || seenIds.has(question.id)) {
@@ -101,7 +104,7 @@
           addIssue('warning', 'short-justification', ope, theme, question, justification);
         }
 
-        const combined = `${textKey} ${norm(justification)} ${optionTexts.join(' ')}`;
+        const combined = `${textKey} ${norm(justification)} ${options.map(option => norm(option.text)).join(' ')}`;
         if (genericPatterns.some(pattern => combined.includes(pattern))) {
           genericQuestions += 1;
           totals.genericQuestions += 1;
