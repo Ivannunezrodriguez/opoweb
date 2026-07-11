@@ -57,5 +57,24 @@ jobs:
           node tests/smoke-puebla-live-v68.js
       - name: Run Carranque unit test
         run: node tests/smoke-carranque-v69.js
-      - name: Run Carranque integrated test
+      - name: Run Carranque summary test
+        run: node tests/smoke-carranque-live-v69.js
+
+  carranque-live:
+    name: Carranque real · tema ${{ matrix.theme }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        theme: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate theme
+        env:
+          CARRANQUE_THEME: ${{ matrix.theme }}
         run: node tests/smoke-carranque-live-v69.js
