@@ -11,9 +11,9 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.66.0**
-- Caché PWA: `opoweb-v73`
-- Última revisión estructural: 10 de julio de 2026
+- **OpoWeb v0.67.0**
+- Caché PWA: `opoweb-v74`
+- Última revisión estructural: 11 de julio de 2026
 
 ## Avance aproximado
 
@@ -21,11 +21,11 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 |---|---:|
 | Funcionamiento e interfaz | 89 % |
 | Diputación C1 | 98 % |
-| UC3M C2 | 78 % |
+| UC3M C2 | 84 % |
 | La Puebla C2 | 30 % |
 | Carranque C2 | 23 % |
 | Arquitectura y pruebas | 58 % |
-| **OpoWeb global** | **74 %** |
+| **OpoWeb global** | **75 %** |
 
 Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica. No representan probabilidad de aprobar.
 
@@ -37,73 +37,106 @@ Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, s
 - Cobertura cuantitativa: 100 %.
 - Estimación global: 98 % por la brecha documental de los Estatutos del OAPGT y el cierre técnico pendiente.
 
-## UC3M · v0.66
+## UC3M · v0.67
 
-Los veinte temas alcanzan ahora al menos 30 preguntas válidas.
+Los veinte temas mantienen al menos 30 preguntas válidas y se integra una parte relevante de la normativa institucional publicada en el portal oficial de la Universidad.
 
-### Resultado
+### Resultado cuantitativo
 
-- 110 preguntas nuevas en once temas.
-- 600 preguntas válidas acumuladas.
+- **615 preguntas válidas acumuladas**.
 - 20 de 20 temas con 30 o más preguntas.
 - Tres simulacros de 70 preguntas + 5 reservas.
 - Cuatro alternativas distintas, respuesta correcta válida y justificación normativa.
 
-### Temas reforzados
+### Tema 15 cerrado con Estatutos oficiales
 
-- Constitución española.
-- Organización y funcionamiento de las Administraciones públicas.
-- Administración electrónica e interoperabilidad.
-- Protección de datos y derechos digitales.
-- Personal, provisión, situaciones, incompatibilidades y disciplina.
-- Prevención de riesgos laborales.
-- Sistema universitario, comunidad universitaria y PTGAS.
-- Ordenación de enseñanzas oficiales.
-- Acceso y admisión universitaria.
-- Contratación pública.
+Se ha sustituido la capa genérica por un desarrollo específico del texto refundido oficial:
 
-La cobertura cuantitativa de UC3M queda al 100 %, pero su estimación global se mantiene en 78 % porque falta verificar y cerrar normativa interna, presupuesto, matrícula, permanencia, evaluación, admisión propia y contratación institucional.
+- naturaleza jurídica y autonomía de la UC3M;
+- Defensor Universitario, elección, mandato, reelección, memoria y medios;
+- servicios universitarios, creación, gestión y dirección;
+- patrimonio, inventario y régimen presupuestario;
+- memoria económica y control interno y externo;
+- contratación estatutaria;
+- iniciativa, tramitación y aprobación de la reforma de Estatutos.
 
-## Pendientes principales
+### Tema 20: especial referencia UC3M
 
-### UC3M
+Se incorpora la regulación estatutaria propia:
 
-1. Estatutos y organización interna vigentes.
-2. Presupuesto y bases de ejecución.
-3. Normas de matrícula, permanencia y evaluación.
-4. Admisión propia y contratación interna.
-5. Auditoría transversal de literalidad y vigencia.
+- el Rector como órgano de contratación;
+- nombramiento y composición mínima de la mesa;
+- audiencia a representantes de los trabajadores en determinados servicios con sucesión de empresa;
+- acuerdo preceptivo del Consejo Social para inversiones plurianuales con fondos futuros;
+- localización de la resolución de 31 de mayo de 2022 sobre delegaciones en contratación, retención de crédito y gasto.
 
-### La Puebla
+La distribución literal completa de las competencias delegadas sigue pendiente de extracción del documento original.
 
-Completar 19 temas, sustituir plantillas y ampliar supuestos.
+### Administración electrónica y organización
 
-### Carranque
+Se añaden enlaces y referencias a:
 
-Desarrollar 20 temas, sustituir preguntas de método y rehacer los supuestos sobre temas 3–20.
+- Política de Gestión de Documentos Electrónicos, aprobada en 2024;
+- Política de Seguridad de Sistemas de Información, aprobada en 2025;
+- Reglamento de Administración Electrónica, aprobado en 2021 y modificado en 2025;
+- normativa de uso de recursos TIC de 2023;
+- creación del Boletín Oficial Electrónico;
+- portal oficial de órganos, delegaciones de competencia y delegaciones de firma.
 
-### Arquitectura
+### Pendiente real de UC3M
 
-Consolidar módulos históricos, ampliar pruebas de navegador y validar la interfaz móvil.
+1. Presupuesto vigente y bases de ejecución.
+2. Normas propias de matrícula, permanencia y evaluación.
+3. Reglas anuales de admisión UC3M.
+4. Extracción literal completa de la delegación de contratación.
+5. Auditoría transversal de literalidad, vigencia y dificultad.
+6. Pruebas finales de navegador y móvil.
+
+La sección económico-financiera de la página general de normativa solo publica actualmente el Plan Antifraude; por tanto, no se ha fingido disponer del presupuesto vigente ni de sus bases.
+
+## Enlaces UC3M incorporados
+
+- Portal general de normativa.
+- Estatutos UC3M.
+- Órganos y delegaciones.
+- Administración electrónica y protección de datos.
+- Gestión económico-financiera.
+
+## La Puebla
+
+Pendiente completar 19 temas, sustituir plantillas y ampliar supuestos.
+
+## Carranque
+
+Pendiente desarrollar 20 temas, sustituir preguntas de método y rehacer los supuestos sobre temas 3–20.
+
+## Arquitectura
+
+Pendiente consolidar módulos históricos, ampliar pruebas de navegador y validar la interfaz móvil.
 
 ## Pruebas automáticas
 
-GitHub Actions ejecuta las pruebas de Diputación `smoke-v56` a `smoke-v65` y `smoke-uc3m-v66`. Se comprueban recuentos, reservas, cobertura temática y ausencia de duplicados internos.
+GitHub Actions ejecuta las pruebas de Diputación `smoke-v56` a `smoke-v65` y `smoke-uc3m-v66`. La siguiente ampliación técnica debe añadir la validación específica de la capa institucional v0.67.
 
 ## Historial reciente
+
+### v0.67.0 · 2026-07-11
+
+- Integrado el portal oficial de normativa UC3M.
+- Cerrado el tema 15 con el texto refundido de los Estatutos.
+- Añadidas preguntas institucionales a los temas 15 y 20.
+- Incorporada la capa estatutaria de contratación UC3M.
+- Catalogadas las normas de administración electrónica de 2024 y 2025.
+- Simulacros regenerados a 70 + 5.
+- Caché actualizada a `opoweb-v74`.
 
 ### v0.66.0 · 2026-07-10
 
 - Añadidas 110 preguntas a once temas de UC3M.
-- Los veinte temas alcanzan 30 o más preguntas.
+- Los veinte temas alcanzaron 30 o más preguntas.
 - Simulacros regenerados a 70 + 5 reservas.
-- Caché actualizada a `opoweb-v73`.
 
 ### v0.65.0 · 2026-07-10
 
 - Añadidas 32 preguntas verificadas al tema 22 de Diputación.
-- Los 40 temas alcanzan el objetivo cuantitativo mínimo de 30 preguntas.
-
-### v0.64.0 · 2026-07-10
-
-- Añadidas 135 preguntas a los temas 32–40 de Diputación.
+- Los 40 temas alcanzaron el objetivo cuantitativo mínimo de 30 preguntas.
