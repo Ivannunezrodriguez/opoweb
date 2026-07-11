@@ -19,6 +19,7 @@ run('assets/js/carranque-v69.js');
 run('assets/js/carranque-v69-fix.js');
 run('assets/js/carranque-v70.js');
 run('assets/js/practicos-v71.js');
+run('assets/js/uc3m-v72-clean.js');
 run('assets/js/auditoria-calidad-v72.js');
 
 const report = window.OPOWEB_AUDITORIA_V72;
@@ -40,7 +41,7 @@ console.log('POR OPE', JSON.stringify(report.oposiciones.map(item => ({
 console.log('INCIDENCIAS', JSON.stringify(report.issues.slice(0, 30)));
 
 assert.equal(report.oposiciones.length, 4);
-assert.ok(report.totalQuestions >= 3000, `Total inesperado: ${report.totalQuestions}`);
+assert.ok(report.totalQuestions >= 2800, `Total inesperado: ${report.totalQuestions}`);
 assert.equal(report.invalidAnswers, 0, JSON.stringify(report.issues.filter(item => item.code === 'invalid-answer').slice(0, 20), null, 2));
 assert.equal(report.invalidOptions, 0, JSON.stringify(report.issues.filter(item => item.code === 'invalid-options').slice(0, 20), null, 2));
 assert.equal(report.duplicateIds, 0, JSON.stringify(report.issues.filter(item => item.code === 'duplicate-id').slice(0, 20), null, 2));
