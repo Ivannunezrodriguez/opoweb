@@ -23,6 +23,7 @@ run('assets/js/auditoria-calidad-v72.js');
 
 const report = window.OPOWEB_AUDITORIA_V72;
 assert.ok(report, 'No se generó la auditoría');
+fs.writeFileSync('audit-v72.json', JSON.stringify(report, null, 2));
 console.log('RESUMEN', JSON.stringify(report.summary));
 console.log('POR OPE', JSON.stringify(report.oposiciones.map(item => ({
   id: item.id,
