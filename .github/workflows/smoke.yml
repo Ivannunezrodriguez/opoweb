@@ -61,7 +61,6 @@ jobs:
           node tests/smoke-v65.js
           node tests/smoke-uc3m-v66.js
           node tests/smoke-uc3m-v67.js
-          node tests/uc3m-live-v72.js
           node tests/smoke-puebla-v68.js
           node tests/smoke-puebla-live-v68.js
           node tests/smoke-carranque-v69.js
@@ -69,6 +68,26 @@ jobs:
           node tests/smoke-carranque-v70.js
           node tests/smoke-carranque-live-v70.js
           node tests/practicos-v71.js
+
+  uc3m-clean:
+    name: UC3M banco real v0.72
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate clean UC3M bank
+        run: node tests/uc3m-live-v72.js
+      - name: Upload UC3M report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: uc3m-v72
+          path: uc3m-v72.json
+          if-no-files-found: ignore
 
   quality-audit:
     name: Auditoría transversal v0.72
