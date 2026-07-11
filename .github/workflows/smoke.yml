@@ -33,6 +33,7 @@ jobs:
           node --check assets/js/diputacion-v65.js
           node --check assets/js/uc3m-v66.js
           node --check assets/js/uc3m-v67.js
+          node --check assets/js/uc3m-v72-clean.js
           node --check assets/js/puebla-v68.js
           node --check assets/js/carranque-v69.js
           node --check assets/js/carranque-v69-fix.js
@@ -60,6 +61,7 @@ jobs:
           node tests/smoke-v65.js
           node tests/smoke-uc3m-v66.js
           node tests/smoke-uc3m-v67.js
+          node tests/uc3m-live-v72.js
           node tests/smoke-puebla-v68.js
           node tests/smoke-puebla-live-v68.js
           node tests/smoke-carranque-v69.js
