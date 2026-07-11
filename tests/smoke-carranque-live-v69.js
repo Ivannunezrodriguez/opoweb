@@ -13,6 +13,7 @@ run('data/uc3m.js');
 run('data/ope-audit-v41.js');
 for (let version = 43; version <= 65; version += 1) run(`assets/js/diputacion-v${version}.js`);
 run('assets/js/carranque-v69.js');
+run('assets/js/carranque-v69-fix.js');
 
 const carranque = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'carranque-aux-admin-2026');
 assert.ok(carranque, 'No se cargó Carranque');
