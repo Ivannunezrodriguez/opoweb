@@ -46,6 +46,7 @@ jobs:
           node --check assets/js/ui-carranque-v69.js
           node --check assets/js/ui-carranque-v70.js
           node --check assets/js/ui-practicos-v71.js
+          node --check assets/js/ui-uc3m-v72.js
           node --check assets/js/ui-auditoria-v72.js
       - name: Run regression tests
         run: |
