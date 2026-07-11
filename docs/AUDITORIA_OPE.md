@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.68
+# Auditoría global de OpoWeb · v0.69
 
 Fecha de revisión: 11 de julio de 2026.
 
@@ -15,13 +15,13 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 90 % |
+| Funcionamiento e interfaz | 91 % |
 | Diputación C1 | 98 % |
 | UC3M C2 | 84 % |
 | La Puebla C2 | 74 % |
-| Carranque C2 | 23 % |
-| Arquitectura y pruebas | 61 % |
-| **OpoWeb global** | **81 %** |
+| Carranque C2 | 52 % |
+| Arquitectura y pruebas | 64 % |
+| **OpoWeb global** | **84 %** |
 
 ## Diputación de Toledo C1
 
@@ -42,66 +42,64 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 
 Pendiente: presupuesto y bases de ejecución, matrícula, permanencia, evaluación, reglas anuales de admisión, extracción literal de delegaciones y auditoría final.
 
-## La Puebla C2 · v0.68
-
-### Resultado cuantitativo
+## La Puebla C2
 
 - 19 de 19 temas con 30 preguntas específicas.
 - 570 preguntas acumuladas.
-- Eliminación de las preguntas genéricas de método.
-- 20 supuestos prácticos vinculados al programa.
-- Tres simulacros de 50 preguntas + 5 reservas y 60 minutos.
-- Cobertura de los diecinueve temas y ausencia de duplicados internos.
+- 20 supuestos prácticos.
+- Tres simulacros de 50 + 5.
+- Estimación 74 %.
+
+Pendiente: revisión literal, soluciones desarrolladas, auditoría de dificultad y pruebas visuales.
+
+## Carranque C2 · v0.69
+
+### Resultado cuantitativo
+
+- Temas 1–10 con 30 preguntas específicas.
+- Eliminación de plantillas genéricas en la primera mitad del programa.
+- Ocho supuestos prácticos, uno por cada tema práctico del 3 al 10.
+- Pruebas unitaria e integrada real.
+- Estimación global: 52 %.
 
 ### Reutilización controlada
 
-El banco procede de materias comunes auditadas en Diputación. La correspondencia se define tema por tema y excluye contenido ajeno a La Puebla.
-
-Materias reutilizadas:
+Se reutiliza contenido común ya auditado para:
 
 - Constitución y fuentes;
-- Leyes 39/2015 y 40/2015;
-- régimen local;
-- empleo público de Castilla-La Mancha;
-- prevención, igualdad y protección de datos;
-- obligaciones, gestión y recaudación tributaria;
-- tributos locales;
-- firma y certificados electrónicos;
-- Windows, navegación, impresión, Writer, Calc, hardware y periféricos.
+- Ley 39/2015;
+- Ley 40/2015;
+- revisión y recursos;
+- responsabilidad patrimonial;
+- municipio, padrón y competencias.
 
-### Exclusiones
+El filtro excluye referencias específicas a Diputación, OAPGT, Acuerdo Regulador, GroupWise, Base e Impress.
 
-- OAPGT y Acuerdo Regulador de Diputación;
-- referencias específicas a la Diputación Provincial de Toledo;
-- GroupWise;
-- LibreOffice Base;
-- LibreOffice Impress.
+### Desarrollo específico
+
+**Tema 8:** intervención administrativa local, policía, declaraciones responsables, licencias, subvenciones, gestión de servicios y actividad económica local.
+
+**Tema 10:** potestad normativa, aprobación inicial, información pública, reclamaciones, publicación íntegra, entrada en vigor, control jurisdiccional y ordenanzas fiscales.
 
 ### Controles automáticos
 
 Las pruebas comprueban:
 
-- 570 preguntas totales;
-- 19 temas con exactamente 30 preguntas;
+- 30 preguntas en cada tema del 1 al 10;
 - cuatro opciones y respuesta válida;
 - justificación o fuente;
-- ausencia de plantillas de método;
-- 20 supuestos con rúbrica;
-- tres simulacros 50 + 5;
-- 19 temas representados en cada simulacro;
-- ausencia de preguntas duplicadas dentro de cada simulacro.
+- ausencia de plantillas genéricas;
+- ausencia de duplicados dentro de cada tema;
+- ocho supuestos limitados a los temas 3–10;
+- desarrollo temático específico de los temas 8 y 10.
 
-### Lo que impide declarar La Puebla al 100 %
+### Lo que impide declarar Carranque al 100 %
 
-1. Revisión literal artículo por artículo.
-2. Desarrollo completo de las soluciones de los supuestos.
-3. Auditoría final de dificultad y distractores.
-4. Pruebas visuales de navegador, móvil y tablet.
-5. Seguimiento de listas, tribunal y fecha de examen.
-
-## Carranque
-
-Permanece pendiente desarrollar e integrar los 20 temas, alcanzar 30 preguntas por tema, crear supuestos exclusivamente sobre temas 3–20 y generar simulacros 80 + 5.
+1. Desarrollar los temas 11–20.
+2. Crear los supuestos de los temas 11–20.
+3. Generar simulacros oficiales de 80 + 5.
+4. Auditar literalidad, dificultad y distractores.
+5. Probar navegador, móvil, tablet y PWA.
 
 ## Arquitectura pendiente
 
