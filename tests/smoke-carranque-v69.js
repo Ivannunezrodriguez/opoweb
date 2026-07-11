@@ -30,6 +30,7 @@ const window = { OPOSICIONES_DATA: { oposiciones: [
 ] } };
 const context = { window, console, Set, Array, Object, String, Number, Boolean, Math };
 vm.runInNewContext(fs.readFileSync('assets/js/carranque-v69.js', 'utf8'), context);
+vm.runInNewContext(fs.readFileSync('assets/js/carranque-v69-fix.js', 'utf8'), context);
 
 const carranque = window.OPOSICIONES_DATA.oposiciones[0];
 assert.equal(window.OPOWEB_CARRANQUE_V69.targetThemes, 10);
