@@ -19,6 +19,8 @@ run('assets/js/uc3m-v72-clean.js');
 const ope = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'uc3m-aux-admin-2026');
 const release = window.OPOWEB_UC3M_V72;
 assert.ok(ope && release);
+fs.writeFileSync('uc3m-v72.json', JSON.stringify(release, null, 2));
+console.log('UC3M', JSON.stringify(release));
 assert.equal(ope.themes.length, 20);
 assert.equal(release.genericQuestions, 0);
 assert.ok(release.totalQuestions >= 450, `Total insuficiente: ${release.totalQuestions}`);
