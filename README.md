@@ -11,122 +11,104 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.70.0**
-- Caché PWA: `opoweb-v77`
+- **OpoWeb v0.71.0**
+- Caché PWA: `opoweb-v78`
 - Última revisión estructural: 11 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 92 % |
+| Funcionamiento e interfaz | 94 % |
 | Diputación C1 | 98 % |
 | UC3M C2 | 84 % |
-| La Puebla C2 | 74 % |
-| Carranque C2 | 79 % |
-| Arquitectura y pruebas | 68 % |
-| **OpoWeb global** | **87 %** |
+| La Puebla C2 | 84 % |
+| Carranque C2 | 88 % |
+| Arquitectura y pruebas | 72 % |
+| **OpoWeb global** | **90 %** |
 
 Los porcentajes son orientativos. Combinan temario, banco de preguntas, supuestos, simulacros, fuentes, pruebas y deuda técnica. No representan una probabilidad de aprobar.
 
 ## Diputación de Toledo
 
-- Los 40 temas alcanzan al menos 30 preguntas específicas.
+- 40 temas con al menos 30 preguntas específicas.
 - 1.269 preguntas manuales acumuladas.
 - Tres simulacros de 50 + 5.
-- Cobertura cuantitativa: 100 %.
-- Estimación global: 98 % por la brecha documental de los Estatutos del OAPGT y el cierre técnico pendiente.
+- Estimación: 98 % por la brecha documental de los Estatutos del OAPGT y el cierre técnico pendiente.
 
 ## UC3M
 
-- 20 de 20 temas con al menos 30 preguntas.
+- 20 temas con al menos 30 preguntas.
 - 615 preguntas válidas.
 - Tres simulacros de 70 + 5.
 - Tema 15 desarrollado con Estatutos oficiales.
-- Capa estatutaria de contratación y administración electrónica incorporada.
-- Estimación global: 84 %.
+- Estimación: 84 %.
 
-Pendiente: presupuesto y bases de ejecución, matrícula, permanencia, evaluación, reglas anuales de admisión, extracción literal de delegaciones de contratación y auditoría institucional final.
+Pendiente: presupuesto y bases de ejecución, matrícula, permanencia, evaluación, reglas anuales de admisión, delegaciones de contratación y auditoría institucional final.
 
 ## La Puebla
 
 - 570 preguntas específicas.
-- 19 de 19 temas con 30 preguntas.
-- 20 supuestos prácticos.
+- 19 temas con 30 preguntas.
+- 20 supuestos prácticos con solución desarrollada.
 - Tres simulacros de 50 + 5 y 60 minutos.
-- Estimación global: 74 %.
+- Estimación: 84 %.
 
-Pendiente: revisión literal, soluciones desarrolladas de los supuestos, auditoría de dificultad y pruebas visuales.
+## Carranque
 
-## Carranque · v0.70
+- 600 preguntas específicas.
+- 20 temas con 30 preguntas.
+- 18 supuestos prácticos con solución desarrollada.
+- Tres simulacros de 80 + 5 y 90 minutos.
+- Estimación: 88 %.
 
-La cobertura cuantitativa mínima del programa queda completa.
+## Soluciones prácticas · v0.71
 
-### Resultado
+Los 38 supuestos de La Puebla y Carranque incluyen ahora:
 
-- **20 de 20 temas con 30 preguntas específicas**.
-- **600 preguntas válidas**.
-- Eliminación de preguntas genéricas en todo el programa.
-- **18 supuestos prácticos**, uno por cada tema práctico del 3 al 20.
-- **Tres simulacros de 80 preguntas + 5 reservas**, con 90 minutos.
-- Cobertura de los veinte temas y ausencia de duplicados internos.
-- Estimación global: **79 %**.
+- base jurídica;
+- secuencia ordenada de resolución;
+- comprobación de órgano, trámite, plazo y efecto;
+- errores frecuentes;
+- conclusión modelo;
+- rúbrica sobre diez puntos.
 
-### Segunda mitad incorporada
+La interfaz permite redactar primero la respuesta y después desplegar la solución estructurada. La prueba automática exige que los 38 casos contengan todos los apartados y un mínimo de desarrollo.
 
-- Función pública local y situaciones administrativas.
-- Bienes de las entidades locales.
-- Contratación pública local.
-- Registro, comunicaciones y notificaciones.
-- Órganos municipales, competencias, actas y certificaciones.
-- Hacienda local, tributos y ordenanzas fiscales.
-- Presupuesto, ejecución y modificaciones.
-- Estructura presupuestaria por programas y económica.
-- Liquidación, resultado, remanente, estabilidad y regla de gasto.
-- Administración electrónica, factura electrónica y morosidad.
+## Pendiente real
 
-### Pendiente real
-
-1. Soluciones desarrolladas de los 18 supuestos.
-2. Revisión literal artículo por artículo de los 20 temas.
-3. Auditoría de dificultad y calidad de distractores.
-4. Validación en navegador, móvil, tablet y PWA sin conexión.
-5. Seguimiento de listas, tribunal y fecha de examen.
-
-## Arquitectura
-
-Pendiente consolidar módulos históricos, ampliar pruebas reales de navegador, comprobar la PWA sin conexión y asegurar que el progreso guardado no se pierde.
+1. Revisar literalmente artículos, plazos y órganos de La Puebla y Carranque.
+2. Auditar dificultad y calidad de distractores.
+3. Localizar los Estatutos vigentes del OAPGT.
+4. Completar la normativa interna pendiente de UC3M.
+5. Añadir pruebas reales de navegador, móvil, tablet y PWA sin conexión.
+6. Consolidar las capas históricas de JavaScript sin perder progreso guardado.
+7. Mantener actualizado el seguimiento de listas, tribunales y fechas de examen.
 
 ## Pruebas automáticas
 
 GitHub Actions ejecuta:
 
 - pruebas de Diputación `smoke-v56` a `smoke-v65`;
-- `smoke-uc3m-v66` y `smoke-uc3m-v67`;
-- pruebas unitaria e integrada de La Puebla v0.68;
-- pruebas de Carranque v0.69;
-- prueba unitaria, integrada y matriz independiente para los 20 temas de Carranque v0.70.
-
-Las pruebas de Carranque comprueban 600 preguntas, veinte temas a 30, cuatro opciones, respuesta válida, justificación, ausencia de plantillas y duplicados, 18 supuestos y tres simulacros 80 + 5.
+- pruebas de UC3M v0.66 y v0.67;
+- pruebas de La Puebla v0.68;
+- pruebas de Carranque v0.69 y v0.70, incluida una matriz de veinte temas;
+- prueba estructural de los 38 supuestos prácticos v0.71.
 
 ## Historial reciente
 
+### v0.71.0 · 2026-07-11
+
+- Desarrolladas las soluciones de 20 supuestos de La Puebla y 18 de Carranque.
+- Añadidos base jurídica, pasos, errores frecuentes, conclusión y rúbrica.
+- Actualizada la vista de supuestos.
+- Añadida prueba automática de los 38 casos.
+- Caché actualizada a `opoweb-v78`.
+
 ### v0.70.0 · 2026-07-11
 
-- Integrados los temas 11–20 de Carranque.
-- Los veinte temas alcanzan 30 preguntas específicas.
-- Añadidos diez supuestos para completar los temas prácticos 3–20.
-- Generados tres simulacros de 80 + 5.
-- Desarrollados bienes, presupuesto, estabilidad, factura electrónica y morosidad.
-- Caché actualizada a `opoweb-v77`.
-
-### v0.69.0 · 2026-07-11
-
-- Integrados los temas 1–10 de Carranque.
-- Creados ocho supuestos prácticos sobre los temas 3–10.
+- Carranque completa los veinte temas, 600 preguntas, 18 supuestos y simulacros 80 + 5.
 
 ### v0.68.0 · 2026-07-11
 
-- Integrada La Puebla sobre la versión actual de `main`.
-- Los 19 temas alcanzan 30 preguntas.
-- Creados 20 supuestos prácticos y simulacros 50 + 5.
+- La Puebla completa 570 preguntas, 20 supuestos y simulacros 50 + 5.

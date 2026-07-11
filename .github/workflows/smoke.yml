@@ -37,11 +37,13 @@ jobs:
           node --check assets/js/carranque-v69.js
           node --check assets/js/carranque-v69-fix.js
           node --check assets/js/carranque-v70.js
+          node --check assets/js/practicos-v71.js
           node --check assets/js/ui-v66.js
           node --check assets/js/ui-v67.js
           node --check assets/js/ui-puebla-v68.js
           node --check assets/js/ui-carranque-v69.js
           node --check assets/js/ui-carranque-v70.js
+          node --check assets/js/ui-practicos-v71.js
       - name: Run regression tests
         run: |
           node tests/smoke-v56.js
@@ -62,6 +64,7 @@ jobs:
           node tests/smoke-carranque-live-v69.js
           node tests/smoke-carranque-v70.js
           node tests/smoke-carranque-live-v70.js
+          node tests/practicos-v71.js
 
   carranque-live:
     name: Carranque v0.70 · tema ${{ matrix.theme }}
