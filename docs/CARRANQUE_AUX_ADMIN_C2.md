@@ -1,4 +1,4 @@
-# Carranque · Auxiliar Administrativo C2 · OpoWeb v0.69
+# Carranque · Auxiliar Administrativo C2 · OpoWeb v0.70
 
 ## Estado del proceso
 
@@ -11,9 +11,11 @@
 ## Estado de preparación
 
 - 20 temas oficiales.
-- Temas 1–10 con 30 preguntas específicas.
-- Ocho supuestos prácticos, uno por cada tema del 3 al 10.
-- Estimación global: 52 %.
+- 20 temas con al menos 30 preguntas específicas.
+- 600 preguntas válidas.
+- 18 supuestos prácticos, uno por cada tema del 3 al 20.
+- Tres simulacros de 80 preguntas más 5 reservas y 90 minutos.
+- Estimación global: 79 %.
 
 ## Bloques completados
 
@@ -27,47 +29,83 @@
 8. Fomento, policía, servicio público y licencias.
 9. Municipio, población, padrón, competencias y otras entidades.
 10. Ordenanzas y reglamentos locales.
+11. Función pública local y situaciones administrativas.
+12. Bienes de las entidades locales.
+13. Contratación pública local.
+14. Registro, comunicaciones y notificaciones.
+15. Órganos municipales, competencias, actas y certificaciones.
+16. Hacienda local, ingresos, tributos y ordenanzas fiscales.
+17. Presupuesto, ejecución, modificaciones y cuenta general.
+18. Estructura presupuestaria de gastos e ingresos.
+19. Liquidación, resultado, remanente, estabilidad y regla de gasto.
+20. Modernización, factura electrónica y morosidad.
 
-## Desarrollo específico
+## Desarrollo específico de la segunda mitad
 
-### Tema 8
+### Tema 12 · Bienes
 
-- intervención y policía administrativa;
-- licencias, declaraciones responsables y comunicaciones;
-- necesidad y proporcionalidad;
-- subvenciones y reintegro;
-- gestión directa e indirecta de servicios;
-- continuidad, igualdad y actividad económica local.
+- dominio público, patrimoniales y comunales;
+- afectación y desafectación;
+- adquisición, inventario e inscripción;
+- investigación, deslinde y recuperación de oficio;
+- uso común general, especial y privativo;
+- concesiones, enajenación y cesión.
 
-### Tema 10
+### Tema 18 · Estructura presupuestaria
 
-- potestad reglamentaria y autoorganización;
-- ordenanzas, reglamentos orgánicos y bandos;
-- aprobación inicial y Pleno;
-- información pública mínima de treinta días;
-- reclamaciones y aprobación definitiva;
-- publicación íntegra y entrada en vigor;
-- impugnación y control jurisdiccional;
-- ordenanzas fiscales.
+- clasificación por programas;
+- clasificación económica y orgánica;
+- capítulos 1 a 9 de gastos;
+- capítulos 1 a 9 de ingresos;
+- aplicación presupuestaria;
+- vinculación jurídica y crédito limitativo.
 
-## Supuestos prácticos incorporados
+### Tema 19 · Liquidación y estabilidad
 
-1. Interesado y representación.
-2. Acto y notificación.
-3. Recurso procedente.
-4. Responsabilidad patrimonial.
-5. Procedimiento sancionador.
-6. Licencia o declaración responsable.
-7. Alta padronal.
-8. Aprobación de una ordenanza.
+- cierre y aprobación de la liquidación;
+- resultado presupuestario;
+- remanente de tesorería;
+- dudoso cobro y financiación afectada;
+- estabilidad y sostenibilidad financiera;
+- regla de gasto y plan económico-financiero.
 
-Cada caso incluye una rúbrica sobre diez puntos: norma, órgano, trámite, plazo y efecto, y claridad.
+### Tema 20 · Administración y factura electrónica
+
+- relación electrónica y expediente;
+- presentación de facturas;
+- sujetos obligados a factura electrónica;
+- punto general de entrada;
+- registro contable de facturas;
+- trazabilidad, archivo y custodia;
+- intereses de demora y costes de cobro.
+
+## Supuestos prácticos
+
+Se incorpora un caso para cada tema del 3 al 20:
+
+- representación, actos, recursos, responsabilidad y sancionador;
+- licencias, padrón y ordenanzas;
+- situaciones administrativas y bienes;
+- contratación y registro electrónico;
+- órganos municipales y ordenanzas fiscales;
+- modificaciones y clasificación presupuestaria;
+- liquidación, estabilidad, factura electrónica y morosidad.
+
+Cada caso incluye rúbrica sobre diez puntos: norma, órgano, trámite, plazo y efecto, y claridad.
+
+## Simulacros
+
+- Tres modelos independientes.
+- 80 preguntas ordinarias.
+- 5 preguntas de reserva.
+- 90 minutos.
+- Presencia de los veinte temas.
+- Sin preguntas repetidas dentro del mismo simulacro.
 
 ## Pendiente
 
-1. Temas 11–20.
-2. Diez supuestos adicionales correspondientes a esos temas.
-3. Tres simulacros de 80 preguntas más 5 reservas.
-4. Desarrollo de soluciones completas.
-5. Auditoría de literalidad, vigencia, dificultad y distractores.
-6. Validación en navegador, móvil, tablet y modo sin conexión.
+1. Desarrollo completo y razonado de las soluciones de los 18 supuestos.
+2. Auditoría literal de artículos, órganos y plazos.
+3. Revisión de dificultad y calidad de distractores.
+4. Validación en navegador, móvil, tablet y modo sin conexión.
+5. Seguimiento de listas, tribunal y fecha de examen.
