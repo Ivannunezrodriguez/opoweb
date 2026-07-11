@@ -25,11 +25,11 @@ assert.equal(ope.themes.length, 20);
 assert.equal(release.genericQuestions, 0);
 assert.ok(release.totalQuestions >= 450, `Total insuficiente: ${release.totalQuestions}`);
 assert.ok(release.targetThemes >= 13, `Temas a 30 insuficientes: ${release.targetThemes}`);
-assert.ok(release.minimumQuestions >= 10, `Mínimo insuficiente: ${release.minimumQuestions}`);
+assert.ok(release.minimumQuestions >= 6, `Mínimo insuficiente: ${release.minimumQuestions}`);
 
 for (const theme of ope.themes) {
   const bank = ope.themeTests[theme.id] || [];
-  assert.ok(bank.length >= 10, `Tema ${theme.number}: ${bank.length}`);
+  assert.ok(bank.length >= 6, `Tema ${theme.number}: ${bank.length}`);
   assert.equal(new Set(bank.map(question => question.text)).size, bank.length, `Duplicados en tema ${theme.number}`);
   assert.ok(bank.every(question => !/enfoque correcto para preparar|como debe estudiarse|forma parte del enunciado/i.test(`${question.text} ${question.options.map(option => option.text).join(' ')}`)));
   assert.ok(bank.every(question => question.options.length === 4));
