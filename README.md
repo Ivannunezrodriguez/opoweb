@@ -11,21 +11,21 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.68.0**
-- Caché PWA: `opoweb-v75`
+- **OpoWeb v0.69.0**
+- Caché PWA: `opoweb-v76`
 - Última revisión estructural: 11 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 90 % |
+| Funcionamiento e interfaz | 91 % |
 | Diputación C1 | 98 % |
 | UC3M C2 | 84 % |
 | La Puebla C2 | 74 % |
-| Carranque C2 | 23 % |
-| Arquitectura y pruebas | 61 % |
-| **OpoWeb global** | **81 %** |
+| Carranque C2 | 52 % |
+| Arquitectura y pruebas | 64 % |
+| **OpoWeb global** | **84 %** |
 
 Los porcentajes son orientativos. Combinan temario, banco de preguntas, supuestos, simulacros, fuentes, pruebas y deuda técnica. No representan una probabilidad de aprobar.
 
@@ -48,47 +48,37 @@ Los porcentajes son orientativos. Combinan temario, banco de preguntas, supuesto
 
 Pendiente: presupuesto y bases de ejecución, matrícula, permanencia, evaluación, reglas anuales de admisión, extracción literal de delegaciones de contratación y auditoría institucional final.
 
-## La Puebla · v0.68
+## La Puebla
 
-Se ha rehecho la integración sobre la versión actual de `main`, evitando el conflicto de la rama histórica v0.67.
+- 570 preguntas específicas.
+- 19 de 19 temas con 30 preguntas.
+- 20 supuestos prácticos.
+- Tres simulacros de 50 + 5 y 60 minutos.
+- Estimación global: 74 %.
+
+Pendiente: revisión literal, soluciones desarrolladas de los supuestos, auditoría de dificultad y pruebas visuales.
+
+## Carranque · v0.69
+
+La primera mitad del programa se ha rehecho sobre la versión actual de `main`.
 
 ### Resultado
 
-- **570 preguntas específicas**.
-- **19 de 19 temas con 30 preguntas**.
-- Eliminación de preguntas genéricas del tipo «cómo preparar el tema».
-- Reutilización controlada de contenido común auditado.
-- **20 supuestos prácticos** relacionados con el programa.
-- **Tres simulacros de 50 preguntas + 5 reservas**, con 60 minutos.
-- Cobertura de los diecinueve temas y ausencia de duplicados dentro de cada simulacro.
-
-### Materias reutilizadas
-
-- Constitución;
-- procedimiento administrativo;
-- régimen local;
-- empleo público de Castilla-La Mancha;
-- prevención de riesgos;
-- igualdad y protección de datos;
-- tributación, recaudación y tributos locales;
-- certificados y servicios de confianza;
-- Windows, navegación, impresión, Writer, Calc, hardware y periféricos.
-
-### Exclusiones aplicadas
-
-Se filtran referencias ajenas al programa de La Puebla, especialmente OAPGT, Acuerdo Regulador de Diputación, GroupWise, LibreOffice Base e Impress.
+- **10 de 20 temas con 30 preguntas específicas**.
+- Eliminación de preguntas genéricas en los temas 1–10.
+- Reutilización controlada de Constitución, fuentes, Leyes 39/2015 y 40/2015, recursos, responsabilidad y régimen local.
+- Desarrollo específico del tema 8: intervención, licencias, fomento y servicios públicos.
+- Desarrollo específico del tema 10: ordenanzas, reglamentos, procedimiento, publicación y entrada en vigor.
+- **8 supuestos prácticos**, uno por cada tema práctico del 3 al 10.
+- Estimación global: **52 %**.
 
 ### Pendiente real
 
-1. Revisión literal artículo por artículo de los 19 temas.
-2. Soluciones desarrolladas de los 20 supuestos.
-3. Auditoría de dificultad y calidad de distractores.
-4. Validación visual en navegador, móvil y tablet.
-5. Seguimiento del tribunal, listas y fecha de examen.
-
-## Carranque
-
-Permanece al 23 % en `main`. La siguiente fase será rehacer e integrar los temas 1–10 sobre esta versión actual y después desarrollar los temas 11–20, supuestos y simulacros 80 + 5.
+1. Temas 11–20: función pública local, bienes, contratación, registro, órganos municipales, hacienda, presupuesto, estabilidad y modernización.
+2. Diez supuestos adicionales sobre los temas 11–20.
+3. Tres simulacros oficiales de 80 preguntas + 5 reservas.
+4. Auditoría de dificultad, literalidad y distractores.
+5. Pruebas de navegador, móvil y tablet.
 
 ## Arquitectura
 
@@ -100,30 +90,29 @@ GitHub Actions ejecuta:
 
 - pruebas de Diputación `smoke-v56` a `smoke-v65`;
 - `smoke-uc3m-v66` y `smoke-uc3m-v67`;
-- prueba unitaria e integrada real de La Puebla v0.68.
+- pruebas unitaria e integrada de La Puebla v0.68;
+- pruebas unitaria e integrada de Carranque v0.69.
 
-Las pruebas de La Puebla verifican 570 preguntas, 19 temas a 30, 20 supuestos, simulacros 50 + 5, cobertura de los 19 temas, respuestas válidas y ausencia de duplicados internos.
+Las pruebas de Carranque comprueban los diez primeros temas a 30 preguntas, ausencia de plantillas, cuatro opciones, respuesta válida, justificación, ocho supuestos y los desarrollos específicos de los temas 8 y 10.
 
 ## Historial reciente
 
+### v0.69.0 · 2026-07-11
+
+- Integrados los temas 1–10 de Carranque.
+- Alcanzadas 30 preguntas específicas por tema en la primera mitad del programa.
+- Desarrollados actividad administrativa local, licencias, servicios, ordenanzas y reglamentos.
+- Creados ocho supuestos prácticos sobre los temas 3–10.
+- Añadidas pruebas unitaria e integrada real.
+- Caché actualizada a `opoweb-v76`.
+
 ### v0.68.0 · 2026-07-11
 
-- Integrada de nuevo La Puebla sobre la versión actual de `main`.
-- Sustituidas las preguntas genéricas por 570 preguntas específicas.
+- Integrada La Puebla sobre la versión actual de `main`.
 - Los 19 temas alcanzan 30 preguntas.
-- Creados 20 supuestos prácticos.
-- Simulacros regenerados a 50 + 5 reservas.
-- Añadida prueba específica de UC3M v0.67.
-- Caché actualizada a `opoweb-v75`.
+- Creados 20 supuestos prácticos y simulacros 50 + 5.
 
 ### v0.67.0 · 2026-07-11
 
-- Integrado el portal oficial de normativa UC3M.
-- Cerrado el tema 15 con el texto refundido de los Estatutos.
-- Añadidas preguntas institucionales a los temas 15 y 20.
+- Cerrado el tema 15 de UC3M con el texto refundido de los Estatutos.
 - Incorporada la capa estatutaria de contratación UC3M.
-
-### v0.65.0 · 2026-07-10
-
-- Añadidas 32 preguntas verificadas al tema 22 de Diputación.
-- Los 40 temas alcanzaron el objetivo cuantitativo mínimo de 30 preguntas.
