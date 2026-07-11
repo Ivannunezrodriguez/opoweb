@@ -80,6 +80,13 @@ jobs:
           node-version: '20'
       - name: Audit question quality
         run: node tests/auditoria-calidad-v72.js
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-v72
+          path: audit-v72.json
+          if-no-files-found: ignore
 
   site-integrity:
     name: Integridad web y PWA v0.72
