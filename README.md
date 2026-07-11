@@ -11,23 +11,23 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.67.0**
-- Caché PWA: `opoweb-v74`
+- **OpoWeb v0.68.0**
+- Caché PWA: `opoweb-v75`
 - Última revisión estructural: 11 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 89 % |
+| Funcionamiento e interfaz | 90 % |
 | Diputación C1 | 98 % |
 | UC3M C2 | 84 % |
-| La Puebla C2 | 30 % |
+| La Puebla C2 | 74 % |
 | Carranque C2 | 23 % |
-| Arquitectura y pruebas | 58 % |
-| **OpoWeb global** | **75 %** |
+| Arquitectura y pruebas | 61 % |
+| **OpoWeb global** | **81 %** |
 
-Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, supuestos, simulacros, auditoría normativa, pruebas y deuda técnica. No representan probabilidad de aprobar.
+Los porcentajes son orientativos. Combinan temario, banco de preguntas, supuestos, simulacros, fuentes, pruebas y deuda técnica. No representan una probabilidad de aprobar.
 
 ## Diputación de Toledo
 
@@ -37,88 +37,84 @@ Los porcentajes son orientativos. Combinan temario, banco de preguntas reales, s
 - Cobertura cuantitativa: 100 %.
 - Estimación global: 98 % por la brecha documental de los Estatutos del OAPGT y el cierre técnico pendiente.
 
-## UC3M · v0.67
+## UC3M
 
-Los veinte temas mantienen al menos 30 preguntas válidas y se integra una parte relevante de la normativa institucional publicada en el portal oficial de la Universidad.
+- 20 de 20 temas con al menos 30 preguntas.
+- 615 preguntas válidas.
+- Tres simulacros de 70 + 5.
+- Tema 15 desarrollado con Estatutos oficiales.
+- Capa estatutaria de contratación y administración electrónica incorporada.
+- Estimación global: 84 %.
 
-### Resultado cuantitativo
+Pendiente: presupuesto y bases de ejecución, matrícula, permanencia, evaluación, reglas anuales de admisión, extracción literal de delegaciones de contratación y auditoría institucional final.
 
-- **615 preguntas válidas acumuladas**.
-- 20 de 20 temas con 30 o más preguntas.
-- Tres simulacros de 70 preguntas + 5 reservas.
-- Cuatro alternativas distintas, respuesta correcta válida y justificación normativa.
+## La Puebla · v0.68
 
-### Tema 15 cerrado con Estatutos oficiales
+Se ha rehecho la integración sobre la versión actual de `main`, evitando el conflicto de la rama histórica v0.67.
 
-Se ha sustituido la capa genérica por un desarrollo específico del texto refundido oficial:
+### Resultado
 
-- naturaleza jurídica y autonomía de la UC3M;
-- Defensor Universitario, elección, mandato, reelección, memoria y medios;
-- servicios universitarios, creación, gestión y dirección;
-- patrimonio, inventario y régimen presupuestario;
-- memoria económica y control interno y externo;
-- contratación estatutaria;
-- iniciativa, tramitación y aprobación de la reforma de Estatutos.
+- **570 preguntas específicas**.
+- **19 de 19 temas con 30 preguntas**.
+- Eliminación de preguntas genéricas del tipo «cómo preparar el tema».
+- Reutilización controlada de contenido común auditado.
+- **20 supuestos prácticos** relacionados con el programa.
+- **Tres simulacros de 50 preguntas + 5 reservas**, con 60 minutos.
+- Cobertura de los diecinueve temas y ausencia de duplicados dentro de cada simulacro.
 
-### Tema 20: especial referencia UC3M
+### Materias reutilizadas
 
-Se incorpora la regulación estatutaria propia:
+- Constitución;
+- procedimiento administrativo;
+- régimen local;
+- empleo público de Castilla-La Mancha;
+- prevención de riesgos;
+- igualdad y protección de datos;
+- tributación, recaudación y tributos locales;
+- certificados y servicios de confianza;
+- Windows, navegación, impresión, Writer, Calc, hardware y periféricos.
 
-- el Rector como órgano de contratación;
-- nombramiento y composición mínima de la mesa;
-- audiencia a representantes de los trabajadores en determinados servicios con sucesión de empresa;
-- acuerdo preceptivo del Consejo Social para inversiones plurianuales con fondos futuros;
-- localización de la resolución de 31 de mayo de 2022 sobre delegaciones en contratación, retención de crédito y gasto.
+### Exclusiones aplicadas
 
-La distribución literal completa de las competencias delegadas sigue pendiente de extracción del documento original.
+Se filtran referencias ajenas al programa de La Puebla, especialmente OAPGT, Acuerdo Regulador de Diputación, GroupWise, LibreOffice Base e Impress.
 
-### Administración electrónica y organización
+### Pendiente real
 
-Se añaden enlaces y referencias a:
-
-- Política de Gestión de Documentos Electrónicos, aprobada en 2024;
-- Política de Seguridad de Sistemas de Información, aprobada en 2025;
-- Reglamento de Administración Electrónica, aprobado en 2021 y modificado en 2025;
-- normativa de uso de recursos TIC de 2023;
-- creación del Boletín Oficial Electrónico;
-- portal oficial de órganos, delegaciones de competencia y delegaciones de firma.
-
-### Pendiente real de UC3M
-
-1. Presupuesto vigente y bases de ejecución.
-2. Normas propias de matrícula, permanencia y evaluación.
-3. Reglas anuales de admisión UC3M.
-4. Extracción literal completa de la delegación de contratación.
-5. Auditoría transversal de literalidad, vigencia y dificultad.
-6. Pruebas finales de navegador y móvil.
-
-La sección económico-financiera de la página general de normativa solo publica actualmente el Plan Antifraude; por tanto, no se ha fingido disponer del presupuesto vigente ni de sus bases.
-
-## Enlaces UC3M incorporados
-
-- Portal general de normativa.
-- Estatutos UC3M.
-- Órganos y delegaciones.
-- Administración electrónica y protección de datos.
-- Gestión económico-financiera.
-
-## La Puebla
-
-Pendiente completar 19 temas, sustituir plantillas y ampliar supuestos.
+1. Revisión literal artículo por artículo de los 19 temas.
+2. Soluciones desarrolladas de los 20 supuestos.
+3. Auditoría de dificultad y calidad de distractores.
+4. Validación visual en navegador, móvil y tablet.
+5. Seguimiento del tribunal, listas y fecha de examen.
 
 ## Carranque
 
-Pendiente desarrollar 20 temas, sustituir preguntas de método y rehacer los supuestos sobre temas 3–20.
+Permanece al 23 % en `main`. La siguiente fase será rehacer e integrar los temas 1–10 sobre esta versión actual y después desarrollar los temas 11–20, supuestos y simulacros 80 + 5.
 
 ## Arquitectura
 
-Pendiente consolidar módulos históricos, ampliar pruebas de navegador y validar la interfaz móvil.
+Pendiente consolidar módulos históricos, ampliar pruebas reales de navegador, comprobar la PWA sin conexión y asegurar que el progreso guardado no se pierde.
 
 ## Pruebas automáticas
 
-GitHub Actions ejecuta las pruebas de Diputación `smoke-v56` a `smoke-v65` y `smoke-uc3m-v66`. La siguiente ampliación técnica debe añadir la validación específica de la capa institucional v0.67.
+GitHub Actions ejecuta:
+
+- pruebas de Diputación `smoke-v56` a `smoke-v65`;
+- `smoke-uc3m-v66` y `smoke-uc3m-v67`;
+- prueba unitaria e integrada real de La Puebla v0.68.
+
+Las pruebas de La Puebla verifican 570 preguntas, 19 temas a 30, 20 supuestos, simulacros 50 + 5, cobertura de los 19 temas, respuestas válidas y ausencia de duplicados internos.
 
 ## Historial reciente
+
+### v0.68.0 · 2026-07-11
+
+- Integrada de nuevo La Puebla sobre la versión actual de `main`.
+- Sustituidas las preguntas genéricas por 570 preguntas específicas.
+- Los 19 temas alcanzan 30 preguntas.
+- Creados 20 supuestos prácticos.
+- Simulacros regenerados a 50 + 5 reservas.
+- Añadida prueba específica de UC3M v0.67.
+- Caché actualizada a `opoweb-v75`.
 
 ### v0.67.0 · 2026-07-11
 
@@ -126,15 +122,6 @@ GitHub Actions ejecuta las pruebas de Diputación `smoke-v56` a `smoke-v65` y `s
 - Cerrado el tema 15 con el texto refundido de los Estatutos.
 - Añadidas preguntas institucionales a los temas 15 y 20.
 - Incorporada la capa estatutaria de contratación UC3M.
-- Catalogadas las normas de administración electrónica de 2024 y 2025.
-- Simulacros regenerados a 70 + 5.
-- Caché actualizada a `opoweb-v74`.
-
-### v0.66.0 · 2026-07-10
-
-- Añadidas 110 preguntas a once temas de UC3M.
-- Los veinte temas alcanzaron 30 o más preguntas.
-- Simulacros regenerados a 70 + 5 reservas.
 
 ### v0.65.0 · 2026-07-10
 
