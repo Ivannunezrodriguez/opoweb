@@ -14,22 +14,22 @@ Cada convocatoria se valora según cinco bloques:
 
 El porcentaje global pondera también arquitectura común, pruebas automáticas y deuda técnica. No debe interpretarse como media aritmética simple ni como probabilidad de aprobar.
 
-## Estado v0.70
+## Estado v0.71
 
 | Área | Estimación |
 |---|---:|
-| Funcionamiento e interfaz | 92 % |
+| Funcionamiento e interfaz | 94 % |
 | Diputación C1 | 98 % |
 | UC3M C2 | 84 % |
-| La Puebla C2 | 74 % |
-| Carranque C2 | 79 % |
-| Arquitectura y pruebas | 68 % |
-| OpoWeb global | 87 % |
+| La Puebla C2 | 84 % |
+| Carranque C2 | 88 % |
+| Arquitectura y pruebas | 72 % |
+| OpoWeb global | 90 % |
 
 ## Lectura correcta
 
 - **Diputación:** cobertura cuantitativa completa; pendiente Estatutos del OAPGT y cierre técnico.
 - **UC3M:** cobertura cuantitativa completa y Estatutos incorporados; quedan documentos internos y auditoría final.
-- **La Puebla:** 19 temas a 30 preguntas, 20 supuestos y simulacros 50 + 5; faltan literalidad, soluciones extensas y validación visual.
-- **Carranque:** 20 temas a 30 preguntas, 18 supuestos y simulacros 80 + 5; faltan soluciones desarrolladas, auditoría literal y validación visual.
+- **La Puebla:** 19 temas, 570 preguntas, 20 soluciones prácticas y simulacros 50 + 5; faltan literalidad, dificultad y validación visual.
+- **Carranque:** 20 temas, 600 preguntas, 18 soluciones prácticas y simulacros 80 + 5; faltan literalidad, dificultad y validación visual.
 - **Arquitectura:** las pruebas de regresión han mejorado, pero todavía faltan navegador, PWA sin conexión y consolidación de capas históricas.
