@@ -34,9 +34,11 @@ jobs:
           node --check assets/js/uc3m-v66.js
           node --check assets/js/uc3m-v67.js
           node --check assets/js/puebla-v68.js
+          node --check assets/js/carranque-v69.js
           node --check assets/js/ui-v66.js
           node --check assets/js/ui-v67.js
           node --check assets/js/ui-puebla-v68.js
+          node --check assets/js/ui-carranque-v69.js
       - name: Run regression tests
         run: |
           node tests/smoke-v56.js
@@ -53,3 +55,5 @@ jobs:
           node tests/smoke-uc3m-v67.js
           node tests/smoke-puebla-v68.js
           node tests/smoke-puebla-live-v68.js
+          node tests/smoke-carranque-v69.js
+          node tests/smoke-carranque-live-v69.js
