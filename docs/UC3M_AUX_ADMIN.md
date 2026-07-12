@@ -27,52 +27,75 @@
 | Formación | 5 | 0 consolidado; potencial pendiente de validación |
 | **Total** | **30** | **0 consolidado** |
 
-## Estado OpoWeb v0.77
+## Estado OpoWeb v0.78
 
-- **630 preguntas reales**.
+- **660 preguntas reales**.
 - **20 de 20 temas** con al menos 30 preguntas.
-- Tema 16 con **60 preguntas**: 30 estatales y 30 internas UC3M.
+- Tema 16 con **60 preguntas**.
+- Temas 18 y 19 con **45 preguntas cada uno**.
 - Tres simulacros de **70 + 5** sin repeticiones internas.
 - Sin plantillas genéricas.
-- Avance estimado UC3M: **93 %**.
+- Avance estimado UC3M: **96 %**.
 
 ## Tema 16 · normativa estatal e interna
 
-La capa estatal incluye el Real Decreto 822/2021: planes de estudio, reconocimiento, Grado, Máster, TFG/TFM, modalidades docentes y calidad.
+La capa estatal incluye el Real Decreto 822/2021. La capa interna incorpora permanencia, matrícula, evaluación continua y revisión de calificaciones.
 
-La capa interna UC3M incorpora:
+Cifras clave:
 
-### Permanencia y matrícula
+- 12 créditos durante el primer año;
+- dos años para superar primero, tres en ingenierías;
+- cuatro convocatorias, seis en ingenierías;
+- matrícula parcial hasta 30 ECTS;
+- matrículas posteriores desde 18 ECTS;
+- evaluación continua mínima del 40 %;
+- examen ordinario máximo del 60 %;
+- nota final en diez días;
+- revisión entre dos y siete días;
+- recurso en siete días naturales.
 
-- aprobar al menos **12 créditos** durante el primer año;
-- superar primero en **dos años consecutivos**, o tres en ingenierías;
-- Grados abiertos: **90 ECTS** antes de acceder a un Grado de la rama;
-- tiempo parcial: superar al menos una asignatura el primer año;
-- **cuatro convocatorias**, seis en ingenierías;
-- máximo de **dos dispensas libres** por asignatura;
-- las asignaturas de primero no pueden dispensarse libremente;
-- matrícula parcial: hasta **30 ECTS**;
-- primera matrícula: todas las asignaturas de primero, salvo régimen parcial;
-- matrículas posteriores: mínimo **18 ECTS**;
-- anulación parcial: hasta dos meses después del inicio del cuatrimestre, sin devolución general.
+## Temas 18 y 19 · Presupuesto UC3M 2026
 
-### Evaluación continua
+El presupuesto fue aprobado por el Consejo de Gobierno y el Consejo Social el 11 de diciembre de 2025.
 
-- peso mínimo de la evaluación continua: **40 %**;
-- peso máximo del examen final ordinario: **60 %**;
-- extraordinaria sin evaluación continua: examen con valor del **100 %**;
-- extraordinaria con evaluación continua: posibilidad de usar solo el examen si resulta más favorable;
-- publicación de la evaluación continua al menos cinco días antes del examen;
-- nota final publicada en un máximo de **diez días** desde el examen.
+### Magnitudes
 
-### Revisión de calificaciones
+- presupuesto total de gastos e ingresos: **300.468.067,59 €**;
+- techo de gasto: **325 millones de euros**;
+- capítulo I de gastos de personal: **161.190.785,21 €**;
+- peso del capítulo I: **76,52 %**;
+- transferencias corrientes de ingresos: **146.834.705,33 €**;
+- fondo bibliográfico: mínimo del **8 %** del capítulo II de Gerencia y Servicios;
+- años sabáticos: mínimo del **2 %** de la plantilla de funcionarios docentes.
 
-- revisión entre **dos y siete días** después de publicar la nota;
-- revisión personalizada y oral en el campus correspondiente;
-- recurso de Grado ante el Director del Departamento en **siete días**;
-- Comisión con un máximo de tres profesores doctores y exclusión de evaluadores previos;
-- la resolución agota la vía administrativa;
-- todos los plazos de esta normativa son **días naturales**.
+### Estructura y vinculación
+
+- gastos: clasificación funcional o por programas, orgánica y económica;
+- ingresos: clasificación orgánica y económica;
+- regla general de vinculación: nivel de concepto dentro de cada centro y programa;
+- capítulos I, II y VI: vinculación a nivel de capítulo;
+- operaciones de crédito para inversiones: autorización previa de la Comunidad Autónoma.
+
+### Modificaciones presupuestarias
+
+- generaciones y rectificaciones: Rector;
+- transferencias homogéneas inferiores al límite indicado: Rector;
+- transferencias homogéneas superiores: Consejo de Gobierno;
+- corriente a capital: Consejo Social;
+- capital a corriente: Consejo Social con autorización previa de la Comunidad de Madrid;
+- incorporaciones: Rector, con remanente superior a **300 €** y requisitos de estabilidad;
+- redistribuciones: Rector;
+- capítulo VI de investigación: firma delegada en el Vicerrector de Investigación y Transferencia;
+- tramitación de solicitudes: DEF-Servicio de Presupuestos.
+
+### Ejecución y prórroga
+
+- no pueden asumirse compromisos superiores al crédito autorizado;
+- los actos infractores son nulos de pleno derecho;
+- los gastos deben ser necesarios, idóneos y beneficiosos para la Universidad;
+- los gastos protocolarios requieren motivación, lugar, asistentes e institución de pertenencia;
+- autorización y disposición: Rector y órganos con delegación económico-financiera;
+- si el nuevo presupuesto no está aprobado antes del 1 de enero, se prorroga automáticamente el anterior con ajustes técnicos.
 
 ## Estado por temas específicos
 
@@ -85,31 +108,30 @@ La capa interna UC3M incorpora:
 | 15. Estatutos | 30 preguntas |
 | 16. Ordenación y normativa académica | **60 preguntas** |
 | 17. Acceso y admisión | 30 preguntas |
-| 18. Presupuesto I | 30 preguntas; datos internos vigentes pendientes |
-| 19. Presupuesto II | 30 preguntas; bases de ejecución pendientes |
+| 18. Presupuesto I | **45 preguntas; Presupuesto 2026 integrado** |
+| 19. Presupuesto II | **45 preguntas; Normas Básicas de Gestión integradas** |
 | 20. Contratos | 30 preguntas; delegaciones internas pendientes |
 
 ## Controles automáticos
 
 La CI comprueba:
 
-- 30 preguntas institucionales únicas en el tema 16;
-- 60 preguntas totales en dicho tema;
+- 15 preguntas institucionales nuevas en cada tema presupuestario;
+- 45 preguntas totales en los temas 18 y 19;
 - cuatro opciones, respuesta válida, fuente y justificación;
 - equilibrio de letras correctas;
-- presencia de las cifras 12, 18, 30, 40 %, 60 %, 2–7 y 10 días;
-- 630 preguntas UC3M y 3.042 globales;
+- presencia de 300.468.067,59 €, 325 millones, 76,52 %, 8 %, 2 % y 300 €;
+- 660 preguntas UC3M y 3.072 globales;
 - tres simulacros 70 + 5 con los 20 temas;
 - integridad de web y PWA.
 
 ## Pendiente para cierre
 
-1. Presupuesto y bases de ejecución vigentes.
-2. Delegaciones internas de contratación.
-3. Ponderaciones, cupos y calendario anual de admisión.
-4. Auditoría final de literalidad y dificultad.
-5. Pruebas reales en navegador, móvil, tablet y modo sin conexión.
+1. Delegaciones internas de contratación.
+2. Ponderaciones, cupos y calendario anual de admisión.
+3. Auditoría final de literalidad y dificultad.
+4. Pruebas reales en navegador, móvil, tablet y modo sin conexión.
 
 ## Valoración realista
 
-La cobertura de estudio ya es amplia y todos los temas tienen banco suficiente. El 7 % restante corresponde a documentación institucional anual, literalidad final y validación técnica real; no es relleno cuantitativo.
+La cobertura documental y de preguntas está prácticamente cerrada. El 4 % pendiente corresponde a normativa interna de contratación, datos anuales de admisión, revisión final y validación técnica real.
