@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.74
+# Auditoría global de OpoWeb · v0.75
 
 Fecha de revisión: 12 de julio de 2026.
 
@@ -17,11 +17,11 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 76 % |
+| UC3M C2 | 81 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 82 % |
-| **OpoWeb global** | **87 %** |
+| Arquitectura y pruebas | 84 % |
+| **OpoWeb global** | **89 %** |
 
 ## Recuento efectivo
 
@@ -30,8 +30,8 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 | Diputación | 1.242 | 40/40 |
 | La Puebla | 570 | 19/19 |
 | Carranque | 600 | 20/20 |
-| UC3M | 540 | 17/20 |
-| **Total** | **2.952** | — |
+| UC3M | 560 | 18/20 |
+| **Total** | **2.972** | — |
 
 La auditoría carga la aplicación en el mismo orden que la web y cuenta exclusivamente las preguntas finales disponibles para estudiar.
 
@@ -39,21 +39,21 @@ La auditoría carga la aplicación en el mismo orden que la web y cuenta exclusi
 
 La auditoría comprueba respuestas válidas, cuatro opciones distintas, identificadores únicos, fuente o justificación obligatoria, ausencia de plantillas genéricas, ausencia de repeticiones dentro del mismo tema y equilibrio razonable de letras correctas.
 
-## UC3M v0.74
+## UC3M v0.75
 
-Los temas 13 y 14 se han reconstruido con la Ley Orgánica 2/2023 consolidada.
+El tema 15 se ha reconstruido con el texto refundido oficial de los Estatutos publicado por la UC3M.
 
 Estado real:
 
-- 540 preguntas válidas;
-- 17 temas con 30 preguntas;
-- temas 13 y 14 con 30 preguntas cada uno;
-- mínimo de 10 preguntas en los temas 15, 16 y 17;
+- 560 preguntas válidas;
+- 18 temas con 30 preguntas;
+- tema 15 con 30 preguntas verificadas;
+- mínimo de 10 preguntas en los temas 16 y 17;
 - tres simulacros 70 + 5 sin plantillas;
-- datos críticos 27.10, 1 %, 5 % y 8 % integrados y probados;
+- órganos, mayorías, mandatos, presupuesto, contratación y reforma estatutaria integrados;
 - pruebas específicas de contenido, fuentes, equilibrio y simulacros en CI.
 
-La estimación UC3M sube del 68 % al 76 %. No sube más porque siguen abiertos los temas 15, 16 y 17 y varias fuentes internas anuales.
+La estimación UC3M sube del 76 % al 81 %. No sube más porque siguen abiertos los temas 16 y 17 y varias fuentes internas anuales.
 
 ## La Puebla y Carranque
 
@@ -70,8 +70,8 @@ La estimación UC3M sube del 68 % al 76 %. No sube más porque siguen abiertos l
 
 ## Bloqueos para alcanzar el 100 %
 
-1. Elevar a 30 preguntas reales los temas 15, 16 y 17 de UC3M.
-2. Incorporar presupuesto, bases de ejecución, normativa académica, admisión y delegaciones internas vigentes de UC3M.
+1. Elevar a 30 preguntas reales los temas 16 y 17 de UC3M.
+2. Incorporar normativa académica, admisión, presupuesto, bases de ejecución y delegaciones internas vigentes de UC3M.
 3. Localizar los Estatutos oficiales del OAPGT.
 4. Auditar literalidad y dificultad de La Puebla y Carranque.
 5. Probar navegador, móvil, tablet y PWA sin conexión.
