@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.79
+# Auditoría global de OpoWeb · v0.80
 
 Fecha de revisión: 12 de julio de 2026.
 
@@ -15,11 +15,11 @@ Fecha de revisión: 12 de julio de 2026.
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 98 % |
+| UC3M C2 | 99 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 91 % |
-| **OpoWeb global** | **95 %** |
+| Arquitectura y pruebas | 93 % |
+| **OpoWeb global** | **96 %** |
 
 ## Recuento efectivo
 
@@ -31,39 +31,49 @@ Fecha de revisión: 12 de julio de 2026.
 | UC3M | 690 | 20/20 |
 | **Total** | **3.102** | — |
 
-## Resultado estructural esperado
+## Auditoría UC3M v0.80
 
-La auditoría carga la aplicación en el mismo orden que la web y comprueba respuestas válidas, cuatro opciones distintas, identificadores únicos, fuente o justificación, ausencia de plantillas genéricas, ausencia de duplicados dentro del mismo tema y equilibrio razonable de respuestas.
+La auditoría final comprueba por tema:
 
-## UC3M v0.79
+- mínimo de 30 preguntas;
+- unicidad de identificadores y enunciados normalizados;
+- cuatro alternativas distintas;
+- correspondencia entre respuesta y opciones;
+- fuente o justificación;
+- ausencia de plantillas y textos genéricos;
+- ausencia de dominios manifiestamente no fiables;
+- equilibrio razonable entre A, B, C y D;
+- clasificación de dificultad.
 
-El tema 20 incorpora 30 preguntas institucionales de contratación interna:
+Los tres simulacros deben contener 70 preguntas principales, 5 reservas, 75 textos únicos y representación de los veinte temas.
 
-- órgano de contratación y delegaciones;
-- composición de la Mesa;
-- duración y límites del contrato menor;
-- tres ofertas, inventario, necesidad y control anti-fraccionamiento;
-- procedimiento electrónico de la Sede;
-- excepción hasta 5.000 € sin IVA en sistema asimilado a caja fija;
-- negociado por exclusividad;
-- publicidad y procedimiento abierto.
+La versión solo puede considerarse apta cuando el informe no contiene fallos. Este control no sustituye la revisión jurídica del contenido, pero reduce errores estructurales y de trazabilidad.
 
-Datos críticos integrados:
+## Política de admisión anual
 
-- Gerente: hasta un millón de euros;
-- investigadores y otros órganos: importes inferiores a 15.000 € en los casos previstos;
-- obras: menos de 40.000 €;
-- suministros y servicios: menos de 15.000 €;
-- investigación específica: menos de 50.000 €;
-- Secretario de la Mesa: voz sin voto.
+Los datos anuales de ponderaciones, cupos, notas de corte, plazas y calendario no se mezclan con la normativa estable. Se actualizarán únicamente cuando exista una publicación oficial específica del curso.
 
-UC3M alcanza 690 preguntas y un 98 % estimado. No se considera cerrada porque faltan parámetros anuales de admisión, auditoría final y validación técnica real.
+El tema 17 identifica la transición del artículo 23.2 del Real Decreto 534/2024 y exige revisar su redacción vigente desde el 22 de julio de 2026.
 
-## Bloqueos para alcanzar el 100 %
+## Estado real de UC3M
 
-1. Ponderaciones, cupos y calendario anual de admisión UC3M.
-2. Auditoría final de literalidad y dificultad UC3M.
-3. Estatutos oficiales vigentes del OAPGT.
-4. Auditoría literal y de dificultad de La Puebla y Carranque.
-5. Pruebas reales de navegador, móvil, tablet y PWA sin conexión.
-6. Consolidación de módulos históricos y conservación del progreso.
+- 690 preguntas.
+- 20 temas con al menos 30.
+- Temas 16 y 20 con 60.
+- Temas 18 y 19 con 45.
+- Tres simulacros 70 + 5.
+- Marco estatal, autonómico e interno integrado.
+- Presupuesto 2026 y contratación interna integrados.
+- Avance estimado: 99 %.
+
+No se asigna el 100 % porque faltan pruebas funcionales en navegador, móvil, tablet y PWA sin conexión, además del mantenimiento de datos anuales.
+
+## Bloqueos para alcanzar el 100 % global
+
+1. Validación real de navegador, móvil, tablet y PWA.
+2. Comprobación de conservación del progreso tras actualizaciones.
+3. Revisión del artículo 23.2 del Real Decreto 534/2024 desde el 22 de julio de 2026.
+4. Actualización anual de admisión UC3M con fuente oficial.
+5. Estatutos oficiales vigentes del OAPGT.
+6. Auditoría literal y de dificultad de La Puebla y Carranque.
+7. Consolidación de módulos históricos.
