@@ -11,8 +11,8 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.77.0**
-- Caché PWA: `opoweb-v84`
+- **OpoWeb v0.78.0**
+- Caché PWA: `opoweb-v85`
 - Última revisión estructural: 12 de julio de 2026
 
 ## Avance aproximado
@@ -21,54 +21,63 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 93 % |
+| UC3M C2 | 96 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 88 % |
-| **OpoWeb global** | **92 %** |
+| Arquitectura y pruebas | 90 % |
+| **OpoWeb global** | **94 %** |
 
 Los porcentajes son estimaciones de gestión basadas en contenido verificable, fuentes, preguntas, supuestos, simulacros y deuda técnica. No representan una probabilidad de aprobar.
 
-## Auditoría transversal v0.77
+## Auditoría transversal v0.78
 
-La ejecución real de la aplicación contiene **3.042 preguntas**:
+La ejecución real de la aplicación contiene **3.072 preguntas**:
 
 | Convocatoria | Preguntas reales | Estado del banco |
 |---|---:|---|
 | Diputación de Toledo | 1.242 | 40 temas con 30 o más |
 | La Puebla | 570 | 19 temas con 30 |
 | Carranque | 600 | 20 temas con 30 |
-| UC3M | 630 | 20 temas con 30 o más |
+| UC3M | 660 | 20 temas con 30 o más |
 
 La auditoría automática comprueba respuestas válidas, cuatro opciones distintas, identificadores únicos, justificación o fuente obligatoria, ausencia de preguntas genéricas y ausencia de duplicados dentro del mismo tema.
 
-## UC3M · mejora v0.77
+## UC3M · mejora v0.78
 
-El tema 16 se amplía de 30 a **60 preguntas**: 30 sobre el Real Decreto 822/2021 y 30 sobre normativa interna UC3M.
+Los temas 18 y 19 incorporan **30 preguntas institucionales** del Presupuesto UC3M 2026 y sus Normas Básicas de Gestión.
 
-La nueva capa institucional incorpora:
+### Tema 18 · estructura, financiación y magnitudes
 
-- permanencia en primer curso: 12 créditos durante el primer año;
-- dos años para superar primero, tres en ingenierías;
-- cuatro convocatorias por asignatura, seis en ingenierías;
-- dispensa justificada y máximo de dos dispensas libres;
-- matrícula parcial de hasta 30 ECTS y mínimo posterior de 18 ECTS;
-- evaluación continua con peso mínimo del 40 %;
-- examen final con peso máximo del 60 % en ordinaria;
-- examen del 100 % en extraordinaria para quien no siguió evaluación continua;
-- publicación de la nota final en un máximo de diez días;
-- revisión entre dos y siete días después de publicar la calificación;
-- recurso en siete días naturales y resolución que agota la vía administrativa.
+- presupuesto total: **300.468.067,59 €**;
+- techo de gasto: **325 millones de euros**;
+- capítulo I: **161.190.785,21 €**, equivalente al **76,52 %** del gasto;
+- transferencias corrientes de ingresos: **146.834.705,33 €**;
+- estructura triple de gastos y doble de ingresos;
+- fondo bibliográfico: mínimo del **8 %** del capítulo II de Gerencia y Servicios;
+- años sabáticos: mínimo del **2 %** de la plantilla de funcionarios docentes;
+- vinculación general a nivel de concepto y especial por capítulo para I, II y VI.
+
+### Tema 19 · modificaciones y ejecución
+
+- generaciones, rectificaciones, incorporaciones y redistribuciones;
+- competencias del Rector, Consejo de Gobierno, Consejo Social y Comunidad de Madrid;
+- incorporaciones de remanentes superiores a **300 €**;
+- tramitación por la **DEF-Servicio de Presupuestos**;
+- nulidad de pleno derecho por compromisos superiores al crédito autorizado;
+- requisitos de necesidad, idoneidad y beneficio para la Universidad;
+- justificación reforzada de gastos protocolarios;
+- prórroga automática cuando no existe nuevo presupuesto el 1 de enero.
 
 Resultado actual:
 
-- 630 preguntas reales en UC3M;
+- 660 preguntas reales en UC3M;
 - 20 de 20 temas con al menos 30 preguntas;
+- temas 18 y 19 con 45 preguntas cada uno;
 - tema 16 con 60 preguntas;
-- tres simulacros de 70 + 5 con representación de los 20 temas;
+- tres simulacros de 70 + 5;
 - 0 plantillas genéricas.
 
-UC3M queda al 93 %, no al 100 %. Falta cerrar presupuesto y bases de ejecución vigentes, delegaciones internas de contratación, parámetros anuales de admisión y auditoría final de literalidad y dificultad.
+UC3M queda al 96 %, no al 100 %. Falta extraer delegaciones internas de contratación, actualizar parámetros anuales de admisión, realizar la auditoría final de literalidad y probar la aplicación en navegador y PWA reales.
 
 ## Resto de convocatorias
 
@@ -97,20 +106,20 @@ UC3M queda al 93 %, no al 100 %. Falta cerrar presupuesto y bases de ejecución 
 
 GitHub Actions ejecuta:
 
-- regresión histórica de Diputación, UC3M, La Puebla y Carranque;
-- validación de las 30 preguntas internas del tema 16;
-- comprobación de las cifras 12, 18, 30, 40 %, 60 %, 2–7 y 10 días;
-- auditoría transversal de las 3.042 preguntas;
+- regresión histórica de las cuatro convocatorias;
+- validación de las 30 preguntas del Presupuesto UC3M 2026;
+- comprobación de cifras, órganos y reglas críticas;
+- auditoría transversal de las 3.072 preguntas;
 - validación de los simulacros UC3M 70 + 5;
-- matriz independiente de los 20 temas de Carranque;
+- matriz de los 20 temas de Carranque;
 - validación de los 38 supuestos prácticos;
-- comprobación de recursos de `index.html`, manifiesto y caché PWA.
+- integridad de `index.html`, manifiesto y caché PWA.
 
 ## Pendiente real
 
-1. Incorporar presupuesto y bases de ejecución vigentes de UC3M.
-2. Extraer delegaciones internas de contratación UC3M.
-3. Actualizar parámetros anuales de admisión UC3M.
+1. Extraer delegaciones internas de contratación UC3M.
+2. Actualizar ponderaciones, cupos y calendario anual de admisión UC3M.
+3. Auditar literalidad y dificultad final de UC3M.
 4. Localizar los Estatutos vigentes del OAPGT.
 5. Auditar literalidad y dificultad de La Puebla y Carranque.
 6. Probar navegador, móvil, tablet y funcionamiento sin conexión.
@@ -118,23 +127,20 @@ GitHub Actions ejecuta:
 
 ## Historial reciente
 
+### v0.78.0 · 2026-07-12
+
+- Integradas 30 preguntas del Presupuesto UC3M 2026.
+- Temas 18 y 19 ampliados a 45 preguntas cada uno.
+- Banco UC3M elevado a 660 y banco global a 3.072 preguntas.
+- Simulacros 70 + 5 regenerados.
+- Caché actualizada a `opoweb-v85`.
+
 ### v0.77.0 · 2026-07-12
 
-- Integradas 30 preguntas sobre normativa interna académica UC3M.
+- Integradas 30 preguntas sobre normativa académica interna UC3M.
 - Tema 16 ampliado a 60 preguntas.
-- Banco UC3M elevado a 630 y banco global a 3.042 preguntas.
-- Simulacros 70 + 5 regenerados.
-- Caché actualizada a `opoweb-v84`.
 
 ### v0.76.0 · 2026-07-12
 
 - Completados los temas 16 y 17 con 60 preguntas estatales verificadas.
 - Banco UC3M elevado a 600 preguntas y 20 de 20 temas con 30.
-
-### v0.75.0 · 2026-07-12
-
-- Completado el tema 15 de Estatutos UC3M con 30 preguntas.
-
-### v0.74.0 · 2026-07-12
-
-- Completados los temas 13 y 14 con 60 preguntas LOSU.
