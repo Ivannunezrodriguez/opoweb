@@ -56,6 +56,35 @@
     if (typeof content !== 'undefined' && content) content.insertAdjacentHTML('beforeend', card());
   }
 
+  function restoreCorrectedTest() {
+    if (typeof active !== 'function' || typeof state === 'undefined' || typeof progressKey !== 'function') return;
+    const ope = active();
+    const selected = state.selectedTestTheme || ope?.themes?.[0]?.id;
+    if (!selected) return;
+    const saved = state.progress?.[progressKey('test', selected)];
+    const questions = ope?.themeTests?.[selected] || [];
+    if (!saved?.corrected || !questions.length) return;
+
+    const sections = new Map(
+      [...document.querySelectorAll('.question[data-qid]')].map(section => [section.dataset.qid, section])
+    );
+    questions.forEach(question => {
+      const section = sections.get(question.id);
+      if (!section) return;
+      const chosen = saved.answers?.[question.id] || '';
+      section.querySelectorAll('.option').forEach(option => {
+        const input = option.querySelector('input[type="radio"]');
+        const letter = input?.value || '';
+        option.classList.toggle('correct', letter === question.answer);
+        option.classList.toggle('wrong', Boolean(chosen) && letter === chosen && chosen !== question.answer);
+      });
+      section.querySelector('.result-box')?.remove();
+      if (typeof resultHtml === 'function') section.insertAdjacentHTML('beforeend', resultHtml(question, chosen));
+    });
+    const scoreBox = document.getElementById('scoreBox');
+    if (scoreBox && saved.score && typeof formatScore === 'function') scoreBox.textContent = formatScore(saved.score);
+  }
+
   if (typeof renderSidebar === 'function') {
     const original = renderSidebar;
     renderSidebar = function () { original(); patchVersion(); };
@@ -64,11 +93,21 @@
     const original = renderProceso;
     renderProceso = function () { original(); appendCard(); patchVersion(); };
   }
+  if (typeof renderTests === 'function') {
+    const original = renderTests;
+    renderTests = function () { original(); restoreCorrectedTest(); patchVersion(); };
+  }
+  if (typeof renderSimulacros === 'function') {
+    const original = renderSimulacros;
+    renderSimulacros = function () { original(); patchVersion(); };
+  }
   if (typeof renderProgreso === 'function') {
     const original = renderProgreso;
     renderProgreso = function () { original(); appendCard(); patchVersion(); };
   }
   if (typeof renderAll === 'function') {
+    const original = renderAll;
+    renderAll = function () { original(); patchVersion(); };
     try { renderAll(); } catch (_) { patchVersion(); }
   } else patchVersion();
 })();
