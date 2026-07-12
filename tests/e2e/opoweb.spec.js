@@ -13,7 +13,7 @@ const VIEW_TITLES = {
   normas: 'Normas',
   tests: 'Test por temas',
   supuestos: 'Supuestos prácticos',
-  simulacros: 'Simulacros transversales',
+  simulacros: /Simulacros/,
   progreso: 'Progreso'
 };
 
