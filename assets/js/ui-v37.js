@@ -10,23 +10,29 @@
 
   function auditCard(audit) {
     if (!audit) return '';
+    const floorPerTheme = Number(audit.floorPerTheme ?? 10);
+    const targetPerTheme = Number(audit.targetPerTheme ?? 30);
     const rows = (audit.themes || []).map(item => {
-      const cls = item.count >= audit.floorPerTheme ? 'common' : '';
-      return `<tr><td>Tema ${item.number}</td><td>${escapeHtml(item.title)}</td><td><strong>${item.count}</strong></td><td><span class="badge ${cls}">${escapeHtml(item.state)}</span></td><td>A ${item.answerPositions.A} · B ${item.answerPositions.B} · C ${item.answerPositions.C} · D ${item.answerPositions.D}</td></tr>`;
+      const count = Number(item.count || 0);
+      const cls = count >= floorPerTheme ? 'common' : '';
+      const positions = item.answerPositions || item.answerBalance || { A: 0, B: 0, C: 0, D: 0 };
+      const state = item.state || (count >= targetPerTheme ? 'objetivo alcanzado' : count >= floorPerTheme ? 'mínimo operativo' : 'en desarrollo');
+      return `<tr><td>Tema ${item.number}</td><td>${escapeHtml(item.title || '')}</td><td><strong>${count}</strong></td><td><span class="badge ${cls}">${escapeHtml(state)}</span></td><td>A ${positions.A || 0} · B ${positions.B || 0} · C ${positions.C || 0} · D ${positions.D || 0}</td></tr>`;
     }).join('');
-    const floorMessage = audit.minimumQuestions >= audit.floorPerTheme
-      ? `Todos los temas han alcanzado el mínimo operativo de <strong>${audit.floorPerTheme} preguntas</strong>.`
-      : `Todavía existen temas por debajo del mínimo operativo de <strong>${audit.floorPerTheme} preguntas</strong>.`;
+    const minimumQuestions = Number(audit.minimumQuestions || 0);
+    const floorMessage = minimumQuestions >= floorPerTheme
+      ? `Todos los temas han alcanzado el mínimo operativo de <strong>${floorPerTheme} preguntas</strong>.`
+      : `Todavía existen temas por debajo del mínimo operativo de <strong>${floorPerTheme} preguntas</strong>.`;
 
     return `<article class="card">
       <h2>Auditoría del banco de preguntas</h2>
       <div class="grid three">
-        <div><span class="score">${audit.totalQuestions}</span><p class="muted">preguntas válidas</p></div>
-        <div><span class="score">${audit.minimumQuestions}</span><p class="muted">mínimo por tema</p></div>
-        <div><span class="score">${audit.targetPerTheme}</span><p class="muted">objetivo por tema</p></div>
+        <div><span class="score">${audit.totalQuestions || 0}</span><p class="muted">preguntas válidas</p></div>
+        <div><span class="score">${minimumQuestions}</span><p class="muted">mínimo por tema</p></div>
+        <div><span class="score">${targetPerTheme}</span><p class="muted">objetivo por tema</p></div>
       </div>
       <p>${floorMessage} El objetivo final continúa siendo 30–40 preguntas manuales por tema.</p>
-      <p class="muted">Duplicados exactos eliminados: ${audit.duplicatesRemoved}. Preguntas estructuralmente inválidas eliminadas: ${audit.invalidRemoved}. Cada pregunta conserva cuatro opciones distintas, respuesta válida y justificación.</p>
+      <p class="muted">Duplicados exactos eliminados: ${audit.duplicatesRemoved || 0}. Preguntas estructuralmente inválidas eliminadas: ${audit.invalidRemoved || 0}. Cada pregunta conserva cuatro opciones distintas, respuesta válida y justificación.</p>
       <details class="section"><summary><strong>Ver cobertura y reparto de respuestas por tema</strong></summary><div class="table-wrap"><table><thead><tr><th>Tema</th><th>Contenido</th><th>Preguntas</th><th>Estado</th><th>Respuesta correcta</th></tr></thead><tbody>${rows}</tbody></table></div></details>
     </article>`;
   }
@@ -46,7 +52,7 @@
       const audit = theme.testAudit;
       if (audit) {
         const cls = audit.count >= 15 ? 'common' : '';
-        html = html.replace('</div></article>', `<span class="badge ${cls}">${audit.count} preguntas · ${escapeHtml(audit.state)}</span></div></article>`);
+        html = html.replace('</div></article>', `<span class="badge ${cls}">${audit.count} preguntas · ${escapeHtml(audit.state || 'auditado')}</span></div></article>`);
       }
       return html;
     };
@@ -85,7 +91,7 @@
       original();
       const audit = active()?.testAudit;
       if (audit) {
-        content.insertAdjacentHTML('beforeend', `<article class="card"><h2>Cobertura del banco</h2><p><strong>${audit.totalQuestions} preguntas válidas</strong> distribuidas entre 20 temas.</p><p>Mínimo actual: ${audit.minimumQuestions} por tema. Objetivo final: ${audit.targetPerTheme} o más por tema.</p></article>`);
+        content.insertAdjacentHTML('beforeend', `<article class="card"><h2>Cobertura del banco</h2><p><strong>${audit.totalQuestions} preguntas válidas</strong> distribuidas entre ${audit.themes?.length || 0} temas.</p><p>Mínimo actual: ${audit.minimumQuestions} por tema. Objetivo final: ${audit.targetPerTheme || 30} o más por tema.</p></article>`);
       }
       patchVersion();
     };
