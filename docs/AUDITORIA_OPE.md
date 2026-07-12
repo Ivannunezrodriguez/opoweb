@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.78
+# Auditoría global de OpoWeb · v0.79
 
 Fecha de revisión: 12 de julio de 2026.
 
@@ -15,11 +15,11 @@ Fecha de revisión: 12 de julio de 2026.
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 96 % |
+| UC3M C2 | 98 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 90 % |
-| **OpoWeb global** | **94 %** |
+| Arquitectura y pruebas | 91 % |
+| **OpoWeb global** | **95 %** |
 
 ## Recuento efectivo
 
@@ -28,40 +28,42 @@ Fecha de revisión: 12 de julio de 2026.
 | Diputación | 1.242 | 40/40 |
 | La Puebla | 570 | 19/19 |
 | Carranque | 600 | 20/20 |
-| UC3M | 660 | 20/20 |
-| **Total** | **3.072** | — |
+| UC3M | 690 | 20/20 |
+| **Total** | **3.102** | — |
 
 ## Resultado estructural esperado
 
 La auditoría carga la aplicación en el mismo orden que la web y comprueba respuestas válidas, cuatro opciones distintas, identificadores únicos, fuente o justificación, ausencia de plantillas genéricas, ausencia de duplicados dentro del mismo tema y equilibrio razonable de respuestas.
 
-## UC3M v0.78
+## UC3M v0.79
 
-Los temas 18 y 19 incorporan 30 preguntas institucionales del Presupuesto UC3M 2026:
+El tema 20 incorpora 30 preguntas institucionales de contratación interna:
 
-- 15 sobre definición, magnitudes, estructura, financiación y vinculación;
-- 15 sobre modificaciones, órganos competentes, ejecución y prórroga.
+- órgano de contratación y delegaciones;
+- composición de la Mesa;
+- duración y límites del contrato menor;
+- tres ofertas, inventario, necesidad y control anti-fraccionamiento;
+- procedimiento electrónico de la Sede;
+- excepción hasta 5.000 € sin IVA en sistema asimilado a caja fija;
+- negociado por exclusividad;
+- publicidad y procedimiento abierto.
 
 Datos críticos integrados:
 
-- presupuesto total: 300.468.067,59 €;
-- techo de gasto: 325 millones de euros;
-- capítulo I: 161.190.785,21 € y 76,52 %;
-- transferencias corrientes de ingresos: 146.834.705,33 €;
-- Biblioteca: mínimo 8 %;
-- años sabáticos: mínimo 2 %;
-- incorporaciones: remanentes superiores a 300 €;
-- exceso de crédito: nulidad de pleno derecho;
-- prórroga automática si no existe presupuesto aprobado el 1 de enero.
+- Gerente: hasta un millón de euros;
+- investigadores y otros órganos: importes inferiores a 15.000 € en los casos previstos;
+- obras: menos de 40.000 €;
+- suministros y servicios: menos de 15.000 €;
+- investigación específica: menos de 50.000 €;
+- Secretario de la Mesa: voz sin voto.
 
-UC3M alcanza 660 preguntas y un 96 % estimado. No se considera cerrada porque faltan delegaciones internas de contratación, parámetros anuales de admisión, auditoría final y validación técnica real.
+UC3M alcanza 690 preguntas y un 98 % estimado. No se considera cerrada porque faltan parámetros anuales de admisión, auditoría final y validación técnica real.
 
 ## Bloqueos para alcanzar el 100 %
 
-1. Delegaciones internas de contratación UC3M.
-2. Ponderaciones, cupos y calendario anual de admisión.
-3. Auditoría final de literalidad y dificultad UC3M.
-4. Estatutos oficiales vigentes del OAPGT.
-5. Auditoría literal y de dificultad de La Puebla y Carranque.
-6. Pruebas reales de navegador, móvil, tablet y PWA sin conexión.
-7. Consolidación de módulos históricos y conservación del progreso.
+1. Ponderaciones, cupos y calendario anual de admisión UC3M.
+2. Auditoría final de literalidad y dificultad UC3M.
+3. Estatutos oficiales vigentes del OAPGT.
+4. Auditoría literal y de dificultad de La Puebla y Carranque.
+5. Pruebas reales de navegador, móvil, tablet y PWA sin conexión.
+6. Consolidación de módulos históricos y conservación del progreso.
