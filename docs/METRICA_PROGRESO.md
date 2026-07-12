@@ -14,28 +14,34 @@ Cada convocatoria se valora según cinco bloques:
 
 El porcentaje global pondera arquitectura común, pruebas automáticas y deuda técnica. No es una media aritmética simple ni una probabilidad de aprobar.
 
-## Estado v0.79
+## Estado v0.80
 
 | Área | Estimación |
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 98 % |
+| UC3M C2 | 99 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 91 % |
-| OpoWeb global | 95 % |
+| Arquitectura y pruebas | 93 % |
+| OpoWeb global | 96 % |
 
-## Evolución desde v0.78
+## Evolución desde v0.79
 
-El tema 20 incorpora 30 preguntas institucionales de contratación interna UC3M. Pasa de 30 a 60 preguntas; el banco UC3M sube de 660 a 690 y la auditoría global de 3.072 a 3.102.
+La v0.80 no incrementa artificialmente el número de preguntas. Mantiene UC3M en 690 y el total global en 3.102, pero añade una auditoría final por tema sobre duplicados, respuestas, opciones, trazabilidad, fuentes, textos genéricos y equilibrio de letras.
 
-La mejora eleva UC3M del 96 % al 98 % y OpoWeb global del 94 % al 95 %. No se aplica una subida mayor porque siguen pendientes los parámetros anuales de admisión, la auditoría final y las pruebas técnicas reales.
+También separa los parámetros anuales de admisión de la normativa estable y señala la transición del artículo 23.2 del Real Decreto 534/2024.
+
+La mejora eleva UC3M del 98 % al 99 %, arquitectura y pruebas del 91 % al 93 % y OpoWeb global del 95 % al 96 %. No se alcanza el 100 % porque falta validación funcional real y mantenimiento de datos dinámicos.
 
 ## Lectura correcta
 
 - **Diputación:** 1.242 preguntas y 40 temas a 30; pendiente OAPGT y cierre técnico.
-- **UC3M:** 690 preguntas, 20 temas completos, temas 16 y 20 con 60 y temas 18–19 con 45; faltan admisión anual y revisión final.
+- **UC3M:** 690 preguntas, 20 temas completos, temas 16 y 20 con 60 y temas 18–19 con 45; pendiente validación funcional y actualización anual.
 - **La Puebla:** 570 preguntas, 20 soluciones prácticas y simulacros 50 + 5; faltan literalidad, dificultad y validación visual.
 - **Carranque:** 600 preguntas, 18 soluciones prácticas y simulacros 80 + 5; faltan literalidad, dificultad y validación visual.
 - **Arquitectura:** auditoría e integridad PWA automatizadas; faltan navegador real, modo sin conexión y consolidación de capas históricas.
+
+## Regla de prudencia
+
+No se aumenta un porcentaje por añadir volumen sin control. La v0.80 mejora por calidad verificable y por evitar incorporar como permanentes datos anuales que pueden caducar.
