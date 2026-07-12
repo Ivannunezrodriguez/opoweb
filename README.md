@@ -11,8 +11,8 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.79.0**
-- Caché PWA: `opoweb-v86`
+- **OpoWeb v0.80.0**
+- Caché PWA: `opoweb-v87`
 - Última revisión estructural: 12 de julio de 2026
 
 ## Avance aproximado
@@ -21,15 +21,15 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 98 % |
+| UC3M C2 | 99 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 91 % |
-| **OpoWeb global** | **95 %** |
+| Arquitectura y pruebas | 93 % |
+| **OpoWeb global** | **96 %** |
 
 Los porcentajes son estimaciones de gestión basadas en contenido verificable, fuentes, preguntas, supuestos, simulacros y deuda técnica. No representan una probabilidad de aprobar.
 
-## Auditoría transversal v0.79
+## Auditoría transversal v0.80
 
 La ejecución real de la aplicación contiene **3.102 preguntas**:
 
@@ -40,41 +40,46 @@ La ejecución real de la aplicación contiene **3.102 preguntas**:
 | Carranque | 600 | 20 temas con 30 |
 | UC3M | 690 | 20 temas con 30 o más |
 
-La auditoría automática comprueba respuestas válidas, cuatro opciones distintas, identificadores únicos, justificación o fuente obligatoria, ausencia de preguntas genéricas y ausencia de duplicados dentro del mismo tema.
+La auditoría v0.80 comprueba por tema:
 
-## UC3M · mejora v0.79
+- al menos 30 preguntas;
+- identificadores y enunciados únicos;
+- cuatro opciones distintas y respuesta válida;
+- fuente o justificación obligatoria;
+- ausencia de plantillas genéricas;
+- ausencia de fuentes manifiestamente no fiables;
+- equilibrio razonable entre respuestas A, B, C y D;
+- tres simulacros de 70 + 5, sin repeticiones y con los veinte temas.
 
-El tema 20 incorpora **30 preguntas institucionales** de contratación interna UC3M extraídas de las Normas Básicas de Gestión del Presupuesto 2026.
+La integración exige que el resultado automático sea **APTO** y que no existan fallos estructurales.
 
-La nueva capa cubre:
+## UC3M · cierre v0.80
 
-- Rector como órgano de contratación;
-- Gerente con competencia delegada hasta un millón de euros;
-- investigadores responsables y otros órganos para determinados contratos inferiores a 15.000 €;
-- composición de la Mesa de contratación;
-- secretario de la Mesa con voz y sin voto;
-- contratos menores de obras inferiores a 40.000 €;
-- suministros y servicios inferiores a 15.000 €;
-- suministros y servicios específicos de proyectos de investigación inferiores a 50.000 €;
-- duración máxima de un año y prohibición de prórroga;
-- tres presupuestos como regla general;
-- procedimiento electrónico obligatorio en la Sede Electrónica;
-- excepción de tres ofertas para gastos de hasta 5.000 € sin IVA tramitados por sistema asimilado a caja fija;
-- procedimiento negociado por exclusividad;
-- propuesta e informes a DEF-Contratación;
-- publicidad en el Perfil de contratante y, cuando proceda, en el DOUE;
-- procedimiento abierto cuando no procede menor, negociado o Central de Contratación del Estado.
+El programa queda cubierto con 690 preguntas reales:
 
-Resultado actual:
-
-- 690 preguntas reales en UC3M;
 - 20 de 20 temas con al menos 30 preguntas;
 - temas 16 y 20 con 60 preguntas;
 - temas 18 y 19 con 45 preguntas;
+- resto de temas con 30 preguntas;
 - tres simulacros de 70 + 5;
-- 0 plantillas genéricas.
+- normativa estatal, autonómica e interna separada y trazable.
 
-UC3M queda al 98 %, no al 100 %. Falta actualizar parámetros anuales de admisión, realizar la auditoría final de literalidad y dificultad y probar la aplicación en navegador y PWA reales.
+### Política sobre admisión anual
+
+No se incorporan ponderaciones, cupos, notas de corte, plazas o calendarios anuales como si fueran reglas estables cuando no existe una publicación oficial específica del curso accesible y contrastada.
+
+El tema 17 incluye una alerta para revisar la redacción vigente del artículo 23.2 del Real Decreto 534/2024 desde el **22 de julio de 2026**. Esto evita memorizar antes de su entrada en vigor una redacción futura o mezclar datos dinámicos con normativa consolidada.
+
+### Qué queda realmente pendiente
+
+UC3M se sitúa en el 99 %, no en el 100 %. El punto restante corresponde a:
+
+- comprobación funcional en navegador real;
+- validación en móvil y tablet;
+- instalación y actualización de la PWA;
+- funcionamiento sin conexión;
+- conservación del progreso al actualizar la caché;
+- futuras actualizaciones anuales oficiales de admisión.
 
 ## Resto de convocatorias
 
@@ -104,39 +109,39 @@ UC3M queda al 98 %, no al 100 %. Falta actualizar parámetros anuales de admisi�
 GitHub Actions ejecuta:
 
 - regresión histórica de las cuatro convocatorias;
-- validación de las 30 preguntas de contratación interna UC3M;
-- comprobación de límites, delegaciones, Mesa y procedimiento;
+- auditoría final específica de las 690 preguntas UC3M;
 - auditoría transversal de las 3.102 preguntas;
-- validación de los simulacros UC3M 70 + 5;
-- matriz de los 20 temas de Carranque;
+- validación de los tres simulacros UC3M;
+- matriz independiente de los 20 temas de Carranque;
 - validación de los 38 supuestos prácticos;
 - integridad de `index.html`, manifiesto y caché PWA.
 
 ## Pendiente real
 
-1. Actualizar ponderaciones, cupos y calendario anual de admisión UC3M.
-2. Auditar literalidad y dificultad final de UC3M.
-3. Localizar los Estatutos vigentes del OAPGT.
-4. Auditar literalidad y dificultad de La Puebla y Carranque.
-5. Probar navegador, móvil, tablet y funcionamiento sin conexión.
+1. Probar navegador, móvil, tablet y funcionamiento sin conexión.
+2. Revisar la redacción vigente del artículo 23.2 del Real Decreto 534/2024 desde el 22 de julio de 2026.
+3. Actualizar admisión UC3M solo con publicación oficial anual.
+4. Localizar los Estatutos vigentes del OAPGT.
+5. Auditar literalidad y dificultad de La Puebla y Carranque.
 6. Consolidar las capas históricas de JavaScript preservando el progreso guardado.
 
 ## Historial reciente
+
+### v0.80.0 · 2026-07-12
+
+- Añadida auditoría final del banco UC3M.
+- Controlados duplicados, opciones, trazabilidad, fuentes y equilibrio por tema.
+- Separados los datos anuales de admisión de la normativa estable.
+- Añadida alerta de transición normativa para el artículo 23.2 del Real Decreto 534/2024.
+- Caché actualizada a `opoweb-v87`.
 
 ### v0.79.0 · 2026-07-12
 
 - Integradas 30 preguntas de contratación interna UC3M.
 - Tema 20 ampliado a 60 preguntas.
 - Banco UC3M elevado a 690 y banco global a 3.102 preguntas.
-- Simulacros 70 + 5 regenerados.
-- Caché actualizada a `opoweb-v86`.
 
 ### v0.78.0 · 2026-07-12
 
 - Integradas 30 preguntas del Presupuesto UC3M 2026.
 - Temas 18 y 19 ampliados a 45 preguntas cada uno.
-
-### v0.77.0 · 2026-07-12
-
-- Integradas 30 preguntas sobre normativa académica interna UC3M.
-- Tema 16 ampliado a 60 preguntas.

@@ -27,7 +27,7 @@
 | Formación | 5 | 0 consolidado; potencial pendiente de validación |
 | **Total** | **30** | **0 consolidado** |
 
-## Estado OpoWeb v0.79
+## Estado OpoWeb v0.80
 
 - **690 preguntas reales**.
 - **20 de 20 temas** con al menos 30 preguntas.
@@ -35,56 +35,23 @@
 - Temas 18 y 19 con **45 preguntas**.
 - Tres simulacros de **70 + 5** sin repeticiones internas.
 - Sin plantillas genéricas.
-- Avance estimado UC3M: **98 %**.
+- Avance estimado UC3M: **99 %**.
 
-## Tema 20 · contratación estatal e interna UC3M
+## Auditoría final de calidad
 
-La capa común se apoya en la Ley 9/2017. La capa interna procede del artículo 21 de las Normas Básicas de Gestión del Presupuesto UC3M 2026.
+La v0.80 examina automáticamente cada tema y bloquea la integración cuando detecta:
 
-### Órgano y delegaciones
+- menos de 30 preguntas;
+- identificadores o enunciados duplicados;
+- respuestas u opciones inválidas;
+- ausencia de fuente o justificación;
+- preguntas genéricas o de plantilla;
+- fuentes manifiestamente no fiables;
+- concentración excesiva de una misma letra correcta.
 
-- el Rector es el órgano de contratación;
-- el Gerente tiene competencia delegada para contratos que no superen **un millón de euros**;
-- los investigadores responsables pueden adquirir material de proyecto por importe inferior a **15.000 €**;
-- otros órganos y miembros de la Universidad actúan en los supuestos de la Resolución Rectoral de 31 de mayo de 2022 por importe inferior a **15.000 €**;
-- no se tramita ningún expediente sin crédito adecuado y suficiente.
+También comprueba que cada simulacro tenga 70 preguntas principales, 5 reservas, 75 enunciados distintos y representación de los veinte temas.
 
-### Mesa de contratación
-
-La Mesa integra:
-
-- Presidente;
-- un vocal del Servicio Jurídico;
-- un vocal de la Dirección Económica Financiera-Presupuestos;
-- dos vocales nombrados con carácter general entre personal universitario;
-- Secretario de la Dirección Económica Financiera, con voz pero sin voto.
-
-### Contratos menores
-
-- duración máxima: **un año**;
-- no admiten prórroga;
-- obras: importe inferior a **40.000 €**, IVA excluido;
-- suministros y servicios: importe inferior a **15.000 €**, IVA excluido;
-- suministros y servicios específicos de proyectos de investigación: importe inferior a **50.000 €**;
-- regla general: solicitar tres presupuestos;
-- obras: presupuesto de la obra;
-- capítulo VI: documentación de inventario;
-- informe de necesidad;
-- control del fraccionamiento y de acumulación de contratos con el mismo contratista;
-- inicio obligatorio mediante procedimiento electrónico de la Sede Electrónica con número de expediente;
-- excepción de tres ofertas para gastos que no excedan de **5.000 € sin IVA** y se tramiten por sistema asimilado a caja fija;
-- la excepción no desplaza requisitos específicos de proyectos financiados por la Comunidad de Madrid o entidades nacionales.
-
-### Negociado y abierto
-
-- supuesto habitual del negociado sin publicidad: exclusividad;
-- propuesta a DEF-Contratación, informes y borrador de pliego técnico;
-- certificado de exclusividad de la empresa;
-- adjudicación y formalización publicadas en el Perfil de contratante;
-- formalización en DOUE cuando el contrato está sujeto a regulación armonizada;
-- procedimiento abierto obligatorio cuando no proceden contrato menor, negociado o Central de Contratación del Estado.
-
-## Estado por temas específicos
+## Cobertura específica consolidada
 
 | Tema | Estado |
 |---|---|
@@ -94,32 +61,38 @@ La Mesa integra:
 | 14. LOSU II | 30 preguntas |
 | 15. Estatutos | 30 preguntas |
 | 16. Ordenación y normativa académica | **60 preguntas** |
-| 17. Acceso y admisión | 30 preguntas; parámetros anuales pendientes |
+| 17. Acceso y admisión | 30 preguntas; capa anual separada |
 | 18. Presupuesto I | **45 preguntas** |
 | 19. Presupuesto II | **45 preguntas** |
-| 20. Contratos | **60 preguntas; contratación interna integrada** |
+| 20. Contratos | **60 preguntas** |
 
-## Controles automáticos
+## Admisión: norma estable frente a datos anuales
 
-La CI comprueba:
+Las ponderaciones, cupos, notas de corte, plazas y calendarios cambian por curso. No se incorporan como reglas permanentes sin una publicación oficial específica y contrastada.
 
-- 30 preguntas institucionales únicas en el tema 20;
-- 60 preguntas totales en dicho tema;
-- cuatro opciones, respuesta válida, fuente y justificación;
-- equilibrio de letras correctas;
-- presencia de 1.000.000 €, 40.000 €, 15.000 €, 50.000 € y 5.000 €;
-- composición de la Mesa y secretario sin voto;
-- Sede Electrónica y Perfil de contratante;
-- 690 preguntas UC3M y 3.102 globales;
-- tres simulacros 70 + 5 con los 20 temas;
-- integridad de web y PWA.
+El tema 17 contiene una alerta técnica para revisar el artículo 23.2 del Real Decreto 534/2024 desde el **22 de julio de 2026**. Hasta entonces no se presenta una redacción futura como norma vigente.
 
-## Pendiente para cierre
+## Fuentes institucionales integradas
 
-1. Ponderaciones, cupos y calendario anual de admisión.
-2. Auditoría final de literalidad y dificultad.
-3. Pruebas reales en navegador, móvil, tablet y modo sin conexión.
+- Ley Orgánica 2/2023 del Sistema Universitario.
+- Real Decreto 822/2021 sobre enseñanzas universitarias.
+- Real Decreto 534/2024 sobre acceso y admisión.
+- Estatutos UC3M.
+- Normativa UC3M de permanencia, matrícula, evaluación y revisión.
+- Ley 10/2019 de Transparencia de la Comunidad de Madrid.
+- Portal de Transparencia UC3M.
+- Presupuesto UC3M 2026 y Normas Básicas de Gestión.
+- Ley 9/2017 y procedimiento interno de contratación UC3M.
+
+## Pendiente para cierre total
+
+1. Validación funcional en navegador real.
+2. Prueba en móvil y tablet.
+3. Instalación, actualización y modo sin conexión de la PWA.
+4. Conservación del progreso tras cambiar la caché.
+5. Actualización anual de admisión cuando exista publicación oficial específica.
+6. Revisión normativa del artículo 23.2 desde el 22 de julio de 2026.
 
 ## Valoración realista
 
-La parte documental y de banco de preguntas está casi cerrada. El 2 % pendiente corresponde a datos anuales de admisión, revisión final de calidad y validación técnica real; no debe confundirse con probabilidad de obtener plaza.
+La parte documental y el banco de estudio están prácticamente cerrados. El 1 % restante no corresponde a añadir más preguntas, sino a validar el funcionamiento real y mantener actualizados los datos dinámicos. El porcentaje no representa probabilidad de plaza.
