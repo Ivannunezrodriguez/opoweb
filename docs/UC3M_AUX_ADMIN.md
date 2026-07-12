@@ -27,75 +27,62 @@
 | Formación | 5 | 0 consolidado; potencial pendiente de validación |
 | **Total** | **30** | **0 consolidado** |
 
-## Estado OpoWeb v0.78
+## Estado OpoWeb v0.79
 
-- **660 preguntas reales**.
+- **690 preguntas reales**.
 - **20 de 20 temas** con al menos 30 preguntas.
-- Tema 16 con **60 preguntas**.
-- Temas 18 y 19 con **45 preguntas cada uno**.
+- Temas 16 y 20 con **60 preguntas**.
+- Temas 18 y 19 con **45 preguntas**.
 - Tres simulacros de **70 + 5** sin repeticiones internas.
 - Sin plantillas genéricas.
-- Avance estimado UC3M: **96 %**.
+- Avance estimado UC3M: **98 %**.
 
-## Tema 16 · normativa estatal e interna
+## Tema 20 · contratación estatal e interna UC3M
 
-La capa estatal incluye el Real Decreto 822/2021. La capa interna incorpora permanencia, matrícula, evaluación continua y revisión de calificaciones.
+La capa común se apoya en la Ley 9/2017. La capa interna procede del artículo 21 de las Normas Básicas de Gestión del Presupuesto UC3M 2026.
 
-Cifras clave:
+### Órgano y delegaciones
 
-- 12 créditos durante el primer año;
-- dos años para superar primero, tres en ingenierías;
-- cuatro convocatorias, seis en ingenierías;
-- matrícula parcial hasta 30 ECTS;
-- matrículas posteriores desde 18 ECTS;
-- evaluación continua mínima del 40 %;
-- examen ordinario máximo del 60 %;
-- nota final en diez días;
-- revisión entre dos y siete días;
-- recurso en siete días naturales.
+- el Rector es el órgano de contratación;
+- el Gerente tiene competencia delegada para contratos que no superen **un millón de euros**;
+- los investigadores responsables pueden adquirir material de proyecto por importe inferior a **15.000 €**;
+- otros órganos y miembros de la Universidad actúan en los supuestos de la Resolución Rectoral de 31 de mayo de 2022 por importe inferior a **15.000 €**;
+- no se tramita ningún expediente sin crédito adecuado y suficiente.
 
-## Temas 18 y 19 · Presupuesto UC3M 2026
+### Mesa de contratación
 
-El presupuesto fue aprobado por el Consejo de Gobierno y el Consejo Social el 11 de diciembre de 2025.
+La Mesa integra:
 
-### Magnitudes
+- Presidente;
+- un vocal del Servicio Jurídico;
+- un vocal de la Dirección Económica Financiera-Presupuestos;
+- dos vocales nombrados con carácter general entre personal universitario;
+- Secretario de la Dirección Económica Financiera, con voz pero sin voto.
 
-- presupuesto total de gastos e ingresos: **300.468.067,59 €**;
-- techo de gasto: **325 millones de euros**;
-- capítulo I de gastos de personal: **161.190.785,21 €**;
-- peso del capítulo I: **76,52 %**;
-- transferencias corrientes de ingresos: **146.834.705,33 €**;
-- fondo bibliográfico: mínimo del **8 %** del capítulo II de Gerencia y Servicios;
-- años sabáticos: mínimo del **2 %** de la plantilla de funcionarios docentes.
+### Contratos menores
 
-### Estructura y vinculación
+- duración máxima: **un año**;
+- no admiten prórroga;
+- obras: importe inferior a **40.000 €**, IVA excluido;
+- suministros y servicios: importe inferior a **15.000 €**, IVA excluido;
+- suministros y servicios específicos de proyectos de investigación: importe inferior a **50.000 €**;
+- regla general: solicitar tres presupuestos;
+- obras: presupuesto de la obra;
+- capítulo VI: documentación de inventario;
+- informe de necesidad;
+- control del fraccionamiento y de acumulación de contratos con el mismo contratista;
+- inicio obligatorio mediante procedimiento electrónico de la Sede Electrónica con número de expediente;
+- excepción de tres ofertas para gastos que no excedan de **5.000 € sin IVA** y se tramiten por sistema asimilado a caja fija;
+- la excepción no desplaza requisitos específicos de proyectos financiados por la Comunidad de Madrid o entidades nacionales.
 
-- gastos: clasificación funcional o por programas, orgánica y económica;
-- ingresos: clasificación orgánica y económica;
-- regla general de vinculación: nivel de concepto dentro de cada centro y programa;
-- capítulos I, II y VI: vinculación a nivel de capítulo;
-- operaciones de crédito para inversiones: autorización previa de la Comunidad Autónoma.
+### Negociado y abierto
 
-### Modificaciones presupuestarias
-
-- generaciones y rectificaciones: Rector;
-- transferencias homogéneas inferiores al límite indicado: Rector;
-- transferencias homogéneas superiores: Consejo de Gobierno;
-- corriente a capital: Consejo Social;
-- capital a corriente: Consejo Social con autorización previa de la Comunidad de Madrid;
-- incorporaciones: Rector, con remanente superior a **300 €** y requisitos de estabilidad;
-- redistribuciones: Rector;
-- capítulo VI de investigación: firma delegada en el Vicerrector de Investigación y Transferencia;
-- tramitación de solicitudes: DEF-Servicio de Presupuestos.
-
-### Ejecución y prórroga
-
-- no pueden asumirse compromisos superiores al crédito autorizado;
-- los actos infractores son nulos de pleno derecho;
-- los gastos deben ser necesarios, idóneos y beneficiosos para la Universidad;
-- los gastos protocolarios requieren motivación, lugar, asistentes e institución de pertenencia;
-- autorización y disposición: Rector y órganos con delegación económico-financiera;
-- si el nuevo presupuesto no está aprobado antes del 1 de enero, se prorroga automáticamente el anterior con ajustes técnicos.
+- supuesto habitual del negociado sin publicidad: exclusividad;
+- propuesta a DEF-Contratación, informes y borrador de pliego técnico;
+- certificado de exclusividad de la empresa;
+- adjudicación y formalización publicadas en el Perfil de contratante;
+- formalización en DOUE cuando el contrato está sujeto a regulación armonizada;
+- procedimiento abierto obligatorio cuando no proceden contrato menor, negociado o Central de Contratación del Estado.
 
 ## Estado por temas específicos
 
@@ -107,31 +94,32 @@ El presupuesto fue aprobado por el Consejo de Gobierno y el Consejo Social el 11
 | 14. LOSU II | 30 preguntas |
 | 15. Estatutos | 30 preguntas |
 | 16. Ordenación y normativa académica | **60 preguntas** |
-| 17. Acceso y admisión | 30 preguntas |
-| 18. Presupuesto I | **45 preguntas; Presupuesto 2026 integrado** |
-| 19. Presupuesto II | **45 preguntas; Normas Básicas de Gestión integradas** |
-| 20. Contratos | 30 preguntas; delegaciones internas pendientes |
+| 17. Acceso y admisión | 30 preguntas; parámetros anuales pendientes |
+| 18. Presupuesto I | **45 preguntas** |
+| 19. Presupuesto II | **45 preguntas** |
+| 20. Contratos | **60 preguntas; contratación interna integrada** |
 
 ## Controles automáticos
 
 La CI comprueba:
 
-- 15 preguntas institucionales nuevas en cada tema presupuestario;
-- 45 preguntas totales en los temas 18 y 19;
+- 30 preguntas institucionales únicas en el tema 20;
+- 60 preguntas totales en dicho tema;
 - cuatro opciones, respuesta válida, fuente y justificación;
 - equilibrio de letras correctas;
-- presencia de 300.468.067,59 €, 325 millones, 76,52 %, 8 %, 2 % y 300 €;
-- 660 preguntas UC3M y 3.072 globales;
+- presencia de 1.000.000 €, 40.000 €, 15.000 €, 50.000 € y 5.000 €;
+- composición de la Mesa y secretario sin voto;
+- Sede Electrónica y Perfil de contratante;
+- 690 preguntas UC3M y 3.102 globales;
 - tres simulacros 70 + 5 con los 20 temas;
 - integridad de web y PWA.
 
 ## Pendiente para cierre
 
-1. Delegaciones internas de contratación.
-2. Ponderaciones, cupos y calendario anual de admisión.
-3. Auditoría final de literalidad y dificultad.
-4. Pruebas reales en navegador, móvil, tablet y modo sin conexión.
+1. Ponderaciones, cupos y calendario anual de admisión.
+2. Auditoría final de literalidad y dificultad.
+3. Pruebas reales en navegador, móvil, tablet y modo sin conexión.
 
 ## Valoración realista
 
-La cobertura documental y de preguntas está prácticamente cerrada. El 4 % pendiente corresponde a normativa interna de contratación, datos anuales de admisión, revisión final y validación técnica real.
+La parte documental y de banco de preguntas está casi cerrada. El 2 % pendiente corresponde a datos anuales de admisión, revisión final de calidad y validación técnica real; no debe confundirse con probabilidad de obtener plaza.
