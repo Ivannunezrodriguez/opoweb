@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.77
+# Auditoría global de OpoWeb · v0.78
 
 Fecha de revisión: 12 de julio de 2026.
 
@@ -15,11 +15,11 @@ Fecha de revisión: 12 de julio de 2026.
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 93 % |
+| UC3M C2 | 96 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 88 % |
-| **OpoWeb global** | **92 %** |
+| Arquitectura y pruebas | 90 % |
+| **OpoWeb global** | **94 %** |
 
 ## Recuento efectivo
 
@@ -28,40 +28,39 @@ Fecha de revisión: 12 de julio de 2026.
 | Diputación | 1.242 | 40/40 |
 | La Puebla | 570 | 19/19 |
 | Carranque | 600 | 20/20 |
-| UC3M | 630 | 20/20 |
-| **Total** | **3.042** | — |
+| UC3M | 660 | 20/20 |
+| **Total** | **3.072** | — |
 
 ## Resultado estructural esperado
 
 La auditoría carga la aplicación en el mismo orden que la web y comprueba respuestas válidas, cuatro opciones distintas, identificadores únicos, fuente o justificación, ausencia de plantillas genéricas, ausencia de duplicados dentro del mismo tema y equilibrio razonable de respuestas.
 
-## UC3M v0.77
+## UC3M v0.78
 
-El tema 16 incorpora 30 preguntas institucionales adicionales, quedando con 60 preguntas:
+Los temas 18 y 19 incorporan 30 preguntas institucionales del Presupuesto UC3M 2026:
 
-- 30 del Real Decreto 822/2021;
-- 17 sobre permanencia, dispensa y matrícula UC3M;
-- 6 sobre evaluación continua UC3M;
-- 7 sobre revisión de calificaciones UC3M.
+- 15 sobre definición, magnitudes, estructura, financiación y vinculación;
+- 15 sobre modificaciones, órganos competentes, ejecución y prórroga.
 
 Datos críticos integrados:
 
-- 12 créditos durante el primer año;
-- dos años para primero, tres en ingeniería;
-- cuatro convocatorias, seis en ingeniería;
-- matrícula parcial hasta 30 ECTS y posteriores desde 18 ECTS;
-- evaluación continua mínima del 40 % y examen ordinario máximo del 60 %;
-- nota final en diez días;
-- revisión entre dos y siete días;
-- recurso en siete días naturales.
+- presupuesto total: 300.468.067,59 €;
+- techo de gasto: 325 millones de euros;
+- capítulo I: 161.190.785,21 € y 76,52 %;
+- transferencias corrientes de ingresos: 146.834.705,33 €;
+- Biblioteca: mínimo 8 %;
+- años sabáticos: mínimo 2 %;
+- incorporaciones: remanentes superiores a 300 €;
+- exceso de crédito: nulidad de pleno derecho;
+- prórroga automática si no existe presupuesto aprobado el 1 de enero.
 
-UC3M alcanza 630 preguntas y un 93 % estimado. No se considera cerrada porque faltan presupuesto, bases de ejecución, delegaciones internas, parámetros anuales de admisión y auditoría final.
+UC3M alcanza 660 preguntas y un 96 % estimado. No se considera cerrada porque faltan delegaciones internas de contratación, parámetros anuales de admisión, auditoría final y validación técnica real.
 
 ## Bloqueos para alcanzar el 100 %
 
-1. Presupuesto y bases de ejecución vigentes de UC3M.
-2. Delegaciones internas de contratación UC3M.
-3. Ponderaciones, cupos y calendario anual de admisión.
+1. Delegaciones internas de contratación UC3M.
+2. Ponderaciones, cupos y calendario anual de admisión.
+3. Auditoría final de literalidad y dificultad UC3M.
 4. Estatutos oficiales vigentes del OAPGT.
 5. Auditoría literal y de dificultad de La Puebla y Carranque.
 6. Pruebas reales de navegador, móvil, tablet y PWA sin conexión.
