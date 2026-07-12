@@ -26,15 +26,22 @@
   };
   window.OPOWEB_BROWSER_AUDIT_V81 = audit;
 
+  function patchText(root) {
+    if (!root) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(node => {
+      node.nodeValue = node.nodeValue
+        .replace(/Versión OpoWeb v[0-9.]+/g, `Versión OpoWeb ${VERSION}`)
+        .replace(/Auditoría v0\.(?:72|73|74|75|76|77|78|79|80)/g, 'Auditoría v0.81')
+        .replace(/auditoría v0\.(?:72|73|74|75|76|77|78|79|80)/gi, 'auditoría v0.81');
+    });
+  }
+
   function patchVersion() {
-    [document.getElementById('oposicionCard'), document.getElementById('content')]
-      .filter(Boolean)
-      .forEach(node => {
-        node.innerHTML = node.innerHTML
-          .replace(/Versión OpoWeb v[0-9.]+/g, `Versión OpoWeb ${VERSION}`)
-          .replace(/Auditoría v0\.(?:72|73|74|75|76|77|78|79|80)/g, 'Auditoría v0.81')
-          .replace(/auditoría v0\.(?:72|73|74|75|76|77|78|79|80)/gi, 'auditoría v0.81');
-      });
+    patchText(document.getElementById('oposicionCard'));
+    patchText(document.getElementById('content'));
   }
 
   function card() {
@@ -56,33 +63,125 @@
     if (typeof content !== 'undefined' && content) content.insertAdjacentHTML('beforeend', card());
   }
 
-  function restoreCorrectedTest() {
-    if (typeof active !== 'function' || typeof state === 'undefined' || typeof progressKey !== 'function') return;
+  function currentQuestionSet() {
+    if (typeof active !== 'function' || typeof state === 'undefined' || typeof progressKey !== 'function') return null;
     const ope = active();
-    const selected = state.selectedTestTheme || ope?.themes?.[0]?.id;
-    if (!selected) return;
-    const saved = state.progress?.[progressKey('test', selected)];
-    const questions = ope?.themeTests?.[selected] || [];
-    if (!saved?.corrected || !questions.length) return;
+    if (state.view === 'tests') {
+      const setId = state.selectedTestTheme || ope?.themes?.[0]?.id;
+      return setId ? { kind: 'test', setId, questions: ope?.themeTests?.[setId] || [], scoring: ope?.scoring } : null;
+    }
+    if (state.view === 'simulacros') {
+      const setId = state.selectedSim || ope?.simulacros?.[0]?.id;
+      const simulation = ope?.simulacros?.find(item => item.id === setId);
+      return simulation ? { kind: 'sim', setId, questions: simulation.questions || [], scoring: ope?.scoring } : null;
+    }
+    return null;
+  }
 
-    const sections = new Map(
-      [...document.querySelectorAll('.question[data-qid]')].map(section => [section.dataset.qid, section])
-    );
-    questions.forEach(question => {
-      const section = sections.get(question.id);
-      if (!section) return;
-      const chosen = saved.answers?.[question.id] || '';
-      section.querySelectorAll('.option').forEach(option => {
-        const input = option.querySelector('input[type="radio"]');
-        const letter = input?.value || '';
-        option.classList.toggle('correct', letter === question.answer);
-        option.classList.toggle('wrong', Boolean(chosen) && letter === chosen && chosen !== question.answer);
-      });
-      section.querySelector('.result-box')?.remove();
-      if (typeof resultHtml === 'function') section.insertAdjacentHTML('beforeend', resultHtml(question, chosen));
-    });
-    const scoreBox = document.getElementById('scoreBox');
-    if (scoreBox && saved.score && typeof formatScore === 'function') scoreBox.textContent = formatScore(saved.score);
+  function installContentDelegation() {
+    const root = document.getElementById('content');
+    if (!root || root.dataset.v81Delegation === 'true') return;
+    root.dataset.v81Delegation = 'true';
+
+    root.addEventListener('change', event => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) return;
+
+      if (target.id === 'testTheme') {
+        event.stopImmediatePropagation();
+        state.selectedTestTheme = target.value;
+        renderTests();
+        return;
+      }
+      if (target.id === 'simSelect') {
+        event.stopImmediatePropagation();
+        state.selectedSim = target.value;
+        renderSimulacros();
+        return;
+      }
+      if (target.matches('input[type="radio"]')) {
+        const set = currentQuestionSet();
+        if (!set) return;
+        event.stopImmediatePropagation();
+        const key = progressKey(set.kind, set.setId);
+        state.progress[key] ||= { answers: {}, corrected: false, score: null };
+        state.progress[key].answers[target.name] = target.value;
+        state.progress[key].corrected = false;
+        state.progress[key].score = null;
+        saveProgress();
+      }
+    }, true);
+
+    root.addEventListener('click', event => {
+      const target = event.target instanceof Element ? event.target : null;
+      if (!target) return;
+
+      const theme = target.closest('[data-theme]');
+      if (theme) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        state.selectedTheme = theme.dataset.theme;
+        renderTemario();
+        return;
+      }
+      if (target.closest('#backThemes')) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        state.selectedTheme = null;
+        renderTemario();
+        return;
+      }
+
+      const norma = target.closest('[data-norma]');
+      if (norma) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        state.selectedNorma = norma.dataset.norma;
+        renderNormas();
+        return;
+      }
+      if (target.closest('#backNormas')) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        state.selectedNorma = null;
+        renderNormas();
+        return;
+      }
+
+      const solution = target.closest('.show-solution');
+      if (solution) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        document.getElementById(`sol-${solution.dataset.case}`)?.classList.toggle('open');
+        return;
+      }
+
+      if (target.closest('#correctSet')) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        const set = currentQuestionSet();
+        if (!set?.questions.length || !set.scoring) return;
+        const key = progressKey(set.kind, set.setId);
+        state.progress[key] ||= { answers: {}, corrected: false, score: null };
+        const saved = state.progress[key];
+        saved.corrected = true;
+        saved.score = calculate(set.questions, saved.answers, set.scoring);
+        saveProgress();
+        if (typeof applyQuestionResults === 'function') applyQuestionResults(set.questions, saved);
+        patchVersion();
+        return;
+      }
+
+      if (target.closest('#resetSet')) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        const set = currentQuestionSet();
+        if (!set) return;
+        delete state.progress[progressKey(set.kind, set.setId)];
+        saveProgress();
+        if (set.kind === 'test') renderTests(); else renderSimulacros();
+      }
+    }, true);
   }
 
   if (typeof renderSidebar === 'function') {
@@ -93,9 +192,21 @@
     const original = renderProceso;
     renderProceso = function () { original(); appendCard(); patchVersion(); };
   }
+  if (typeof renderTemario === 'function') {
+    const original = renderTemario;
+    renderTemario = function () { original(); patchVersion(); };
+  }
+  if (typeof renderNormas === 'function') {
+    const original = renderNormas;
+    renderNormas = function () { original(); patchVersion(); };
+  }
   if (typeof renderTests === 'function') {
     const original = renderTests;
-    renderTests = function () { original(); restoreCorrectedTest(); patchVersion(); };
+    renderTests = function () { original(); patchVersion(); };
+  }
+  if (typeof renderSupuestos === 'function') {
+    const original = renderSupuestos;
+    renderSupuestos = function () { original(); patchVersion(); };
   }
   if (typeof renderSimulacros === 'function') {
     const original = renderSimulacros;
@@ -108,6 +219,10 @@
   if (typeof renderAll === 'function') {
     const original = renderAll;
     renderAll = function () { original(); patchVersion(); };
+    installContentDelegation();
     try { renderAll(); } catch (_) { patchVersion(); }
-  } else patchVersion();
+  } else {
+    installContentDelegation();
+    patchVersion();
+  }
 })();
