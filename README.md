@@ -11,20 +11,21 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.81.0**
-- Caché PWA: `opoweb-v88`
+- **OpoWeb v0.82.0**
+- Caché PWA: `opoweb-v89`
+- Formato de progreso: v2, compatible con archivos históricos
 - Última revisión estructural y funcional: 12 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 98 % |
+| Funcionamiento e interfaz | 99 % |
 | Diputación C1 | 97 % |
 | UC3M C2 | 99 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 96 % |
+| Arquitectura y pruebas | 97 % |
 | **OpoWeb global** | **97 %** |
 
 Los porcentajes son estimaciones de gestión basadas en contenido verificable, fuentes, preguntas, supuestos, simulacros y deuda técnica. No representan una probabilidad de aprobar.
@@ -53,7 +54,7 @@ La auditoría comprueba por tema:
 
 La integración exige que el resultado automático sea **APTO** y que no existan fallos estructurales.
 
-## Validación funcional v0.81
+## Validación funcional v0.82
 
 Playwright ejecuta la aplicación en un navegador Chromium real mediante tres configuraciones:
 
@@ -70,12 +71,32 @@ Las pruebas comprueban:
 - respuesta y corrección de preguntas;
 - persistencia del progreso tras recargar;
 - registro del service worker;
-- contenido de la caché `opoweb-v88`;
+- contenido de la caché `opoweb-v89`;
 - lectura del manifiesto;
 - recarga completa sin conexión;
-- conservación de `localStorage` sin red.
+- conservación de `localStorage` sin red;
+- lectura del formato histórico de progreso;
+- recuperación automática desde una copia válida;
+- exportación e importación verificadas.
 
 El informe HTML de Playwright se guarda como artefacto de GitHub Actions durante 14 días.
+
+## Protección del progreso v0.82
+
+OpoWeb mantiene la clave histórica `opowebProgress`, por lo que los datos guardados por versiones anteriores siguen siendo utilizables.
+
+La capa de almacenamiento añade:
+
+- validación de cada bloque, respuesta y puntuación;
+- copia automática del estado anterior en `opowebProgressBackup`;
+- recuperación automática cuando el JSON principal está dañado;
+- metadatos con fecha, número de bloques y suma de comprobación FNV-1a;
+- exportación en formato v2 con versión y checksum;
+- importación compatible tanto con el formato v2 como con archivos antiguos;
+- rechazo de archivos manipulados cuando su checksum no coincide;
+- conservación de la copia anterior antes de importar otro progreso.
+
+Este cierre protege el trabajo de estudio antes de acometer una consolidación más agresiva de los módulos históricos.
 
 ## UC3M · cierre documental
 
@@ -136,9 +157,11 @@ GitHub Actions ejecuta:
 - validación de los tres simulacros UC3M;
 - matriz independiente de los 20 temas de Carranque;
 - validación de los 38 supuestos prácticos;
+- pruebas unitarias del almacenamiento v2;
 - integridad de `index.html`, manifiesto y caché PWA;
 - Playwright en escritorio, móvil y tablet;
-- recarga sin conexión y conservación del progreso.
+- recarga sin conexión y conservación del progreso;
+- recuperación desde copia, exportación e importación.
 
 ## Pendiente real
 
@@ -147,9 +170,18 @@ GitHub Actions ejecuta:
 3. Actualizar admisión UC3M solo con publicación oficial anual.
 4. Localizar los Estatutos vigentes del OAPGT.
 5. Auditar literalidad y dificultad de La Puebla y Carranque.
-6. Consolidar las capas históricas de JavaScript preservando el progreso guardado.
+6. Consolidar las capas históricas de JavaScript aprovechando la protección de progreso ya implantada.
 
 ## Historial reciente
+
+### v0.82.0 · 2026-07-12
+
+- Añadido almacenamiento versionado compatible con datos anteriores.
+- Añadida copia automática antes de sobrescribir o importar.
+- Añadida recuperación desde copia cuando el progreso principal está corrupto.
+- Añadidos checksum, exportación v2 e importación validada.
+- Añadidas pruebas unitarias y Playwright para migración, recuperación e intercambio de datos.
+- Caché actualizada a `opoweb-v89`.
 
 ### v0.81.0 · 2026-07-12
 
@@ -165,9 +197,3 @@ GitHub Actions ejecuta:
 - Controlados duplicados, opciones, trazabilidad, fuentes y equilibrio por tema.
 - Separados los datos anuales de admisión de la normativa estable.
 - Añadida alerta de transición normativa para el artículo 23.2 del Real Decreto 534/2024.
-
-### v0.79.0 · 2026-07-12
-
-- Integradas 30 preguntas de contratación interna UC3M.
-- Tema 20 ampliado a 60 preguntas.
-- Banco UC3M elevado a 690 y banco global a 3.102 preguntas.
