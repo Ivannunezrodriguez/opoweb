@@ -11,9 +11,9 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.72.0**
-- Caché PWA: `opoweb-v79`
-- Última revisión estructural: 11 de julio de 2026
+- **OpoWeb v0.73.0**
+- Caché PWA: `opoweb-v80`
+- Última revisión estructural: 12 de julio de 2026
 
 ## Avance aproximado
 
@@ -21,50 +21,54 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 64 % |
+| UC3M C2 | 68 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 78 % |
-| **OpoWeb global** | **84 %** |
+| Arquitectura y pruebas | 80 % |
+| **OpoWeb global** | **85 %** |
 
 Los porcentajes son estimaciones de gestión basadas en contenido verificable, fuentes, preguntas, supuestos, simulacros y deuda técnica. No representan una probabilidad de aprobar.
 
-## Auditoría transversal v0.72
+## Auditoría transversal v0.73
 
-La ejecución real de la aplicación contiene **2.888 preguntas**:
+La ejecución real de la aplicación contiene **2.912 preguntas**:
 
 | Convocatoria | Preguntas reales | Estado del banco |
 |---|---:|---|
 | Diputación de Toledo | 1.242 | 40 temas con 30 o más |
 | La Puebla | 570 | 19 temas con 30 |
 | Carranque | 600 | 20 temas con 30 |
-| UC3M | 476 | 14 de 20 temas con 30; mínimo 6 |
+| UC3M | 500 | 15 de 20 temas con 30; mínimo 10 |
 
-La auditoría automática registra:
+La auditoría automática comprueba:
 
-- **0 respuestas inválidas**;
-- **0 estructuras de opciones inválidas**;
-- **0 identificadores duplicados**;
-- **0 preguntas sin justificación**;
-- **0 preguntas genéricas**;
-- **0 duplicados dentro del mismo tema**.
+- respuestas y estructuras de opciones válidas;
+- identificadores únicos;
+- justificación o fuente obligatoria;
+- ausencia de preguntas genéricas;
+- ausencia de duplicados dentro del mismo tema;
+- equilibrio razonable de respuestas A, B, C y D.
 
-Las cifras anteriores de 1.269 preguntas en Diputación y 615 en UC3M eran recuentos documentales acumulados, no el contenido efectivo final cargado. La v0.72 adopta exclusivamente el recuento de ejecución.
+## UC3M · mejora v0.73
 
-## UC3M corregida
+El tema 7 de transparencia pasa de 6 a **30 preguntas verificadas** y deja de ser el mínimo del banco. Se han incorporado:
 
-La auditoría detectó que el banco inicial conservaba 218 preguntas genéricas y 198 repeticiones internas. Se han eliminado y sustituido por contenido real reutilizable o específico.
+- ámbito de aplicación de la Ley 10/2019 a universidades públicas;
+- principios de transparencia y obligaciones de publicidad activa;
+- legitimación universal y presentación de solicitudes;
+- plazos de 10 días para concretar, 20 + 20 para resolver y un mes para reclamar;
+- silencio desestimatorio;
+- aplicación práctica del Portal de Transparencia UC3M.
 
 Resultado actual:
 
-- 476 preguntas reales;
-- 14 temas con 30 preguntas;
-- tema 7 de transparencia con 6 preguntas verificadas;
-- temas universitarios 13–17 con al menos 10 preguntas específicas;
-- tres simulacros de 70 + 5 generados solo con preguntas reales;
+- 500 preguntas reales;
+- 15 temas con 30 preguntas;
+- mínimo de 10 preguntas en los temas universitarios incompletos;
+- tres simulacros de 70 + 5 generados con preguntas reales;
 - 0 plantillas genéricas.
 
-Pendiente: ampliar transparencia y los temas universitarios, incorporar presupuesto y bases de ejecución vigentes, matrícula, permanencia, evaluación, admisión y delegaciones internas completas.
+Pendiente: elevar los temas universitarios 13–17 a 30 preguntas e incorporar presupuesto y bases de ejecución vigentes, matrícula, permanencia, evaluación, admisión y delegaciones internas completas.
 
 ## Resto de convocatorias
 
@@ -94,15 +98,15 @@ Pendiente: ampliar transparencia y los temas universitarios, incorporar presupue
 GitHub Actions ejecuta:
 
 - regresión histórica de Diputación, UC3M, La Puebla y Carranque;
-- validación real del banco limpio de UC3M;
-- auditoría transversal de las 2.888 preguntas;
+- validación específica del tema 7 UC3M y de sus tres simulacros;
+- auditoría transversal de las 2.912 preguntas;
 - matriz independiente de los 20 temas de Carranque;
 - validación de los 38 supuestos prácticos;
 - comprobación de recursos de `index.html`, manifiesto y caché PWA.
 
 ## Pendiente real
 
-1. Ampliar UC3M hasta 30 preguntas reales en los seis temas incompletos.
+1. Completar los temas universitarios 13–17 de UC3M.
 2. Localizar los Estatutos vigentes del OAPGT.
 3. Auditar literalidad y dificultad de La Puebla y Carranque.
 4. Probar navegador, móvil, tablet y funcionamiento sin conexión.
@@ -111,14 +115,21 @@ GitHub Actions ejecuta:
 
 ## Historial reciente
 
+### v0.73.0 · 2026-07-12
+
+- Completado el tema 7 de transparencia UC3M con 30 preguntas verificadas.
+- Integrados plazos literales de la Ley 10/2019 y el Portal de Transparencia UC3M.
+- Elevado el banco UC3M a 500 preguntas y 15 de 20 temas con 30.
+- Regenerados los tres simulacros de 70 + 5.
+- Ampliada la CI con pruebas específicas v0.73.
+- Caché actualizada a `opoweb-v80`.
+
 ### v0.72.0 · 2026-07-11
 
 - Creada auditoría transversal de calidad.
 - Corregido el recuento efectivo a 2.888 preguntas.
 - Eliminadas 218 plantillas genéricas y 198 repeticiones internas de UC3M.
 - Reconstruido UC3M con 476 preguntas reales y simulacros 70 + 5.
-- Añadido control de integridad web y PWA.
-- Caché actualizada a `opoweb-v79`.
 
 ### v0.71.0 · 2026-07-11
 
