@@ -21,6 +21,7 @@ run('assets/js/carranque-v70.js');
 run('assets/js/practicos-v71.js');
 run('assets/js/uc3m-v72-clean.js');
 run('assets/js/uc3m-v73-transparencia.js');
+run('assets/js/uc3m-v73-fix.js');
 run('assets/js/auditoria-calidad-v72.js');
 
 const report = window.OPOWEB_AUDITORIA_V72;
