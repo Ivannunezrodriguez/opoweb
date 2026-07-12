@@ -1,16 +1,23 @@
 const { test, expect } = require('@playwright/test');
 
-const legacyProgress = {
-  'uc3m-aux-admin-2026:test:uc3m-t1': {
-    answers: { 'uc3m-t1-q01': 'A' },
-    corrected: true,
-    score: { ok: 1, bad: 0, blank: 29, grade: 0.33 }
-  }
-};
-
 async function prepare(page) {
   await page.goto('/index.html', { waitUntil: 'domcontentloaded' });
   await expect(page.locator('#oposicionSelect option')).toHaveCount(4);
+}
+
+async function makeLegacyProgress(page) {
+  return page.evaluate(() => {
+    const ope = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'uc3m-aux-admin-2026');
+    const themeId = ope.themes[0].id;
+    const question = ope.themeTests[themeId][0];
+    return {
+      [`uc3m-aux-admin-2026:test:${themeId}`]: {
+        answers: { [question.id]: question.options[0].letter },
+        corrected: true,
+        score: { ok: 1, bad: 0, blank: Math.max(0, ope.themeTests[themeId].length - 1), grade: 0.33 }
+      }
+    };
+  });
 }
 
 async function openUc3mTests(page) {
@@ -25,6 +32,7 @@ async function openUc3mTests(page) {
 
 test('mantiene el formato histórico y crea metadatos v2', async ({ page }) => {
   await prepare(page);
+  const legacyProgress = await makeLegacyProgress(page);
   await page.evaluate(progress => {
     localStorage.clear();
     localStorage.setItem('opowebProgress', JSON.stringify(progress));
@@ -48,6 +56,7 @@ test('mantiene el formato histórico y crea metadatos v2', async ({ page }) => {
 
 test('recupera automáticamente una copia válida si el principal está corrupto', async ({ page }) => {
   await prepare(page);
+  const legacyProgress = await makeLegacyProgress(page);
   await page.evaluate(progress => {
     localStorage.clear();
     localStorage.setItem('opowebProgress', '{json roto');
@@ -72,6 +81,7 @@ test('recupera automáticamente una copia válida si el principal está corrupto
 
 test('exporta formato v2 e importa conservando una copia anterior', async ({ page }) => {
   await prepare(page);
+  const legacyProgress = await makeLegacyProgress(page);
   await page.evaluate(progress => {
     localStorage.clear();
     localStorage.setItem('opowebProgress', JSON.stringify(progress));
