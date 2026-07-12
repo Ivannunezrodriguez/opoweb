@@ -60,7 +60,7 @@ assert.equal(theme17.legalTransition.norm, 'Real Decreto 534/2024');
 assert.equal(theme17.legalTransition.article, '23.2');
 assert.equal(theme17.legalTransition.effectiveDate, '2026-07-22');
 assert.equal(audit.admissionPolicy.annualDataIncluded, false);
-assert.ok(/publicación oficial/i.test(audit.admissionPolicy.reason));
+assert.ok(/oficial vigente/i.test(audit.admissionPolicy.reason));
 assert.equal(ope.uc3mInternalAudit.estimatedProgress, 99);
 
 console.log(`UC3M v0.80 APTO · ${audit.totalQuestions} preguntas · ${audit.targetThemes}/20 temas · ${audit.sourceQuestions} con fuente`);
