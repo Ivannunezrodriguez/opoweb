@@ -22,7 +22,9 @@
         .replace(/Versión OpoWeb v[0-9.]+/g, `Versión OpoWeb ${VERSION}`)
         .replace(/OpoWeb v0\.81/g, 'OpoWeb v0.82')
         .replace(/Auditoría v0\.81/g, 'Auditoría v0.82')
-        .replace(/auditoría v0\.81/gi, 'auditoría v0.82');
+        .replace(/auditoría v0\.81/gi, 'auditoría v0.82')
+        .replace(/opoweb-v88/g, 'opoweb-v89')
+        .replace(/\bv88\b/g, 'v89');
     });
   }
 
@@ -41,7 +43,7 @@
     document.body.appendChild(anchor);
     anchor.click();
     anchor.remove();
-    URL.revokeObjectURL(url);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   function importProgressFile(event) {
