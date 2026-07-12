@@ -28,8 +28,6 @@
 - Tiempo máximo: 60 minutos.
 - Mínimo formal: 35 puntos, sujeto al criterio de corte previsto en las bases.
 
-Los simulacros muestran separadamente las 70 preguntas puntuables y las 5 reservas. Las reservas se corrigen para entrenamiento, pero no intervienen en la nota mientras no sustituyan una pregunta anulada.
-
 ## Concurso y baremo prudente
 
 | Apartado | Máximo | Estimación prudente personal |
@@ -39,10 +37,10 @@ Los simulacros muestran separadamente las 70 preguntas puntuables y las 5 reserv
 | Formación | 5 | 0 hasta validar; potencial 3,3–5 |
 | **Total** | **30** | **0 consolidado** |
 
-## Estado del banco · OpoWeb v0.73
+## Estado del banco · OpoWeb v0.74
 
-- **500 preguntas reales**.
-- **15 de 20 temas** con 30 preguntas.
+- **540 preguntas reales**.
+- **17 de 20 temas** con 30 preguntas.
 - Mínimo actual: **10 preguntas**.
 - Tres simulacros de **70 + 5** sin repeticiones internas.
 - Sin preguntas de plantilla ni duplicados dentro del mismo tema.
@@ -55,14 +53,14 @@ Los simulacros muestran separadamente las 70 preguntas puntuables y las 5 reserv
 | 4. Ley 40/2015 I | Banco 30; revisado |
 | 5. Ley 40/2015 II | Banco 30; capa UC3M identificada |
 | 6. Protección de datos | Banco 30; revisado |
-| 7. Transparencia Madrid/UC3M | **Banco 30; Ley 10/2019 consolidada y Portal UC3M integrados** |
+| 7. Transparencia Madrid/UC3M | Banco 30; Ley 10/2019 consolidada y Portal UC3M |
 | 8. Igualdad UC3M | Banco 30; III Plan y protocolo |
 | 9. Ofimática | Banco 30; revisado |
 | 10. TREBEP | Banco 30; revisado |
 | 11. RD 364/1995 e incompatibilidades | Banco 30; revisado |
 | 12. PRL | Banco 30; revisado |
-| 13. LOSU I | Mínimo específico 10; pendiente ampliación |
-| 14. LOSU II | Mínimo específico 10; pendiente ampliación |
+| 13. LOSU I | **Banco 30; funciones, autonomía, enseñanzas, investigación e internacionalización** |
+| 14. LOSU II | **Banco 30; estudiantado, financiación, PDI y PTGAS** |
 | 15. Estatutos UC3M | Mínimo específico 10; texto refundido institucional integrado |
 | 16. RD 822/2021 y normativa UC3M | Mínimo específico 10; pendientes reglas internas |
 | 17. RD 534/2024 y admisión | Mínimo específico 10; pendientes reglas anuales UC3M |
@@ -70,36 +68,37 @@ Los simulacros muestran separadamente las 70 preguntas puntuables y las 5 reserv
 | 19. Presupuesto UC3M II | Banco 30; pendientes límites y fechas internas |
 | 20. Contratos | Banco 30; pendiente extracción completa de delegaciones |
 
-## Tema 7 · transparencia cerrado
+## Temas 13 y 14 · LOSU cerrados
 
-El bloque incorpora preguntas verificadas sobre:
+El tema 13 incorpora objeto y funciones del sistema, autonomía universitaria, creación y reconocimiento de universidades, calidad, docencia, títulos oficiales, RUCT, investigación, Ciencia Abierta e internacionalización.
 
-- objeto, ámbito y definiciones de la Ley 10/2019;
-- principios de libre acceso, veracidad, accesibilidad, gratuidad y neutralidad tecnológica;
-- publicidad activa, directorio, buscador, accesibilidad y anonimización;
-- legitimación universal y órgano competente;
-- solicitud oral y ausencia de obligación de motivar;
-- diez días para concretar una petición imprecisa;
-- veinte días para resolver, ampliables por otros veinte;
-- silencio desestimatorio y reclamación en un mes;
-- estructura y canal de solicitud del Portal de Transparencia UC3M.
+El tema 14 incorpora acceso, becas, derechos y deberes del estudiantado, equidad, autonomía económica, suficiencia financiera, presupuesto, PDI y PTGAS.
+
+Puntos numéricos de control:
+
+- autonomía universitaria: artículo 27.10 de la Constitución;
+- objetivo de gasto público universitario: mínimo del 1 % del PIB;
+- programas propios de investigación: mínimo del 5 % del presupuesto;
+- profesorado laboral temporal: límite general del 8 %;
+- PTGAS: acceso por igualdad, mérito, capacidad, transparencia, publicidad y concurrencia.
 
 ## Controles automáticos
 
 La CI comprueba:
 
-- exactamente 30 preguntas únicas en el tema 7;
+- exactamente 30 preguntas únicas en los temas 13 y 14;
 - cuatro opciones distintas y respuesta válida;
-- justificación y fuente oficial;
-- presencia de los plazos esenciales;
-- 500 preguntas totales en UC3M;
-- 15 temas con 30 preguntas y mínimo de 10;
+- justificación y fuente oficial BOE;
+- equilibrio de respuestas A, B, C y D;
+- presencia de los datos 27.10, 1 %, 5 % y 8 %;
+- 540 preguntas totales en UC3M;
+- 17 temas con 30 preguntas y mínimo de 10;
 - tres simulacros 70 + 5 con representación de los 20 temas;
 - auditoría transversal sin errores estructurales.
 
 ## Trabajo pendiente para cerrar UC3M
 
-1. Elevar los temas 13–17 de 10 a 30 preguntas reales.
+1. Elevar los temas 15, 16 y 17 de 10 a 30 preguntas reales.
 2. Incorporar presupuesto y bases de ejecución UC3M vigentes.
 3. Completar normativa interna de matrícula, permanencia y evaluación.
 4. Integrar ponderaciones, cupos y calendario anual de admisión.
@@ -109,7 +108,7 @@ La CI comprueba:
 ## Estrategia
 
 - Priorizar temas 2, 3, 9 y 10 durante la primera vuelta.
-- Practicar separadamente los temas 7, 8, 15, 18 y 19.
+- Practicar separadamente los temas 7, 8, 13, 14, 15, 18 y 19.
 - Entrenar a una velocidad media aproximada de 51 segundos por pregunta.
 - Usar los tres simulacros con sus cinco reservas.
 - No memorizar importes, plazos o competencias internas sin documento vigente contrastado.
