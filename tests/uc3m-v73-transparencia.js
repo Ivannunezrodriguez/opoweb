@@ -16,6 +16,7 @@ run('assets/js/uc3m-v66.js');
 run('assets/js/uc3m-v67.js');
 run('assets/js/uc3m-v72-clean.js');
 run('assets/js/uc3m-v73-transparencia.js');
+run('assets/js/uc3m-v73-fix.js');
 
 const ope = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'uc3m-aux-admin-2026');
 const release = window.OPOWEB_UC3M_V73;
@@ -41,6 +42,8 @@ assert.ok(bank.every(question => /boe\.es|uc3m\.es/.test(question.source)));
 assert.ok(bank.some(question => /veinte días/i.test(`${question.text} ${question.options.map(option => option.text).join(' ')}`)));
 assert.ok(bank.some(question => /diez días/i.test(`${question.text} ${question.options.map(option => option.text).join(' ')}`)));
 assert.ok(bank.some(question => /un mes/i.test(`${question.text} ${question.options.map(option => option.text).join(' ')}`)));
+assert.ok(bank.some(question => /quién responde de la información/i.test(question.text)));
+assert.ok(!bank.some(question => /qué ocurre si se incumplen/i.test(question.text)));
 
 assert.equal(ope.simulacros.length, 3);
 for (const sim of ope.simulacros) {
@@ -49,6 +52,7 @@ for (const sim of ope.simulacros) {
   assert.equal(sim.reserveQuestions.length, 5);
   assert.equal(new Set(all.map(question => question.text)).size, 75);
   assert.equal(new Set(all.map(question => question.auditTheme)).size, 20);
+  assert.ok(!all.some(question => /qué ocurre si se incumplen/i.test(question.text)));
 }
 
 console.log(`UC3M v0.73 OK · ${release.totalQuestions} preguntas · ${release.targetThemes}/20 temas a 30 · mínimo ${release.minimumQuestions}`);
