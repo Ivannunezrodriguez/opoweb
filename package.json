@@ -1,0 +1,13 @@
+{
+  "name": "opoweb",
+  "version": "0.81.0",
+  "private": true,
+  "description": "Plataforma estática de estudio para oposiciones administrativas",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.0"
+  }
+}

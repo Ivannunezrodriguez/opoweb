@@ -11,21 +11,21 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.80.0**
-- Caché PWA: `opoweb-v87`
-- Última revisión estructural: 12 de julio de 2026
+- **OpoWeb v0.81.0**
+- Caché PWA: `opoweb-v88`
+- Última revisión estructural y funcional: 12 de julio de 2026
 
 ## Avance aproximado
 
 | Área | Avance estimado |
 |---|---:|
-| Funcionamiento e interfaz | 95 % |
+| Funcionamiento e interfaz | 98 % |
 | Diputación C1 | 97 % |
 | UC3M C2 | 99 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 93 % |
-| **OpoWeb global** | **96 %** |
+| Arquitectura y pruebas | 96 % |
+| **OpoWeb global** | **97 %** |
 
 Los porcentajes son estimaciones de gestión basadas en contenido verificable, fuentes, preguntas, supuestos, simulacros y deuda técnica. No representan una probabilidad de aprobar.
 
@@ -40,7 +40,7 @@ La ejecución real de la aplicación contiene **3.102 preguntas**:
 | Carranque | 600 | 20 temas con 30 |
 | UC3M | 690 | 20 temas con 30 o más |
 
-La auditoría v0.80 comprueba por tema:
+La auditoría comprueba por tema:
 
 - al menos 30 preguntas;
 - identificadores y enunciados únicos;
@@ -53,7 +53,31 @@ La auditoría v0.80 comprueba por tema:
 
 La integración exige que el resultado automático sea **APTO** y que no existan fallos estructurales.
 
-## UC3M · cierre v0.80
+## Validación funcional v0.81
+
+Playwright ejecuta la aplicación en un navegador Chromium real mediante tres configuraciones:
+
+- escritorio de 1440 × 900;
+- móvil Pixel 7;
+- tablet iPad Pro 11.
+
+Las pruebas comprueban:
+
+- carga exacta de las cuatro OPE activas;
+- recorrido por las siete vistas de la aplicación;
+- funcionamiento del menú adaptable;
+- ausencia de desbordamiento horizontal;
+- respuesta y corrección de preguntas;
+- persistencia del progreso tras recargar;
+- registro del service worker;
+- contenido de la caché `opoweb-v88`;
+- lectura del manifiesto;
+- recarga completa sin conexión;
+- conservación de `localStorage` sin red.
+
+El informe HTML de Playwright se guarda como artefacto de GitHub Actions durante 14 días.
+
+## UC3M · cierre documental
 
 El programa queda cubierto con 690 preguntas reales:
 
@@ -72,13 +96,11 @@ El tema 17 incluye una alerta para revisar la redacción vigente del artículo 2
 
 ### Qué queda realmente pendiente
 
-UC3M se sitúa en el 99 %, no en el 100 %. El punto restante corresponde a:
+UC3M se mantiene en el 99 %, no en el 100 %. La validación automática de navegador, vista móvil, vista tablet, modo sin conexión y persistencia ya está cubierta. El margen restante corresponde a:
 
-- comprobación funcional en navegador real;
-- validación en móvil y tablet;
-- instalación y actualización de la PWA;
-- funcionamiento sin conexión;
-- conservación del progreso al actualizar la caché;
+- comprobación manual en dispositivos físicos Android e iPad;
+- prueba específica con Safari/WebKit;
+- instalación manual desde la interfaz del navegador;
 - futuras actualizaciones anuales oficiales de admisión.
 
 ## Resto de convocatorias
@@ -114,11 +136,13 @@ GitHub Actions ejecuta:
 - validación de los tres simulacros UC3M;
 - matriz independiente de los 20 temas de Carranque;
 - validación de los 38 supuestos prácticos;
-- integridad de `index.html`, manifiesto y caché PWA.
+- integridad de `index.html`, manifiesto y caché PWA;
+- Playwright en escritorio, móvil y tablet;
+- recarga sin conexión y conservación del progreso.
 
 ## Pendiente real
 
-1. Probar navegador, móvil, tablet y funcionamiento sin conexión.
+1. Comprobar manualmente la aplicación en dispositivos físicos Android e iPad y en Safari/WebKit.
 2. Revisar la redacción vigente del artículo 23.2 del Real Decreto 534/2024 desde el 22 de julio de 2026.
 3. Actualizar admisión UC3M solo con publicación oficial anual.
 4. Localizar los Estatutos vigentes del OAPGT.
@@ -127,21 +151,23 @@ GitHub Actions ejecuta:
 
 ## Historial reciente
 
+### v0.81.0 · 2026-07-12
+
+- Añadidas pruebas Playwright en escritorio, Pixel 7 e iPad Pro 11.
+- Verificada la navegación completa y el diseño adaptable.
+- Verificada la persistencia del progreso tras recargar.
+- Verificados service worker, manifiesto, caché y recarga sin conexión.
+- Caché actualizada a `opoweb-v88`.
+
 ### v0.80.0 · 2026-07-12
 
 - Añadida auditoría final del banco UC3M.
 - Controlados duplicados, opciones, trazabilidad, fuentes y equilibrio por tema.
 - Separados los datos anuales de admisión de la normativa estable.
 - Añadida alerta de transición normativa para el artículo 23.2 del Real Decreto 534/2024.
-- Caché actualizada a `opoweb-v87`.
 
 ### v0.79.0 · 2026-07-12
 
 - Integradas 30 preguntas de contratación interna UC3M.
 - Tema 20 ampliado a 60 preguntas.
 - Banco UC3M elevado a 690 y banco global a 3.102 preguntas.
-
-### v0.78.0 · 2026-07-12
-
-- Integradas 30 preguntas del Presupuesto UC3M 2026.
-- Temas 18 y 19 ampliados a 45 preguntas cada uno.

@@ -223,6 +223,23 @@ function resultHtml(q, chosen){
   if(chosen===q.answer) return `<div class="result-box good"><strong>Correcta.</strong> ${escapeHtml(q.justification)}</div>`;
   return `<div class="result-box bad"><strong>Incorrecta.</strong> Correcta: ${q.answer}. ${escapeHtml(q.justification)}</div>`;
 }
+function applyQuestionResults(qs, saved){
+  const sections = new Map([...document.querySelectorAll('.question[data-qid]')].map(section => [section.dataset.qid, section]));
+  qs.forEach(q => {
+    const section = sections.get(q.id);
+    if(!section) return;
+    const chosen = saved.answers?.[q.id] || '';
+    section.querySelectorAll('.option').forEach(option => {
+      const letter = option.querySelector('input[type=radio]')?.value || '';
+      option.classList.toggle('correct', letter === q.answer);
+      option.classList.toggle('wrong', Boolean(chosen) && letter === chosen && chosen !== q.answer);
+    });
+    section.querySelector('.result-box')?.remove();
+    section.insertAdjacentHTML('beforeend', resultHtml(q, chosen));
+  });
+  const box=$('scoreBox');
+  if(box && saved.score) box.textContent=formatScore(saved.score);
+}
 function attachQuestionEvents(kind,setId,qs,scoring){
   if(!qs.length) return;
   const key=progressKey(kind,setId);
@@ -235,9 +252,10 @@ function attachQuestionEvents(kind,setId,qs,scoring){
   $('correctSet').addEventListener('click',()=>{
     const saved=state.progress[key];
     const res=calculate(qs, saved.answers, scoring);
-    saved.corrected=true; saved.score=res; saveProgress();
-    if(kind==='test') renderTests(); else renderSimulacros();
-    const box=$('scoreBox'); if(box) box.textContent=formatScore(res);
+    saved.corrected=true;
+    saved.score=res;
+    saveProgress();
+    applyQuestionResults(qs, saved);
   });
   $('resetSet').addEventListener('click',()=>{ delete state.progress[key]; saveProgress(); if(kind==='test') renderTests(); else renderSimulacros(); });
   if(state.progress[key]?.score){ const box=$('scoreBox'); if(box) box.textContent=formatScore(state.progress[key].score); }
