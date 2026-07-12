@@ -37,6 +37,7 @@ jobs:
           node --check assets/js/uc3m-v73-transparencia.js
           node --check assets/js/uc3m-v73-fix.js
           node --check assets/js/uc3m-v74-losu.js
+          node --check assets/js/uc3m-v75-estatutos.js
           node --check assets/js/puebla-v68.js
           node --check assets/js/carranque-v69.js
           node --check assets/js/carranque-v69-fix.js
@@ -53,6 +54,7 @@ jobs:
           node --check assets/js/ui-auditoria-v72.js
           node --check assets/js/ui-v73.js
           node --check assets/js/ui-v74.js
+          node --check assets/js/ui-v75.js
       - name: Run regression tests
         run: |
           node tests/smoke-v56.js
@@ -76,7 +78,7 @@ jobs:
           node tests/practicos-v71.js
 
   uc3m-clean:
-    name: UC3M LOSU v0.74
+    name: UC3M Estatutos v0.75
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -85,18 +87,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate UC3M v0.74
-        run: node tests/uc3m-v74-losu.js
+      - name: Validate UC3M v0.75
+        run: node tests/uc3m-v75-estatutos.js
       - name: Upload UC3M report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: uc3m-v74
-          path: uc3m-v74.json
+          name: uc3m-v75
+          path: uc3m-v75.json
           if-no-files-found: ignore
 
   quality-audit:
-    name: Auditoría transversal v0.74
+    name: Auditoría transversal v0.75
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -106,17 +108,17 @@ jobs:
         with:
           node-version: '20'
       - name: Audit question quality
-        run: node tests/auditoria-calidad-v74.js
+        run: node tests/auditoria-calidad-v75.js
       - name: Upload audit report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: audit-v74
-          path: audit-v74.json
+          name: audit-v75
+          path: audit-v75.json
           if-no-files-found: ignore
 
   site-integrity:
-    name: Integridad web y PWA v0.74
+    name: Integridad web y PWA v0.75
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -126,7 +128,7 @@ jobs:
         with:
           node-version: '20'
       - name: Validate web and PWA integrity
-        run: node tests/site-integrity-v74.js
+        run: node tests/site-integrity-v75.js
 
   carranque-live:
     name: Carranque v0.70 · tema ${{ matrix.theme }}
