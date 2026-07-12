@@ -54,7 +54,7 @@ assert.ok(/mobile-chromium/.test(playwrightConfig));
 assert.ok(/tablet-chromium/.test(playwrightConfig));
 assert.ok(/setOffline\(true\)/.test(browserTest));
 assert.ok(/opowebProgress/.test(browserTest));
-assert.ok(/opoweb-v88/.test(browserTest), 'La prueba PWA histórica debe seguir validando v88 en su versión base');
+assert.ok(/opoweb-v89/.test(browserTest), 'La prueba PWA debe validar la caché v89');
 assert.ok(/opowebProgressBackup/.test(storageBrowserTest));
 assert.ok(/formatVersion/.test(storageBrowserTest));
 assert.ok(/FORMAT_VERSION = 2/.test(storageModule));
