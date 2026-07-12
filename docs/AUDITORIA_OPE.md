@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.81
+# Auditoría global de OpoWeb · v0.82
 
 Fecha de revisión: 12 de julio de 2026.
 
@@ -13,12 +13,12 @@ Fecha de revisión: 12 de julio de 2026.
 
 | Área | Avance |
 |---|---:|
-| Funcionamiento e interfaz | 98 % |
+| Funcionamiento e interfaz | 99 % |
 | Diputación C1 | 97 % |
 | UC3M C2 | 99 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 96 % |
+| Arquitectura y pruebas | 97 % |
 | **OpoWeb global** | **97 %** |
 
 ## Recuento efectivo
@@ -49,7 +49,7 @@ Los tres simulacros deben contener 70 preguntas principales, 5 reservas, 75 text
 
 La versión solo puede considerarse apta cuando el informe no contiene fallos. Este control no sustituye la revisión jurídica del contenido, pero reduce errores estructurales y de trazabilidad.
 
-## Validación funcional v0.81
+## Validación funcional v0.82
 
 Playwright ejecuta OpoWeb en Chromium con tres perfiles:
 
@@ -66,12 +66,24 @@ La prueba funcional controla:
 - respuesta y corrección de un test UC3M;
 - persistencia de `opowebProgress` después de recargar;
 - registro y control del service worker;
-- presencia de la caché `opoweb-v88` y de sus recursos esenciales;
+- presencia de la caché `opoweb-v89` y de sus recursos esenciales;
 - manifiesto instalable;
 - recarga completa sin conexión;
-- conservación de datos locales durante la recarga sin red.
+- conservación de datos locales durante la recarga sin red;
+- migración transparente desde el formato histórico;
+- recuperación desde `opowebProgressBackup` si el principal está corrupto;
+- exportación v2 e importación con checksum;
+- conservación de una copia anterior antes de importar.
 
 El informe de ejecución se conserva como artefacto HTML de GitHub Actions durante 14 días.
+
+## Protección de datos locales v0.82
+
+La capa de almacenamiento mantiene la clave histórica y añade un formato de intercambio v2. Cada guardado se sanea y genera metadatos con fecha, número de bloques y checksum FNV-1a.
+
+Antes de sobrescribir el progreso principal se conserva el último estado válido. Cuando el JSON principal no puede analizarse, OpoWeb intenta restaurar automáticamente la copia. Los archivos de exportación incluyen checksum y se rechazan si han sido modificados sin actualizarlo.
+
+El control reduce el riesgo de pérdida durante futuras refactorizaciones, pero no sustituye una exportación periódica realizada por el usuario.
 
 ## Política de admisión anual
 
@@ -88,7 +100,7 @@ El tema 17 identifica la transición del artículo 23.2 del Real Decreto 534/202
 - Tres simulacros 70 + 5.
 - Marco estatal, autonómico e interno integrado.
 - Presupuesto 2026 y contratación interna integrados.
-- Validación automática de navegador y PWA integrada.
+- Validación automática de navegador, PWA y almacenamiento integrada.
 - Avance estimado: 99 %.
 
 No se asigna el 100 % porque la emulación automatizada no sustituye una comprobación manual en dispositivos físicos, Safari/WebKit ni el mantenimiento de datos anuales.
@@ -100,4 +112,4 @@ No se asigna el 100 % porque la emulación automatizada no sustituye una comprob
 3. Actualización anual de admisión UC3M con fuente oficial.
 4. Estatutos oficiales vigentes del OAPGT.
 5. Auditoría literal y de dificultad de La Puebla y Carranque.
-6. Consolidación de módulos históricos sin perder progreso.
+6. Consolidación real de módulos históricos aprovechando la copia y migración ya implantadas.

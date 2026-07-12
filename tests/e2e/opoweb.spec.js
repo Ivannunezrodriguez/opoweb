@@ -55,7 +55,7 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
 
   const optionValues = await page.locator('#oposicionSelect option').evaluateAll(options => options.map(option => option.value));
   expect(optionValues).toEqual(EXPECTED_OPE_IDS);
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.81.0');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.82.0');
 
   await page.locator('#oposicionSelect').selectOption('uc3m-aux-admin-2026');
   await expect(page.locator('#oposicionCard')).toContainText('UC3M');
@@ -120,15 +120,16 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
     await page.evaluate(() => navigator.serviceWorker.ready);
   }
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBeTruthy();
-  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v88')), { timeout: 30_000 }).toBeTruthy();
+  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v89')), { timeout: 30_000 }).toBeTruthy();
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open('opoweb-v88');
+    const cache = await caches.open('opoweb-v89');
     return (await cache.keys()).map(request => new URL(request.url).pathname);
   });
   expect(cachedPaths).toContain('/index.html');
+  expect(cachedPaths).toContain('/assets/js/storage-v82.js');
   expect(cachedPaths).toContain('/assets/js/app.js');
-  expect(cachedPaths).toContain('/assets/js/ui-v81.js');
+  expect(cachedPaths).toContain('/assets/js/ui-v82.js');
   expect(cachedPaths).toContain('/manifest.webmanifest');
 
   const manifest = await page.evaluate(async () => {
@@ -151,7 +152,7 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
   await context.setOffline(true);
   await page.reload({ waitUntil: 'domcontentloaded' });
   await expect(page.locator('#viewTitle')).toHaveText('Temario');
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.81.0');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.82.0');
   const restored = await page.evaluate(() => JSON.parse(localStorage.getItem('opowebProgress') || '{}'));
   expect(restored).toEqual(offlineProgress);
   expect(pageErrors).toEqual([]);
