@@ -1,6 +1,6 @@
-# Auditoría global de OpoWeb · v0.72
+# Auditoría global de OpoWeb · v0.73
 
-Fecha de revisión: 11 de julio de 2026.
+Fecha de revisión: 12 de julio de 2026.
 
 ## Alcance
 
@@ -17,11 +17,11 @@ Las Ventas con Peña Aguilera está retirada del selector. No se añadirán nuev
 |---|---:|
 | Funcionamiento e interfaz | 95 % |
 | Diputación C1 | 97 % |
-| UC3M C2 | 64 % |
+| UC3M C2 | 68 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 78 % |
-| **OpoWeb global** | **84 %** |
+| Arquitectura y pruebas | 80 % |
+| **OpoWeb global** | **85 %** |
 
 ## Recuento efectivo
 
@@ -32,38 +32,40 @@ La auditoría carga la aplicación en el mismo orden que la web y cuenta exclusi
 | Diputación | 1.242 | 40/40 |
 | La Puebla | 570 | 19/19 |
 | Carranque | 600 | 20/20 |
-| UC3M | 476 | 14/20 |
-| **Total** | **2.888** | — |
+| UC3M | 500 | 15/20 |
+| **Total** | **2.912** | — |
 
-Las cifras documentales anteriores de Diputación y UC3M no coincidían con el estado final de ejecución. Desde v0.72 se usa como referencia el recuento automático.
+Desde v0.72 se usa como referencia el recuento automático de ejecución y no la suma documental histórica.
 
 ## Resultado estructural
 
-La auditoría de las 2.888 preguntas devuelve:
+La auditoría comprueba en las 2.912 preguntas:
 
-- 0 respuestas inválidas;
-- 0 bloques con opciones inválidas;
-- 0 identificadores duplicados;
-- 0 preguntas sin fuente o justificación;
-- 0 preguntas genéricas;
-- 0 repeticiones dentro del mismo tema.
+- respuestas válidas;
+- cuatro opciones distintas y no vacías;
+- identificadores únicos;
+- fuente o justificación obligatoria;
+- ausencia de plantillas genéricas;
+- ausencia de repeticiones dentro del mismo tema;
+- distribución razonable de letras correctas.
 
-Se registran por separado las reutilizaciones exactas entre temas y las justificaciones breves, pero no se consideran automáticamente errores estructurales.
+Las reutilizaciones exactas entre temas y las justificaciones breves se registran por separado y no se convierten automáticamente en errores estructurales.
 
-## Corrección UC3M
+## UC3M v0.73
 
-El banco anterior conservaba 218 plantillas genéricas y 198 repeticiones internas. Se han retirado antes de generar tests y simulacros.
+El tema 7 de transparencia se ha reconstruido con la Ley 10/2019 consolidada y el Portal de Transparencia UC3M.
 
 Estado real:
 
-- 476 preguntas válidas;
-- 14 temas con 30 preguntas;
-- tema 7 con 6 preguntas verificadas;
+- 500 preguntas válidas;
+- 15 temas con 30 preguntas;
+- tema 7 con 30 preguntas verificadas;
 - temas 13–17 con un mínimo de 10 preguntas específicas;
 - tres simulacros 70 + 5 sin plantillas;
-- 0 duplicados dentro del mismo tema.
+- plazos de 10 días, 20 + 20 días y un mes integrados en el banco;
+- pruebas específicas de contenido, fuentes y simulacros en CI.
 
-La estimación baja del 84 % al 64 % porque la métrica anterior contaba contenido genérico como cobertura real.
+La estimación UC3M sube del 64 % al 68 %. No sube más porque siguen abiertos cinco temas universitarios y varias fuentes internas anuales.
 
 ## La Puebla y Carranque
 
@@ -80,8 +82,8 @@ La estimación baja del 84 % al 64 % porque la métrica anterior contaba conteni
 
 ## Bloqueos para alcanzar el 100 %
 
-1. Elevar a 30 preguntas reales los seis temas incompletos de UC3M.
-2. Incorporar el paquete interno vigente de UC3M.
+1. Elevar a 30 preguntas reales los cinco temas 13–17 de UC3M.
+2. Incorporar presupuesto, bases de ejecución, normativa académica, admisión y delegaciones internas vigentes de UC3M.
 3. Localizar los Estatutos oficiales del OAPGT.
 4. Auditar literalidad y dificultad de La Puebla y Carranque.
 5. Probar navegador, móvil, tablet y PWA sin conexión.
