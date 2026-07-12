@@ -37,11 +37,11 @@
 | Formación | 5 | 0 hasta validar; potencial 3,3–5 |
 | **Total** | **30** | **0 consolidado** |
 
-## Estado del banco · OpoWeb v0.75
+## Estado del banco · OpoWeb v0.76
 
-- **560 preguntas reales**.
-- **18 de 20 temas** con 30 preguntas.
-- Mínimo actual: **10 preguntas**.
+- **600 preguntas reales**.
+- **20 de 20 temas** con al menos 30 preguntas.
+- Mínimo actual: **30 preguntas**.
 - Tres simulacros de **70 + 5** sin repeticiones internas.
 - Sin preguntas de plantilla ni duplicados dentro del mismo tema.
 
@@ -61,51 +61,80 @@
 | 12. PRL | Banco 30; revisado |
 | 13. LOSU I | Banco 30; funciones, autonomía, enseñanzas, investigación e internacionalización |
 | 14. LOSU II | Banco 30; estudiantado, financiación, PDI y PTGAS |
-| 15. Estatutos UC3M | **Banco 30; Defensor, servicios, régimen económico y reforma** |
-| 16. RD 822/2021 y normativa UC3M | Mínimo específico 10; pendientes reglas internas |
-| 17. RD 534/2024 y admisión | Mínimo específico 10; pendientes reglas anuales UC3M |
+| 15. Estatutos UC3M | Banco 30; Defensor, servicios, régimen económico y reforma |
+| 16. RD 822/2021 y normativa UC3M | **Banco 30; ordenación académica estatal cerrada; capa interna pendiente** |
+| 17. RD 534/2024 y admisión | **Banco 30; acceso y admisión estatal cerrados; parámetros anuales pendientes** |
 | 18. Presupuesto UC3M I | Banco 30; pendientes datos internos vigentes |
 | 19. Presupuesto UC3M II | Banco 30; pendientes límites y fechas internas |
 | 20. Contratos | Banco 30; pendiente extracción completa de delegaciones |
 
-## Tema 15 · Estatutos UC3M cerrado
+## Tema 16 · ordenación académica
 
 El bloque incorpora:
 
-- propuesta del candidato a Defensor por el Rector;
-- elección por el Claustro con la mitad más uno de sus miembros;
-- mandato de tres años y una sola reelección;
-- designación del Adjunto por mayoría simple;
-- memoria anual al inicio del curso;
-- creación y supresión de servicios por el Consejo de Gobierno a propuesta del Rector;
-- inventario elaborado por el Gerente y registro de bienes por el Secretario General;
-- presupuesto anual, único, público y equilibrado;
-- Rector como órgano de contratación;
-- reforma aprobada por mayoría absoluta del Claustro;
-- prohibición de presentar reformas durante los tres meses anteriores al final del mandato del Claustro.
+- organización de Grado, Máster y Doctorado;
+- planes de estudios y participación del estudiantado;
+- guías docentes publicadas antes de la matrícula;
+- reconocimiento y transferencia de créditos;
+- Grado de 240 ECTS y formación básica mínima de 60;
+- prácticas externas y TFG de 6 a 24 ECTS en un Grado de 240;
+- modalidad híbrida entre 40 % y 60 % no presencial;
+- modalidad virtual con al menos 80 % de créditos virtuales;
+- Másteres de 60, 90 o 120 ECTS;
+- TFM de 6 a 30 ECTS;
+- matrícula condicionada con TFG y hasta 9 ECTS pendientes;
+- complementos formativos limitados al 20 %;
+- reserva mínima del 5 % en Máster;
+- procedimientos de aseguramiento de la calidad.
+
+## Tema 17 · acceso y admisión
+
+El bloque incorpora:
+
+- diferencia entre acceso y admisión;
+- principios de igualdad, mérito y capacidad;
+- acceso con Bachillerato y con Técnico Superior;
+- estudios extranjeros parciales y reconocimiento mínimo de 30 ECTS;
+- vías de mayores de 25, 40 y 45 años;
+- estructura competencial de la prueba de acceso;
+- cuatro ejercicios o cinco en territorios con lengua cooficial;
+- nota mínima 4 en la prueba para ponderar;
+- calificación de acceso 60 % Bachillerato y 40 % prueba, con mínimo final 5;
+- validez indefinida de la calificación de acceso;
+- dos convocatorias anuales;
+- hasta tres materias adicionales y una segunda lengua extranjera;
+- consideración mínima de dos materias en admisión;
+- vigencia durante el curso inmediato y los dos siguientes;
+- publicación de procedimientos con un curso académico de antelación.
+
+La versión aplica la normativa vigente a 12 de julio de 2026 y no anticipa la modificación del artículo 23.2 del Real Decreto 534/2024 cuya entrada en vigor está prevista para el 22 de julio de 2026.
 
 ## Controles automáticos
 
 La CI comprueba:
 
-- exactamente 30 preguntas únicas en el tema 15;
+- exactamente 30 preguntas únicas en cada uno de los temas 16 y 17;
 - cuatro opciones distintas y respuesta válida;
-- justificación y fuente institucional UC3M;
+- justificación y fuente oficial BOE;
 - equilibrio de respuestas A, B, C y D;
-- presencia de mayorías, mandato, estructura presupuestaria y límite temporal de reforma;
-- 560 preguntas totales en UC3M;
-- 18 temas con 30 preguntas y mínimo de 10;
+- presencia de los datos 40–60 %, 80 %, 9 ECTS, 60/40 y vigencia 1 + 2 cursos;
+- 600 preguntas totales en UC3M;
+- 20 temas con 30 preguntas y mínimo de 30;
 - tres simulacros 70 + 5 con representación de los 20 temas;
 - auditoría transversal sin errores estructurales.
 
 ## Trabajo pendiente para cerrar UC3M
 
-1. Elevar los temas 16 y 17 de 10 a 30 preguntas reales.
-2. Completar normativa interna de matrícula, permanencia y evaluación.
-3. Integrar ponderaciones, cupos y calendario anual de admisión.
-4. Incorporar presupuesto y bases de ejecución UC3M vigentes.
-5. Extraer literalmente delegaciones y procedimiento interno de contratación.
-6. Auditar vigencia y dificultad final de distractores.
+1. Incorporar la normativa interna vigente de matrícula, permanencia y evaluación.
+2. Integrar ponderaciones, cupos y calendario anual de admisión UC3M.
+3. Incorporar presupuesto y bases de ejecución vigentes.
+4. Extraer literalmente delegaciones y procedimiento interno de contratación.
+5. Auditar vigencia y dificultad final de distractores.
+6. Probar la aplicación en navegador, móvil, tablet y modo sin conexión.
+
+## Valoración realista
+
+La cobertura cuantitativa del programa está completa, pero no equivale al cierre de la convocatoria. El 88 % refleja que todos los temas disponen de banco suficiente y simulacros, mientras sigue abierta la capa documental interna y anual de la Universidad.
 
 ## Estrategia
 
