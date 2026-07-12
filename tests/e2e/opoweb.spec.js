@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 const EXPECTED_OPE_IDS = [
   'puebla-aux-admin-2026',
   'carranque-aux-admin-2026',
-  'diputacion-admin-c1-2026',
+  'diputacion-toledo-admin-2026',
   'uc3m-aux-admin-2026'
 ];
 
