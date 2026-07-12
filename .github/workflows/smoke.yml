@@ -35,6 +35,7 @@ jobs:
           node --check assets/js/uc3m-v67.js
           node --check assets/js/uc3m-v72-clean.js
           node --check assets/js/uc3m-v73-transparencia.js
+          node --check assets/js/uc3m-v73-fix.js
           node --check assets/js/puebla-v68.js
           node --check assets/js/carranque-v69.js
           node --check assets/js/carranque-v69-fix.js
