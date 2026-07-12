@@ -28,7 +28,7 @@
 - Tiempo máximo: 60 minutos.
 - Mínimo formal: 35 puntos, sujeto al criterio de corte previsto en las bases.
 
-Desde v0.42 los simulacros muestran separadamente las 70 preguntas puntuables y las 5 reservas. Las reservas se corrigen para entrenamiento, pero no intervienen en la nota mientras no sustituyan una pregunta anulada.
+Los simulacros muestran separadamente las 70 preguntas puntuables y las 5 reservas. Las reservas se corrigen para entrenamiento, pero no intervienen en la nota mientras no sustituyan una pregunta anulada.
 
 ## Concurso y baremo prudente
 
@@ -39,89 +39,77 @@ Desde v0.42 los simulacros muestran separadamente las 70 preguntas puntuables y 
 | Formación | 5 | 0 hasta validar; potencial 3,3–5 |
 | **Total** | **30** | **0 consolidado** |
 
-## Método OpoWeb
+## Estado del banco · OpoWeb v0.73
 
-Cada tema conserva:
-
-1. Resumen orientado al aprobado.
-2. Rigor normativo.
-3. Desarrollo por títulos, capítulos y artículos.
-4. Opo-Test: puntos calientes.
-5. Retención activa.
-6. Cuadro para test y supuesto práctico.
-
-## Auditoría del temario · OpoWeb v0.42
+- **500 preguntas reales**.
+- **15 de 20 temas** con 30 preguntas.
+- Mínimo actual: **10 preguntas**.
+- Tres simulacros de **70 + 5** sin repeticiones internas.
+- Sin preguntas de plantilla ni duplicados dentro del mismo tema.
 
 | Tema | Estado actual |
 |---|---|
-| 1. Constitución | Revisado en profundidad |
-| 2. Ley 39/2015 I | Revisado en profundidad; banco 30+ |
-| 3. Ley 39/2015 II | Revisado en profundidad; banco 30+ |
-| 4. Ley 40/2015 I | Revisado en profundidad |
-| 5. Ley 40/2015 II | Revisado en profundidad |
-| 6. Protección de datos | Revisado en profundidad |
-| 7. Transparencia Madrid/UC3M | Ampliado; banco 30+; pendiente texto consolidado y plazos literales |
-| 8. Igualdad UC3M | Completado con III Plan y protocolo; banco 30+ |
-| 9. Ofimática | Revisado en profundidad; banco 30+ |
-| 10. TREBEP | Revisado en profundidad; banco 30+ |
-| 11. RD 364/1995 e incompatibilidades | Revisado en profundidad |
-| 12. PRL | Revisado en profundidad |
-| 13. LOSU I | Revisado en profundidad |
-| 14. LOSU II | Revisado en profundidad |
-| 15. Estatutos UC3M | Desarrollado; banco 30+; pendiente literalidad consolidada |
-| 16. RD 822/2021 y normativa UC3M | Marco estatal revisado; pendientes reglas internas |
-| 17. RD 534/2024 y admisión | Marco estatal revisado; pendientes datos anuales UC3M |
-| 18. Presupuesto UC3M I | Desarrollado; banco 30+; pendientes datos internos vigentes |
-| 19. Presupuesto UC3M II | Desarrollado; banco 30+; pendientes límites y fechas internas |
-| 20. Contratos | LCSP revisada; pendientes delegaciones y procedimiento interno |
+| 1. Constitución | Banco 30; bloque común reutilizable |
+| 2. Ley 39/2015 I | Banco 30; revisado |
+| 3. Ley 39/2015 II | Banco 30; revisado |
+| 4. Ley 40/2015 I | Banco 30; revisado |
+| 5. Ley 40/2015 II | Banco 30; capa UC3M identificada |
+| 6. Protección de datos | Banco 30; revisado |
+| 7. Transparencia Madrid/UC3M | **Banco 30; Ley 10/2019 consolidada y Portal UC3M integrados** |
+| 8. Igualdad UC3M | Banco 30; III Plan y protocolo |
+| 9. Ofimática | Banco 30; revisado |
+| 10. TREBEP | Banco 30; revisado |
+| 11. RD 364/1995 e incompatibilidades | Banco 30; revisado |
+| 12. PRL | Banco 30; revisado |
+| 13. LOSU I | Mínimo específico 10; pendiente ampliación |
+| 14. LOSU II | Mínimo específico 10; pendiente ampliación |
+| 15. Estatutos UC3M | Mínimo específico 10; texto refundido institucional integrado |
+| 16. RD 822/2021 y normativa UC3M | Mínimo específico 10; pendientes reglas internas |
+| 17. RD 534/2024 y admisión | Mínimo específico 10; pendientes reglas anuales UC3M |
+| 18. Presupuesto UC3M I | Banco 30; pendientes datos internos vigentes |
+| 19. Presupuesto UC3M II | Banco 30; pendientes límites y fechas internas |
+| 20. Contratos | Banco 30; pendiente extracción completa de delegaciones |
 
-## Banco de preguntas
+## Tema 7 · transparencia cerrado
 
-La web comprueba automáticamente:
+El bloque incorpora preguntas verificadas sobre:
 
-- enunciado presente;
-- cuatro respuestas distintas y no vacías;
-- respuesta correcta incluida;
-- justificación obligatoria;
-- eliminación de duplicados exactos;
-- reparto de respuestas A, B, C y D;
-- dificultad baja, media o alta;
-- cobertura por tema;
-- diferencia entre pregunta real y pregunta de plantilla.
+- objeto, ámbito y definiciones de la Ley 10/2019;
+- principios de libre acceso, veracidad, accesibilidad, gratuidad y neutralidad tecnológica;
+- publicidad activa, directorio, buscador, accesibilidad y anonimización;
+- legitimación universal y órgano competente;
+- solicitud oral y ausencia de obligación de motivar;
+- diez días para concretar una petición imprecisa;
+- veinte días para resolver, ampliables por otros veinte;
+- silencio desestimatorio y reclamación en un mes;
+- estructura y canal de solicitud del Portal de Transparencia UC3M.
 
-Todos los temas mantienen al menos **20 preguntas válidas**.
+## Controles automáticos
 
-## Cobertura alcanzada
+La CI comprueba:
 
-- **9 temas con 30 preguntas o más**: 2, 3, 7, 8, 9, 10, 15, 18 y 19.
-- **11 temas con 20 preguntas o más**.
-- Objetivo final: 30–40 preguntas manuales por tema.
+- exactamente 30 preguntas únicas en el tema 7;
+- cuatro opciones distintas y respuesta válida;
+- justificación y fuente oficial;
+- presencia de los plazos esenciales;
+- 500 preguntas totales en UC3M;
+- 15 temas con 30 preguntas y mínimo de 10;
+- tres simulacros 70 + 5 con representación de los 20 temas;
+- auditoría transversal sin errores estructurales.
 
-## Simulacros oficiales v0.42
+## Trabajo pendiente para cerrar UC3M
 
-Cada uno de los tres simulacros contiene:
-
-- 70 preguntas puntuables;
-- 5 preguntas de reserva;
-- representación de los 20 temas;
-- ausencia de repetición interna;
-- corrección real: +1, −1/3 y 0 en blanco;
-- cálculo de nota únicamente sobre las 70 preguntas puntuables.
-
-## Trabajo pendiente para cerrar la literalidad
-
-1. Texto consolidado de los Estatutos UC3M.
-2. Presupuesto y bases de ejecución UC3M exigibles.
-3. Ley 10/2019 consolidada con plazos exactos.
-4. Normas internas de matrícula, permanencia y evaluación.
-5. Ponderaciones, cupos y calendario anual de admisión UC3M.
-6. Delegaciones y procedimiento interno de contratación.
-7. Elevar los once temas restantes de 20 a 30–40 preguntas.
+1. Elevar los temas 13–17 de 10 a 30 preguntas reales.
+2. Incorporar presupuesto y bases de ejecución UC3M vigentes.
+3. Completar normativa interna de matrícula, permanencia y evaluación.
+4. Integrar ponderaciones, cupos y calendario anual de admisión.
+5. Extraer literalmente delegaciones y procedimiento interno de contratación.
+6. Auditar vigencia y dificultad final de distractores.
 
 ## Estrategia
 
 - Priorizar temas 2, 3, 9 y 10 durante la primera vuelta.
-- Practicar de forma separada los temas 7, 8, 15, 18 y 19.
-- Entrenar a una velocidad media de unos 51 segundos por pregunta.
-- Practicar los tres simulacros oficiales con sus cinco reservas.
-- No memorizar importes, plazos o competencias internas que no estén contrastados con el documento vigente.
+- Practicar separadamente los temas 7, 8, 15, 18 y 19.
+- Entrenar a una velocidad media aproximada de 51 segundos por pregunta.
+- Usar los tres simulacros con sus cinco reservas.
+- No memorizar importes, plazos o competencias internas sin documento vigente contrastado.
