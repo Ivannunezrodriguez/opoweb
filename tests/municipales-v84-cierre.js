@@ -6,6 +6,7 @@ const window = {};
 window.window = window;
 const context = { window, console, Set, Map, Array, Object, String, Number, Boolean, Math, Date, JSON, URL };
 const run = file => vm.runInNewContext(fs.readFileSync(file, 'utf8'), context, { filename: file });
+const plain = value => JSON.parse(JSON.stringify(value));
 
 run('data/oposiciones.js');
 run('data/proceso.js');
@@ -71,22 +72,22 @@ function validateCommon(ope, audit, expectedThemes, expectedQuestions, practical
 validateCommon(puebla, release.puebla, 19, 570, 20);
 validateCommon(carranque, release.carranque, 20, 600, 18);
 
-assert.deepStrictEqual(puebla.scoring, { correct: 0.20, wrong: -0.05, blank: 0 });
+assert.deepStrictEqual(plain(puebla.scoring), { correct: 0.20, wrong: -0.05, blank: 0 });
 assert.equal(puebla.selectionProcess.firstExercise.main, 50);
 assert.equal(puebla.selectionProcess.firstExercise.reserve, 5);
 assert.equal(puebla.selectionProcess.firstExercise.minutes, 60);
 assert.equal(puebla.selectionProcess.oppositionWeight, 80);
 assert.equal(puebla.selectionProcess.meritWeight, 20);
 assert.equal(puebla.personalMeritEstimate.consolidated, 0);
-assert.deepStrictEqual(release.puebla.practicalThemeCoverage, Array.from({ length: 19 }, (_, index) => index + 1));
+assert.deepStrictEqual(plain(release.puebla.practicalThemeCoverage), Array.from({ length: 19 }, (_, index) => index + 1));
 
-assert.deepStrictEqual(carranque.scoring, { correct: 0.25, wrong: -0.08, blank: 0 });
+assert.deepStrictEqual(plain(carranque.scoring), { correct: 0.25, wrong: -0.08, blank: 0 });
 assert.equal(carranque.selectionProcess.firstExercise.main, 80);
 assert.equal(carranque.selectionProcess.firstExercise.reserve, 5);
 assert.equal(carranque.selectionProcess.firstExercise.minutes, 90);
-assert.deepStrictEqual(carranque.selectionProcess.secondExercise.themes, [3, 20]);
+assert.deepStrictEqual(plain(carranque.selectionProcess.secondExercise.themes), [3, 20]);
 assert.equal(carranque.personalMeritEstimate.conditional, 0.75);
-assert.deepStrictEqual(release.carranque.practicalThemeCoverage, Array.from({ length: 18 }, (_, index) => index + 3));
+assert.deepStrictEqual(plain(release.carranque.practicalThemeCoverage), Array.from({ length: 18 }, (_, index) => index + 3));
 
 for (const simulation of release.puebla.simulations) {
   assert.equal(simulation.main, 50);
