@@ -19,6 +19,7 @@ const webManifest = JSON.parse(read('manifest.webmanifest'));
 const loader = read('assets/js/loader-v83.js');
 const ui83 = read('assets/js/ui-v83.js');
 const municipal = read('assets/js/municipales-v84-cierre.js');
+const municipalFix = read('assets/js/municipales-v84-fix.js');
 const ui84 = read('assets/js/ui-v84.js');
 const browserTest = read('tests/e2e/opoweb.spec.js');
 const municipalBrowserTest = read('tests/e2e/municipales-v84.spec.js');
@@ -38,8 +39,11 @@ for (const asset of manifest.allAssets) {
 }
 
 assert.ok(manifest.scripts.includes('./assets/js/municipales-v84-cierre.js'));
+assert.ok(manifest.scripts.includes('./assets/js/municipales-v84-fix.js'));
 assert.ok(manifest.scripts.includes('./assets/js/ui-v84.js'));
 assert.ok(manifest.scripts.indexOf('./assets/js/municipales-v84-cierre.js') > manifest.scripts.indexOf('./assets/js/practicos-v71.js'));
+assert.ok(manifest.scripts.indexOf('./assets/js/municipales-v84-fix.js') > manifest.scripts.indexOf('./assets/js/municipales-v84-cierre.js'));
+assert.ok(manifest.scripts.indexOf('./assets/js/auditoria-calidad-v72.js') > manifest.scripts.indexOf('./assets/js/municipales-v84-fix.js'));
 assert.ok(manifest.scripts.indexOf('./assets/js/ui-v84.js') > manifest.scripts.indexOf('./assets/js/ui-v83.js'));
 
 const directScripts = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
@@ -63,6 +67,8 @@ assert.ok(municipal.includes("const VERSION = '0.84.0'"));
 assert.ok(municipal.includes('OPOWEB_MUNICIPALES_V84'));
 assert.ok(municipal.includes('pueblaTitles'));
 assert.ok(municipal.includes('carranqueTitles'));
+assert.ok(municipalFix.includes('OPOWEB_MUNICIPALES_V84_FIX'));
+assert.ok(municipalFix.includes('auditRepairV84'));
 assert.ok(ui84.includes("const VERSION = 'v0.84.0'"));
 assert.ok(ui84.includes('municipalAuditV84'));
 
