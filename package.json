@@ -1,11 +1,14 @@
 {
   "name": "opoweb",
-  "version": "0.83.0",
+  "version": "0.84.0",
   "private": true,
   "description": "Plataforma estática de estudio para oposiciones administrativas",
   "scripts": {
     "test:storage": "node tests/storage-v82.js",
     "test:loader": "node tests/loader-v83.js",
+    "test:municipales": "node tests/municipales-v84-cierre.js",
+    "test:quality": "node tests/auditoria-calidad-v84.js",
+    "test:integrity": "node tests/site-integrity-v84.js",
     "test:e2e": "playwright test",
     "test:e2e:report": "playwright show-report"
   },
