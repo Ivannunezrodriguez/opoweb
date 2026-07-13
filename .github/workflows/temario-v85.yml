@@ -20,8 +20,13 @@ jobs:
         with:
           node-version: '20'
       - name: Check syntax
-        run: node --check tests/temario-depth-v85.js
-      - name: Generate audit
+        run: |
+          node --check assets/js/carranque-teoria-v85-bloque1.js
+          node --check tests/carranque-teoria-v85-bloque1.js
+          node --check tests/temario-depth-v85.js
+      - name: Validate Carranque autonomous theory block 1
+        run: node tests/carranque-teoria-v85-bloque1.js
+      - name: Generate global audit
         run: node tests/temario-depth-v85.js
       - name: Show summary
         run: cat temario-depth-v85.md
@@ -30,6 +35,7 @@ jobs:
         with:
           name: temario-depth-v85
           path: |
+            carranque-teoria-v85-bloque1.json
             temario-depth-v85.json
             temario-depth-v85.md
           retention-days: 30
