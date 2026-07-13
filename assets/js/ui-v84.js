@@ -88,4 +88,9 @@
     renderAll = function () { original(); patchVersion(); };
     try { renderAll(); } catch (_) { patchVersion(); }
   } else patchVersion();
+
+  window.addEventListener('opoweb:ready', () => {
+    patchVersion();
+    queueMicrotask(patchVersion);
+  }, { once: true });
 })();
