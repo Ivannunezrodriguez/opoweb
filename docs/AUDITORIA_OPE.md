@@ -1,6 +1,6 @@
-# Auditoría global de OpoWeb · v0.83
+# Auditoría global de OpoWeb · v0.84
 
-Fecha de revisión: 12 de julio de 2026.
+Fecha de revisión: 13 de julio de 2026.
 
 ## Alcance
 
@@ -16,10 +16,10 @@ Fecha de revisión: 12 de julio de 2026.
 | Funcionamiento e interfaz | 99 % |
 | Diputación C1 | 97 % |
 | UC3M C2 | 99 % |
-| La Puebla C2 | 84 % |
-| Carranque C2 | 88 % |
+| La Puebla C2 | 99 % |
+| Carranque C2 | 99 % |
 | Arquitectura y pruebas | 98 % |
-| **OpoWeb global** | **97 %** |
+| **OpoWeb global** | **98 %** |
 
 ## Recuento efectivo
 
@@ -31,103 +31,92 @@ Fecha de revisión: 12 de julio de 2026.
 | UC3M | 690 | 20/20 |
 | **Total** | **3.102** | — |
 
-## Auditoría UC3M v0.80
+## Cierre municipal v0.84
 
-La auditoría final comprueba por tema:
+La auditoría específica de La Puebla y Carranque comprueba por tema:
 
-- mínimo de 30 preguntas;
-- unicidad de identificadores y enunciados normalizados;
+- título final coincidente con la redacción oficial integrada;
+- exactamente 30 preguntas;
+- identificadores y enunciados únicos;
 - cuatro alternativas distintas;
-- correspondencia entre respuesta y opciones;
-- fuente o justificación;
-- ausencia de plantillas y textos genéricos;
+- respuesta incluida entre las opciones;
+- fuente o justificación obligatoria;
+- ausencia de plantillas genéricas;
 - ausencia de dominios manifiestamente no fiables;
-- equilibrio razonable entre A, B, C y D;
-- clasificación de dificultad.
+- respuesta dominante no superior al 40 % del tema;
+- presencia de dificultad baja, media y alta.
 
-Los tres simulacros deben contener 70 preguntas principales, 5 reservas, 75 textos únicos y representación de los veinte temas.
+También controla:
 
-La versión solo puede considerarse apta cuando el informe no contiene fallos. Este control no sustituye la revisión jurídica del contenido, pero reduce errores estructurales y de trazabilidad.
+- formato oficial del primer ejercicio;
+- preguntas de reserva y duración;
+- puntuación por acierto y penalización;
+- alcance del segundo ejercicio práctico;
+- cobertura temática de los supuestos;
+- número, unicidad y cobertura de los simulacros;
+- baremo de méritos y estimación personal prudente.
 
-## Arranque y PWA v0.83
+El resultado exigido por CI es **APTO** sin fallos. El informe se exporta a `municipales-v84.json` y se conserva como artefacto de GitHub Actions.
 
-La página ya no mantiene una cadena extensa de etiquetas `<script>`. `index.html` carga únicamente el manifiesto y el cargador.
+## Resultado de La Puebla
 
-El manifiesto central declara:
+- 19 títulos oficiales integrados.
+- 570 preguntas válidas.
+- 20 supuestos con cobertura de los temas 1 a 19.
+- Tres simulacros de 50 + 5 y 60 minutos.
+- Corrección: +0,20 / −0,05 / 0.
+- Segundo ejercicio práctico eliminatorio.
+- Concurso-oposición ponderado 80 % / 20 %.
+- Méritos personales confirmados: 0 puntos.
+- Avance estimado: 99 %.
 
-- versión de aplicación;
-- nombre de caché;
-- recursos estáticos;
-- todos los módulos en su orden exacto;
-- lista total usada por el service worker.
+El 1 % pendiente corresponde al seguimiento de anuncios posteriores, posibles correcciones, legislación vigente el día del examen y revisión manual final.
 
-El cargador ejecuta los módulos uno a uno, registra los recursos cargados y emite los eventos `opoweb:ready` u `opoweb:failed`. Cuando un recurso falta, se identifica el archivo concreto en vez de continuar con una aplicación parcialmente inicializada.
+## Resultado de Carranque
 
-El service worker importa el mismo manifiesto y utiliza `opoweb-v90`. Así se elimina la doble lista manual que existía entre `index.html` y `sw.js`.
+- 20 títulos oficiales integrados.
+- 600 preguntas válidas.
+- 18 supuestos con cobertura de los temas 3 a 20.
+- Tres simulacros de 80 + 5 y 90 minutos.
+- Corrección: +0,25 / −0,08 / 0.
+- Segundo ejercicio práctico sobre temas 3 a 20.
+- Baremo de titulación, experiencia y formación integrado.
+- Méritos personales: 0 puntos confirmados y 0,75 condicionados a que DAM se alegara y acreditara en plazo.
+- Avance estimado: 99 %.
 
-## Validación funcional v0.83
+El 1 % pendiente corresponde a anuncios posteriores, posibles correcciones, legislación vigente el día del examen y revisión manual final.
 
-Playwright ejecuta OpoWeb en Chromium con tres perfiles:
+## Auditoría UC3M
 
-- escritorio 1440 × 900;
-- Pixel 7;
-- iPad Pro 11.
-
-La prueba funcional controla:
-
-- carga de las cuatro convocatorias activas;
-- coincidencia entre módulos declarados y cargados;
-- ausencia de scripts duplicados;
-- conservación del orden exacto del manifiesto;
-- recorrido de las siete vistas;
-- menú adaptable en móvil y tablet;
-- ausencia de desbordamiento horizontal;
-- respuesta y corrección de un test UC3M;
-- persistencia de `opowebProgress` después de recargar;
-- registro y control del service worker;
-- presencia de la caché `opoweb-v90` y de sus recursos esenciales;
-- manifiesto instalable;
-- recarga completa sin conexión;
-- conservación de datos locales durante la recarga sin red;
-- migración transparente desde el formato histórico;
-- recuperación desde `opowebProgressBackup` si el principal está corrupto;
-- exportación v2 e importación con checksum.
-
-El informe de ejecución se conserva como artefacto HTML de GitHub Actions durante 14 días.
-
-## Protección de datos locales v0.82
-
-La capa de almacenamiento mantiene la clave histórica y añade un formato de intercambio v2. Cada guardado se sanea y genera metadatos con fecha, número de bloques y checksum FNV-1a.
-
-Antes de sobrescribir el progreso principal se conserva el último estado válido. Cuando el JSON principal no puede analizarse, OpoWeb intenta restaurar automáticamente la copia. Los archivos de exportación incluyen checksum y se rechazan si han sido modificados sin actualizarlo.
-
-El control reduce el riesgo de pérdida durante futuras refactorizaciones, pero no sustituye una exportación periódica realizada por el usuario.
-
-## Política de admisión anual
-
-Los datos anuales de ponderaciones, cupos, notas de corte, plazas y calendario no se mezclan con la normativa estable. Se actualizarán únicamente cuando exista una publicación oficial específica del curso.
-
-El tema 17 identifica la transición del artículo 23.2 del Real Decreto 534/2024 y exige revisar su redacción vigente desde el 22 de julio de 2026.
-
-## Estado real de UC3M
+La auditoría final comprueba mínimo por tema, unicidad, opciones, respuesta, trazabilidad, ausencia de plantillas y fuentes débiles, equilibrio de letras, dificultad y tres simulacros de 70 + 5 con veinte temas.
 
 - 690 preguntas.
 - 20 temas con al menos 30.
 - Temas 16 y 20 con 60.
 - Temas 18 y 19 con 45.
-- Tres simulacros 70 + 5.
 - Marco estatal, autonómico e interno integrado.
 - Presupuesto 2026 y contratación interna integrados.
-- Validación automática de navegador, PWA, almacenamiento y cargador integrada.
 - Avance estimado: 99 %.
 
-No se asigna el 100 % porque la emulación automatizada no sustituye una comprobación manual en dispositivos físicos, Safari/WebKit ni el mantenimiento de datos anuales.
+## Arranque, PWA y almacenamiento
+
+`index.html` carga únicamente el manifiesto y el cargador. El mismo manifiesto declara los módulos y alimenta el service worker. La caché v0.84 es `opoweb-v91`.
+
+Playwright ejecuta OpoWeb en escritorio 1440 × 900, Pixel 7 e iPad Pro 11. Controla las siete vistas, carga ordenada, ausencia de scripts duplicados, diseño adaptable, tests, supuestos municipales, persistencia, recuperación del progreso, exportación, importación y recarga sin conexión.
+
+La copia de progreso está en el mismo navegador; no sustituye una exportación externa periódica.
+
+## Política de actualización
+
+La legislación exigible se revisa con referencia a la fecha del examen. Los datos dinámicos —listas, tribunal, fechas, instrucciones, correcciones, admisión anual o notas de corte— no se presentan como permanentes y deben actualizarse únicamente desde publicaciones oficiales.
 
 ## Bloqueos para alcanzar el 100 % global
 
-1. Comprobación manual en dispositivos físicos Android e iPad y en Safari/WebKit.
+1. Estatutos oficiales vigentes del OAPGT y cierre de Diputación.
 2. Revisión del artículo 23.2 del Real Decreto 534/2024 desde el 22 de julio de 2026.
 3. Actualización anual de admisión UC3M con fuente oficial.
-4. Estatutos oficiales vigentes del OAPGT.
-5. Auditoría literal y de dificultad de La Puebla y Carranque.
-6. Consolidación interna de módulos históricos; su orden y carga ya están centralizados, pero la lógica aún está distribuida.
+4. Comprobación manual en dispositivos físicos Android e iPad y en Safari/WebKit.
+5. Seguimiento de listas, tribunal, fechas e instrucciones de La Puebla y Carranque.
+6. Consolidación interna de módulos históricos sin pérdida de progreso.
+
+No se asigna el 100 % a ninguna convocatoria viva mientras puedan existir anuncios o cambios normativos posteriores. El 99 % refleja cierre estructural y documental, no inmutabilidad ni garantía de aprobado.
