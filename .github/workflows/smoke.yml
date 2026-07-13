@@ -21,6 +21,8 @@ jobs:
           node-version: '20'
       - name: Check JavaScript syntax
         run: |
+          node --check assets/js/asset-manifest-v83.js
+          node --check assets/js/loader-v83.js
           node --check assets/js/storage-v82.js
           node --check assets/js/app.js
           node --check assets/js/diputacion-v56.js
@@ -69,7 +71,10 @@ jobs:
           node --check assets/js/ui-v80.js
           node --check assets/js/ui-v81.js
           node --check assets/js/ui-v82.js
+          node --check assets/js/ui-v83.js
           node --check tests/storage-v82.js
+          node --check tests/loader-v83.js
+          node --check tests/site-integrity-v83.js
           node --check playwright.config.js
           node --check tests/e2e/opoweb.spec.js
           node --check tests/e2e/storage-v82.spec.js
@@ -95,6 +100,7 @@ jobs:
           node tests/smoke-carranque-live-v70.js
           node tests/practicos-v71.js
           node tests/storage-v82.js
+          node tests/loader-v83.js
 
   uc3m-clean:
     name: UC3M cierre de calidad v0.80
@@ -137,7 +143,7 @@ jobs:
           if-no-files-found: ignore
 
   site-integrity:
-    name: Integridad web, PWA y almacenamiento v0.82
+    name: Integridad del manifiesto, cargador y PWA v0.83
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -146,13 +152,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate web, PWA and storage integrity
-        run: node tests/site-integrity-v82.js
+      - name: Validate loader manifest and PWA integrity
+        run: node tests/site-integrity-v83.js
 
   browser-e2e:
-    name: Navegador, móvil, tablet, PWA y progreso v0.82
+    name: Navegador, móvil, tablet, PWA y cargador v0.83
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -170,7 +176,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-v82
+          name: playwright-report-v83
           path: playwright-report/
           if-no-files-found: ignore
           retention-days: 14

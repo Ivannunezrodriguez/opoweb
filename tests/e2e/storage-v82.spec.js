@@ -1,7 +1,15 @@
 const { test, expect } = require('@playwright/test');
 
+async function waitForBoot(page) {
+  await expect.poll(
+    () => page.evaluate(() => window.OPOWEB_BOOT_V83?.status || 'missing'),
+    { timeout: 45_000 }
+  ).toBe('ready');
+}
+
 async function prepare(page) {
   await page.goto('/index.html', { waitUntil: 'domcontentloaded' });
+  await waitForBoot(page);
   await expect(page.locator('#oposicionSelect option')).toHaveCount(4);
 }
 
@@ -38,6 +46,7 @@ test('mantiene el formato histórico y crea metadatos v2', async ({ page }) => {
     localStorage.setItem('opowebProgress', JSON.stringify(progress));
   }, legacyProgress);
   await page.reload({ waitUntil: 'domcontentloaded' });
+  await waitForBoot(page);
 
   await openUc3mTests(page);
   await expect(page.locator('.question input[type="radio"]:checked').first()).toBeVisible();
@@ -63,6 +72,7 @@ test('recupera automáticamente una copia válida si el principal está corrupto
     localStorage.setItem('opowebProgressBackup', JSON.stringify(progress));
   }, legacyProgress);
   await page.reload({ waitUntil: 'domcontentloaded' });
+  await waitForBoot(page);
 
   const recovered = await page.evaluate(() => ({
     primary: JSON.parse(localStorage.getItem('opowebProgress')),
@@ -87,6 +97,7 @@ test('exporta formato v2 e importa conservando una copia anterior', async ({ pag
     localStorage.setItem('opowebProgress', JSON.stringify(progress));
   }, legacyProgress);
   await page.reload({ waitUntil: 'domcontentloaded' });
+  await waitForBoot(page);
 
   const downloadPromise = page.waitForEvent('download');
   await page.locator('#exportProgress').click();

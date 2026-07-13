@@ -11,8 +11,9 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.82.0**
-- Caché PWA: `opoweb-v89`
+- **OpoWeb v0.83.0**
+- Caché PWA: `opoweb-v90`
+- Cargador: manifiesto único y secuencial
 - Formato de progreso: v2, compatible con archivos históricos
 - Última revisión estructural y funcional: 12 de julio de 2026
 
@@ -25,7 +26,7 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 | UC3M C2 | 99 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 97 % |
+| Arquitectura y pruebas | 98 % |
 | **OpoWeb global** | **97 %** |
 
 Los porcentajes son estimaciones de gestión basadas en contenido verificable, fuentes, preguntas, supuestos, simulacros y deuda técnica. No representan una probabilidad de aprobar.
@@ -54,7 +55,20 @@ La auditoría comprueba por tema:
 
 La integración exige que el resultado automático sea **APTO** y que no existan fallos estructurales.
 
-## Validación funcional v0.82
+## Arranque centralizado v0.83
+
+`index.html` ya no contiene decenas de etiquetas de script históricas. Solo carga:
+
+1. `asset-manifest-v83.js`;
+2. `loader-v83.js`.
+
+El manifiesto establece el orden exacto de todos los módulos. El cargador los ejecuta secuencialmente, registra cuántos se han cargado y detiene el arranque indicando el archivo concreto cuando uno falla.
+
+El mismo manifiesto alimenta el service worker. De este modo, la página y la PWA no mantienen dos listas manuales que puedan divergir. La caché `opoweb-v90` incluye manifiesto, cargador, datos, temarios, bancos, interfaz y controles de progreso.
+
+Esta versión centraliza el arranque, pero todavía no fusiona la lógica interna de todos los módulos históricos. Esa consolidación seguirá haciéndose por bloques y con pruebas de regresión.
+
+## Validación funcional v0.83
 
 Playwright ejecuta la aplicación en un navegador Chromium real mediante tres configuraciones:
 
@@ -65,14 +79,15 @@ Playwright ejecuta la aplicación en un navegador Chromium real mediante tres co
 Las pruebas comprueban:
 
 - carga exacta de las cuatro OPE activas;
+- carga de todos los módulos declarados, sin duplicados y en el orden previsto;
 - recorrido por las siete vistas de la aplicación;
 - funcionamiento del menú adaptable;
 - ausencia de desbordamiento horizontal;
 - respuesta y corrección de preguntas;
 - persistencia del progreso tras recargar;
 - registro del service worker;
-- contenido de la caché `opoweb-v89`;
-- lectura del manifiesto;
+- contenido de la caché `opoweb-v90`;
+- lectura del manifiesto web;
 - recarga completa sin conexión;
 - conservación de `localStorage` sin red;
 - lectura del formato histórico de progreso;
@@ -96,8 +111,6 @@ La capa de almacenamiento añade:
 - rechazo de archivos manipulados cuando su checksum no coincide;
 - conservación de la copia anterior antes de importar otro progreso.
 
-Este cierre protege el trabajo de estudio antes de acometer una consolidación más agresiva de los módulos históricos.
-
 ## UC3M · cierre documental
 
 El programa queda cubierto con 690 preguntas reales:
@@ -117,7 +130,7 @@ El tema 17 incluye una alerta para revisar la redacción vigente del artículo 2
 
 ### Qué queda realmente pendiente
 
-UC3M se mantiene en el 99 %, no en el 100 %. La validación automática de navegador, vista móvil, vista tablet, modo sin conexión y persistencia ya está cubierta. El margen restante corresponde a:
+UC3M se mantiene en el 99 %, no en el 100 %. El margen restante corresponde a:
 
 - comprobación manual en dispositivos físicos Android e iPad;
 - prueba específica con Safari/WebKit;
@@ -158,6 +171,7 @@ GitHub Actions ejecuta:
 - matriz independiente de los 20 temas de Carranque;
 - validación de los 38 supuestos prácticos;
 - pruebas unitarias del almacenamiento v2;
+- comprobación del manifiesto, orden y ausencia de duplicados;
 - integridad de `index.html`, manifiesto y caché PWA;
 - Playwright en escritorio, móvil y tablet;
 - recarga sin conexión y conservación del progreso;
@@ -170,9 +184,17 @@ GitHub Actions ejecuta:
 3. Actualizar admisión UC3M solo con publicación oficial anual.
 4. Localizar los Estatutos vigentes del OAPGT.
 5. Auditar literalidad y dificultad de La Puebla y Carranque.
-6. Consolidar las capas históricas de JavaScript aprovechando la protección de progreso ya implantada.
+6. Consolidar internamente las capas históricas de JavaScript, ahora bajo un manifiesto único y con protección de progreso.
 
 ## Historial reciente
+
+### v0.83.0 · 2026-07-12
+
+- Sustituidas las etiquetas históricas de `index.html` por un manifiesto único.
+- Añadido cargador secuencial con diagnóstico de errores.
+- Reutilizado el mismo manifiesto en el service worker.
+- Añadidas pruebas de orden, duplicados, paridad PWA y arranque en navegador.
+- Caché actualizada a `opoweb-v90`.
 
 ### v0.82.0 · 2026-07-12
 
@@ -180,7 +202,6 @@ GitHub Actions ejecuta:
 - Añadida copia automática antes de sobrescribir o importar.
 - Añadida recuperación desde copia cuando el progreso principal está corrupto.
 - Añadidos checksum, exportación v2 e importación validada.
-- Añadidas pruebas unitarias y Playwright para migración, recuperación e intercambio de datos.
 - Caché actualizada a `opoweb-v89`.
 
 ### v0.81.0 · 2026-07-12
@@ -188,12 +209,4 @@ GitHub Actions ejecuta:
 - Añadidas pruebas Playwright en escritorio, Pixel 7 e iPad Pro 11.
 - Verificada la navegación completa y el diseño adaptable.
 - Verificada la persistencia del progreso tras recargar.
-- Verificados service worker, manifiesto, caché y recarga sin conexión.
 - Caché actualizada a `opoweb-v88`.
-
-### v0.80.0 · 2026-07-12
-
-- Añadida auditoría final del banco UC3M.
-- Controlados duplicados, opciones, trazabilidad, fuentes y equilibrio por tema.
-- Separados los datos anuales de admisión de la normativa estable.
-- Añadida alerta de transición normativa para el artículo 23.2 del Real Decreto 534/2024.
