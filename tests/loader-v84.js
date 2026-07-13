@@ -40,7 +40,8 @@ assert.equal(manifest.scripts.at(-1), './assets/js/ui-v84.js');
 assert.ok(position('./assets/js/storage-v82.js') < position('./assets/js/app.js'));
 assert.ok(position('./assets/js/app.js') < position('./assets/js/ui-v29.js'));
 assert.ok(position('./assets/js/practicos-v71.js') < position('./assets/js/municipales-v84-cierre.js'));
-assert.ok(position('./assets/js/municipales-v84-cierre.js') < position('./assets/js/auditoria-calidad-v72.js'));
+assert.ok(position('./assets/js/municipales-v84-cierre.js') < position('./assets/js/municipales-v84-fix.js'));
+assert.ok(position('./assets/js/municipales-v84-fix.js') < position('./assets/js/auditoria-calidad-v72.js'));
 assert.ok(position('./assets/js/ui-v83.js') < position('./assets/js/ui-v84.js'));
 
 const index = read('index.html');
