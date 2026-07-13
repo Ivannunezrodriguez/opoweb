@@ -44,6 +44,7 @@ run('assets/js/uc3m-v79-contratacion-interna.js');
 run('assets/js/uc3m-v80-cierre-calidad.js');
 run('assets/js/municipales-v84-cierre.js');
 run('assets/js/municipales-v84-fix.js');
+run('assets/js/carranque-teoria-v85-bloque1.js');
 
 const STOPWORDS = new Set([
   'a','al','ante','bajo','con','contra','de','del','desde','durante','e','el','en','entre','hacia','hasta','la','las','los','o','para','por','que','se','segun','sin','sobre','su','sus','tras','un','una','uno','unos','unas','y',
@@ -92,6 +93,8 @@ function themeMetrics(ope, theme, index) {
   const studyWords = words(combined).length;
   const questionCount = (ope.themeTests?.[theme.id] || []).length;
   const literalTitleMatch = officialTitle ? normalize(theme.title) === normalize(officialTitle) : null;
+  const autonomous = theme.theoryStatus?.autonomous === true;
+  const officialSources = (theme.officialSources || []).length;
 
   let depth = 'adequate';
   if (studyWords < 150 || sections.length < 2 || paragraphs < 3) depth = 'critical';
@@ -122,7 +125,11 @@ function themeMetrics(ope, theme, index) {
     missingConcepts,
     missingConceptRatio: Number(missingRatio.toFixed(3)),
     depth,
-    concordance
+    concordance,
+    autonomous,
+    officialSources,
+    theoryVersion: theme.theoryStatus?.version || null,
+    reviewedAt: theme.theoryStatus?.reviewedAt || null
   };
 }
 
@@ -134,6 +141,7 @@ const report = {
     shortDepth: 'menos de 350 palabras o menos de 6 párrafos',
     mediumDepth: 'entre 350 y 649 palabras',
     adequateDepth: '650 o más palabras',
+    autonomousTheme: 'al menos 1.000 palabras, fuentes oficiales y marca de revisión jurídica específica',
     concordanceReview: 'sin título oficial trazable o más del 25 % de conceptos significativos ausentes',
     concordanceCritical: 'título literal distinto o más del 45 % de conceptos significativos ausentes'
   },
@@ -154,11 +162,12 @@ for (const ope of window.OPOSICIONES_DATA.oposiciones) {
     shortDepth: themes.filter(item => item.depth === 'short').length,
     mediumDepth: themes.filter(item => item.depth === 'medium').length,
     adequateDepth: themes.filter(item => item.depth === 'adequate').length,
+    autonomousThemes: themes.filter(item => item.autonomous && item.studyWords >= 1000 && item.officialSources >= 2).length,
     criticalConcordance: themes.filter(item => item.concordance === 'critical').length,
     reviewConcordance: themes.filter(item => item.concordance === 'review').length,
     missingOfficialTitle: themes.filter(item => !item.officialTitle).length,
     shortestThemes: sorted.slice(0, 12),
-    themes: themes
+    themes
   });
 }
 
@@ -170,6 +179,7 @@ report.summary = {
   shortDepth: allThemes.filter(item => item.depth === 'short').length,
   mediumDepth: allThemes.filter(item => item.depth === 'medium').length,
   adequateDepth: allThemes.filter(item => item.depth === 'adequate').length,
+  autonomousThemes: allThemes.filter(item => item.autonomous && item.studyWords >= 1000 && item.officialSources >= 2).length,
   criticalConcordance: allThemes.filter(item => item.concordance === 'critical').length,
   reviewConcordance: allThemes.filter(item => item.concordance === 'review').length,
   missingOfficialTitle: allThemes.filter(item => !item.officialTitle).length,
@@ -184,6 +194,7 @@ const lines = [
   '',
   `Temas analizados: ${report.summary.themes}`,
   `Palabras de estudio: ${report.summary.totalStudyWords}`,
+  `Temas autosuficientes: ${report.summary.autonomousThemes}`,
   `Profundidad crítica: ${report.summary.criticalDepth}`,
   `Profundidad breve: ${report.summary.shortDepth}`,
   `Concordancia crítica: ${report.summary.criticalConcordance}`,
@@ -191,9 +202,9 @@ const lines = [
   '',
   '## Resumen por oposición',
   '',
-  '| Oposición | Temas | Media palabras | Críticos | Breves | Concordancia crítica | Revisar |',
-  '|---|---:|---:|---:|---:|---:|---:|',
-  ...report.oposiciones.map(ope => `| ${ope.name} | ${ope.themes.length} | ${ope.averageStudyWords} | ${ope.criticalDepth} | ${ope.shortDepth} | ${ope.criticalConcordance} | ${ope.reviewConcordance} |`),
+  '| Oposición | Temas | Media palabras | Autosuficientes | Críticos | Breves | Concordancia crítica | Revisar |',
+  '|---|---:|---:|---:|---:|---:|---:|---:|',
+  ...report.oposiciones.map(ope => `| ${ope.name} | ${ope.themes.length} | ${ope.averageStudyWords} | ${ope.autonomousThemes} | ${ope.criticalDepth} | ${ope.shortDepth} | ${ope.criticalConcordance} | ${ope.reviewConcordance} |`),
   '',
   '## 30 temas más breves',
   '',
