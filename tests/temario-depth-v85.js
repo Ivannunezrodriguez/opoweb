@@ -45,6 +45,8 @@ run('assets/js/uc3m-v80-cierre-calidad.js');
 run('assets/js/municipales-v84-cierre.js');
 run('assets/js/municipales-v84-fix.js');
 run('assets/js/carranque-teoria-v85-bloque1.js');
+run('assets/js/carranque-teoria-v85-estructura.js');
+run('assets/js/carranque-teoria-v85-bloque2.js');
 
 const STOPWORDS = new Set([
   'a','al','ante','bajo','con','contra','de','del','desde','durante','e','el','en','entre','hacia','hasta','la','las','los','o','para','por','que','se','segun','sin','sobre','su','sus','tras','un','una','uno','unos','unas','y',
