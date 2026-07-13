@@ -25,7 +25,7 @@ const municipalBrowserTest = read('tests/e2e/municipales-v84.spec.js');
 
 assert.equal(packageJson.version, '0.84.0');
 assert.equal(packageJson.scripts['test:municipales'], 'node tests/municipales-v84-cierre.js');
-assert.equal(packageJson.scripts['test:loader'], 'node tests/loader-v83.js');
+assert.equal(packageJson.scripts['test:loader'], 'node tests/loader-v84.js');
 assert.equal(manifest.applicationVersion, 'v0.84.0');
 assert.equal(manifest.cacheName, 'opoweb-v91');
 assert.equal(new Set(manifest.scripts).size, manifest.scripts.length);
