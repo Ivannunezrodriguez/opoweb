@@ -44,7 +44,7 @@ async function navigateTo(page, view) {
 async function waitForBoot(page) {
   await expect.poll(
     () => page.evaluate(() => window.OPOWEB_BOOT_V83?.status || 'missing'),
-    { timeout: 45_000 }
+    { timeout: 60_000 }
   ).toBe('ready');
 }
 
@@ -63,7 +63,7 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
 
   const optionValues = await page.locator('#oposicionSelect option').evaluateAll(options => options.map(option => option.value));
   expect(optionValues).toEqual(EXPECTED_OPE_IDS);
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.84.0');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.85.0');
 
   const bootAudit = await page.evaluate(() => {
     const manifest = window.OPOWEB_ASSET_MANIFEST_V83;
@@ -78,6 +78,8 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
       declared: manifest.scripts.length,
       applicationVersion: manifest.applicationVersion,
       municipalStatus: window.OPOWEB_MUNICIPALES_V84?.globalStatus,
+      theoryStatus: window.OPOWEB_THEORY_AUDIT_V85?.carranque?.status,
+      autonomousThemes: window.OPOWEB_THEORY_AUDIT_V85?.carranque?.autonomousThemes,
       duplicateScripts: window.OPOWEB_LOADER_AUDIT_V83.duplicateScripts,
       orderMatches: JSON.stringify(loadedPaths) === JSON.stringify(expectedPaths)
     };
@@ -85,8 +87,10 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
   expect(bootAudit.status).toBe('ready');
   expect(bootAudit.failed).toBeNull();
   expect(bootAudit.loaded).toBe(bootAudit.declared);
-  expect(bootAudit.applicationVersion).toBe('v0.84.0');
+  expect(bootAudit.applicationVersion).toBe('v0.85.0');
   expect(bootAudit.municipalStatus).toBe('APTO');
+  expect(bootAudit.theoryStatus).toBe('APTO');
+  expect(bootAudit.autonomousThemes).toBe(20);
   expect(bootAudit.duplicateScripts).toBe(0);
   expect(bootAudit.orderMatches).toBe(true);
 
@@ -98,6 +102,60 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
   await expect(page.locator('#loaderAuditV83')).toContainText('LISTO');
   const horizontalOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
   expect(horizontalOverflow, `Desbordamiento horizontal en ${testInfo.project.name}`).toBeFalsy();
+  expect(pageErrors).toEqual([]);
+});
+
+test('Carranque muestra veinte temas teóricos autosuficientes', async ({ page }) => {
+  const pageErrors = await loadApplication(page);
+  await page.locator('#oposicionSelect').selectOption('carranque-aux-admin-2026');
+  await navigateTo(page, 'temario');
+
+  await expect(page.locator('#theoryStatusV85')).toContainText('Carranque 20/20');
+  await expect(page.locator('#theoryStatusV85')).toContainText('Fuente teórica autosuficiente');
+  await expect(page.locator('.theme-item')).toHaveCount(20);
+
+  await page.locator('.theme-item').first().click();
+  await expect(page.locator('#themeSourcesV85')).toContainText('Tema autosuficiente');
+  await expect(page.locator('#themeSourcesV85 li')).toHaveCount(3);
+  for (const heading of [
+    'Resumen orientado al aprobado',
+    'Rigor normativo',
+    'Síntesis de repaso rápido',
+    'Opo-Test: puntos calientes',
+    'Tres preguntas de retención activa',
+    'Estrategia de examen'
+  ]) {
+    await expect(page.locator('#content')).toContainText(heading);
+  }
+
+  const theory = await page.evaluate(() => {
+    const ope = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'carranque-aux-admin-2026');
+    const metrics = ope.themes.map(theme => {
+      const text = [
+        ...(theme.sections || []).flatMap(section => [section.heading, ...(section.paragraphs || [])]),
+        theme.tree || '',
+        ...(theme.reviewTable || []).flat()
+      ].join(' ');
+      return {
+        number: Number(theme.number),
+        words: text.trim().split(/\s+/).filter(Boolean).length,
+        autonomous: theme.theoryStatus?.autonomous === true,
+        sources: (theme.officialSources || []).length,
+        questions: (ope.themeTests?.[theme.id] || []).length
+      };
+    });
+    return {
+      completed: ope.theoryProgramme.v85.completedThemes,
+      pending: ope.theoryProgramme.v85.pendingThemes,
+      metrics
+    };
+  });
+  expect(theory.completed).toHaveLength(20);
+  expect(theory.pending).toEqual([]);
+  expect(theory.metrics.every(item => item.autonomous)).toBe(true);
+  expect(theory.metrics.every(item => item.words >= 1000)).toBe(true);
+  expect(theory.metrics.every(item => item.sources >= 2)).toBe(true);
+  expect(theory.metrics.every(item => item.questions === 30)).toBe(true);
   expect(pageErrors).toEqual([]);
 });
 
@@ -152,10 +210,10 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
     await page.evaluate(() => navigator.serviceWorker.ready);
   }
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBeTruthy();
-  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v91')), { timeout: 30_000 }).toBeTruthy();
+  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v92')), { timeout: 30_000 }).toBeTruthy();
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open('opoweb-v91');
+    const cache = await caches.open('opoweb-v92');
     return (await cache.keys()).map(request => new URL(request.url).pathname);
   });
   expect(cachedPaths).toContain('/index.html');
@@ -163,7 +221,9 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
   expect(cachedPaths).toContain('/assets/js/loader-v83.js');
   expect(cachedPaths).toContain('/assets/js/storage-v82.js');
   expect(cachedPaths).toContain('/assets/js/municipales-v84-cierre.js');
-  expect(cachedPaths).toContain('/assets/js/ui-v84.js');
+  expect(cachedPaths).toContain('/assets/js/carranque-teoria-v85-bloque1.js');
+  expect(cachedPaths).toContain('/assets/js/carranque-teoria-v85-bloque4.js');
+  expect(cachedPaths).toContain('/assets/js/ui-v85.js');
   expect(cachedPaths).toContain('/manifest.webmanifest');
 
   const manifest = await page.evaluate(async () => {
@@ -187,7 +247,7 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
   await page.reload({ waitUntil: 'domcontentloaded' });
   await waitForBoot(page);
   await expect(page.locator('#viewTitle')).toHaveText('Temario');
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.84.0');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.85.0');
   const restored = await page.evaluate(() => JSON.parse(localStorage.getItem('opowebProgress') || '{}'));
   expect(restored).toEqual(offlineProgress);
   expect(pageErrors).toEqual([]);

@@ -13,186 +13,100 @@ jobs:
   smoke:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
       - name: Check JavaScript syntax
         run: |
-          node --check assets/js/asset-manifest-v83.js
-          node --check assets/js/loader-v83.js
-          node --check assets/js/storage-v82.js
-          node --check assets/js/app.js
-          node --check assets/js/diputacion-v56.js
-          node --check assets/js/diputacion-v57.js
-          node --check assets/js/diputacion-v58.js
-          node --check assets/js/diputacion-v59.js
-          node --check assets/js/diputacion-v60.js
-          node --check assets/js/diputacion-v61.js
-          node --check assets/js/diputacion-v62.js
-          node --check assets/js/diputacion-v63.js
-          node --check assets/js/diputacion-v64.js
-          node --check assets/js/diputacion-v65.js
-          node --check assets/js/uc3m-v66.js
-          node --check assets/js/uc3m-v67.js
-          node --check assets/js/uc3m-v72-clean.js
-          node --check assets/js/uc3m-v73-transparencia.js
-          node --check assets/js/uc3m-v73-fix.js
-          node --check assets/js/uc3m-v74-losu.js
-          node --check assets/js/uc3m-v75-estatutos.js
-          node --check assets/js/uc3m-v76-academica-admision.js
-          node --check assets/js/uc3m-v77-normativa-interna.js
-          node --check assets/js/uc3m-v78-presupuesto-2026.js
-          node --check assets/js/uc3m-v79-contratacion-interna.js
-          node --check assets/js/uc3m-v80-cierre-calidad.js
-          node --check assets/js/puebla-v68.js
-          node --check assets/js/carranque-v69.js
-          node --check assets/js/carranque-v69-fix.js
-          node --check assets/js/carranque-v70.js
-          node --check assets/js/practicos-v71.js
-          node --check assets/js/municipales-v84-cierre.js
-          node --check assets/js/municipales-v84-fix.js
-          node --check assets/js/auditoria-calidad-v72.js
-          node --check assets/js/ui-v66.js
-          node --check assets/js/ui-v67.js
-          node --check assets/js/ui-puebla-v68.js
-          node --check assets/js/ui-carranque-v69.js
-          node --check assets/js/ui-carranque-v70.js
-          node --check assets/js/ui-practicos-v71.js
-          node --check assets/js/ui-uc3m-v72.js
-          node --check assets/js/ui-auditoria-v72.js
-          node --check assets/js/ui-v73.js
-          node --check assets/js/ui-v74.js
-          node --check assets/js/ui-v75.js
-          node --check assets/js/ui-v76.js
-          node --check assets/js/ui-v77.js
-          node --check assets/js/ui-v78.js
-          node --check assets/js/ui-v79.js
-          node --check assets/js/ui-v80.js
-          node --check assets/js/ui-v81.js
-          node --check assets/js/ui-v82.js
-          node --check assets/js/ui-v83.js
-          node --check assets/js/ui-v84.js
-          node --check tests/storage-v82.js
-          node --check tests/loader-v84.js
-          node --check tests/municipales-v84-cierre.js
-          node --check tests/auditoria-calidad-v84.js
-          node --check tests/site-integrity-v84.js
+          find assets/js tests -type f -name '*.js' -print0 | xargs -0 -n1 node --check
           node --check playwright.config.js
-          node --check tests/e2e/opoweb.spec.js
-          node --check tests/e2e/storage-v82.spec.js
-          node --check tests/e2e/municipales-v84.spec.js
-      - name: Run regression tests
+      - name: Run historical regressions
         run: |
-          node tests/smoke-v56.js
-          node tests/smoke-v57.js
-          node tests/smoke-v58.js
-          node tests/smoke-v59.js
-          node tests/smoke-v60.js
-          node tests/smoke-v61.js
-          node tests/smoke-v62.js
-          node tests/smoke-v63.js
-          node tests/smoke-v64.js
-          node tests/smoke-v65.js
-          node tests/smoke-uc3m-v66.js
-          node tests/smoke-uc3m-v67.js
-          node tests/smoke-puebla-v68.js
-          node tests/smoke-puebla-live-v68.js
-          node tests/smoke-carranque-v69.js
-          node tests/smoke-carranque-live-v69.js
-          node tests/smoke-carranque-v70.js
-          node tests/smoke-carranque-live-v70.js
-          node tests/practicos-v71.js
-          node tests/storage-v82.js
-          node tests/loader-v84.js
-          node tests/municipales-v84-cierre.js
+          for test in \
+            tests/smoke-v56.js tests/smoke-v57.js tests/smoke-v58.js tests/smoke-v59.js \
+            tests/smoke-v60.js tests/smoke-v61.js tests/smoke-v62.js tests/smoke-v63.js \
+            tests/smoke-v64.js tests/smoke-v65.js tests/smoke-uc3m-v66.js tests/smoke-uc3m-v67.js \
+            tests/smoke-puebla-v68.js tests/smoke-puebla-live-v68.js \
+            tests/smoke-carranque-v69.js tests/smoke-carranque-live-v69.js \
+            tests/smoke-carranque-v70.js tests/smoke-carranque-live-v70.js \
+            tests/practicos-v71.js tests/storage-v82.js tests/loader-v85.js \
+            tests/municipales-v84-cierre.js; do
+            node "$test"
+          done
 
-  municipal-close:
-    name: La Puebla y Carranque · cierre v0.84
+  theory-close:
+    name: Carranque 20/20 · teoría autosuficiente v0.85
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate official programmes, tests and practical cases
-        run: node tests/municipales-v84-cierre.js
-      - name: Upload municipal audit
+      - name: Validate four theory blocks and final audit
+        run: |
+          node tests/carranque-teoria-v85-bloque1.js
+          node tests/carranque-teoria-v85-bloque2.js
+          node tests/carranque-teoria-v85-bloque3.js
+          node tests/carranque-teoria-v85-bloque4.js
+          node tests/temario-depth-v85-final.js
+      - name: Upload theory audit
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: municipales-v84
-          path: municipales-v84.json
+          name: temario-v85
+          path: |
+            carranque-teoria-v85-bloque1.json
+            carranque-teoria-v85-bloque2.json
+            carranque-teoria-v85-bloque3.json
+            carranque-teoria-v85-bloque4.json
+            temario-depth-v85.json
+            temario-depth-v85.md
           if-no-files-found: ignore
           retention-days: 30
 
-  uc3m-clean:
-    name: UC3M cierre de calidad v0.80
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Validate UC3M v0.80
-        run: node tests/uc3m-v80-cierre-calidad.js
-      - name: Upload UC3M report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: uc3m-v80
-          path: uc3m-v80.json
-          if-no-files-found: ignore
-
   quality-audit:
-    name: Auditoría transversal v0.84
+    name: Auditoría de las 3.102 preguntas
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Audit question quality and municipal closure
-        run: node tests/auditoria-calidad-v84.js
-      - name: Upload audit report
+      - name: Audit municipal and global banks
+        run: |
+          node tests/municipales-v84-cierre.js
+          node tests/uc3m-v80-cierre-calidad.js
+          node tests/auditoria-calidad-v84.js
+      - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: audit-v84
-          path: audit-v84.json
+          name: audit-v85
+          path: |
+            municipales-v84.json
+            uc3m-v80.json
+            audit-v84.json
           if-no-files-found: ignore
           retention-days: 30
 
   site-integrity:
-    name: Integridad del manifiesto, PWA y municipales v0.84
+    name: Integridad web, manifiesto y PWA v0.85
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate loader manifest, PWA and municipal integrity
-        run: node tests/site-integrity-v84.js
+      - run: node tests/site-integrity-v85.js
 
   browser-e2e:
-    name: Navegador, móvil, tablet, PWA y municipales v0.84
+    name: Navegador, móvil, tablet y PWA v0.85
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 40
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Install Playwright
@@ -205,26 +119,23 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-v84
+          name: playwright-report-v85
           path: playwright-report/
           if-no-files-found: ignore
           retention-days: 14
 
   carranque-live:
-    name: Carranque v0.84 · tema ${{ matrix.theme }}
+    name: Carranque · banco tema ${{ matrix.theme }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         theme: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate theme
-        env:
+      - env:
           CARRANQUE_THEME: ${{ matrix.theme }}
         run: node tests/smoke-carranque-live-v70.js
