@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   temario-depth:
-    name: Concordancia y profundidad de 99 temas
+    name: Carranque 20/20 · teoría autosuficiente
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,15 +24,23 @@ jobs:
           node --check assets/js/carranque-teoria-v85-bloque1.js
           node --check assets/js/carranque-teoria-v85-estructura.js
           node --check assets/js/carranque-teoria-v85-bloque2.js
+          node --check assets/js/carranque-teoria-v85-bloque3.js
+          node --check assets/js/carranque-teoria-v85-bloque4.js
           node --check tests/carranque-teoria-v85-bloque1.js
           node --check tests/carranque-teoria-v85-bloque2.js
-          node --check tests/temario-depth-v85.js
+          node --check tests/carranque-teoria-v85-bloque3.js
+          node --check tests/carranque-teoria-v85-bloque4.js
+          node --check tests/temario-depth-v85-final.js
       - name: Validate Carranque autonomous theory block 1
         run: node tests/carranque-teoria-v85-bloque1.js
       - name: Validate Carranque autonomous theory block 2
         run: node tests/carranque-teoria-v85-bloque2.js
-      - name: Generate global audit
-        run: node tests/temario-depth-v85.js
+      - name: Validate Carranque autonomous theory block 3
+        run: node tests/carranque-teoria-v85-bloque3.js
+      - name: Validate Carranque autonomous theory block 4
+        run: node tests/carranque-teoria-v85-bloque4.js
+      - name: Generate final theory audit
+        run: node tests/temario-depth-v85-final.js
       - name: Show summary
         run: cat temario-depth-v85.md
       - name: Upload audit
@@ -42,6 +50,8 @@ jobs:
           path: |
             carranque-teoria-v85-bloque1.json
             carranque-teoria-v85-bloque2.json
+            carranque-teoria-v85-bloque3.json
+            carranque-teoria-v85-bloque4.json
             temario-depth-v85.json
             temario-depth-v85.md
           retention-days: 30
