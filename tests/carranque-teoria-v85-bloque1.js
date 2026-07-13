@@ -34,42 +34,71 @@ run('assets/js/uc3m-v80-cierre-calidad.js');
 run('assets/js/municipales-v84-cierre.js');
 run('assets/js/municipales-v84-fix.js');
 run('assets/js/carranque-teoria-v85-bloque1.js');
+run('assets/js/carranque-teoria-v85-estructura.js');
 
 const ope = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'carranque-aux-admin-2026');
 const release = window.OPOWEB_CARRANQUE_TEORIA_V85_BLOQUE1;
+const structure = window.OPOWEB_CARRANQUE_TEORIA_V85_ESTRUCTURA;
 assert.ok(ope, 'No se encontró Carranque');
 assert.ok(release, 'No se cargó el bloque teórico v0.85');
+assert.ok(structure, 'No se cargó la estructura de estudio v0.85');
 assert.deepStrictEqual(JSON.parse(JSON.stringify(release.themes)), [1, 2, 3, 4, 5]);
+assert.deepStrictEqual(JSON.parse(JSON.stringify(structure.themes)), [1, 2, 3, 4, 5]);
 assert.equal(release.autonomous, true);
 assert.equal(ope.theoryProgramme.v85.pendingThemes.length, 15);
+
+const requiredHeadings = [
+  'Resumen orientado al aprobado',
+  'Rigor normativo',
+  'Síntesis de repaso rápido',
+  'Opo-Test: puntos calientes',
+  'Tres preguntas de retención activa',
+  'Estrategia de examen'
+];
 
 const results = [];
 for (const number of release.themes) {
   const theme = ope.themes.find(item => Number(item.number) === number);
   assert.ok(theme, `No existe el tema ${number}`);
+  const headings = (theme.sections || []).map(section => section.heading);
   const sectionText = (theme.sections || []).flatMap(section => [section.heading, ...(section.paragraphs || [])]).join(' ');
   const fullText = `${sectionText} ${theme.tree || ''} ${(theme.reviewTable || []).flat().join(' ')}`;
   const words = wordCount(fullText);
   const paragraphs = (theme.sections || []).reduce((sum, section) => sum + (section.paragraphs || []).length, 0);
 
-  assert.ok(words >= 1000, `Tema ${number} insuficiente: ${words} palabras`);
-  assert.ok(theme.sections.length >= 8, `Tema ${number}: pocas secciones`);
-  assert.ok(paragraphs >= 20, `Tema ${number}: pocos párrafos (${paragraphs})`);
-  assert.ok((theme.reviewTable || []).length >= 8, `Tema ${number}: tabla insuficiente`);
+  for (const heading of requiredHeadings) assert.ok(headings.includes(heading), `Tema ${number}: falta ${heading}`);
+  assert.ok(!headings.some(heading => /argot tecnico|trampas habituales|mapa de estudio util/i.test(normalize(heading))), `Tema ${number}: conserva una sección excluida`);
+  assert.ok(words >= 1200, `Tema ${number} insuficiente: ${words} palabras`);
+  assert.ok(theme.sections.length >= 13, `Tema ${number}: pocas secciones`);
+  assert.ok(paragraphs >= 35, `Tema ${number}: pocos párrafos (${paragraphs})`);
+  assert.ok((theme.reviewTable || []).length >= 8, `Tema ${number}: cuadro para test insuficiente`);
   assert.ok(wordCount(theme.tree) >= 25, `Tema ${number}: esquema insuficiente`);
   assert.ok((theme.officialSources || []).length >= 2, `Tema ${number}: fuentes oficiales insuficientes`);
   assert.ok(theme.officialSources.every(source => /^BOE-A-/.test(source.reference)), `Tema ${number}: referencia no oficial`);
   assert.ok(theme.officialSources.every(source => source.reviewedAt === '2026-07-13'));
+  assert.ok((theme.articleCoverage || []).length >= 6, `Tema ${number}: cobertura artículo por artículo insuficiente`);
+  assert.equal((theme.retentionQuestions || []).length, 3, `Tema ${number}: preguntas de retención incorrectas`);
   assert.equal(theme.theoryStatus.autonomous, true);
+  assert.equal(theme.theoryStatus.fixedStudyStructure, true);
+  assert.equal(theme.theoryStatus.articleByArticle, true);
+  assert.equal(theme.theoryStatus.noOffSyllabusFiller, true);
   assert.equal(theme.theoryStatus.sourcePolicy, 'Fuentes oficiales consolidadas y explicación autosuficiente');
   assert.equal((ope.themeTests?.[theme.id] || []).length, 30, `Tema ${number}: se alteró el banco de preguntas`);
 
-  results.push({ number, words, sections: theme.sections.length, paragraphs, sources: theme.officialSources.length });
+  results.push({
+    number,
+    words,
+    sections: theme.sections.length,
+    paragraphs,
+    sources: theme.officialSources.length,
+    articleBlocks: theme.articleCoverage.length,
+    headings: requiredHeadings
+  });
 }
 
 const minimum = Math.min(...results.map(item => item.words));
 const total = results.reduce((sum, item) => sum + item.words, 0);
-assert.ok(total >= 6500, `Bloque 1-5 demasiado corto: ${total} palabras`);
+assert.ok(total >= 8000, `Bloque 1-5 demasiado corto: ${total} palabras`);
 
 fs.writeFileSync('carranque-teoria-v85-bloque1.json', JSON.stringify({
   version: release.version,
