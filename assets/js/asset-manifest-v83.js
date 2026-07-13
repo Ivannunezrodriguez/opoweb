@@ -86,6 +86,7 @@
     './assets/js/uc3m-v79-contratacion-interna.js',
     './assets/js/uc3m-v80-cierre-calidad.js',
     './assets/js/municipales-v84-cierre.js',
+    './assets/js/municipales-v84-fix.js',
     './assets/js/auditoria-calidad-v72.js',
     './assets/js/ui-v42.js',
     './assets/js/ui-v43.js',
