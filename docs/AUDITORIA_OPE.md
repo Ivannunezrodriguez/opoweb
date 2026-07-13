@@ -1,4 +1,4 @@
-# Auditoría global de OpoWeb · v0.82
+# Auditoría global de OpoWeb · v0.83
 
 Fecha de revisión: 12 de julio de 2026.
 
@@ -18,7 +18,7 @@ Fecha de revisión: 12 de julio de 2026.
 | UC3M C2 | 99 % |
 | La Puebla C2 | 84 % |
 | Carranque C2 | 88 % |
-| Arquitectura y pruebas | 97 % |
+| Arquitectura y pruebas | 98 % |
 | **OpoWeb global** | **97 %** |
 
 ## Recuento efectivo
@@ -49,7 +49,23 @@ Los tres simulacros deben contener 70 preguntas principales, 5 reservas, 75 text
 
 La versión solo puede considerarse apta cuando el informe no contiene fallos. Este control no sustituye la revisión jurídica del contenido, pero reduce errores estructurales y de trazabilidad.
 
-## Validación funcional v0.82
+## Arranque y PWA v0.83
+
+La página ya no mantiene una cadena extensa de etiquetas `<script>`. `index.html` carga únicamente el manifiesto y el cargador.
+
+El manifiesto central declara:
+
+- versión de aplicación;
+- nombre de caché;
+- recursos estáticos;
+- todos los módulos en su orden exacto;
+- lista total usada por el service worker.
+
+El cargador ejecuta los módulos uno a uno, registra los recursos cargados y emite los eventos `opoweb:ready` u `opoweb:failed`. Cuando un recurso falta, se identifica el archivo concreto en vez de continuar con una aplicación parcialmente inicializada.
+
+El service worker importa el mismo manifiesto y utiliza `opoweb-v90`. Así se elimina la doble lista manual que existía entre `index.html` y `sw.js`.
+
+## Validación funcional v0.83
 
 Playwright ejecuta OpoWeb en Chromium con tres perfiles:
 
@@ -60,20 +76,22 @@ Playwright ejecuta OpoWeb en Chromium con tres perfiles:
 La prueba funcional controla:
 
 - carga de las cuatro convocatorias activas;
+- coincidencia entre módulos declarados y cargados;
+- ausencia de scripts duplicados;
+- conservación del orden exacto del manifiesto;
 - recorrido de las siete vistas;
 - menú adaptable en móvil y tablet;
 - ausencia de desbordamiento horizontal;
 - respuesta y corrección de un test UC3M;
 - persistencia de `opowebProgress` después de recargar;
 - registro y control del service worker;
-- presencia de la caché `opoweb-v89` y de sus recursos esenciales;
+- presencia de la caché `opoweb-v90` y de sus recursos esenciales;
 - manifiesto instalable;
 - recarga completa sin conexión;
 - conservación de datos locales durante la recarga sin red;
 - migración transparente desde el formato histórico;
 - recuperación desde `opowebProgressBackup` si el principal está corrupto;
-- exportación v2 e importación con checksum;
-- conservación de una copia anterior antes de importar.
+- exportación v2 e importación con checksum.
 
 El informe de ejecución se conserva como artefacto HTML de GitHub Actions durante 14 días.
 
@@ -100,7 +118,7 @@ El tema 17 identifica la transición del artículo 23.2 del Real Decreto 534/202
 - Tres simulacros 70 + 5.
 - Marco estatal, autonómico e interno integrado.
 - Presupuesto 2026 y contratación interna integrados.
-- Validación automática de navegador, PWA y almacenamiento integrada.
+- Validación automática de navegador, PWA, almacenamiento y cargador integrada.
 - Avance estimado: 99 %.
 
 No se asigna el 100 % porque la emulación automatizada no sustituye una comprobación manual en dispositivos físicos, Safari/WebKit ni el mantenimiento de datos anuales.
@@ -112,4 +130,4 @@ No se asigna el 100 % porque la emulación automatizada no sustituye una comprob
 3. Actualización anual de admisión UC3M con fuente oficial.
 4. Estatutos oficiales vigentes del OAPGT.
 5. Auditoría literal y de dificultad de La Puebla y Carranque.
-6. Consolidación real de módulos históricos aprovechando la copia y migración ya implantadas.
+6. Consolidación interna de módulos históricos; su orden y carga ya están centralizados, pero la lógica aún está distribuida.
