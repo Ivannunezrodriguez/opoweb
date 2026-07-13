@@ -52,6 +52,7 @@ jobs:
           node --check assets/js/carranque-v69-fix.js
           node --check assets/js/carranque-v70.js
           node --check assets/js/practicos-v71.js
+          node --check assets/js/municipales-v84-cierre.js
           node --check assets/js/auditoria-calidad-v72.js
           node --check assets/js/ui-v66.js
           node --check assets/js/ui-v67.js
@@ -72,12 +73,16 @@ jobs:
           node --check assets/js/ui-v81.js
           node --check assets/js/ui-v82.js
           node --check assets/js/ui-v83.js
+          node --check assets/js/ui-v84.js
           node --check tests/storage-v82.js
           node --check tests/loader-v83.js
-          node --check tests/site-integrity-v83.js
+          node --check tests/municipales-v84-cierre.js
+          node --check tests/auditoria-calidad-v84.js
+          node --check tests/site-integrity-v84.js
           node --check playwright.config.js
           node --check tests/e2e/opoweb.spec.js
           node --check tests/e2e/storage-v82.spec.js
+          node --check tests/e2e/municipales-v84.spec.js
       - name: Run regression tests
         run: |
           node tests/smoke-v56.js
@@ -101,6 +106,28 @@ jobs:
           node tests/practicos-v71.js
           node tests/storage-v82.js
           node tests/loader-v83.js
+          node tests/municipales-v84-cierre.js
+
+  municipal-close:
+    name: La Puebla y Carranque · cierre v0.84
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate official programmes, tests and practical cases
+        run: node tests/municipales-v84-cierre.js
+      - name: Upload municipal audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: municipales-v84
+          path: municipales-v84.json
+          if-no-files-found: ignore
+          retention-days: 30
 
   uc3m-clean:
     name: UC3M cierre de calidad v0.80
@@ -123,7 +150,7 @@ jobs:
           if-no-files-found: ignore
 
   quality-audit:
-    name: Auditoría transversal v0.80
+    name: Auditoría transversal v0.84
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -132,18 +159,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Audit question quality
-        run: node tests/auditoria-calidad-v80.js
+      - name: Audit question quality and municipal closure
+        run: node tests/auditoria-calidad-v84.js
       - name: Upload audit report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: audit-v80
-          path: audit-v80.json
+          name: audit-v84
+          path: audit-v84.json
           if-no-files-found: ignore
+          retention-days: 30
 
   site-integrity:
-    name: Integridad del manifiesto, cargador y PWA v0.83
+    name: Integridad del manifiesto, PWA y municipales v0.84
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -152,13 +180,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate loader manifest and PWA integrity
-        run: node tests/site-integrity-v83.js
+      - name: Validate loader manifest, PWA and municipal integrity
+        run: node tests/site-integrity-v84.js
 
   browser-e2e:
-    name: Navegador, móvil, tablet, PWA y cargador v0.83
+    name: Navegador, móvil, tablet, PWA y municipales v0.84
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 35
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -176,13 +204,13 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-v83
+          name: playwright-report-v84
           path: playwright-report/
           if-no-files-found: ignore
           retention-days: 14
 
   carranque-live:
-    name: Carranque v0.70 · tema ${{ matrix.theme }}
+    name: Carranque v0.84 · tema ${{ matrix.theme }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
