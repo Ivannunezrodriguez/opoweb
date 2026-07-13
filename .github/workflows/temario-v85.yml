@@ -23,10 +23,14 @@ jobs:
         run: |
           node --check assets/js/carranque-teoria-v85-bloque1.js
           node --check assets/js/carranque-teoria-v85-estructura.js
+          node --check assets/js/carranque-teoria-v85-bloque2.js
           node --check tests/carranque-teoria-v85-bloque1.js
+          node --check tests/carranque-teoria-v85-bloque2.js
           node --check tests/temario-depth-v85.js
       - name: Validate Carranque autonomous theory block 1
         run: node tests/carranque-teoria-v85-bloque1.js
+      - name: Validate Carranque autonomous theory block 2
+        run: node tests/carranque-teoria-v85-bloque2.js
       - name: Generate global audit
         run: node tests/temario-depth-v85.js
       - name: Show summary
@@ -37,6 +41,7 @@ jobs:
           name: temario-depth-v85
           path: |
             carranque-teoria-v85-bloque1.json
+            carranque-teoria-v85-bloque2.json
             temario-depth-v85.json
             temario-depth-v85.md
           retention-days: 30
