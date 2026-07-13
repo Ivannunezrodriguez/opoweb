@@ -63,7 +63,7 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
 
   const optionValues = await page.locator('#oposicionSelect option').evaluateAll(options => options.map(option => option.value));
   expect(optionValues).toEqual(EXPECTED_OPE_IDS);
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.83.0');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.84.0');
 
   const bootAudit = await page.evaluate(() => {
     const manifest = window.OPOWEB_ASSET_MANIFEST_V83;
@@ -76,6 +76,8 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
       failed: boot.failed,
       loaded: boot.loaded.length,
       declared: manifest.scripts.length,
+      applicationVersion: manifest.applicationVersion,
+      municipalStatus: window.OPOWEB_MUNICIPALES_V84?.globalStatus,
       duplicateScripts: window.OPOWEB_LOADER_AUDIT_V83.duplicateScripts,
       orderMatches: JSON.stringify(loadedPaths) === JSON.stringify(expectedPaths)
     };
@@ -83,6 +85,8 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
   expect(bootAudit.status).toBe('ready');
   expect(bootAudit.failed).toBeNull();
   expect(bootAudit.loaded).toBe(bootAudit.declared);
+  expect(bootAudit.applicationVersion).toBe('v0.84.0');
+  expect(bootAudit.municipalStatus).toBe('APTO');
   expect(bootAudit.duplicateScripts).toBe(0);
   expect(bootAudit.orderMatches).toBe(true);
 
@@ -148,17 +152,18 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
     await page.evaluate(() => navigator.serviceWorker.ready);
   }
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBeTruthy();
-  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v90')), { timeout: 30_000 }).toBeTruthy();
+  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v91')), { timeout: 30_000 }).toBeTruthy();
 
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open('opoweb-v90');
+    const cache = await caches.open('opoweb-v91');
     return (await cache.keys()).map(request => new URL(request.url).pathname);
   });
   expect(cachedPaths).toContain('/index.html');
   expect(cachedPaths).toContain('/assets/js/asset-manifest-v83.js');
   expect(cachedPaths).toContain('/assets/js/loader-v83.js');
   expect(cachedPaths).toContain('/assets/js/storage-v82.js');
-  expect(cachedPaths).toContain('/assets/js/ui-v83.js');
+  expect(cachedPaths).toContain('/assets/js/municipales-v84-cierre.js');
+  expect(cachedPaths).toContain('/assets/js/ui-v84.js');
   expect(cachedPaths).toContain('/manifest.webmanifest');
 
   const manifest = await page.evaluate(async () => {
@@ -182,7 +187,7 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
   await page.reload({ waitUntil: 'domcontentloaded' });
   await waitForBoot(page);
   await expect(page.locator('#viewTitle')).toHaveText('Temario');
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.83.0');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.84.0');
   const restored = await page.evaluate(() => JSON.parse(localStorage.getItem('opowebProgress') || '{}'));
   expect(restored).toEqual(offlineProgress);
   expect(pageErrors).toEqual([]);
