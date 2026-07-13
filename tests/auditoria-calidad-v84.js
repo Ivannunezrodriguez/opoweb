@@ -30,6 +30,7 @@ run('assets/js/uc3m-v78-presupuesto-2026.js');
 run('assets/js/uc3m-v79-contratacion-interna.js');
 run('assets/js/uc3m-v80-cierre-calidad.js');
 run('assets/js/municipales-v84-cierre.js');
+run('assets/js/municipales-v84-fix.js');
 run('assets/js/auditoria-calidad-v72.js');
 
 const report = window.OPOWEB_AUDITORIA_V72;
@@ -63,5 +64,7 @@ assert.equal(window.OPOWEB_UC3M_V80.status, 'APTO');
 assert.equal(municipal.globalStatus, 'APTO', JSON.stringify({ puebla: municipal.puebla.failures, carranque: municipal.carranque.failures }));
 assert.equal(municipal.puebla.estimatedProgress, 99);
 assert.equal(municipal.carranque.estimatedProgress, 99);
+assert.ok(municipal.puebla.repairedOptions >= 1);
+assert.equal(municipal.puebla.practicalCoverageRepair, true);
 
 console.log('Auditoría de calidad v0.84 APTO', JSON.stringify({ total: report.totalQuestions, puebla: municipal.puebla.status, carranque: municipal.carranque.status }));
