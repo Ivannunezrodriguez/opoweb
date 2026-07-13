@@ -37,8 +37,13 @@
     const { name, audit, process } = current;
     const first = process?.firstExercise || {};
     const practicalScope = name === 'Carranque' ? 'temas 3 a 20' : 'los 19 temas';
+    const progress = Number(audit?.estimatedProgress || 95);
+    const badgeClass = audit?.status === 'APTO' ? 'common' : '';
+    const pendingText = progress === 99
+      ? 'El 1 % restante se reserva para anuncios posteriores, fecha definitiva, posibles correcciones de bases y comprobación manual final.'
+      : 'Existen controles pendientes. Consulta el informe de auditoría antes de considerar cerrado este bloque.';
     return `<article class="card" id="municipalAuditV84">
-      <div class="pill-row"><span class="badge common">${name} v0.84</span><span class="badge">Auditoría ${audit?.status || 'pendiente'}</span><span class="badge area">99 % estimado</span></div>
+      <div class="pill-row"><span class="badge common">${name} v0.84</span><span class="badge ${badgeClass}">Auditoría ${audit?.status || 'pendiente'}</span><span class="badge area">${progress} % estimado</span></div>
       <h2>Programa y examen contrastados con las bases oficiales</h2>
       <p>Los títulos de los temas se muestran con la redacción literal de las bases. El banco se controla por duplicados, opciones, respuesta, trazabilidad, dificultad y equilibrio de letras.</p>
       <div class="grid three">
@@ -48,7 +53,7 @@
       </div>
       <p><strong>Primer ejercicio:</strong> ${first.main || '—'} + ${first.reserve || 0} reservas, ${first.minutes || '—'} minutos, +${first.correct ?? '—'} por acierto y ${first.wrong ?? '—'} por error.</p>
       <p><strong>Práctico:</strong> cobertura de ${practicalScope}. La legislación exigible es la vigente en la fecha del examen.</p>
-      <p class="muted">El 1 % restante se reserva para anuncios posteriores, fecha definitiva, posibles correcciones de bases y comprobación manual final.</p>
+      <p class="muted">${pendingText}</p>
     </article>`;
   }
 
