@@ -1,0 +1,35 @@
+name: Auditoría de temario v0.85
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  temario-depth:
+    name: Concordancia y profundidad de 99 temas
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check syntax
+        run: node --check tests/temario-depth-v85.js
+      - name: Generate audit
+        run: node tests/temario-depth-v85.js
+      - name: Show summary
+        run: cat temario-depth-v85.md
+      - name: Upload audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: temario-depth-v85
+          path: |
+            temario-depth-v85.json
+            temario-depth-v85.md
+          retention-days: 30
