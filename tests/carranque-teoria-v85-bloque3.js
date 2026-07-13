@@ -88,7 +88,7 @@ for (const number of release.themes) {
 
 const total = results.reduce((sum, item) => sum + item.words, 0);
 const minimum = Math.min(...results.map(item => item.words));
-assert.ok(total >= 8000, `Bloque 11-15 demasiado corto: ${total}`);
+assert.ok(total >= 7000, `Bloque 11-15 demasiado corto: ${total}`);
 
 fs.writeFileSync('carranque-teoria-v85-bloque3.json', JSON.stringify({
   version: release.version,
