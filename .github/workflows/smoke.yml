@@ -75,7 +75,7 @@ jobs:
           node --check assets/js/ui-v83.js
           node --check assets/js/ui-v84.js
           node --check tests/storage-v82.js
-          node --check tests/loader-v83.js
+          node --check tests/loader-v84.js
           node --check tests/municipales-v84-cierre.js
           node --check tests/auditoria-calidad-v84.js
           node --check tests/site-integrity-v84.js
@@ -105,7 +105,7 @@ jobs:
           node tests/smoke-carranque-live-v70.js
           node tests/practicos-v71.js
           node tests/storage-v82.js
-          node tests/loader-v83.js
+          node tests/loader-v84.js
           node tests/municipales-v84-cierre.js
 
   municipal-close:
