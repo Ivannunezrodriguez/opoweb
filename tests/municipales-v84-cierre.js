@@ -31,6 +31,7 @@ run('assets/js/uc3m-v78-presupuesto-2026.js');
 run('assets/js/uc3m-v79-contratacion-interna.js');
 run('assets/js/uc3m-v80-cierre-calidad.js');
 run('assets/js/municipales-v84-cierre.js');
+run('assets/js/municipales-v84-fix.js');
 
 const release = window.OPOWEB_MUNICIPALES_V84;
 assert.ok(release, 'No se cargó la auditoría municipal v0.84');
@@ -80,6 +81,8 @@ assert.equal(puebla.selectionProcess.oppositionWeight, 80);
 assert.equal(puebla.selectionProcess.meritWeight, 20);
 assert.equal(puebla.personalMeritEstimate.consolidated, 0);
 assert.deepStrictEqual(plain(release.puebla.practicalThemeCoverage), Array.from({ length: 19 }, (_, index) => index + 1));
+assert.ok(release.puebla.repairedOptions >= 1, 'Debe registrarse la reparación de la alternativa duplicada de La Puebla');
+assert.equal(release.puebla.practicalCoverageRepair, true);
 
 assert.deepStrictEqual(plain(carranque.scoring), { correct: 0.25, wrong: -0.08, blank: 0 });
 assert.equal(carranque.selectionProcess.firstExercise.main, 80);
@@ -104,4 +107,4 @@ for (const simulation of release.carranque.simulations) {
   assert.equal(simulation.representedThemes, 20);
 }
 
-console.log(`Municipales v0.84 APTO · La Puebla ${release.puebla.totalQuestions} · Carranque ${release.carranque.totalQuestions}`);
+console.log(`Municipales v0.84 APTO · La Puebla ${release.puebla.totalQuestions} · Carranque ${release.carranque.totalQuestions} · opciones reparadas ${release.puebla.repairedOptions}`);
