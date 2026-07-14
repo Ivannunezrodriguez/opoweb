@@ -31,12 +31,12 @@ jobs:
             tests/smoke-carranque-v69.js tests/smoke-carranque-live-v69.js \
             tests/smoke-carranque-v70.js tests/smoke-carranque-live-v70.js \
             tests/practicos-v71.js tests/storage-v82.js tests/loader-v85.js \
-            tests/municipales-v84-cierre.js tests/puebla-teoria-v86-bloque1.js; do
+            tests/municipales-v84-cierre.js; do
             node "$test"
           done
 
   theory-close:
-    name: Carranque 20/20 y La Puebla bloque 1 · teoría v0.86
+    name: Carranque 20/20 y La Puebla 19/19 · teoría v0.86
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -51,6 +51,10 @@ jobs:
           node tests/carranque-teoria-v85-bloque4.js
           node tests/temario-depth-v85-final.js
           node tests/puebla-teoria-v86-bloque1.js
+          node tests/puebla-teoria-v86-bloque2.js
+          node tests/puebla-teoria-v86-bloque3.js
+          node tests/puebla-teoria-v86-bloque4.js
+          node tests/puebla-teoria-v86-final.js
       - name: Upload theory audit
         if: always()
         uses: actions/upload-artifact@v4
@@ -64,6 +68,11 @@ jobs:
             temario-depth-v85.json
             temario-depth-v85.md
             puebla-teoria-v86-bloque1.json
+            puebla-teoria-v86-bloque2.json
+            puebla-teoria-v86-bloque3.json
+            puebla-teoria-v86-bloque4.json
+            puebla-teoria-v86-final.json
+            puebla-teoria-v86-final.md
           if-no-files-found: ignore
           retention-days: 30
 
@@ -141,3 +150,19 @@ jobs:
       - env:
           CARRANQUE_THEME: ${{ matrix.theme }}
         run: node tests/smoke-carranque-live-v70.js
+
+  puebla-live:
+    name: La Puebla · banco tema ${{ matrix.theme }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        theme: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - env:
+          PUEBLA_THEME: ${{ matrix.theme }}
+        run: node tests/smoke-puebla-live-v68.js
