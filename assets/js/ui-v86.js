@@ -55,6 +55,11 @@
     if (typeof content !== 'undefined' && content && activeOpe()?.id === PUEBLA_ID) content.insertAdjacentHTML(position, pueblaCard());
   }
 
+  function applyCurrentVersion() {
+    patchText(document.body);
+    queueMicrotask(() => patchText(document.body));
+  }
+
   if (typeof renderSidebar === 'function') {
     const original = renderSidebar;
     renderSidebar = function () { original(); patchText(document.getElementById('oposicionCard')); };
@@ -77,9 +82,16 @@
   }
   if (typeof renderAll === 'function') {
     const original = renderAll;
-    renderAll = function () { original(); patchText(document.body); };
-    try { renderAll(); } catch (_) { patchText(document.body); }
-  } else patchText(document.body);
+    renderAll = function () { original(); applyCurrentVersion(); };
+    try { renderAll(); } catch (_) { applyCurrentVersion(); }
+  } else applyCurrentVersion();
 
-  window.OPOWEB_UI_V86 = { version: VERSION, cache: CACHE, pueblaAutonomousThemes: 5, pueblaTotalThemes: 19 };
+  window.addEventListener('opoweb:ready', applyCurrentVersion);
+  window.OPOWEB_UI_V86 = {
+    version: VERSION,
+    cache: CACHE,
+    label: 'La Puebla 5/19',
+    pueblaAutonomousThemes: 5,
+    pueblaTotalThemes: 19
+  };
 })();
