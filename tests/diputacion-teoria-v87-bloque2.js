@@ -14,7 +14,11 @@ const wordCount = value => normalize(value).split(/\s+/).filter(Boolean).length;
 
 const files = ['data/oposiciones.js', 'data/proceso.js', 'data/uc3m.js', 'data/ope-audit-v41.js'];
 for (let version = 43; version <= 65; version += 1) files.push(`assets/js/diputacion-v${version}.js`);
-files.push('assets/js/diputacion-teoria-v87-bloque1.js', 'assets/js/diputacion-teoria-v87-bloque2.js');
+files.push(
+  'assets/js/diputacion-teoria-v87-bloque1.js',
+  'assets/js/diputacion-teoria-v87-bloque2.js',
+  'assets/js/diputacion-test-v87-bloque2.js'
+);
 for (const file of files) vm.runInContext(read(file), context, { filename: file });
 
 const ope = context.window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'diputacion-toledo-admin-2026');
@@ -77,8 +81,14 @@ assert.equal(programme.pendingThemes.length, 33);
 assert.ok(programme.dynamicChecks.some(item => /ordenanzas locales/i.test(item)));
 assert.ok(programme.dynamicChecks.some(item => /2024\/1183/i.test(item)));
 
+const reinforcement = context.window.OPOWEB_DIPUTACION_TEST_V87;
+assert.ok(reinforcement, 'No existe auditoría del refuerzo de preguntas');
+assert.deepStrictEqual(plain(reinforcement.addedByTheme), { 29: 7, 30: 4, 31: 1 });
+assert.equal(reinforcement.totalAdded, 12);
+assert.deepStrictEqual(plain(reinforcement.totals), { 29: 30, 30: 30, 31: 30 });
+
 const totalQuestions = Object.values(ope.themeTests).reduce((sum, bank) => sum + bank.length, 0);
-assert.equal(totalQuestions, 1242, 'Debe conservarse el banco de 1.242 preguntas');
+assert.equal(totalQuestions, 1254, 'El refuerzo debe elevar el banco de Diputación de 1.242 a 1.254 preguntas');
 const theme30Text = normalize(ope.themes.find(item => Number(item.number) === 30).sections.flatMap(section => section.paragraphs).join(' '));
 assert.ok(theme30Text.includes('no configuran una magnitud separada con ese nombre') || theme30Text.includes('no tiene una base imponible autonoma'), 'Tema 30 debe aclarar la cuantificación real del IVTM');
 const theme31Text = normalize(ope.themes.find(item => Number(item.number) === 31).sections.flatMap(section => section.paragraphs).join(' '));
@@ -94,9 +104,10 @@ const report = {
   totalWords: metrics.reduce((sum, item) => sum + item.words, 0),
   minimumWords: Math.min(...metrics.map(item => item.words)),
   questions: totalQuestions,
+  addedQuestions: reinforcement.totalAdded,
   themes: metrics,
   failures
 };
 fs.writeFileSync(path.join(root, 'diputacion-teoria-v87-bloque2.json'), JSON.stringify(report, null, 2));
 assert.deepStrictEqual(failures, [], failures.join(' | '));
-console.log(`Diputación v0.87 bloque 2 APTO · temas 29-31 · ${report.totalWords} palabras · mínimo ${report.minimumWords} · 7/40 acumulados`);
+console.log(`Diputación v0.87 bloque 2 APTO · temas 29-31 · ${report.totalWords} palabras · mínimo ${report.minimumWords} · ${report.questions} preguntas`);
