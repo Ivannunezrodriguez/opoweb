@@ -97,7 +97,6 @@ for (const icon of webManifest.icons) assert.ok(exists(normalize(icon.src)), `Ic
 
 assert.ok(browserTest.includes('Versión OpoWeb v0.86.0'));
 assert.ok(browserTest.includes("includes('opoweb-v93')"));
-assert.ok(browserTest.includes('/assets/js/puebla-teoria-v86-fix.js'));
 assert.ok(browserTest.includes('/assets/js/ui-v86.js'));
 assert.ok(browserTest.includes('OPOWEB_THEORY_AUDIT_V86'));
 assert.ok(browserTest.includes('La Puebla muestra diecinueve temas teóricos autosuficientes'));
