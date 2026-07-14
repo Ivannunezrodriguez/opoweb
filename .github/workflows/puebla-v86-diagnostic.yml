@@ -1,0 +1,27 @@
+name: Diagnóstico de La Puebla v0.86
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metrics:
+    name: Métricas de los 19 temas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Generate metrics
+        run: node tests/puebla-teoria-v86-diagnostico.js
+      - name: Upload metrics
+        uses: actions/upload-artifact@v4
+        with:
+          name: puebla-v86-diagnostic
+          path: puebla-teoria-v86-diagnostico.json
+          retention-days: 30
