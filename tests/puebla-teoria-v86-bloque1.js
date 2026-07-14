@@ -8,6 +8,7 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const context = { console, window: {} };
 context.globalThis = context.window;
 vm.createContext(context);
+const plain = value => JSON.parse(JSON.stringify(value));
 
 for (const file of [
   'data/oposiciones.js',
@@ -22,8 +23,8 @@ const puebla = data.oposiciones.find(item => item.id === 'puebla-aux-admin-2026'
 assert.ok(puebla, 'No existe La Puebla');
 assert.equal(puebla.themes.length, 19, 'La Puebla debe conservar 19 temas oficiales');
 assert.equal(puebla.theoryProgramme.v86.autonomousThemes, 5, 'El bloque 1 debe cerrar cinco temas');
-assert.deepStrictEqual(puebla.theoryProgramme.v86.completedThemes, [1, 2, 3, 4, 5]);
-assert.deepStrictEqual(puebla.theoryProgramme.v86.pendingThemes, [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]);
+assert.deepStrictEqual(plain(puebla.theoryProgramme.v86.completedThemes), [1, 2, 3, 4, 5]);
+assert.deepStrictEqual(plain(puebla.theoryProgramme.v86.pendingThemes), [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]);
 assert.equal(context.window.OPOWEB_PUEBLA_THEORY_V86.status, 'EN_PROGRESO');
 assert.equal(context.window.OPOWEB_PUEBLA_THEORY_V86.autonomousThemes, 5);
 assert.equal(context.window.OPOWEB_PUEBLA_THEORY_V86.totalThemes, 19);
@@ -47,7 +48,7 @@ for (const number of [1, 2, 3, 4, 5]) {
   assert.ok((theme.officialSources || []).length >= 2, `Tema ${number} sin dos fuentes oficiales`);
   assert.ok(theme.tree && theme.tree.length > 150, `Tema ${number} sin esquema suficiente`);
   assert.ok((theme.reviewTable || []).length >= 6, `Tema ${number} sin tabla suficiente`);
-  assert.deepStrictEqual(theme.sections.map(section => section.heading), requiredHeadings, `Tema ${number} no respeta la estructura fija`);
+  assert.deepStrictEqual(plain(theme.sections.map(section => section.heading)), requiredHeadings, `Tema ${number} no respeta la estructura fija`);
   assert.equal((puebla.themeTests[theme.id] || []).length, 30, `Tema ${number} no conserva 30 preguntas`);
 }
 
@@ -66,7 +67,7 @@ const report = {
   status: 'EN_PROGRESO',
   autonomousThemes: 5,
   totalThemes: 19,
-  pendingThemes: puebla.theoryProgramme.v86.pendingThemes,
+  pendingThemes: plain(puebla.theoryProgramme.v86.pendingThemes),
   minimumWords: context.window.OPOWEB_PUEBLA_THEORY_V86.minimumWords,
   questions: totalQuestions,
   practicalCases: puebla.practicalCases.length,
