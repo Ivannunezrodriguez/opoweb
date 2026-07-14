@@ -45,7 +45,8 @@ assert.ok(position('./assets/js/carranque-teoria-v85-bloque4.js') < position('./
 assert.ok(position('./assets/js/puebla-teoria-v86-bloque1.js') < position('./assets/js/puebla-teoria-v86-bloque2.js'));
 assert.ok(position('./assets/js/puebla-teoria-v86-bloque2.js') < position('./assets/js/puebla-teoria-v86-bloque3.js'));
 assert.ok(position('./assets/js/puebla-teoria-v86-bloque3.js') < position('./assets/js/puebla-teoria-v86-bloque4.js'));
-assert.ok(position('./assets/js/puebla-teoria-v86-bloque4.js') < position('./assets/js/auditoria-calidad-v72.js'));
+assert.ok(position('./assets/js/puebla-teoria-v86-bloque4.js') < position('./assets/js/puebla-teoria-v86-fix.js'));
+assert.ok(position('./assets/js/puebla-teoria-v86-fix.js') < position('./assets/js/auditoria-calidad-v72.js'));
 assert.ok(position('./assets/js/ui-v85.js') < position('./assets/js/ui-v86.js'));
 
 const index = read('index.html');
