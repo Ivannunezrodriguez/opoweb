@@ -168,7 +168,7 @@ jobs:
           node-version: '20'
       - env:
           PUEBLA_THEME: ${{ matrix.theme }}
-        run: node tests/smoke-puebla-live-v68.js
+        run: node tests/smoke-puebla-theme-v86.js
 
   carranque-live:
     name: Carranque · banco tema ${{ matrix.theme }}
