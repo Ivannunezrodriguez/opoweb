@@ -27,6 +27,7 @@ const pueblaFiles = [
   'assets/js/puebla-teoria-v86-bloque3.js',
   'assets/js/puebla-teoria-v86-bloque4.js'
 ];
+const pueblaFix = 'assets/js/puebla-teoria-v86-fix.js';
 
 assert.equal(packageJson.version, '0.86.0');
 assert.equal(packageJson.scripts['test:loader'], 'node tests/loader-v86.js');
@@ -52,9 +53,15 @@ for (const file of pueblaFiles) {
   assert.ok(source.includes("version: 'v0.86.0'"), `Versión ausente: ${file}`);
   assert.ok(source.includes('Fuentes oficiales consolidadas') || source.includes('Documentación oficial') || source.includes('documentación oficial'), `Política de fuente ausente: ${file}`);
 }
+assert.ok(exists(pueblaFix));
+assert.ok(manifest.scripts.includes(`./${pueblaFix}`));
+const fixSource = read(pueblaFix);
+assert.ok(fixSource.includes('BOE-A-1998-16718'));
+assert.ok(fixSource.includes("theme: 4"));
 assert.ok(manifest.scripts.includes('./assets/js/ui-v86.js'));
 assert.ok(manifest.scripts.indexOf('./assets/js/carranque-teoria-v85-bloque4.js') < manifest.scripts.indexOf('./assets/js/puebla-teoria-v86-bloque1.js'));
-assert.ok(manifest.scripts.indexOf('./assets/js/puebla-teoria-v86-bloque4.js') < manifest.scripts.indexOf('./assets/js/auditoria-calidad-v72.js'));
+assert.ok(manifest.scripts.indexOf('./assets/js/puebla-teoria-v86-bloque4.js') < manifest.scripts.indexOf('./assets/js/puebla-teoria-v86-fix.js'));
+assert.ok(manifest.scripts.indexOf('./assets/js/puebla-teoria-v86-fix.js') < manifest.scripts.indexOf('./assets/js/auditoria-calidad-v72.js'));
 assert.ok(manifest.scripts.indexOf('./assets/js/ui-v85.js') < manifest.scripts.indexOf('./assets/js/ui-v86.js'));
 
 const directScripts = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
@@ -90,6 +97,7 @@ for (const icon of webManifest.icons) assert.ok(exists(normalize(icon.src)), `Ic
 
 assert.ok(browserTest.includes('Versión OpoWeb v0.86.0'));
 assert.ok(browserTest.includes("includes('opoweb-v93')"));
+assert.ok(browserTest.includes('/assets/js/puebla-teoria-v86-fix.js'));
 assert.ok(browserTest.includes('/assets/js/ui-v86.js'));
 assert.ok(browserTest.includes('OPOWEB_THEORY_AUDIT_V86'));
 assert.ok(browserTest.includes('La Puebla muestra diecinueve temas teóricos autosuficientes'));
