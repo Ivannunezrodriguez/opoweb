@@ -1,0 +1,33 @@
+name: Fuentes OAPGT v0.87
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-gate:
+    name: Bloqueo de contenido estatutario no verificado
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check syntax
+        run: |
+          node --check data/oapgt-fuentes-v87.js
+          node --check tests/oapgt-fuentes-v87.js
+      - name: Validate official-source gate
+        run: node tests/oapgt-fuentes-v87.js
+      - name: Upload source report
+        uses: actions/upload-artifact@v4
+        with:
+          name: oapgt-fuentes-v87
+          path: oapgt-fuentes-v87.json
+          retention-days: 30
