@@ -10,11 +10,36 @@ context.globalThis = context.window;
 vm.createContext(context);
 const plain = value => JSON.parse(JSON.stringify(value));
 
-for (const file of [
+const files = [
   'data/oposiciones.js',
+  'data/proceso.js',
+  'data/uc3m.js',
+  'data/ope-audit-v41.js'
+];
+for (let version = 43; version <= 65; version += 1) files.push(`assets/js/diputacion-v${version}.js`);
+files.push(
+  'assets/js/uc3m-v66.js',
+  'assets/js/uc3m-v67.js',
   'assets/js/puebla-v68.js',
+  'assets/js/carranque-v69.js',
+  'assets/js/carranque-v69-fix.js',
+  'assets/js/carranque-v70.js',
+  'assets/js/practicos-v71.js',
+  'assets/js/uc3m-v72-clean.js',
+  'assets/js/uc3m-v73-transparencia.js',
+  'assets/js/uc3m-v73-fix.js',
+  'assets/js/uc3m-v74-losu.js',
+  'assets/js/uc3m-v75-estatutos.js',
+  'assets/js/uc3m-v76-academica-admision.js',
+  'assets/js/uc3m-v77-normativa-interna.js',
+  'assets/js/uc3m-v78-presupuesto-2026.js',
+  'assets/js/uc3m-v79-contratacion-interna.js',
+  'assets/js/uc3m-v80-cierre-calidad.js',
+  'assets/js/municipales-v84-cierre.js',
+  'assets/js/municipales-v84-fix.js',
   'assets/js/puebla-teoria-v86-bloque1.js'
-]) vm.runInContext(read(file), context, { filename: file });
+);
+for (const file of files) vm.runInContext(read(file), context, { filename: file });
 
 const data = context.window.OPOSICIONES_DATA;
 const puebla = data.oposiciones.find(item => item.id === 'puebla-aux-admin-2026');
