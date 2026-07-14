@@ -64,7 +64,7 @@ for (const config of [
   test(`${config.name} queda auditada al 99 % con programa y examen oficiales`, async ({ page }) => {
     const errors = await load(page);
     await page.locator('#oposicionSelect').selectOption(config.id);
-    await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.85.0');
+    await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.86.0');
 
     await navigate(page, 'temario');
     await expect(page.locator('.theme-item')).toHaveCount(config.themes);

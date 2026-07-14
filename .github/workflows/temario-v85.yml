@@ -1,4 +1,4 @@
-name: Auditoría de temario v0.85
+name: Auditoría de temario v0.86
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   temario-depth:
-    name: Carranque 20/20 · teoría autosuficiente
+    name: Carranque 20/20 y La Puebla 19/19 · teoría autosuficiente
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,38 +26,55 @@ jobs:
           node --check assets/js/carranque-teoria-v85-bloque2.js
           node --check assets/js/carranque-teoria-v85-bloque3.js
           node --check assets/js/carranque-teoria-v85-bloque4.js
+          node --check assets/js/puebla-teoria-v86-bloque1.js
+          node --check assets/js/puebla-teoria-v86-bloque2.js
+          node --check assets/js/puebla-teoria-v86-bloque3.js
+          node --check assets/js/puebla-teoria-v86-bloque4.js
           node --check tests/carranque-teoria-v85-bloque1.js
           node --check tests/carranque-teoria-v85-bloque2.js
           node --check tests/carranque-teoria-v85-bloque3.js
           node --check tests/carranque-teoria-v85-bloque4.js
-          node --check tests/carranque-teoria-v85-diagnostico.js
           node --check tests/temario-depth-v85-final.js
-      - name: Generate diagnostic metrics
-        run: node tests/carranque-teoria-v85-diagnostico.js
-      - name: Validate Carranque autonomous theory block 1
-        run: node tests/carranque-teoria-v85-bloque1.js
-      - name: Validate Carranque autonomous theory block 2
-        run: node tests/carranque-teoria-v85-bloque2.js
-      - name: Validate Carranque autonomous theory block 3
-        run: node tests/carranque-teoria-v85-bloque3.js
-      - name: Validate Carranque autonomous theory block 4
-        run: node tests/carranque-teoria-v85-bloque4.js
-      - name: Generate final theory audit
-        run: node tests/temario-depth-v85-final.js
-      - name: Show summary
-        run: cat temario-depth-v85.md
+          node --check tests/puebla-teoria-v86-bloque1.js
+          node --check tests/puebla-teoria-v86-bloque2.js
+          node --check tests/puebla-teoria-v86-bloque3.js
+          node --check tests/puebla-teoria-v86-bloque4.js
+          node --check tests/puebla-teoria-v86-final.js
+      - name: Validate Carranque 20/20
+        run: |
+          node tests/carranque-teoria-v85-bloque1.js
+          node tests/carranque-teoria-v85-bloque2.js
+          node tests/carranque-teoria-v85-bloque3.js
+          node tests/carranque-teoria-v85-bloque4.js
+          node tests/temario-depth-v85-final.js
+      - name: Validate La Puebla 19/19
+        run: |
+          node tests/puebla-teoria-v86-bloque1.js
+          node tests/puebla-teoria-v86-bloque2.js
+          node tests/puebla-teoria-v86-bloque3.js
+          node tests/puebla-teoria-v86-bloque4.js
+          node tests/puebla-teoria-v86-final.js
+      - name: Show summaries
+        run: |
+          cat temario-depth-v85.md
+          cat puebla-teoria-v86-final.md
       - name: Upload audit
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: temario-depth-v85
+          name: temario-depth-v86
           path: |
-            carranque-v85-diagnostico.json
             carranque-teoria-v85-bloque1.json
             carranque-teoria-v85-bloque2.json
             carranque-teoria-v85-bloque3.json
             carranque-teoria-v85-bloque4.json
             temario-depth-v85.json
             temario-depth-v85.md
+            puebla-teoria-v86-bloque1.json
+            puebla-teoria-v86-bloque2.json
+            puebla-teoria-v86-bloque3.json
+            puebla-teoria-v86-bloque4.json
+            puebla-teoria-v86-final.json
+            puebla-teoria-v86-final.md
           if-no-files-found: ignore
           retention-days: 30
