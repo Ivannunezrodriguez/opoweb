@@ -9,12 +9,14 @@ Web estática para preparar desde ordenador, tablet o móvil cuatro convocatoria
 
 Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se incorporarán nuevas OPE hasta cerrar estas cuatro.
 
-## Versión actual
+## Versión preparada
 
 - **OpoWeb v0.86.0**
 - Caché PWA: `opoweb-v94`
 - Formato de progreso: v2, compatible con versiones anteriores
-- Última revisión estructural, jurídica y funcional: 14 de julio de 2026
+- Revisión estructural, jurídica y funcional: 14 de julio de 2026
+
+La versión solo se considera publicada cuando la PR supera su CI exacta y se fusiona en `main`.
 
 ## Dos métricas distintas
 
@@ -24,17 +26,17 @@ La integridad técnica y el volumen de ejercicios no equivalen a disponer de un 
 |---|---:|---:|
 | Funcionamiento e interfaz | 99 % | — |
 | Carranque C2 | 99 % | **99 %** |
-| La Puebla C2 | 99 % | **99 %** |
+| La Puebla C2 | 99 % | **99 % tras publicar v0.86** |
 | Diputación C1 | 97 % | **80 % aprox.** |
 | UC3M C2 | 99 % | **70–75 % aprox.** |
 | Arquitectura y pruebas | 98 % | — |
-| **Cobertura teórica global como fuente única** | — | **≈86 %** |
+| **Cobertura teórica global como fuente única** | — | **≈86 % tras publicar v0.86** |
 
-Los porcentajes son estimaciones de gestión, no una probabilidad de aprobar. Carranque y La Puebla han superado el estándar de fuente teórica autosuficiente. Diputación y UC3M todavía no.
+Los porcentajes son estimaciones de gestión, no una probabilidad de aprobar. Carranque ya ha superado el estándar de fuente teórica autosuficiente. La Puebla queda condicionada a la auditoría final y publicación de esta versión. Diputación y UC3M todavía no.
 
-## La Puebla · teoría autosuficiente 19/19
+## La Puebla · teoría preparada 19/19
 
-Los diecinueve títulos oficiales del Anexo I del BOP Toledo núm. 82, de 5 de mayo de 2026, han sido conservados literalmente y desarrollados como manual teórico dentro de OpoWeb.
+Los diecinueve títulos oficiales del Anexo I del BOP Toledo núm. 82, de 5 de mayo de 2026, se conservan literalmente y han sido desarrollados como manual teórico dentro de OpoWeb.
 
 Cada tema incorpora:
 
@@ -51,10 +53,10 @@ Cada tema incorpora:
 - fecha de revisión;
 - treinta preguntas vinculadas al tema.
 
-La auditoría final de La Puebla controla:
+La auditoría final controla:
 
-- **19/19 temas autosuficientes**;
-- más de **25.000 palabras** de teoría;
+- **19/19 temas reconstruidos**;
+- **25.395 palabras** de teoría;
 - un mínimo de 900 palabras por tema;
 - títulos coincidentes con el programa oficial;
 - estructura fija completa;
@@ -69,9 +71,7 @@ Los temas informáticos se apoyan en documentación oficial de Microsoft, LibreO
 
 ## Carranque · teoría autosuficiente 20/20
 
-Los veinte temas oficiales han sido reconstruidos y auditados para estudiar Carranque directamente dentro de OpoWeb.
-
-Cada tema incorpora título literal, fuentes oficiales, desarrollo normativo, resumen, síntesis, puntos calientes, retención activa, estrategia, esquema, tabla y treinta preguntas.
+Los veinte temas oficiales han sido reconstruidos, auditados y publicados para estudiar Carranque directamente dentro de OpoWeb.
 
 La auditoría acredita:
 
@@ -152,26 +152,20 @@ La copia se guarda en el mismo navegador. Borrar los datos del sitio elimina pro
 
 ## Historial reciente
 
-### v0.86.0 · 2026-07-14
+### v0.86.0 · preparada el 2026-07-14
 
 - Reconstruidos los diecinueve temas de La Puebla como teoría autosuficiente.
 - Conservados los títulos literales del programa oficial.
-- Integradas más de 25.000 palabras, fuentes oficiales, esquemas y tablas.
+- Integradas 25.395 palabras, fuentes oficiales, esquemas y tablas.
 - Conservadas las 570 preguntas, 20 supuestos y tres simulacros.
 - Añadidas auditorías por bloques y auditoría final 19/19.
-- Caché actualizada a `opoweb-v94`.
+- Caché preparada como `opoweb-v94`.
 
 ### v0.85.0 · 2026-07-13
 
-- Reconstruidos los veinte temas de Carranque como manual teórico autosuficiente.
+- Reconstruidos y publicados los veinte temas de Carranque como manual teórico autosuficiente.
 - Integradas 36.170 palabras de teoría, fuentes oficiales, artículos, esquemas y tablas.
 - Conservadas las 600 preguntas y los 18 supuestos.
 - Añadida auditoría específica de autosuficiencia por tema.
 - Diferenciada la cobertura estructural de la cobertura teórica real.
 - Caché actualizada a `opoweb-v92`.
-
-### v0.84.0 · 2026-07-13
-
-- Contrastados los programas de La Puebla y Carranque con sus bases oficiales.
-- Integrados sus títulos literales y parámetros de examen.
-- Auditados bancos, supuestos y simulacros municipales.
