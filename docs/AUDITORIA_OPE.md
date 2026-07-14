@@ -13,11 +13,11 @@ Fecha de revisión: 14 de julio de 2026.
 
 | Convocatoria | Temas | Preguntas | Cierre estructural | Teoría autosuficiente |
 |---|---:|---:|---:|---:|
-| La Puebla | 19 | 570 | 99 % | **99 %** |
+| La Puebla | 19 | 570 | 99 % | **99 % tras auditoría y publicación** |
 | Carranque | 20 | 600 | 99 % | **99 %** |
 | Diputación | 40 | 1.242 | 97 % | 80 % aprox. |
 | UC3M | 20 | 690 | 99 % | 70–75 % aprox. |
-| **Total** | **99** | **3.102** | — | **≈86 % global** |
+| **Total** | **99** | **3.102** | — | **≈86 % global tras publicar v0.86** |
 
 ## Distinción obligatoria
 
@@ -29,10 +29,10 @@ La autosuficiencia exige título literal, desarrollo completo del epígrafe, fue
 
 La fuente oficial del programa es el Anexo I del BOP Toledo núm. 82, de 5 de mayo de 2026.
 
-Resultado:
+Contenido preparado para la auditoría final:
 
 - 19/19 títulos literales;
-- 19/19 temas autosuficientes;
+- 19/19 temas reconstruidos;
 - 25.395 palabras;
 - media de 1.337 palabras por tema;
 - mínimo de 928 palabras;
@@ -43,7 +43,9 @@ Resultado:
 - tres simulacros de 50 + 5;
 - cero temas pendientes en `theoryProgramme.v86`.
 
-Los temas jurídicos utilizan BOE, DOUE y textos oficiales. Los temas 15 a 19 utilizan documentación oficial de Microsoft, LibreOffice, Intel y USB-IF. Se evita fijar como permanentes ubicaciones de menús que puedan cambiar por actualización y se describen las funciones exigidas por el programa.
+Los temas jurídicos utilizan BOE, DOUE y textos oficiales. Los temas 15 a 19 utilizan documentación oficial de Microsoft, LibreOffice, Intel y USB-IF. Se evita fijar como permanentes posiciones de menús que puedan cambiar por actualización y se describen las funciones exigidas por el programa.
+
+La calificación definitiva **APTO y publicada** solo se asigna tras superar la auditoría exacta de la PR, navegador/PWA e integración y fusionarse en `main`.
 
 El 1 % reservado corresponde a:
 
@@ -53,7 +55,7 @@ El 1 % reservado corresponde a:
 
 ## Carranque · auditoría final 20/20
 
-Resultado:
+Resultado publicado:
 
 - 20/20 títulos oficiales;
 - 20/20 temas autosuficientes;
@@ -101,7 +103,7 @@ La Puebla mantiene 50 preguntas y cinco reservas, 60 minutos, +0,20 por acierto 
 
 ## Arranque, PWA y almacenamiento
 
-`index.html` carga únicamente el manifiesto y el cargador. El manifiesto declara todos los módulos y alimenta el service worker. La caché v0.86 es `opoweb-v94` e incorpora la teoría completa de Carranque y La Puebla.
+`index.html` carga únicamente el manifiesto y el cargador. El manifiesto declara todos los módulos y alimenta el service worker. La caché prevista para v0.86 es `opoweb-v94` e incorpora la teoría completa de Carranque y La Puebla.
 
 Playwright ejecuta OpoWeb con perfiles Chromium de escritorio 1440 × 900, Pixel 7 e iPad Pro 11. Controla las siete vistas, carga ordenada, ausencia de scripts duplicados, diseño adaptable, tests, fuentes teóricas, persistencia y recarga sin conexión.
 
