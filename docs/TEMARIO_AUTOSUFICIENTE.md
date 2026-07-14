@@ -69,9 +69,9 @@ Se etiqueta para revisión posterior:
 - modificaciones normativas posteriores;
 - cambios de interfaz o retirada de funciones informáticas.
 
-## Estado v0.86
+## Estado de la versión candidata v0.86
 
-- **Carranque:** 20/20 temas autosuficientes; APTO.
+- **Carranque:** 20/20 temas autosuficientes y publicados; APTO.
 - **La Puebla:** 19/19 temas reconstruidos; su publicación queda condicionada a la auditoría final y a la CI exacta de la PR.
 - **Diputación:** pendiente, comenzando por temas 25 a 40 y Estatutos del OAPGT.
 - **UC3M:** pendiente de ampliación completa.
