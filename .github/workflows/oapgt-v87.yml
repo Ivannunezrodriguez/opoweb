@@ -1,4 +1,4 @@
-name: Fuentes OAPGT v0.87
+name: Diputación y fuentes OAPGT v0.87
 
 on:
   pull_request:
@@ -30,4 +30,29 @@ jobs:
         with:
           name: oapgt-fuentes-v87
           path: oapgt-fuentes-v87.json
+          retention-days: 30
+
+  diputacion-theory:
+    name: Diputación temas 25 a 28 · teoría autosuficiente
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check syntax
+        run: |
+          node --check assets/js/diputacion-teoria-v87-bloque1.js
+          node --check tests/diputacion-teoria-v87-bloque1.js
+      - name: Validate autonomous theory block
+        run: node tests/diputacion-teoria-v87-bloque1.js
+      - name: Upload theory report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diputacion-teoria-v87-bloque1
+          path: diputacion-teoria-v87-bloque1.json
+          if-no-files-found: ignore
           retention-days: 30
