@@ -72,8 +72,8 @@ Se etiqueta para revisión posterior:
 ## Estado v0.86
 
 - **Carranque:** 20/20 temas autosuficientes; APTO.
-- **La Puebla:** 19/19 temas autosuficientes; APTO.
+- **La Puebla:** 19/19 temas reconstruidos; su publicación queda condicionada a la auditoría final y a la CI exacta de la PR.
 - **Diputación:** pendiente, comenzando por temas 25 a 40 y Estatutos del OAPGT.
 - **UC3M:** pendiente de ampliación completa.
 
-La etiqueta “fuente teórica autosuficiente” solo aparece cuando la convocatoria supera su auditoría final y las pruebas de integración.
+La etiqueta “fuente teórica autosuficiente” solo se considera publicada cuando la convocatoria supera su auditoría final, las pruebas de integración y la fusión en `main`.
