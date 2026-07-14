@@ -2,81 +2,94 @@
 
 Los porcentajes son aproximaciones de gestión, no una garantía de preparación para aprobar.
 
-## Cambio de criterio desde v0.85
+## Criterio de medición
 
-Hasta v0.84 se utilizaba un único porcentaje que mezclaba temario, preguntas, supuestos, simulacros, fuentes e integración técnica. Ese indicador resultaba insuficiente para responder a una cuestión distinta: **¿puede OpoWeb utilizarse como única fuente teórica?**
+OpoWeb publica dos métricas distintas:
 
-Desde v0.85 se publican dos métricas:
+1. **cierre estructural y práctico:** programa, bancos, supuestos, simulacros, fuentes, funcionamiento y pruebas;
+2. **autosuficiencia teórica:** desarrollo completo de cada epígrafe oficial, cobertura normativa o funcional, fuentes oficiales y material suficiente para estudiar sin manual externo.
 
-1. **cierre estructural y práctico:** programa, banco, supuestos, simulacros, fuentes, funcionamiento y pruebas;
-2. **autosuficiencia teórica:** desarrollo completo de cada epígrafe oficial, cobertura normativa, fuentes oficiales y material suficiente para estudiar sin manual externo.
+Tener treinta preguntas por tema no convierte automáticamente un resumen breve en un manual completo.
 
-## Estado v0.85
+## Estado v0.86
 
 | Área | Estructura y práctica | Teoría autosuficiente |
 |---|---:|---:|
 | Funcionamiento e interfaz | 99 % | — |
+| La Puebla C2 | 99 % | **99 %** |
 | Carranque C2 | 99 % | **99 %** |
-| La Puebla C2 | 99 % | **70 % aprox.** |
 | Diputación C1 | 97 % | **80 % aprox.** |
 | UC3M C2 | 99 % | **70–75 % aprox.** |
 | Arquitectura y pruebas | 98 % | — |
-| **Cobertura teórica global como fuente única** | — | **≈80 %** |
+| **Cobertura teórica global como fuente única** | — | **≈85 %** |
+
+La cobertura global se estima ponderando los 99 temas. No implica que el 85 % de cualquier examen concreto esté garantizado ni que todos los temas incompletos tengan el mismo peso.
 
 ## Estándar de tema autosuficiente
 
-Un tema no se considera autosuficiente únicamente por tener muchas palabras. Debe cumplir conjuntamente:
+Un tema debe cumplir conjuntamente:
 
-- título literal del programa oficial;
+- título literal y posición del programa oficial;
 - todos los apartados del epígrafe desarrollados;
-- normativa oficial identificada y fecha de revisión;
-- cobertura por artículos o bloques normativos;
-- explicación de reglas, excepciones, competencias, plazos y efectos;
-- ejemplos o aplicación administrativa;
+- normativa o documentación técnica oficial identificada;
+- fecha de revisión;
+- cobertura por artículos o bloques funcionales;
+- reglas, excepciones, competencias, plazos y efectos;
+- aplicación administrativa;
 - resumen inicial y síntesis final;
 - puntos calientes de test;
-- preguntas de retención activa;
+- tres preguntas de retención activa;
 - estrategia de examen;
 - esquema y tabla de repaso;
-- banco de preguntas coherente con lo explicado.
+- banco de preguntas coherente con la teoría.
 
-La auditoría automática utiliza además mínimos mensurables: al menos 1.000 palabras, dos fuentes oficiales, estructura fija y treinta preguntas en Carranque. Esos mínimos son una barrera de calidad, no una prueba automática de corrección jurídica absoluta.
-
-## Carranque
-
-Carranque pasa de un desarrollo teórico aproximado del 50 % a **99 %**:
-
-- 20 de 20 títulos oficiales;
-- veinte temas reconstruidos;
-- más de 60.000 palabras de teoría;
-- fuentes oficiales BOE en todos los temas;
-- cobertura normativa y fecha de revisión;
-- 600 preguntas, treinta por tema;
-- 18 supuestos de los temas 3 a 20;
-- tres simulacros de 80 + 5.
-
-El 1 % pendiente se reserva para cambios posteriores: listas, fecha, tribunal, instrucciones, correcciones, normativa modificada y datos anuales de presupuesto, estabilidad o morosidad.
+La auditoría automática exige además al menos 1.000 palabras, dos fuentes oficiales, cuatro bloques de cobertura, estructura fija y treinta preguntas. Es una barrera de calidad, no una certificación automática de corrección jurídica absoluta.
 
 ## La Puebla
 
-Su estructura práctica permanece al 99 %, pero su teoría queda provisionalmente en torno al **70 %**. Los títulos concuerdan y el contenido está bien orientado, aunque dieciséis de los diecinueve temas resultaron demasiado breves para ser un manual único.
+La Puebla pasa de una estimación teórica del 70 % a **99 %**:
+
+- 19 de 19 títulos oficiales;
+- 28.648 palabras de teoría;
+- media aproximada de 1.508 palabras por tema;
+- mínimo de 1.222 palabras por tema;
+- fuentes BOE, EUR-Lex, Microsoft y LibreOffice;
+- cobertura por artículos en la parte normativa;
+- cobertura funcional en los cinco temas informáticos;
+- 570 preguntas, treinta por tema;
+- 20 supuestos;
+- tres simulacros de 50 + 5.
+
+El 1 % pendiente se reserva para publicaciones futuras del proceso, cambios normativos, ordenanzas y calendario fiscal vigente y versiones de software que pudiera concretar el Tribunal.
+
+## Carranque
+
+Carranque conserva el **99 %** teórico:
+
+- 20 de 20 títulos oficiales;
+- más de 60.000 palabras;
+- fuentes y cobertura normativa;
+- 600 preguntas;
+- 18 supuestos;
+- tres simulacros de 80 + 5.
+
+El 1 % pendiente se reserva para cambios normativos, publicaciones del proceso y datos presupuestarios o fiscales dinámicos.
 
 ## Diputación
 
-Su cierre estructural permanece en el 97 %. La teoría se estima alrededor del **80 %**: la primera parte está más desarrollada, pero los temas 25 a 40 necesitan ampliación prioritaria y siguen pendientes los Estatutos oficiales vigentes del OAPGT.
+Su cierre estructural permanece en el 97 %. La teoría se estima alrededor del **80 %**. Los temas 25 a 40 requieren ampliación prioritaria y siguen pendientes los Estatutos oficiales vigentes del OAPGT.
 
 ## UC3M
 
-Su cierre estructural permanece en el 99 %. La teoría se sitúa aproximadamente entre **70 y 75 %** porque el programa está cubierto, pero dieciocho de los veinte temas están demasiado condensados para utilizarse como única fuente.
+Su cierre estructural permanece en el 99 %. La teoría se sitúa aproximadamente entre **70 y 75 %** porque el programa está cubierto, pero gran parte continúa demasiado condensada para utilizarse como única fuente.
 
 ## Orden de reconstrucción
 
-1. La Puebla completa.
-2. Diputación temas 25 a 40.
-3. Resto de Diputación y OAPGT.
-4. UC3M completa.
-5. Auditoría cruzada final de los 99 temas.
+1. Diputación temas 25 a 40.
+2. Resto de Diputación y Estatutos OAPGT.
+3. UC3M completa.
+4. Auditoría cruzada final de los 99 temas.
 
 ## Regla de prudencia
 
-El 99 % teórico no significa que una convocatoria viva sea inmutable ni que exista garantía de aprobado. Significa que el contenido publicado puede utilizarse como manual principal bajo la normativa revisada, reservando seguimiento para cambios posteriores.
+El 99 % teórico significa que el contenido puede utilizarse como manual principal bajo la normativa revisada. No significa que una convocatoria viva sea inmutable, que no haya erratas residuales o que exista garantía de aprobado. El seguimiento de cambios sigue siendo obligatorio.

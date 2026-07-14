@@ -30,12 +30,12 @@ jobs:
             tests/smoke-puebla-v68.js tests/smoke-puebla-live-v68.js \
             tests/smoke-carranque-v69.js tests/smoke-carranque-live-v69.js \
             tests/smoke-carranque-v70.js tests/smoke-carranque-live-v70.js \
-            tests/practicos-v71.js tests/storage-v82.js tests/loader-v85.js \
+            tests/practicos-v71.js tests/storage-v82.js tests/loader-v86.js \
             tests/municipales-v84-cierre.js; do
             node "$test"
           done
 
-  theory-close:
+  carranque-theory:
     name: Carranque 20/20 · teoría autosuficiente v0.85
     runs-on: ubuntu-latest
     steps:
@@ -43,18 +43,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate four theory blocks and final audit
+      - name: Validate Carranque theory
         run: |
           node tests/carranque-teoria-v85-bloque1.js
           node tests/carranque-teoria-v85-bloque2.js
           node tests/carranque-teoria-v85-bloque3.js
           node tests/carranque-teoria-v85-bloque4.js
           node tests/temario-depth-v85-final.js
-      - name: Upload theory audit
+      - name: Upload Carranque audit
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: temario-v85
+          name: carranque-theory-v85
           path: |
             carranque-teoria-v85-bloque1.json
             carranque-teoria-v85-bloque2.json
@@ -62,6 +62,36 @@ jobs:
             carranque-teoria-v85-bloque4.json
             temario-depth-v85.json
             temario-depth-v85.md
+          if-no-files-found: ignore
+          retention-days: 30
+
+  puebla-theory:
+    name: La Puebla 19/19 · teoría autosuficiente v0.86
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate La Puebla theory
+        run: |
+          node tests/puebla-teoria-v86-bloque1.js
+          node tests/puebla-teoria-v86-bloque2.js
+          node tests/puebla-teoria-v86-bloque3.js
+          node tests/puebla-teoria-v86-bloque4.js
+          node tests/puebla-teoria-v86-final.js
+      - name: Upload La Puebla audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: puebla-theory-v86
+          path: |
+            puebla-teoria-v86-bloque1.json
+            puebla-teoria-v86-bloque2.json
+            puebla-teoria-v86-bloque3.json
+            puebla-teoria-v86-bloque4.json
+            puebla-teoria-v86-final.json
+            puebla-teoria-v86-final.md
           if-no-files-found: ignore
           retention-days: 30
 
@@ -82,7 +112,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: audit-v85
+          name: audit-v86
           path: |
             municipales-v84.json
             uc3m-v80.json
@@ -91,19 +121,19 @@ jobs:
           retention-days: 30
 
   site-integrity:
-    name: Integridad web, manifiesto y PWA v0.85
+    name: Integridad web, manifiesto y PWA v0.86
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: node tests/site-integrity-v85.js
+      - run: node tests/site-integrity-v86.js
 
   browser-e2e:
-    name: Navegador, móvil, tablet y PWA v0.85
+    name: Navegador, móvil, tablet y PWA v0.86
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -119,10 +149,26 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-v85
+          name: playwright-report-v86
           path: playwright-report/
           if-no-files-found: ignore
           retention-days: 14
+
+  puebla-live:
+    name: La Puebla · banco tema ${{ matrix.theme }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        theme: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - env:
+          PUEBLA_THEME: ${{ matrix.theme }}
+        run: node tests/smoke-puebla-theme-v86.js
 
   carranque-live:
     name: Carranque · banco tema ${{ matrix.theme }}

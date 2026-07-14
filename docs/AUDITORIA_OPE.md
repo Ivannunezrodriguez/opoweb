@@ -1,6 +1,6 @@
-# Auditoría global de OpoWeb · v0.84
+# Auditoría global de OpoWeb · v0.86
 
-Fecha de revisión: 13 de julio de 2026.
+Fecha de revisión: 14 de julio de 2026.
 
 ## Alcance
 
@@ -9,21 +9,122 @@ Fecha de revisión: 13 de julio de 2026.
 3. Diputación Provincial de Toledo · Administrativo C1.
 4. Universidad Carlos III de Madrid · Auxiliar Administrativo C2.
 
-## Avance aproximado
+## Resultado resumido
 
-| Área | Avance |
-|---|---:|
-| Funcionamiento e interfaz | 99 % |
-| Diputación C1 | 97 % |
-| UC3M C2 | 99 % |
-| La Puebla C2 | 99 % |
-| Carranque C2 | 99 % |
-| Arquitectura y pruebas | 98 % |
-| **OpoWeb global** | **98 %** |
+| Convocatoria | Temas | Preguntas | Cierre estructural | Teoría autosuficiente |
+|---|---:|---:|---:|---:|
+| La Puebla | 19 | 570 | 99 % | **99 %** |
+| Carranque | 20 | 600 | 99 % | **99 %** |
+| Diputación | 40 | 1.242 | 97 % | 80 % aprox. |
+| UC3M | 20 | 690 | 99 % | 70–75 % aprox. |
+| **Total** | **99** | **3.102** | — | **≈85 % global** |
 
-## Recuento efectivo
+## Distinción obligatoria
 
-| Convocatoria | Preguntas | Temas a 30 |
+La existencia de títulos, preguntas, supuestos y simulacros acredita cierre estructural y práctico, pero no demuestra por sí sola que el temario pueda utilizarse como manual único.
+
+La autosuficiencia exige desarrollo íntegro del epígrafe oficial, fuentes oficiales, cobertura por artículos o funciones, reglas, excepciones, plazos, órganos, efectos, repaso y entrenamiento activo.
+
+## La Puebla · resultado teórico v0.86
+
+Base oficial contrastada: Anexo I del BOP Toledo número 82, de 5 de mayo de 2026, anuncio 2026-1965.
+
+Resultado:
+
+- 19 de 19 títulos literales;
+- 19 de 19 temas autosuficientes;
+- 28.648 palabras de teoría;
+- media aproximada de 1.508 palabras por tema;
+- mínimo de 1.222 palabras en cualquier tema;
+- al menos dos fuentes oficiales por tema;
+- cobertura por artículos en los temas jurídicos;
+- cobertura funcional en los temas de Windows, Edge, Word, Writer, Excel, Calc y hardware;
+- estructura fija completa;
+- treinta preguntas por tema;
+- 570 preguntas conservadas;
+- 20 supuestos;
+- tres simulacros de 50 preguntas y 5 reservas.
+
+### Estructura exigida
+
+Cada tema contiene:
+
+1. resumen orientado al aprobado;
+2. rigor normativo;
+3. desarrollo completo;
+4. síntesis de repaso rápido;
+5. `Opo-Test: puntos calientes`;
+6. tres preguntas de retención activa;
+7. estrategia de examen;
+8. esquema jerárquico;
+9. tabla de repaso;
+10. fuentes oficiales y fecha de control.
+
+### Control específico del tema 4
+
+La revisión y los recursos se apoyan en la Ley 39/2015 y en la Ley 29/1998 para la conexión con la jurisdicción contencioso-administrativa. La segunda referencia se carga mediante un módulo corrector incluido en el manifiesto y en la caché PWA.
+
+### Información dinámica
+
+La Puebla queda en 99 %, no en 100 %, porque deben vigilarse:
+
+- listas de admitidos y excluidos;
+- tribunal, fecha, lugar e instrucciones;
+- modificaciones legales posteriores al 14 de julio de 2026;
+- ordenanzas fiscales y calendario tributario municipal vigentes;
+- versiones concretas de software si el Tribunal anuncia prueba informática.
+
+## Carranque · resultado teórico v0.85 conservado
+
+Carranque mantiene:
+
+- 20 de 20 temas autosuficientes;
+- más de 60.000 palabras;
+- fuentes oficiales y cobertura normativa;
+- treinta preguntas por tema;
+- 600 preguntas;
+- 18 supuestos;
+- tres simulacros de 80 + 5.
+
+También permanece en 99 % por publicaciones y datos dinámicos futuros.
+
+## Diputación
+
+- 40 temas y 1.242 preguntas.
+- Cierre estructural estimado: 97 %.
+- Teoría estimada: 80 %.
+- La primera parte está más desarrollada.
+- Los temas 25 a 40 requieren ampliación prioritaria.
+- Sigue pendiente identificar e integrar el texto oficial vigente de los Estatutos del OAPGT.
+
+No debe presentarse todavía como fuente teórica exclusiva.
+
+## UC3M
+
+- 20 temas y 690 preguntas.
+- Tres simulacros de 70 + 5.
+- Cierre estructural: 99 %.
+- Teoría estimada: 70–75 %.
+
+La cobertura temática existe, pero gran parte del contenido es demasiado condensado para un manual único. También deben actualizarse exclusivamente desde fuentes oficiales los datos anuales de admisión y la normativa aplicable en la fecha fijada por la convocatoria.
+
+## Auditoría práctica global
+
+Los bancos controlan:
+
+- identificadores y enunciados únicos;
+- cuatro opciones distintas;
+- respuesta incluida entre las opciones;
+- fuente o justificación;
+- ausencia de plantillas genéricas;
+- ausencia de fuentes manifiestamente débiles;
+- equilibrio razonable de A, B, C y D;
+- dificultad;
+- simulacros sin repeticiones y con cobertura temática.
+
+Recuento:
+
+| Convocatoria | Preguntas | Temas con mínimo exigido |
 |---|---:|---:|
 | Diputación | 1.242 | 40/40 |
 | La Puebla | 570 | 19/19 |
@@ -31,92 +132,35 @@ Fecha de revisión: 13 de julio de 2026.
 | UC3M | 690 | 20/20 |
 | **Total** | **3.102** | — |
 
-## Cierre municipal v0.84
+## Validación técnica v0.86
 
-La auditoría específica de La Puebla y Carranque comprueba por tema:
+La integración exige:
 
-- título final coincidente con la redacción oficial integrada;
-- exactamente 30 preguntas;
-- identificadores y enunciados únicos;
-- cuatro alternativas distintas;
-- respuesta incluida entre las opciones;
-- fuente o justificación obligatoria;
-- ausencia de plantillas genéricas;
-- ausencia de dominios manifiestamente no fiables;
-- respuesta dominante no superior al 40 % del tema;
-- presencia de dificultad baja, media y alta.
+- regresiones históricas de las cuatro OPE;
+- auditoría de las 3.102 preguntas;
+- auditorías teóricas 19/19 de La Puebla;
+- auditorías teóricas 20/20 de Carranque;
+- validación individual de los 39 bancos municipales;
+- integridad del manifiesto, cargador y PWA;
+- perfiles Chromium de escritorio, Pixel 7 e iPad Pro 11;
+- siete vistas sin desbordamiento horizontal;
+- persistencia del progreso;
+- recarga sin conexión y conservación de datos.
 
-También controla:
-
-- formato oficial del primer ejercicio;
-- preguntas de reserva y duración;
-- puntuación por acierto y penalización;
-- alcance del segundo ejercicio práctico;
-- cobertura temática de los supuestos;
-- número, unicidad y cobertura de los simulacros;
-- baremo de méritos y estimación personal prudente.
-
-El resultado exigido por CI es **APTO** sin fallos. El informe se exporta a `municipales-v84.json` y se conserva como artefacto de GitHub Actions.
-
-## Resultado de La Puebla
-
-- 19 títulos oficiales integrados.
-- 570 preguntas válidas.
-- 20 supuestos con cobertura de los temas 1 a 19.
-- Tres simulacros de 50 + 5 y 60 minutos.
-- Corrección: +0,20 / −0,05 / 0.
-- Segundo ejercicio práctico eliminatorio.
-- Concurso-oposición ponderado 80 % / 20 %.
-- Méritos personales confirmados: 0 puntos.
-- Avance estimado: 99 %.
-
-El 1 % pendiente corresponde al seguimiento de anuncios posteriores, posibles correcciones, legislación vigente el día del examen y revisión manual final.
-
-## Resultado de Carranque
-
-- 20 títulos oficiales integrados.
-- 600 preguntas válidas.
-- 18 supuestos con cobertura de los temas 3 a 20.
-- Tres simulacros de 80 + 5 y 90 minutos.
-- Corrección: +0,25 / −0,08 / 0.
-- Segundo ejercicio práctico sobre temas 3 a 20.
-- Baremo de titulación, experiencia y formación integrado.
-- Méritos personales: 0 puntos confirmados y 0,75 condicionados a que DAM se alegara y acreditara en plazo.
-- Avance estimado: 99 %.
-
-El 1 % pendiente corresponde a anuncios posteriores, posibles correcciones, legislación vigente el día del examen y revisión manual final.
-
-## Auditoría UC3M
-
-La auditoría final comprueba mínimo por tema, unicidad, opciones, respuesta, trazabilidad, ausencia de plantillas y fuentes débiles, equilibrio de letras, dificultad y tres simulacros de 70 + 5 con veinte temas.
-
-- 690 preguntas.
-- 20 temas con al menos 30.
-- Temas 16 y 20 con 60.
-- Temas 18 y 19 con 45.
-- Marco estatal, autonómico e interno integrado.
-- Presupuesto 2026 y contratación interna integrados.
-- Avance estimado: 99 %.
-
-## Arranque, PWA y almacenamiento
-
-`index.html` carga únicamente el manifiesto y el cargador. El mismo manifiesto declara los módulos y alimenta el service worker. La caché v0.84 es `opoweb-v91`.
-
-Playwright ejecuta OpoWeb en escritorio 1440 × 900, Pixel 7 e iPad Pro 11. Controla las siete vistas, carga ordenada, ausencia de scripts duplicados, diseño adaptable, tests, supuestos municipales, persistencia, recuperación del progreso, exportación, importación y recarga sin conexión.
-
-La copia de progreso está en el mismo navegador; no sustituye una exportación externa periódica.
+La caché de v0.86 es `opoweb-v93` e incluye los módulos teóricos de La Puebla y Carranque.
 
 ## Política de actualización
 
-La legislación exigible se revisa con referencia a la fecha del examen. Los datos dinámicos —listas, tribunal, fechas, instrucciones, correcciones, admisión anual o notas de corte— no se presentan como permanentes y deben actualizarse únicamente desde publicaciones oficiales.
+Los datos dinámicos no se incorporan como permanentes. Las leyes, listas, fechas, tribunales, instrucciones, ordenanzas, presupuestos, admisión universitaria y versiones de software deben actualizarse únicamente desde publicación oficial o documentación oficial del fabricante.
 
 ## Bloqueos para alcanzar el 100 % global
 
-1. Estatutos oficiales vigentes del OAPGT y cierre de Diputación.
-2. Revisión del artículo 23.2 del Real Decreto 534/2024 desde el 22 de julio de 2026.
-3. Actualización anual de admisión UC3M con fuente oficial.
-4. Comprobación manual en dispositivos físicos Android e iPad y en Safari/WebKit.
-5. Seguimiento de listas, tribunal, fechas e instrucciones de La Puebla y Carranque.
-6. Consolidación interna de módulos históricos sin pérdida de progreso.
+1. Reconstrucción de Diputación, empezando por los temas 25 a 40.
+2. Localización de los Estatutos oficiales vigentes del OAPGT.
+3. Reconstrucción completa de UC3M.
+4. Revisión del artículo 23.2 del Real Decreto 534/2024 desde el 22 de julio de 2026.
+5. Comprobación manual en dispositivos físicos Android e iPad y en Safari/WebKit.
+6. Seguimiento de todos los procesos vivos.
+7. Consolidación interna de módulos históricos sin pérdida de progreso.
 
-No se asigna el 100 % a ninguna convocatoria viva mientras puedan existir anuncios o cambios normativos posteriores. El 99 % refleja cierre estructural y documental, no inmutabilidad ni garantía de aprobado.
+No se asigna el 100 % a una convocatoria viva. El 99 % refleja cierre documental, teórico y técnico bajo la fecha de revisión, no inmutabilidad ni garantía de aprobado.

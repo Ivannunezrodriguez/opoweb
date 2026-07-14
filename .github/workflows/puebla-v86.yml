@@ -1,0 +1,57 @@
+name: Auditoría de La Puebla v0.86
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  puebla-theory:
+    name: La Puebla 19/19 · fuente teórica autosuficiente
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check syntax
+        run: |
+          node --check assets/js/puebla-teoria-v86-bloque1.js
+          node --check assets/js/puebla-teoria-v86-bloque2.js
+          node --check assets/js/puebla-teoria-v86-bloque3.js
+          node --check assets/js/puebla-teoria-v86-bloque4.js
+          node --check assets/js/puebla-teoria-v86-fix.js
+          node --check assets/js/ui-v86.js
+          node --check tests/puebla-teoria-v86-audit-lib.js
+          node --check tests/puebla-teoria-v86-bloque1.js
+          node --check tests/puebla-teoria-v86-bloque2.js
+          node --check tests/puebla-teoria-v86-bloque3.js
+          node --check tests/puebla-teoria-v86-bloque4.js
+          node --check tests/puebla-teoria-v86-final.js
+      - name: Validate four blocks
+        run: |
+          node tests/puebla-teoria-v86-bloque1.js
+          node tests/puebla-teoria-v86-bloque2.js
+          node tests/puebla-teoria-v86-bloque3.js
+          node tests/puebla-teoria-v86-bloque4.js
+      - name: Validate final 19/19 audit
+        run: node tests/puebla-teoria-v86-final.js
+      - name: Show summary
+        run: cat puebla-teoria-v86-final.md
+      - name: Upload audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: puebla-theory-v86-final
+          path: |
+            puebla-teoria-v86-bloque1.json
+            puebla-teoria-v86-bloque2.json
+            puebla-teoria-v86-bloque3.json
+            puebla-teoria-v86-bloque4.json
+            puebla-teoria-v86-final.json
+            puebla-teoria-v86-final.md
+          if-no-files-found: ignore
+          retention-days: 30

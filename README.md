@@ -11,94 +11,103 @@ Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se
 
 ## Versión actual
 
-- **OpoWeb v0.85.0**
-- Caché PWA: `opoweb-v92`
+- **OpoWeb v0.86.0**
+- Caché PWA: `opoweb-v93`
 - Formato de progreso: v2, compatible con versiones anteriores
-- Última revisión estructural, jurídica y funcional: 13 de julio de 2026
+- Última revisión estructural, jurídica y funcional: 14 de julio de 2026
 
 ## Dos métricas distintas
 
-La integridad técnica y el volumen de ejercicios no equivalen a disponer de un manual teórico completo. Desde v0.85 se separan expresamente:
+La integridad técnica y el volumen de ejercicios no equivalen a disponer de un manual teórico completo. OpoWeb separa expresamente el cierre estructural y práctico de la autosuficiencia teórica:
 
 | Área | Estado estructural y práctico | Teoría autosuficiente |
 |---|---:|---:|
 | Funcionamiento e interfaz | 99 % | — |
+| La Puebla C2 | 99 % | **99 %** |
 | Carranque C2 | 99 % | **99 %** |
-| La Puebla C2 | 99 % | **70 % aprox.** |
 | Diputación C1 | 97 % | **80 % aprox.** |
 | UC3M C2 | 99 % | **70–75 % aprox.** |
 | Arquitectura y pruebas | 98 % | — |
-| **Cobertura teórica global como fuente única** | — | **≈80 %** |
+| **Cobertura teórica global como fuente única** | — | **≈85 %** |
 
-Los porcentajes son estimaciones de gestión, no una probabilidad de aprobar. Solo Carranque ha superado por ahora el estándar específico de **fuente teórica autosuficiente**.
+Los porcentajes son estimaciones de gestión, no una probabilidad de aprobar. La Puebla y Carranque han superado el estándar específico de **fuente teórica autosuficiente**. Diputación y UC3M todavía no deben utilizarse como manual exclusivo.
 
-## Carranque · teoría autosuficiente 20/20
+## Estándar de tema autosuficiente
 
-Los veinte temas oficiales han sido reconstruidos y auditados para poder estudiar Carranque directamente dentro de OpoWeb.
+Cada tema cerrado contiene:
 
-Cada tema incorpora:
-
-- título literal del programa;
+- título literal y orden del programa oficial;
 - resumen orientado al aprobado;
-- rigor normativo y cobertura por artículos;
+- rigor normativo;
 - desarrollo completo de todos los apartados del epígrafe;
+- cobertura por artículos en materias jurídicas o cobertura funcional verificable en informática;
 - síntesis de repaso rápido;
 - bloque `Opo-Test: puntos calientes`;
 - tres preguntas de retención activa;
 - estrategia de examen;
 - esquema jerárquico;
 - tabla final de repaso;
-- fuentes oficiales BOE identificadas;
-- fecha de revisión jurídica;
-- 30 preguntas vinculadas al tema.
-
-La auditoría final exige para cada tema:
-
-- al menos 1.000 palabras de contenido;
-- estructura fija completa;
 - dos o más fuentes oficiales;
-- cobertura normativa identificada;
-- título oficial coincidente;
-- banco íntegro de 30 preguntas;
-- ausencia de secciones genéricas o ajenas al programa.
+- fecha de revisión;
+- treinta preguntas vinculadas al tema.
 
-Carranque mantiene además:
+La auditoría automática exige, entre otros controles, al menos 1.000 palabras por tema, estructura fija completa, título oficial coincidente, cobertura identificada y banco íntegro. Estos mínimos detectan material claramente insuficiente, pero no sustituyen la revisión jurídica humana.
 
-- **600 preguntas**;
+## La Puebla · teoría autosuficiente 19/19
+
+Los diecinueve temas del Anexo I del BOP Toledo número 82, anuncio 2026-1965, han sido reconstruidos respetando su denominación y alcance oficiales.
+
+Resultado cuantitativo de la auditoría:
+
+- **19 de 19 temas autosuficientes**;
+- **28.648 palabras** de teoría;
+- media de unas **1.508 palabras por tema**;
+- mínimo de **1.222 palabras** en el tema más breve;
+- fuentes oficiales BOE, EUR-Lex, Microsoft y LibreOffice;
+- cobertura jurídica por artículos en los temas normativos;
+- cobertura funcional completa en Windows, Edge, Word, Writer, Excel, Calc y hardware;
+- **570 preguntas**, treinta por tema;
+- **20 supuestos prácticos**;
+- tres simulacros de **50 preguntas + 5 reservas**, 60 minutos;
+- corrección: **+0,20 por acierto, −0,05 por error**.
+
+La Puebla puede utilizarse como fuente teórica principal dentro de OpoWeb. El 1 % reservado corresponde a información futura o variable: admitidos, tribunal, fecha, instrucciones, modificaciones normativas, ordenanzas y calendario fiscal vigente y versiones concretas de software si el Tribunal anuncia prueba informática.
+
+## Carranque · teoría autosuficiente 20/20
+
+Carranque conserva el cierre alcanzado en v0.85:
+
+- **20 de 20 temas autosuficientes**;
+- más de **60.000 palabras** de teoría;
+- fuentes oficiales y cobertura normativa;
+- **600 preguntas**, treinta por tema;
 - **18 supuestos prácticos**, con cobertura de los temas 3 a 20;
 - tres simulacros de **80 preguntas + 5 reservas**, 90 minutos;
 - corrección: **+0,25 por acierto, −0,08 por error**.
 
-El 1 % restante corresponde a información futura o dinámica: listas, tribunal, fecha, instrucciones, modificaciones normativas, objetivos fiscales y bases de ejecución presupuestaria vigentes en la fecha del examen.
+El 1 % restante corresponde a publicaciones del proceso, cambios normativos y datos presupuestarios o fiscales dinámicos.
 
-## La Puebla, Diputación y UC3M
+## Diputación y UC3M
 
-Sus bancos de preguntas, supuestos y simulacros continúan operativos, pero sus desarrollos teóricos todavía no han superado el mismo estándar de autosuficiencia.
-
-### La Puebla
-
-- 19 títulos oficiales.
-- 570 preguntas.
-- 20 supuestos.
-- Tres simulacros de 50 + 5.
-- Estado actual de la teoría: bien orientada, pero demasiado breve en la mayoría de temas.
+Sus bancos de preguntas y simulacros continúan operativos, pero sus desarrollos teóricos no han superado todavía el estándar de autosuficiencia.
 
 ### Diputación
 
 - 40 temas.
 - 1.242 preguntas.
 - Tres simulacros de 50 + 5.
-- Estado actual de la teoría: primera mitad más desarrollada; temas 25 a 40 requieren ampliación prioritaria.
-- Pendiente adicional: Estatutos oficiales vigentes del OAPGT.
+- Teoría estimada: alrededor del 80 %.
+- Prioridad: ampliar los temas 25 a 40 y localizar e integrar los Estatutos oficiales vigentes del OAPGT.
 
 ### UC3M
 
 - 20 temas.
 - 690 preguntas.
 - Tres simulacros de 70 + 5.
-- Estado actual de la teoría: cobertura correcta, pero demasiado condensada para utilizarla como único manual.
+- Teoría estimada: 70–75 %.
+- El programa está cubierto, pero gran parte permanece demasiado condensada para ser el único manual.
 
-Hasta completar su reconstrucción, la propia interfaz muestra una advertencia: estos tres temarios deben considerarse resumen y material de repaso, no fuente teórica exclusiva.
+La interfaz muestra una advertencia en estas dos convocatorias para evitar que se confunda un resumen operativo con un temario completo.
 
 ## Banco práctico global
 
@@ -113,21 +122,21 @@ La aplicación contiene **3.102 preguntas**:
 
 La auditoría controla identificadores, duplicados, cuatro opciones distintas, respuesta válida, trazabilidad, fuentes, dificultad, equilibrio de letras y simulacros sin repeticiones.
 
-## Validación técnica v0.85
+## Validación técnica v0.86
 
 GitHub Actions ejecuta:
 
 - regresión histórica de las cuatro convocatorias;
 - auditoría de las 3.102 preguntas;
-- cuatro auditorías teóricas de Carranque, por bloques de cinco temas;
-- auditoría final de los veinte temas autosuficientes;
-- matriz independiente de los veinte bancos de Carranque;
+- cuatro auditorías teóricas de La Puebla y auditoría final 19/19;
+- cuatro auditorías teóricas de Carranque y auditoría final 20/20;
+- validación individual de los diecinueve bancos de La Puebla y los veinte de Carranque;
 - integridad del manifiesto, cargador y caché PWA;
-- Playwright en escritorio, Pixel 7 e iPad Pro 11;
+- Playwright en escritorio, Pixel 7 e iPad Pro 11 mediante perfiles Chromium;
 - funcionamiento sin conexión;
 - persistencia, copia, recuperación, exportación e importación del progreso.
 
-La caché `opoweb-v92` incorpora todos los módulos teóricos de Carranque para poder estudiarlos sin conexión tras una primera carga correcta.
+La caché `opoweb-v93` incorpora todos los módulos teóricos de La Puebla y Carranque para poder estudiarlos sin conexión después de una primera carga completa.
 
 ## Protección del progreso
 
@@ -137,22 +146,28 @@ La copia se guarda en el mismo navegador. Borrar los datos del sitio elimina pro
 
 ## Orden de reconstrucción pendiente
 
-1. La Puebla completa.
-2. Diputación, comenzando por los temas 25 a 40.
-3. Resto de Diputación y Estatutos del OAPGT.
-4. UC3M completa.
-5. Auditoría cruzada final de los 99 temas.
-6. Consolidación de módulos históricos sin pérdida de progreso.
+1. Diputación, comenzando por los temas 25 a 40.
+2. Resto de Diputación y Estatutos oficiales vigentes del OAPGT.
+3. UC3M completa.
+4. Auditoría cruzada final de los 99 temas.
+5. Consolidación de módulos históricos sin pérdida de progreso.
 
 ## Historial reciente
+
+### v0.86.0 · 2026-07-14
+
+- Reconstruidos los diecinueve temas de La Puebla como manual teórico autosuficiente.
+- Incorporadas 28.648 palabras de teoría, fuentes oficiales, cobertura por artículos, esquemas y tablas.
+- Conservadas las 570 preguntas, veinte supuestos y tres simulacros de 50 + 5.
+- Añadidas auditorías por bloques, auditoría final 19/19 y validación individual de bancos.
+- Conservado el cierre teórico 20/20 de Carranque.
+- Caché actualizada a `opoweb-v93`.
 
 ### v0.85.0 · 2026-07-13
 
 - Reconstruidos los veinte temas de Carranque como manual teórico autosuficiente.
 - Incorporadas más de 60.000 palabras de teoría, fuentes oficiales, artículos, esquemas y tablas.
 - Conservadas las 600 preguntas y los 18 supuestos.
-- Añadida auditoría específica de autosuficiencia por tema.
-- Diferenciada la cobertura estructural de la cobertura teórica real.
 - Caché actualizada a `opoweb-v92`.
 
 ### v0.84.0 · 2026-07-13
@@ -160,11 +175,3 @@ La copia se guarda en el mismo navegador. Borrar los datos del sitio elimina pro
 - Contrastados los programas de La Puebla y Carranque con sus bases oficiales.
 - Integrados sus títulos literales y parámetros de examen.
 - Auditados bancos, supuestos y simulacros municipales.
-
-### v0.83.0 · 2026-07-12
-
-- Centralizado el arranque mediante manifiesto único y cargador secuencial.
-
-### v0.82.0 · 2026-07-12
-
-- Añadidos almacenamiento versionado, copia automática, recuperación y exportación validada.
