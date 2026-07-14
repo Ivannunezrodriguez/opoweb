@@ -138,7 +138,8 @@
     './assets/js/ui-v82.js',
     './assets/js/ui-v83.js',
     './assets/js/ui-v84.js',
-    './assets/js/ui-v85.js'
+    './assets/js/ui-v85.js',
+    './assets/js/ui-v86.js'
   ];
 
   const staticAssets = [
