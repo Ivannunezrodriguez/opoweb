@@ -9,19 +9,19 @@ Se publican dos métricas diferentes:
 1. **cierre estructural y práctico:** programa, banco, supuestos, simulacros, fuentes, funcionamiento y pruebas;
 2. **autosuficiencia teórica:** desarrollo completo de cada epígrafe oficial, fuentes primarias y material suficiente para estudiar sin manual externo.
 
-## Estado v0.86
+## Estado preparado para v0.86
 
 | Área | Estructura y práctica | Teoría autosuficiente |
 |---|---:|---:|
 | Funcionamiento e interfaz | 99 % | — |
 | Carranque C2 | 99 % | **99 %** |
-| La Puebla C2 | 99 % | **99 %** |
+| La Puebla C2 | 99 % | **99 % tras CI y publicación** |
 | Diputación C1 | 97 % | **80 % aprox.** |
 | UC3M C2 | 99 % | **70–75 % aprox.** |
 | Arquitectura y pruebas | 98 % | — |
-| **Cobertura teórica global como fuente única** | — | **≈86 %** |
+| **Cobertura teórica global como fuente única** | — | **≈86 % tras publicar v0.86** |
 
-La estimación global pondera los 99 temas. Carranque y La Puebla ya han superado el estándar de fuente principal; Diputación y UC3M no.
+La estimación global pondera los 99 temas. Carranque ya ha superado el estándar de fuente principal. La Puebla tiene los 19 temas reconstruidos y queda condicionada a su auditoría exacta, integración y fusión. Diputación y UC3M no lo han superado.
 
 ## Estándar de tema autosuficiente
 
@@ -44,7 +44,7 @@ La auditoría automática añade mínimos mensurables. Carranque exige al menos 
 
 ## Carranque
 
-Carranque se mantiene en **99 %**:
+Carranque se mantiene publicado en **99 %**:
 
 - 20/20 títulos oficiales;
 - 36.170 palabras de teoría;
@@ -58,10 +58,10 @@ El 1 % se reserva para normativa y datos dinámicos posteriores.
 
 ## La Puebla
 
-La Puebla pasa a **99 %**:
+La versión v0.86 prepara La Puebla para **99 %**:
 
 - 19/19 títulos literales del BOP Toledo núm. 82, de 5 de mayo de 2026;
-- 25.395 palabras de teoría en la auditoría final;
+- 25.395 palabras de teoría;
 - media de 1.337 palabras y mínimo de 928;
 - normativa oficial para temas jurídicos;
 - documentación oficial de Microsoft, LibreOffice y estándares o fabricantes para informática;
@@ -69,7 +69,7 @@ La Puebla pasa a **99 %**:
 - 20 supuestos;
 - tres simulacros de 50 + 5.
 
-El 1 % se reserva para modificaciones normativas, cambios de interfaz y publicaciones posteriores del proceso.
+El porcentaje se considera publicado únicamente tras CI verde y fusión en `main`. El 1 % se reserva para modificaciones normativas, cambios de interfaz y publicaciones posteriores del proceso.
 
 ## Diputación
 
