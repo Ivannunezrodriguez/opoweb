@@ -35,7 +35,13 @@ const window = loadApplication(4);
 const ope = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'puebla-aux-admin-2026');
 assert.ok(ope, 'No existe La Puebla');
 assert.equal(ope.themes.length, 19);
-assert.deepStrictEqual(ope.themes.map(theme => normalize(theme.title)), OFFICIAL_TITLES.map(normalize), 'Los títulos no coinciden con el Anexo I oficial');
+assert.deepStrictEqual(plain(ope.themes.map(theme => normalize(theme.title))), OFFICIAL_TITLES.map(normalize), 'Los títulos no coinciden con el Anexo I oficial');
+
+const municipalAudit = window.OPOWEB_MUNICIPALES_V84?.puebla;
+assert.ok(municipalAudit, 'No existe la auditoría municipal del programa oficial');
+assert.equal(municipalAudit.status, 'APTO');
+assert.equal(municipalAudit.literalThemes, 19);
+assert.deepStrictEqual(plain(municipalAudit.failures), []);
 
 const programme = ope.theoryProgramme?.v86;
 assert.ok(programme, 'No existe theoryProgramme.v86');
