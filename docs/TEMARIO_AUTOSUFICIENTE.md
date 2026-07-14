@@ -8,11 +8,11 @@ Barreras: 1.000 palabras en Carranque o 900 en La Puebla, dos fuentes oficiales,
 
 Fuentes jurídicas: BOE, DOUE, diarios y sedes oficiales. Informática: documentación oficial de Microsoft, LibreOffice, estándares y fabricantes. No se usan blogs, academias o resúmenes comerciales como autoridad.
 
-Estado candidato v0.86:
+Estado publicado v0.86:
 
 - Carranque: 20/20 publicado.
-- La Puebla: 19/19 reconstruido; publicación condicionada a auditoría, CI e integración.
+- La Puebla: 19/19 publicado.
 - Diputación: pendiente, comenzando por temas 25 a 40 y OAPGT.
 - UC3M: pendiente.
 
-La etiqueta solo se considera publicada después de la fusión en `main` con las pruebas exactas superadas.
+La etiqueta solo se publica después de superar auditoría final, integración y CI exacta en `main`.
