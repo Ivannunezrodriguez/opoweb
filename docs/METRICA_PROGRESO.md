@@ -9,7 +9,7 @@ Se publican dos métricas diferentes:
 1. **cierre estructural y práctico:** programa, banco, supuestos, simulacros, fuentes, funcionamiento y pruebas;
 2. **autosuficiencia teórica:** desarrollo completo de cada epígrafe oficial, fuentes primarias y material suficiente para estudiar sin manual externo.
 
-## Estado preparado para v0.86
+## Estado de la versión candidata v0.86
 
 | Área | Estructura y práctica | Teoría autosuficiente |
 |---|---:|---:|
