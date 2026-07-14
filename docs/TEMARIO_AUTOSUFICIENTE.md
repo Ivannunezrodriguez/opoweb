@@ -11,11 +11,11 @@ Cada tema debe incluir:
 1. título literal y orden del programa oficial;
 2. resumen orientado al aprobado;
 3. fuentes oficiales identificadas y fecha de revisión;
-4. cobertura normativa por artículos o bloques;
+4. cobertura normativa por artículos o cobertura funcional oficial en informática;
 5. desarrollo de todos los conceptos del epígrafe;
-6. competencias, órganos, plazos, mayorías, efectos y excepciones;
+6. competencias, órganos, plazos, mayorías, efectos y excepciones cuando correspondan;
 7. diferencias entre figuras que suelen confundirse;
-8. aplicación administrativa o ejemplos cuando corresponda;
+8. aplicación administrativa o ejemplos;
 9. síntesis de repaso rápido;
 10. bloque `Opo-Test: puntos calientes`;
 11. tres preguntas de retención activa;
@@ -26,47 +26,54 @@ Cada tema debe incluir:
 
 ## Criterios automáticos mínimos
 
-La auditoría utiliza barreras cuantitativas para detectar temas claramente insuficientes:
+Las barreras cuantitativas detectan temas claramente insuficientes:
 
-- al menos 1.000 palabras;
+- Carranque: al menos 1.000 palabras por tema;
+- La Puebla: al menos 900 palabras por tema;
 - estructura fija completa;
 - dos o más fuentes oficiales;
-- cobertura normativa identificada;
-- título oficial coincidente;
+- título coincidente con el programa;
 - tabla y esquema;
-- treinta preguntas por tema en Carranque;
-- fecha de revisión jurídica.
+- treinta preguntas por tema;
+- fecha de revisión;
+- ausencia de secciones genéricas o pendientes.
 
-Cumplir estas barreras no sustituye la revisión jurídica. Un texto largo puede seguir siendo incorrecto, repetitivo o estar fuera del programa; por eso también se controla contenido, literalidad y fuentes.
+Cumplir estas barreras no sustituye la revisión jurídica o técnica. Un texto largo puede ser incorrecto, repetitivo o estar fuera del programa; por eso también se controla literalidad, contenido y procedencia de fuentes.
 
 ## Fuentes admitidas
 
-La base jurídica debe proceder prioritariamente de:
+Para materias jurídicas:
 
-- BOE y textos consolidados oficiales;
+- BOE y DOUE;
 - diarios oficiales autonómicos y provinciales;
 - sedes electrónicas y portales institucionales;
 - normativa interna oficial cuando el programa la exija.
 
-Los blogs, academias, resúmenes no oficiales y bancos de preguntas pueden orientar la detección de dudas, pero no se utilizan como autoridad normativa.
+Para informática:
+
+- documentación oficial de Microsoft y LibreOffice;
+- especificaciones oficiales de estándares;
+- documentación primaria del fabricante cuando explique el componente exigido.
+
+No se utilizan blogs, academias, resúmenes comerciales ni bancos de preguntas como autoridad. Las ubicaciones de menús o funciones que puedan cambiar se describen con prudencia y se someten a revisión de versión.
 
 ## Información dinámica
 
-Los siguientes elementos se etiquetan para revisión posterior y no se memorizan como permanentes:
+Se etiqueta para revisión posterior:
 
-- fechas, listas y composición del tribunal;
-- instrucciones del examen;
-- correcciones de bases;
+- fechas, listas y tribunal;
+- instrucciones y correcciones de bases;
 - presupuestos y bases de ejecución anuales;
 - objetivos fiscales, regla de gasto e intereses variables;
 - admisión universitaria anual;
-- normas modificadas después de la fecha de revisión.
+- modificaciones normativas posteriores;
+- cambios de interfaz o retirada de funciones informáticas.
 
-## Estado v0.85
+## Estado v0.86
 
 - **Carranque:** 20/20 temas autosuficientes; APTO.
-- **La Puebla:** pendiente de reconstrucción completa.
-- **Diputación:** pendiente, comenzando por temas 25 a 40 y OAPGT.
+- **La Puebla:** 19/19 temas autosuficientes; APTO.
+- **Diputación:** pendiente, comenzando por temas 25 a 40 y Estatutos del OAPGT.
 - **UC3M:** pendiente de ampliación completa.
 
-La etiqueta “fuente teórica autosuficiente” solo aparece en la interfaz cuando la convocatoria ha superado la auditoría correspondiente.
+La etiqueta “fuente teórica autosuficiente” solo aparece cuando la convocatoria supera su auditoría final y las pruebas de integración.
