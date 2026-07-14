@@ -33,7 +33,7 @@ jobs:
           retention-days: 30
 
   diputacion-theory:
-    name: Diputación temas 25 a 28 · teoría autosuficiente
+    name: Diputación temas 25 a 31 · teoría autosuficiente
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -45,14 +45,20 @@ jobs:
       - name: Check syntax
         run: |
           node --check assets/js/diputacion-teoria-v87-bloque1.js
+          node --check assets/js/diputacion-teoria-v87-bloque2.js
           node --check tests/diputacion-teoria-v87-bloque1.js
-      - name: Validate autonomous theory block
-        run: node tests/diputacion-teoria-v87-bloque1.js
-      - name: Upload theory report
+          node --check tests/diputacion-teoria-v87-bloque2.js
+      - name: Validate autonomous theory blocks
+        run: |
+          node tests/diputacion-teoria-v87-bloque1.js
+          node tests/diputacion-teoria-v87-bloque2.js
+      - name: Upload theory reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: diputacion-teoria-v87-bloque1
-          path: diputacion-teoria-v87-bloque1.json
+          name: diputacion-teoria-v87
+          path: |
+            diputacion-teoria-v87-bloque1.json
+            diputacion-teoria-v87-bloque2.json
           if-no-files-found: ignore
           retention-days: 30
