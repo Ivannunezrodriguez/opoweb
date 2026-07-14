@@ -2,23 +2,25 @@
 
 Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo C1 y UC3M C2.
 
-## Candidata v0.86.0
+## Versión publicada
 
-- Caché PWA `opoweb-v94`.
-- Revisión 14 de julio de 2026.
-- Solo se publica tras CI exacta verde y fusión en `main`.
+- OpoWeb v0.86.0
+- Caché PWA `opoweb-v94`
+- Revisión y publicación: 14 de julio de 2026
+
+## Estado teórico
 
 | Convocatoria | Teoría autosuficiente |
 |---|---:|
 | Carranque | 99 % publicado |
-| La Puebla | 99 % tras publicar v0.86 |
+| La Puebla | 99 % publicado |
 | Diputación | 80 % aprox. |
 | UC3M | 70–75 % aprox. |
-| Global | ≈86 % tras v0.86 |
+| Global | ≈86 % |
 
-## La Puebla 19/19 candidata
+## La Puebla 19/19 publicada
 
-Programa literal del BOP Toledo núm. 82, de 5 de mayo de 2026.
+Programa literal del Anexo I del BOP Toledo núm. 82, de 5 de mayo de 2026.
 
 - 25.395 palabras; media 1.337; mínimo 928.
 - Dos o más fuentes oficiales por tema.
@@ -28,7 +30,7 @@ Programa literal del BOP Toledo núm. 82, de 5 de mayo de 2026.
 
 Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: documentación oficial de Microsoft, LibreOffice y estándares o fabricantes.
 
-## Carranque 20/20 publicado
+## Carranque 20/20 publicada
 
 - 36.170 palabras.
 - 600 preguntas, 18 supuestos y tres simulacros de 80 + 5.
@@ -36,15 +38,17 @@ Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: document
 
 ## Aún pendientes como fuente única
 
-Diputación requiere temas 25 a 40 y Estatutos OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
+Diputación requiere ampliar los temas 25 a 40 y localizar los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
 
 ## Banco global
 
 3.102 preguntas: Diputación 1.242, La Puebla 570, Carranque 600 y UC3M 690.
 
-## CI candidata
+## Validación v0.86
 
-Regresiones, auditoría de preguntas, Carranque 20/20, cuatro bloques y final de La Puebla 19/19, matrices de bancos, integridad web/PWA y Playwright en escritorio, Pixel 7 e iPad Pro 11.
+GitHub Actions ha superado regresiones, auditoría de preguntas, Carranque 20/20, cuatro bloques y cierre final de La Puebla 19/19, matrices de bancos, integridad web/PWA y Playwright en escritorio, Pixel 7 e iPad Pro 11.
+
+La caché `opoweb-v94` incluye Carranque y La Puebla para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
