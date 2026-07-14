@@ -1,16 +1,12 @@
 # OpoWeb · Auxiliar Administrativo Toledo
 
-Cuatro convocatorias activas: La Puebla de Montalbán C2, Carranque C2, Diputación de Toledo C1 y UC3M C2. Las Ventas con Peña Aguilera permanece fuera de la planificación activa.
+Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo C1 y UC3M C2.
 
-## Versión candidata
+## Candidata v0.86.0
 
-- OpoWeb v0.86.0
-- Caché PWA `opoweb-v94`
-- Revisión 14 de julio de 2026
-
-Solo se considera publicada tras CI exacta verde y fusión en `main`.
-
-## Estado teórico
+- Caché PWA `opoweb-v94`.
+- Revisión 14 de julio de 2026.
+- Solo se publica tras CI exacta verde y fusión en `main`.
 
 | Convocatoria | Teoría autosuficiente |
 |---|---:|
@@ -18,46 +14,41 @@ Solo se considera publicada tras CI exacta verde y fusión en `main`.
 | La Puebla | 99 % tras publicar v0.86 |
 | Diputación | 80 % aprox. |
 | UC3M | 70–75 % aprox. |
-| **Global** | **≈86 % tras v0.86** |
+| Global | ≈86 % tras v0.86 |
 
-## La Puebla · candidata 19/19
+## La Puebla 19/19 candidata
 
-Fuente del programa: Anexo I del BOP Toledo núm. 82, de 5 de mayo de 2026.
+Programa literal del BOP Toledo núm. 82, de 5 de mayo de 2026.
 
-- 19 títulos literales y 19 temas reconstruidos.
 - 25.395 palabras; media 1.337; mínimo 928.
-- Resumen, rigor normativo, desarrollo completo, síntesis, puntos calientes, retención, estrategia, esquema y tabla.
-- Dos o más fuentes oficiales o documentación oficial por tema.
+- Dos o más fuentes oficiales por tema.
+- Resumen, rigor, desarrollo completo, síntesis, puntos calientes, retención, estrategia, esquema y tabla.
 - 570 preguntas, 20 supuestos y tres simulacros de 50 + 5.
 - Corrección +0,20 / −0,05.
 
-Los temas jurídicos utilizan BOE, DOUE y fuentes institucionales. Los informáticos utilizan documentación oficial de Microsoft, LibreOffice y estándares o fabricantes sin fijar como permanentes posiciones de menús sujetas a actualización.
+Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: documentación oficial de Microsoft, LibreOffice y estándares o fabricantes.
 
-## Carranque · publicado 20/20
+## Carranque 20/20 publicado
 
-- 20 temas autosuficientes.
-- 36.170 palabras; media 1.809; mínimo 1.313.
+- 36.170 palabras.
 - 600 preguntas, 18 supuestos y tres simulacros de 80 + 5.
 - Corrección +0,25 / −0,08.
 
-## Aún no son fuente única
+## Aún pendientes como fuente única
 
-Diputación requiere ampliar los temas 25 a 40 y localizar los Estatutos oficiales vigentes del OAPGT. UC3M mantiene numerosos temas demasiado condensados y sus datos anuales solo se incorporarán desde publicación oficial.
+Diputación requiere temas 25 a 40 y Estatutos OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
 
 ## Banco global
 
 3.102 preguntas: Diputación 1.242, La Puebla 570, Carranque 600 y UC3M 690.
 
-## Validación candidata v0.86
+## CI candidata
 
-GitHub Actions ejecuta regresiones, auditoría de preguntas, Carranque 20/20, cuatro bloques y cierre de La Puebla 19/19, matrices de bancos, integridad web/PWA y Playwright en escritorio, Pixel 7 e iPad Pro 11.
+Regresiones, auditoría de preguntas, Carranque 20/20, cuatro bloques y final de La Puebla 19/19, matrices de bancos, integridad web/PWA y Playwright en escritorio, Pixel 7 e iPad Pro 11.
 
-La caché `opoweb-v94` incluye Carranque y La Puebla para uso sin conexión tras una primera carga correcta.
-
-## Trabajo pendiente
+## Siguiente trabajo
 
 1. Diputación temas 25 a 40.
-2. Resto de Diputación y Estatutos OAPGT.
+2. Estatutos OAPGT y resto de Diputación.
 3. UC3M completa.
 4. Auditoría cruzada final de los 99 temas.
-5. Consolidación de módulos históricos.
