@@ -33,7 +33,7 @@ jobs:
           retention-days: 30
 
   diputacion-theory:
-    name: Diputación temas 25 a 31 · teoría autosuficiente
+    name: Diputación temas 25 a 31 · teoría y bancos
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,6 +46,7 @@ jobs:
         run: |
           node --check assets/js/diputacion-teoria-v87-bloque1.js
           node --check assets/js/diputacion-teoria-v87-bloque2.js
+          node --check assets/js/diputacion-test-v87-bloque2.js
           node --check tests/diputacion-teoria-v87-bloque1.js
           node --check tests/diputacion-teoria-v87-bloque2.js
       - name: Validate autonomous theory blocks
