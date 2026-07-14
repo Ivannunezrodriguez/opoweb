@@ -96,6 +96,7 @@
     './assets/js/puebla-teoria-v86-bloque2.js',
     './assets/js/puebla-teoria-v86-bloque3.js',
     './assets/js/puebla-teoria-v86-bloque4.js',
+    './assets/js/puebla-teoria-v86-fix.js',
     './assets/js/auditoria-calidad-v72.js',
     './assets/js/ui-v42.js',
     './assets/js/ui-v43.js',
