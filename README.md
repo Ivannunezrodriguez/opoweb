@@ -9,7 +9,7 @@ Web estática para preparar desde ordenador, tablet o móvil cuatro convocatoria
 
 Las Ventas con Peña Aguilera permanece fuera de la planificación activa. No se incorporarán nuevas OPE hasta cerrar estas cuatro.
 
-## Versión preparada
+## Versión candidata
 
 - **OpoWeb v0.86.0**
 - Caché PWA: `opoweb-v94`
@@ -152,7 +152,7 @@ La copia se guarda en el mismo navegador. Borrar los datos del sitio elimina pro
 
 ## Historial reciente
 
-### v0.86.0 · preparada el 2026-07-14
+### v0.86.0 · candidata preparada el 2026-07-14
 
 - Reconstruidos los diecinueve temas de La Puebla como teoría autosuficiente.
 - Conservados los títulos literales del programa oficial.
