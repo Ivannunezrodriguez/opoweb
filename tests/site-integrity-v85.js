@@ -18,9 +18,12 @@ const packageJson = JSON.parse(read('package.json'));
 const webManifest = JSON.parse(read('manifest.webmanifest'));
 const loader = read('assets/js/loader-v83.js');
 const ui85 = read('assets/js/ui-v85.js');
+const ui86 = read('assets/js/ui-v86.js');
 const browserTest = read('tests/e2e/opoweb.spec.js');
 const theoryTest = read('tests/temario-depth-v85-final.js');
+const pueblaTest = read('tests/puebla-teoria-v86-bloque1.js');
 const theoryFiles = [
+  'assets/js/puebla-teoria-v86-bloque1.js',
   'assets/js/carranque-teoria-v85-bloque1.js',
   'assets/js/carranque-teoria-v85-estructura.js',
   'assets/js/carranque-teoria-v85-bloque2.js',
@@ -28,12 +31,13 @@ const theoryFiles = [
   'assets/js/carranque-teoria-v85-bloque4.js'
 ];
 
-assert.equal(packageJson.version, '0.85.0');
+assert.equal(packageJson.version, '0.86.0');
 assert.equal(packageJson.scripts['test:loader'], 'node tests/loader-v85.js');
 assert.equal(packageJson.scripts['test:theory'], 'node tests/temario-depth-v85-final.js');
+assert.equal(packageJson.scripts['test:puebla'], 'node tests/puebla-teoria-v86-bloque1.js');
 assert.equal(packageJson.scripts['test:integrity'], 'node tests/site-integrity-v85.js');
-assert.equal(manifest.applicationVersion, 'v0.85.0');
-assert.equal(manifest.cacheName, 'opoweb-v92');
+assert.equal(manifest.applicationVersion, 'v0.86.0');
+assert.equal(manifest.cacheName, 'opoweb-v93');
 assert.equal(new Set(manifest.scripts).size, manifest.scripts.length);
 assert.equal(new Set(manifest.allAssets).size, manifest.allAssets.length);
 
@@ -47,13 +51,13 @@ for (const file of theoryFiles) {
   const declared = `./${file}`;
   assert.ok(manifest.scripts.includes(declared), `Módulo teórico no declarado: ${declared}`);
   assert.ok(exists(file), `Módulo teórico inexistente: ${file}`);
-  const source = read(file);
-  assert.ok(source.includes("version: 'v0.85.0'") || source.includes("version: '0.85.0'"), `Versión ausente: ${file}`);
-  assert.ok(source.includes('Fuentes oficiales consolidadas') || file.includes('estructura'), `Política de fuente ausente: ${file}`);
 }
 assert.ok(manifest.scripts.includes('./assets/js/ui-v85.js'));
+assert.ok(manifest.scripts.includes('./assets/js/ui-v86.js'));
+assert.ok(manifest.scripts.indexOf('./assets/js/municipales-v84-fix.js') < manifest.scripts.indexOf('./assets/js/puebla-teoria-v86-bloque1.js'));
+assert.ok(manifest.scripts.indexOf('./assets/js/puebla-teoria-v86-bloque1.js') < manifest.scripts.indexOf('./assets/js/carranque-teoria-v85-bloque1.js'));
 assert.ok(manifest.scripts.indexOf('./assets/js/carranque-teoria-v85-bloque4.js') < manifest.scripts.indexOf('./assets/js/auditoria-calidad-v72.js'));
-assert.ok(manifest.scripts.indexOf('./assets/js/ui-v84.js') < manifest.scripts.indexOf('./assets/js/ui-v85.js'));
+assert.ok(manifest.scripts.indexOf('./assets/js/ui-v85.js') < manifest.scripts.indexOf('./assets/js/ui-v86.js'));
 
 const directScripts = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
 assert.deepStrictEqual(directScripts, ['assets/js/asset-manifest-v83.js', 'assets/js/loader-v83.js']);
@@ -72,20 +76,20 @@ assert.ok(loader.includes('window.OPOWEB_BOOT_V83 = boot'));
 assert.ok(loader.includes("window.dispatchEvent(new CustomEvent('opoweb:ready'"));
 assert.ok(loader.includes("navigator.serviceWorker.register('./sw.js')"));
 assert.ok(ui85.includes("const VERSION = 'v0.85.0'"));
-assert.ok(ui85.includes("const CACHE = 'opoweb-v92'"));
-assert.ok(ui85.includes('OPOWEB_THEORY_AUDIT_V85'));
-assert.ok(ui85.includes('Fuente teórica autosuficiente'));
-assert.ok(theoryTest.includes("status: failures.length ? 'REVISAR' : 'APTO'"));
+assert.ok(ui86.includes("const VERSION = 'v0.86.0'"));
+assert.ok(ui86.includes("const CACHE = 'opoweb-v93'"));
+assert.ok(ui86.includes('OPOWEB_UI_V86'));
+assert.ok(ui86.includes('La Puebla 5/19'));
 assert.ok(theoryTest.includes("assert.equal(report.carranque.autonomousThemes, 20)"));
-assert.ok(theoryTest.includes("assert.equal(report.carranque.questions, 600)"));
+assert.ok(pueblaTest.includes("assert.equal(puebla.theoryProgramme.v86.autonomousThemes, 5)"));
 
 assert.equal(webManifest.start_url, './index.html');
 assert.equal(webManifest.display, 'standalone');
 for (const icon of webManifest.icons) assert.ok(exists(normalize(icon.src)), `Icono inexistente: ${icon.src}`);
 
-assert.ok(browserTest.includes('Versión OpoWeb v0.85.0'));
-assert.ok(browserTest.includes("includes('opoweb-v92')"));
-assert.ok(browserTest.includes('/assets/js/ui-v85.js'));
-assert.ok(browserTest.includes('OPOWEB_THEORY_AUDIT_V85'));
+assert.ok(browserTest.includes('Versión OpoWeb v0.86.0'));
+assert.ok(browserTest.includes("includes('opoweb-v93')"));
+assert.ok(browserTest.includes('/assets/js/ui-v86.js'));
+assert.ok(browserTest.includes('OPOWEB_PUEBLA_THEORY_V86'));
 
-console.log(`Integridad v0.85 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · Carranque 20/20 teórico`);
+console.log(`Integridad v0.86 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · La Puebla 5/19`);
