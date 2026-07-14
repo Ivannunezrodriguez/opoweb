@@ -40,6 +40,7 @@ const PUEBLA_THEORY_MODULES = [
   'assets/js/puebla-teoria-v86-bloque3.js',
   'assets/js/puebla-teoria-v86-bloque4.js'
 ];
+const PUEBLA_THEORY_FIX = 'assets/js/puebla-teoria-v86-fix.js';
 
 const REQUIRED_HEADINGS = [
   'Resumen orientado al aprobado',
@@ -70,6 +71,7 @@ function loadApplication(theoryBlocks = 4) {
   };
   MODULES_BEFORE_THEORY.forEach(run);
   PUEBLA_THEORY_MODULES.slice(0, theoryBlocks).forEach(run);
+  run(PUEBLA_THEORY_FIX);
   return window;
 }
 
@@ -159,6 +161,7 @@ function auditBlock({ blockNumber, themeNumbers, expectedCompleted, outputFile }
 module.exports = {
   MODULES_BEFORE_THEORY,
   PUEBLA_THEORY_MODULES,
+  PUEBLA_THEORY_FIX,
   REQUIRED_HEADINGS,
   normalize,
   wordCount,
