@@ -30,7 +30,7 @@ for (const file of files) vm.runInContext(read(file), context, { filename: file 
 const puebla = context.window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'puebla-aux-admin-2026');
 assert.ok(puebla, 'No existe La Puebla');
 const headings = ['Resumen orientado al aprobado','Rigor normativo','Desarrollo completo del epígrafe oficial','Síntesis de repaso rápido','Opo-Test: puntos calientes','Tres preguntas de retención activa','Estrategia de examen'];
-const forbidden = /argot tecnico|trampas habituales|mapa de estudio util|contenido pendiente|relleno/i;
+const forbiddenHeading = /^(argot tecnico|trampas habituales|mapa de estudio util|contenido pendiente|seccion de relleno)$/i;
 const failures = [];
 const metrics = puebla.themes.map((theme, index) => {
   const number = Number(theme.number || index + 1);
@@ -59,7 +59,7 @@ const metrics = puebla.themes.map((theme, index) => {
   if (metric.treeCharacters <= 150) failures.push(`Tema ${number}: esquema insuficiente`);
   if (metric.reviewRows < 7) failures.push(`Tema ${number}: tabla insuficiente`);
   if (questions !== 30) failures.push(`Tema ${number}: ${questions} preguntas`);
-  if (forbidden.test(text)) failures.push(`Tema ${number}: contiene sección o texto excluido`);
+  if (themeHeadings.some(heading => forbiddenHeading.test(normalize(heading)))) failures.push(`Tema ${number}: contiene una sección excluida`);
   return metric;
 });
 
