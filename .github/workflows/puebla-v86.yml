@@ -23,6 +23,7 @@ jobs:
           node --check assets/js/puebla-teoria-v86-bloque2.js
           node --check assets/js/puebla-teoria-v86-bloque3.js
           node --check assets/js/puebla-teoria-v86-bloque4.js
+          node --check assets/js/puebla-teoria-v86-fix.js
           node --check assets/js/ui-v86.js
           node --check tests/puebla-teoria-v86-audit-lib.js
           node --check tests/puebla-teoria-v86-bloque1.js
