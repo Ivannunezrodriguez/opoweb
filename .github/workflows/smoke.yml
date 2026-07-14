@@ -31,30 +31,31 @@ jobs:
             tests/smoke-carranque-v69.js tests/smoke-carranque-live-v69.js \
             tests/smoke-carranque-v70.js tests/smoke-carranque-live-v70.js \
             tests/practicos-v71.js tests/storage-v82.js tests/loader-v85.js \
-            tests/municipales-v84-cierre.js; do
+            tests/municipales-v84-cierre.js tests/puebla-teoria-v86-bloque1.js; do
             node "$test"
           done
 
   theory-close:
-    name: Carranque 20/20 · teoría autosuficiente v0.85
+    name: Carranque 20/20 y La Puebla bloque 1 · teoría v0.86
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Validate four theory blocks and final audit
+      - name: Validate theory audits
         run: |
           node tests/carranque-teoria-v85-bloque1.js
           node tests/carranque-teoria-v85-bloque2.js
           node tests/carranque-teoria-v85-bloque3.js
           node tests/carranque-teoria-v85-bloque4.js
           node tests/temario-depth-v85-final.js
+          node tests/puebla-teoria-v86-bloque1.js
       - name: Upload theory audit
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: temario-v85
+          name: temario-v86
           path: |
             carranque-teoria-v85-bloque1.json
             carranque-teoria-v85-bloque2.json
@@ -62,6 +63,7 @@ jobs:
             carranque-teoria-v85-bloque4.json
             temario-depth-v85.json
             temario-depth-v85.md
+            puebla-teoria-v86-bloque1.json
           if-no-files-found: ignore
           retention-days: 30
 
@@ -82,7 +84,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: audit-v85
+          name: audit-v86
           path: |
             municipales-v84.json
             uc3m-v80.json
@@ -91,7 +93,7 @@ jobs:
           retention-days: 30
 
   site-integrity:
-    name: Integridad web, manifiesto y PWA v0.85
+    name: Integridad web, manifiesto y PWA v0.86
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -101,7 +103,7 @@ jobs:
       - run: node tests/site-integrity-v85.js
 
   browser-e2e:
-    name: Navegador, móvil, tablet y PWA v0.85
+    name: Navegador, móvil, tablet y PWA v0.86
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
@@ -119,7 +121,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-v85
+          name: playwright-report-v86
           path: playwright-report/
           if-no-files-found: ignore
           retention-days: 14
