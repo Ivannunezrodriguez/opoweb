@@ -6,12 +6,15 @@ const norm=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLo
 const wordCount=v=>norm(v).split(/\s+/).filter(Boolean).length;
 const files=['data/oposiciones.js','data/proceso.js','data/uc3m.js','data/ope-audit-v41.js','assets/js/uc3m-temario-v30.js','assets/js/uc3m-temario-v31.js','assets/js/uc3m-temario-v32.js','assets/js/uc3m-temario-v33.js','assets/js/uc3m-temario-v34.js','assets/js/uc3m-temario-v35.js','assets/js/uc3m-temario-v36.js','assets/js/auditoria-test-v37.js','assets/js/refuerzo-test-v38.js','assets/js/refuerzo-test-v39.js','assets/js/refuerzo-test-v40.js','assets/js/correcciones-test-v40.js','assets/js/perfeccion-v42.js'];
 for(let v=43;v<=65;v++)files.push(`assets/js/diputacion-v${v}.js`);
-files.push('assets/js/diputacion-snapshot-v87.js','assets/js/diputacion-teoria-v87-bloque1.js','assets/js/diputacion-teoria-v87-bloque2.js','assets/js/diputacion-test-v87-bloque2.js','assets/js/diputacion-teoria-v87-bloque3.js');
+files.push('assets/js/diputacion-snapshot-v87.js','assets/js/diputacion-teoria-v87-bloque1.js','assets/js/diputacion-teoria-v87-bloque2.js','assets/js/diputacion-test-v87-bloque2.js','assets/js/diputacion-teoria-v87-bloque3.js','assets/js/diputacion-test-v87-bloque3.js');
 for(const file of files)vm.runInContext(read(file),context,{filename:file});
 const ope=context.window.OPOSICIONES_DATA.oposiciones.find(item=>item.id==='diputacion-toledo-admin-2026');
 const release=context.window.OPOWEB_DIPUTACION_TEORIA_V87_BLOQUE3;
-assert.ok(ope,'No existe Diputación');assert.ok(release,'No se cargó el bloque 32-34');
+const reinforcement=context.window.OPOWEB_DIPUTACION_TEST_V87_BLOQUE3;
+assert.ok(ope,'No existe Diputación');assert.ok(release,'No se cargó el bloque 32-34');assert.ok(reinforcement,'No se cargó el refuerzo 32-34');
 assert.deepStrictEqual(plain(release.themes),[32,33,34]);
+assert.deepStrictEqual(plain(reinforcement.addedByTheme),{33:2,34:1});
+assert.equal(reinforcement.totalAdded,3);
 const headings=['Resumen orientado al aprobado','Rigor normativo','Desarrollo completo del epígrafe oficial','Síntesis de repaso rápido','Opo-Test: puntos calientes','Tres preguntas de retención activa','Estrategia de examen'];
 const titles={
 32:'Microsoft Windows 11 Pro I. Creación, copiado y borrado de archivos y carpetas. Las unidades de discos locales y de red.',
@@ -40,7 +43,8 @@ assert.deepStrictEqual(plain(programme.completedThemes),[25,26,27,28,29,30,31,32
 assert.equal(programme.autonomousThemes,10);assert.equal(programme.totalThemes,40);assert.equal(programme.pendingThemes.length,30);
 assert.ok(programme.dynamicChecks.some(item=>/GroupWise/i.test(item)));assert.ok(programme.dynamicChecks.some(item=>/impresión/i.test(item)));
 const totalQuestions=Object.values(ope.themeTests).reduce((sum,bank)=>sum+bank.length,0);
-const report={version:'v0.87.0',reviewedAt:'2026-07-15',status:failures.length?'REVISAR':'APTO',officialProgrammeSource:'BOP Toledo núm. 118, 25 de junio de 2026, código 2026.00002934',completedThemes:plain(programme.completedThemes),autonomousThemes:programme.autonomousThemes,pendingThemes:plain(programme.pendingThemes),totalWords:metrics.reduce((sum,item)=>sum+item.words,0),minimumWords:Math.min(...metrics.map(item=>item.words)),questions:totalQuestions,themes:metrics,failures};
+assert.equal(totalQuestions,1447,'Diputación debe conservar 1.433 preguntas canónicas y añadir 14 verificadas');
+const report={version:'v0.87.0',reviewedAt:'2026-07-15',status:failures.length?'REVISAR':'APTO',officialProgrammeSource:'BOP Toledo núm. 118, 25 de junio de 2026, código 2026.00002934',completedThemes:plain(programme.completedThemes),autonomousThemes:programme.autonomousThemes,pendingThemes:plain(programme.pendingThemes),totalWords:metrics.reduce((sum,item)=>sum+item.words,0),minimumWords:Math.min(...metrics.map(item=>item.words)),questions:totalQuestions,addedQuestionsBlock3:reinforcement.totalAdded,themes:metrics,failures};
 fs.writeFileSync(path.join(root,'diputacion-teoria-v87-bloque3.json'),JSON.stringify(report,null,2));
 assert.deepStrictEqual(failures,[],failures.join(' | '));
-console.log(`Diputación v0.87 bloque 3 APTO · temas 32-34 · ${report.totalWords} palabras · mínimo ${report.minimumWords} · 10/40 acumulados`);
+console.log(`Diputación v0.87 bloque 3 APTO · temas 32-34 · ${report.totalWords} palabras · mínimo ${report.minimumWords} · 10/40 acumulados · ${totalQuestions} preguntas`);
