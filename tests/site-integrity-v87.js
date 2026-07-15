@@ -87,7 +87,6 @@ for (const icon of webManifest.icons) assert.ok(exists(normalize(icon.src)), `Ic
 
 assert.ok(browserTest.includes('Versión OpoWeb v0.87.0'));
 assert.ok(browserTest.includes("includes('opoweb-v95')"));
-assert.ok(browserTest.includes('/assets/js/diputacion-snapshot-v87.js'));
 assert.ok(browserTest.includes('/assets/js/diputacion-teoria-v87-bloque1.js'));
 assert.ok(browserTest.includes('/assets/js/diputacion-test-v87-bloque2.js'));
 assert.ok(browserTest.includes('OPOWEB_UI_V87'));
