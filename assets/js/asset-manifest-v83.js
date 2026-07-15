@@ -144,8 +144,7 @@
     './assets/js/ui-v83.js',
     './assets/js/ui-v84.js',
     './assets/js/ui-v85.js',
-    './assets/js/ui-v86.js',
-    './assets/js/ui-v87.js'
+    './assets/js/ui-v86.js'
   ];
 
   const staticAssets = [
@@ -160,8 +159,8 @@
   ];
 
   globalThis.OPOWEB_ASSET_MANIFEST_V83 = Object.freeze({
-    applicationVersion: 'v0.87.0',
-    cacheName: 'opoweb-v95',
+    applicationVersion: 'v0.86.0',
+    cacheName: 'opoweb-v94',
     scripts: Object.freeze(scripts),
     staticAssets: Object.freeze(staticAssets),
     allAssets: Object.freeze([...staticAssets, ...scripts])
