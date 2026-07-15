@@ -20,7 +20,7 @@ Se considera autosuficiente únicamente el tema que ha superado la auditoría de
 | UC3M | 0/20 con el estándar estricto actual | No todavía |
 | **Total** | **46/99** | — |
 
-Esta métrica estricta sustituye a porcentajes globales que mezclaban preguntas, estructura y teoría. Los bancos prácticos pueden estar completos aunque el manual teórico no lo esté.
+Esta métrica estricta no mezcla teoría con volumen de preguntas o funcionamiento técnico.
 
 ## Diputación v0.87 · primer bloque publicado
 
@@ -40,50 +40,43 @@ Datos del bloque:
 - Mínimo individual de **1.483 palabras**.
 - Títulos oficiales conservados literalmente.
 - Fuentes primarias BOE y DOUE.
-- Resumen, rigor normativo, desarrollo completo, síntesis, puntos calientes, retención, estrategia, esquema y tabla.
-- Los temas 29, 30 y 31 alcanzan al menos treinta preguntas reales.
-- Banco real de Diputación: **1.406 preguntas**.
+- Estructura fija, esquemas, tablas y retención activa.
+- Banco real de Diputación: **1.444 preguntas**.
 
 Los temas 25 a 31 pueden utilizarse como fuente teórica principal. El conjunto de Diputación no debe utilizarse todavía como manual único porque quedan 33 temas pendientes.
 
-## Por qué el total de Diputación es 1.406
+## Recuento canónico de preguntas
 
-La validación real del navegador detectó que las capas históricas de calidad ya incorporaban **152 preguntas normativas reutilizadas** por coincidencia exacta de norma y alcance. No son preguntas genéricas ni duplicadas: proceden de bancos comunes válidos y conservan justificación y trazabilidad.
+La instantánea se toma después de `diputacion-v65`, antes de que capas históricas posteriores puedan reemplazar bancos ya verificados:
 
-El recuento anterior de 1.254 omitía esa capa al ejecutar la auditoría de Node en un orden distinto al navegador. v0.87 corrige la auditoría para reproducir el orden real de carga: 1.394 preguntas canónicas más 12 nuevas de los temas 29 a 31, total 1.406.
+- banco canónico previo: **1.433 preguntas**;
+- incremento respecto al antiguo recuento de 1.242: **191 preguntas comunes válidas**, reutilizadas por coincidencia de norma y alcance;
+- refuerzo v0.87: **11 preguntas nuevas** —7 en el tema 29 y 4 en el tema 30—;
+- el tema 31 ya contenía 47 preguntas y no se rellena artificialmente;
+- total final de Diputación: **1.444**.
+
+No se eliminan preguntas válidas para ajustar cifras ni se añaden preguntas cuando el tema ya supera el mínimo.
 
 ## Control OAPGT
 
-No se ha localizado todavía un texto oficial consolidado y vigente de los Estatutos del OAPGT con su cadena completa de modificaciones.
+No se ha localizado todavía un texto oficial consolidado y vigente de los Estatutos del OAPGT con su cadena completa de modificaciones. Hasta resolverlo, OpoWeb bloquea artículos, órganos, competencias, composición, quórums y preguntas estatutarias no documentadas.
 
-Hasta resolverlo, OpoWeb bloquea expresamente:
+## La Puebla 19/19
 
-- artículos estatutarios no documentados;
-- composición y quórums de órganos;
-- competencias del Consejo Rector, Presidencia o Dirección;
-- preguntas basadas en contenido estatutario no verificado.
-
-La falta de esta fuente permanece visible y no se sustituye por suposiciones.
-
-## La Puebla 19/19 publicada
-
-- Programa literal del Anexo I del BOP Toledo núm. 82, de 5 de mayo de 2026.
-- 25.395 palabras; media 1.337; mínimo 928.
-- Dos o más fuentes oficiales por tema.
+- Programa literal del BOP Toledo núm. 82, de 5 de mayo de 2026.
+- 25.395 palabras.
 - 570 preguntas, 20 supuestos y tres simulacros de 50 + 5.
-- Corrección +0,20 / −0,05.
 
-## Carranque 20/20 publicada
+## Carranque 20/20
 
 - 36.170 palabras.
 - 600 preguntas, 18 supuestos y tres simulacros de 80 + 5.
-- Corrección +0,25 / −0,08.
 
 ## Banco global
 
-**3.266 preguntas**:
+**3.304 preguntas**:
 
-- Diputación: 1.406.
+- Diputación: 1.444.
 - La Puebla: 570.
 - Carranque: 600.
 - UC3M: 690.
@@ -93,16 +86,14 @@ La falta de esta fuente permanece visible y no se sustituye por suposiciones.
 GitHub Actions comprueba:
 
 - regresiones históricas;
-- auditoría de las 3.266 preguntas;
+- auditoría de las 3.304 preguntas;
 - Carranque 20/20 y La Puebla 19/19;
 - Diputación temas 25 a 31;
 - bloqueo documental del OAPGT;
-- igualdad entre el banco cargado por Node y por el navegador;
-- integridad del manifiesto y caché PWA;
+- instantánea canónica y refuerzo no destructivo;
+- integridad de manifiesto y caché PWA;
 - Playwright en escritorio, Pixel 7 e iPad Pro 11;
 - persistencia y funcionamiento sin conexión.
-
-La caché `opoweb-v95` incorpora los siete temas nuevos de Diputación y sus fuentes para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
