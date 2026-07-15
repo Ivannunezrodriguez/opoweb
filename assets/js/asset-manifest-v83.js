@@ -148,6 +148,7 @@
     './assets/js/diputacion-teoria-v87-bloque1.js',
     './assets/js/diputacion-teoria-v87-bloque2.js',
     './assets/js/diputacion-test-v87-bloque2.js',
+    './assets/js/diputacion-teoria-v87-bloque3.js',
     './assets/js/ui-v87.js'
   ];
 
