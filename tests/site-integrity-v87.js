@@ -23,6 +23,7 @@ const diputacionTest = read('tests/diputacion-teoria-v87-bloque2.js');
 
 const v87Files = [
   'data/oapgt-fuentes-v87.js',
+  'assets/js/diputacion-snapshot-v87.js',
   'assets/js/diputacion-teoria-v87-bloque1.js',
   'assets/js/diputacion-teoria-v87-bloque2.js',
   'assets/js/diputacion-test-v87-bloque2.js',
@@ -51,8 +52,11 @@ for (const file of v87Files) {
 
 const position = asset => manifest.scripts.indexOf(asset);
 assert.ok(position('./data/oapgt-fuentes-v87.js') > position('./data/ope-audit-v41.js'));
+assert.ok(position('./assets/js/diputacion-v65.js') < position('./assets/js/diputacion-snapshot-v87.js'));
+assert.ok(position('./assets/js/diputacion-snapshot-v87.js') < position('./assets/js/puebla-v68.js'));
 assert.ok(position('./assets/js/auditoria-calidad-v72.js') < position('./assets/js/ui-v42.js'));
 assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/diputacion-teoria-v87-bloque1.js'));
+assert.ok(position('./assets/js/diputacion-snapshot-v87.js') < position('./assets/js/diputacion-teoria-v87-bloque1.js'));
 assert.ok(position('./assets/js/diputacion-teoria-v87-bloque1.js') < position('./assets/js/diputacion-teoria-v87-bloque2.js'));
 assert.ok(position('./assets/js/diputacion-teoria-v87-bloque2.js') < position('./assets/js/diputacion-test-v87-bloque2.js'));
 assert.ok(position('./assets/js/diputacion-test-v87-bloque2.js') < position('./assets/js/ui-v87.js'));
@@ -75,6 +79,7 @@ assert.ok(ui87.includes('El temario completo de Diputación todavía no debe uti
 assert.ok(ui87.includes('OPOWEB_UI_V87'));
 assert.ok(diputacionTest.includes("assert.equal(totalQuestions, 1254"));
 assert.ok(diputacionTest.includes('OPOWEB_DIPUTACION_TEST_V87'));
+assert.ok(diputacionTest.includes('OPOWEB_DIPUTACION_SNAPSHOT_V87'));
 
 assert.equal(webManifest.start_url, './index.html');
 assert.equal(webManifest.display, 'standalone');
@@ -82,6 +87,7 @@ for (const icon of webManifest.icons) assert.ok(exists(normalize(icon.src)), `Ic
 
 assert.ok(browserTest.includes('Versión OpoWeb v0.87.0'));
 assert.ok(browserTest.includes("includes('opoweb-v95')"));
+assert.ok(browserTest.includes('/assets/js/diputacion-snapshot-v87.js'));
 assert.ok(browserTest.includes('/assets/js/diputacion-teoria-v87-bloque1.js'));
 assert.ok(browserTest.includes('/assets/js/diputacion-test-v87-bloque2.js'));
 assert.ok(browserTest.includes('OPOWEB_UI_V87'));
