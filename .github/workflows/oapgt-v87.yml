@@ -13,20 +13,16 @@ jobs:
     name: Bloqueo de contenido estatutario no verificado
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - name: Check syntax
+          node-version: '24'
+      - name: Validate official-source gate
         run: |
           node --check data/oapgt-fuentes-v87.js
           node --check tests/oapgt-fuentes-v87.js
-      - name: Validate official-source gate
-        run: node tests/oapgt-fuentes-v87.js
-      - name: Upload source report
-        uses: actions/upload-artifact@v4
+          node tests/oapgt-fuentes-v87.js
+      - uses: actions/upload-artifact@v4
         with:
           name: oapgt-fuentes-v87
           path: oapgt-fuentes-v87.json
@@ -36,19 +32,20 @@ jobs:
     name: Diputación temas 25 a 31 · teoría y bancos
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Check syntax
         run: |
           node --check assets/js/diputacion-teoria-v87-bloque1.js
           node --check assets/js/diputacion-teoria-v87-bloque2.js
           node --check assets/js/diputacion-test-v87-bloque2.js
+          node --check tests/diputacion-v87-diagnostico.js
           node --check tests/diputacion-teoria-v87-bloque1.js
           node --check tests/diputacion-teoria-v87-bloque2.js
+      - name: Generate diagnostic
+        run: node tests/diputacion-v87-diagnostico.js
       - name: Validate autonomous theory blocks
         run: |
           node tests/diputacion-teoria-v87-bloque1.js
@@ -59,6 +56,7 @@ jobs:
         with:
           name: diputacion-teoria-v87
           path: |
+            diputacion-v87-diagnostico.json
             diputacion-teoria-v87-bloque1.json
             diputacion-teoria-v87-bloque2.json
           if-no-files-found: ignore
