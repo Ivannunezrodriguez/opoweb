@@ -13,6 +13,7 @@ run('data/uc3m.js');
 run('data/ope-audit-v41.js');
 run('data/oapgt-fuentes-v87.js');
 for (let version = 43; version <= 65; version += 1) run(`assets/js/diputacion-v${version}.js`);
+run('assets/js/diputacion-snapshot-v87.js');
 run('assets/js/diputacion-teoria-v87-bloque1.js');
 run('assets/js/diputacion-teoria-v87-bloque2.js');
 run('assets/js/diputacion-test-v87-bloque2.js');
@@ -50,6 +51,8 @@ const report = window.OPOWEB_AUDITORIA_V72;
 const municipal = window.OPOWEB_MUNICIPALES_V84;
 assert.ok(report, 'No se generó la auditoría transversal');
 assert.ok(municipal, 'No se generó la auditoría municipal');
+assert.equal(window.OPOWEB_DIPUTACION_SNAPSHOT_V87.totalQuestions, 1242);
+assert.equal(window.OPOWEB_DIPUTACION_TEST_V87.canonicalSnapshot, true);
 
 report.version = 'v0.87.0';
 report.date = '2026-07-14';
