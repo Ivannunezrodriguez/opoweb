@@ -96,6 +96,7 @@
     './assets/js/carranque-teoria-v85-bloque2.js',
     './assets/js/carranque-teoria-v85-bloque3.js',
     './assets/js/carranque-teoria-v85-bloque4.js',
+    './assets/js/estado-inscripciones-v87.js',
     './assets/js/auditoria-calidad-v72.js',
     './assets/js/ui-v42.js',
     './assets/js/ui-v43.js',
