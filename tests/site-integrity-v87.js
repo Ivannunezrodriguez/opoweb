@@ -51,11 +51,11 @@ for (const file of v87Files) {
 
 const position = asset => manifest.scripts.indexOf(asset);
 assert.ok(position('./data/oapgt-fuentes-v87.js') > position('./data/ope-audit-v41.js'));
-assert.ok(position('./assets/js/auditoria-calidad-v72.js') < position('./assets/js/diputacion-teoria-v87-bloque1.js'));
+assert.ok(position('./assets/js/auditoria-calidad-v72.js') < position('./assets/js/ui-v42.js'));
+assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/diputacion-teoria-v87-bloque1.js'));
 assert.ok(position('./assets/js/diputacion-teoria-v87-bloque1.js') < position('./assets/js/diputacion-teoria-v87-bloque2.js'));
 assert.ok(position('./assets/js/diputacion-teoria-v87-bloque2.js') < position('./assets/js/diputacion-test-v87-bloque2.js'));
-assert.ok(position('./assets/js/diputacion-test-v87-bloque2.js') < position('./assets/js/ui-v42.js'));
-assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/ui-v87.js'));
+assert.ok(position('./assets/js/diputacion-test-v87-bloque2.js') < position('./assets/js/ui-v87.js'));
 
 const directScripts = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
 assert.deepStrictEqual(directScripts, ['assets/js/asset-manifest-v83.js', 'assets/js/loader-v83.js']);
