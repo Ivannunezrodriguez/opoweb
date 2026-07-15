@@ -20,13 +20,8 @@
   }
 
   function activeOpe() { return typeof active === 'function' ? active() : null; }
-
   function wordCount(theme) {
-    return [
-      ...(theme.sections || []).flatMap(section => [section.heading, ...(section.paragraphs || [])]),
-      theme.tree || '',
-      ...(theme.reviewTable || []).flat()
-    ].join(' ').trim().split(/\s+/).filter(Boolean).length;
+    return [...(theme.sections || []).flatMap(section => [section.heading, ...(section.paragraphs || [])]), theme.tree || '', ...(theme.reviewTable || []).flat()].join(' ').trim().split(/\s+/).filter(Boolean).length;
   }
 
   function diputacionCard() {
@@ -81,46 +76,13 @@
     };
   }
 
-  function applyCurrentVersion() {
-    patchText(document.body);
-    queueMicrotask(() => patchText(document.body));
-  }
-
-  if (typeof renderSidebar === 'function') {
-    const original = renderSidebar;
-    renderSidebar = function () { original(); patchText(document.getElementById('oposicionCard')); };
-  }
-  if (typeof renderTemario === 'function') {
-    const original = renderTemario;
-    renderTemario = function () {
-      original();
-      if (!state.selectedTheme) appendDiputacionCard('afterbegin');
-      patchText(document.getElementById('content'));
-    };
-  }
-  if (typeof renderProceso === 'function') {
-    const original = renderProceso;
-    renderProceso = function () { original(); appendDiputacionCard('beforeend'); patchText(document.getElementById('content')); };
-  }
-  if (typeof renderProgreso === 'function') {
-    const original = renderProgreso;
-    renderProgreso = function () { original(); appendDiputacionCard('beforeend'); patchText(document.getElementById('content')); };
-  }
-  if (typeof renderAll === 'function') {
-    const original = renderAll;
-    renderAll = function () { original(); applyCurrentVersion(); };
-    try { renderAll(); } catch (_) { applyCurrentVersion(); }
-  } else applyCurrentVersion();
+  function applyCurrentVersion() { patchText(document.body); queueMicrotask(() => patchText(document.body)); }
+  if (typeof renderSidebar === 'function') { const original = renderSidebar; renderSidebar = function () { original(); patchText(document.getElementById('oposicionCard')); }; }
+  if (typeof renderTemario === 'function') { const original = renderTemario; renderTemario = function () { original(); if (!state.selectedTheme) appendDiputacionCard('afterbegin'); patchText(document.getElementById('content')); }; }
+  if (typeof renderProceso === 'function') { const original = renderProceso; renderProceso = function () { original(); appendDiputacionCard('beforeend'); patchText(document.getElementById('content')); }; }
+  if (typeof renderProgreso === 'function') { const original = renderProgreso; renderProgreso = function () { original(); appendDiputacionCard('beforeend'); patchText(document.getElementById('content')); }; }
+  if (typeof renderAll === 'function') { const original = renderAll; renderAll = function () { original(); applyCurrentVersion(); }; try { renderAll(); } catch (_) { applyCurrentVersion(); } } else applyCurrentVersion();
 
   window.addEventListener('opoweb:ready', applyCurrentVersion);
-  window.OPOWEB_UI_V87 = {
-    version: VERSION,
-    cache: CACHE,
-    status: 'EN_PROGRESO',
-    diputacionAutonomousThemes: 7,
-    diputacionTotalThemes: 40,
-    diputacionQuestions: 1406,
-    globalQuestions: 3266,
-    oapgtStatutesVerified: false
-  };
+  window.OPOWEB_UI_V87 = { version: VERSION, cache: CACHE, status: 'EN_PROGRESO', diputacionAutonomousThemes: 7, diputacionTotalThemes: 40, diputacionQuestions: 1444, globalQuestions: 3304, oapgtStatutesVerified: false };
 })();
