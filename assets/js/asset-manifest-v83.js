@@ -71,6 +71,7 @@
     './assets/js/diputacion-v63.js',
     './assets/js/diputacion-v64.js',
     './assets/js/diputacion-v65.js',
+    './assets/js/diputacion-snapshot-v87.js',
     './assets/js/puebla-v68.js',
     './assets/js/carranque-v69.js',
     './assets/js/carranque-v69-fix.js',
