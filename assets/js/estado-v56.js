@@ -9,6 +9,24 @@
 
   data.oposiciones = data.oposiciones.filter(ope => !retiredIds.has(ope.id));
 
+  const puebla = data.oposiciones.find(ope => ope.id === 'puebla-aux-admin-2026');
+  if (puebla) {
+    puebla.applicationStatus = {
+      registered: true,
+      registeredAt: '28/05/2026',
+      evidence: 'Inscripción confirmada; justificantes conservados fuera del repositorio público.'
+    };
+  }
+
+  const carranque = data.oposiciones.find(ope => ope.id === 'carranque-aux-admin-2026');
+  if (carranque) {
+    carranque.applicationStatus = {
+      registered: true,
+      registeredAt: 'Confirmado por el usuario',
+      evidence: 'Inscripción confirmada; justificantes conservados fuera del repositorio público.'
+    };
+  }
+
   const diputacion = data.oposiciones.find(ope => ope.id === 'diputacion-toledo-admin-2026');
   if (diputacion) {
     diputacion.status = 'Inscrito el 15/07/2026. Solicitud registrada y tasa general de 26 € abonada. Oposición libre: DAM permite participar, pero no añade puntos. Prioridad actual: preparar el test y el segundo ejercicio práctico y vigilar la lista provisional.';
