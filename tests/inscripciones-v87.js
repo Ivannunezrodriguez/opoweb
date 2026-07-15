@@ -16,12 +16,13 @@ const data = window.OPOSICIONES_DATA;
 const state = window.OPOWEB_STATE_V56;
 assert.ok(data && state);
 assert.equal(data.oposiciones.length, 4);
-assert.deepStrictEqual([...state.registeredOpeIds].sort(), [
+const expectedRegistered = [
   'carranque-aux-admin-2026',
   'diputacion-toledo-admin-2026',
   'puebla-aux-admin-2026',
   'uc3m-aux-admin-2026'
-].sort());
+].sort().join('|');
+assert.equal(Array.from(state.registeredOpeIds).sort().join('|'), expectedRegistered);
 
 const diputacion = data.oposiciones.find(item => item.id === 'diputacion-toledo-admin-2026');
 const uc3m = data.oposiciones.find(item => item.id === 'uc3m-aux-admin-2026');
