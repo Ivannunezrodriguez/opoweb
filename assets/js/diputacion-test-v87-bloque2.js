@@ -3,6 +3,13 @@
   const ope = data?.oposiciones?.find(item => item.id === 'diputacion-toledo-admin-2026');
   if (!ope) return;
 
+  const clone = value => JSON.parse(JSON.stringify(value));
+  const snapshot = window.OPOWEB_DIPUTACION_SNAPSHOT_V87;
+  if (snapshot?.themeTests) {
+    ope.themeTests = clone(snapshot.themeTests);
+    if (snapshot.simulacros) ope.simulacros = clone(snapshot.simulacros);
+  }
+
   const letters = ['A', 'B', 'C', 'D'];
   const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   const rows = {
@@ -87,6 +94,8 @@
 
   window.OPOWEB_DIPUTACION_TEST_V87 = {
     version: 'v0.87.0',
+    canonicalSnapshot: Boolean(snapshot?.themeTests),
+    canonicalQuestionCount: snapshot?.totalQuestions || null,
     addedByTheme,
     totalAdded: Object.values(addedByTheme).reduce((sum, value) => sum + value, 0),
     totals: Object.fromEntries([29, 30, 31].map(number => {
