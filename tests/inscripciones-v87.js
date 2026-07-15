@@ -11,9 +11,10 @@ run('data/oposiciones.js');
 run('data/proceso.js');
 run('data/uc3m.js');
 run('assets/js/estado-v56.js');
+run('assets/js/estado-inscripciones-v87.js');
 
 const data = window.OPOSICIONES_DATA;
-const state = window.OPOWEB_STATE_V56;
+const state = window.OPOWEB_APPLICATION_STATUS_V87;
 assert.ok(data && state);
 assert.equal(data.oposiciones.length, 4);
 const expectedRegistered = [
@@ -38,10 +39,11 @@ assert.equal(uc3m.applicationStatus.access, 'Turno libre · cupo general');
 assert.ok(uc3m.status.includes('Inscrito el 15/07/2026'));
 assert.ok(uc3m.processCalendar.some(item => item.title === 'Inscripción registrada' && item.date === '15/07/2026'));
 
-const publicState = fs.readFileSync('assets/js/estado-v56.js', 'utf8');
+const publicState = fs.readFileSync('assets/js/estado-inscripciones-v87.js', 'utf8');
 assert.ok(!publicState.includes('47049754'));
 assert.ok(!publicState.includes('ivannr20'));
 assert.ok(!publicState.includes('REGAGE26'));
 assert.ok(!publicState.includes('202699900014936'));
+assert.equal(state.publicRepositoryContainsPersonalEvidence, false);
 
 console.log('Inscripciones v0.87 OK · cuatro convocatorias activas registradas · sin identificadores personales en el repositorio');
