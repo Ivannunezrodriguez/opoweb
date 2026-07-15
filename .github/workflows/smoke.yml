@@ -16,12 +16,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Check JavaScript syntax
         run: |
-          find assets/js tests -type f -name '*.js' -print0 | xargs -0 -n1 node --check
+          find assets/js tests data -type f -name '*.js' -print0 | xargs -0 -n1 node --check
           node --check playwright.config.js
-      - name: Run historical regressions
+      - name: Run historical regressions and loader
         run: |
           for test in \
             tests/smoke-v56.js tests/smoke-v57.js tests/smoke-v58.js tests/smoke-v59.js \
@@ -30,20 +30,20 @@ jobs:
             tests/smoke-puebla-v68.js tests/smoke-puebla-live-v68.js \
             tests/smoke-carranque-v69.js tests/smoke-carranque-live-v69.js \
             tests/smoke-carranque-v70.js tests/smoke-carranque-live-v70.js \
-            tests/practicos-v71.js tests/storage-v82.js tests/loader-v85.js \
+            tests/practicos-v71.js tests/storage-v82.js tests/loader-v87.js \
             tests/municipales-v84-cierre.js; do
             node "$test"
           done
 
   theory-close:
-    name: Carranque 20/20 y La Puebla 19/19 · teoría v0.86
+    name: Carranque 20/20 · La Puebla 19/19 · Diputación 16/40
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - name: Validate theory audits
+          node-version: '24'
+      - name: Validate autonomous theory audits
         run: |
           node tests/carranque-teoria-v85-bloque1.js
           node tests/carranque-teoria-v85-bloque2.js
@@ -55,64 +55,68 @@ jobs:
           node tests/puebla-teoria-v86-bloque3.js
           node tests/puebla-teoria-v86-bloque4.js
           node tests/puebla-teoria-v86-final.js
+          node tests/diputacion-teoria-v87-bloque1.js
+          node tests/diputacion-teoria-v87-bloque2.js
+          node tests/diputacion-teoria-v87-bloque3.js
+          node tests/diputacion-teoria-v87-bloque4.js
+          node tests/diputacion-teoria-v87-bloque5.js
+          node tests/oapgt-fuentes-v87.js
       - name: Upload theory audit
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: temario-v86
+          name: temario-v87
           path: |
-            carranque-teoria-v85-bloque1.json
-            carranque-teoria-v85-bloque2.json
-            carranque-teoria-v85-bloque3.json
-            carranque-teoria-v85-bloque4.json
             temario-depth-v85.json
             temario-depth-v85.md
-            puebla-teoria-v86-bloque1.json
-            puebla-teoria-v86-bloque2.json
-            puebla-teoria-v86-bloque3.json
-            puebla-teoria-v86-bloque4.json
             puebla-teoria-v86-final.json
             puebla-teoria-v86-final.md
+            diputacion-teoria-v87-bloque1.json
+            diputacion-teoria-v87-bloque2.json
+            diputacion-teoria-v87-bloque3.json
+            diputacion-teoria-v87-bloque4.json
+            diputacion-teoria-v87-bloque5.json
+            oapgt-fuentes-v87.json
           if-no-files-found: ignore
           retention-days: 30
 
   quality-audit:
-    name: Auditoría de las 3.102 preguntas
+    name: Auditoría de las 3.310 preguntas
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - name: Audit municipal and global banks
+          node-version: '24'
+      - name: Audit all question banks
         run: |
           node tests/municipales-v84-cierre.js
           node tests/uc3m-v80-cierre-calidad.js
-          node tests/auditoria-calidad-v84.js
+          node tests/auditoria-calidad-v87.js
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: audit-v86
+          name: audit-v87
           path: |
             municipales-v84.json
             uc3m-v80.json
-            audit-v84.json
+            audit-v87.json
           if-no-files-found: ignore
           retention-days: 30
 
   site-integrity:
-    name: Integridad web, manifiesto y PWA v0.86
+    name: Integridad web, manifiesto y PWA v0.87
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - run: node tests/site-integrity-v85.js
+          node-version: '24'
+      - run: node tests/site-integrity-v87.js
 
   browser-e2e:
-    name: Navegador, móvil, tablet y PWA v0.86
+    name: Navegador, móvil, tablet y PWA v0.87
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
@@ -130,7 +134,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-v86
+          name: playwright-report-v87
           path: playwright-report/
           if-no-files-found: ignore
           retention-days: 14
@@ -146,7 +150,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - env:
           CARRANQUE_THEME: ${{ matrix.theme }}
         run: node tests/smoke-carranque-live-v70.js
@@ -162,7 +166,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - env:
           PUEBLA_THEME: ${{ matrix.theme }}
         run: node tests/smoke-puebla-live-v68.js

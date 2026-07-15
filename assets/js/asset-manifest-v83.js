@@ -5,6 +5,7 @@
     './data/uc3m.js',
     './assets/js/estado-v56.js',
     './data/ope-audit-v41.js',
+    './data/oapgt-fuentes-v87.js',
     './data/normas/constitucion.js',
     './data/normas/ley-39-2015.js',
     './data/normas/ley-39-2015-procedimiento.js',
@@ -70,6 +71,7 @@
     './assets/js/diputacion-v63.js',
     './assets/js/diputacion-v64.js',
     './assets/js/diputacion-v65.js',
+    './assets/js/diputacion-snapshot-v87.js',
     './assets/js/puebla-v68.js',
     './assets/js/carranque-v69.js',
     './assets/js/carranque-v69-fix.js',
@@ -142,7 +144,18 @@
     './assets/js/ui-v83.js',
     './assets/js/ui-v84.js',
     './assets/js/ui-v85.js',
-    './assets/js/ui-v86.js'
+    './assets/js/ui-v86.js',
+    './assets/js/diputacion-teoria-v87-bloque1.js',
+    './assets/js/diputacion-teoria-v87-bloque2.js',
+    './assets/js/diputacion-test-v87-bloque2.js',
+    './assets/js/diputacion-teoria-v87-bloque3.js',
+    './assets/js/diputacion-test-v87-bloque3.js',
+    './assets/js/diputacion-teoria-v87-bloque4.js',
+    './assets/js/diputacion-test-v87-bloque4.js',
+    './assets/js/diputacion-teoria-v87-bloque5.js',
+    './assets/js/diputacion-test-v87-bloque5.js',
+    './assets/js/diputacion-teoria-v87-bloque6.js',
+    './assets/js/ui-v87.js'
   ];
 
   const staticAssets = [
@@ -157,8 +170,8 @@
   ];
 
   globalThis.OPOWEB_ASSET_MANIFEST_V83 = Object.freeze({
-    applicationVersion: 'v0.86.0',
-    cacheName: 'opoweb-v94',
+    applicationVersion: 'v0.87.0',
+    cacheName: 'opoweb-v95',
     scripts: Object.freeze(scripts),
     staticAssets: Object.freeze(staticAssets),
     allAssets: Object.freeze([...staticAssets, ...scripts])
