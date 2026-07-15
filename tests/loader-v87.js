@@ -42,7 +42,9 @@ assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/diputacion-t
 assert.ok(position('./assets/js/diputacion-snapshot-v87.js') < position('./assets/js/diputacion-teoria-v87-bloque1.js'));
 assert.ok(position('./assets/js/diputacion-teoria-v87-bloque1.js') < position('./assets/js/diputacion-teoria-v87-bloque2.js'));
 assert.ok(position('./assets/js/diputacion-teoria-v87-bloque2.js') < position('./assets/js/diputacion-test-v87-bloque2.js'));
-assert.ok(position('./assets/js/diputacion-test-v87-bloque2.js') < position('./assets/js/ui-v87.js'));
+assert.ok(position('./assets/js/diputacion-test-v87-bloque2.js') < position('./assets/js/diputacion-teoria-v87-bloque3.js'));
+assert.ok(position('./assets/js/diputacion-teoria-v87-bloque3.js') < position('./assets/js/diputacion-test-v87-bloque3.js'));
+assert.ok(position('./assets/js/diputacion-test-v87-bloque3.js') < position('./assets/js/ui-v87.js'));
 
 const index = read('index.html');
 const scriptSources = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
@@ -61,4 +63,4 @@ assert.ok(serviceWorker.includes('const CACHE = MANIFEST.cacheName'));
 assert.ok(serviceWorker.includes('const ASSETS = MANIFEST.allAssets'));
 assert.ok(!/const ASSETS = \[/.test(serviceWorker));
 
-console.log(`Cargador v0.87 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · Diputación 7/40`);
+console.log(`Cargador v0.87 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · Diputación 10/40`);
