@@ -6,7 +6,7 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 - OpoWeb v0.87.0
 - Caché PWA `opoweb-v95`
-- Revisión: 14 de julio de 2026
+- Revisión: 15 de julio de 2026
 
 ## Estado editorial estricto
 
@@ -42,9 +42,15 @@ Datos del bloque:
 - Fuentes primarias BOE y DOUE.
 - Resumen, rigor normativo, desarrollo completo, síntesis, puntos calientes, retención, estrategia, esquema y tabla.
 - Los temas 29, 30 y 31 alcanzan al menos treinta preguntas reales.
-- Banco de Diputación ampliado a **1.254 preguntas**.
+- Banco real de Diputación: **1.406 preguntas**.
 
 Los temas 25 a 31 pueden utilizarse como fuente teórica principal. El conjunto de Diputación no debe utilizarse todavía como manual único porque quedan 33 temas pendientes.
+
+## Por qué el total de Diputación es 1.406
+
+La validación real del navegador detectó que las capas históricas de calidad ya incorporaban **152 preguntas normativas reutilizadas** por coincidencia exacta de norma y alcance. No son preguntas genéricas ni duplicadas: proceden de bancos comunes válidos y conservan justificación y trazabilidad.
+
+El recuento anterior de 1.254 omitía esa capa al ejecutar la auditoría de Node en un orden distinto al navegador. v0.87 corrige la auditoría para reproducir el orden real de carga: 1.394 preguntas canónicas más 12 nuevas de los temas 29 a 31, total 1.406.
 
 ## Control OAPGT
 
@@ -75,9 +81,9 @@ La falta de esta fuente permanece visible y no se sustituye por suposiciones.
 
 ## Banco global
 
-**3.114 preguntas**:
+**3.266 preguntas**:
 
-- Diputación: 1.254.
+- Diputación: 1.406.
 - La Puebla: 570.
 - Carranque: 600.
 - UC3M: 690.
@@ -87,10 +93,11 @@ La falta de esta fuente permanece visible y no se sustituye por suposiciones.
 GitHub Actions comprueba:
 
 - regresiones históricas;
-- auditoría de las 3.114 preguntas;
+- auditoría de las 3.266 preguntas;
 - Carranque 20/20 y La Puebla 19/19;
 - Diputación temas 25 a 31;
 - bloqueo documental del OAPGT;
+- igualdad entre el banco cargado por Node y por el navegador;
 - integridad del manifiesto y caché PWA;
 - Playwright en escritorio, Pixel 7 e iPad Pro 11;
 - persistencia y funcionamiento sin conexión.
