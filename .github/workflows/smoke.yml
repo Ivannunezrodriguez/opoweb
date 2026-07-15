@@ -31,7 +31,7 @@ jobs:
             tests/smoke-carranque-v69.js tests/smoke-carranque-live-v69.js \
             tests/smoke-carranque-v70.js tests/smoke-carranque-live-v70.js \
             tests/practicos-v71.js tests/storage-v82.js tests/loader-v85.js \
-            tests/municipales-v84-cierre.js; do
+            tests/municipales-v84-cierre.js tests/inscripciones-v87.js; do
             node "$test"
           done
 
