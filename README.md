@@ -4,7 +4,7 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- OpoWeb v0.86.0
+- OpoWeb v0.86.0 con ampliación editorial v87
 - Caché PWA `opoweb-v94`
 - Revisión editorial y de solicitudes: 15 de julio de 2026
 
@@ -31,9 +31,18 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 |---|---:|
 | Carranque | 99 % publicado |
 | La Puebla | 99 % publicado |
-| Diputación | 80 % aprox. |
+| Diputación | 82 % aprox. |
 | UC3M | 70–75 % aprox. |
-| Global | ≈86 % |
+| Global | ≈87 % |
+
+## Diputación · bloque tributario 25–26
+
+Quedan cerrados como fuente editorial autosuficiente:
+
+- Tema 25: obligación tributaria, sujetos, cuantificación, extinción, tributos locales, gestión y revisión.
+- Tema 26: recaudación voluntaria y ejecutiva, aplazamiento, fraccionamiento, compensación, devolución, apremio y revisión.
+
+Cada tema supera 1.200 palabras, conserva el epígrafe oficial, incluye esquema, tabla de repaso y fuentes oficiales del BOE: Constitución, Ley General Tributaria, texto refundido de Haciendas Locales y Reglamento General de Recaudación.
 
 ## La Puebla 19/19 publicada
 
@@ -55,21 +64,23 @@ Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: document
 
 ## Aún pendientes como fuente única
 
-Diputación requiere ampliar los temas 25 a 40 y localizar los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
+Diputación requiere completar los temas 27 a 40 y localizar los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
 
 ## Banco global
 
 3.102 preguntas: Diputación 1.242, La Puebla 570, Carranque 600 y UC3M 690.
 
-## Validación v0.86
+## Validación
 
-GitHub Actions ha superado regresiones, auditoría de preguntas, Carranque 20/20, cuatro bloques y cierre final de La Puebla 19/19, matrices de bancos, integridad web/PWA y Playwright en escritorio, Pixel 7 e iPad Pro 11.
+GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11 y el nuevo bloque tributario de Diputación.
 
-La caché `opoweb-v94` incluye Carranque y La Puebla para uso sin conexión tras una primera carga correcta.
+La caché `opoweb-v94` incorpora el módulo de Diputación para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
-1. Diputación temas 25 a 40.
-2. Estatutos OAPGT y resto de Diputación.
-3. UC3M completa.
-4. Auditoría cruzada final de los 99 temas.
+1. Diputación tema 27: presupuesto local y bases de ejecución.
+2. Diputación tema 28: protección de datos, transparencia y buen gobierno.
+3. Diputación temas 29 a 40.
+4. Estatutos OAPGT y resto de Diputación.
+5. UC3M completa.
+6. Auditoría cruzada final de los 99 temas.
