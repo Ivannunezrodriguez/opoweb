@@ -16,11 +16,11 @@ Temas 25 a 31 publicados como autosuficientes:
 
 - 11.603 palabras.
 - Mínimo individual: 1.483.
-- 1.406 preguntas en la oposición.
+- 1.444 preguntas en la oposición.
 - 33 temas pendientes.
 - Estatutos del OAPGT pendientes de texto oficial vigente y cadena completa de modificaciones.
 
-El total de 1.406 reproduce el banco que carga realmente el navegador: 1.394 preguntas canónicas, incluidas 152 reutilizaciones normativas válidas de la capa de calidad v0.42, más 12 preguntas nuevas de los temas 29 a 31.
+El banco canónico contiene 1.433 preguntas después de `diputacion-v65`. Son 191 más que el recuento antiguo de 1.242 porque conserva reutilizaciones normativas válidas. El refuerzo v0.87 añade 11 preguntas —7 al tema 29 y 4 al tema 30— y deja intacto el tema 31, que ya contiene 47. Total final: 1.444.
 
 ## Criterio
 
