@@ -15,6 +15,7 @@ const wordCount = value => normalize(value).split(/\s+/).filter(Boolean).length;
 const files = ['data/oposiciones.js', 'data/proceso.js', 'data/uc3m.js', 'data/ope-audit-v41.js'];
 for (let version = 43; version <= 65; version += 1) files.push(`assets/js/diputacion-v${version}.js`);
 files.push(
+  'assets/js/diputacion-snapshot-v87.js',
   'assets/js/diputacion-teoria-v87-bloque1.js',
   'assets/js/diputacion-teoria-v87-bloque2.js',
   'assets/js/diputacion-test-v87-bloque2.js'
@@ -81,8 +82,13 @@ assert.equal(programme.pendingThemes.length, 33);
 assert.ok(programme.dynamicChecks.some(item => /ordenanzas locales/i.test(item)));
 assert.ok(programme.dynamicChecks.some(item => /2024\/1183/i.test(item)));
 
+const snapshot = context.window.OPOWEB_DIPUTACION_SNAPSHOT_V87;
 const reinforcement = context.window.OPOWEB_DIPUTACION_TEST_V87;
+assert.ok(snapshot, 'No existe instantánea canónica de Diputación');
+assert.equal(snapshot.totalQuestions, 1242);
 assert.ok(reinforcement, 'No existe auditoría del refuerzo de preguntas');
+assert.equal(reinforcement.canonicalSnapshot, true);
+assert.equal(reinforcement.canonicalQuestionCount, 1242);
 assert.deepStrictEqual(plain(reinforcement.addedByTheme), { 29: 7, 30: 4, 31: 1 });
 assert.equal(reinforcement.totalAdded, 12);
 assert.deepStrictEqual(plain(reinforcement.totals), { 29: 30, 30: 30, 31: 30 });
