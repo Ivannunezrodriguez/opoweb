@@ -31,18 +31,20 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 |---|---:|
 | Carranque | 99 % publicado |
 | La Puebla | 99 % publicado |
-| Diputación | 82 % aprox. |
+| Diputación | 84 % aprox. |
 | UC3M | 70–75 % aprox. |
-| Global | ≈87 % |
+| Global | ≈88 % |
 
-## Diputación · bloque tributario 25–26
+## Diputación · temas 25–28 cerrados
 
 Quedan cerrados como fuente editorial autosuficiente:
 
 - Tema 25: obligación tributaria, sujetos, cuantificación, extinción, tributos locales, gestión y revisión.
 - Tema 26: recaudación voluntaria y ejecutiva, aplazamiento, fraccionamiento, compensación, devolución, apremio y revisión.
+- Tema 27: presupuesto general local, contenido, elaboración, aprobación, prórroga y bases de ejecución.
+- Tema 28: protección de datos, funciones de la AEPD, transparencia, obligación de suministrar información y buen gobierno.
 
-Cada tema supera 1.200 palabras, conserva el epígrafe oficial, incluye esquema, tabla de repaso y fuentes oficiales del BOE: Constitución, Ley General Tributaria, texto refundido de Haciendas Locales y Reglamento General de Recaudación.
+Cada tema supera 1.200 palabras, conserva el epígrafe oficial, incluye esquema, tabla de repaso y fuentes oficiales. El bloque utiliza Constitución, Ley General Tributaria, Haciendas Locales, Reglamento General de Recaudación, Real Decreto 500/1990, estructura presupuestaria local, RGPD, Ley Orgánica 3/2018 y Ley 19/2013.
 
 ## La Puebla 19/19 publicada
 
@@ -64,7 +66,7 @@ Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: document
 
 ## Aún pendientes como fuente única
 
-Diputación requiere completar los temas 27 a 40 y localizar los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
+Diputación requiere completar los temas 29 a 40 y localizar los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
 
 ## Banco global
 
@@ -72,15 +74,13 @@ Diputación requiere completar los temas 27 a 40 y localizar los Estatutos ofici
 
 ## Validación
 
-GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11 y el nuevo bloque tributario de Diputación.
+GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11 y los bloques editoriales de Diputación.
 
-La caché `opoweb-v94` incorpora el módulo de Diputación para uso sin conexión tras una primera carga correcta.
+La caché `opoweb-v94` incorpora los módulos de Diputación para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
-1. Diputación tema 27: presupuesto local y bases de ejecución.
-2. Diputación tema 28: protección de datos, transparencia y buen gobierno.
-3. Diputación temas 29 a 40.
-4. Estatutos OAPGT y resto de Diputación.
-5. UC3M completa.
-6. Auditoría cruzada final de los 99 temas.
+1. Diputación tema 29: OAPGT, Estatutos y ordenanzas.
+2. Diputación temas 30 a 40.
+3. UC3M completa.
+4. Auditoría cruzada final de los 99 temas.
