@@ -29,7 +29,7 @@ jobs:
           retention-days: 30
 
   diputacion-theory:
-    name: Diputación temas 25 a 31 · teoría y bancos
+    name: Diputación temas 25 a 34 · teoría y bancos
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,15 +41,18 @@ jobs:
           node --check assets/js/diputacion-teoria-v87-bloque1.js
           node --check assets/js/diputacion-teoria-v87-bloque2.js
           node --check assets/js/diputacion-test-v87-bloque2.js
+          node --check assets/js/diputacion-teoria-v87-bloque3.js
           node --check tests/diputacion-v87-diagnostico.js
           node --check tests/diputacion-teoria-v87-bloque1.js
           node --check tests/diputacion-teoria-v87-bloque2.js
+          node --check tests/diputacion-teoria-v87-bloque3.js
       - name: Generate diagnostic
         run: node tests/diputacion-v87-diagnostico.js
       - name: Validate autonomous theory blocks
         run: |
           node tests/diputacion-teoria-v87-bloque1.js
           node tests/diputacion-teoria-v87-bloque2.js
+          node tests/diputacion-teoria-v87-bloque3.js
       - name: Upload theory reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -59,5 +62,6 @@ jobs:
             diputacion-v87-diagnostico.json
             diputacion-teoria-v87-bloque1.json
             diputacion-teoria-v87-bloque2.json
+            diputacion-teoria-v87-bloque3.json
           if-no-files-found: ignore
           retention-days: 30
