@@ -36,11 +36,11 @@ assert.equal(manifest.scripts.at(-1), './assets/js/ui-v87.js');
 assert.ok(position('./data/oapgt-fuentes-v87.js') > position('./data/ope-audit-v41.js'));
 assert.ok(position('./assets/js/storage-v82.js') < position('./assets/js/app.js'));
 assert.ok(position('./assets/js/diputacion-v65.js') < position('./assets/js/auditoria-calidad-v72.js'));
-assert.ok(position('./assets/js/auditoria-calidad-v72.js') < position('./assets/js/diputacion-teoria-v87-bloque1.js'));
+assert.ok(position('./assets/js/auditoria-calidad-v72.js') < position('./assets/js/ui-v42.js'));
+assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/diputacion-teoria-v87-bloque1.js'));
 assert.ok(position('./assets/js/diputacion-teoria-v87-bloque1.js') < position('./assets/js/diputacion-teoria-v87-bloque2.js'));
 assert.ok(position('./assets/js/diputacion-teoria-v87-bloque2.js') < position('./assets/js/diputacion-test-v87-bloque2.js'));
-assert.ok(position('./assets/js/diputacion-test-v87-bloque2.js') < position('./assets/js/ui-v42.js'));
-assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/ui-v87.js'));
+assert.ok(position('./assets/js/diputacion-test-v87-bloque2.js') < position('./assets/js/ui-v87.js'));
 
 const index = read('index.html');
 const scriptSources = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
