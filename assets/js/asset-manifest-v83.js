@@ -97,6 +97,7 @@
     './assets/js/carranque-teoria-v85-bloque3.js',
     './assets/js/carranque-teoria-v85-bloque4.js',
     './assets/js/estado-inscripciones-v87.js',
+    './assets/js/diputacion-teoria-v87-bloque1.js',
     './assets/js/auditoria-calidad-v72.js',
     './assets/js/ui-v42.js',
     './assets/js/ui-v43.js',
@@ -143,7 +144,8 @@
     './assets/js/ui-v83.js',
     './assets/js/ui-v84.js',
     './assets/js/ui-v85.js',
-    './assets/js/ui-v86.js'
+    './assets/js/ui-v86.js',
+    './assets/js/ui-v87.js'
   ];
 
   const staticAssets = [
@@ -158,8 +160,8 @@
   ];
 
   globalThis.OPOWEB_ASSET_MANIFEST_V83 = Object.freeze({
-    applicationVersion: 'v0.86.0',
-    cacheName: 'opoweb-v94',
+    applicationVersion: 'v0.87.0',
+    cacheName: 'opoweb-v95',
     scripts: Object.freeze(scripts),
     staticAssets: Object.freeze(staticAssets),
     allAssets: Object.freeze([...staticAssets, ...scripts])
