@@ -6,9 +6,9 @@ Fecha de revisión: 15 de julio de 2026.
 |---|---:|---:|---:|---:|
 | La Puebla | 19 | 19 | 570 | Sí |
 | Carranque | 20 | 20 | 600 | Sí |
-| Diputación | 40 | 7 | 1.406 | No |
+| Diputación | 40 | 7 | 1.444 | No |
 | UC3M | 20 | 0 con el estándar actual | 690 | No |
-| **Total** | **99** | **46** | **3.266** | — |
+| **Total** | **99** | **46** | **3.304** | — |
 
 ## Diputación
 
@@ -21,9 +21,9 @@ La versión v0.87 publica como autosuficientes los temas 25 a 31:
 - estructura fija completa;
 - esquemas y tablas;
 - al menos treinta preguntas en los temas 29, 30 y 31;
-- banco total de 1.406 preguntas.
+- banco total de 1.444 preguntas.
 
-El navegador carga 1.394 preguntas canónicas antes del refuerzo v0.87. La diferencia frente al antiguo recuento de 1.242 son 152 preguntas comunes válidas reutilizadas por coincidencia normativa en la capa de calidad v0.42. Tras añadir 12 preguntas a los temas 29 a 31, el total final es 1.406. La auditoría de Node reproduce ahora ese mismo orden de carga.
+La instantánea canónica posterior a `diputacion-v65` contiene 1.433 preguntas. Frente al recuento antiguo de 1.242, conserva 191 preguntas comunes válidas reutilizadas por coincidencia normativa. El refuerzo v0.87 añade 11 preguntas: siete al tema 29 y cuatro al tema 30. El tema 31 ya tiene 47 y no recibe relleno. Total final: 1.444.
 
 El estado general permanece **EN PROGRESO**: quedan 33 temas pendientes.
 
