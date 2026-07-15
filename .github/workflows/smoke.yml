@@ -36,7 +36,7 @@ jobs:
           done
 
   theory-close:
-    name: Carranque 20/20 · La Puebla 19/19 · Diputación 10/40
+    name: Carranque 20/20 · La Puebla 19/19 · Diputación 16/40
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -58,6 +58,8 @@ jobs:
           node tests/diputacion-teoria-v87-bloque1.js
           node tests/diputacion-teoria-v87-bloque2.js
           node tests/diputacion-teoria-v87-bloque3.js
+          node tests/diputacion-teoria-v87-bloque4.js
+          node tests/diputacion-teoria-v87-bloque5.js
           node tests/oapgt-fuentes-v87.js
       - name: Upload theory audit
         if: always()
@@ -72,12 +74,14 @@ jobs:
             diputacion-teoria-v87-bloque1.json
             diputacion-teoria-v87-bloque2.json
             diputacion-teoria-v87-bloque3.json
+            diputacion-teoria-v87-bloque4.json
+            diputacion-teoria-v87-bloque5.json
             oapgt-fuentes-v87.json
           if-no-files-found: ignore
           retention-days: 30
 
   quality-audit:
-    name: Auditoría de las 3.307 preguntas
+    name: Auditoría de las 3.310 preguntas
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
