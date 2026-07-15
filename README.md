@@ -1,12 +1,29 @@
 # OpoWeb · Auxiliar Administrativo Toledo
 
-Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo C1 y UC3M C2.
+Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo C1 y UC3M C2. El usuario está inscrito en las cuatro.
 
 ## Versión publicada
 
 - OpoWeb v0.86.0
 - Caché PWA `opoweb-v94`
-- Revisión y publicación: 14 de julio de 2026
+- Revisión editorial y de solicitudes: 15 de julio de 2026
+
+## Estado de solicitudes
+
+| Convocatoria | Estado personal |
+|---|---|
+| La Puebla | Inscrito |
+| Carranque | Inscrito |
+| Diputación de Toledo | Inscrito el 15/07/2026; solicitud registrada y tasa de 26 € abonada |
+| UC3M | Inscrito el 15/07/2026; turno libre, cupo general y pago acreditado |
+
+Los justificantes personales, números de registro y documentos identificativos se conservan fuera del repositorio público.
+
+## Principio editorial
+
+OpoWeb debe convertirse en la **única fuente editorial y teórica de estudio**: cada tema debe contener el epígrafe oficial exacto, desarrollo completo por apartados, normativa vigente, fuentes oficiales, explicación sin invenciones, resumen, puntos calientes, autoevaluación, test y material práctico.
+
+No se considera una convocatoria autosuficiente mientras falten epígrafes, desarrollo literal, fuentes oficiales o contenido anual específico. Por tanto, OpoWeb todavía no es una fuente única completa para las cuatro convocatorias.
 
 ## Estado teórico
 
