@@ -53,7 +53,7 @@
     return `<article class="card" id="diputacionTheoryStatusV87">
       <div class="pill-row"><span class="badge common">Diputación ${completed.length}/40</span><span class="badge area">Reconstrucción en curso</span><span class="badge">Revisión 15-07-2026</span></div>
       <h2>Avance editorial verificado de Diputación</h2>
-      <p>Los temas ${completedText} tienen desarrollo autosuficiente, título oficial literal, fuentes primarias, esquema, tabla, retención activa y estrategia de examen. El bloque informático 32-34 se apoya en el programa del BOP y documentación oficial de Microsoft y OpenText.</p>
+      <p>Los temas ${completedText} tienen desarrollo autosuficiente, título oficial literal, fuentes primarias, esquema, tabla, retención activa y estrategia de examen. Incluyen tributación y presupuesto, protección de datos, administración electrónica, Windows 11, GroupWise, LibreOffice 24, hardware y periféricos.</p>
       <div class="grid three">
         <div><span class="score">${completed.length}/40</span><p class="muted">temas autosuficientes</p></div>
         <div><span class="score">${totalWords.toLocaleString('es-ES')}</span><p class="muted">palabras auditadas</p></div>
