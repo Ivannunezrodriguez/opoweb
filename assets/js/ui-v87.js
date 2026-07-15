@@ -41,7 +41,7 @@
     const questionTotal = Object.values(ope.themeTests || {}).reduce((sum, bank) => sum + bank.length, 0);
     const oapgt = window.OPOWEB_OAPGT_FUENTES_V87?.statutes;
     return `<article class="card" id="diputacionTheoryStatusV87">
-      <div class="pill-row"><span class="badge common">Diputación 7/40</span><span class="badge area">Reconstrucción en curso</span><span class="badge">Revisión 14-07-2026</span></div>
+      <div class="pill-row"><span class="badge common">Diputación 7/40</span><span class="badge area">Reconstrucción en curso</span><span class="badge">Revisión 15-07-2026</span></div>
       <h2>Avance editorial verificado de Diputación</h2>
       <p>Los temas 25 a 31 ya tienen desarrollo autosuficiente, títulos oficiales literales, fuentes primarias, esquema, tabla, retención activa y estrategia de examen.</p>
       <div class="grid three">
@@ -119,7 +119,8 @@
     status: 'EN_PROGRESO',
     diputacionAutonomousThemes: 7,
     diputacionTotalThemes: 40,
-    diputacionQuestions: 1254,
+    diputacionQuestions: 1406,
+    globalQuestions: 3266,
     oapgtStatutesVerified: false
   };
 })();
