@@ -42,6 +42,7 @@ jobs:
           node --check assets/js/diputacion-teoria-v87-bloque2.js
           node --check assets/js/diputacion-test-v87-bloque2.js
           node --check assets/js/diputacion-teoria-v87-bloque3.js
+          node --check assets/js/diputacion-test-v87-bloque3.js
           node --check tests/diputacion-v87-diagnostico.js
           node --check tests/diputacion-teoria-v87-bloque1.js
           node --check tests/diputacion-teoria-v87-bloque2.js
