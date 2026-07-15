@@ -87,6 +87,25 @@ jobs:
           if-no-files-found: ignore
           retention-days: 30
 
+  diputacion-theory:
+    name: Diputación · teoría tributaria 25 y 26
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate Diputación theory block
+        run: node tests/diputacion-teoria-v87-bloque1.js
+      - name: Upload Diputación audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diputacion-teoria-v87-bloque1
+          path: diputacion-teoria-v87-bloque1.json
+          if-no-files-found: ignore
+          retention-days: 30
+
   quality-audit:
     name: Auditoría de las 3.102 preguntas
     runs-on: ubuntu-latest
