@@ -4,7 +4,7 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- OpoWeb v0.86.0 con ampliación editorial v87
+- OpoWeb v0.86.0 con cierre editorial v87 de Diputación
 - Caché PWA `opoweb-v94`
 - Revisión editorial y de solicitudes: 16 de julio de 2026
 
@@ -23,7 +23,7 @@ Los justificantes personales, números de registro y documentos identificativos 
 
 OpoWeb debe convertirse en la **única fuente editorial y teórica de estudio**: cada tema debe contener el epígrafe oficial exacto, desarrollo completo por apartados, normativa vigente, fuentes oficiales, explicación sin invenciones, resumen, puntos calientes, autoevaluación, test y material práctico.
 
-No se considera una convocatoria autosuficiente mientras falten epígrafes, desarrollo literal, fuentes oficiales o contenido anual específico. Por tanto, OpoWeb todavía no es una fuente única completa para las cuatro convocatorias.
+No se considera una convocatoria autosuficiente mientras falten epígrafes, desarrollo literal, fuentes oficiales o contenido anual específico. OpoWeb todavía no es una fuente única completa para las cuatro convocatorias.
 
 ## Estado teórico
 
@@ -31,11 +31,11 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 |---|---:|
 | Carranque | 99 % publicado |
 | La Puebla | 99 % publicado |
-| Diputación | 94 % aprox. |
+| Diputación | 96 % aprox. |
 | UC3M | 70–75 % aprox. |
-| Global | ≈93 % |
+| Global | ≈94 % |
 
-## Diputación · temas 25–38 cerrados
+## Diputación · temas 25–40 cerrados
 
 Quedan cerrados como fuente editorial autosuficiente:
 
@@ -53,12 +53,14 @@ Quedan cerrados como fuente editorial autosuficiente:
 - Tema 36: elaboración y uso de hojas de cálculo con LibreOffice 24 Calc.
 - Tema 37: elaboración y uso de bases de datos con LibreOffice 24 Base.
 - Tema 38: elaboración y uso de presentaciones con LibreOffice 24 Impress.
+- Tema 39: ordenador personal y componentes más comunes.
+- Tema 40: periféricos, impresoras, escáneres, discos externos, CD, DVD y memorias USB.
 
-Cada tema conserva el epígrafe oficial, incluye desarrollo completo, esquema, tabla de repaso, puntos calientes, retención activa, estrategia de examen y fuentes oficiales. Los temas 37 y 38 se apoyan en la documentación oficial de LibreOffice Base e Impress y distinguen expresamente tablas, consultas, formularios, informes, claves, relaciones, SQL, diapositivas, diseños, maestras, transiciones, animaciones, notas, compatibilidad, accesibilidad y seguridad.
+Los temas 39 y 40 distinguen CPU, RAM, almacenamiento, placa base, GPU, fuente, refrigeración, UEFI, TPM, SATA, NVMe, PCIe y M.2; y desarrollan impresoras, escáneres, OCR, almacenamiento externo, sistemas de archivos, USB, medios ópticos, seguridad y diagnóstico. Las fuentes son Microsoft, UEFI Forum, NVM Express, PCI-SIG, USB-IF y Ecma International.
 
 ## Control de numeración
 
-La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. Los temas 29 y 30 contienen los tributos locales; el 31 trata firma y certificados; el 32 archivos y unidades; el 33 Edge y GroupWise; el 34 impresión y escaneado; el 35 Writer; el 36 Calc; el 37 Base; y el 38 Impress.
+La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. Los temas 29 y 30 contienen los tributos locales; el 31 trata firma y certificados; el 32 archivos y unidades; el 33 Edge y GroupWise; el 34 impresión y escaneado; el 35 Writer; el 36 Calc; el 37 Base; el 38 Impress; el 39 ordenador personal; y el 40 periféricos.
 
 ## La Puebla 19/19 publicada
 
@@ -78,22 +80,22 @@ Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: document
 - 600 preguntas, 18 supuestos y tres simulacros de 80 + 5.
 - Corrección +0,25 / −0,08.
 
-## Aún pendientes como fuente única
+## Bloque documental pendiente
 
-Diputación requiere completar los temas 39 y 40. Además, el tema 22 mantiene abierta la localización y comprobación literal de los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
+El desarrollo editorial de Diputación 25–40 queda cerrado. La convocatoria completa no se considera al 100 % mientras no se localicen y comprueben literalmente los **Estatutos oficiales vigentes del OAPGT**, integrados en el tema 22. UC3M requiere todavía ampliar y verificar diversos contenidos internos y anuales.
 
 ## Banco global
 
-Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M.
+Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M. Los temas 39 y 40 incorporan 24 preguntas específicas adicionales.
 
 ## Validación
 
-GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11 y los bloques editoriales de Diputación.
+GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11 y los ocho bloques editoriales de Diputación.
 
-La caché `opoweb-v94` incorpora los módulos de Diputación para uso sin conexión tras una primera carga correcta.
+La caché `opoweb-v94` incorpora todo el bloque 25–40 de Diputación para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
-1. Diputación temas 39 y 40: ordenador personal y periféricos.
-2. Estatutos oficiales del OAPGT dentro del tema 22.
-3. UC3M completa y auditoría cruzada final de los 99 temas.
+1. Localizar y comprobar los Estatutos oficiales vigentes del OAPGT dentro del tema 22.
+2. Cerrar la teoría y normativa interna de UC3M.
+3. Ejecutar la auditoría cruzada final de los 99 temas.
