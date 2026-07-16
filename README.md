@@ -31,11 +31,11 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 |---|---:|
 | Carranque | 99 % publicado |
 | La Puebla | 99 % publicado |
-| Diputación | 86 % aprox. |
+| Diputación | 88 % aprox. |
 | UC3M | 70–75 % aprox. |
-| Global | ≈89 % |
+| Global | ≈90 % |
 
-## Diputación · temas 25–30 cerrados
+## Diputación · temas 25–32 cerrados
 
 Quedan cerrados como fuente editorial autosuficiente:
 
@@ -45,12 +45,14 @@ Quedan cerrados como fuente editorial autosuficiente:
 - Tema 28: protección de datos, funciones de la AEPD, transparencia, obligación de suministrar información y buen gobierno.
 - Tema 29: IBI e IAE, incluidos hecho imponible, sujetos, cuantificación, beneficios, devengo y gestión.
 - Tema 30: IVTM, IIVTNU y tasas, con sus reglas de cuantificación, sujetos, devengo y gestión.
+- Tema 31: firma electrónica, certificados, soportes, prestadores y servicios electrónicos de confianza.
+- Tema 32: Windows 11 Pro, archivos, carpetas y unidades locales, extraíbles o de red.
 
-Cada tema supera 1.200 palabras, conserva el epígrafe oficial, incluye esquema, tabla de repaso y fuentes oficiales. Los temas 29 y 30 utilizan Haciendas Locales, Catastro, tarifas oficiales del IAE, Reglamento General de Vehículos, reforma legal del IIVTNU y Ley General Tributaria.
+Cada tema conserva el epígrafe oficial, incluye desarrollo completo, esquema, tabla de repaso, puntos calientes, retención activa, estrategia de examen y fuentes oficiales. El tema 31 utiliza la Ley 6/2020, eIDAS consolidado, la Ley 39/2015 y el Real Decreto 255/2025 vigente sobre el DNI; se excluye expresamente el derogado Real Decreto 1553/2005. El tema 32 se apoya únicamente en documentación oficial de Microsoft aplicable a Windows 11.
 
 ## Control de numeración
 
-La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. El tema 29 corresponde a IBI e IAE y el tema 30 a IVTM, IIVTNU y tasas. La planificación anterior que situaba el OAPGT en el tema 29 era incorrecta; el contenido publicado de los temas 25 a 28 ya estaba aplicado a sus números correctos.
+La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. El tema 29 corresponde a IBI e IAE, el tema 30 a IVTM, IIVTNU y tasas, el tema 31 a firma y certificados electrónicos y el tema 32 a archivos, carpetas y unidades en Windows 11 Pro.
 
 ## La Puebla 19/19 publicada
 
@@ -72,7 +74,7 @@ Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: document
 
 ## Aún pendientes como fuente única
 
-Diputación requiere completar los temas 31 a 40. Además, el tema 22 mantiene abierta la localización y comprobación literal de los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
+Diputación requiere completar los temas 33 a 40. Además, el tema 22 mantiene abierta la localización y comprobación literal de los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
 
 ## Banco global
 
@@ -86,9 +88,9 @@ La caché `opoweb-v94` incorpora los módulos de Diputación para uso sin conexi
 
 ## Siguiente trabajo
 
-1. Diputación tema 31: firma electrónica y certificados.
-2. Diputación temas 32 a 34: Windows 11, Edge, GroupWise, impresión y escaneado.
-3. Diputación temas 35 a 38: LibreOffice 24.
+1. Diputación tema 33: navegación con Microsoft Edge y correo con Micro Focus GroupWise 24 o posterior.
+2. Diputación tema 34: impresión y escaneado en Windows 11.
+3. Diputación temas 35 a 38: LibreOffice 24 Writer, Calc, Base e Impress.
 4. Diputación temas 39 y 40: ordenador personal y periféricos.
 5. Estatutos oficiales del OAPGT dentro del tema 22.
 6. UC3M completa y auditoría cruzada final de los 99 temas.
