@@ -51,17 +51,15 @@ assert.deepStrictEqual(scriptSources, ['assets/js/asset-manifest-v83.js','assets
 assert.ok(!index.includes('assets/js/app.js'));
 
 const loader = read('assets/js/loader-v83.js');
-assert.ok(loader.includes("const extensionScripts = ['./assets/js/uc3m-teoria-v88-bloque3.js']"));
-assert.ok(/for \(const source of managedScripts\) await loadScript\(source\)/.test(loader));
+assert.ok(/for \(const source of manifest\.scripts\) await loadScript\(source\)/.test(loader));
 assert.ok(/opoweb:ready/.test(loader));
 assert.ok(/opoweb:failed/.test(loader));
 assert.ok(/serviceWorker\.register\('\.\/sw\.js'\)/.test(loader));
-assert.ok(exists('assets/js/uc3m-teoria-v88-bloque3.js'));
 
 const serviceWorker = read('sw.js');
 assert.ok(serviceWorker.includes("importScripts('./assets/js/asset-manifest-v83.js')"));
 assert.ok(serviceWorker.includes('const CACHE = MANIFEST.cacheName'));
-assert.ok(serviceWorker.includes("'./assets/js/uc3m-teoria-v88-bloque3.js'"));
+assert.ok(serviceWorker.includes('const ASSETS = MANIFEST.allAssets'));
 assert.ok(!/const ASSETS = \[/.test(serviceWorker));
 
-console.log(`Cargador v0.86 + UC3M v88 OK · ${manifest.scripts.length + 1} módulos gestionados`);
+console.log(`Cargador v0.86 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · La Puebla 19/19`);
