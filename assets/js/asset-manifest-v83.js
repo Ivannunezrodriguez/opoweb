@@ -85,6 +85,8 @@
     './assets/js/uc3m-v78-presupuesto-2026.js',
     './assets/js/uc3m-v79-contratacion-interna.js',
     './assets/js/uc3m-v80-cierre-calidad.js',
+    './assets/js/uc3m-teoria-v88-bloque1a.js',
+    './assets/js/uc3m-teoria-v88-bloque1b.js',
     './assets/js/municipales-v84-cierre.js',
     './assets/js/municipales-v84-fix.js',
     './assets/js/puebla-teoria-v86-bloque1.js',
