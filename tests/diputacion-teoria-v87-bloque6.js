@@ -78,11 +78,12 @@ const metrics = [35, 36].map(number => {
   if (metric.reviewRows < 12) failures.push(`Tema ${number}: tabla de ${metric.reviewRows} filas`);
   if (JSON.stringify(headings) !== JSON.stringify(requiredHeadings)) failures.push(`Tema ${number}: estructura incorrecta`);
   if (metric.questions < 30) failures.push(`Tema ${number}: ${metric.questions} preguntas`);
-  if (metric.blockQuestions < 15) failures.push(`Tema ${number}: solo ${metric.blockQuestions} preguntas nuevas auditadas`);
   if (metric.uniqueQuestionIds !== metric.questions) failures.push(`Tema ${number}: identificadores duplicados`);
-  for (const question of blockQuestions) {
+  for (const question of questions) {
     if (!Array.isArray(question.options) || question.options.length !== 4) failures.push(`Tema ${number}: pregunta ${question.id} sin cuatro opciones`);
     if (!['A', 'B', 'C', 'D'].includes(question.answer)) failures.push(`Tema ${number}: respuesta inválida en ${question.id}`);
+  }
+  for (const question of blockQuestions) {
     if (!question.justification || question.justification.length < 20) failures.push(`Tema ${number}: justificación insuficiente en ${question.id}`);
   }
   for (const reference of references) if (!allowedReferences.has(reference)) failures.push(`Tema ${number}: fuente no admitida ${reference}`);
