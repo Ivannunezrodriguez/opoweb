@@ -4,7 +4,7 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- OpoWeb v0.86.0 con cierre editorial v87 de Diputación
+- OpoWeb v0.86.0 con cierre editorial v87 de Diputación y ampliación v88 de UC3M
 - Caché PWA `opoweb-v94`
 - Revisión editorial y de solicitudes: 16 de julio de 2026
 
@@ -32,8 +32,21 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 | Carranque | 99 % publicado |
 | La Puebla | 99 % publicado |
 | Diputación | 96 % aprox. |
-| UC3M | 70–75 % aprox. |
-| Global | ≈94 % |
+| UC3M | 78 % aprox. |
+| Global | ≈95 % |
+
+## UC3M · bloque específico iniciado
+
+Quedan cerrados editorialmente:
+
+- **Tema 13 · LOSU I:** sistema universitario, funciones, autonomía, creación y reconocimiento de universidades, calidad, enseñanzas, investigación, transferencia, cooperación con la sociedad e internacionalización.
+- **Tema 14 · LOSU II:** estudiantado, becas, participación, régimen económico-financiero, personal docente e investigador y personal técnico, de gestión y de administración y servicios.
+
+Ambos temas conservan el epígrafe oficial, superan el umbral de 2.200 palabras, disponen de esquema, tabla de repaso, síntesis, puntos calientes, retención activa y estrategia de examen. Mantienen 30 preguntas auditadas por tema.
+
+Las fuentes son exclusivamente oficiales: Ley Orgánica 2/2023, Constitución Española, Real Decreto 640/2021, Real Decreto 822/2021, Estatuto del Estudiante Universitario, TREBEP y Ley de la Ciencia.
+
+Pendientes del bloque específico UC3M: temas 15 a 20. Los datos anuales de admisión se mantienen separados de la normativa estable y no se memorizan sin publicación oficial del curso correspondiente.
 
 ## Diputación · temas 25–40 cerrados
 
@@ -82,20 +95,22 @@ Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: document
 
 ## Bloque documental pendiente
 
-El desarrollo editorial de Diputación 25–40 queda cerrado. La convocatoria completa no se considera al 100 % mientras no se localicen y comprueben literalmente los **Estatutos oficiales vigentes del OAPGT**, integrados en el tema 22. UC3M requiere todavía ampliar y verificar diversos contenidos internos y anuales.
+El desarrollo editorial de Diputación 25–40 queda cerrado. La convocatoria completa no se considera al 100 % mientras no se localicen y comprueben literalmente los **Estatutos oficiales vigentes del OAPGT**, integrados en el tema 22. UC3M requiere completar los temas específicos 15 a 20 y mantener actualizados los datos anuales.
 
 ## Banco global
 
-Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M. Los temas 39 y 40 incorporan 24 preguntas específicas adicionales.
+Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M. UC3M mantiene 690 preguntas y tres simulacros de 70 + 5.
 
 ## Validación
 
-GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11 y los ocho bloques editoriales de Diputación.
+GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación y el bloque editorial UC3M 13–14.
 
-La caché `opoweb-v94` incorpora todo el bloque 25–40 de Diputación para uso sin conexión tras una primera carga correcta.
+La caché `opoweb-v94` incorpora los módulos de Diputación y UC3M para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
-1. Localizar y comprobar los Estatutos oficiales vigentes del OAPGT dentro del tema 22.
-2. Cerrar la teoría y normativa interna de UC3M.
-3. Ejecutar la auditoría cruzada final de los 99 temas.
+1. UC3M tema 15: Estatutos de la Universidad Carlos III de Madrid.
+2. UC3M temas 16 y 17: normativa académica, acceso y admisión.
+3. UC3M temas 18 a 20: presupuesto y contratación.
+4. Localizar y comprobar los Estatutos oficiales vigentes del OAPGT dentro del tema 22 de Diputación.
+5. Ejecutar la auditoría cruzada final de los 99 temas.
