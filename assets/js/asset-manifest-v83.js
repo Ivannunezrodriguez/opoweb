@@ -99,6 +99,7 @@
     './assets/js/estado-inscripciones-v87.js',
     './assets/js/diputacion-teoria-v87-bloque1.js',
     './assets/js/diputacion-teoria-v87-bloque2.js',
+    './assets/js/diputacion-teoria-v87-bloque3.js',
     './assets/js/auditoria-calidad-v72.js',
     './assets/js/ui-v42.js',
     './assets/js/ui-v43.js',
@@ -161,7 +162,7 @@
 
   globalThis.OPOWEB_ASSET_MANIFEST_V83 = Object.freeze({
     applicationVersion: 'v0.86.0',
-    cacheName: 'opoweb-v94',
+    cacheName: 'opoweb-v95',
     scripts: Object.freeze(scripts),
     staticAssets: Object.freeze(staticAssets),
     allAssets: Object.freeze([...staticAssets, ...scripts])
