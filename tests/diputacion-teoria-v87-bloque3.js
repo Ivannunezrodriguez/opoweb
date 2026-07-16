@@ -34,7 +34,8 @@ files.push(
   'assets/js/municipales-v84-fix.js',
   'assets/js/diputacion-teoria-v87-bloque1.js',
   'assets/js/diputacion-teoria-v87-bloque2.js',
-  'assets/js/diputacion-teoria-v87-bloque3.js'
+  'assets/js/diputacion-teoria-v87-bloque3.js',
+  'assets/js/diputacion-teoria-v87-bloque3-preguntas.js'
 );
 for (const file of files) vm.runInContext(read(file), context, { filename: file });
 
@@ -65,6 +66,7 @@ const metrics = [29, 30].map(number => {
   }
   const headings = plain(theme.sections.map(section => section.heading));
   const references = (theme.officialSources || []).map(source => source.reference);
+  const questions = ope.themeTests?.[theme.id] || [];
   const metric = {
     number,
     title: theme.title,
@@ -74,7 +76,8 @@ const metrics = [29, 30].map(number => {
     treeCharacters: (theme.tree || '').length,
     reviewRows: (theme.reviewTable || []).length,
     headings,
-    questions: (ope.themeTests?.[theme.id] || []).length,
+    questions: questions.length,
+    uniqueQuestionIds: new Set(questions.map(question => question.id)).size,
     autonomous: theme.theoryStatus?.autonomous === true,
     programmeLiteral: theme.theoryStatus?.programmeLiteral === true
   };
@@ -86,6 +89,7 @@ const metrics = [29, 30].map(number => {
   if (metric.reviewRows < 9) failures.push(`Tema ${number}: tabla de ${metric.reviewRows} filas`);
   if (JSON.stringify(headings) !== JSON.stringify(requiredHeadings)) failures.push(`Tema ${number}: estructura incorrecta`);
   if (metric.questions < 30) failures.push(`Tema ${number}: ${metric.questions} preguntas`);
+  if (metric.questions !== metric.uniqueQuestionIds) failures.push(`Tema ${number}: identificadores de pregunta duplicados`);
   for (const reference of references) if (!allowedReferences.has(reference)) failures.push(`Tema ${number}: fuente no admitida ${reference}`);
   return metric;
 });
@@ -104,8 +108,10 @@ if (JSON.stringify(plain(programme?.pendingThemes || [])) !== JSON.stringify(exp
 if (programme?.autonomousThemes !== 6) failures.push(`Autónomos: ${programme?.autonomousThemes}`);
 if (programme?.totalThemes !== 16) failures.push(`Total: ${programme?.totalThemes}`);
 const state = context.window.OPOWEB_DIPUTACION_THEORY_V87;
+const questionState = context.window.OPOWEB_DIPUTACION_THEORY_V87_QUESTIONS_B3;
 if (state?.block !== 3) failures.push('Bloque global incorrecto');
 if (state?.numberingCheck?.oapgtTheme !== 22 || state?.numberingCheck?.ibiIaeTheme !== 29 || state?.numberingCheck?.ivtmIivtnuTasasTheme !== 30) failures.push('Control de numeración incorrecto');
+if (questionState?.addedTheme29 !== 7 || questionState?.addedTheme30 !== 4) failures.push('Refuerzo de preguntas incorrecto');
 
 const report = {
   version: 'v0.87-editorial-b3',
@@ -116,6 +122,7 @@ const report = {
   pendingThemes: programme?.pendingThemes || [],
   minimumWords: Math.min(...metrics.filter(item => !item.missing).map(item => item.words)),
   numbering: state?.numberingCheck,
+  questionAdditions: questionState,
   metrics,
   failures
 };
