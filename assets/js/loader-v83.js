@@ -1,7 +1,5 @@
 (() => {
   const manifest = globalThis.OPOWEB_ASSET_MANIFEST_V83;
-  const extensionScripts = ['./assets/js/uc3m-teoria-v88-bloque3.js'];
-  const managedScripts = [...(manifest?.scripts || []), ...extensionScripts];
   const content = document.getElementById('content');
   const boot = {
     version: manifest?.applicationVersion || 'v0.83.0',
@@ -10,7 +8,7 @@
     completedAt: null,
     loaded: [],
     failed: null,
-    total: managedScripts.length
+    total: manifest?.scripts?.length || 0
   };
   window.OPOWEB_BOOT_V83 = boot;
 
@@ -79,7 +77,7 @@
 
     renderLoading();
     try {
-      for (const source of managedScripts) await loadScript(source);
+      for (const source of manifest.scripts) await loadScript(source);
       boot.status = 'ready';
       boot.completedAt = new Date().toISOString();
       boot.durationMs = Date.parse(boot.completedAt) - Date.parse(boot.startedAt);
