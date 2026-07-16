@@ -112,6 +112,9 @@
     './assets/js/diputacion-teoria-v87-bloque7a.js',
     './assets/js/diputacion-teoria-v87-bloque7b.js',
     './assets/js/diputacion-teoria-v87-bloque7-preguntas.js',
+    './assets/js/diputacion-teoria-v87-bloque8a.js',
+    './assets/js/diputacion-teoria-v87-bloque8b.js',
+    './assets/js/diputacion-teoria-v87-bloque8-preguntas.js',
     './assets/js/auditoria-calidad-v72.js',
     './assets/js/ui-v42.js',
     './assets/js/ui-v43.js',
@@ -173,8 +176,8 @@
   ];
 
   globalThis.OPOWEB_ASSET_MANIFEST_V83 = Object.freeze({
-    applicationVersion: 'v0.86.0',
-    cacheName: 'opoweb-v94',
+    applicationVersion: 'v0.87.0',
+    cacheName: 'opoweb-v95',
     scripts: Object.freeze(scripts),
     staticAssets: Object.freeze(staticAssets),
     allAssets: Object.freeze([...staticAssets, ...scripts])
