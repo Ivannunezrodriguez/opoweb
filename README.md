@@ -31,11 +31,11 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 |---|---:|
 | Carranque | 99 % publicado |
 | La Puebla | 99 % publicado |
-| Diputación | 92 % aprox. |
+| Diputación | 94 % aprox. |
 | UC3M | 70–75 % aprox. |
-| Global | ≈92 % |
+| Global | ≈93 % |
 
-## Diputación · temas 25–36 cerrados
+## Diputación · temas 25–38 cerrados
 
 Quedan cerrados como fuente editorial autosuficiente:
 
@@ -51,12 +51,14 @@ Quedan cerrados como fuente editorial autosuficiente:
 - Tema 34: impresión y escaneado de documentos desde Windows 11.
 - Tema 35: elaboración y uso de documentos de texto con LibreOffice 24 Writer.
 - Tema 36: elaboración y uso de hojas de cálculo con LibreOffice 24 Calc.
+- Tema 37: elaboración y uso de bases de datos con LibreOffice 24 Base.
+- Tema 38: elaboración y uso de presentaciones con LibreOffice 24 Impress.
 
-Cada tema conserva el epígrafe oficial, incluye desarrollo completo, esquema, tabla de repaso, puntos calientes, retención activa, estrategia de examen y fuentes oficiales. Los temas 35 y 36 se apoyan en las guías oficiales Writer Guide 24.2 y Calc Guide 24.2 de The Document Foundation. Incluyen formatos ODT, ODS, DOCX, XLSX y CSV; edición, estilos, tablas, campos, control de cambios, fórmulas, referencias, funciones, filtros, validación, gráficos, tablas dinámicas, impresión y seguridad documental.
+Cada tema conserva el epígrafe oficial, incluye desarrollo completo, esquema, tabla de repaso, puntos calientes, retención activa, estrategia de examen y fuentes oficiales. Los temas 37 y 38 se apoyan en la documentación oficial de LibreOffice Base e Impress y distinguen expresamente tablas, consultas, formularios, informes, claves, relaciones, SQL, diapositivas, diseños, maestras, transiciones, animaciones, notas, compatibilidad, accesibilidad y seguridad.
 
 ## Control de numeración
 
-La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. Los temas 29 y 30 contienen los tributos locales; el 31 trata firma y certificados; el 32 archivos y unidades; el 33 Edge y GroupWise; el 34 impresión y escaneado; el 35 Writer; y el 36 Calc.
+La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. Los temas 29 y 30 contienen los tributos locales; el 31 trata firma y certificados; el 32 archivos y unidades; el 33 Edge y GroupWise; el 34 impresión y escaneado; el 35 Writer; el 36 Calc; el 37 Base; y el 38 Impress.
 
 ## La Puebla 19/19 publicada
 
@@ -78,7 +80,7 @@ Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: document
 
 ## Aún pendientes como fuente única
 
-Diputación requiere completar los temas 37 a 40. Además, el tema 22 mantiene abierta la localización y comprobación literal de los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
+Diputación requiere completar los temas 39 y 40. Además, el tema 22 mantiene abierta la localización y comprobación literal de los Estatutos oficiales vigentes del OAPGT. UC3M requiere ampliar numerosos temas y mantener los datos anuales ligados a fuentes oficiales.
 
 ## Banco global
 
@@ -92,7 +94,6 @@ La caché `opoweb-v94` incorpora los módulos de Diputación para uso sin conexi
 
 ## Siguiente trabajo
 
-1. Diputación temas 37 y 38: LibreOffice Base e Impress.
-2. Diputación temas 39 y 40: ordenador personal y periféricos.
-3. Estatutos oficiales del OAPGT dentro del tema 22.
-4. UC3M completa y auditoría cruzada final de los 99 temas.
+1. Diputación temas 39 y 40: ordenador personal y periféricos.
+2. Estatutos oficiales del OAPGT dentro del tema 22.
+3. UC3M completa y auditoría cruzada final de los 99 temas.
