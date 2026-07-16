@@ -1,1 +1,1 @@
-Trabajo editorial en curso: Diputación de Toledo, temas 29 y 30 (IBI, IAE, IVTM, IIVTNU y tasas). Este marcador se eliminará o actualizará al cerrar el bloque mediante pull request.
+Trabajo editorial siguiente: Diputación de Toledo, temas 31 y 32. Tema 31: firma electrónica, certificados y servicios de confianza. Tema 32: Windows 11, archivos, carpetas y unidades locales o de red. El tema 22 mantiene abierta la verificación literal de los Estatutos oficiales vigentes del OAPGT.
