@@ -37,7 +37,8 @@ files.push(
   'assets/js/diputacion-teoria-v87-bloque3.js',
   'assets/js/diputacion-teoria-v87-bloque3-preguntas.js',
   'assets/js/diputacion-teoria-v87-bloque4a.js',
-  'assets/js/diputacion-teoria-v87-bloque4b.js'
+  'assets/js/diputacion-teoria-v87-bloque4b.js',
+  'assets/js/diputacion-teoria-v87-bloque4-preguntas.js'
 );
 for (const file of files) vm.runInContext(read(file), context, { filename: file });
 
@@ -101,6 +102,7 @@ if (!/Microsoft Windows 11 Pro I/i.test(theme32?.title || '') || !/archivos y ca
 if ((theme31?.officialSources || []).some(source => source.reference === 'BOE-A-2005-21163')) failures.push('Tema 31 utiliza el antiguo RD 1553/2005 derogado');
 if (!(theme31?.officialSources || []).some(source => source.reference === 'BOE-A-2025-6601')) failures.push('Tema 31 no incorpora el RD 255/2025 vigente');
 if (!(theme32?.officialSources || []).every(source => source.url.startsWith('https://learn.microsoft.com/'))) failures.push('Tema 32 contiene fuentes no oficiales de Microsoft');
+if (!context.window.OPOWEB_DIPUTACION_THEORY_V87_QUESTIONS_B4 || (ope.themeTests?.[theme31.id] || []).length < 30) failures.push('Refuerzo del banco del tema 31 no aplicado');
 
 const programme = ope.theoryProgramme?.v87;
 if (!programme) failures.push('Falta programa v87');
