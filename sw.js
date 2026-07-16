@@ -3,7 +3,7 @@ importScripts('./assets/js/asset-manifest-v83.js');
 // Revisión de estado de solicitudes: 15/07/2026.
 const MANIFEST = self.OPOWEB_ASSET_MANIFEST_V83;
 const CACHE = MANIFEST.cacheName;
-const ASSETS = [...MANIFEST.allAssets, './assets/js/uc3m-teoria-v88-bloque3.js'];
+const ASSETS = MANIFEST.allAssets;
 
 self.addEventListener('install', event => {
   self.skipWaiting();
