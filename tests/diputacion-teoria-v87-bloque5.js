@@ -24,7 +24,7 @@ files.push(
   'assets/js/diputacion-teoria-v87-bloque2.js', 'assets/js/diputacion-teoria-v87-bloque3.js',
   'assets/js/diputacion-teoria-v87-bloque3-preguntas.js', 'assets/js/diputacion-teoria-v87-bloque4a.js',
   'assets/js/diputacion-teoria-v87-bloque4b.js', 'assets/js/diputacion-teoria-v87-bloque4-preguntas.js',
-  'assets/js/diputacion-teoria-v87-bloque5.js'
+  'assets/js/diputacion-teoria-v87-bloque5.js', 'assets/js/diputacion-teoria-v87-bloque5-preguntas.js'
 );
 for (const file of files) vm.runInContext(read(file), context, { filename: file });
 
@@ -51,6 +51,8 @@ const metrics = [33, 34].map(number => {
   }
   const headings = plain(theme.sections.map(section => section.heading));
   const references = (theme.officialSources || []).map(source => source.reference);
+  const questions = ope.themeTests?.[theme.id] || [];
+  const ids = questions.map(question => question.id);
   const metric = {
     number,
     title: theme.title,
@@ -60,7 +62,8 @@ const metrics = [33, 34].map(number => {
     treeCharacters: (theme.tree || '').length,
     reviewRows: (theme.reviewTable || []).length,
     headings,
-    questions: (ope.themeTests?.[theme.id] || []).length,
+    questions: questions.length,
+    uniqueQuestionIds: new Set(ids).size,
     autonomous: theme.theoryStatus?.autonomous === true,
     programmeLiteral: theme.theoryStatus?.programmeLiteral === true
   };
@@ -72,6 +75,7 @@ const metrics = [33, 34].map(number => {
   if (metric.reviewRows < 10) failures.push(`Tema ${number}: tabla de ${metric.reviewRows} filas`);
   if (JSON.stringify(headings) !== JSON.stringify(requiredHeadings)) failures.push(`Tema ${number}: estructura incorrecta`);
   if (metric.questions < 30) failures.push(`Tema ${number}: ${metric.questions} preguntas`);
+  if (metric.uniqueQuestionIds !== metric.questions) failures.push(`Tema ${number}: identificadores duplicados`);
   for (const reference of references) if (!allowedReferences.has(reference)) failures.push(`Tema ${number}: fuente no admitida ${reference}`);
   return metric;
 });
@@ -90,6 +94,8 @@ if (programme?.totalThemes !== 16) failures.push(`Total: ${programme?.totalTheme
 const state = context.window.OPOWEB_DIPUTACION_THEORY_V87;
 if (state?.block !== 5) failures.push('Bloque global incorrecto');
 if (state?.numberingCheck?.edgeGroupWiseTheme !== 33 || state?.numberingCheck?.printScanTheme !== 34) failures.push('Control de numeración incorrecto');
+if (context.window.OPOWEB_DIPUTACION_THEORY_V87_QUESTIONS_B5?.addedTheme33 !== 2) failures.push('Refuerzo tema 33 incorrecto');
+if (context.window.OPOWEB_DIPUTACION_THEORY_V87_QUESTIONS_B5?.addedTheme34 !== 1) failures.push('Refuerzo tema 34 incorrecto');
 
 const report = {
   version: 'v0.87-editorial-b5',
