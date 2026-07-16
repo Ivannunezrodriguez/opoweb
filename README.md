@@ -4,8 +4,8 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- OpoWeb v0.87.0
-- Caché PWA `opoweb-v95`
+- OpoWeb v0.86.0 con cierre editorial v87 de Diputación
+- Caché PWA `opoweb-v94`
 - Revisión editorial y de solicitudes: 16 de julio de 2026
 
 ## Estado de solicitudes
@@ -92,7 +92,7 @@ Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M
 
 GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11 y los ocho bloques editoriales de Diputación.
 
-La caché `opoweb-v95` incorpora todo el bloque 25–40 de Diputación para uso sin conexión tras una primera carga correcta.
+La caché `opoweb-v94` incorpora todo el bloque 25–40 de Diputación para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
