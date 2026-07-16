@@ -32,45 +32,28 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 | Carranque | 99 % publicado |
 | La Puebla | 99 % publicado |
 | Diputación | 96 % aprox. |
-| UC3M | 82 % aprox. |
-| Global | ≈96 % |
+| UC3M | 90 % aprox. |
+| Global | ≈97 % |
 
-## UC3M · temas específicos 13–15 cerrados
+## UC3M · temas específicos 13–17 cerrados
 
 Quedan cerrados editorialmente:
 
 - **Tema 13 · LOSU I:** sistema universitario, funciones, autonomía, creación y reconocimiento de universidades, calidad, enseñanzas, investigación, transferencia, cooperación con la sociedad e internacionalización.
 - **Tema 14 · LOSU II:** estudiantado, becas, participación, régimen económico-financiero, personal docente e investigador y personal técnico, de gestión y de administración y servicios.
 - **Tema 15 · Estatutos UC3M:** Defensor Universitario, servicios universitarios, patrimonio, presupuesto, control, contratación y reforma estatutaria.
+- **Tema 16 · Normativa académica:** RD 822/2021, matrícula, permanencia, convocatorias, evaluación continua, ordinaria y extraordinaria, revisión y actas.
+- **Tema 17 · Acceso y admisión:** RD 534/2024 actualizado, vías de acceso, PAU, Técnico Superior, nota de admisión, distrito único, cupos, listas de espera y cambio de titulación.
 
-Los tres temas conservan el epígrafe oficial, disponen de esquema, tabla de repaso, síntesis, puntos calientes, retención activa y estrategia de examen. Mantienen 30 preguntas auditadas por tema.
+Los cinco temas conservan el epígrafe oficial, disponen de esquema, tabla de repaso, síntesis, puntos calientes, retención activa y estrategia de examen. Mantienen 30 preguntas auditadas por tema.
 
-Para el tema 15 se ha utilizado el texto refundido oficial publicado por la UC3M, integrado por el Decreto 1/2003 y su modificación mediante Decreto 95/2009. La vigencia de esta referencia estatutaria se ha comprobado además en resoluciones oficiales de la propia UC3M publicadas en el BOE durante 2026. El texto se interpreta conforme a la LOSU cuando conserva terminología o referencias anteriores.
+Los temas 16 y 17 utilizan exclusivamente el BOE vigente y las páginas oficiales de normativa académica, evaluación, permanencia, revisión, PAU y admisión de la UC3M. Los datos anuales —plazos, ponderaciones, plazas y acuerdos del curso— se mantienen separados de las reglas estables.
 
-Pendientes del bloque específico UC3M: temas 16 a 20. Los datos anuales de admisión se mantienen separados de la normativa estable y no se memorizan sin publicación oficial del curso correspondiente.
+Pendientes del bloque específico UC3M: temas 18 a 20, correspondientes a presupuesto, ejecución presupuestaria y contratación.
 
 ## Diputación · temas 25–40 cerrados
 
-Quedan cerrados como fuente editorial autosuficiente:
-
-- Tema 25: obligación tributaria, sujetos, cuantificación, extinción, tributos locales, gestión y revisión.
-- Tema 26: recaudación voluntaria y ejecutiva, aplazamiento, fraccionamiento, compensación, devolución, apremio y revisión.
-- Tema 27: presupuesto general local, contenido, elaboración, aprobación, prórroga y bases de ejecución.
-- Tema 28: protección de datos, funciones de la AEPD, transparencia, obligación de suministrar información y buen gobierno.
-- Tema 29: IBI e IAE, incluidos hecho imponible, sujetos, cuantificación, beneficios, devengo y gestión.
-- Tema 30: IVTM, IIVTNU y tasas, con sus reglas de cuantificación, sujetos, devengo y gestión.
-- Tema 31: firma electrónica, certificados, soportes, prestadores y servicios electrónicos de confianza.
-- Tema 32: Windows 11 Pro, archivos, carpetas y unidades locales, extraíbles o de red.
-- Tema 33: navegación con Microsoft Edge y correo, calendario, contactos y tareas en GroupWise 24 o posterior.
-- Tema 34: impresión y escaneado de documentos desde Windows 11.
-- Tema 35: elaboración y uso de documentos de texto con LibreOffice 24 Writer.
-- Tema 36: elaboración y uso de hojas de cálculo con LibreOffice 24 Calc.
-- Tema 37: elaboración y uso de bases de datos con LibreOffice 24 Base.
-- Tema 38: elaboración y uso de presentaciones con LibreOffice 24 Impress.
-- Tema 39: ordenador personal y componentes más comunes.
-- Tema 40: periféricos, impresoras, escáneres, discos externos, CD, DVD y memorias USB.
-
-Los temas 39 y 40 distinguen CPU, RAM, almacenamiento, placa base, GPU, fuente, refrigeración, UEFI, TPM, SATA, NVMe, PCIe y M.2; y desarrollan impresoras, escáneres, OCR, almacenamiento externo, sistemas de archivos, USB, medios ópticos, seguridad y diagnóstico. Las fuentes son Microsoft, UEFI Forum, NVM Express, PCI-SIG, USB-IF y Ecma International.
+Quedan cerrados como fuente editorial autosuficiente los temas 25 a 40: gestión y recaudación tributaria, presupuesto, protección de datos y transparencia, tributos locales, firma electrónica, Windows 11, Edge, GroupWise, impresión, LibreOffice Writer, Calc, Base e Impress, ordenador personal y periféricos.
 
 ## Control de numeración
 
@@ -78,15 +61,10 @@ La numeración interna ha sido comprobada contra el programa oficial. El OAPGT p
 
 ## La Puebla 19/19 publicada
 
-Programa literal del Anexo I del BOP Toledo núm. 82, de 5 de mayo de 2026.
-
 - 25.395 palabras; media 1.337; mínimo 928.
 - Dos o más fuentes oficiales por tema.
-- Resumen, rigor, desarrollo completo, síntesis, puntos calientes, retención, estrategia, esquema y tabla.
 - 570 preguntas, 20 supuestos y tres simulacros de 50 + 5.
 - Corrección +0,20 / −0,05.
-
-Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: documentación oficial de Microsoft, LibreOffice y estándares o fabricantes.
 
 ## Carranque 20/20 publicada
 
@@ -96,7 +74,7 @@ Materias jurídicas: BOE, DOUE y fuentes institucionales. Informática: document
 
 ## Bloque documental pendiente
 
-El desarrollo editorial de Diputación 25–40 queda cerrado. La convocatoria completa no se considera al 100 % mientras no se localicen y comprueben literalmente los **Estatutos oficiales vigentes del OAPGT**, integrados en el tema 22. UC3M requiere completar los temas específicos 16 a 20 y mantener actualizados los datos anuales.
+El desarrollo editorial de Diputación 25–40 queda cerrado. La convocatoria completa no se considera al 100 % mientras no se localicen y comprueben literalmente los **Estatutos oficiales vigentes del OAPGT**, integrados en el tema 22. UC3M requiere completar los temas específicos 18 a 20 y mantener actualizados los datos anuales.
 
 ## Banco global
 
@@ -104,13 +82,13 @@ Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M
 
 ## Validación
 
-GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación y los bloques editoriales UC3M 13–15.
+GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación y los bloques editoriales UC3M 13–17.
 
 La caché `opoweb-v94` incorpora los módulos de Diputación y UC3M para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
-1. UC3M temas 16 y 17: normativa académica, acceso y admisión.
-2. UC3M temas 18 a 20: presupuesto y contratación.
+1. UC3M temas 18 y 19: presupuesto y ejecución presupuestaria.
+2. UC3M tema 20: contratación del sector público y especialidades internas.
 3. Localizar y comprobar los Estatutos oficiales vigentes del OAPGT dentro del tema 22 de Diputación.
 4. Ejecutar la auditoría cruzada final de los 99 temas.
