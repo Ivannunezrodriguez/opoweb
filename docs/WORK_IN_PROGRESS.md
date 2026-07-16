@@ -1,0 +1,1 @@
+Trabajo editorial en curso: Diputación de Toledo, temas 29 y 30 (IBI, IAE, IVTM, IIVTNU y tasas). Este marcador se eliminará o actualizará al cerrar el bloque mediante pull request.
