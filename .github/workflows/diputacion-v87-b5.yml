@@ -21,6 +21,7 @@ jobs:
       - name: Check syntax
         run: |
           node --check assets/js/diputacion-teoria-v87-bloque5.js
+          node --check assets/js/diputacion-teoria-v87-bloque5-preguntas.js
           node --check tests/diputacion-teoria-v87-bloque5.js
       - name: Validate theory, sources and numbering
         run: node tests/diputacion-teoria-v87-bloque5.js
