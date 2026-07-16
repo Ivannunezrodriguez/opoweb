@@ -1,0 +1,34 @@
+name: Diputación teoría v87 bloque 5
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  diputacion-theory-b5:
+    name: Diputación · temas 33 y 34
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check syntax
+        run: |
+          node --check assets/js/diputacion-teoria-v87-bloque5.js
+          node --check tests/diputacion-teoria-v87-bloque5.js
+      - name: Validate theory, sources and numbering
+        run: node tests/diputacion-teoria-v87-bloque5.js
+      - name: Upload audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diputacion-teoria-v87-bloque5
+          path: diputacion-teoria-v87-bloque5.json
+          if-no-files-found: ignore
+          retention-days: 30
