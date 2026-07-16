@@ -22,6 +22,7 @@ jobs:
         run: |
           node --check assets/js/diputacion-teoria-v87-bloque4a.js
           node --check assets/js/diputacion-teoria-v87-bloque4b.js
+          node --check assets/js/diputacion-teoria-v87-bloque4-preguntas.js
           node --check tests/diputacion-teoria-v87-bloque4.js
       - name: Validate theory, sources and numbering
         run: node tests/diputacion-teoria-v87-bloque4.js
