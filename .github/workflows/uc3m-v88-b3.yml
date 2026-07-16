@@ -1,0 +1,36 @@
+name: UC3M teoría v88 bloque 3
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  uc3m-theory-b3:
+    name: UC3M · temas 16 y 17
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check syntax
+        run: |
+          node --check assets/js/uc3m-teoria-v88-bloque3.js
+          node --check tests/uc3m-teoria-v88-bloque3.js
+          node --check assets/js/loader-v83.js
+          node --check sw.js
+      - name: Validate editorial theory
+        run: node tests/uc3m-teoria-v88-bloque3.js
+      - name: Upload audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: uc3m-teoria-v88-bloque3
+          path: uc3m-teoria-v88-bloque3.json
+          if-no-files-found: ignore
+          retention-days: 30
