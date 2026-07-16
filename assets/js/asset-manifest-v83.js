@@ -162,7 +162,7 @@
 
   globalThis.OPOWEB_ASSET_MANIFEST_V83 = Object.freeze({
     applicationVersion: 'v0.86.0',
-    cacheName: 'opoweb-v95',
+    cacheName: 'opoweb-v94',
     scripts: Object.freeze(scripts),
     staticAssets: Object.freeze(staticAssets),
     allAssets: Object.freeze([...staticAssets, ...scripts])
