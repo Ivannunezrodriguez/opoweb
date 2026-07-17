@@ -4,11 +4,11 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- **OpoWeb v0.89.1** con cierre editorial v87 de Diputación, cierre específico v88 de UC3M, auditoría cruzada v89.1 e interfaz de estado unificada
-- Caché PWA `opoweb-v95`
-- Revisión editorial, documental y de solicitudes: 17 de julio de 2026
+- **OpoWeb v0.89.2**
+- Caché PWA `opoweb-v96`
+- Revisión pedagógica abierta desde el 17 de julio de 2026
 
-La interfaz v0.89.1 elimina fichas antiguas de «teoría en reconstrucción» que podían aparecer junto a una convocatoria ya cerrada. Cada oposición muestra ahora una única ficha vigente con su nivel real de cobertura y las reservas documentales aplicables.
+La versión v0.89.2 retira las etiquetas «fuente teórica principal», «temario completo» y los porcentajes de autosuficiencia. El contenido continúa disponible, pero queda correctamente clasificado como **resumen, orientación y práctica**, no como manual único.
 
 ## Estado de solicitudes
 
@@ -21,100 +21,105 @@ La interfaz v0.89.1 elimina fichas antiguas de «teoría en reconstrucción» qu
 
 Los justificantes personales, números de registro y documentos identificativos se conservan fuera del repositorio público.
 
-## Principio editorial
+## Corrección del criterio editorial
 
-OpoWeb debe convertirse en la **única fuente editorial y teórica de estudio**: cada tema debe contener el epígrafe oficial exacto, desarrollo completo por apartados, normativa vigente, fuentes oficiales, explicación sin invenciones, resumen, puntos calientes, autoevaluación, test y material práctico.
+La auditoría anterior verificaba número de palabras, estructura fija, fuentes, tablas y bancos de preguntas. Esos controles son útiles para detectar archivos incompletos o rotos, pero **no demuestran por sí solos que un tema pueda estudiarse sin manual externo**.
 
-No se considera una convocatoria autosuficiente mientras falten epígrafes, desarrollo literal, fuentes oficiales o contenido anual específico. OpoWeb todavía no es una fuente única completa para las cuatro convocatorias por el bloqueo documental del OAPGT.
+Se ha confirmado que varios temas, incluido La Puebla tema 1, condensan demasiada materia en pocos párrafos, no desarrollan sistemáticamente todos los artículos exigibles y pueden incluir ampliaciones ajenas al epígrafe mientras faltan bloques que sí forman parte de él.
 
-## Estado teórico
+Por tanto:
 
-| Convocatoria | Teoría autosuficiente |
-|---|---:|
-| Carranque | 99 % publicado |
-| La Puebla | 99 % publicado |
-| Diputación | 96 % aprox. |
-| UC3M | 99 % publicado |
-| Global editorial | ≈99 % |
-| Preparación estricta como fuente única | ≈97–98 % |
+- los estados `APTO`, `19/19`, `20/20` y similares se interpretan únicamente como integridad técnica o estructural histórica;
+- no equivalen a suficiencia pedagógica;
+- se retiran los porcentajes globales de completitud;
+- ninguna de las cuatro convocatorias se declara actualmente fuente teórica única.
 
-La diferencia entre cobertura editorial y preparación estricta se debe a que los Estatutos del OAPGT forman parte expresa del tema 22 de Diputación y todavía no existe en el repositorio una consolidación oficial completa y trazable.
+Estado global actual: `RESUMEN_Y_PRACTICA_NO_FUENTE_UNICA`.
 
-## UC3M · temas específicos 13–20 cerrados
+La justificación y el nuevo estándar están documentados en `docs/REVISION_PEDAGOGICA_V0892.md`.
 
-Quedan cerrados editorialmente:
+## Nuevo estándar para cerrar un tema
 
-- **Tema 13 · LOSU I:** sistema universitario, funciones, autonomía, creación y reconocimiento de universidades, calidad, enseñanzas, investigación, transferencia, cooperación con la sociedad e internacionalización.
-- **Tema 14 · LOSU II:** estudiantado, becas, participación, régimen económico-financiero, personal docente e investigador y personal técnico, de gestión y de administración y servicios.
-- **Tema 15 · Estatutos UC3M:** Defensor Universitario, servicios universitarios, patrimonio, presupuesto, control, contratación y reforma estatutaria.
-- **Tema 16 · Normativa académica:** RD 822/2021, matrícula, permanencia, convocatorias, evaluación continua, ordinaria y extraordinaria, revisión y actas.
-- **Tema 17 · Acceso y admisión:** RD 534/2024 actualizado, vías de acceso, PAU, Técnico Superior, nota de admisión, distrito único, cupos, listas de espera y cambio de titulación.
-- **Tema 18 · Presupuesto UC3M I:** características, estructura, ingresos, gastos, créditos iniciales, financiación, modificaciones y ejecución de ingresos conforme al Presupuesto 2026.
-- **Tema 19 · Presupuesto UC3M II:** fases RC-A-D-O, gestión y documentos contables, facturas, conformidad, caja fija, anticipos, tesorería, liquidación y cierre.
-- **Tema 20 · Contratación:** LCSP vigente, tipos contractuales, órgano y Mesa, objeto, lotes, presupuesto base, valor estimado, expediente, pliegos, solvencia, adjudicación y procedimientos internos UC3M.
+Un tema solo podrá volver a declararse completo cuando incluya:
 
-Los ocho temas conservan el epígrafe oficial y disponen de desarrollo completo, fuentes oficiales, esquema, tabla de repaso, síntesis, puntos calientes, retención activa y estrategia de examen. Mantienen un mínimo de 30 preguntas auditadas por tema.
+1. El epígrafe oficial descompuesto inciso por inciso.
+2. Una matriz epígrafe–norma–artículos.
+3. Desarrollo sistemático de todos los bloques exigidos.
+4. Artículos, plazos, mayorías, órganos, excepciones y efectos explicados.
+5. Separación entre materia obligatoria, ampliación útil y contenido ajeno al epígrafe.
+6. Preguntas y supuestos trazables a la norma o artículo correspondiente.
+7. Revisión humana de suficiencia para estudiar sin manual externo.
 
-Los temas 18 y 19 se apoyan en el Presupuesto UC3M 2026 aprobado por el Consejo de Gobierno y el Consejo Social el 11 de diciembre de 2025. El tema 20 utiliza la LCSP consolidada y actualizada en 2026, los Estatutos, la Resolución rectoral de delegación de 31 de mayo de 2022 y el procedimiento oficial de la Dirección Económico Financiera. Los datos anuales y los umbrales variables se separan de las reglas estables.
+El número de palabras deja de ser un criterio suficiente. La cobertura normativa y la correspondencia con el programa oficial pasan a ser el criterio principal.
 
-El bloque específico UC3M 13–20 queda cerrado. El uno por ciento residual corresponde a mantenimiento de vigencia y datos anuales, no a epígrafes sin desarrollar.
+## Material disponible
 
-## Diputación · temas 25–40 cerrados
+### La Puebla
 
-Quedan cerrados como fuente editorial autosuficiente los temas 25 a 40: gestión y recaudación tributaria, presupuesto, protección de datos y transparencia, tributos locales, firma electrónica, Windows 11, Edge, GroupWise, impresión, LibreOffice Writer, Calc, Base e Impress, ordenador personal y periféricos.
+- 19 epígrafes cargados.
+- 570 preguntas.
+- 20 supuestos.
+- Tres simulacros de 50 + 5.
+- Corrección +0,20 / −0,05.
+- Estado pedagógico: revisión completa pendiente.
 
-## Control de numeración
+### Carranque
 
-La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. Los temas 29 y 30 contienen los tributos locales; el 31 trata firma y certificados; el 32 archivos y unidades; el 33 Edge y GroupWise; el 34 impresión y escaneado; el 35 Writer; el 36 Calc; el 37 Base; el 38 Impress; el 39 ordenador personal; y el 40 periféricos.
+- 20 epígrafes cargados.
+- 600 preguntas.
+- 18 supuestos.
+- Tres simulacros de 80 + 5.
+- Corrección +0,25 / −0,08.
+- Estado pedagógico: revisión completa pendiente.
 
-## OAPGT · reserva documental v89.1
+### UC3M
+
+- 20 epígrafes cargados.
+- Al menos 720 preguntas.
+- Tres simulacros de 70 + 5.
+- Los materiales específicos 13–20 conservan sus fuentes y contenido, pero deben superar la nueva auditoría pedagógica antes de considerarse autosuficientes.
+
+### Diputación de Toledo
+
+- 40 epígrafes cargados.
+- Los materiales comunes, tributarios, informáticos y prácticos permanecen disponibles.
+- Todo el programa debe superar la nueva auditoría pedagógica.
+- El tema 22 mantiene además la reserva documental de los Estatutos del OAPGT.
+
+## OAPGT · reserva documental
 
 La investigación mantiene localizadas publicaciones de 1996, 1999, 2002, 2004 y 2011, además de referencias oficiales recientes a los artículos 4.a, 12.2.l.8 y 14. Varias piezas proceden todavía de transcripciones secundarias de boletines históricos, por lo que faltan copias oficiales, acreditación del cierre definitivo de las reformas iniciales y una búsqueda documentada de modificaciones posteriores.
 
-Se ha corregido un falso positivo importante: el BOP Toledo núm. 109, de 13 de mayo de 2005, contiene una corrección del artículo 21 de los Estatutos del **Consorcio de Servicios Públicos Medioambientales**, no de los Estatutos del OAPGT. Esa publicación queda expresamente descartada y no se utiliza para acreditar una aprobación definitiva del OAPGT.
+El BOP Toledo núm. 109, de 13 de mayo de 2005, contiene una corrección del artículo 21 de los Estatutos del **Consorcio de Servicios Públicos Medioambientales**, no de los Estatutos del OAPGT. Esa publicación queda descartada.
 
 Estado: `CADENA_HISTORICA_PARCIAL_LOCALIZADA_PENDIENTE_CIERRE_OFICIAL`.
 
-Mientras no se cierre la cadena con copias oficiales y consolidación artículo por artículo:
+Mientras no se cierre la cadena:
 
-- no se habilita teoría literal de los Estatutos;
-- no se generan preguntas estatutarias;
-- no se declara Diputación al 100 %;
-- se mantiene trazabilidad de la evidencia, de los falsos positivos y de los documentos pendientes en `docs/OAPGT_ESTATUTOS_V89.md`.
-
-## Auditoría cruzada final v89
-
-La matriz final suma los **99 temas oficiales**: Carranque 20, La Puebla 19, Diputación 40 y UC3M 20. Ejecuta las auditorías editoriales existentes de Carranque y La Puebla, los ocho bloques profundos de Diputación 25–40, los cinco bloques específicos de UC3M 13–20, la calidad global de preguntas, la integridad web/PWA y el control preventivo del OAPGT.
-
-Resultado exigido por CI: `APTO_EDITORIAL_CON_RESERVA_DOCUMENTAL`. La reserva queda limitada al apartado estatutario del tema 22 de Diputación y no se disimula elevando porcentajes.
-
-## La Puebla 19/19 publicada
-
-- 25.395 palabras; media 1.337; mínimo 928.
-- Dos o más fuentes oficiales por tema.
-- 570 preguntas, 20 supuestos y tres simulacros de 50 + 5.
-- Corrección +0,20 / −0,05.
-
-## Carranque 20/20 publicada
-
-- 36.170 palabras.
-- 600 preguntas, 18 supuestos y tres simulacros de 80 + 5.
-- Corrección +0,25 / −0,08.
+- no se habilita teoría literal consolidada de los Estatutos;
+- no se generan preguntas estatutarias como verificadas;
+- no se declara completo el tema 22;
+- se mantiene la trazabilidad en `docs/OAPGT_ESTATUTOS_V89.md`.
 
 ## Banco global
 
-Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M. UC3M mantiene al menos 720 preguntas tras ampliar los temas 18 y 19 y conserva tres simulacros de 70 + 5.
+Más de 3.100 preguntas permanecen disponibles. La existencia de preguntas, fuentes y esquemas no se utilizará de nuevo como prueba automática de que el desarrollo teórico es autosuficiente.
 
-## Validación
+## Validación técnica
 
-GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación, los bloques editoriales UC3M 13–20, la auditoría cruzada final v89 y la ficha única de estado de cada convocatoria.
+GitHub Actions mantiene la validación de carga, sintaxis, integridad web/PWA, conservación del progreso, funcionamiento sin conexión, escritorio, Pixel 7 e iPad Pro 11.
 
-La caché `opoweb-v95` incorpora la interfaz v0.89.1 y todos los módulos de Diputación y UC3M para uso sin conexión tras una primera carga correcta.
+La nueva interfaz debe comprobar además que:
+
+- no aparece «fuente teórica principal»;
+- no se muestran porcentajes de completitud pedagógica;
+- todas las convocatorias avisan de que el material es resumen y práctica;
+- la caché vigente es `opoweb-v96`.
 
 ## Siguiente trabajo
 
-1. Agotar Wayback Machine, Arquivo.pt y el archivo histórico del BOP de Toledo para localizar copias oficiales o archivadas de 1996, 1999, 2002, 2004 y 2011.
-2. Solo si esa búsqueda no cierra la cadena, solicitar al Archivo de la Diputación o al OAPGT las copias oficiales y la acreditación del cierre definitivo de las reformas.
-3. Comprobar documentalmente si existen modificaciones posteriores a 2011.
-4. Realizar la consolidación artículo por artículo y solo entonces habilitar teoría y preguntas del apartado estatutario del tema 22.
-5. Mantener actualizados Presupuesto UC3M, admisión, ponderaciones, plazas y umbrales normativos.
+1. Reconstruir La Puebla tema 1 con cobertura sistemática de los artículos realmente exigibles.
+2. Auditar después los restantes temas municipales con la nueva matriz epígrafe–artículos.
+3. Aplicar el mismo control a UC3M y Diputación.
+4. Cerrar documentalmente el OAPGT antes de consolidar el tema 22.
+5. Mantener actualizados los datos dinámicos y la normativa vigente.
