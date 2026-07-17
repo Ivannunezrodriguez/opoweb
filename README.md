@@ -4,7 +4,7 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- OpoWeb v0.86.0 con cierre editorial v87 de Diputación, cierre específico v88 de UC3M y auditoría cruzada v89
+- OpoWeb v0.86.0 con cierre editorial v87 de Diputación, cierre específico v88 de UC3M y auditoría cruzada v89.1
 - Caché PWA `opoweb-v94`
 - Revisión editorial, documental y de solicitudes: 17 de julio de 2026
 
@@ -65,24 +65,26 @@ Quedan cerrados como fuente editorial autosuficiente los temas 25 a 40: gestión
 
 La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. Los temas 29 y 30 contienen los tributos locales; el 31 trata firma y certificados; el 32 archivos y unidades; el 33 Edge y GroupWise; el 34 impresión y escaneado; el 35 Writer; el 36 Calc; el 37 Base; el 38 Impress; el 39 ordenador personal; y el 40 periféricos.
 
-## OAPGT · reserva documental v89
+## OAPGT · reserva documental v89.1
 
-La investigación ha localizado una cadena histórica de publicaciones de 1996, 1999, 2002, 2004–2005 y 2011, además de referencias oficiales actuales a los artículos 12.2.l.8 y 14. Sin embargo, varias piezas proceden todavía de transcripciones secundarias de boletines históricos y falta la publicación definitiva íntegra de 2005, el texto oficial completo de 2011 y una búsqueda oficial documentada de reformas posteriores.
+La investigación mantiene localizadas publicaciones de 1996, 1999, 2002, 2004 y 2011, además de referencias oficiales recientes a los artículos 4.a, 12.2.l.8 y 14. Varias piezas proceden todavía de transcripciones secundarias de boletines históricos, por lo que faltan copias oficiales, acreditación del cierre definitivo de las reformas iniciales y una búsqueda documentada de modificaciones posteriores.
 
-Estado: `CADENA_HISTORICA_LOCALIZADA_PENDIENTE_CONSOLIDACION_OFICIAL`.
+Se ha corregido un falso positivo importante: el BOP Toledo núm. 109, de 13 de mayo de 2005, contiene una corrección del artículo 21 de los Estatutos del **Consorcio de Servicios Públicos Medioambientales**, no de los Estatutos del OAPGT. Esa publicación queda expresamente descartada y no se utiliza para acreditar una aprobación definitiva del OAPGT.
+
+Estado: `CADENA_HISTORICA_PARCIAL_LOCALIZADA_PENDIENTE_CIERRE_OFICIAL`.
 
 Mientras no se cierre la cadena con copias oficiales y consolidación artículo por artículo:
 
 - no se habilita teoría literal de los Estatutos;
 - no se generan preguntas estatutarias;
 - no se declara Diputación al 100 %;
-- se mantiene trazabilidad de la evidencia y de los documentos pendientes en `docs/OAPGT_ESTATUTOS_V89.md`.
+- se mantiene trazabilidad de la evidencia, de los falsos positivos y de los documentos pendientes en `docs/OAPGT_ESTATUTOS_V89.md`.
 
 ## Auditoría cruzada final v89
 
 La matriz final suma los **99 temas oficiales**: Carranque 20, La Puebla 19, Diputación 40 y UC3M 20. Ejecuta las auditorías editoriales existentes de Carranque y La Puebla, los ocho bloques profundos de Diputación 25–40, los cinco bloques específicos de UC3M 13–20, la calidad global de preguntas, la integridad web/PWA y el control preventivo del OAPGT.
 
-Resultado esperado y exigido por CI: `APTO_EDITORIAL_CON_RESERVA_DOCUMENTAL`. La reserva queda limitada al apartado estatutario del tema 22 de Diputación y no se disimula elevando porcentajes.
+Resultado exigido por CI: `APTO_EDITORIAL_CON_RESERVA_DOCUMENTAL`. La reserva queda limitada al apartado estatutario del tema 22 de Diputación y no se disimula elevando porcentajes.
 
 ## La Puebla 19/19 publicada
 
@@ -109,6 +111,7 @@ La caché `opoweb-v94` incorpora los módulos de Diputación y UC3M para uso sin
 
 ## Siguiente trabajo
 
-1. Obtener las copias oficiales de archivo de la cadena estatutaria del OAPGT, especialmente la publicación definitiva íntegra de 2005 y la modificación completa de 2011.
-2. Realizar la consolidación artículo por artículo y solo entonces habilitar teoría y preguntas del apartado estatutario del tema 22.
-3. Mantener actualizados Presupuesto UC3M, admisión, ponderaciones, plazas y umbrales normativos.
+1. Solicitar al Archivo de la Diputación de Toledo las copias oficiales de 1996, 1999, 2002, 2004 y 2011 y la acreditación del cierre definitivo de las reformas.
+2. Comprobar documentalmente si existen modificaciones posteriores a 2011.
+3. Realizar la consolidación artículo por artículo y solo entonces habilitar teoría y preguntas del apartado estatutario del tema 22.
+4. Mantener actualizados Presupuesto UC3M, admisión, ponderaciones, plazas y umbrales normativos.
