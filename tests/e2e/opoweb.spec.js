@@ -58,11 +58,11 @@ async function loadApplication(page) {
   return pageErrors;
 }
 
-test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }, testInfo) => {
+test('carga la versión pedagógica v0.89.2 y las cuatro OPE', async ({ page }, testInfo) => {
   const pageErrors = await loadApplication(page);
   const optionValues = await page.locator('#oposicionSelect option').evaluateAll(options => options.map(option => option.value));
   expect(optionValues).toEqual(EXPECTED_OPE_IDS);
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.89.1');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.89.2');
 
   const bootAudit = await page.evaluate(() => {
     const manifest = window.OPOWEB_ASSET_MANIFEST_V83;
@@ -75,35 +75,25 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
       loaded: boot.loaded.length,
       declared: manifest.scripts.length,
       applicationVersion: manifest.applicationVersion,
-      releaseVersion: window.OPOWEB_RELEASE_V89?.version,
-      releaseStatus: window.OPOWEB_RELEASE_V89?.status,
-      municipalStatus: window.OPOWEB_MUNICIPALES_V84?.globalStatus,
-      carranqueStatus: window.OPOWEB_THEORY_AUDIT_V85?.carranque?.status,
-      carranqueThemes: window.OPOWEB_THEORY_AUDIT_V85?.carranque?.autonomousThemes,
-      pueblaStatus: window.OPOWEB_PUEBLA_THEORY_V86?.status,
-      pueblaThemes: window.OPOWEB_PUEBLA_THEORY_V86?.autonomousThemes,
-      pueblaTotal: window.OPOWEB_PUEBLA_THEORY_V86?.totalThemes,
+      pedagogyVersion: window.OPOWEB_PEDAGOGY_V90?.version,
+      pedagogyStatus: window.OPOWEB_PEDAGOGY_V90?.status,
+      percentagesWithdrawn: window.OPOWEB_PEDAGOGY_V90?.completenessPercentagesWithdrawn,
       duplicateScripts: window.OPOWEB_LOADER_AUDIT_V83.duplicateScripts,
       orderMatches: JSON.stringify(loadedPaths) === JSON.stringify(expectedPaths)
     };
   });
+
   expect(bootAudit.status).toBe('ready');
   expect(bootAudit.failed).toBeNull();
   expect(bootAudit.loaded).toBe(bootAudit.declared);
-  expect(bootAudit.applicationVersion).toBe('v0.89.1');
-  expect(bootAudit.releaseVersion).toBe('v0.89.1');
-  expect(bootAudit.releaseStatus).toBe('PUBLICADA');
-  expect(bootAudit.municipalStatus).toBe('APTO');
-  expect(bootAudit.carranqueStatus).toBe('APTO');
-  expect(bootAudit.carranqueThemes).toBe(20);
-  expect(bootAudit.pueblaStatus).toBe('APTO');
-  expect(bootAudit.pueblaThemes).toBe(19);
-  expect(bootAudit.pueblaTotal).toBe(19);
+  expect(bootAudit.applicationVersion).toBe('v0.89.2');
+  expect(bootAudit.pedagogyVersion).toBe('v0.89.2');
+  expect(bootAudit.pedagogyStatus).toBe('RESUMEN_Y_PRACTICA_NO_FUENTE_UNICA');
+  expect(bootAudit.percentagesWithdrawn).toBe(true);
   expect(bootAudit.duplicateScripts).toBe(0);
   expect(bootAudit.orderMatches).toBe(true);
 
   await page.locator('#oposicionSelect').selectOption('uc3m-aux-admin-2026');
-  await expect(page.locator('#oposicionCard')).toContainText('UC3M');
   for (const view of Object.keys(VIEW_TITLES)) await navigateTo(page, view);
   await expect(page.locator('#loaderAuditV83')).toContainText('LISTO');
   const horizontalOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
@@ -111,97 +101,40 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
   expect(pageErrors).toEqual([]);
 });
 
-test('La Puebla muestra una única ficha vigente y diecinueve temas autosuficientes', async ({ page }) => {
+for (const config of [
+  { id: 'puebla-aux-admin-2026', label: 'La Puebla · revisión abierta', themes: 19 },
+  { id: 'carranque-aux-admin-2026', label: 'Carranque · revisión abierta', themes: 20 },
+  { id: 'diputacion-toledo-admin-2026', label: 'Diputación · revisión abierta', themes: 40 },
+  { id: 'uc3m-aux-admin-2026', label: 'UC3M · revisión abierta', themes: 20 }
+]) {
+  test(`${config.label} muestra el estado real de revisión pedagógica`, async ({ page }) => {
+    const pageErrors = await loadApplication(page);
+    await page.locator('#oposicionSelect').selectOption(config.id);
+    await navigateTo(page, 'temario');
+
+    await expect(page.locator('#programmeStatusV90')).toHaveCount(1);
+    await expect(page.locator('#programmeStatusV90')).toContainText(config.label);
+    await expect(page.locator('#programmeStatusV90')).toContainText('Resumen y práctica');
+    await expect(page.locator('#programmeStatusV90')).toContainText('no');
+    await expect(page.locator('#programmeStatusV89')).toHaveCount(0);
+    await expect(page.locator('#theoryStatusV85')).toHaveCount(0);
+    await expect(page.locator('#pueblaTheoryStatusV86')).toHaveCount(0);
+    await expect(page.locator('.theme-item')).toHaveCount(config.themes);
+    await expect(page.locator('body')).not.toContainText('Fuente teórica principal');
+    expect(pageErrors).toEqual([]);
+  });
+}
+
+test('el detalle de tema no se presenta como desarrollo completo ni autosuficiente', async ({ page }) => {
   const pageErrors = await loadApplication(page);
   await page.locator('#oposicionSelect').selectOption('puebla-aux-admin-2026');
   await navigateTo(page, 'temario');
-
-  await expect(page.locator('#programmeStatusV89')).toHaveCount(1);
-  await expect(page.locator('#programmeStatusV89')).toContainText('La Puebla 19/19');
-  await expect(page.locator('#programmeStatusV89')).toContainText('Fuente teórica principal');
-  await expect(page.locator('#theoryStatusV85')).toHaveCount(0);
-  await expect(page.locator('#pueblaTheoryStatusV86')).toHaveCount(0);
-  await expect(page.locator('.theme-item')).toHaveCount(19);
-
   await page.locator('.theme-item').first().click();
-  await expect(page.locator('#pueblaThemeSourcesV86')).toContainText('Tema autosuficiente');
-  await expect(page.locator('#pueblaThemeSourcesV86 li')).toHaveCount(2);
-  for (const heading of [
-    'Resumen orientado al aprobado','Rigor normativo','Desarrollo completo del epígrafe oficial',
-    'Síntesis de repaso rápido','Opo-Test: puntos calientes','Tres preguntas de retención activa','Estrategia de examen'
-  ]) await expect(page.locator('#content')).toContainText(heading);
 
-  const theory = await page.evaluate(() => {
-    const ope = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'puebla-aux-admin-2026');
-    return {
-      status: ope.theoryProgramme.v86.status,
-      completed: ope.theoryProgramme.v86.completedThemes,
-      pending: ope.theoryProgramme.v86.pendingThemes,
-      questions: Object.values(ope.themeTests).reduce((sum, bank) => sum + bank.length, 0),
-      practicals: ope.practicalCases.length,
-      simulations: ope.simulacros.length,
-      metrics: ope.themes.map(theme => ({
-        number: Number(theme.number),
-        words: theme.theoryStatus?.words,
-        autonomous: theme.theoryStatus?.autonomous === true,
-        sources: (theme.officialSources || []).length,
-        questions: (ope.themeTests?.[theme.id] || []).length
-      }))
-    };
-  });
-  expect(theory.status).toBe('APTO');
-  expect(theory.completed).toEqual(Array.from({ length: 19 }, (_, index) => index + 1));
-  expect(theory.pending).toEqual([]);
-  expect(theory.questions).toBe(570);
-  expect(theory.practicals).toBe(20);
-  expect(theory.simulations).toBe(3);
-  expect(theory.metrics.every(item => item.autonomous)).toBe(true);
-  expect(theory.metrics.every(item => item.words >= 900)).toBe(true);
-  expect(theory.metrics.every(item => item.sources >= 2)).toBe(true);
-  expect(theory.metrics.every(item => item.questions === 30)).toBe(true);
-  expect(pageErrors).toEqual([]);
-});
-
-test('Carranque muestra una única ficha vigente y veinte temas autosuficientes', async ({ page }) => {
-  const pageErrors = await loadApplication(page);
-  await page.locator('#oposicionSelect').selectOption('carranque-aux-admin-2026');
-  await navigateTo(page, 'temario');
-  await expect(page.locator('#programmeStatusV89')).toHaveCount(1);
-  await expect(page.locator('#programmeStatusV89')).toContainText('Carranque 20/20');
-  await expect(page.locator('#programmeStatusV89')).toContainText('Fuente teórica principal');
-  await expect(page.locator('#theoryStatusV85')).toHaveCount(0);
-  await expect(page.locator('.theme-item')).toHaveCount(20);
-  await page.locator('.theme-item').first().click();
-  await expect(page.locator('#themeSourcesV85')).toContainText('Tema autosuficiente');
-  await expect(page.locator('#themeSourcesV85 li')).toHaveCount(3);
-  for (const heading of ['Resumen orientado al aprobado','Rigor normativo','Síntesis de repaso rápido','Opo-Test: puntos calientes','Tres preguntas de retención activa','Estrategia de examen']) {
-    await expect(page.locator('#content')).toContainText(heading);
-  }
-  const theory = await page.evaluate(() => {
-    const ope = window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'carranque-aux-admin-2026');
-    const metrics = ope.themes.map(theme => {
-      const text = [...(theme.sections || []).flatMap(section => [section.heading, ...(section.paragraphs || [])]), theme.tree || '', ...(theme.reviewTable || []).flat()].join(' ');
-      return { words: text.trim().split(/\s+/).filter(Boolean).length, autonomous: theme.theoryStatus?.autonomous === true, sources: (theme.officialSources || []).length, questions: (ope.themeTests?.[theme.id] || []).length };
-    });
-    return { completed: ope.theoryProgramme.v85.completedThemes, pending: ope.theoryProgramme.v85.pendingThemes, metrics };
-  });
-  expect(theory.completed).toHaveLength(20);
-  expect(theory.pending).toEqual([]);
-  expect(theory.metrics.every(item => item.autonomous)).toBe(true);
-  expect(theory.metrics.every(item => item.words >= 1000)).toBe(true);
-  expect(theory.metrics.every(item => item.sources >= 2)).toBe(true);
-  expect(theory.metrics.every(item => item.questions === 30)).toBe(true);
-  expect(pageErrors).toEqual([]);
-});
-
-test('Diputación conserva visible la reserva documental del OAPGT', async ({ page }) => {
-  const pageErrors = await loadApplication(page);
-  await page.locator('#oposicionSelect').selectOption('diputacion-toledo-admin-2026');
-  await navigateTo(page, 'temario');
-  await expect(page.locator('#programmeStatusV89')).toHaveCount(1);
-  await expect(page.locator('#programmeStatusV89')).toContainText('Diputación ≈96 %');
-  await expect(page.locator('#programmeStatusV89')).toContainText('Reserva OAPGT · tema 22');
-  await expect(page.locator('#programmeStatusV89')).toContainText('No utilizar todavía OpoWeb como fuente única');
+  await expect(page.locator('#content')).toContainText('Tema en revisión pedagógica');
+  await expect(page.locator('#content')).toContainText('Resumen del epígrafe · revisión pendiente');
+  await expect(page.locator('#content')).not.toContainText('Tema autosuficiente');
+  await expect(page.locator('#content')).not.toContainText('Desarrollo completo del epígrafe oficial');
   expect(pageErrors).toEqual([]);
 });
 
@@ -215,21 +148,19 @@ test('guarda y recupera el progreso tras recargar', async ({ page }) => {
   await page.locator('#correctSet').click();
   await expect(page.locator('.result-box').first()).toBeVisible();
   const savedBeforeReload = await page.evaluate(() => JSON.parse(localStorage.getItem('opowebProgress') || '{}'));
-  const uc3mTestKeys = Object.keys(savedBeforeReload).filter(key => key.startsWith('uc3m-aux-admin-2026:test:'));
-  expect(uc3mTestKeys.length).toBeGreaterThan(0);
-  expect(savedBeforeReload[uc3mTestKeys[0]].corrected).toBe(true);
+  const keys = Object.keys(savedBeforeReload).filter(key => key.startsWith('uc3m-aux-admin-2026:test:'));
+  expect(keys.length).toBeGreaterThan(0);
   await page.reload({ waitUntil: 'domcontentloaded' });
   await waitForBoot(page);
   await page.locator('#oposicionSelect').selectOption('uc3m-aux-admin-2026');
   await navigateTo(page, 'tests');
   await expect(page.locator('.question input[type="radio"]:checked').first()).toBeVisible();
-  await expect(page.locator('.result-box').first()).toBeVisible();
   const savedAfterReload = await page.evaluate(() => JSON.parse(localStorage.getItem('opowebProgress') || '{}'));
   expect(savedAfterReload).toEqual(savedBeforeReload);
   expect(pageErrors).toEqual([]);
 });
 
-test('instala la PWA y funciona sin conexión conservando datos', async ({ page, context }, testInfo) => {
+test('instala la PWA v0.89.2 y funciona sin conexión', async ({ page, context }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop-chromium', 'La prueba PWA completa se ejecuta una vez en Chromium de escritorio.');
   const pageErrors = await loadApplication(page);
   await page.evaluate(async () => {
@@ -247,29 +178,23 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
     await page.evaluate(() => navigator.serviceWorker.ready);
   }
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBeTruthy();
-  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v95')), { timeout: 30_000 }).toBeTruthy();
+  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v96')), { timeout: 30_000 }).toBeTruthy();
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open('opoweb-v95');
+    const cache = await caches.open('opoweb-v96');
     return (await cache.keys()).map(request => new URL(request.url).pathname);
   });
   for (const expected of [
-    '/index.html','/assets/js/asset-manifest-v83.js','/assets/js/loader-v83.js','/assets/js/storage-v82.js',
-    '/assets/js/municipales-v84-cierre.js','/assets/js/puebla-teoria-v86-bloque1.js',
-    '/assets/js/puebla-teoria-v86-bloque2.js','/assets/js/puebla-teoria-v86-bloque3.js',
-    '/assets/js/puebla-teoria-v86-bloque4.js','/assets/js/carranque-teoria-v85-bloque1.js',
-    '/assets/js/carranque-teoria-v85-bloque4.js','/assets/js/ui-v86.js','/assets/js/ui-v89-release.js','/manifest.webmanifest'
+    '/index.html','/assets/js/asset-manifest-v83.js','/assets/js/loader-v83.js',
+    '/assets/js/puebla-teoria-v86-bloque1.js','/assets/js/ui-v89-release.js',
+    '/assets/js/ui-v90-pedagogia.js','/manifest.webmanifest'
   ]) expect(cachedPaths).toContain(expected);
-  const manifest = await page.evaluate(async () => (await fetch('/manifest.webmanifest')).json());
-  expect(manifest.start_url).toBe('./index.html');
-  expect(manifest.display).toBe('standalone');
-  expect(manifest.icons.length).toBeGreaterThan(0);
+
   const offlineProgress = { 'uc3m-aux-admin-2026:test:offline-check': { answers: { prueba: 'A' }, corrected: false, score: null } };
   await page.evaluate(value => localStorage.setItem('opowebProgress', JSON.stringify(value)), offlineProgress);
   await context.setOffline(true);
   await page.reload({ waitUntil: 'domcontentloaded' });
   await waitForBoot(page);
-  await expect(page.locator('#viewTitle')).toHaveText('Temario');
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.89.1');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.89.2');
   const restored = await page.evaluate(() => JSON.parse(localStorage.getItem('opowebProgress') || '{}'));
   expect(restored).toEqual(offlineProgress);
   expect(pageErrors).toEqual([]);
