@@ -15,7 +15,8 @@ for (const file of [
   'assets/js/uc3m-v73-fix.js','assets/js/uc3m-v74-losu.js','assets/js/uc3m-v75-estatutos.js','assets/js/uc3m-v76-academica-admision.js',
   'assets/js/uc3m-v77-normativa-interna.js','assets/js/uc3m-v78-presupuesto-2026.js','assets/js/uc3m-v79-contratacion-interna.js',
   'assets/js/uc3m-v80-cierre-calidad.js','assets/js/uc3m-teoria-v88-bloque1a.js','assets/js/uc3m-teoria-v88-bloque1b.js',
-  'assets/js/uc3m-teoria-v88-bloque2.js','assets/js/uc3m-teoria-v88-bloque3.js','assets/js/uc3m-teoria-v88-bloque4.js'
+  'assets/js/uc3m-teoria-v88-bloque2.js','assets/js/uc3m-teoria-v88-bloque3.js','assets/js/uc3m-teoria-v88-bloque4.js',
+  'assets/js/uc3m-teoria-v88-bloque4-preguntas.js'
 ]) run(file);
 
 const ope = context.window.OPOSICIONES_DATA.oposiciones.find(item => item.id === 'uc3m-aux-admin-2026');
@@ -49,6 +50,9 @@ const metrics = [18,19].map(number => {
   if (metric.rows < 12) failures.push(`Tema ${number}: tabla insuficiente`);
   if (JSON.stringify(theme.sections.map(section => section.heading)) !== JSON.stringify(required)) failures.push(`Tema ${number}: estructura incorrecta`);
   if (new Set(bank.map(question => question.id)).size !== bank.length) failures.push(`Tema ${number}: IDs duplicados`);
+  if (new Set(bank.map(question => question.text.trim().toLowerCase())).size !== bank.length) failures.push(`Tema ${number}: preguntas duplicadas`);
+  if (!bank.every(question => Array.isArray(question.options) && question.options.length === 4 && question.options.some(option => option.letter === question.answer))) failures.push(`Tema ${number}: pregunta inválida`);
+  if (!bank.every(question => question.justification || question.source)) failures.push(`Tema ${number}: pregunta sin justificación`);
   for (const marker of requiredMarkers[number]) {
     if (!body.includes(marker)) failures.push(`Tema ${number}: falta marcador ${marker}`);
   }
@@ -66,4 +70,4 @@ const report = { status: failures.length ? 'REVISAR' : 'OK', metrics, programme,
 fs.writeFileSync('uc3m-teoria-v88-bloque4.json', JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report));
 assert.deepStrictEqual(failures, [], failures.join(' | '));
-console.log(`UC3M bloque 4 OK · temas 18 y 19 · ${metrics.map(metric => metric.words).join('/')} palabras`);
+console.log(`UC3M bloque 4 OK · temas 18 y 19 · ${metrics.map(metric => metric.words).join('/')} palabras · ${metrics.map(metric => metric.questions).join('/')} preguntas`);
