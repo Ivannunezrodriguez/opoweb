@@ -1,0 +1,21 @@
+name: Revisión pedagógica v0.89.2
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pedagogia:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Validar retirada de autosuficiencia
+        run: node tests/pedagogia-v90.js
+      - name: Validar cargador e integridad
+        run: |
+          node tests/loader-v85.js
+          node tests/site-integrity-v85.js
