@@ -21,8 +21,11 @@ const ui85 = read('assets/js/ui-v85.js');
 const ui86 = read('assets/js/ui-v86.js');
 const ui89 = read('assets/js/ui-v89-release.js');
 const ui90 = read('assets/js/ui-v90-pedagogia.js');
+const pueblaT01 = read('assets/js/puebla-rebuild-t01-v90.js');
 const browserTest = read('tests/e2e/opoweb.spec.js');
 const pedagogyDoc = read('docs/REVISION_PEDAGOGICA_V0892.md');
+const approvalDoc = read('docs/rebuild/puebla/TEMA_01_APROBACION_USUARIO.md');
+const manualDoc = read('docs/rebuild/puebla/TEMA_01_MANUAL_BORRADOR.md');
 const theoryFiles = [
   'assets/js/puebla-teoria-v86-bloque1.js',
   'assets/js/puebla-teoria-v86-bloque2.js',
@@ -32,14 +35,15 @@ const theoryFiles = [
   'assets/js/carranque-teoria-v85-estructura.js',
   'assets/js/carranque-teoria-v85-bloque2.js',
   'assets/js/carranque-teoria-v85-bloque3.js',
-  'assets/js/carranque-teoria-v85-bloque4.js'
+  'assets/js/carranque-teoria-v85-bloque4.js',
+  'assets/js/puebla-rebuild-t01-v90.js'
 ];
 
-assert.equal(packageJson.version, '0.89.2');
+assert.equal(packageJson.version, '0.89.3');
 assert.equal(packageJson.scripts['test:loader'], 'node tests/loader-v85.js');
 assert.equal(packageJson.scripts['test:integrity'], 'node tests/site-integrity-v85.js');
-assert.equal(manifest.applicationVersion, 'v0.89.2');
-assert.equal(manifest.cacheName, 'opoweb-v96');
+assert.equal(manifest.applicationVersion, 'v0.89.3');
+assert.equal(manifest.cacheName, 'opoweb-v97');
 assert.equal(new Set(manifest.scripts).size, manifest.scripts.length);
 assert.equal(new Set(manifest.allAssets).size, manifest.allAssets.length);
 
@@ -59,8 +63,10 @@ assert.ok(position('./assets/js/puebla-teoria-v86-bloque4.js') < position('./ass
 assert.ok(position('./assets/js/carranque-teoria-v85-bloque4.js') < position('./assets/js/auditoria-calidad-v72.js'));
 assert.ok(position('./assets/js/ui-v85.js') < position('./assets/js/ui-v86.js'));
 assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/ui-v89-release.js'));
-assert.ok(position('./assets/js/ui-v89-release.js') < position('./assets/js/ui-v90-pedagogia.js'));
+assert.ok(position('./assets/js/ui-v89-release.js') < position('./assets/js/puebla-rebuild-t01-v90.js'));
+assert.ok(position('./assets/js/puebla-rebuild-t01-v90.js') < position('./assets/js/ui-v90-pedagogia.js'));
 assert.equal(manifest.scripts.at(-1), './assets/js/ui-v90-pedagogia.js');
+assert.ok(manifest.staticAssets.includes('./docs/rebuild/puebla/TEMA_01_MANUAL_BORRADOR.md'));
 
 const directScripts = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
 assert.deepStrictEqual(directScripts, ['assets/js/asset-manifest-v83.js','assets/js/loader-v83.js']);
@@ -79,19 +85,25 @@ assert.ok(loader.includes("navigator.serviceWorker.register('./sw.js')"));
 assert.ok(ui85.includes("const VERSION = 'v0.85.0'"));
 assert.ok(ui86.includes("const VERSION = 'v0.86.0'"));
 assert.ok(ui89.includes("const VERSION = 'v0.89.1'"));
-assert.ok(ui90.includes("const VERSION = 'v0.89.2'"));
-assert.ok(ui90.includes("const CACHE = 'opoweb-v96'"));
+assert.ok(ui90.includes("const VERSION = 'v0.89.3'"));
+assert.ok(ui90.includes("const CACHE = 'opoweb-v97'"));
 assert.ok(ui90.includes('RESUMEN_Y_PRACTICA_NO_FUENTE_UNICA'));
 assert.ok(ui90.includes('completenessPercentagesWithdrawn: true'));
-assert.ok(ui90.includes('Tema en revisión pedagógica'));
-assert.ok(ui90.includes('Resumen del epígrafe · revisión pendiente'));
+assert.ok(ui90.includes('La Puebla · 1 tema aprobado'));
+assert.ok(ui90.includes('18 temas en revisión'));
+assert.ok(pueblaT01.includes("status: 'APROBADO_POR_USUARIO_E_INTEGRADO'"));
+assert.ok(pueblaT01.includes('sourceArticle'));
+assert.ok(pueblaT01.includes('traceable: true'));
+assert.ok(pueblaT01.includes('pueblaT01ManualV90'));
+assert.ok(approvalDoc.includes('«Tema 1 aprobado»'));
+assert.ok(manualDoc.includes('Artículo 55.2'));
 assert.ok(pedagogyDoc.includes('no verificaba de forma suficiente la cobertura artículo por artículo'));
-assert.ok(browserTest.includes('Versión OpoWeb v0.89.2'));
-assert.ok(browserTest.includes("includes('opoweb-v96')"));
-assert.ok(browserTest.includes('/assets/js/ui-v90-pedagogia.js'));
-assert.ok(browserTest.includes('OPOWEB_PEDAGOGY_V90'));
+assert.ok(browserTest.includes('Versión OpoWeb v0.89.3'));
+assert.ok(browserTest.includes("includes('opoweb-v97')"));
+assert.ok(browserTest.includes('/assets/js/puebla-rebuild-t01-v90.js'));
+assert.ok(browserTest.includes('OPOWEB_PUEBLA_T01_V90'));
 assert.equal(webManifest.start_url, './index.html');
 assert.equal(webManifest.display, 'standalone');
 for (const icon of webManifest.icons) assert.ok(exists(normalize(icon.src)), `Icono inexistente: ${icon.src}`);
 
-console.log(`Integridad v0.89.2 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · revisión pedagógica abierta`);
+console.log(`Integridad v0.89.3 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · tema 1 aprobado`);
