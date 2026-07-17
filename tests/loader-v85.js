@@ -14,8 +14,8 @@ vm.runInContext(read('assets/js/asset-manifest-v83.js'), context, { filename: 'a
 const manifest = context.OPOWEB_ASSET_MANIFEST_V83;
 
 assert.ok(manifest, 'No se ha creado OPOWEB_ASSET_MANIFEST_V83');
-assert.equal(manifest.applicationVersion, 'v0.89.1');
-assert.equal(manifest.cacheName, 'opoweb-v95');
+assert.equal(manifest.applicationVersion, 'v0.89.2');
+assert.equal(manifest.cacheName, 'opoweb-v96');
 assert.ok(Array.isArray(manifest.scripts));
 assert.ok(Array.isArray(manifest.staticAssets));
 assert.ok(Array.isArray(manifest.allAssets));
@@ -32,7 +32,7 @@ for (const asset of manifest.allAssets) {
 
 const position = asset => manifest.scripts.indexOf(asset);
 assert.equal(manifest.scripts[0], './data/oposiciones.js');
-assert.equal(manifest.scripts.at(-1), './assets/js/ui-v89-release.js');
+assert.equal(manifest.scripts.at(-1), './assets/js/ui-v90-pedagogia.js');
 assert.ok(position('./assets/js/storage-v82.js') < position('./assets/js/app.js'));
 assert.ok(position('./assets/js/app.js') < position('./assets/js/ui-v29.js'));
 assert.ok(position('./assets/js/practicos-v71.js') < position('./assets/js/municipales-v84-cierre.js'));
@@ -45,6 +45,7 @@ assert.ok(position('./assets/js/puebla-teoria-v86-bloque4.js') < position('./ass
 assert.ok(position('./assets/js/carranque-teoria-v85-bloque4.js') < position('./assets/js/auditoria-calidad-v72.js'));
 assert.ok(position('./assets/js/ui-v85.js') < position('./assets/js/ui-v86.js'));
 assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/ui-v89-release.js'));
+assert.ok(position('./assets/js/ui-v89-release.js') < position('./assets/js/ui-v90-pedagogia.js'));
 
 const index = read('index.html');
 const scriptSources = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
@@ -63,4 +64,4 @@ assert.ok(serviceWorker.includes('const CACHE = MANIFEST.cacheName'));
 assert.ok(serviceWorker.includes('const ASSETS = MANIFEST.allAssets'));
 assert.ok(!/const ASSETS = \[/.test(serviceWorker));
 
-console.log(`Cargador v0.89.1 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · interfaz vigente`);
+console.log(`Cargador v0.89.2 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · revisión pedagógica`);
