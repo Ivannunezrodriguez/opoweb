@@ -4,9 +4,9 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- OpoWeb v0.86.0 con cierre editorial v87 de Diputación y cierre específico v88 de UC3M
+- OpoWeb v0.86.0 con cierre editorial v87 de Diputación, cierre específico v88 de UC3M y auditoría cruzada v89
 - Caché PWA `opoweb-v94`
-- Revisión editorial y de solicitudes: 17 de julio de 2026
+- Revisión editorial, documental y de solicitudes: 17 de julio de 2026
 
 ## Estado de solicitudes
 
@@ -23,7 +23,7 @@ Los justificantes personales, números de registro y documentos identificativos 
 
 OpoWeb debe convertirse en la **única fuente editorial y teórica de estudio**: cada tema debe contener el epígrafe oficial exacto, desarrollo completo por apartados, normativa vigente, fuentes oficiales, explicación sin invenciones, resumen, puntos calientes, autoevaluación, test y material práctico.
 
-No se considera una convocatoria autosuficiente mientras falten epígrafes, desarrollo literal, fuentes oficiales o contenido anual específico. OpoWeb todavía no es una fuente única completa para las cuatro convocatorias por el bloqueo documental del OAPGT y por la auditoría cruzada final pendiente.
+No se considera una convocatoria autosuficiente mientras falten epígrafes, desarrollo literal, fuentes oficiales o contenido anual específico. OpoWeb todavía no es una fuente única completa para las cuatro convocatorias por el bloqueo documental del OAPGT.
 
 ## Estado teórico
 
@@ -33,7 +33,10 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 | La Puebla | 99 % publicado |
 | Diputación | 96 % aprox. |
 | UC3M | 99 % publicado |
-| Global | ≈99 % |
+| Global editorial | ≈99 % |
+| Preparación estricta como fuente única | ≈97–98 % |
+
+La diferencia entre cobertura editorial y preparación estricta se debe a que los Estatutos del OAPGT forman parte expresa del tema 22 de Diputación y todavía no existe en el repositorio una consolidación oficial completa y trazable.
 
 ## UC3M · temas específicos 13–20 cerrados
 
@@ -52,7 +55,7 @@ Los ocho temas conservan el epígrafe oficial y disponen de desarrollo completo,
 
 Los temas 18 y 19 se apoyan en el Presupuesto UC3M 2026 aprobado por el Consejo de Gobierno y el Consejo Social el 11 de diciembre de 2025. El tema 20 utiliza la LCSP consolidada y actualizada en 2026, los Estatutos, la Resolución rectoral de delegación de 31 de mayo de 2022 y el procedimiento oficial de la Dirección Económico Financiera. Los datos anuales y los umbrales variables se separan de las reglas estables.
 
-El bloque específico UC3M 13–20 queda cerrado. El uno por ciento residual corresponde a mantenimiento de vigencia, datos anuales y auditoría cruzada final, no a epígrafes sin desarrollar.
+El bloque específico UC3M 13–20 queda cerrado. El uno por ciento residual corresponde a mantenimiento de vigencia y datos anuales, no a epígrafes sin desarrollar.
 
 ## Diputación · temas 25–40 cerrados
 
@@ -61,6 +64,25 @@ Quedan cerrados como fuente editorial autosuficiente los temas 25 a 40: gestión
 ## Control de numeración
 
 La numeración interna ha sido comprobada contra el programa oficial. El OAPGT pertenece al tema 22. Los temas 29 y 30 contienen los tributos locales; el 31 trata firma y certificados; el 32 archivos y unidades; el 33 Edge y GroupWise; el 34 impresión y escaneado; el 35 Writer; el 36 Calc; el 37 Base; el 38 Impress; el 39 ordenador personal; y el 40 periféricos.
+
+## OAPGT · reserva documental v89
+
+La investigación ha localizado una cadena histórica de publicaciones de 1996, 1999, 2002, 2004–2005 y 2011, además de referencias oficiales actuales a los artículos 12.2.l.8 y 14. Sin embargo, varias piezas proceden todavía de transcripciones secundarias de boletines históricos y falta la publicación definitiva íntegra de 2005, el texto oficial completo de 2011 y una búsqueda oficial documentada de reformas posteriores.
+
+Estado: `CADENA_HISTORICA_LOCALIZADA_PENDIENTE_CONSOLIDACION_OFICIAL`.
+
+Mientras no se cierre la cadena con copias oficiales y consolidación artículo por artículo:
+
+- no se habilita teoría literal de los Estatutos;
+- no se generan preguntas estatutarias;
+- no se declara Diputación al 100 %;
+- se mantiene trazabilidad de la evidencia y de los documentos pendientes en `docs/OAPGT_ESTATUTOS_V89.md`.
+
+## Auditoría cruzada final v89
+
+La matriz final suma los **99 temas oficiales**: Carranque 20, La Puebla 19, Diputación 40 y UC3M 20. Ejecuta las auditorías editoriales existentes de Carranque y La Puebla, los ocho bloques profundos de Diputación 25–40, los cinco bloques específicos de UC3M 13–20, la calidad global de preguntas, la integridad web/PWA y el control preventivo del OAPGT.
+
+Resultado esperado y exigido por CI: `APTO_EDITORIAL_CON_RESERVA_DOCUMENTAL`. La reserva queda limitada al apartado estatutario del tema 22 de Diputación y no se disimula elevando porcentajes.
 
 ## La Puebla 19/19 publicada
 
@@ -75,22 +97,18 @@ La numeración interna ha sido comprobada contra el programa oficial. El OAPGT p
 - 600 preguntas, 18 supuestos y tres simulacros de 80 + 5.
 - Corrección +0,25 / −0,08.
 
-## Bloque documental pendiente
-
-El desarrollo editorial de Diputación 25–40 queda cerrado. La convocatoria completa no se considera al 100 % mientras no se localicen y comprueben literalmente los **Estatutos oficiales vigentes del OAPGT**, integrados en el tema 22. UC3M queda cerrado en sus temas específicos y requiere mantenimiento de los datos anuales.
-
 ## Banco global
 
 Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M. UC3M mantiene al menos 720 preguntas tras ampliar los temas 18 y 19 y conserva tres simulacros de 70 + 5.
 
 ## Validación
 
-GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación y los bloques editoriales UC3M 13–20.
+GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación, los bloques editoriales UC3M 13–20 y la auditoría cruzada final v89.
 
 La caché `opoweb-v94` incorpora los módulos de Diputación y UC3M para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
-1. Localizar y comprobar los Estatutos oficiales vigentes del OAPGT dentro del tema 22 de Diputación.
-2. Ejecutar la auditoría cruzada final de los 99 temas.
+1. Obtener las copias oficiales de archivo de la cadena estatutaria del OAPGT, especialmente la publicación definitiva íntegra de 2005 y la modificación completa de 2011.
+2. Realizar la consolidación artículo por artículo y solo entonces habilitar teoría y preguntas del apartado estatutario del tema 22.
 3. Mantener actualizados Presupuesto UC3M, admisión, ponderaciones, plazas y umbrales normativos.

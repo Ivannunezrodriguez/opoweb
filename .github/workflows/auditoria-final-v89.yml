@@ -1,0 +1,38 @@
+name: Auditoría cruzada final v89
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  final-audit:
+    name: 99 temas y reserva OAPGT
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check syntax
+        run: |
+          node --check data/oapgt-estatutos-v89.js
+          node --check tests/oapgt-estatutos-v89.js
+          node --check tests/auditoria-final-v89.js
+      - name: Run final cross-audit
+        run: node tests/auditoria-final-v89.js
+      - name: Upload final reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-final-v89
+          path: |
+            auditoria-final-v89.json
+            oapgt-estatutos-v89.json
+          if-no-files-found: ignore
+          retention-days: 30
