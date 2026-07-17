@@ -51,6 +51,13 @@
         .replace(/OpoWeb v0\.(?:85|86|89)/g, 'OpoWeb v0.89')
         .replace(/Auditoría v0\.(?:85|86|89)/g, 'Auditoría pedagógica abierta')
         .replace(/auditoría v0\.(?:85|86|89)/gi, 'auditoría pedagógica abierta')
+        .replace(/Fuente teórica autosuficiente/g, 'Resumen y práctica · no fuente única')
+        .replace(/Fuente teórica principal/g, 'Resumen y práctica · no fuente única')
+        .replace(/Tema autosuficiente/g, 'Tema en revisión pedagógica')
+        .replace(/temas autosuficientes/g, 'epígrafes cargados')
+        .replace(/Desarrollo completo del epígrafe oficial/g, 'Resumen del epígrafe · revisión pendiente')
+        .replace(/Temario completo de La Puebla dentro de OpoWeb/g, 'Material de La Puebla en revisión pedagógica')
+        .replace(/Temario completo para estudiar dentro de OpoWeb/g, 'Material en revisión pedagógica')
         .replace(/opoweb-v9[2345]/g, CACHE);
     }
   }
