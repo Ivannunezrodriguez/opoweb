@@ -39,6 +39,7 @@ for (const config of [
     questions: 570,
     practicals: 20,
     firstTitle: 'La Constitución española de 1978. Estructura. La reforma constitucional. Derechos y deberes fundamentales de los españoles. Garantía y suspensión.',
+    releaseBadge: 'La Puebla 19/19',
     main: 50,
     reserve: 5,
     minutes: 60,
@@ -53,6 +54,7 @@ for (const config of [
     questions: 600,
     practicals: 18,
     firstTitle: 'La Constitución española de 1978. Reforma de la Constitución. Tribunal Constitucional. Derechos y deberes. El defensor del pueblo. El poder legislativo. El gobierno y la Administración. El poder judicial.',
+    releaseBadge: 'Carranque 20/20',
     main: 80,
     reserve: 5,
     minutes: 90,
@@ -64,9 +66,13 @@ for (const config of [
   test(`${config.name} queda auditada al 99 % con programa y examen oficiales`, async ({ page }) => {
     const errors = await load(page);
     await page.locator('#oposicionSelect').selectOption(config.id);
-    await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.86.0');
+    await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.89.1');
 
     await navigate(page, 'temario');
+    await expect(page.locator('#programmeStatusV89')).toHaveCount(1);
+    await expect(page.locator('#programmeStatusV89')).toContainText(config.releaseBadge);
+    await expect(page.locator('#theoryStatusV85')).toHaveCount(0);
+    await expect(page.locator('#pueblaTheoryStatusV86')).toHaveCount(0);
     await expect(page.locator('.theme-item')).toHaveCount(config.themes);
     await expect(page.locator('.theme-item').first()).toContainText(config.firstTitle);
 
@@ -89,7 +95,8 @@ for (const config of [
         scoring: ope.scoring,
         firstExercise: ope.selectionProcess.firstExercise,
         secondExercise: ope.selectionProcess.secondExercise,
-        merit: ope.personalMeritEstimate
+        merit: ope.personalMeritEstimate,
+        currentRelease: window.OPOWEB_RELEASE_V89
       };
     }, config.id);
 
@@ -102,6 +109,8 @@ for (const config of [
     expect(audit.audit.practicalThemeCoverage.at(-1)).toBe(config.practicalCoverage[1]);
     expect(audit.scoring).toEqual({ correct: config.correct, wrong: config.wrong, blank: 0 });
     expect(audit.firstExercise).toMatchObject({ main: config.main, reserve: config.reserve, minutes: config.minutes });
+    expect(audit.currentRelease.version).toBe('v0.89.1');
+    expect(audit.currentRelease.status).toBe('PUBLICADA');
     expect(errors).toEqual([]);
   });
 }
