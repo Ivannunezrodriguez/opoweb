@@ -14,12 +14,12 @@ vm.runInContext(read('assets/js/asset-manifest-v83.js'), context, { filename: 'a
 const manifest = context.OPOWEB_ASSET_MANIFEST_V83;
 
 assert.ok(manifest, 'No se ha creado OPOWEB_ASSET_MANIFEST_V83');
-assert.equal(manifest.applicationVersion, 'v0.89.2');
-assert.equal(manifest.cacheName, 'opoweb-v96');
+assert.equal(manifest.applicationVersion, 'v0.89.3');
+assert.equal(manifest.cacheName, 'opoweb-v97');
 assert.ok(Array.isArray(manifest.scripts));
 assert.ok(Array.isArray(manifest.staticAssets));
 assert.ok(Array.isArray(manifest.allAssets));
-assert.ok(manifest.scripts.length > 115, 'El manifiesto no contiene todos los módulos históricos y teóricos');
+assert.ok(manifest.scripts.length > 116, 'El manifiesto no contiene todos los módulos históricos y teóricos');
 assert.equal(new Set(manifest.scripts).size, manifest.scripts.length, 'Hay scripts duplicados');
 assert.equal(new Set(manifest.allAssets).size, manifest.allAssets.length, 'Hay recursos duplicados');
 assert.deepStrictEqual(JSON.parse(JSON.stringify(manifest.allAssets)), [...manifest.staticAssets, ...manifest.scripts]);
@@ -45,7 +45,9 @@ assert.ok(position('./assets/js/puebla-teoria-v86-bloque4.js') < position('./ass
 assert.ok(position('./assets/js/carranque-teoria-v85-bloque4.js') < position('./assets/js/auditoria-calidad-v72.js'));
 assert.ok(position('./assets/js/ui-v85.js') < position('./assets/js/ui-v86.js'));
 assert.ok(position('./assets/js/ui-v86.js') < position('./assets/js/ui-v89-release.js'));
-assert.ok(position('./assets/js/ui-v89-release.js') < position('./assets/js/ui-v90-pedagogia.js'));
+assert.ok(position('./assets/js/ui-v89-release.js') < position('./assets/js/puebla-rebuild-t01-v90.js'));
+assert.ok(position('./assets/js/puebla-rebuild-t01-v90.js') < position('./assets/js/ui-v90-pedagogia.js'));
+assert.ok(manifest.staticAssets.includes('./docs/rebuild/puebla/TEMA_01_MANUAL_BORRADOR.md'));
 
 const index = read('index.html');
 const scriptSources = [...index.matchAll(/<script\s+src="([^"]+)"/g)].map(match => match[1]);
@@ -64,4 +66,4 @@ assert.ok(serviceWorker.includes('const CACHE = MANIFEST.cacheName'));
 assert.ok(serviceWorker.includes('const ASSETS = MANIFEST.allAssets'));
 assert.ok(!/const ASSETS = \[/.test(serviceWorker));
 
-console.log(`Cargador v0.89.2 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · revisión pedagógica`);
+console.log(`Cargador v0.89.3 OK · ${manifest.scripts.length} módulos · ${manifest.allAssets.length} recursos · tema 1 aprobado`);
