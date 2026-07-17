@@ -4,7 +4,7 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- OpoWeb v0.86.0 con cierre editorial v87 de Diputación y ampliación v88 de UC3M
+- OpoWeb v0.86.0 con cierre editorial v87 de Diputación y cierre específico v88 de UC3M
 - Caché PWA `opoweb-v94`
 - Revisión editorial y de solicitudes: 17 de julio de 2026
 
@@ -23,7 +23,7 @@ Los justificantes personales, números de registro y documentos identificativos 
 
 OpoWeb debe convertirse en la **única fuente editorial y teórica de estudio**: cada tema debe contener el epígrafe oficial exacto, desarrollo completo por apartados, normativa vigente, fuentes oficiales, explicación sin invenciones, resumen, puntos calientes, autoevaluación, test y material práctico.
 
-No se considera una convocatoria autosuficiente mientras falten epígrafes, desarrollo literal, fuentes oficiales o contenido anual específico. OpoWeb todavía no es una fuente única completa para las cuatro convocatorias.
+No se considera una convocatoria autosuficiente mientras falten epígrafes, desarrollo literal, fuentes oficiales o contenido anual específico. OpoWeb todavía no es una fuente única completa para las cuatro convocatorias por el bloqueo documental del OAPGT y por la auditoría cruzada final pendiente.
 
 ## Estado teórico
 
@@ -32,10 +32,10 @@ No se considera una convocatoria autosuficiente mientras falten epígrafes, desa
 | Carranque | 99 % publicado |
 | La Puebla | 99 % publicado |
 | Diputación | 96 % aprox. |
-| UC3M | 97 % aprox. |
-| Global | ≈98 % |
+| UC3M | 99 % publicado |
+| Global | ≈99 % |
 
-## UC3M · temas específicos 13–19 cerrados
+## UC3M · temas específicos 13–20 cerrados
 
 Quedan cerrados editorialmente:
 
@@ -46,12 +46,13 @@ Quedan cerrados editorialmente:
 - **Tema 17 · Acceso y admisión:** RD 534/2024 actualizado, vías de acceso, PAU, Técnico Superior, nota de admisión, distrito único, cupos, listas de espera y cambio de titulación.
 - **Tema 18 · Presupuesto UC3M I:** características, estructura, ingresos, gastos, créditos iniciales, financiación, modificaciones y ejecución de ingresos conforme al Presupuesto 2026.
 - **Tema 19 · Presupuesto UC3M II:** fases RC-A-D-O, gestión y documentos contables, facturas, conformidad, caja fija, anticipos, tesorería, liquidación y cierre.
+- **Tema 20 · Contratación:** LCSP vigente, tipos contractuales, órgano y Mesa, objeto, lotes, presupuesto base, valor estimado, expediente, pliegos, solvencia, adjudicación y procedimientos internos UC3M.
 
-Los siete temas conservan el epígrafe oficial y disponen de desarrollo completo, fuentes oficiales, esquema, tabla de repaso, síntesis, puntos calientes, retención activa y estrategia de examen. Mantienen un mínimo de 30 preguntas auditadas por tema.
+Los ocho temas conservan el epígrafe oficial y disponen de desarrollo completo, fuentes oficiales, esquema, tabla de repaso, síntesis, puntos calientes, retención activa y estrategia de examen. Mantienen un mínimo de 30 preguntas auditadas por tema.
 
-Los temas 18 y 19 se apoyan en el Presupuesto UC3M 2026 aprobado por el Consejo de Gobierno y el Consejo Social el 11 de diciembre de 2025, las páginas oficiales de la Dirección Económico Financiera, la LOSU y los Estatutos. Las cifras del ejercicio se identifican expresamente como datos anuales y se separan de las reglas estables.
+Los temas 18 y 19 se apoyan en el Presupuesto UC3M 2026 aprobado por el Consejo de Gobierno y el Consejo Social el 11 de diciembre de 2025. El tema 20 utiliza la LCSP consolidada y actualizada en 2026, los Estatutos, la Resolución rectoral de delegación de 31 de mayo de 2022 y el procedimiento oficial de la Dirección Económico Financiera. Los datos anuales y los umbrales variables se separan de las reglas estables.
 
-Pendiente del bloque específico UC3M: tema 20, contratación del sector público y especialidades internas de la Universidad.
+El bloque específico UC3M 13–20 queda cerrado. El uno por ciento residual corresponde a mantenimiento de vigencia, datos anuales y auditoría cruzada final, no a epígrafes sin desarrollar.
 
 ## Diputación · temas 25–40 cerrados
 
@@ -76,20 +77,20 @@ La numeración interna ha sido comprobada contra el programa oficial. El OAPGT p
 
 ## Bloque documental pendiente
 
-El desarrollo editorial de Diputación 25–40 queda cerrado. La convocatoria completa no se considera al 100 % mientras no se localicen y comprueben literalmente los **Estatutos oficiales vigentes del OAPGT**, integrados en el tema 22. UC3M requiere cerrar el tema específico 20 y mantener actualizados los datos anuales.
+El desarrollo editorial de Diputación 25–40 queda cerrado. La convocatoria completa no se considera al 100 % mientras no se localicen y comprueben literalmente los **Estatutos oficiales vigentes del OAPGT**, integrados en el tema 22. UC3M queda cerrado en sus temas específicos y requiere mantenimiento de los datos anuales.
 
 ## Banco global
 
-Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M. UC3M mantiene 690 preguntas y tres simulacros de 70 + 5.
+Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M. UC3M mantiene al menos 720 preguntas tras ampliar los temas 18 y 19 y conserva tres simulacros de 70 + 5.
 
 ## Validación
 
-GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación y los bloques editoriales UC3M 13–19.
+GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación y los bloques editoriales UC3M 13–20.
 
 La caché `opoweb-v94` incorpora los módulos de Diputación y UC3M para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
-1. UC3M tema 20: contratación del sector público y especialidades internas.
-2. Localizar y comprobar los Estatutos oficiales vigentes del OAPGT dentro del tema 22 de Diputación.
-3. Ejecutar la auditoría cruzada final de los 99 temas.
+1. Localizar y comprobar los Estatutos oficiales vigentes del OAPGT dentro del tema 22 de Diputación.
+2. Ejecutar la auditoría cruzada final de los 99 temas.
+3. Mantener actualizados Presupuesto UC3M, admisión, ponderaciones, plazas y umbrales normativos.
