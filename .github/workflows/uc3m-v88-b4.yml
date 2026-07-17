@@ -17,10 +17,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Check syntax
         run: |
           node --check assets/js/uc3m-teoria-v88-bloque4.js
+          node --check assets/js/uc3m-teoria-v88-bloque4-preguntas.js
           node --check tests/uc3m-teoria-v88-bloque4.js
           node --check assets/js/asset-manifest-v83.js
           node --check assets/js/loader-v83.js
