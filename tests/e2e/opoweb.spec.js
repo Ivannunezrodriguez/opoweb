@@ -62,7 +62,7 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
   const pageErrors = await loadApplication(page);
   const optionValues = await page.locator('#oposicionSelect option').evaluateAll(options => options.map(option => option.value));
   expect(optionValues).toEqual(EXPECTED_OPE_IDS);
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.86.0');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.89.1');
 
   const bootAudit = await page.evaluate(() => {
     const manifest = window.OPOWEB_ASSET_MANIFEST_V83;
@@ -75,6 +75,8 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
       loaded: boot.loaded.length,
       declared: manifest.scripts.length,
       applicationVersion: manifest.applicationVersion,
+      releaseVersion: window.OPOWEB_RELEASE_V89?.version,
+      releaseStatus: window.OPOWEB_RELEASE_V89?.status,
       municipalStatus: window.OPOWEB_MUNICIPALES_V84?.globalStatus,
       carranqueStatus: window.OPOWEB_THEORY_AUDIT_V85?.carranque?.status,
       carranqueThemes: window.OPOWEB_THEORY_AUDIT_V85?.carranque?.autonomousThemes,
@@ -88,7 +90,9 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
   expect(bootAudit.status).toBe('ready');
   expect(bootAudit.failed).toBeNull();
   expect(bootAudit.loaded).toBe(bootAudit.declared);
-  expect(bootAudit.applicationVersion).toBe('v0.86.0');
+  expect(bootAudit.applicationVersion).toBe('v0.89.1');
+  expect(bootAudit.releaseVersion).toBe('v0.89.1');
+  expect(bootAudit.releaseStatus).toBe('PUBLICADA');
   expect(bootAudit.municipalStatus).toBe('APTO');
   expect(bootAudit.carranqueStatus).toBe('APTO');
   expect(bootAudit.carranqueThemes).toBe(20);
@@ -107,13 +111,16 @@ test('carga las cuatro OPE y permite recorrer todas las vistas', async ({ page }
   expect(pageErrors).toEqual([]);
 });
 
-test('La Puebla muestra diecinueve temas teóricos autosuficientes', async ({ page }) => {
+test('La Puebla muestra una única ficha vigente y diecinueve temas autosuficientes', async ({ page }) => {
   const pageErrors = await loadApplication(page);
   await page.locator('#oposicionSelect').selectOption('puebla-aux-admin-2026');
   await navigateTo(page, 'temario');
 
-  await expect(page.locator('#pueblaTheoryStatusV86')).toContainText('La Puebla 19/19');
-  await expect(page.locator('#pueblaTheoryStatusV86')).toContainText('Fuente teórica autosuficiente');
+  await expect(page.locator('#programmeStatusV89')).toHaveCount(1);
+  await expect(page.locator('#programmeStatusV89')).toContainText('La Puebla 19/19');
+  await expect(page.locator('#programmeStatusV89')).toContainText('Fuente teórica principal');
+  await expect(page.locator('#theoryStatusV85')).toHaveCount(0);
+  await expect(page.locator('#pueblaTheoryStatusV86')).toHaveCount(0);
   await expect(page.locator('.theme-item')).toHaveCount(19);
 
   await page.locator('.theme-item').first().click();
@@ -155,12 +162,14 @@ test('La Puebla muestra diecinueve temas teóricos autosuficientes', async ({ pa
   expect(pageErrors).toEqual([]);
 });
 
-test('Carranque muestra veinte temas teóricos autosuficientes', async ({ page }) => {
+test('Carranque muestra una única ficha vigente y veinte temas autosuficientes', async ({ page }) => {
   const pageErrors = await loadApplication(page);
   await page.locator('#oposicionSelect').selectOption('carranque-aux-admin-2026');
   await navigateTo(page, 'temario');
-  await expect(page.locator('#theoryStatusV85')).toContainText('Carranque 20/20');
-  await expect(page.locator('#theoryStatusV85')).toContainText('Fuente teórica autosuficiente');
+  await expect(page.locator('#programmeStatusV89')).toHaveCount(1);
+  await expect(page.locator('#programmeStatusV89')).toContainText('Carranque 20/20');
+  await expect(page.locator('#programmeStatusV89')).toContainText('Fuente teórica principal');
+  await expect(page.locator('#theoryStatusV85')).toHaveCount(0);
   await expect(page.locator('.theme-item')).toHaveCount(20);
   await page.locator('.theme-item').first().click();
   await expect(page.locator('#themeSourcesV85')).toContainText('Tema autosuficiente');
@@ -182,6 +191,17 @@ test('Carranque muestra veinte temas teóricos autosuficientes', async ({ page }
   expect(theory.metrics.every(item => item.words >= 1000)).toBe(true);
   expect(theory.metrics.every(item => item.sources >= 2)).toBe(true);
   expect(theory.metrics.every(item => item.questions === 30)).toBe(true);
+  expect(pageErrors).toEqual([]);
+});
+
+test('Diputación conserva visible la reserva documental del OAPGT', async ({ page }) => {
+  const pageErrors = await loadApplication(page);
+  await page.locator('#oposicionSelect').selectOption('diputacion-toledo-admin-2026');
+  await navigateTo(page, 'temario');
+  await expect(page.locator('#programmeStatusV89')).toHaveCount(1);
+  await expect(page.locator('#programmeStatusV89')).toContainText('Diputación ≈96 %');
+  await expect(page.locator('#programmeStatusV89')).toContainText('Reserva OAPGT · tema 22');
+  await expect(page.locator('#programmeStatusV89')).toContainText('No utilizar todavía OpoWeb como fuente única');
   expect(pageErrors).toEqual([]);
 });
 
@@ -227,9 +247,9 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
     await page.evaluate(() => navigator.serviceWorker.ready);
   }
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBeTruthy();
-  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v94')), { timeout: 30_000 }).toBeTruthy();
+  await expect.poll(() => page.evaluate(async () => (await caches.keys()).includes('opoweb-v95')), { timeout: 30_000 }).toBeTruthy();
   const cachedPaths = await page.evaluate(async () => {
-    const cache = await caches.open('opoweb-v94');
+    const cache = await caches.open('opoweb-v95');
     return (await cache.keys()).map(request => new URL(request.url).pathname);
   });
   for (const expected of [
@@ -237,7 +257,7 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
     '/assets/js/municipales-v84-cierre.js','/assets/js/puebla-teoria-v86-bloque1.js',
     '/assets/js/puebla-teoria-v86-bloque2.js','/assets/js/puebla-teoria-v86-bloque3.js',
     '/assets/js/puebla-teoria-v86-bloque4.js','/assets/js/carranque-teoria-v85-bloque1.js',
-    '/assets/js/carranque-teoria-v85-bloque4.js','/assets/js/ui-v86.js','/manifest.webmanifest'
+    '/assets/js/carranque-teoria-v85-bloque4.js','/assets/js/ui-v86.js','/assets/js/ui-v89-release.js','/manifest.webmanifest'
   ]) expect(cachedPaths).toContain(expected);
   const manifest = await page.evaluate(async () => (await fetch('/manifest.webmanifest')).json());
   expect(manifest.start_url).toBe('./index.html');
@@ -249,7 +269,7 @@ test('instala la PWA y funciona sin conexión conservando datos', async ({ page,
   await page.reload({ waitUntil: 'domcontentloaded' });
   await waitForBoot(page);
   await expect(page.locator('#viewTitle')).toHaveText('Temario');
-  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.86.0');
+  await expect(page.locator('#oposicionCard')).toContainText('Versión OpoWeb v0.89.1');
   const restored = await page.evaluate(() => JSON.parse(localStorage.getItem('opowebProgress') || '{}'));
   expect(restored).toEqual(offlineProgress);
   expect(pageErrors).toEqual([]);

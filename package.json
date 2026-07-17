@@ -1,6 +1,6 @@
 {
   "name": "opoweb",
-  "version": "0.86.0",
+  "version": "0.89.1",
   "private": true,
   "description": "Plataforma estática de estudio para oposiciones administrativas",
   "scripts": {

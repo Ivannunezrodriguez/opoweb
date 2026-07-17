@@ -4,9 +4,11 @@ Cuatro convocatorias activas: La Puebla C2, Carranque C2, Diputación de Toledo 
 
 ## Versión publicada
 
-- OpoWeb v0.86.0 con cierre editorial v87 de Diputación, cierre específico v88 de UC3M y auditoría cruzada v89.1
-- Caché PWA `opoweb-v94`
+- **OpoWeb v0.89.1** con cierre editorial v87 de Diputación, cierre específico v88 de UC3M, auditoría cruzada v89.1 e interfaz de estado unificada
+- Caché PWA `opoweb-v95`
 - Revisión editorial, documental y de solicitudes: 17 de julio de 2026
+
+La interfaz v0.89.1 elimina fichas antiguas de «teoría en reconstrucción» que podían aparecer junto a una convocatoria ya cerrada. Cada oposición muestra ahora una única ficha vigente con su nivel real de cobertura y las reservas documentales aplicables.
 
 ## Estado de solicitudes
 
@@ -105,13 +107,14 @@ Más de 3.100 preguntas auditadas entre Diputación, La Puebla, Carranque y UC3M
 
 ## Validación
 
-GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación, los bloques editoriales UC3M 13–20 y la auditoría cruzada final v89.
+GitHub Actions valida regresiones, auditoría de preguntas, Carranque 20/20, La Puebla 19/19, matrices de bancos, integridad web/PWA, Playwright en escritorio, Pixel 7 e iPad Pro 11, los ocho bloques editoriales de Diputación, los bloques editoriales UC3M 13–20, la auditoría cruzada final v89 y la ficha única de estado de cada convocatoria.
 
-La caché `opoweb-v94` incorpora los módulos de Diputación y UC3M para uso sin conexión tras una primera carga correcta.
+La caché `opoweb-v95` incorpora la interfaz v0.89.1 y todos los módulos de Diputación y UC3M para uso sin conexión tras una primera carga correcta.
 
 ## Siguiente trabajo
 
-1. Solicitar al Archivo de la Diputación de Toledo las copias oficiales de 1996, 1999, 2002, 2004 y 2011 y la acreditación del cierre definitivo de las reformas.
-2. Comprobar documentalmente si existen modificaciones posteriores a 2011.
-3. Realizar la consolidación artículo por artículo y solo entonces habilitar teoría y preguntas del apartado estatutario del tema 22.
-4. Mantener actualizados Presupuesto UC3M, admisión, ponderaciones, plazas y umbrales normativos.
+1. Agotar Wayback Machine, Arquivo.pt y el archivo histórico del BOP de Toledo para localizar copias oficiales o archivadas de 1996, 1999, 2002, 2004 y 2011.
+2. Solo si esa búsqueda no cierra la cadena, solicitar al Archivo de la Diputación o al OAPGT las copias oficiales y la acreditación del cierre definitivo de las reformas.
+3. Comprobar documentalmente si existen modificaciones posteriores a 2011.
+4. Realizar la consolidación artículo por artículo y solo entonces habilitar teoría y preguntas del apartado estatutario del tema 22.
+5. Mantener actualizados Presupuesto UC3M, admisión, ponderaciones, plazas y umbrales normativos.
