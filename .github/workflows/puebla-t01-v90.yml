@@ -1,0 +1,36 @@
+name: La Puebla tema 1 · manual aprobado
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  tema-1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Comprobar sintaxis
+        run: node --check assets/js/puebla-rebuild-t01-v90.js
+      - name: Validar manual, aprobación e integración
+        run: node tests/rebuild-puebla-t01-manual.js
+      - name: Validar cargador e integridad
+        run: |
+          node tests/loader-v85.js
+          node tests/site-integrity-v85.js
+      - name: Guardar informe
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: puebla-tema-1-manual-aprobado
+          path: rebuild-puebla-t01-manual.json
+          if-no-files-found: ignore
+          retention-days: 30
